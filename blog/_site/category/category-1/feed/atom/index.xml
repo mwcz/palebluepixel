@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed
+  xmlns="http://www.w3.org/2005/Atom"
+  xmlns:thr="http://purl.org/syndication/thread/1.0"
+  xml:lang="en"
+   >
+  <title type="text">mwcz.org</title>
+  <subtitle type="text">Just a simple HTML5 blog</subtitle>
+
+  <updated>2011-11-15T02:26:37Z</updated>
+  <generator uri="http://blogofile.com/">Blogofile</generator>
+
+  <link rel="alternate" type="text/html" href="http://www.example.com" />
+  <id>http://www.example.com/feed/atom/</id>
+  <link rel="self" type="application/atom+xml" href="http://www.example.com/feed/atom/" />
+  <entry>
+    <author>
+      <name></name>
+      <uri>http://www.example.com</uri>
+    </author>
+    <title type="html"><![CDATA[Post 2]]></title>
+    <link rel="alternate" type="text/html" href="http://www.example.com/2010/07/24/post-2" />
+    <id>http://www.example.com/2010/07/24/post-2</id>
+    <updated>2010-07-24T16:20:00Z</updated>
+    <published>2010-07-24T16:20:00Z</published>
+    <category scheme="http://www.example.com" term="category 2" />
+    <category scheme="http://www.example.com" term="category 1" />
+    <summary type="html"><![CDATA[Post 2]]></summary>
+    <content type="html" xml:base="http://www.example.com/2010/07/24/post-2"><![CDATA[<p>This is post #2.</p>
+<p>This post just shows off some <a href="http://www.freewisdom.org/projects/python-markdown/" title="Markdown in Python">markdown</a> features. Markdown is a simple <abbr title="Hyper Text Markup Language (this is just an abbreviation test)">HTML</abbr> markup language in plain text, so it's easier to read and write.</p>
+<h1 id="this_is_a_heading">This is a heading</h1>
+<p>This is a reference<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> to a footnote.</p>
+<h2 id="a_custom_id">This is a sub-heading</h2>
+<p>This section has a custom id on it's <code>&lt;h2&gt;</code> tag.</p>
+<h2 id="this_is_a_table">This is a table</h2>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+<h2 id="here_are_some_definitions">Here are some definitions</h2>
+<dl>
+<dt>Apple</dt>
+<dd>Pomaceous fruit of plants of the genus Malus in 
+the family Rosaceae.</dd>
+<dt>Orange</dt>
+<dd>The fruit of an evergreen tree of the genus Citrus.</dd>
+</dl>
+<h2 id="some_code">Some code</h2>
+<p>This is using the <a href="http://www.freewisdom.org/projects/python-markdown/Fenced_Code_Blocks">Fenced Code</a> extension to markdown, but Blogofile has <a href="/blog/2009/08/29/syntax-highlight-test/">it's own code filter</a> that does syntax highlighting too.</p>
+<pre><code class="python">import this
+print(&quot;2 + 2 = {0}&quot;.format(2+2))
+</code></pre>
+
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>This is a footnote.
+&#160;<a href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>]]></content>
+  </entry>
+  <entry>
+    <author>
+      <name></name>
+      <uri>http://www.example.com</uri>
+    </author>
+    <title type="html"><![CDATA[Post 1]]></title>
+    <link rel="alternate" type="text/html" href="http://www.example.com/2010/07/23/post-1" />
+    <id>http://www.example.com/2010/07/23/post-1</id>
+    <updated>2010-07-23T15:22:00Z</updated>
+    <published>2010-07-23T15:22:00Z</published>
+    <category scheme="http://www.example.com" term="category 1" />
+    <summary type="html"><![CDATA[Post 1]]></summary>
+    <content type="html" xml:base="http://www.example.com/2010/07/23/post-1"><![CDATA[<p>This is post #1</p>]]></content>
+  </entry>
+</feed>

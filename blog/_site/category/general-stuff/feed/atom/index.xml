@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed
+  xmlns="http://www.w3.org/2005/Atom"
+  xmlns:thr="http://purl.org/syndication/thread/1.0"
+  xml:lang="en"
+   >
+  <title type="text">mwcz.org</title>
+  <subtitle type="text">Just a simple HTML5 blog</subtitle>
+
+  <updated>2011-11-15T02:26:37Z</updated>
+  <generator uri="http://blogofile.com/">Blogofile</generator>
+
+  <link rel="alternate" type="text/html" href="http://www.example.com" />
+  <id>http://www.example.com/feed/atom/</id>
+  <link rel="self" type="application/atom+xml" href="http://www.example.com/feed/atom/" />
+  <entry>
+    <author>
+      <name></name>
+      <uri>http://www.example.com</uri>
+    </author>
+    <title type="html"><![CDATA[Syntax highlight test]]></title>
+    <link rel="alternate" type="text/html" href="http://www.example.com/2011/05/11/syntax-highlight-test" />
+    <id>http://www.example.com/2011/05/11/syntax-highlight-test</id>
+    <updated>2011-05-11T15:25:00Z</updated>
+    <published>2011-05-11T15:25:00Z</published>
+    <category scheme="http://www.example.com" term="general stuff" />
+    <summary type="html"><![CDATA[Syntax highlight test]]></summary>
+    <content type="html" xml:base="http://www.example.com/2011/05/11/syntax-highlight-test"><![CDATA[<p>This post contains some highlighted python code:</p>
+<div class="pygments_murphy syntax_highlight"><pre><span class="kn">import</span> <span class="nn">this</span><br/><br/><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;main&quot;</span><span class="p">:</span><br/>    <span class="k">print</span> <span class="s">&quot;Hello, World!&quot;</span><br/></pre></div>
+
+<p>This is accomplished with the built-in <a href="https://github.com/EnigmaCurry/blogofile/blob/master/blogofile/site_init/blog_features/_filters/syntax_highlight.py">syntax highlighter filter</a></p>]]></content>
+  </entry>
+  <entry>
+    <author>
+      <name></name>
+      <uri>http://www.example.com</uri>
+    </author>
+    <title type="html"><![CDATA[Filler post 4]]></title>
+    <link rel="alternate" type="text/html" href="http://www.example.com/2010/06/29/filler-post-4" />
+    <id>http://www.example.com/2010/06/29/filler-post-4</id>
+    <updated>2010-06-29T15:28:00Z</updated>
+    <published>2010-06-29T15:28:00Z</published>
+    <category scheme="http://www.example.com" term="general stuff" />
+    <summary type="html"><![CDATA[Filler post 4]]></summary>
+    <content type="html" xml:base="http://www.example.com/2010/06/29/filler-post-4"><![CDATA[<p>This is a filler post.</p>]]></content>
+  </entry>
+  <entry>
+    <author>
+      <name></name>
+      <uri>http://www.example.com</uri>
+    </author>
+    <title type="html"><![CDATA[Filler post 3]]></title>
+    <link rel="alternate" type="text/html" href="http://www.example.com/2010/06/29/filler-post-3" />
+    <id>http://www.example.com/2010/06/29/filler-post-3</id>
+    <updated>2010-06-29T15:27:00Z</updated>
+    <published>2010-06-29T15:27:00Z</published>
+    <category scheme="http://www.example.com" term="general stuff" />
+    <summary type="html"><![CDATA[Filler post 3]]></summary>
+    <content type="html" xml:base="http://www.example.com/2010/06/29/filler-post-3"><![CDATA[<p>This is a filler post.</p>]]></content>
+  </entry>
+  <entry>
+    <author>
+      <name></name>
+      <uri>http://www.example.com</uri>
+    </author>
+    <title type="html"><![CDATA[Filler post 2]]></title>
+    <link rel="alternate" type="text/html" href="http://www.example.com/2010/06/29/filler-post-2" />
+    <id>http://www.example.com/2010/06/29/filler-post-2</id>
+    <updated>2010-06-29T15:26:00Z</updated>
+    <published>2010-06-29T15:26:00Z</published>
+    <category scheme="http://www.example.com" term="general stuff" />
+    <summary type="html"><![CDATA[Filler post 2]]></summary>
+    <content type="html" xml:base="http://www.example.com/2010/06/29/filler-post-2"><![CDATA[<p>This is a filler post.</p>]]></content>
+  </entry>
+  <entry>
+    <author>
+      <name></name>
+      <uri>http://www.example.com</uri>
+    </author>
+    <title type="html"><![CDATA[Filler post 1]]></title>
+    <link rel="alternate" type="text/html" href="http://www.example.com/2010/06/29/filler-post-1" />
+    <id>http://www.example.com/2010/06/29/filler-post-1</id>
+    <updated>2010-06-29T15:25:00Z</updated>
+    <published>2010-06-29T15:25:00Z</published>
+    <category scheme="http://www.example.com" term="general stuff" />
+    <summary type="html"><![CDATA[Filler post 1]]></summary>
+    <content type="html" xml:base="http://www.example.com/2010/06/29/filler-post-1"><![CDATA[<p>This is a filler post.</p>]]></content>
+  </entry>
+</feed>
