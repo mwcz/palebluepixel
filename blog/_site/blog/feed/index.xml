@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+     >
+  <channel>
+    <title>mwcz.org</title>
+    <link>http://mwcz.org/blog</link>
+    <description>I finally created a blog.</description>
+    <pubDate>Wed, 16 Nov 2011 06:17:21 GMT</pubDate>
+    <generator>Blogofile</generator>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    <item>
+      <title>HTML5 Canvas eyedropper</title>
+      <link>http://mwcz.org/blog/2011/11/16/html5-canvas-eyedropper</link>
+      <pubDate>Wed, 16 Nov 2011 15:25:00 EST</pubDate>
+      <category><![CDATA[color]]></category>
+      <category><![CDATA[canvas]]></category>
+      <category><![CDATA[html5]]></category>
+      <guid>b'x9pmDmYJATYT7fp0_Fqh-pgzzq0='</guid>
+      <description>HTML5 Canvas eyedropper</description>
+      <content:encoded><![CDATA[<style type="text/css"> 
+    #color { height: 80px; width: 80px; margin: 20px; display: block; border: 1px solid black; }
+    canvas { margin: 0 auto; }
+</style>
+
+<script type="text/javascript">
+
+var c;
+var cnvs;
+
+window.onload = function() {
+
+cnvs = document.getElementById("c");
+
+if( cnvs.getContext) { // Check for canvas support
+    // DRAW FUN STUFF!
+
+c = cnvs.getContext('2d');
+        var color = document.getElementById("color");
+        var colorcode = document.getElementById("colorcode");
+
+var img = new Image();
+
+img.onload = function() {
+            cnvs.width = img.width;cnvs.height = img.height; // resize to fit image
+            c.drawImage( img, 0, 0 );
+        }
+        img.src = "/img/kazoo.png";
+
+pixel = function(e) {
+
+// find the element's position
+            var x = 0;
+            var y = 0;
+            var o = cnvs;
+            do {
+                x += o.offsetLeft;
+                y += o.offsetTop;
+            } while (o = o.offsetParent);
+
+x = e.pageX - x;
+            y = e.pageY - y;
+            var imgdata = c.getImageData( x, y, 1, 1 );
+            var new_color = [ imgdata.data[0], imgdata.data[1], imgdata.data[2] ];
+            color.style.background = "rgb("+new_color+")";
+            colorcode.innerHTML = "rgb("+new_color+")";
+        }
+
+cnvs.onmousedown = function(e) {
+            cnvs.onmousemove = pixel; // fire pixel() while user is dragging
+            cnvs.onclick = pixel; // only so it will still fire if user doesn't drag at all
+        }
+
+cnvs.onmouseup = function() {
+            cnvs.onmousemove = null;
+        }
+
+//cnvs.onmousemove = cnvs.onclick;
+
+}
+
+}
+
+</script>
+
+<p>This is an old demo I made of an <a href="http://en.wikipedia.org/wiki/Canvas_element">HTML5 canvas</a> eyedropper.  Circa 2009, I believe.  Just click and drag on the image to see it in action.</p>
+<p><span id="color"></span>
+<span id="colorcode"></span></p>
+<p><canvas id="c">Sorry, in order to view this demo you need a Web browser that supports HTML5 canvas.</canvas></p>
+<p>It's a pretty simple script, and works by declaring this function which handles onclick and ondrag events from the canvas.  cnvs is the canvas element, and c is the canvas's 2D rendering context object.</p>
+<div class="pygments_murphy syntax_highlight"><pre><span class="nx">pixel</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span><br/>    <span class="c1">// calculate the x and y coordinates of the cursor</span><br/>    <span class="kd">var</span> <span class="nx">imgdata</span> <span class="o">=</span> <span class="nx">c</span><span class="p">.</span><span class="nx">getImageData</span><span class="p">(</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">);</span><br/>    <span class="kd">var</span> <span class="nx">new_color</span> <span class="o">=</span> <span class="p">[</span> <span class="nx">imgdata</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><br/>                      <span class="nx">imgdata</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <br/>                      <span class="nx">imgdata</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">];</span><br/>    <span class="nx">color</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">background</span> <span class="o">=</span> <span class="s2">&quot;rgb(&quot;</span><span class="o">+</span><span class="nx">new_color</span><span class="o">+</span><span class="s2">&quot;)&quot;</span><span class="p">;</span><br/><span class="p">}</span><br/></pre></div>
+
+<p>That's just a summary; the function actually does a little more than that.  Take a look at the source for this page if you're interested.</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Initial post</title>
+      <link>http://mwcz.org/blog/2011/11/16/initial-post</link>
+      <pubDate>Wed, 16 Nov 2011 15:25:00 EST</pubDate>
+      <category><![CDATA[general]]></category>
+      <guid>b'JtT7QQT44hRRj5VwfEGgIXJoOHI='</guid>
+      <description>Initial post</description>
+      <content:encoded><![CDATA[<p>I'm cobbling together this blog as a central place to showcase my various demos and projects.  Mostly web dev stuff.</p>
+<p>To start off, I'll make a series of posts of old (some <em>very</em> old) demos I've made.</p>
+<p>If you'd like to get in touch with me, feel free to use <a href="https://twitter.com/#!/mwcz">Twitter</a> or <a href="mailto:mwc@clayto.org">email</a>.</p>]]></content:encoded>
+    </item>
+  </channel>
+</rss>

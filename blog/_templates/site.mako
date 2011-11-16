@@ -12,10 +12,10 @@
 ${self.head()}
 </head>
   <body>
-          ${self.header()}
     <div id="container" class="container container_12">
       <div id="main" role="main">
         <div id="main_block">
+          ${self.header()}
           <div id="prose_block" class="grid_8">
             ${next.body()}
           </div>
@@ -25,8 +25,8 @@ ${self.head()}
           <div class="clear"></div>
         </div>
       </div>
-    </div>
       ${self.footer()}
+    </div>
     ${self.body_scripts()}
   </body>
 </html>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed
+  xmlns="http://www.w3.org/2005/Atom"
+  xmlns:thr="http://purl.org/syndication/thread/1.0"
+  xml:lang="en"
+   >
+  <title type="text">mwcz.org</title>
+  <subtitle type="text">I finally created a blog.</subtitle>
+
+  <updated>2011-11-16T06:17:21Z</updated>
+  <generator uri="http://blogofile.com/">Blogofile</generator>
+
+  <link rel="alternate" type="text/html" href="http://mwcz.org/blog" />
+  <id>http://mwcz.org/blog/feed/atom/</id>
+  <link rel="self" type="application/atom+xml" href="http://mwcz.org/blog/feed/atom/" />
+  <entry>
+    <author>
+      <name></name>
+      <uri>http://mwcz.org/blog</uri>
+    </author>
+    <title type="html"><![CDATA[HTML5 Canvas eyedropper]]></title>
+    <link rel="alternate" type="text/html" href="http://mwcz.org/blog/2011/11/16/html5-canvas-eyedropper" />
+    <id>http://mwcz.org/blog/2011/11/16/html5-canvas-eyedropper</id>
+    <updated>2011-11-16T15:25:00Z</updated>
+    <published>2011-11-16T15:25:00Z</published>
+    <category scheme="http://mwcz.org/blog" term="color" />
+    <category scheme="http://mwcz.org/blog" term="canvas" />
+    <category scheme="http://mwcz.org/blog" term="html5" />
+    <summary type="html"><![CDATA[HTML5 Canvas eyedropper]]></summary>
+    <content type="html" xml:base="http://mwcz.org/blog/2011/11/16/html5-canvas-eyedropper"><![CDATA[<style type="text/css"> 
+    #color { height: 80px; width: 80px; margin: 20px; display: block; border: 1px solid black; }
+    canvas { margin: 0 auto; }
+</style>
+
+<script type="text/javascript">
+
+var c;
+var cnvs;
+
+window.onload = function() {
+
+cnvs = document.getElementById("c");
+
+if( cnvs.getContext) { // Check for canvas support
+    // DRAW FUN STUFF!
+
+c = cnvs.getContext('2d');
+        var color = document.getElementById("color");
+        var colorcode = document.getElementById("colorcode");
+
+var img = new Image();
+
+img.onload = function() {
+            cnvs.width = img.width;cnvs.height = img.height; // resize to fit image
+            c.drawImage( img, 0, 0 );
+        }
+        img.src = "/img/kazoo.png";
+
+pixel = function(e) {
+
+// find the element's position
+            var x = 0;
+            var y = 0;
+            var o = cnvs;
+            do {
+                x += o.offsetLeft;
+                y += o.offsetTop;
+            } while (o = o.offsetParent);
+
+x = e.pageX - x;
+            y = e.pageY - y;
+            var imgdata = c.getImageData( x, y, 1, 1 );
+            var new_color = [ imgdata.data[0], imgdata.data[1], imgdata.data[2] ];
+            color.style.background = "rgb("+new_color+")";
+            colorcode.innerHTML = "rgb("+new_color+")";
+        }
+
+cnvs.onmousedown = function(e) {
+            cnvs.onmousemove = pixel; // fire pixel() while user is dragging
+            cnvs.onclick = pixel; // only so it will still fire if user doesn't drag at all
+        }
+
+cnvs.onmouseup = function() {
+            cnvs.onmousemove = null;
+        }
+
+//cnvs.onmousemove = cnvs.onclick;
+
+}
+
+}
+
+</script>
+
+<p>This is an old demo I made of an <a href="http://en.wikipedia.org/wiki/Canvas_element">HTML5 canvas</a> eyedropper.  Circa 2009, I believe.  Just click and drag on the image to see it in action.</p>
+<p><span id="color"></span>
+<span id="colorcode"></span></p>
+<p><canvas id="c">Sorry, in order to view this demo you need a Web browser that supports HTML5 canvas.</canvas></p>
+<p>It's a pretty simple script, and works by declaring this function which handles onclick and ondrag events from the canvas.  cnvs is the canvas element, and c is the canvas's 2D rendering context object.</p>
+<div class="pygments_murphy syntax_highlight"><pre><span class="nx">pixel</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span><br/>    <span class="c1">// calculate the x and y coordinates of the cursor</span><br/>    <span class="kd">var</span> <span class="nx">imgdata</span> <span class="o">=</span> <span class="nx">c</span><span class="p">.</span><span class="nx">getImageData</span><span class="p">(</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">);</span><br/>    <span class="kd">var</span> <span class="nx">new_color</span> <span class="o">=</span> <span class="p">[</span> <span class="nx">imgdata</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><br/>                      <span class="nx">imgdata</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <br/>                      <span class="nx">imgdata</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">];</span><br/>    <span class="nx">color</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">background</span> <span class="o">=</span> <span class="s2">&quot;rgb(&quot;</span><span class="o">+</span><span class="nx">new_color</span><span class="o">+</span><span class="s2">&quot;)&quot;</span><span class="p">;</span><br/><span class="p">}</span><br/></pre></div>
+
+<p>That's just a summary; the function actually does a little more than that.  Take a look at the source for this page if you're interested.</p>]]></content>
+  </entry>
+  <entry>
+    <author>
+      <name></name>
+      <uri>http://mwcz.org/blog</uri>
+    </author>
+    <title type="html"><![CDATA[Initial post]]></title>
+    <link rel="alternate" type="text/html" href="http://mwcz.org/blog/2011/11/16/initial-post" />
+    <id>http://mwcz.org/blog/2011/11/16/initial-post</id>
+    <updated>2011-11-16T15:25:00Z</updated>
+    <published>2011-11-16T15:25:00Z</published>
+    <category scheme="http://mwcz.org/blog" term="general" />
+    <summary type="html"><![CDATA[Initial post]]></summary>
+    <content type="html" xml:base="http://mwcz.org/blog/2011/11/16/initial-post"><![CDATA[<p>I'm cobbling together this blog as a central place to showcase my various demos and projects.  Mostly web dev stuff.</p>
+<p>To start off, I'll make a series of posts of old (some <em>very</em> old) demos I've made.</p>
+<p>If you'd like to get in touch with me, feel free to use <a href="https://twitter.com/#!/mwcz">Twitter</a> or <a href="mailto:mwc@clayto.org">email</a>.</p>]]></content>
+  </entry>
+</feed>

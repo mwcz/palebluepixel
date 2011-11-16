@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+     >
+  <channel>
+    <title>mwcz.org</title>
+    <link>http://mwcz.org/blog</link>
+    <description>I finally created a blog.</description>
+    <pubDate>Wed, 16 Nov 2011 06:17:21 GMT</pubDate>
+    <generator>Blogofile</generator>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    <item>
+      <title>Initial post</title>
+      <link>http://mwcz.org/blog/2011/11/16/initial-post</link>
+      <pubDate>Wed, 16 Nov 2011 15:25:00 EST</pubDate>
+      <category><![CDATA[general]]></category>
+      <guid>b'JtT7QQT44hRRj5VwfEGgIXJoOHI='</guid>
+      <description>Initial post</description>
+      <content:encoded><![CDATA[<p>I'm cobbling together this blog as a central place to showcase my various demos and projects.  Mostly web dev stuff.</p>
+<p>To start off, I'll make a series of posts of old (some <em>very</em> old) demos I've made.</p>
+<p>If you'd like to get in touch with me, feel free to use <a href="https://twitter.com/#!/mwcz">Twitter</a> or <a href="mailto:mwc@clayto.org">email</a>.</p>]]></content:encoded>
+    </item>
+  </channel>
+</rss>

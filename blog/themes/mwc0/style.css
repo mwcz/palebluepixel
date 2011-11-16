@@ -1,7 +1,7 @@
 /*
 
 Color palette based on photo: http://clayto.com/
-b19e79
+d4bd98
 ab997b
 271c14
 
@@ -29,32 +29,33 @@ header, nav, article, aside, footer, hgroup, section {
 }
 
 div#main_block {
-    background: #000;
+    background: #000 url("/themes/mwc0/images/bubbles.jpg") bottom no-repeat;
     font-size: 15px;
     min-height: 700px;
 
-    margin: 0 -1px -3px;
+    margin: 0 -1px 0;
     padding-top: 4.0em;
 
     border: 1px solid #ab997b;  
+    border-width: 0px 1px 1px;
 
-    -webkit-box-shadow: 0px -5px 20px rgba( 2, 0, 0, 0.7),
-                        0px  5px 40px rgba( 2, 0, 0, 0.7);
-       -moz-box-shadow: 0px -5px 20px rgba( 2, 0, 0, 0.7),
-                        0px  5px 40px rgba( 2, 0, 0, 0.7);
-         -o-box-shadow: 0px -5px 20px rgba( 2, 0, 0, 0.7),
-                        0px  5px 40px rgba( 2, 0, 0, 0.7);
-            box-shadow: 0px -5px 20px rgba( 2, 0, 0, 0.7),
-                        0px  5px 40px rgba( 2, 0, 0, 0.7);
+    -webkit-box-shadow: 0px -5px 20px rgba( 0, 0, 0, 0.7 ),
+                        0px  5px 40px rgba( 0, 0, 0, 0.7 );
+       -moz-box-shadow: 0px -5px 20px rgba( 0, 0, 0, 0.7 ),
+                        0px  5px 40px rgba( 0, 0, 0, 0.7 );
+         -o-box-shadow: 0px -5px 20px rgba( 0, 0, 0, 0.7 ),
+                        0px  5px 40px rgba( 0, 0, 0, 0.7 );
+            box-shadow: 0px -5px 20px rgba( 0, 0, 0, 0.7 ),
+                        0px  5px 40px rgba( 0, 0, 0, 0.7 );
 }
 
 a {
-    color: #6C8CD5;
+    color: #ab997b;
     text-decoration: none;
 }
 
 a:hover {
-    color: #7C9CE5;
+    color: #d4bd98;
 }
 
 li, ol {
@@ -66,20 +67,9 @@ li, ol {
 /****************************/
 
 #main_header {
-    position: fixed;
-    top: 0;
     width: 100%;
     background: #000;
     z-index: 1;
-
-    -webkit-box-shadow: 0px -5px 20px rgba( 2, 0, 0, 0.7),
-                        0px  5px 40px rgba( 2, 0, 0, 0.7);
-       -moz-box-shadow: 0px -5px 20px rgba( 2, 0, 0, 0.7),
-                        0px  5px 40px rgba( 2, 0, 0, 0.7);
-         -o-box-shadow: 0px -5px 20px rgba( 2, 0, 0, 0.7),
-                        0px  5px 40px rgba( 2, 0, 0, 0.7);
-            box-shadow: 0px -5px 20px rgba( 2, 0, 0, 0.7),
-                        0px  5px 40px rgba( 2, 0, 0, 0.7);
 
 }
 
@@ -95,7 +85,7 @@ div#header h1, div#header h2 {
 
 div#header h2 {
     font-size: 1em;
-    color: #B19E79; 
+    color: #d4bd98; 
 }
 
 div#header a {
@@ -124,8 +114,13 @@ div#navigation li {
     float: left;
 }
 div#navigation a {
-    padding-right: 32px;
-    padding-left: 32px;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 8px 32px 8px 32px;
     display: block;
     text-decoration: none;
     font-weight: normal;
@@ -134,7 +129,7 @@ div#navigation a {
 }
 div#navigation a:hover,
 div#navigation a.selected {
-    background: #3A5490;
+    background: #271f19;
 }
 
 
@@ -144,16 +139,19 @@ div#navigation a.selected {
 
 div#footer {
     color: #fff;
-    border-top: 1px solid #ab997b;
+    border: 1px solid #ab997b;
+    border-width: 0px 1px 0px;
     background: #000;
     width: 100%;
     margin: 0;
     font-size: 0.8em;
     float: right;
+    position: relative;
+    left: 1px;
 }
 
 div#footer a{
-    color: #fff;
+    color: #eee;
 }
 
 div#credits p {
@@ -174,7 +172,7 @@ div#credits p {
 }
 
 .post_prose a:hover {
-    color:#5681E5;
+    color:#d4bd98;
     background-color: #271F19;
 }
 .post_prose a {
@@ -192,13 +190,23 @@ div#credits p {
 }
 
 .blog_post article {
-    margin: 0 0 30px 0;
+    margin: 20px 8px 30px 8px;
     padding-bottom: 5px;
     border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     background: #271F19;
     color: #eee;
+
+    -webkit-box-shadow: 0px -5px 20px rgba( 0, 0, 0, 0.7 ),
+                        0px 15px 40px rgba( 0, 0, 0, 0.7 );
+       -moz-box-shadow: 0px -5px 20px rgba( 0, 0, 0, 0.7 ),
+                        0px 15px 40px rgba( 0, 0, 0, 0.7 );
+         -o-box-shadow: 0px -5px 20px rgba( 0, 0, 0, 0.7 ),
+                        0px 15px 40px rgba( 0, 0, 0, 0.7 );
+            box-shadow: 0px -5px 20px rgba( 0, 0, 0, 0.7 ),
+                        0px 15px 40px rgba( 0, 0, 0, 0.7 );
+
 }
 .blog_post article header {
     -webkit-border-top-left-radius: 10px;
@@ -210,6 +218,7 @@ div#credits p {
     background: #271F19;
     color: #eee;
     height: 40px;
+    padding: 8px;
 }
 .blog_post article footer {
     -webkit-border-bottom-left-radius: 10px;
@@ -246,7 +255,7 @@ div#credits p {
     font-weight: normal;
 }
 .blog_post_title a {
-    color: #b19e79;
+    color: #d4bd98;
 }
 .post_body {
     padding-top: 10px;
@@ -268,7 +277,7 @@ div#credits p {
 
 .syntax_highlight {
     background: #e3e3e3;
-    margin: 15px 10px 15px 20px;
+    margin: 8px 20px 8px 10px;
     padding: 1px 8px;
     color: #000;
     border-radius: 10px;
@@ -312,7 +321,6 @@ aside ul, aside ol {
 aside li {
     margin-left: -25px;
     text-decoration: none;
-    border-bottom: 1px dashed #ddd;
 }
 .tweet_list {
     font-size: 0.8em;
@@ -330,56 +338,21 @@ aside li {
 /****************************/
 .page_box {
 
-    margin: 20px;
+    margin: 20px 8px;
     padding: 20px;
-    background: #e3e3e3;
+    background: #271F19;
+    color: #eee;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
-    border: 1px solid #ccc;
 }
 /****************************/
 /* Fonts */
 /****************************/
 .font-amiga, .font-amiga * {
-    font-family: 'AmigaForever', monospace;    
+    font-family: 'AmigaForever', monospace;
+    font-weight: normal;
 }
 @font-face {
     font-family: "AmigaForever"; src: url("/themes/mwc0/fonts/AmigaForever.ttf");
-}
-/****************************/
-/* Gradients */
-/****************************/
-.header_gradient {
-    background: #2a4480; /* Old browsers */
-    background: -moz-linear-gradient(top, #2a4480 0%, #4671d5 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2a4480), color-stop(100%,#4671d5)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #2a4480 0%,#4671d5 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #2a4480 0%,#4671d5 100%); /* Opera11.10+ */
-    background: -ms-linear-gradient(top, #2a4480 0%,#4671d5 100%); /* IE10+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a4480', endColorstr='#4671d5',GradientType=0 ); /* IE6-9 */
-    background: linear-gradient(top, #2a4480 0%,#4671d5 100%); /* W3C */
-}
-
-.post_header_gradient {
-    box-shadow: inset 0 -35px 35px -18px #005b79;
-    background-color:  #2A4480;
-    background: #2A4480; /* Old browsers */
-    background: -moz-linear-gradient(top, #2A4480 1%, #6C8CD5 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#2A4480), color-stop(100%,#6C8CD5)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #2A4480 1%,#6C8CD5 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #2A4480 1%,#6C8CD5 100%); /* Opera11.10+ */
-    background: -ms-linear-gradient(top, #2A4480 1%,#6C8CD5 100%); /* IE10+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2A4480', endColorstr='#6C8CD5',GradientType=0 ); /* IE6-9 */
-    background: linear-gradient(top, #2A4480 1%,#6C8CD5 100%); /* W3C */
-}
-.post_footer_gradient {
-    background: #DDD; /* Old browsers */
-    background: -moz-linear-gradient(top, #DDD 8%, #6C8CD5 92%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(8%,#DDD), color-stop(92%,#6C8CD5)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #DDD 8%,#6C8CD5 92%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #DDD 8%,#6C8CD5 92%); /* Opera11.10+ */
-    background: -ms-linear-gradient(top, #DDD 8%,#6C8CD5 92%); /* IE10+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#DDD', endColorstr='#6C8CD5',GradientType=0 ); /* IE6-9 */
-    background: linear-gradient(top, #DDD 8%,#6C8CD5 92%); /* W3C */
 }

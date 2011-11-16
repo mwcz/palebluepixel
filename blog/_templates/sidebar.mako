@@ -14,6 +14,7 @@
         <li> <a href="https://www.github.com/mwcz">GitHub</a> </li>
         <li> <a href="http://stackoverflow.com/users/215148/mwcz">StackOverflow</a> </li>
         <li> <a href="http://clayto.com/">My Django-based photography site</a> </li>
+        <li> <a href="https://twitter.com/#!/mwcz">Twitter</a> </li>
     </ul>
   </section>
 
