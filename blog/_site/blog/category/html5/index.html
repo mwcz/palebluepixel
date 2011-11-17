@@ -58,6 +58,102 @@
 <div class="blog_post">
   <article>
     <header class="post_header_gradient">
+      <a name="html5-canvas-area-selection-averaging"></a>
+      <h1 class="blog_post_title font-amiga"><a href="/blog/2011/11/16/html5-canvas-area-selection-averaging" rel="bookmark" title="Permanent Link to HTML5 canvas area selection averaging">HTML5 canvas area selection averaging</a></h2>
+      <div class="date theme_font2">
+        2011
+        16
+        Nov
+      </div>
+    </header>
+    <div class="post_body">
+      <div class="post_prose">
+        
+  
+
+      </div>
+    </div>
+    <footer class="post_footer_gradient">
+      <div class="right">
+       <span class="blog_post_categories"><a href='/blog/category/color'>color</a>, <a href='/blog/category/canvas'>canvas</a>, <a href='/blog/category/html5'>html5</a></span>
+      </div>
+    </footer>
+  </article>
+</div>
+
+
+
+  
+
+
+
+<div class="blog_post">
+  <article>
+    <header class="post_header_gradient">
+      <a name="html5-canvas-rgb-histogram"></a>
+      <h1 class="blog_post_title font-amiga"><a href="/blog/2011/11/16/html5-canvas-rgb-histogram" rel="bookmark" title="Permanent Link to HTML5 canvas RGB histogram">HTML5 canvas RGB histogram</a></h2>
+      <div class="date theme_font2">
+        2011
+        16
+        Nov
+      </div>
+    </header>
+    <div class="post_body">
+      <div class="post_prose">
+        
+  
+
+      </div>
+    </div>
+    <footer class="post_footer_gradient">
+      <div class="right">
+       <span class="blog_post_categories"><a href='/blog/category/color'>color</a>, <a href='/blog/category/canvas'>canvas</a>, <a href='/blog/category/html5'>html5</a></span>
+      </div>
+    </footer>
+  </article>
+</div>
+
+
+
+  
+
+
+
+<div class="blog_post">
+  <article>
+    <header class="post_header_gradient">
+      <a name="html5-canvas-3d-pixel-array"></a>
+      <h1 class="blog_post_title font-amiga"><a href="/blog/2011/11/16/html5-canvas-3d-pixel-array" rel="bookmark" title="Permanent Link to HTML5 canvas 3D pixel array">HTML5 canvas 3D pixel array</a></h2>
+      <div class="date theme_font2">
+        2011
+        16
+        Nov
+      </div>
+    </header>
+    <div class="post_body">
+      <div class="post_prose">
+        
+  
+
+      </div>
+    </div>
+    <footer class="post_footer_gradient">
+      <div class="right">
+       <span class="blog_post_categories"><a href='/blog/category/color'>color</a>, <a href='/blog/category/canvas'>canvas</a>, <a href='/blog/category/html5'>html5</a></span>
+      </div>
+    </footer>
+  </article>
+</div>
+
+
+
+  
+
+
+
+<div class="blog_post">
+  <article>
+    <header class="post_header_gradient">
       <a name="html5-canvas-eyedropper"></a>
       <h1 class="blog_post_title font-amiga"><a href="/blog/2011/11/16/html5-canvas-eyedropper" rel="bookmark" title="Permanent Link to HTML5 Canvas eyedropper">HTML5 Canvas eyedropper</a></h2>
       <div class="date theme_font2">
@@ -69,79 +165,7 @@
     <div class="post_body">
       <div class="post_prose">
         
-<style type="text/css"> 
-    #color { height: 80px; width: 80px; margin: 20px; display: block; border: 1px solid black; }
-    canvas { margin: 0 auto; }
-</style>
-
-<script type="text/javascript">
-
-var c;
-var cnvs;
-
-window.onload = function() {
-
-cnvs = document.getElementById("c");
-
-if( cnvs.getContext) { // Check for canvas support
-    // DRAW FUN STUFF!
-
-c = cnvs.getContext('2d');
-        var color = document.getElementById("color");
-        var colorcode = document.getElementById("colorcode");
-
-var img = new Image();
-
-img.onload = function() {
-            cnvs.width = img.width;cnvs.height = img.height; // resize to fit image
-            c.drawImage( img, 0, 0 );
-        }
-        img.src = "/img/kazoo.png";
-
-pixel = function(e) {
-
-// find the element's position
-            var x = 0;
-            var y = 0;
-            var o = cnvs;
-            do {
-                x += o.offsetLeft;
-                y += o.offsetTop;
-            } while (o = o.offsetParent);
-
-x = e.pageX - x;
-            y = e.pageY - y;
-            var imgdata = c.getImageData( x, y, 1, 1 );
-            var new_color = [ imgdata.data[0], imgdata.data[1], imgdata.data[2] ];
-            color.style.background = "rgb("+new_color+")";
-            colorcode.innerHTML = "rgb("+new_color+")";
-        }
-
-cnvs.onmousedown = function(e) {
-            cnvs.onmousemove = pixel; // fire pixel() while user is dragging
-            cnvs.onclick = pixel; // only so it will still fire if user doesn't drag at all
-        }
-
-cnvs.onmouseup = function() {
-            cnvs.onmousemove = null;
-        }
-
-//cnvs.onmousemove = cnvs.onclick;
-
-}
-
-}
-
-</script>
-
-<p>This is an old demo I made of an <a href="http://en.wikipedia.org/wiki/Canvas_element">HTML5 canvas</a> eyedropper.  Circa 2009, I believe.  Just click and drag on the image to see it in action.</p>
-<p><span id="color"></span>
-<span id="colorcode"></span></p>
-<p><canvas id="c">Sorry, in order to view this demo you need a Web browser that supports HTML5 canvas.</canvas></p>
-<p>It's a pretty simple script, and works by declaring this function which handles onclick and ondrag events from the canvas.  cnvs is the canvas element, and c is the canvas's 2D rendering context object.</p>
-<div class="pygments_murphy syntax_highlight"><pre><span class="nx">pixel</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span><br/>    <span class="c1">// calculate the x and y coordinates of the cursor</span><br/>    <span class="kd">var</span> <span class="nx">imgdata</span> <span class="o">=</span> <span class="nx">c</span><span class="p">.</span><span class="nx">getImageData</span><span class="p">(</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">);</span><br/>    <span class="kd">var</span> <span class="nx">new_color</span> <span class="o">=</span> <span class="p">[</span> <span class="nx">imgdata</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><br/>                      <span class="nx">imgdata</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <br/>                      <span class="nx">imgdata</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">];</span><br/>    <span class="nx">color</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">background</span> <span class="o">=</span> <span class="s2">&quot;rgb(&quot;</span><span class="o">+</span><span class="nx">new_color</span><span class="o">+</span><span class="s2">&quot;)&quot;</span><span class="p">;</span><br/><span class="p">}</span><br/></pre></div>
-
-<p>That's just a summary; the function actually does a little more than that.  Take a look at the source for this page if you're interested.</p>
+  
 
       </div>
     </div>
@@ -162,6 +186,9 @@ cnvs.onmouseup = function() {
   <section>
     <h1 class="post_header_gradient theme_font">Latest Posts</h1>
     <ul>
+      <li><a href="/blog/2011/11/16/html5-canvas-area-selection-averaging">HTML5 canvas area selection averaging</a></li>
+      <li><a href="/blog/2011/11/16/html5-canvas-rgb-histogram">HTML5 canvas RGB histogram</a></li>
+      <li><a href="/blog/2011/11/16/html5-canvas-3d-pixel-array">HTML5 canvas 3D pixel array</a></li>
       <li><a href="/blog/2011/11/16/html5-canvas-eyedropper">HTML5 Canvas eyedropper</a></li>
       <li><a href="/blog/2011/11/16/initial-post">Initial post</a></li>
     </ul>

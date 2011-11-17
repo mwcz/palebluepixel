@@ -10,10 +10,219 @@
     <title>mwcz.org</title>
     <link>http://mwcz.org/blog</link>
     <description>I finally created a blog.</description>
-    <pubDate>Wed, 16 Nov 2011 06:17:21 GMT</pubDate>
+    <pubDate>Thu, 17 Nov 2011 03:41:38 GMT</pubDate>
     <generator>Blogofile</generator>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
+    <item>
+      <title>HTML5 canvas area selection averaging</title>
+      <link>http://mwcz.org/blog/2011/11/16/html5-canvas-area-selection-averaging</link>
+      <pubDate>Wed, 16 Nov 2011 18:25:00 EST</pubDate>
+      <category><![CDATA[color]]></category>
+      <category><![CDATA[canvas]]></category>
+      <category><![CDATA[html5]]></category>
+      <guid>b'C9TlJjRziEuKR3rVgcQw66ug5QQ='</guid>
+      <description>HTML5 canvas area selection averaging</description>
+      <content:encoded><![CDATA[<p>This is a demo from late 2009.  It's an extension of the single-pixel <a href="/blog/2011/11/16/html5-canvas-eyedropper/">eyedropper</a> I wrote previously.</p>
+<p>It's powered by an early version of an old JS toolkit I wrote called JSImage.  The latest version is available at my <a href="https://github.com/mwcz/jsimage">JSImage github repo</a>.  Don't be fooled by the 2011 commits, those are just artifacts from svn-&gt;git migration.  No guarantees that the histo's are actually correct. :)</p>
+<p>I used an old version of a rectangular selection tool called marquee.  I believe it's still located <a href="http://marqueetool.net/">here</a> but I can't be totally sure that's the same project.</p>
+<p>Click, drag, and taste the magic. :|</p>
+<link rel="stylesheet" type="text/css" href="/css/004/marker.css" /> 
+<script type="text/javascript" src="/js/004/marquee/rectmarquee.js"></script> 
+<script type="text/javascript" src="/js/004/JSImage.js"></script>
+
+<script type="text/javascript">
+
+window.onload = function() {
+
+img0 = new JSImage( "c0", "/img/004/kazoo.png" );
+    setTimeout("img0.draggable();",100); // enable the selection
+
+}
+
+var img0; // make img0 public so I can play with it in firebug more easily
+
+</script>
+
+<canvas id="c0"> 
+    Your browser does not support the <canvas> element. Lame.
+</canvas>]]></content:encoded>
+    </item>
+    <item>
+      <title>HTML5 canvas RGB histogram</title>
+      <link>http://mwcz.org/blog/2011/11/16/html5-canvas-rgb-histogram</link>
+      <pubDate>Wed, 16 Nov 2011 17:25:00 EST</pubDate>
+      <category><![CDATA[color]]></category>
+      <category><![CDATA[canvas]]></category>
+      <category><![CDATA[html5]]></category>
+      <guid>b'oYZfsCpiKhrtj-0ttHmXZ6hyxFs='</guid>
+      <description>HTML5 canvas RGB histogram</description>
+      <content:encoded><![CDATA[<p>This is yet another demo from around 2009.  It's simple enough.  Click a button, draw an unbinned RGB histogram of the source image.</p>
+<p>It's powered by an early version of an old JS toolkit I wrote called JSImage.  The latest version is available at my <a href="https://github.com/mwcz/jsimage">JSImage github repo</a>.  Don't be fooled by the 2011 commits, those are just artifacts from svn-&gt;git migration.  No guarantees that the histo's are actually correct. :)</p>
+<script type="text/javascript" src="/js/003/JSImage.js"></script>
+
+<script type="text/javascript">
+
+window.onload = function() {
+
+img0 = new JSImage( "c0", "/img/003/kazoo.png" );
+    imgr = new JSImage( "cr", "/img/003/kazoo.png" );
+    imgg = new JSImage( "cg", "/img/003/kazoo.png" );
+    imgb = new JSImage( "cb", "/img/003/kazoo.png" );
+
+}
+
+function draw() {
+
+/**
+     * Color histo canvases the color of their histo
+     */
+    img0.histo( imgr.canvas, 'r', 'rgba(255,0,0,0.9)', 'rgba(0,0,0,0.8)' )
+    img0.histo( imgg.canvas, 'g', 'rgba(0,200,0,0.9)', 'rgba(0,0,0,0.8)' )
+    img0.histo( imgb.canvas, 'b', 'rgba(0,0,200,0.9)', 'rgba(0,0,0,0.8)' )
+
+}
+
+var img0, imgr, imgg, imgb; // make img0 public so I can play with it in firebug more easily
+
+</script>
+
+<p><canvas id="c0"> 
+    Your browser does not support the <canvas> element. Lame.
+</canvas> </p>
+<p><button type="button" onclick="draw()">draw histograms</button> </p>
+<p>Red:</p>
+<p><canvas id="cr"> 
+    Your browser does not support the <canvas> element. Lame.
+</canvas> </p>
+<p>Green:</p>
+<p><canvas id="cg"> 
+    Your browser does not support the <canvas> element. Lame.
+</canvas> </p>
+<p>Blue:</p>
+<p><canvas id="cb"> 
+    Your browser does not support the <canvas> element. Lame.
+</canvas> </p>]]></content:encoded>
+    </item>
+    <item>
+      <title>HTML5 canvas 3D pixel array</title>
+      <link>http://mwcz.org/blog/2011/11/16/html5-canvas-3d-pixel-array</link>
+      <pubDate>Wed, 16 Nov 2011 16:25:00 EST</pubDate>
+      <category><![CDATA[color]]></category>
+      <category><![CDATA[canvas]]></category>
+      <category><![CDATA[html5]]></category>
+      <guid>b'I0jDrs8tyrRaSux1v4ZtB2l7_dU='</guid>
+      <description>HTML5 canvas 3D pixel array</description>
+      <content:encoded><![CDATA[<p>This is another demo from 2009-ish.  When I started experimenting with canvas, I felt uncomfortable with the 1-dimensionality of <a href="https://developer.mozilla.org/en/DOM/CanvasPixelArray">CanvasPixelArray</a>.  I wrote this script to convert it into a more logical format: X by Y by RGBA.  Let me rephrase that.  By "more logical", I mean "more logical, <em>to me</em>, <em>at the time</em>).  1D is fine, and I can't think of any use for this script.  But, nonetheless, here it is, including the original description.</p>
+<script type="text/javascript">
+
+var c;
+var cnvs;
+
+window.onload = draw;
+
+function draw() {
+
+cnvs = document.getElementById("c");
+    tmpl = document.getElementById("t");
+
+if( cnvs.getContext) { // Check for canvas support
+
+c = cnvs.getContext('2d');
+        t = tmpl.getContext('2d');
+        var color = document.getElementById("color");
+
+var img = new Image();
+
+img.onload = function() {
+            cnvs.width = img.width;
+            cnvs.height = img.height; // resize to fit image
+            tmpl.width = img.width;
+            tmpl.height = img.height; // resize to fit image
+            c.drawImage( img, 0, 0 );
+        }
+        img.src = "/img/002/kazoo.png";
+
+getpixelarray = function() {
+            var pixarray = new Array();
+            var imgdata = c.getImageData( 0, 0, cnvs.width, cnvs.height ).data;
+
+/**
+             * getImageData() returns a one-dimensional array where each element represents,
+             * one subpixel.  So a full set of pixels looks like this:
+             *
+             *      (R, G, B, A, R, G, B, A, R, G, B, A, ...)
+             *
+             * Ugly, right?  Yeah.  So I'm translating them into a 2D array where the origin
+             * (sadly) is at the top left.
+             *
+             * When doing the translation, I'm also starting at the bottom right, so there
+             * only has to be ONE array enlarge operation each for the X and Y arrays.
+             */
+
+// build empty pix array.  we'll fill it later
+            //console.time("build empty array");
+            for( var x = cnvs.width-1; x >= 0; x-- ) {
+
+pixarray[x] = new Array(); // insert new vertical array
+
+for( var y = cnvs.height-1; y >= 0; y-- ) {
+
+pixarray[x][y] = new Array(0,0,0,0);
+
+}
+
+}
+
+/** 
+             * Now we fill up the pix array with real values.
+             * We don't REALLY need the alpha channel, but I'm including it
+             * just in case a use arises for it in the future.  Likely.
+             */
+
+for( var i = 0; i < imgdata.length-3; i+=4 ) {
+                var x = parseInt( parseInt(i/4) % ( cnvs.width ) );
+                var y = parseInt( parseInt(i/4) / ( cnvs.width ) );
+
+pixarray[x][y][0] = imgdata[i];
+                pixarray[x][y][1] = imgdata[i+1];
+                pixarray[x][y][2] = imgdata[i+2];
+                pixarray[x][y][3] = imgdata[i+3];
+
+}
+
+for( var y = 0; y < cnvs.height; y++ ) { // loop over y
+                for( var x = 0; x < cnvs.width; x++ ) { // loop over x
+                    t.fillStyle = "rgba(" + pixarray[x][y][0] + "," + pixarray[x][y][1] + "," + pixarray[x][y][2] + "," + pixarray[x][y][3] + ")";
+                    t.fillRect(x, y, 1, 1);
+                }
+            }
+
+return pixarray;
+        }
+
+}
+
+}
+
+</script>
+
+<h1>canvas pixarray</h1>
+<p>After loading an image file into a &lt;canvas&gt; element, you can retrieve its pixels with getImageData().  The problem is that the array of pixels is one-dimensional.  The array would look something like this for a set of N pixels P<sub>i</sub> where each pixel has bands RGBA with values 0..255:</p>
+<p>( P<sub>0R</sub>, P<sub>0G</sub>, P<sub>0B</sub>, P<sub>0A</sub>, P<sub>1R</sub>, P<sub>1G</sub>, P<sub>1B</sub>, P<sub>1A</sub>, ... , P<sub>(N-1)R</sub>, P<sub>(N-1)G</sub>, P<sub>(N-1)B</sub>, P<sub>(N-1)A</sub> )</p>
+<p>That's really tough to work with, so this script converts that to a more logical 3D array (X by Y by RGBA)</p>
+<p><input type="button" value="1D -> 3D pixel array" onclick="getpixelarray();" /&gt; </p>
+<p>This canvas drawn from an image file:</p>
+<p><canvas id="c" width="650" height="250"> 
+    Your browser does not support the &lt;canvas&gt; element.
+    Lame.
+</canvas> </p>
+<p>This canvas drawn from the 3D image array:</p>
+<p><canvas id="t" width="650" height="250"> 
+    Your browser does not support the &lt;canvas&gt; element.
+    Lame.
+</canvas> </p>]]></content:encoded>
+    </item>
     <item>
       <title>HTML5 Canvas eyedropper</title>
       <link>http://mwcz.org/blog/2011/11/16/html5-canvas-eyedropper</link>
@@ -50,7 +259,7 @@ img.onload = function() {
             cnvs.width = img.width;cnvs.height = img.height; // resize to fit image
             c.drawImage( img, 0, 0 );
         }
-        img.src = "/img/kazoo.png";
+        img.src = "/img/001/kazoo.png";
 
 pixel = function(e) {
 
@@ -80,8 +289,6 @@ cnvs.onmouseup = function() {
             cnvs.onmousemove = null;
         }
 
-//cnvs.onmousemove = cnvs.onclick;
-
 }
 
 }
@@ -95,7 +302,7 @@ cnvs.onmouseup = function() {
 <p>It's a pretty simple script, and works by declaring this function which handles onclick and ondrag events from the canvas.  cnvs is the canvas element, and c is the canvas's 2D rendering context object.</p>
 <div class="pygments_murphy syntax_highlight"><pre><span class="nx">pixel</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span><br/>    <span class="c1">// calculate the x and y coordinates of the cursor</span><br/>    <span class="kd">var</span> <span class="nx">imgdata</span> <span class="o">=</span> <span class="nx">c</span><span class="p">.</span><span class="nx">getImageData</span><span class="p">(</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">);</span><br/>    <span class="kd">var</span> <span class="nx">new_color</span> <span class="o">=</span> <span class="p">[</span> <span class="nx">imgdata</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><br/>                      <span class="nx">imgdata</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <br/>                      <span class="nx">imgdata</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">];</span><br/>    <span class="nx">color</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">background</span> <span class="o">=</span> <span class="s2">&quot;rgb(&quot;</span><span class="o">+</span><span class="nx">new_color</span><span class="o">+</span><span class="s2">&quot;)&quot;</span><span class="p">;</span><br/><span class="p">}</span><br/></pre></div>
 
-<p>That's just a summary; the function actually does a little more than that.  Take a look at the source for this page if you're interested.</p>]]></content:encoded>
+<p>That's just a summary; the function actually does a little more than that.  Take a look at the source for this page if you're interested, and contact me if there are any questions.</p>]]></content:encoded>
     </item>
   </channel>
 </rss>

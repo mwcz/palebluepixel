@@ -31,7 +31,7 @@ window.onload = function() {
             cnvs.width = img.width;cnvs.height = img.height; // resize to fit image
             c.drawImage( img, 0, 0 );
         }
-        img.src = "/img/kazoo.png";
+        img.src = "/img/001/kazoo.png";
  
         pixel = function(e) {
 
@@ -61,9 +61,6 @@ window.onload = function() {
             cnvs.onmousemove = null;
         }
  
-        //cnvs.onmousemove = cnvs.onclick; 
- 
- 
     }
  
 }
@@ -90,4 +87,4 @@ pixel = function(e) {
 }
 $$/code
 
-That's just a summary; the function actually does a little more than that.  Take a look at the source for this page if you're interested.
+That's just a summary; the function actually does a little more than that.  Take a look at the source for this page if you're interested, and contact me if there are any questions.

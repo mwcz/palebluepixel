@@ -96,7 +96,7 @@ img.onload = function() {
             cnvs.width = img.width;cnvs.height = img.height; // resize to fit image
             c.drawImage( img, 0, 0 );
         }
-        img.src = "/img/kazoo.png";
+        img.src = "/img/001/kazoo.png";
 
 pixel = function(e) {
 
@@ -126,8 +126,6 @@ cnvs.onmouseup = function() {
             cnvs.onmousemove = null;
         }
 
-//cnvs.onmousemove = cnvs.onclick;
-
 }
 
 }
@@ -141,7 +139,7 @@ cnvs.onmouseup = function() {
 <p>It's a pretty simple script, and works by declaring this function which handles onclick and ondrag events from the canvas.  cnvs is the canvas element, and c is the canvas's 2D rendering context object.</p>
 <div class="pygments_murphy syntax_highlight"><pre><span class="nx">pixel</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span><br/>    <span class="c1">// calculate the x and y coordinates of the cursor</span><br/>    <span class="kd">var</span> <span class="nx">imgdata</span> <span class="o">=</span> <span class="nx">c</span><span class="p">.</span><span class="nx">getImageData</span><span class="p">(</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">);</span><br/>    <span class="kd">var</span> <span class="nx">new_color</span> <span class="o">=</span> <span class="p">[</span> <span class="nx">imgdata</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><br/>                      <span class="nx">imgdata</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <br/>                      <span class="nx">imgdata</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">];</span><br/>    <span class="nx">color</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">background</span> <span class="o">=</span> <span class="s2">&quot;rgb(&quot;</span><span class="o">+</span><span class="nx">new_color</span><span class="o">+</span><span class="s2">&quot;)&quot;</span><span class="p">;</span><br/><span class="p">}</span><br/></pre></div>
 
-<p>That's just a summary; the function actually does a little more than that.  Take a look at the source for this page if you're interested.</p>
+<p>That's just a summary; the function actually does a little more than that.  Take a look at the source for this page if you're interested, and contact me if there are any questions.</p>
 
       </div>
     </div>
@@ -166,6 +164,9 @@ cnvs.onmouseup = function() {
   <section>
     <h1 class="post_header_gradient theme_font">Latest Posts</h1>
     <ul>
+      <li><a href="/blog/2011/11/16/html5-canvas-area-selection-averaging">HTML5 canvas area selection averaging</a></li>
+      <li><a href="/blog/2011/11/16/html5-canvas-rgb-histogram">HTML5 canvas RGB histogram</a></li>
+      <li><a href="/blog/2011/11/16/html5-canvas-3d-pixel-array">HTML5 canvas 3D pixel array</a></li>
       <li><a href="/blog/2011/11/16/html5-canvas-eyedropper">HTML5 Canvas eyedropper</a></li>
       <li><a href="/blog/2011/11/16/initial-post">Initial post</a></li>
     </ul>

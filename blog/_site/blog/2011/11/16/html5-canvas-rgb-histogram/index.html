@@ -1,0 +1,213 @@
+
+
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mwcz.org</title>
+  <meta name="description" content="I finally created a blog.">
+  <meta name="author" content="mwc">
+  <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/blog/feed" />
+  <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="/blog/feed/atom" />
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="/css/base.css?v=1">
+  <link rel="stylesheet" href="/css/grid.css?v=1">
+  <link rel="stylesheet" media="handheld" href="/css/handheld.css?v=1">
+  <link rel="stylesheet" href="/css/pygments_murphy.css" type="text/css" />
+
+  <script src="/js/libs/modernizr-1.7.min.js"></script>
+
+  <link rel="stylesheet" href="/themes/mwc0/style.css?v=1">
+
+
+</head>
+  <body>
+    <div id="container" class="container container_12">
+      <div id="main" role="main">
+        <div id="main_block">
+          <header id="main_header">
+  <div id="header" class="font-amiga">
+    <h1><a href="/">mwcz.org</a></h1>
+
+  </div>
+  <div id="navigation" class="grid_12">
+
+    <ul>
+      <li><a href="/"
+             class="">Home</a></li>
+      <li><a href="/blog/archive"
+             class="">Archives</a></li>
+    </ul>
+  </div>
+</header>
+
+          <div id="prose_block" class="grid_8">
+            
+
+
+
+
+<div class="blog_post">
+  <article>
+    <header class="post_header_gradient">
+      <a name="html5-canvas-rgb-histogram"></a>
+      <h1 class="blog_post_title font-amiga"><a href="/blog/2011/11/16/html5-canvas-rgb-histogram" rel="bookmark" title="Permanent Link to HTML5 canvas RGB histogram">HTML5 canvas RGB histogram</a></h2>
+      <div class="date theme_font2">
+        2011
+        16
+        Nov
+      </div>
+    </header>
+    <div class="post_body">
+      <div class="post_prose">
+        
+<p>This is yet another demo from around 2009.  It's simple enough.  Click a button, draw an unbinned RGB histogram of the source image.</p>
+<p>It's powered by an early version of an old JS toolkit I wrote called JSImage.  The latest version is available at my <a href="https://github.com/mwcz/jsimage">JSImage github repo</a>.  Don't be fooled by the 2011 commits, those are just artifacts from svn-&gt;git migration.  No guarantees that the histo's are actually correct. :)</p>
+<script type="text/javascript" src="/js/003/JSImage.js"></script>
+
+<script type="text/javascript">
+
+window.onload = function() {
+
+img0 = new JSImage( "c0", "/img/003/kazoo.png" );
+    imgr = new JSImage( "cr", "/img/003/kazoo.png" );
+    imgg = new JSImage( "cg", "/img/003/kazoo.png" );
+    imgb = new JSImage( "cb", "/img/003/kazoo.png" );
+
+}
+
+function draw() {
+
+/**
+     * Color histo canvases the color of their histo
+     */
+    img0.histo( imgr.canvas, 'r', 'rgba(255,0,0,0.9)', 'rgba(0,0,0,0.8)' )
+    img0.histo( imgg.canvas, 'g', 'rgba(0,200,0,0.9)', 'rgba(0,0,0,0.8)' )
+    img0.histo( imgb.canvas, 'b', 'rgba(0,0,200,0.9)', 'rgba(0,0,0,0.8)' )
+
+}
+
+var img0, imgr, imgg, imgb; // make img0 public so I can play with it in firebug more easily
+
+</script>
+
+<p><canvas id="c0"> 
+    Your browser does not support the <canvas> element. Lame.
+</canvas> </p>
+<p><button type="button" onclick="draw()">draw histograms</button> </p>
+<p>Red:</p>
+<p><canvas id="cr"> 
+    Your browser does not support the <canvas> element. Lame.
+</canvas> </p>
+<p>Green:</p>
+<p><canvas id="cg"> 
+    Your browser does not support the <canvas> element. Lame.
+</canvas> </p>
+<p>Blue:</p>
+<p><canvas id="cb"> 
+    Your browser does not support the <canvas> element. Lame.
+</canvas> </p>
+
+      </div>
+    </div>
+    <footer class="post_footer_gradient">
+      <div class="right">
+       <span class="blog_post_categories"><a href='/blog/category/color'>color</a>, <a href='/blog/category/canvas'>canvas</a>, <a href='/blog/category/html5'>html5</a></span>
+      </div>
+    </footer>
+  </article>
+</div>
+
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_url = "http://mwcz.org/blog/2011/11/16/html5-canvas-rgb-histogram";
+</script>
+
+          </div>
+          <div id="sidebar" class="grid_4">
+            <aside>
+  <section>
+    <h1 class="post_header_gradient theme_font">Latest Posts</h1>
+    <ul>
+      <li><a href="/blog/2011/11/16/html5-canvas-area-selection-averaging">HTML5 canvas area selection averaging</a></li>
+      <li><a href="/blog/2011/11/16/html5-canvas-rgb-histogram">HTML5 canvas RGB histogram</a></li>
+      <li><a href="/blog/2011/11/16/html5-canvas-3d-pixel-array">HTML5 canvas 3D pixel array</a></li>
+      <li><a href="/blog/2011/11/16/html5-canvas-eyedropper">HTML5 Canvas eyedropper</a></li>
+      <li><a href="/blog/2011/11/16/initial-post">Initial post</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h1>Find me on...</h1>
+    <ul>
+        <li> <a href="https://www.github.com/mwcz">GitHub</a> </li>
+        <li> <a href="http://stackoverflow.com/users/215148/mwcz">StackOverflow</a> </li>
+        <li> <a href="http://clayto.com/">My Django-based photography site</a> </li>
+        <li> <a href="https://twitter.com/#!/mwcz">Twitter</a> </li>
+    </ul>
+  </section>
+
+  
+
+</aside>
+
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      
+<footer>
+  <div id="footer" class="grid_12">
+    <div class="grid_8">
+      <p>
+        <a href="/blog/feed/index.xml">RSS</a>
+      </p>
+    </div>
+    <div class="grid_4" id="credits">
+      <p>
+        Copyright 2011
+        mwc
+      </p>
+      <p>
+        Powered by <a href="http://www.blogofile.com">Blogofile</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+    </div>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/js/libs/jquery-1.5.1.min.js"%3E%3C/script%3E'))</script>
+  <script src="/js/plugins.js"></script>
+  <script src="/js/script.js"></script>
+  <script src="/js/jquery.tweet.js"></script>  
+  <script src="/js/site.js"></script>
+  <!--[if lt IE 7 ]>
+  <script src="js/libs/dd_belatedpng.js"></script>
+  <script> DD_belatedPNG.fix('img, .png_bg');</script>
+  <![endif]-->
+  <script>
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+
+  </body>
+</html>
+
+
+
+
+
+
