@@ -39,7 +39,7 @@ Marquee.prototype = {
 	},
 	
 	add: function(element) {
-		element = $(element);
+		element = $$$(element);
 		if (!element) return;
 		
 		var options = Object.extend({
@@ -187,7 +187,7 @@ Marquee.prototype = {
 		landing.appendChild(listener);
 		element.parentNode.insertBefore(landing, element);
 		
-		var preview = $(options.preview);
+		var preview = $$$(options.preview);
 		if (preview) {
 			var pImage = new Image();
 			pImage.src = element.tagName == 'IMG' ? element.src : element.style.backgroundImage;
@@ -948,7 +948,7 @@ Marquee.prototype = {
 
 if (!Element.setOpacity) {
 	Element.setOpacity = function(element, value) {
-	  element= $(element);
+	  element= $$$(element);
 		if (value == 1) {
 			Element.setStyle(element, {
 				opacity: (/Gecko/.test(navigator.userAgent) && 
