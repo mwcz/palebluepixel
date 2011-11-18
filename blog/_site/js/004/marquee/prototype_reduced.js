@@ -296,7 +296,7 @@ var $R = function(start, end, exclusive) {
   return new ObjectRange(start, end, exclusive);
 }
 
-function $() {
+function $$$() {
   var results = [], element;
   for (var i = 0; i < arguments.length; i++) {
     element = arguments[i];
@@ -341,30 +341,30 @@ Element.extend.cache = {
 Element.Methods = {
   hide: function() {
     for (var i = 0; i < arguments.length; i++) {
-      var element = $(arguments[i]);
+      var element = $$$(arguments[i]);
       element.style.display = 'none';
     }
   },
 
   show: function() {
     for (var i = 0; i < arguments.length; i++) {
-      var element = $(arguments[i]);
+      var element = $$$(arguments[i]);
       element.style.display = '';
     }
   },
 
   remove: function(element) {
-    element = $(element);
+    element = $$$(element);
     element.parentNode.removeChild(element);
   },
 
   getHeight: function(element) {
-    element = $(element);
+    element = $$$(element);
     return element.offsetHeight;
   },
 
   getStyle: function(element, style) {
-    element = $(element);
+    element = $$$(element);
     var value = element.style[style.camelize()];
     if (!value) {
       if (document.defaultView && document.defaultView.getComputedStyle) {
@@ -382,13 +382,13 @@ Element.Methods = {
   },
 
   setStyle: function(element, style) {
-    element = $(element);
+    element = $$$(element);
     for (var name in style)
       element.style[name.camelize()] = style[name];
   },
 
   getDimensions: function(element) {
-    element = $(element);
+    element = $$$(element);
     if (Element.getStyle(element, 'display') != 'none')
       return {width: element.offsetWidth, height: element.offsetHeight};
 
@@ -478,7 +478,7 @@ Object.extend(Event, {
   },
 
   observe: function(element, name, observer, useCapture) {
-    var element = $(element);
+    var element = $$$(element);
     useCapture = useCapture || false;
 
     if (name == 'keypress' &&
@@ -490,7 +490,7 @@ Object.extend(Event, {
   },
 
   stopObserving: function(element, name, observer, useCapture) {
-    var element = $(element);
+    var element = $$$(element);
     useCapture = useCapture || false;
 
     if (name == 'keypress' &&

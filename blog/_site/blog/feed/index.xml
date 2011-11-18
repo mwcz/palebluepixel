@@ -10,10 +10,302 @@
     <title>mwcz.org</title>
     <link>http://mwcz.org/blog</link>
     <description>I finally created a blog.</description>
-    <pubDate>Thu, 17 Nov 2011 03:41:38 GMT</pubDate>
+    <pubDate>Fri, 18 Nov 2011 00:52:18 GMT</pubDate>
     <generator>Blogofile</generator>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
+    <item>
+      <title>Bouncey returns - more canvas physics</title>
+      <link>http://mwcz.org/blog/2011/11/17/bouncey-returns---more-canvas-physics</link>
+      <pubDate>Thu, 17 Nov 2011 22:25:00 EST</pubDate>
+      <category><![CDATA[canvas]]></category>
+      <category><![CDATA[javascript]]></category>
+      <category><![CDATA[physics]]></category>
+      <category><![CDATA[html5]]></category>
+      <guid>b'2xt0h5v9PdQpOWIQqUDpRdUg6RE='</guid>
+      <description>Bouncey returns - more canvas physics</description>
+      <content:encoded><![CDATA[<p>This is a slightly upgraded version of the physics demo I showed in my <a href="/blog/2011/11/17/bouncey---canvas-physics/">last post</a>.</p>
+<p>It is still...</p>
+<p><quote>"a buggy, rudimentary, just-for-fun javascript physics simulator."</quote></p>
+<p>This version has:</p>
+<ul>
+<li>pre-defined initial states</li>
+<li>gravity</li>
+<li>friction</li>
+</ul>
+<p>It still has the "clinging" bug.  I know how to fix it, but didn't deem it important enough to spend time on it. :)</p>
+<p>The <a href="https://github.com/mwcz/bouncey/blob/master/bounce.html">code</a> is well commented, so feel free to hack on it.</p>
+<p>Click on one of the initial states to begin the simulation.</p>
+<style type="text/css">
+#cnvs {
+    margin: 0 auto;
+    border: 1px solid black;
+    -webkit-box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
+       -moz-box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
+         -o-box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
+            box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
+}
+</style>
+
+<script type="text/javascript" src="/js/008/bouncey.js"></script>
+
+<p>Initial states:
+<button onclick="RANDOM();">Random</button>
+<button onclick="POOL();">POOL</button>
+<button onclick="HEAD_ON_COLLISION();">HEAD_ON_COLLISION</button></p>
+<p><canvas id="cnvs" width="500" height="375"> 
+    Sorry, your browser does not support HTML5 canvas.  Lame.
+</canvas> </p>
+<p><button onclick="paused++;paused%=2;">Pause</button> </p>
+<pre>
+  velocity sum: <span id="txt_velocity_sum">NONE</span>
+x velocity sum: <span id="txt_velocity_sum_x">NONE</span>
+y velocity sum: <span id="txt_velocity_sum_y">NONE</span>
+</pre>
+
+<p>(The POOL initial state reproduces the clinging bug.)</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Bouncey - canvas physics</title>
+      <link>http://mwcz.org/blog/2011/11/17/bouncey---canvas-physics</link>
+      <pubDate>Thu, 17 Nov 2011 21:25:00 EST</pubDate>
+      <category><![CDATA[canvas]]></category>
+      <category><![CDATA[javascript]]></category>
+      <category><![CDATA[physics]]></category>
+      <category><![CDATA[html5]]></category>
+      <guid>b'lme0L3L_sUuiXWqzNi0W4eTQuUQ='</guid>
+      <description>Bouncey - canvas physics</description>
+      <content:encoded><![CDATA[<p>This is Bouncey.  It's a simple physics demo I wrote in early/mid 2011, with some contributions and bugfixes from my good friend Greg Gardner.</p>
+<p>The description for <a href="https://github.com/mwcz/bouncey">bouncey's github repo</a> is:</p>
+<p><quote>"a buggy, rudimentary, just-for-fun javascript physics simulator."</quote></p>
+<p>It covers <a href="http://en.wikipedia.org/wiki/Newton&apos;s_laws_of_motion">Newton's laws of motion</a>.</p>
+<style type="text/css">
+#cnvs {
+    margin: 0 auto;
+    border: 1px solid black;
+    -webkit-box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
+       -moz-box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
+         -o-box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
+            box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
+}
+</style>
+
+<script type="text/javascript" src="/js/007/bouncey.js"></script>
+
+<script type="text/javascript">
+
+window.onload = function() {
+
+canvas_element        = document.getElementById('cnvs');
+    canvas_element.width  = W;
+    canvas_element.height = H;
+
+canvas = canvas_element.getContext('2d');
+
+// create some squares with random velocities in the center of the canvas
+    // objects are stored in the format 
+    //      [ X, Y, X_velocity, Y_velocity, width, height, [R,G,B] ]
+    var x, y, w, h, v_x, v_y, r, g, b, new_obj;
+
+// calculate all the possible initial y positions
+    y_positions = [];
+    for( var i = OBJ_HEIGHT; i < H - OBJ_HEIGHT; i += 2 * OBJ_HEIGHT )
+        y_positions.push( i );
+
+// calculate all the possible initial x positions
+    x_positions = [];
+    for( var i = OBJ_WIDTH; i < W - OBJ_WIDTH; i += 2 * OBJ_WIDTH )
+        x_positions.push( i );
+
+/*
+    */
+    for( var i = 0; i < 40; ++i ) {
+
+// create values for the object
+        x   = x_positions[ i % x_positions.length ];
+        y   = y_positions[ Math.floor( i / x_positions.length ) % y_positions.length ];
+        v_x = Math.random() * OBJ_MAX_VELOCITY*2 - OBJ_MAX_VELOCITY;
+        v_y = Math.random() * OBJ_MAX_VELOCITY*2 - OBJ_MAX_VELOCITY;
+        r   = Math.floor( Math.random() * 200 + 55 ); // random value 55..255
+        g   = Math.floor( Math.random() * 200 + 55 );
+        b   = Math.floor( Math.random() * 200 + 55 );
+
+// add the object to the scene
+        var color = 'rgb(' + r + ',' + g + ',' + b + ')';
+        var new_obj = new Circle( x, y, OBJ_R, v_x, v_y, color );
+
+objs.push( new_obj );
+    }
+
+setInterval( make_frame, PERIOD );
+
+}
+
+</script>
+
+<p><button onclick="paused++;paused%=2;">Pause</button> </p>
+<p><canvas id="cnvs" width="500" height="375"> 
+    Sorry, your browser does not support HTML5 canvas.  Lame.
+</canvas> </p>]]></content:encoded>
+    </item>
+    <item>
+      <title>How not to use CSS3</title>
+      <link>http://mwcz.org/blog/2011/11/17/how-not-to-use-css3</link>
+      <pubDate>Thu, 17 Nov 2011 20:25:00 EST</pubDate>
+      <category><![CDATA[css3]]></category>
+      <category><![CDATA[html5]]></category>
+      <category><![CDATA[typography]]></category>
+      <guid>b'JBKP5FvAeqiopawktJcLqDN-QpM='</guid>
+      <description>How not to use CSS3</description>
+      <content:encoded><![CDATA[<p>How to ruin a good thing...</p>
+<p>Try refreshing.</p>
+<style type="text/css">
+
+.css3_demo {
+    font-family: FreeSansBold;
+    text-align: center;
+    color: #efefef;
+    position: relative;
+    top: 0;
+    left: 50px;
+    font-size: 9em;
+    padding: 0;
+}
+
+@font-face { font-family: "FreeSansBold"; src: url("FreeSansBold.ttf"); }
+
+</style>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+// Random factors to determine x/y offsets for text shadows and amount of blur
+var x_factor    = Math.floor( Math.random() * 20 ) - 10;
+var y_factor    = Math.floor( Math.random() * 20 ) - 10;
+var blur_factor = Math.floor( Math.random() * 10 ) + 1;
+
+// Pretty colors
+var the_colors = 
+                [
+                '#7f9f7f',
+                '#dca3a3',
+                '#80d4aa',
+                '#f8f893',
+                '#ffcfaf',
+                '#e89393',
+                '#9ece9e',
+                '#c0bed1',
+                '#6c6c9c',
+                '#71d3b4',
+                '#a0afa0',
+                '#efefef'
+                ];
+
+function make_it() { // MAKE IT SHINE
+    // Build a string containing a comma-delimited list of the each shadow we want to apply
+    // sprintf would be nice here.
+    var shadows = "";
+    for( var color_index in the_colors ) {
+        shadows += 
+            color_index * x_factor + "px " + 
+            color_index * y_factor + "px " + 
+            color_index * blur_factor + "px " + 
+            the_colors[ color_index ];
+
+// Add a comma unless we're at the end of the color set
+        if( color_index != the_colors.length - 1 )
+            shadows += ',';
+    }
+    $('.css3_demo').css( 'textShadow', shadows ); // apply the new style
+    the_colors.push( the_colors.shift() ); // move first color to the end of the list
+    //console.log( shadows );
+    setTimeout( 'make_it()', 50 ); // make the function async (kinda... effectively...) with setTimeout()
+}
+
+function move_it() { // MAKE IT MOVE
+    $('.css3_demo').animate( {top:'+=200'},2000, "linear" )
+           .animate( {top:'-=200'},2000, "linear", move_it );
+}
+
+$(document).ready( function() {
+    make_it();
+    move_it();
+});
+</script>
+
+<p><span class="css3_demo">CSS3!</span> </p>]]></content:encoded>
+    </item>
+    <item>
+      <title>HTML5 canvas point operations</title>
+      <link>http://mwcz.org/blog/2011/11/17/html5-canvas-point-operations</link>
+      <pubDate>Thu, 17 Nov 2011 19:25:00 EST</pubDate>
+      <category><![CDATA[color]]></category>
+      <category><![CDATA[canvas]]></category>
+      <category><![CDATA[image processing]]></category>
+      <category><![CDATA[html5]]></category>
+      <guid>b'2uP1qAr8SfbHgvsg46MdoeZsgcc='</guid>
+      <description>HTML5 canvas point operations</description>
+      <content:encoded><![CDATA[<p>This is the last demo I made using <a href="https://github.com/mwcz/jsimage">JSImage</a>.  I created it some time around 2009-2010.  At the time, I had checked out an <a href="http://www.amazon.com/Digital-Image-Processing-Algorithmic-Introduction/dp/1846283795">imaging book</a> from my university's library at least ten times.  Most of the exercises in that book I implemented in Python using <a href="http://www.pythonware.com/products/pil/">PIL</a>, but point operations were simple enough to port to JavaScript quickly.</p>
+<p>Point operations are image alterations that affect all pixels equally.  Other operations, like blurring for example, each result pixel depends on adjacent pixels.</p>
+<p>This demonstrates changing contrast, value, saturation, hue, color inversion, and threshold point operations.  Note that there is a bug with increasing value and increasing saturation which I never got around to fixing.</p>
+<script type="text/javascript" src="/js/005/jquery.min.js"></script> 
+<script type="text/javascript" src="/js/005/jsimage.js"></script> 
+<script type="text/javascript" src="/js/005/colorspace.js"></script>
+
+<script type="text/javascript">
+
+var img0; // make img0 public so I can play with it in firebug more easily
+
+window.onload = function() {
+        img0 = new JSImage( "img0", "/img/005/bee.jpg" );
+    }
+
+</script>
+
+<p><canvas id="img0">your browser does not support canvas</canvas> </p>
+<table cellpadding="4" cellspacing="0"> 
+<tr>
+
+<th>Value</th> 
+    <th>Contrast</th> 
+    <th>Saturation</th> 
+    <th>Hue</th> 
+    <th>Invert</th> 
+    <th>Threshold</th> 
+</tr>
+
+<tr> 
+    <td> 
+        <!-- using onmousedown instead of onclick because it improves perceived performance.
+             definitely an accessibility problem, though --> 
+        <input type="image" src="/img/005/arrow_up.png" onmousedown="img0.value( img0.canvas, 10 )" /> 
+        <input type="image" src="/img/005/arrow_down.png" onmousedown="img0.value( img0.canvas, -10 )" /> 
+    </td> 
+    <td> 
+        <input type="image" src="/img/005/arrow_up.png" onmousedown="img0.contrast( img0.canvas, 1.1)" /> 
+        <input type="image" src="/img/005/arrow_down.png" onmousedown="img0.contrast( img0.canvas, 0.9)" /> 
+    </td> 
+    <td> 
+        <input type="image" src="/img/005/arrow_up.png" onmousedown="img0.saturation( img0.canvas, 25 )" /> 
+        <input type="image" src="/img/005/arrow_down.png" onmousedown="img0.saturation( img0.canvas, -25 )" /> 
+    </td> 
+    <td> 
+        <input type="image" src="/img/005/arrow_up.png" onmousedown="img0.hue( img0.canvas, 20)" /> 
+        <input type="image" src="/img/005/arrow_down.png" onmousedown="img0.hue( img0.canvas, -20)" /> 
+    </td> 
+    <td> 
+        <button type="button" onmousedown="img0.invert()">invert</button> 
+    </td> 
+    <td> 
+        <button type="button" onmousedown="img0.threshold( img0.canvas, document.getElementById('t').value )">threshold</button> 
+        <br /> 
+        <input type="text" value="127" maxlength="3" size="3" id="t" /> 
+    </td> 
+</tr>
+
+</table>]]></content:encoded>
+    </item>
     <item>
       <title>HTML5 canvas area selection averaging</title>
       <link>http://mwcz.org/blog/2011/11/16/html5-canvas-area-selection-averaging</link>
@@ -28,6 +320,7 @@
 <p>I used an old version of a rectangular selection tool called marquee.  I believe it's still located <a href="http://marqueetool.net/">here</a> but I can't be totally sure that's the same project.</p>
 <p>Click, drag, and taste the magic. :|</p>
 <link rel="stylesheet" type="text/css" href="/css/004/marker.css" /> 
+<script type="text/javascript" src="/js/004/marquee/prototype_reduced.js"></script> 
 <script type="text/javascript" src="/js/004/marquee/rectmarquee.js"></script> 
 <script type="text/javascript" src="/js/004/JSImage.js"></script>
 

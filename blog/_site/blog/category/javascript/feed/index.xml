@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+     >
+  <channel>
+    <title>mwcz.org</title>
+    <link>http://mwcz.org/blog</link>
+    <description>I finally created a blog.</description>
+    <pubDate>Fri, 18 Nov 2011 00:52:18 GMT</pubDate>
+    <generator>Blogofile</generator>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    <item>
+      <title>Bouncey returns - more canvas physics</title>
+      <link>http://mwcz.org/blog/2011/11/17/bouncey-returns---more-canvas-physics</link>
+      <pubDate>Thu, 17 Nov 2011 22:25:00 EST</pubDate>
+      <category><![CDATA[canvas]]></category>
+      <category><![CDATA[javascript]]></category>
+      <category><![CDATA[physics]]></category>
+      <category><![CDATA[html5]]></category>
+      <guid>b'2xt0h5v9PdQpOWIQqUDpRdUg6RE='</guid>
+      <description>Bouncey returns - more canvas physics</description>
+      <content:encoded><![CDATA[<p>This is a slightly upgraded version of the physics demo I showed in my <a href="/blog/2011/11/17/bouncey---canvas-physics/">last post</a>.</p>
+<p>It is still...</p>
+<p><quote>"a buggy, rudimentary, just-for-fun javascript physics simulator."</quote></p>
+<p>This version has:</p>
+<ul>
+<li>pre-defined initial states</li>
+<li>gravity</li>
+<li>friction</li>
+</ul>
+<p>It still has the "clinging" bug.  I know how to fix it, but didn't deem it important enough to spend time on it. :)</p>
+<p>The <a href="https://github.com/mwcz/bouncey/blob/master/bounce.html">code</a> is well commented, so feel free to hack on it.</p>
+<p>Click on one of the initial states to begin the simulation.</p>
+<style type="text/css">
+#cnvs {
+    margin: 0 auto;
+    border: 1px solid black;
+    -webkit-box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
+       -moz-box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
+         -o-box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
+            box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
+}
+</style>
+
+<script type="text/javascript" src="/js/008/bouncey.js"></script>
+
+<p>Initial states:
+<button onclick="RANDOM();">Random</button>
+<button onclick="POOL();">POOL</button>
+<button onclick="HEAD_ON_COLLISION();">HEAD_ON_COLLISION</button></p>
+<p><canvas id="cnvs" width="500" height="375"> 
+    Sorry, your browser does not support HTML5 canvas.  Lame.
+</canvas> </p>
+<p><button onclick="paused++;paused%=2;">Pause</button> </p>
+<pre>
+  velocity sum: <span id="txt_velocity_sum">NONE</span>
+x velocity sum: <span id="txt_velocity_sum_x">NONE</span>
+y velocity sum: <span id="txt_velocity_sum_y">NONE</span>
+</pre>
+
+<p>(The POOL initial state reproduces the clinging bug.)</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Bouncey - canvas physics</title>
+      <link>http://mwcz.org/blog/2011/11/17/bouncey---canvas-physics</link>
+      <pubDate>Thu, 17 Nov 2011 21:25:00 EST</pubDate>
+      <category><![CDATA[canvas]]></category>
+      <category><![CDATA[javascript]]></category>
+      <category><![CDATA[physics]]></category>
+      <category><![CDATA[html5]]></category>
+      <guid>b'lme0L3L_sUuiXWqzNi0W4eTQuUQ='</guid>
+      <description>Bouncey - canvas physics</description>
+      <content:encoded><![CDATA[<p>This is Bouncey.  It's a simple physics demo I wrote in early/mid 2011, with some contributions and bugfixes from my good friend Greg Gardner.</p>
+<p>The description for <a href="https://github.com/mwcz/bouncey">bouncey's github repo</a> is:</p>
+<p><quote>"a buggy, rudimentary, just-for-fun javascript physics simulator."</quote></p>
+<p>It covers <a href="http://en.wikipedia.org/wiki/Newton&apos;s_laws_of_motion">Newton's laws of motion</a>.</p>
+<style type="text/css">
+#cnvs {
+    margin: 0 auto;
+    border: 1px solid black;
+    -webkit-box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
+       -moz-box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
+         -o-box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
+            box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
+}
+</style>
+
+<script type="text/javascript" src="/js/007/bouncey.js"></script>
+
+<script type="text/javascript">
+
+window.onload = function() {
+
+canvas_element        = document.getElementById('cnvs');
+    canvas_element.width  = W;
+    canvas_element.height = H;
+
+canvas = canvas_element.getContext('2d');
+
+// create some squares with random velocities in the center of the canvas
+    // objects are stored in the format 
+    //      [ X, Y, X_velocity, Y_velocity, width, height, [R,G,B] ]
+    var x, y, w, h, v_x, v_y, r, g, b, new_obj;
+
+// calculate all the possible initial y positions
+    y_positions = [];
+    for( var i = OBJ_HEIGHT; i < H - OBJ_HEIGHT; i += 2 * OBJ_HEIGHT )
+        y_positions.push( i );
+
+// calculate all the possible initial x positions
+    x_positions = [];
+    for( var i = OBJ_WIDTH; i < W - OBJ_WIDTH; i += 2 * OBJ_WIDTH )
+        x_positions.push( i );
+
+/*
+    */
+    for( var i = 0; i < 40; ++i ) {
+
+// create values for the object
+        x   = x_positions[ i % x_positions.length ];
+        y   = y_positions[ Math.floor( i / x_positions.length ) % y_positions.length ];
+        v_x = Math.random() * OBJ_MAX_VELOCITY*2 - OBJ_MAX_VELOCITY;
+        v_y = Math.random() * OBJ_MAX_VELOCITY*2 - OBJ_MAX_VELOCITY;
+        r   = Math.floor( Math.random() * 200 + 55 ); // random value 55..255
+        g   = Math.floor( Math.random() * 200 + 55 );
+        b   = Math.floor( Math.random() * 200 + 55 );
+
+// add the object to the scene
+        var color = 'rgb(' + r + ',' + g + ',' + b + ')';
+        var new_obj = new Circle( x, y, OBJ_R, v_x, v_y, color );
+
+objs.push( new_obj );
+    }
+
+setInterval( make_frame, PERIOD );
+
+}
+
+</script>
+
+<p><button onclick="paused++;paused%=2;">Pause</button> </p>
+<p><canvas id="cnvs" width="500" height="375"> 
+    Sorry, your browser does not support HTML5 canvas.  Lame.
+</canvas> </p>]]></content:encoded>
+    </item>
+  </channel>
+</rss>
