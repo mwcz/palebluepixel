@@ -10,10 +10,22 @@
     <title>mwcz.org</title>
     <link>http://mwcz.org/blog</link>
     <description>I finally created a blog.</description>
-    <pubDate>Fri, 18 Nov 2011 00:52:18 GMT</pubDate>
+    <pubDate>Fri, 18 Nov 2011 01:08:35 GMT</pubDate>
     <generator>Blogofile</generator>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
+    <item>
+      <title>HTML5 tool for creating color palettes from an image</title>
+      <link>http://mwcz.org/blog/2011/11/17/html5-tool-for-creating-color-palettes-from-an-image</link>
+      <pubDate>Thu, 17 Nov 2011 22:25:00 EST</pubDate>
+      <category><![CDATA[color]]></category>
+      <category><![CDATA[canvas]]></category>
+      <category><![CDATA[html5]]></category>
+      <guid>b'eb0msgpTGJeEpYHR5R-z1pMSuUk='</guid>
+      <description>HTML5 tool for creating color palettes from an image</description>
+      <content:encoded><![CDATA[<p>For an <a href="http://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction">HCI</a> class project in Fall 2009, I pulled together some of my previous demos to make this integrated tool.  It was just a prototype, and I haven't taken the time to get the code set up and working on this blog.  If anyone is interested, I can dig up the code and send it along.</p>
+<iframe width="580" height="550" src="http://www.youtube.com/embed/p9QiGPUiXdc" frameborder="0" allowfullscreen></iframe>]]></content:encoded>
+    </item>
     <item>
       <title>HTML5 canvas point operations</title>
       <link>http://mwcz.org/blog/2011/11/17/html5-canvas-point-operations</link>
@@ -304,7 +316,6 @@ return pixarray;
       <guid>b'x9pmDmYJATYT7fp0_Fqh-pgzzq0='</guid>
       <description>HTML5 Canvas eyedropper</description>
       <content:encoded><![CDATA[<style type="text/css"> 
-    #color { height: 80px; width: 80px; margin: 20px; display: block; border: 1px solid black; }
     canvas { margin: 0 auto; }
 </style>
 
@@ -347,7 +358,7 @@ x = e.pageX - x;
             y = e.pageY - y;
             var imgdata = c.getImageData( x, y, 1, 1 );
             var new_color = [ imgdata.data[0], imgdata.data[1], imgdata.data[2] ];
-            color.style.background = "rgb("+new_color+")";
+            document.body.style.background = "rgb("+new_color+")";
             colorcode.innerHTML = "rgb("+new_color+")";
         }
 
@@ -367,8 +378,7 @@ cnvs.onmouseup = function() {
 </script>
 
 <p>This is an old demo I made of an <a href="http://en.wikipedia.org/wiki/Canvas_element">HTML5 canvas</a> eyedropper.  Circa 2009, I believe.  Just click and drag on the image to see it in action.</p>
-<p><span id="color"></span>
-<span id="colorcode"></span></p>
+<p><span id="colorcode">rgb(0,0,0)</span></p>
 <p><canvas id="c">Sorry, in order to view this demo you need a Web browser that supports HTML5 canvas.</canvas></p>
 <p>It's a pretty simple script, and works by declaring this function which handles onclick and ondrag events from the canvas.  cnvs is the canvas element, and c is the canvas's 2D rendering context object.</p>
 <div class="pygments_murphy syntax_highlight"><pre><span class="nx">pixel</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span><br/>    <span class="c1">// calculate the x and y coordinates of the cursor</span><br/>    <span class="kd">var</span> <span class="nx">imgdata</span> <span class="o">=</span> <span class="nx">c</span><span class="p">.</span><span class="nx">getImageData</span><span class="p">(</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">);</span><br/>    <span class="kd">var</span> <span class="nx">new_color</span> <span class="o">=</span> <span class="p">[</span> <span class="nx">imgdata</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><br/>                      <span class="nx">imgdata</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <br/>                      <span class="nx">imgdata</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">];</span><br/>    <span class="nx">color</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">background</span> <span class="o">=</span> <span class="s2">&quot;rgb(&quot;</span><span class="o">+</span><span class="nx">new_color</span><span class="o">+</span><span class="s2">&quot;)&quot;</span><span class="p">;</span><br/><span class="p">}</span><br/></pre></div>

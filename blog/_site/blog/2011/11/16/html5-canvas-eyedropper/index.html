@@ -70,7 +70,6 @@
       <div class="post_prose">
         
 <style type="text/css"> 
-    #color { height: 80px; width: 80px; margin: 20px; display: block; border: 1px solid black; }
     canvas { margin: 0 auto; }
 </style>
 
@@ -113,7 +112,7 @@ x = e.pageX - x;
             y = e.pageY - y;
             var imgdata = c.getImageData( x, y, 1, 1 );
             var new_color = [ imgdata.data[0], imgdata.data[1], imgdata.data[2] ];
-            color.style.background = "rgb("+new_color+")";
+            document.body.style.background = "rgb("+new_color+")";
             colorcode.innerHTML = "rgb("+new_color+")";
         }
 
@@ -133,8 +132,7 @@ cnvs.onmouseup = function() {
 </script>
 
 <p>This is an old demo I made of an <a href="http://en.wikipedia.org/wiki/Canvas_element">HTML5 canvas</a> eyedropper.  Circa 2009, I believe.  Just click and drag on the image to see it in action.</p>
-<p><span id="color"></span>
-<span id="colorcode"></span></p>
+<p><span id="colorcode">rgb(0,0,0)</span></p>
 <p><canvas id="c">Sorry, in order to view this demo you need a Web browser that supports HTML5 canvas.</canvas></p>
 <p>It's a pretty simple script, and works by declaring this function which handles onclick and ondrag events from the canvas.  cnvs is the canvas element, and c is the canvas's 2D rendering context object.</p>
 <div class="pygments_murphy syntax_highlight"><pre><span class="nx">pixel</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span><br/>    <span class="c1">// calculate the x and y coordinates of the cursor</span><br/>    <span class="kd">var</span> <span class="nx">imgdata</span> <span class="o">=</span> <span class="nx">c</span><span class="p">.</span><span class="nx">getImageData</span><span class="p">(</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">);</span><br/>    <span class="kd">var</span> <span class="nx">new_color</span> <span class="o">=</span> <span class="p">[</span> <span class="nx">imgdata</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><br/>                      <span class="nx">imgdata</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <br/>                      <span class="nx">imgdata</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">];</span><br/>    <span class="nx">color</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">background</span> <span class="o">=</span> <span class="s2">&quot;rgb(&quot;</span><span class="o">+</span><span class="nx">new_color</span><span class="o">+</span><span class="s2">&quot;)&quot;</span><span class="p">;</span><br/><span class="p">}</span><br/></pre></div>
@@ -164,11 +162,11 @@ cnvs.onmouseup = function() {
   <section>
     <h1 class="post_header_gradient theme_font">Latest Posts</h1>
     <ul>
+      <li><a href="/blog/2011/11/17/html5-tool-for-creating-color-palettes-from-an-image">HTML5 tool for creating color palettes from an image</a></li>
       <li><a href="/blog/2011/11/17/bouncey-returns---more-canvas-physics">Bouncey returns - more canvas physics</a></li>
       <li><a href="/blog/2011/11/17/bouncey---canvas-physics">Bouncey - canvas physics</a></li>
       <li><a href="/blog/2011/11/17/how-not-to-use-css3">How not to use CSS3</a></li>
       <li><a href="/blog/2011/11/17/html5-canvas-point-operations">HTML5 canvas point operations</a></li>
-      <li><a href="/blog/2011/11/16/html5-canvas-area-selection-averaging">HTML5 canvas area selection averaging</a></li>
     </ul>
   </section>
 
