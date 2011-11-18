@@ -5,7 +5,6 @@ title: HTML5 Canvas eyedropper
 ---
 
 <style type="text/css"> 
-    #color { height: 80px; width: 80px; margin: 20px; display: block; border: 1px solid black; }
     canvas { margin: 0 auto; }
 </style> 
 
@@ -48,7 +47,7 @@ window.onload = function() {
             y = e.pageY - y;
             var imgdata = c.getImageData( x, y, 1, 1 );
             var new_color = [ imgdata.data[0], imgdata.data[1], imgdata.data[2] ];
-            color.style.background = "rgb("+new_color+")";
+            document.body.style.background = "rgb("+new_color+")";
             colorcode.innerHTML = "rgb("+new_color+")";
         }
  
@@ -69,8 +68,7 @@ window.onload = function() {
 
 This is an old demo I made of an [HTML5 canvas](http://en.wikipedia.org/wiki/Canvas_element) eyedropper.  Circa 2009, I believe.  Just click and drag on the image to see it in action.
 
-<span id="color"></span>
-<span id="colorcode"></span>
+<span id="colorcode">rgb(0,0,0)</span>
 
 <canvas id="c">Sorry, in order to view this demo you need a Web browser that supports HTML5 canvas.</canvas>
 
