@@ -29,7 +29,7 @@ header, nav, article, aside, footer, hgroup, section {
 }
 
 div#main_block {
-    background: #000 url("/themes/mwc0/images/bubbles.jpg") bottom no-repeat;
+    background: #000 url("/themes/bubbles/images/bubbles.jpg") bottom no-repeat;
     font-size: 15px;
     min-height: 700px;
 
@@ -354,5 +354,5 @@ aside li {
     font-weight: normal;
 }
 @font-face {
-    font-family: "AmigaForever"; src: url("/themes/mwc0/fonts/AmigaForever.ttf");
+    font-family: "AmigaForever"; src: url("/themes/bubbles/fonts/AmigaForever.ttf");
 }

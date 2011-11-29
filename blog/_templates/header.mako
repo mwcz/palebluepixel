@@ -1,5 +1,5 @@
 <header id="main_header">
-  <div id="header" class="font-amiga">
+  <div id="header">
     <h1><a href="${bf.util.site_path_helper()}">${bf.config.blog.name}</a></h1>
 <%doc>
     <h2>${bf.config.blog.description}</h2>

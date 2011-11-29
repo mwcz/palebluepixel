@@ -1,0 +1,239 @@
+/*
+
+Color palette based on photo: http://clayto.com/
+d4bd98
+ab997b
+271c14
+
+
+*/
+
+html {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+div#container {
+
+    -webkit-box-shadow: 0px -5px 20px rgba( 0, 0, 0, 0.7 ),
+                        0px  5px 40px rgba( 0, 0, 0, 0.7 );
+       -moz-box-shadow: 0px -5px 20px rgba( 0, 0, 0, 0.7 ),
+                        0px  5px 40px rgba( 0, 0, 0, 0.7 );
+         -o-box-shadow: 0px -5px 20px rgba( 0, 0, 0, 0.7 ),
+                        0px  5px 40px rgba( 0, 0, 0, 0.7 );
+            box-shadow: 0px -5px 20px rgba( 0, 0, 0, 0.7 ),
+                        0px  5px 40px rgba( 0, 0, 0, 0.7 );
+}
+
+a {
+}
+
+a:hover {
+}
+
+/****************************/
+/* Header */
+/****************************/
+
+#main_header {
+}
+
+div#header {
+}
+
+div#header h1, div#header h2 {
+}
+
+div#header h1 {
+    font-family: OrbitronBlack;
+    font-size: 2em;
+}
+
+div#header h2 {
+}
+
+div#header a {
+    text-decoration: none;
+}
+
+
+/****************************/
+/* Navigation */
+/****************************/
+div#navigation {
+    font-family: OrbitronLight;
+}
+div#navigation * {
+}
+div#navigation ul {
+    list-style-type: none;
+}
+div#navigation li {
+    float: left;
+}
+div#navigation a {
+    display: block;
+    text-decoration: none;
+}
+div#navigation a:hover,
+div#navigation a.selected {
+}
+
+
+/****************************/
+/* Footer */
+/****************************/
+
+div#footer {
+}
+
+div#footer a {
+}
+
+div#credits p {
+    text-align: right;
+}
+
+
+/****************************/
+/* Content Block */
+/****************************/
+#prose_block {
+}
+
+#prose_block article {
+}
+
+.post_prose a:hover {
+}
+.post_prose a {
+    text-decoration:none;
+}
+
+/****************************/
+/* Blog Posts */
+/****************************/
+.blog_post * {
+}
+.blog_post {
+}
+
+.blog_post article {
+}
+.blog_post article header {
+}
+.blog_post article footer {
+}
+.blog_post article footer a {
+}
+.blog_post .left{
+    float: left;
+}
+.blog_post .right{
+    float: right;
+}
+
+.blog_post article header a {
+    text-decoration: none;
+}
+
+.blog_post header .date {
+}
+
+.blog_post_title {
+}
+.blog_post_title a {
+}
+.post_body {
+}
+.post_prose {
+}
+.post_prose a:hover {
+}
+
+.post_prose a {
+}
+
+.syntax_highlight {
+    background: #e3e3e3;
+    margin: 8px 20px 8px 10px;
+    padding: 1px 8px;
+    color: #000;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+/****************************/
+/* Sidebar */
+/****************************/
+
+aside {
+}
+aside h1, footer h1 {
+}
+
+aside nav, aside section {
+}
+aside ul, aside ol {
+    list-style: none outside none;
+}
+aside li {
+    text-decoration: none;
+}
+.tweet_list {
+    font-size: 0.8em;
+}
+.tweet_list li {
+    margin-bottom: 10px;
+}
+.tweet_list img {
+    float: left;
+    margin-right: 10px;
+    }
+
+/****************************/
+/* Non-blog pages */
+/****************************/
+.page_box {
+
+    /* this should probably be the same as .blog_post */
+
+}
+/****************************/
+/* Fonts */
+/****************************/
+@font-face {
+    font-family: "OrbitronLight"; 
+    src: url("/themes/light/fonts/orbitron/orbitron-light-webfont.eot")  format("embedded-opentype"),
+         url("/themes/light/fonts/orbitron/orbitron-light-webfont.svg")  format("svg"),
+         url("/themes/light/fonts/orbitron/orbitron-light-webfont.ttf")  format("truetype"),
+         url("/themes/light/fonts/orbitron/orbitron-light-webfont.woff") format("woff");
+}
+@font-face {
+    font-family: "OrbitronMedium"; 
+    src: url("/themes/light/fonts/orbitron/orbitron-medium-webfont.eot")  format("embedded-opentype"),
+         url("/themes/light/fonts/orbitron/orbitron-medium-webfont.svg")  format("svg"),
+         url("/themes/light/fonts/orbitron/orbitron-medium-webfont.ttf")  format("truetype"),
+         url("/themes/light/fonts/orbitron/orbitron-medium-webfont.woff") format("woff");
+}
+@font-face {
+    font-family: "OrbitronBold"; 
+    src: url("/themes/light/fonts/orbitron/orbitron-bold-webfont.eot")  format("embedded-opentype"),
+         url("/themes/light/fonts/orbitron/orbitron-bold-webfont.svg")  format("svg"),
+         url("/themes/light/fonts/orbitron/orbitron-bold-webfont.ttf")  format("truetype"),
+         url("/themes/light/fonts/orbitron/orbitron-bold-webfont.woff") format("woff");
+}
+@font-face {
+    font-family: "OrbitronBlack"; 
+    src: url("/themes/light/fonts/orbitron/orbitron-black-webfont.eot")  format("embedded-opentype"),
+         url("/themes/light/fonts/orbitron/orbitron-black-webfont.svg")  format("svg"),
+         url("/themes/light/fonts/orbitron/orbitron-black-webfont.ttf")  format("truetype"),
+         url("/themes/light/fonts/orbitron/orbitron-black-webfont.woff") format("woff");
+}

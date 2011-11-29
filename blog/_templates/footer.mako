@@ -1,6 +1,5 @@
 <% import datetime %>
-<footer>
-  <div id="footer" class="grid_12">
+<footer id="footer">
     <div class="grid_8">
       <p>
         <a href="${bf.util.site_path_helper(bf.config.blog.path,'feed','index.xml')}">RSS</a>
@@ -18,5 +17,6 @@
         Powered by <a href="http://www.blogofile.com">Blogofile</a>
       </p>
     </div>
-  </div>
+
+    <div class="clear"></div>
 </footer>
