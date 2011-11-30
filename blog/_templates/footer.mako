@@ -13,9 +13,6 @@
         Copyright ${datetime.datetime.now().year}
         ${bf.config.site.author}
       </p>
-      <p>
-        Powered by <a href="http://www.blogofile.com">Blogofile</a>
-      </p>
     </div>
 
     <div class="clear"></div>

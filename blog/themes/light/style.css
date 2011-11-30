@@ -1,9 +1,5 @@
 /*
 
-Color palette based on photo: http://clayto.com/
-d4bd98
-ab997b
-271c14
 
 
 */
@@ -17,10 +13,14 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
+    background-color: #f0f0f0;
+    font-family: Junction, sans-serif;
+    font-size: 100%;
 }
 
 div#container {
 
+    /*
     -webkit-box-shadow: 0px -5px 20px rgba( 0, 0, 0, 0.7 ),
                         0px  5px 40px rgba( 0, 0, 0, 0.7 );
        -moz-box-shadow: 0px -5px 20px rgba( 0, 0, 0, 0.7 ),
@@ -29,9 +29,13 @@ div#container {
                         0px  5px 40px rgba( 0, 0, 0, 0.7 );
             box-shadow: 0px -5px 20px rgba( 0, 0, 0, 0.7 ),
                         0px  5px 40px rgba( 0, 0, 0, 0.7 );
+    */
 }
 
 a {
+}
+
+a:visited {
 }
 
 a:hover {
@@ -51,8 +55,13 @@ div#header h1, div#header h2 {
 }
 
 div#header h1 {
-    font-family: OrbitronBlack;
-    font-size: 2em;
+    text-align: center;
+    font-family: OrbitronBlack, monospace;
+    font-size: 5em;
+}
+div#header h1 a {
+    color: #f0f0f0;
+    text-shadow: -1px -1px 1px rgba(0,0,0,0.5) ;
 }
 
 div#header h2 {
@@ -67,7 +76,8 @@ div#header a {
 /* Navigation */
 /****************************/
 div#navigation {
-    font-family: OrbitronLight;
+    font-family: OrbitronMedium;
+    padding: 8px 0;
 }
 div#navigation * {
 }
@@ -122,6 +132,23 @@ div#credits p {
 .blog_post * {
 }
 .blog_post {
+    font-size: 12px;
+}
+
+.blog_post .date {
+    float: right;
+    margin-top: -1em;
+}
+
+.blog_post p {
+    margin: 1em 0;
+}
+
+.blog_post ul {
+    list-style: square url("");
+}
+
+.blog_post ul li {
 }
 
 .blog_post article {
@@ -150,6 +177,16 @@ div#credits p {
 }
 .blog_post_title a {
 }
+
+/* tags */
+.blog_post_categories {
+    font-size: 0.8em;
+    text-decoration: none;
+}
+.blog_post_categories a {
+    text-decoration: none;
+}
+
 .post_body {
 }
 .post_prose {
@@ -186,6 +223,18 @@ aside ul, aside ol {
 }
 aside li {
     text-decoration: none;
+    line-height: 1.2;
+    text-wrap: none;
+}
+
+aside a {
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+
+}
+
+img.account_logo {
 }
 .tweet_list {
     font-size: 0.8em;
@@ -196,7 +245,7 @@ aside li {
 .tweet_list img {
     float: left;
     margin-right: 10px;
-    }
+}
 
 /****************************/
 /* Non-blog pages */
@@ -236,4 +285,12 @@ aside li {
          url("/themes/light/fonts/orbitron/orbitron-black-webfont.svg")  format("svg"),
          url("/themes/light/fonts/orbitron/orbitron-black-webfont.ttf")  format("truetype"),
          url("/themes/light/fonts/orbitron/orbitron-black-webfont.woff") format("woff");
+}
+@font-face {
+    font-family: "Junction"; 
+    src: 
+         url("/themes/light/fonts/junction/Junction-webfont.ttf")  format("truetype"),
+         url("/themes/light/fonts/junction/Junction-webfont.eot")  format("embedded-opentype"),
+         url("/themes/light/fonts/junction/Junction-webfont.svg")  format("svg"),
+         url("/themes/light/fonts/junction/Junction-webfont.woff") format("woff");
 }
