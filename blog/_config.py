@@ -43,7 +43,7 @@ blog.path = "/blog"
 
 ## blog_name -- Your Blog's name.
 # This is used repeatedly in default blog templates
-blog.name = "mwcz.org"
+blog.name = "mwcz"
 
 ## HTML5 example customizes the blog templates.
 ## Delete this setting to use the default ones instead.
