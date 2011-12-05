@@ -74,8 +74,10 @@ function make_it() { // MAKE IT SHINE
 }
  
 function move_it() { // MAKE IT MOVE
+    /* uncomment this to make it move up and down...
     $('.css3_demo').animate( {top:'+=200'},2000, "linear" )
            .animate( {top:'-=200'},2000, "linear", move_it );
+    */
 }
  
 $(document).ready( function() {
