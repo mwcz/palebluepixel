@@ -1,5 +1,5 @@
 <header id="main_header">
-  <div id="header">
+  <div id="header" class="grid_12">
     <h1><a href="${bf.util.site_path_helper()}">${bf.config.blog.name}</a></h1>
 <%doc>
     <h2>${bf.config.blog.description}</h2>
@@ -14,10 +14,20 @@ def nav_class(path):
    return ""
 %>
     <ul>
-      <li><a href="${bf.util.site_path_helper()}"
-             class="${nav_class(bf.util.site_path_helper())}">Home</a></li>
-      <li><a href="${bf.util.site_path_helper(bf.config.blog.path,'archive')}"
-             class="${nav_class(bf.util.site_path_helper(bf.config.blog.path,'archive'))}">Archives</a></li>
+      <li>
+        <div class="slider"> </div>
+        <a href="${bf.util.site_path_helper()}"
+           class="${nav_class(bf.util.site_path_helper())}">
+            Home
+        </a>
+      </li>
+      <li>
+        <div class="slider"> </div>
+        <a href="${bf.util.site_path_helper(bf.config.blog.path,'archive')}"
+           class="${nav_class(bf.util.site_path_helper(bf.config.blog.path,'archive'))}">
+            Archives
+        </a>
+      </li>
     </ul>
   </div>
 </header>

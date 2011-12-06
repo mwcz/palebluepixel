@@ -14,7 +14,7 @@
   <article>
     <header class="post_header_gradient">
       <a name="${post.slug}"></a>
-      <h1 class="blog_post_title font-amiga"><a href="${post.permapath()}" rel="bookmark" title="Permanent Link to ${post.title}">${post.title}</a></h2>
+      <h1 class="blog_post_title"><a href="${post.permapath()}" rel="bookmark" title="Permanent Link to ${post.title}">${post.title}</a></h2>
       <div class="date theme_font2">
         ${post.date.year}
         ${post.date.day}
