@@ -25,7 +25,21 @@ def nav_class(path):
         <div class="slider"> </div>
         <a href="${bf.util.site_path_helper(bf.config.blog.path,'archive')}"
            class="${nav_class(bf.util.site_path_helper(bf.config.blog.path,'archive'))}">
+            Projects
+        </a>
+      </li>
+      <li>
+        <div class="slider"> </div>
+        <a href="${bf.util.site_path_helper(bf.config.blog.path,'archive')}"
+           class="${nav_class(bf.util.site_path_helper(bf.config.blog.path,'archive'))}">
             Archives
+        </a>
+      </li>
+      <li>
+        <div class="slider"> </div>
+        <a href="${bf.util.site_path_helper(bf.config.blog.path,'archive')}"
+           class="${nav_class(bf.util.site_path_helper(bf.config.blog.path,'archive'))}">
+            About
         </a>
       </li>
     </ul>
