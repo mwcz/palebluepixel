@@ -39,7 +39,8 @@ blog.enabled = True
 #  and you set blog_path to "/blog" your full blog URL would be
 #  "http://www.yoursite.com/~ryan/blog"
 #  Leave blank "" to set to the root of site_url
-blog.path = "/blog"
+#blog.path = "/blog"
+blog.path = ""
 
 ## blog_name -- Your Blog's name.
 # This is used repeatedly in default blog templates
@@ -56,11 +57,13 @@ blog.description = "I finally created a blog."
 ## blog_timezone -- the timezone that you normally write your blog posts from
 blog.timezone = "US/Eastern"
 
+blog.posts_per_page = 1
+
 ## blog_googleanaltics_id -- enable Google Analytics tracking
 ## TODO: move to plugin/filter?
 blog.googleanlytics_id = "UA-XXXXX-X"
 
-blog.post_excerpt.enabled = True
+blog.post_excerpt.enabled = False
 blog.post_excerpt.word_length = 25
 
 ## Markdown extensions

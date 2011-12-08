@@ -5,7 +5,19 @@
 Welcome to mwcz.org
 ====================
 
-This is my impromptu blog.  I set it up last night by hacking up blogofile's sample blog.
+<dl>
+
+% for project in bf.projects:
+    <dt class="grid_2">
+        ${project.name}
+    </dt>
+    <dd class="grid_5">
+        ${project.desc}
+    </dd>
+
+% endfor
+
+</dl>
 
 </%self:filter>
 </article>
