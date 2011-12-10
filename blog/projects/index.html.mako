@@ -10,6 +10,9 @@ Welcome to mwcz.org
 % for project in bf.projects:
     <dt class="grid_2">
         ${project.name}
+        <br />
+        <img src="${project.icon}" style="width: 95px; float: left;" />
+        <div class="clear"></div>
     </dt>
     <dd class="grid_5">
         ${project.desc}
