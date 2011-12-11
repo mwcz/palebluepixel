@@ -1,5 +1,5 @@
 ---
-categories: html5, canvas, physics, javascript
+categories: html5, canvas, physics, javascript, bouncey
 date: 2011/11/17 21:25:00
 title: Bouncey - canvas physics
 ---

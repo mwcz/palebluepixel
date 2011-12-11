@@ -2,25 +2,34 @@
 <article class="page_box">
 <%self:filter chain="markdown">
 
-Welcome to mwcz.org
-====================
+My past, present, and future projects
+=====================================
 
-<dl>
+</%self:filter>
+
+<div id="projects">
 
 % for project in bf.projects:
-    <dt class="grid_2">
-        ${project.name}
-        <br />
-        <img src="${project.icon}" style="width: 95px; float: left;" />
-        <div class="clear"></div>
-    </dt>
-    <dd class="grid_5">
-        ${project.desc}
-    </dd>
+    <article class="project">
+
+        <a href="${project.path}">
+            <img class="grid_2" src="${project.icon}" />
+        </a>
+
+        <h1 class="grid_5">
+            <a href="${project.path}">
+            ${project.name}
+            </a>
+        </h1>
+
+        <p class="grid_5">${project.desc}</p>
+
+    </article>
+
+    <div class="clear"></div>
 
 % endfor
 
-</dl>
+</div>
 
-</%self:filter>
 </article>

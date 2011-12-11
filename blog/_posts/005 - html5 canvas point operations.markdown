@@ -1,5 +1,5 @@
 ---
-categories: html5, canvas, color, image processing
+categories: html5, canvas, color, image processing, jsimage
 date: 2011/11/17 19:25:00
 title: HTML5 canvas point operations
 ---

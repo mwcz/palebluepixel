@@ -1,5 +1,5 @@
 ---
-categories: html5, canvas, color
+categories: html5, canvas, color, colorpal
 date: 2011/11/17 22:25:00
 title: HTML5 tool for creating color palettes from an image
 ---

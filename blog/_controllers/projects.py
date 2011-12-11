@@ -19,39 +19,40 @@ class Project:
 
 
 bf.projects = [
-    Project( "ColorPal",
-             "/projects/colorpal/",
-             "/img/projects/icon_colorpal.png",
-             "Automated color palette generation in HTML5" ),
-    Project( "mwcz.org",
-             "/projects/mwcz.org/",
-             "/img/projects/icon_mwcz.png",
-             "This blog :|" ),
+    Project( _name = "ColorPal",
+             _path = "/category/colorpal",
+             _icon = "/img/projects/icon_colorpal.png",
+             _desc = "Automated color palette generation in HTML5" ),
 
-    Project( "median-cut.js",
-             "/projects/median-cut.js/",
-             "/img/projects/icon_mediancut.png",
-             "The median cut algorithm implemented in JavaScript" ),
+    Project( _name = "mwcz.org",
+             _path = "/category/mwcz.org",
+             _icon = "/img/projects/icon_mwcz.png",
+             _desc = "This blog :|" ),
 
-    Project( "AEJS",
-             "/projects/aejs/",
-             "/img/projects/icon_aejs.png",
-             "An Amiga 500 emulator in HTML5" ),
+    Project( _name = "median-cut.js",
+             _path = "/category/median-cut.js",
+             _icon = "/img/projects/icon_mediancut.png",
+             _desc = "The median cut algorithm implemented in JavaScript" ),
 
-    Project( "clayto.com",
-             "/projects/clayto.com/",
-             "/img/projects/icon_clayto.png",
-             "My custom photography website" ),
+    Project( _name = "AEJS",
+             _path = "/category/aejs",
+             _icon = "/img/projects/icon_aejs.png",
+             _desc = "A very-much-still-in-development Amiga 500 emulator in HTML5" ),
 
-    Project( "Bouncey",
-             "/projects/bouncey/",
-             "/img/projects/icon_bouncey.png",
-             "A buggy, just-for-fun JavaScript physics simulator." ),
+    Project( _name = "clayto.com",
+             _path = "/category/clayto.com",
+             _icon = "/img/projects/icon_clayto.png",
+             _desc = "My custom photography website" ),
+
+    Project( _name = "Bouncey",
+             _path = "/category/bouncey",
+             _icon = "/img/projects/icon_bouncey.png",
+             _desc = "A buggy, just-for-fun JavaScript physics simulator." ),
     
-    Project( "JSImage",
-             "/projects/jsimage/",
-             "/img/projects/icon_jsimage.png",
-             "A JavaScript library for basic image operations" ),
+    Project( _name = "JSImage",
+             _path = "/category/jsimage",
+             _icon = "/img/projects/icon_jsimage.png",
+             _desc = "A JavaScript library for basic image operations" ),
 ]
 
 

@@ -2,8 +2,8 @@
 <article class="page_box">
 <%self:filter chain="markdown">
 
-Welcome to mwcz.org
-====================
+JSImage
+=======
 
 % for post in bf.config.blog.posts:
     ${post.title}

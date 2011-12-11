@@ -437,3 +437,26 @@ img.account_logo {
                   local('Lato-Regular'),
                   url('/themes/light/fonts/lato/LatoRegular.woff') format('woff');
 }
+
+/****************************/
+/* Project page             */
+/****************************/
+#projects .project {
+    margin-top: 20px;
+}
+#projects .project h1 {
+    font-size: 1.4em;
+    font-family: "OrbitronMedium";
+}
+#projects .project h1 a {
+    text-decoration: none;
+    color: #fff;
+}
+#projects .project img {
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 0px 8px rgba(0,0,0,1);
+     -khtml-box-shadow: 0px 0px 8px rgba(0,0,0,1);
+       -moz-box-shadow: 0px 0px 8px rgba(0,0,0,1);
+         -o-box-shadow: 0px 0px 8px rgba(0,0,0,1);
+            box-shadow: 0px 0px 8px rgba(0,0,0,1);
+}

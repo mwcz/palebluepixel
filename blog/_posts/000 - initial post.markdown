@@ -1,5 +1,5 @@
 ---
-categories: general
+categories: general, mwcz.org
 date: 2011/11/16 15:25:00
 title: Initial post
 ---

@@ -36,7 +36,7 @@ def nav_class(path):
       </li>
       <li>
         <div class="slider"> </div>
-        <a href="${bf.util.site_path_helper(bf.config.blog.path,'archive')}"
+        <a href="/category/mwcz.org"
            class="${nav_class(bf.util.site_path_helper(bf.config.blog.path,'archive'))}">
             About
         </a>

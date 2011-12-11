@@ -1,5 +1,5 @@
 ---
-categories: html5, canvas, color
+categories: html5, canvas, color, jsimage
 date: 2011/11/16 17:25:00
 title: HTML5 canvas RGB histogram
 ---

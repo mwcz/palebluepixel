@@ -1,5 +1,5 @@
 ---
-categories: html5, canvas, color
+categories: html5, canvas, color, colorpal
 date: 2011/11/16 16:25:00
 title: HTML5 canvas 3D pixel array
 ---
