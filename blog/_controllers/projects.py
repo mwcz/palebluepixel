@@ -30,17 +30,17 @@ bf.projects = [
              _desc = "This blog :|" ),
 
     Project( _name = "median-cut.js",
-             _path = "/category/median-cut.js",
+             _path = "#",
              _icon = "/img/projects/icon_mediancut.png",
-             _desc = "The median cut algorithm implemented in JavaScript" ),
+             _desc = "The median cut algorithm implemented in JavaScript.  Link coming soon." ),
 
     Project( _name = "AEJS",
-             _path = "/category/aejs",
+             _path = "http://aejs.blogspot.com/",
              _icon = "/img/projects/icon_aejs.png",
              _desc = "A very-much-still-in-development Amiga 500 emulator in HTML5" ),
 
     Project( _name = "clayto.com",
-             _path = "/category/clayto.com",
+             _path = "http://clayto.com/",
              _icon = "/img/projects/icon_clayto.png",
              _desc = "My custom photography website" ),
 
