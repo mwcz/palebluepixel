@@ -458,3 +458,10 @@ img.account_logo {
          -o-box-shadow: 0px 0px 8px rgba(0,0,0,1);
             box-shadow: 0px 0px 8px rgba(0,0,0,1);
 }
+/*************************************************
+ * Disqus                                        *
+ * styles for the disqus-powered comment section *
+ *************************************************/
+#disqus_thread {
+    padding: 10px;
+}
