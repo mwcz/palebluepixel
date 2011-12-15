@@ -75,3 +75,8 @@ filters.markdown.extensions.footnotes.enabled = True
 filters.markdown.extensions.fenced_code.enabled = True
 filters.markdown.extensions.headerid.enabled = True
 filters.markdown.extensions.tables.enabled = True
+
+# disqus comments
+blog.disqus.enabled = True
+blog.disqus.name = "mwcz"
+
