@@ -26,7 +26,10 @@ body {
 
     background-repeat: no-repeat;
 
+    background: #696970;
+    /*
     background: #565656 url("/themes/gnome3/images/landscape_bg.jpg") no-repeat center center fixed;
+    */
     -webkit-background-size: cover;
      -khtml-background-size: cover;
        -moz-background-size: cover;
