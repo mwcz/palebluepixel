@@ -109,6 +109,10 @@ div#header a {
     text-decoration: none;
 }
 
+code {
+    font-family: monospace;
+}
+
 
 /****************************/
 /* Navigation */
@@ -189,6 +193,13 @@ div#navigation a:hover {
     color: #fff;
 }
 
+/****************************/
+/* Prev/Next page links */
+/****************************/
+div#prev_next {
+    background-color: rgba(25, 25, 25, 0.5);
+    overflow: hidden;
+}
 
 /****************************/
 /* Footer */
