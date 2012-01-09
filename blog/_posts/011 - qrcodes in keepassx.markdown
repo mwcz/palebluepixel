@@ -23,7 +23,7 @@ This post is about how difficult it can be to get text (especially passwords) on
 
 Sadly, there is no KeePassX client on the N9.  At least, not yet.  Even if there were, I'm skeptical that it's a good idea at all to be carrying around a database of personal passwords on a smartphone.  It's encrypted, sure, but touchscreen keyboards encourage weak passphrases.  Who wants to enter a 64+ character passphrase on a <abbr title="Virtual keyboard">vkbd</abbr>?
 
-This evening, I spent about an hour hacking QR-code support into KeePassX.  It's a seriously messy hack, using [system()]() to call `qrencode`, pass in the password, then call [evince](http://projects.gnome.org/evince/?guid=ON) to view it.  Even worse, I just tacked it onto the "Copy Password" function, instead of figuring out how to create a new menu item.  It doesn't even delete the generated image after viewing.  Definitely nothing more than a proof of concept.
+This evening, I spent about an hour hacking QR-code support into KeePassX.  It's a seriously messy hack, using [system()](http://en.cppreference.com/w/cpp/utility/program/system) to call `qrencode`, pass in the password, then call [evince](http://projects.gnome.org/evince/?guid=ON) to view it.  Even worse, I just tacked it onto the "Copy Password" function, instead of figuring out how to create a new menu item.  It doesn't even delete the generated image after viewing.  Definitely nothing more than a proof of concept.
 
 Here it is in action.
 
