@@ -15,7 +15,6 @@
       </p>
     </div>
 
-    <div class="clear"></div>
 </footer>
 
 <%include file="tracker.mako"/>
