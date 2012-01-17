@@ -42,5 +42,5 @@ def nav_class(path):
         </a>
       </li>
     </ul>
-  </div>
+  </div> <!-- /#header -->
 </header>
