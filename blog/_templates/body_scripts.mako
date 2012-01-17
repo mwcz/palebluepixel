@@ -8,14 +8,9 @@
   <script src="js/libs/dd_belatedpng.js"></script>
   <script> DD_belatedPNG.fix('img, .png_bg');</script>
   <![endif]-->
-  <script>
-      var _gaq=[['_setAccount','${bf.config.blog.googleanlytics_id}'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
-  </script>
   % if bf.config.blog.disqus.enabled:
   <script>
+  /* Disqus comments */
   (function() {
       var links = document.getElementsByTagName('a');
       var query = '?';
