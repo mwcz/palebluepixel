@@ -53,6 +53,16 @@ a:active {
     color: #858585;
 }
 
+pre code {
+    margin-left: 1em;
+    margin-right: 1em;
+    border-radius: 2px;
+    background-color: rgba(255,255,255,0.1);
+    font-size: 1.3em;
+    padding: 2px 4px;
+    display: block;
+}
+
 /****************************/
 /* Header */
 /****************************/
@@ -139,7 +149,6 @@ div#navigation ul {
 }
 div#navigation li {
     float: left;
-    padding: ;
     width: 100px;
     position: relative;
 }
@@ -197,8 +206,22 @@ div#navigation a:hover {
 /* Prev/Next page links */
 /****************************/
 div#prev_next {
-    background-color: rgba(25, 25, 25, 0.5);
     overflow: hidden;
+}
+
+div#prev_next a {
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-family: OrbitronLight;
+    text-decoration: none;
+    padding: 6px;
+    margin-bottom: 10px;
+}
+
+.prev_link {
+}
+.next_link {
 }
 
 /****************************/
@@ -350,7 +373,6 @@ aside {
 aside h1, footer h1 {
     font-size: 0.8em;
     text-transform: uppercase;
-    letter-spacing: 3px;
     font-weight: 800;
     padding: 0px 0px 8px;
 }
