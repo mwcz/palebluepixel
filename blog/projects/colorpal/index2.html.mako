@@ -9,9 +9,10 @@ JSImage
         ${post.title}
 % endfor
 
-
     <%doc>
-    <% print(post.categories.__contains__( "colorpal" )) %>
+    <% help(post.categories) %>
+    <% print(post.categories) %>
+    <% print(post.categories.__contains__( Category("general") )) %>
     </%doc>
 </%self:filter>
 </article>
