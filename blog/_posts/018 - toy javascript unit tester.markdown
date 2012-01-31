@@ -89,7 +89,7 @@ var JTests = function () {
     assertTrue = function( a ) {
         var result = a === false;
         result_callback( {                                                                                                                                                                         
-            name   : "assertFalse",
+            name   : "assertTrue",
             args   : [ a ],
             result : result
         } );
