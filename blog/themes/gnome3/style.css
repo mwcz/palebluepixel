@@ -347,9 +347,10 @@ div#credits p {
 .syntax_highlight {
     background: #e3e3e3;
     margin: 8px 20px 8px 10px;
-    padding: 1px 8px;
+    padding: 6px 8px;
     color: #000;
     border-radius: 10px;
+    font-family: monospace;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
 }
