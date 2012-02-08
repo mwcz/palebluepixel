@@ -228,10 +228,13 @@ div#prev_next a {
 /* Footer */
 /****************************/
 
-div#footer {
+#footer {
+    margin-bottom: 44px;
+    padding: 10px 0;
 }
 
-div#footer a {
+#footer a {
+    color: #000;
 }
 
 div#credits p {
@@ -365,6 +368,8 @@ aside {
 
     background: rgba( 0,0,0,0.2 );
 
+    overflow: auto;
+
     -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.4);
      -khtml-box-shadow: 0px 0px 3px rgba(0,0,0,0.4);
        -moz-box-shadow: 0px 0px 3px rgba(0,0,0,0.4);
@@ -382,6 +387,7 @@ aside nav, aside section {
 }
 aside ul, aside ol {
     list-style: none outside none;
+    margin-bottom: 10px;
 }
 aside li {
     text-decoration: none;
@@ -394,6 +400,7 @@ aside a {
     display: block;
     padding: 8px;
     color: #000;
+    text-decoration: none;
 
     -webkit-transition: all 0.3s ease;
      -khtml-transition: all 0.3s ease;
@@ -406,7 +413,31 @@ aside a:hover {
     border-bottom-right-radius: 20px 50%;
 }
 
+ul.account_list { list-style-type: none; }
+ul.account_list li {
+    display: block;
+    float: left;
+}
+ul.account_list li a {
+    font-size: 10px;
+    text-decoration: none;
+    padding: 0;
+    opacity: 0.7;
+
+    -webkit-transition: opacity 0.3s ease;
+     -khtml-transition: opacity 0.3s ease;
+       -moz-transition: opacity 0.3s ease;
+         -o-transition: opacity 0.3s ease;
+            transition: opacity 0.3s ease;
+
+}
+ul.account_list li a:hover {
+    opacity: 1.0;
+}
+
 img.account_logo {
+    width: 90px;
+}
 }
 .tweet_list {
     font-size: 0.8em;

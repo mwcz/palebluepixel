@@ -10,13 +10,31 @@
 
   <section>
     <h1>Find me on...</h1>
-    <ul>
-        <li> <img class="account_logo" src="/img/github_logo.png" alt="My GitHub profile" /> 
-             <a href="https://www.github.com/mwcz">GitHub</a> </li>
-        <li> <img class="account_logo" src="/img/stackoverflow_logo.png" alt="My StackOverflow profile" /> 
-             <a href="http://stackoverflow.com/users/215148/mwcz">StackOverflow</a> </li>
-        <li> <img class="account_logo" src="/img/twitter_logo.png" alt="My Twitter account" /> 
-             <a href="https://twitter.com/#!/mwcz">Twitter</a> </li>
+    <ul class="account_list">
+        <li> 
+            <a href="https://www.github.com/mwcz">
+            <img class="account_logo"
+                  src="/img/github_logo.png"
+                  alt="My GitHub profile" /> 
+            </a>
+        </li>
+
+        <li> 
+            <a href="http://stackoverflow.com/users/215148/mwcz">
+            <img class="account_logo" 
+                  src="/img/stackoverflow_logo.png"
+                  alt="My StackOverflow profile" /> 
+            </a>
+        </li>
+
+        <li> 
+
+            <a href="https://twitter.com/#!/mwcz">
+            <img class="account_logo"
+                 src="/img/twitter_logo.png" 
+                 alt="My Twitter account" /> 
+            </a>
+        </li>
     </ul>
   </section>
 
