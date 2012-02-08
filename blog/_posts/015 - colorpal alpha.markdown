@@ -21,7 +21,7 @@ ColorPal is an HTML5 palette generation tool.  Currently it's in a very early st
 
 It's powered by [canvas](http://en.wikipedia.org/wiki/Canvas_element), [data URIs](https://developer.mozilla.org/en/data_URIs), [File API](http://dev.w3.org/2006/webapi/FileAPI/), and my homespun [median-cut](http://en.wikipedia.org/wiki/Median_cut) implementation, which I'm calling *median-cut.js*.
 
-Bear in mind that while I've kept median-cut.js nice and clean, I did hammer out ColorPal as quickly as possible, so it's a mess.  Why?  I expect median-cut.js to be useful to others, but ColorPal is either just a useful tool for designers.  Or it will be, anyway. :)
+Bear in mind that while I've kept median-cut.js nice and clean, I did hammer out ColorPal as quickly as possible, so it's a mess.  Why?  I expect median-cut.js to be useful to other programmers, but ColorPal is just a tool for designers.  Or it will be, anyway. :)
 
 Here are github repos for [ColorPal](https://github.com/mwcz/ColorPal) and [median-cut.js](https://github.com/mwcz/median-cut-js).
 
