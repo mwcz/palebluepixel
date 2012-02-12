@@ -63,6 +63,9 @@ pre code {
     display: block;
 }
 
+em,i { font-style: italic; }
+strong,b { font-weight: bold; }
+
 /****************************/
 /* Header */
 /****************************/
@@ -337,8 +340,20 @@ div#credits p {
     text-decoration: none;
 }
 
-.post_body {
+.post_body h1 {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 2em 0 1em;
 }
+.post_body h2 {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 2em 0 1em;
+}
+.post_body ol {
+    list-style: decimal;
+}
+
 .post_prose {
 }
 .post_prose a:hover {
