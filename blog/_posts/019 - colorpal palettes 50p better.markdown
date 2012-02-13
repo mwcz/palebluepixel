@@ -77,7 +77,7 @@ high-population colors.
 Thus step 3 becomes:
 
 <div class="pygments_murphy syntax_highlight">
-  3. Split the box into two regions at <b>mean</b> of the sorted list.
+  3. Split the box into two regions at the <b>mean</b> of the sorted list.
 </div>
 
 The result?  Mean Cut!  Also: awesome color palettes.
