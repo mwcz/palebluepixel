@@ -5,8 +5,9 @@ title: ColorPal palettes improved!
 draft: false
 ---
 
-<p><img src="/img/019/colorpal_logo.png" alt="ColorPal logo" title=""
-style="float:right" /></p>
+[<img src="/img/019/colorpal_logo.png" alt="ColorPal logo" title=""
+style="float:right" />](/projects/colorpal)
+
 
 In my [last post](/2012/01/16/colorpal-alpha/) on the subject, I introduced
 ColorPal, my HTML5 color palette generation tool.  It didn't perform well with
