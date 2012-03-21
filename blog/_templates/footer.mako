@@ -1,6 +1,6 @@
 <% import datetime %>
-<footer id="footer">
-    <div class="grid_8">
+<footer id="footer" class="row">
+    <div class="span8">
       <p>
         <a href="${bf.util.site_path_helper(bf.config.blog.path,'feed','index.xml')}">RSS</a>
 		<%doc>
@@ -10,7 +10,7 @@
 		</%doc>
       </p>
     </div>
-    <div class="grid_4" id="credits">
+    <div class="span4" id="credits">
       <p>
         Copyright ${datetime.datetime.now().year}
         ${bf.config.site.author}

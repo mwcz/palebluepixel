@@ -5,10 +5,10 @@
 % if prev_link or next_link:
     <div id="prev_next">
     % if prev_link:
-        <a class="grid_3 prev_link" href="${prev_link}"><-- Previous Page</a>
+        <a class="prev_link" href="${prev_link}"><-- Previous Page</a>
     % endif
     % if next_link:
-        <a class="grid_3 next_link" href="${next_link}">Next Page --></a>
+        <a class="next_link" href="${next_link}">Next Page --></a>
     % endif
     </div>
 % endif

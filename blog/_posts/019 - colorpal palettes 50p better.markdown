@@ -6,7 +6,7 @@ draft: false
 ---
 
 [<img src="/img/019/colorpal_logo.png" alt="ColorPal logo" title=""
-style="float:right" />](/projects/colorpal)
+/>](/projects/colorpal)
 
 
 In my [last post](/2012/01/16/colorpal-alpha/) on the subject, I introduced
@@ -41,7 +41,6 @@ image.
 
 The steps to perform median cut are fairly straightforward:
 
-$$code(lang=javascript)
   1. Find the smallest box which contains all the colors.
   
   2. Sort the enclosed colors along the longest axis of the box.
@@ -50,7 +49,6 @@ $$code(lang=javascript)
   
   4. Repeat the above process until the original color space has been divided
      into N regions where N is the number of colors you want.
-$$/code
 
 Not too bad, right?  The question remains, though, why median?
 

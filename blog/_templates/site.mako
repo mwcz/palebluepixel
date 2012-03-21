@@ -12,19 +12,19 @@
 ${self.head()}
 </head>
   <body>
-    <div id="container" class="container container_12">
+    <div id="container" class="container">
+      ${self.header()}
       <div id="main" role="main">
-        <div id="main_block">
-          ${self.header()}
-          <div id="prose_block" class="grid_8">
+        <div id="main_block" class="row">
+          <div id="prose_block" class="span8">
             ${next.body()}
-          </div>
-          <div id="sidebar" class="grid_4">
+          </div> <!-- /#prose_block -->
+          <div id="sidebar" class="span4">
             ${self.sidebar()}
-          </div>
+          </div> <!-- /#sidebar -->
           <div class="clear"></div>
-        </div>
-      </div>
+        </div> <!-- /#main_block -->
+      </div> <!-- /#main -->
       ${self.footer()}
     </div>
     ${self.body_scripts()}

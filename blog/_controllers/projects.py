@@ -28,6 +28,14 @@ bf.projects = [
              _cate = "colorpal",
              _desc = "Automated color palette generation in HTML5" ),
 
+    Project( _name = "Indexed color for &lt;canvas&gt;",
+             _path = "/projects/canvas_indexed_color",
+             _icon = "/img/projects/icon_colorpal.png",
+             _cate = "canvas",
+             _desc = "An <a \
+                 href=\"https://en.wikipedia.org/wiki/Indexed_color\">indexed \
+                 color</a> demonstration for HTML5 canvas." ),
+
     Project( _name = "mwcz.org",
              _path = "/category/mwcz.org",
              _icon = "/img/projects/icon_mwcz.png",
