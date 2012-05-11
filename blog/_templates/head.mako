@@ -8,10 +8,19 @@
   <link rel="shortcut icon" href="${bf.util.site_path_helper('favicon.ico')}">
   <link rel="apple-touch-icon" href="${bf.util.site_path_helper('img/apple-touch-icon.png')}">
 
+    <style type="text/css"> 
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+    </style> 
+
   <link rel="stylesheet" href="${bf.util.site_path_helper('libs/bootstrap/css/bootstrap.css')}">
   <link rel="stylesheet" href="${bf.util.site_path_helper('libs/bootstrap/css/bootstrap-responsive.css')}">
 
-  <link rel="stylesheet" media="handheld" href="${bf.util.site_path_helper('/css/handheld.css?v=1')}">
   <link rel="stylesheet" href="${bf.util.site_path_helper(bf.config.filters.syntax_highlight.css_dir,'/pygments_'+bf.config.filters.syntax_highlight.style+'.css')}" type="text/css" />
 
   <%include file="theme.mako"/>

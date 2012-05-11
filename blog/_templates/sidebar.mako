@@ -1,42 +1,36 @@
-<aside>
-  <section>
-    <h1>Latest Posts</h1>
-    <ul>
-      % for post in bf.config.blog.iter_posts_published(5):
-      <li><a href="${post.path}">${post.title}</a></li>
-      % endfor
-    </ul>
-  </section>
+<ul class="nav nav-list"> 
+  <li class="nav-header">Latest posts</li> 
+ % for post in bf.config.blog.iter_posts_published(5):
+  <li><a href="${post.path}">${post.title}</a></li>
+ % endfor
 
-  <section>
-    <h1>Find me on...</h1>
-    <ul class="account_list">
-        <li> 
-            <a href="https://www.github.com/mwcz">
-            <img class="account_logo"
-                  src="/img/github_logo.png"
-                  alt="My GitHub profile" /> 
-            </a>
-        </li>
+  <li class="nav-header">Find me on...</li>
+  <li> 
+      <a href="https://www.github.com/mwcz">
+      <img class="account_logo"
+            src="/img/github_logo.png"
+            alt="My GitHub profile" /> 
+      </a>
+  </li>
 
-        <li> 
-            <a href="http://stackoverflow.com/users/215148/mwcz">
-            <img class="account_logo" 
-                  src="/img/stackoverflow_logo.png"
-                  alt="My StackOverflow profile" /> 
-            </a>
-        </li>
+  <li> 
+      <a href="http://stackoverflow.com/users/215148/mwcz">
+      <img class="account_logo" 
+            src="/img/stackoverflow_logo.png"
+            alt="My StackOverflow profile" /> 
+      </a>
+  </li>
 
-        <li> 
+  <li> 
 
-            <a href="https://twitter.com/#!/mwcz">
-            <img class="account_logo"
-                 src="/img/twitter_logo.png" 
-                 alt="My Twitter account" /> 
-            </a>
-        </li>
-    </ul>
-  </section>
+      <a href="https://twitter.com/#!/mwcz">
+      <img class="account_logo"
+           src="/img/twitter_logo.png" 
+           alt="My Twitter account" /> 
+      </a>
+  </li>
+</ul> 
+
 
   <%doc>
   <section>
@@ -47,5 +41,3 @@
     </div>
   </section>
   </%doc>
-
-</aside>

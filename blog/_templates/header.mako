@@ -1,46 +1,57 @@
-<header id="main_header" class="row">
-  <div id="header" class="span12">
-    <h1><a href="${bf.util.site_path_helper()}">${bf.config.blog.name}</a></h1>
 <%doc>
     <h2>${bf.config.blog.description}</h2>
 </%doc>
-  </div>
-  <div id="navigation" class="span12">
+
 <%
 def nav_class(path):
    render_path = bf.template_context.render_path.rsplit("/index.html")[0]
-   if render_path == path or (path == "/" and render_path == "."):
-       return "selected"
+   print( "path = %s" % path )
+   print( "render_path = %s" % render_path )
+   if render_path == path[1:] or (path == "/" and render_path == "."):
+
+       return "active"
+
    return ""
 %>
-    <ul>
-      <li>
-        <div class="slider"> </div>
-        <a href="${bf.util.site_path_helper()}"
-           class="${nav_class(bf.util.site_path_helper())}">
-            Home
-        </a>
-      </li>
-      <li>
-        <div class="slider"> </div>
-        <a href="/projects/">
-            Projects
-        </a>
-      </li>
-      <li>
-        <div class="slider"> </div>
-        <a href="${bf.util.site_path_helper(bf.config.blog.path,'archive')}"
-           class="${nav_class(bf.util.site_path_helper(bf.config.blog.path,'archive'))}">
-            Archives
-        </a>
-      </li>
-      <li>
-        <div class="slider"> </div>
-        <a href="/category/mwcz.org"
-           class="${nav_class(bf.util.site_path_helper(bf.config.blog.path,'archive'))}">
-            About
-        </a>
-      </li>
-    </ul>
-  </div> <!-- /#header -->
-</header>
+
+
+
+
+
+
+    <div class="navbar navbar-fixed-top"> 
+      <div class="navbar-inner"> 
+        <div class="container-fluid"> 
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
+            <span class="icon-bar"></span> 
+            <span class="icon-bar"></span> 
+            <span class="icon-bar"></span> 
+          </a> 
+          <a class="brand" href="${bf.util.site_path_helper()}">${bf.config.blog.name}</a>
+          <div class="nav-collapse"> 
+            <ul class="nav"> 
+              <li class="${nav_class(bf.util.site_path_helper(bf.config.blog.path,''))}">
+                <a href="${bf.util.site_path_helper(bf.config.blog.path,'')}">
+                    Home
+                </a>
+              <li class="${nav_class(bf.util.site_path_helper(bf.config.blog.path,'projects'))}">
+                <a href="${bf.util.site_path_helper(bf.config.blog.path,'projects')}">
+                    Projects
+                </a>
+              </li>
+              <li class="${nav_class(bf.util.site_path_helper(bf.config.blog.path,'archive'))}">
+                <a href="${bf.util.site_path_helper(bf.config.blog.path,'archive')}">
+                    Archives
+                </a>
+              </li>
+              <li class="${nav_class(bf.util.site_path_helper(bf.config.blog.path,'category/mwcz.org'))}">
+                <a href="${bf.util.site_path_helper(bf.config.blog.path,'category/mwcz.org')}">
+                    About
+                </a>
+              </li>
+            </ul> 
+          </div><!--/.nav-collapse --> 
+        </div> 
+      </div> 
+    </div> 
+
