@@ -57,7 +57,7 @@ blog.description = "I finally created a blog."
 ## blog_timezone -- the timezone that you normally write your blog posts from
 blog.timezone = "US/Eastern"
 
-blog.posts_per_page = 1
+blog.posts_per_page = 4
 
 ## blog_googleanaltics_id -- enable Google Analytics tracking
 ## TODO: move to plugin/filter?
