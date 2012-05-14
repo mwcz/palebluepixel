@@ -10,23 +10,22 @@ My past, present, and future projects
 <div id="projects">
 
 % for project in bf.projects:
-    <article class="project">
+
+    <div class="row-fluid project-page-row">
 
         <a href="${project.path}">
-            <img class="grid_2" src="${project.icon}" />
+            <img class="span2" src="${project.icon}" />
         </a>
 
-        <h1 class="grid_5">
+        <h1 class="span9">
             <a href="${project.path}">
-            ${project.name}
+                ${project.name}
             </a>
         </h1>
 
-        <p class="grid_5">${project.desc}</p>
+        <p class="span9">${project.desc}</p>
 
-    </article>
-
-    <div class="clear"></div>
+    </div>
 
 % endfor
 

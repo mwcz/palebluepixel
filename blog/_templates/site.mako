@@ -17,13 +17,13 @@ ${self.header()}
  
     <div class="container-fluid"> 
       <div class="row-fluid"> 
+        <div class="span9"> 
+          ${next.body()}
+        </div><!--/span--> 
         <div class="span3"> 
           <div class="well sidebar-nav"> 
             ${self.sidebar()}
           </div><!--/.well --> 
-        </div><!--/span--> 
-        <div class="span9"> 
-          ${next.body()}
         </div><!--/span--> 
       </div><!--/row--> 
  

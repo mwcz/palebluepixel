@@ -14,11 +14,6 @@ def nav_class(path):
    return ""
 %>
 
-
-
-
-
-
     <div class="navbar navbar-fixed-top"> 
       <div class="navbar-inner"> 
         <div class="container-fluid"> 
@@ -30,8 +25,8 @@ def nav_class(path):
           <a class="brand" href="${bf.util.site_path_helper()}">${bf.config.blog.name}</a>
           <div class="nav-collapse"> 
             <ul class="nav"> 
-              <li class="${nav_class(bf.util.site_path_helper(bf.config.blog.path,''))}">
-                <a href="${bf.util.site_path_helper(bf.config.blog.path,'')}">
+              <li class="${nav_class(bf.util.site_path_helper(bf.config.blog.path,'/'))}">
+                <a href="${bf.util.site_path_helper(bf.config.blog.path,'/')}">
                     Home
                 </a>
               <li class="${nav_class(bf.util.site_path_helper(bf.config.blog.path,'projects'))}">
