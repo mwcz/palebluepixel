@@ -10,16 +10,19 @@
            category_links.append("<a href='%s'>%s</a>" % (category.path, category.name))
 %>
 
-<div class="blog_post">
-  <article>
-    <header class="post_header_gradient">
+<article class="blog_post well">
+    <header class="page-header">
       <a name="${post.slug}"></a>
-      <h1 class="blog_post_title"><a href="${post.permapath()}" rel="bookmark" title="Permanent Link to ${post.title}">${post.title}</a></h2>
-      <div class="date theme_font2">
+      <h1>
+        <a href="${post.permapath()}" rel="bookmark" title="Permanent Link to ${post.title}">
+          ${post.title}
+        </a>
+      </h2>
+      <small>
         ${post.date.year}
         ${post.date.day}
         ${post.date.strftime("%b")}
-      </div>
+      </small>
     </header>
     <div class="post_body">
       <div class="post_prose">
@@ -34,8 +37,7 @@
        % endif
       </div>
     </footer>
-  </article>
-</div>
+</article>
 
 <%def name="post_prose(post)">
 ${post.content}

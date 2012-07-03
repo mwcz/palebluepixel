@@ -15,21 +15,18 @@ ${self.head()}
 
 ${self.header()}
  
-    <div class="container-fluid"> 
-      <div class="row-fluid"> 
-        <div class="span9"> 
+    <div class="container"> 
+      <div class="row"> 
+        <div class="span12"> 
           ${next.body()}
         </div><!--/span--> 
-        <div class="span3"> 
-          <div class="well sidebar-nav"> 
-            ${self.sidebar()}
-          </div><!--/.well --> 
-        </div><!--/span--> 
       </div><!--/row--> 
+      ${self.footer()}
+    </div><!--/container--> 
  
-${self.footer()}
 
 ${self.body_scripts()}
+<%include file="tracker.mako"/>
 
   </body>
 </html>
