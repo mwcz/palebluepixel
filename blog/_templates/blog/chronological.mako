@@ -3,12 +3,16 @@
   <%include file="post.mako" args="post=post" />
 % endfor
 % if prev_link or next_link:
-    <div id="prev_next">
+    <ul class="pager">
     % if prev_link:
-        <a class="prev_link" href="${prev_link}"><-- Previous Page</a>
+        <li class="next">
+            <a href="${prev_link}">Newer &rarr;</a>
+        </li>
     % endif
     % if next_link:
-        <a class="next_link" href="${next_link}">Next Page --></a>
+        <li class="previous">
+            <a href="${next_link}">&larr; Older</a>
+        </li>
     % endif
-    </div>
+    </ul>
 % endif
