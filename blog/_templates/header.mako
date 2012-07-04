@@ -5,8 +5,6 @@
 <%
 def nav_class(path):
    render_path = bf.template_context.render_path.rsplit("/index.html")[0]
-   print( "path = %s" % path )
-   print( "render_path = %s" % render_path )
    if render_path == path[1:] or (path == "/" and render_path == "."):
 
        return "active"
