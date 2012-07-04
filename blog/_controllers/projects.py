@@ -52,7 +52,7 @@ bf.projects = [
              _cate = "clayto.com",
              _desc = "My custom photography website" ),
 
-    Project( _name = "Indexed color for &lt;canvas&gt;",
+    Project( _name = "Canvas Indexed Color",
              _path = "/projects/canvas_indexed_color",
              _icon = "/img/projects/icon_cic.png",
              _cate = "canvas",
