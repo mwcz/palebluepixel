@@ -4,7 +4,7 @@ date: 2011/11/17 22:25:00
 title: Bouncey returns - more canvas physics
 ---
 
-This is a slightly upgraded version of the physics demo I showed in my [last post](/blog/2011/11/17/bouncey---canvas-physics/).
+This is a slightly upgraded version of the physics demo I showed in my [last post](/2011/11/17/bouncey---canvas-physics/).
 
 It is still...
 

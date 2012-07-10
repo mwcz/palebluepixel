@@ -3,27 +3,19 @@
 <!-- description -->
 
 <div class="row">
-
-    <div class="span8">
-        <div class="hero-unit">
-            <h1>I write big text on my website.</h1>
-            <p>Because it makes me sound important.</p>
-        </div>
-    </div>
+% for post in posts:
+  <%include file="post_excerpt.mako" args="post=post" />
+% endfor
 
     <div class="span4">
+      <div class="well">
         <h1>Latest photo</h1>
         <a href="http://clayto.com/">
             <img src="http://clayto.com/site_media/photos/latest_thumbnail" />
         </a>
+      </div>
     </div>
 
-</div> <!-- /.row -->
-
-<div class="row">
-% for post in posts:
-  <%include file="post_excerpt.mako" args="post=post" />
-% endfor
 </div> <!-- /.row -->
 
 <div class="row">

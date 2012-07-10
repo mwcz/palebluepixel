@@ -17,7 +17,7 @@ ${self.header()}
  
     <div class="container"> 
       <div class="row"> 
-        <div class="span12"> 
+        <div class="span8 offset2"> 
           ${next.body()}
         </div><!--/span--> 
       </div><!--/row--> 

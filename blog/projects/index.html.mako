@@ -2,11 +2,11 @@
 
 % for i in range( len( bf.projects ) ):
 
-    % if i % 4 == 0:
+    % if i % 3 == 0:
     <div class="row-fluid">
     % endif
 
-        <div class="span3 well" style="height: 340px; overflow: hidden;">
+        <div class="span4 well">
 
             <h1>
                 <a href="${bf.projects[i].path}">
@@ -24,7 +24,7 @@
 
         </div>
 
-    % if i % 4 == 3:
+    % if i % 3 == 3:
     </div>
     % endif
 

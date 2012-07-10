@@ -41,7 +41,7 @@ bf.projects = [
              _desc = "The median cut algorithm implemented in JavaScript.  Link coming soon." ),
 
     Project( _name = "AEJS",
-             _path = "/category/aejs",
+             _path = "https://github.com/mwcz/AEJS",
              _icon = "/img/projects/icon_aejs.png",
              _cate = "aejs",
              _desc = "A very-much-still-in-development Amiga 500 emulator in HTML5" ),
@@ -61,7 +61,7 @@ bf.projects = [
                  color</a> demonstration for HTML5 canvas." ),
 
     Project( _name = "Bouncey",
-             _path = "/category/bouncey",
+             _path = "/2011/11/17/bouncey---canvas-physics/",
              _icon = "/img/projects/icon_bouncey.png",
              _cate = "bouncey",
              _desc = "A buggy, just-for-fun JavaScript physics simulator." ),
