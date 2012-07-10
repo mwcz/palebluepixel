@@ -13,6 +13,7 @@
         <a href="http://clayto.com/">
             <img src="http://clayto.com/site_media/photos/latest_thumbnail" />
         </a>
+        <p>(clayto.com)</p>
       </div>
     </div>
 
