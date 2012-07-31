@@ -10,6 +10,10 @@ Vendor-specific prefixes that I care about...
         
 */
 
+body {
+    font-size: 14px;
+}
+
 /* Custom projects page needs some extra love */
 .project-page-row {
     margin: 16px 0;
