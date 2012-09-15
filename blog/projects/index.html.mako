@@ -1,34 +1,31 @@
 <%inherit file="_templates/site.mako" />
-<article class="page_box">
-<%self:filter chain="markdown">
 
-My past, present, and future projects
-=====================================
+% for i in range( len( bf.projects ) ):
 
-</%self:filter>
+    % if i % 3 == 0:
+    <div class="row-fluid">
+    % endif
 
-<div id="projects">
+        <div class="span4 well">
 
-% for project in bf.projects:
+            <h1>
+                <a href="${bf.projects[i].path}">
+                    ${bf.projects[i].name}
+                </a>
+            </h1>
 
-    <div class="row-fluid project-page-row">
+            <p>
+                <a href="${bf.projects[i].path}">
+                    <img src="${bf.projects[i].icon}" />
+                </a>
+            <p>
 
-        <a href="${project.path}">
-            <img class="span2" src="${project.icon}" />
-        </a>
+            <p>${bf.projects[i].desc}</p>
 
-        <h1 class="span9">
-            <a href="${project.path}">
-                ${project.name}
-            </a>
-        </h1>
+        </div>
 
-        <p class="span9">${project.desc}</p>
-
+    % if i % 3 == 3:
     </div>
+    % endif
 
 % endfor
-
-</div>
-
-</article>

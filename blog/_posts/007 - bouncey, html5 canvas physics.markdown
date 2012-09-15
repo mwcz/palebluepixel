@@ -83,3 +83,5 @@ window.onload = function() {
 <canvas id="cnvs" width="500" height="375"> 
     Sorry, your browser does not support HTML5 canvas.  Lame.
 </canvas> 
+
+An updated (but less colorful) version of bouncey is available [here](http://localhost:8080/2011/11/17/bouncey-returns---more-canvas-physics/ "newer bouncey").
