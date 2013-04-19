@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>The N9, QR-Codes, and KeePassX</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../../../../theme/css/main.css" type="text/css" />
+                <link href="http://localhost/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pelican Test Site Atom Feed" />
+                        <link href="http://localhost/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Pelican Test Site RSS Feed" />
+        
+        <!--[if IE]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        <!--[if lte IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="../../../../css/ie.css"/>
+                <script src="../../../../js/IE8.js" type="text/javascript"></script><![endif]-->
+
+        <!--[if lt IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="../../../../css/ie6.css"/><![endif]-->
+
+</head>
+
+<body id="index" class="home">
+<a href="https://github.com/mwcz">
+<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
+</a>
+        <header id="banner" class="body">
+                <h1><a href="../../../../">Pelican Test Site </a></h1>
+                <nav><ul>
+                                                                                                    <li class="active"><a href="../../../../category/misc.html">misc</a></li>
+                                </ul></nav>
+        </header><!-- /#banner -->
+        <section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="../../../../2012/01/08/the-n9-qr-codes-and-keepassx/" rel="bookmark"
+           title="Permalink to The N9, QR-Codes, and KeePassX">The N9, QR-Codes, and KeePassX</a></h1>
+          </header>
+
+    <div class="entry-content">
+      <footer class="post-info">
+        <abbr class="published" title="2012-01-08T22:27:50">
+                Sun 08 January 2012
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="../../../../author/mwcz.html">mwcz</a>
+        </address>
+        <p>In <a href="../../../../category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info -->      <p><em>Update: I happened across a <a href="http://keepass.info/plugins.html#qrcodegen">KeePass
+plugin</a> (not the same as KeePassX)
+that displays passwords as QR codes, just like my hack below.</em></p>
+<p>Poor, glorious N9.</p>
+<p>It's impossible not to love the N9 if you're a geek, especially a programming,
+bash-loving, Linux-hankering geek.  It's like a nerd talisman.  This post isn't
+about the N9, specifically, so I'll save the love-fest for another time.</p>
+<p>This post is about how difficult it can be to get text (especially passwords)
+onto a smartphone securely.  I've come to like the approach of using QR codes.
+Most (all?) smartphones have a barcode scanner, and QR codes are one of <a href="http://en.wikipedia.org/wiki/Barcode">many
+convenient ways</a> to encode text into an
+image.  In the case of the N9, it's
+<a href="http://store.ovi.com/content/231518">MeeScan</a>.</p>
+<p><img alt="meescan" src="/img/011/meescan.png" /></p>
+<p><a href="http://fukuchi.org/works/qrencode/index.html.en">qrencode</a> is an extremely
+easy to use encoder.  Pass it a string, it produces an image.</p>
+<div class="codehilite"><pre><span class="n">qrencode</span> <span class="s">&quot;mypassword&quot;</span> <span class="o">-</span><span class="n">o</span> <span class="n">mypass</span><span class="p">.</span><span class="n">png</span>
+</pre></div>
+
+
+<p><a href="http://keepassx.org">KeePassX</a> is an excellent password manager.
+Unfortunately...</p>
+<p><img alt="KeePassX not in N9" src="/img/011/keepass_not_in_n9.png" /></p>
+<p>Sadly, there is no KeePassX client on the N9.  At least, not yet.  Even if
+there were, I'm skeptical that it's a good idea at all to be carrying around a
+database of personal passwords on a smartphone.  It's encrypted, sure, but
+touchscreen keyboards encourage weak passphrases.  Who wants to enter a 64+
+character passphrase on a <abbr title="Virtual keyboard">vkbd</abbr>?</p>
+<p>This evening, I spent about an hour hacking QR-code support into KeePassX.
+It's a seriously messy hack, using
+<a href="http://en.cppreference.com/w/cpp/utility/program/system">system()</a> to call
+<code>qrencode</code>, pass in the password, then call
+<a href="http://projects.gnome.org/evince/?guid=ON">evince</a> to view it.  Even worse, I
+just tacked it onto the "Copy Password" function, instead of figuring out how
+to create a new menu item.  It doesn't even delete the generated image after
+viewing.  Definitely nothing more than a proof of concept.</p>
+<p>Here it is in action.</p>
+<p><a href="/img/011/keepassx_demo.png"><img class="grid_7"
+src="/img/011/keepassx_demo.png" alt="KeePassX generating a QR code" title=""
+/></a></p>
+
+<div class="clear"></div>
+
+<p>I won't be distributing my mod unless someone <em>really</em> wants it, but it would
+be cool to see this available as plugin to any password managers that support
+plugins.  It could be handy to have clipboard managers generate QR codes too.</p>
+    </div><!-- /.entry-content -->
+        <div class="comments">
+      <h2>Comments !</h2>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_identifier = "2012/01/08/the-n9-qr-codes-and-keepassx/";
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://mwcz.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+    </div>
+    
+  </article>
+</section>
+        <section id="extras" class="body">
+                        <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                                                    <li><a href="http://docs.notmyidea.org/alexis/pelican/">Pelican</a></li>
+                                                    <li><a href="http://python.org">Python.org</a></li>
+                                                    <li><a href="http://jinja.pocoo.org">Jinja2</a></li>
+                                                    <li><a href="#">You can modify those links in your config file</a></li>
+                                                </ul>
+                </div><!-- /.blogroll -->
+                                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="http://localhost/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+                                                        <li><a href="http://localhost/feeds/all.rss.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
+                            
+                                                    <li><a href="https://github.com/mwcz">GitHub</a></li>
+                                                    <li><a href="https://twitter.com/mwcz">Twitter</a></li>
+                                                </ul>
+                </div><!-- /.social -->
+                </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'mwcz';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>
