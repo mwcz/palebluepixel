@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*- #
 
 AUTHOR   = u'mwcz'
-SITENAME = u'Pelican Test Site'
-SITEURL  = 'http://localhost'
+SITENAME = u'mwcz.org - a blog'
+SITEURL  = 'http://localhost:8000'
 TIMEZONE = 'America/New_York'
 
 DEFAULT_LANG           = u'en'
@@ -18,10 +18,10 @@ ARTICLE_URL     = '{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
 # Blogroll
-LINKS =  (('Pelican', 'http://docs.notmyidea.org/alexis/pelican/'),
-          ('Python.org', 'http://python.org'),
-          ('Jinja2', 'http://jinja.pocoo.org'),
-          ('You can modify those links in your config file', '#'),)
+#LINKS =  (('Pelican', 'http://docs.notmyidea.org/alexis/pelican/'),
+          #('Python.org', 'http://python.org'),
+          #('Jinja2', 'http://jinja.pocoo.org'),
+          #('You can modify those links in your config file', '#'),)
 
 # Social widget
 SOCIAL = (('GitHub', 'https://github.com/mwcz'),
@@ -39,5 +39,18 @@ FEED_DOMAIN = 'http://localhost'
 # A list of files to copy from the source to the destination
 #FILES_TO_COPY = (('extra/robots.txt', 'robots.txt'),)
 
-# custom page generated with a jinja2 template
-#TEMPLATE_PAGES = {'pages/jinja2_template.html': 'jinja2_template.html'}
+# custom pages generated with a jinja2 template
+#TEMPLATE_PAGES = {'pages/projects.html': 'projects/index.html'}
+
+PAGE_URL     = '{slug}/index.html'
+PAGE_SAVE_AS = '{slug}/index.html'
+#PAGE_SAVE_AS = '{slug}/index.html'
+
+
+# Period archive URLS
+YEAR_ARCHIVE_SAVE_AS = '{date:%Y}/index.html'
+MONTH_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%m}/index.html'
+DAY_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/index.html'
+
+# Theme settings
+THEME = "/home/zip/workspace/pelican-themes/tuxlite_tbs"
