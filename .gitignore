@@ -1,2 +1,5 @@
 blog/_site/*
 pelican-test/Makefile
+pelican-test/srv.pid
+pelican-test/pelican.pid
+*.pyc
