@@ -1,57 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>LUT</title>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="../../../../theme/css/main.css" type="text/css" />
-                <link href="http://localhost/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pelican Test Site Atom Feed" />
-                        <link href="http://localhost/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Pelican Test Site RSS Feed" />
-        
-        <!--[if IE]>
-                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <meta charset="utf-8">
+    <title>mwcz.org - a blog</title>
+    <meta name="description" content="">
+    <meta name="author" content="mwcz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--[if lte IE 7]>
-                <link rel="stylesheet" type="text/css" media="all" href="../../../../css/ie.css"/>
-                <script src="../../../../js/IE8.js" type="text/javascript"></script><![endif]-->
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://localhost:8000/theme/html5.js"></script>
+    <![endif]-->
 
-        <!--[if lt IE 7]>
-                <link rel="stylesheet" type="text/css" media="all" href="../../../../css/ie6.css"/><![endif]-->
+    <!-- Le styles -->
+    <link href="http://localhost:8000/theme/bootstrap.min.css" rel="stylesheet">
+    <link href="http://localhost:8000/theme/bootstrap.min.responsive.css" rel="stylesheet">
+    <link href="http://localhost:8000/theme/local.css" rel="stylesheet">
+    <link href="http://localhost:8000/theme/pygments.css" rel="stylesheet">
 
 </head>
 
-<body id="index" class="home">
-<a href="https://github.com/mwcz">
-<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
-</a>
-        <header id="banner" class="body">
-                <h1><a href="../../../../">Pelican Test Site </a></h1>
-                <nav><ul>
-                                                                                                    <li class="active"><a href="../../../../category/misc.html">misc</a></li>
-                                </ul></nav>
-        </header><!-- /#banner -->
-        <section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="../../../../2011/09/22/lut/" rel="bookmark"
-           title="Permalink to LUT">LUT</a></h1>
-          </header>
+<body>
 
-    <div class="entry-content">
-      <footer class="post-info">
-        <abbr class="published" title="2011-09-22T22:27:50">
-                Thu 22 September 2011
-        </abbr>
+<div class="navbar">
+    <div class="navbar-inner">
+    <div class="container">
 
-                <address class="vcard author">
-                By <a class="url fn" href="../../../../author/mwcz.html">mwcz</a>
-        </address>
-        <p>In <a href="../../../../category/misc.html">misc</a>. </p>
+         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+         </a>
 
-</footer><!-- /.post-info -->      <p>Decoding is easy. Decoding requires a lot of typing. (I am starting to believe this is true of ever aspect of interpreted emulation...)</p>
+        <a class="brand" href="http://localhost:8000">mwcz.org - a blog</a>
+
+        <div class="nav-collapse">
+        <ul class="nav">
+                    
+                                </ul>
+        </div>
+        
+    </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="content">
+    <div class="row">
+
+        <div class="span9">
+            <div class='article'>
+        <div class="content-title">
+            <h1>LUT</h1>
+            Thu 22 September 2011
+
+by <a class="url fn" href="http://localhost:8000/author/mwcz.html">mwcz</a>
+ 
+
+
+        </div>
+	
+        <div><p>Decoding is easy. Decoding requires a lot of typing. (I am starting to believe this is true of ever aspect of interpreted emulation...)</p>
 <p>For the AEJS decoder, I am creating a <a href="http://en.wikipedia.org/wiki/Lookup_table">look-up table</a> with every possible pattern for each instruction. It was my first idea, but I initially discarded it as "wasteful and inelegant". Later, I accepted it as "really fast".</p>
 <p>I'm generating a large set of bit patterns that map to 68k opcodes, like so:</p>
-<div class="codehilite"><pre><span class="mo">0100101011111010</span> <span class="o">-&gt;</span> <span class="n">BGND</span>
+<div class="highlight"><pre><span class="mo">0100101011111010</span> <span class="o">-&gt;</span> <span class="n">BGND</span>
 <span class="mo">0100101011111100</span> <span class="o">-&gt;</span> <span class="n">ILLEGAL</span>
 <span class="mo">0100111001110000</span> <span class="o">-&gt;</span> <span class="n">RESET</span>
 <span class="mo">0100111001110001</span> <span class="o">-&gt;</span> <span class="n">NOP</span>
@@ -74,61 +86,79 @@
 <p>Back to work:</p>
 <p><a href="/img/013/workarea.png"><img class="grid_7" src="/img/013/workarea.png" alt=":)" title="" /></a>
 <div class="clear"></div></p>
-<p>(This post was copied from my old <a href="http://aejs.blogspot.com/">AEJS blog</a>)</p>
-    </div><!-- /.entry-content -->
-        <div class="comments">
-      <h2>Comments !</h2>
-      <div id="disqus_thread"></div>
-      <script type="text/javascript">
-        var disqus_identifier = "2011/09/22/lut/";
-        (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://mwcz.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-      </script>
-    </div>
-    
-  </article>
-</section>
-        <section id="extras" class="body">
-                        <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                                                    <li><a href="http://docs.notmyidea.org/alexis/pelican/">Pelican</a></li>
-                                                    <li><a href="http://python.org">Python.org</a></li>
-                                                    <li><a href="http://jinja.pocoo.org">Jinja2</a></li>
-                                                    <li><a href="#">You can modify those links in your config file</a></li>
-                                                </ul>
-                </div><!-- /.blogroll -->
-                                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="http://localhost/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
-                                                        <li><a href="http://localhost/feeds/all.rss.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
-                            
-                                                    <li><a href="https://github.com/mwcz">GitHub</a></li>
-                                                    <li><a href="https://twitter.com/mwcz">Twitter</a></li>
-                                                </ul>
-                </div><!-- /.social -->
-                </section><!-- /#extras -->
-
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
-
+<p>(This post was copied from my old <a href="http://aejs.blogspot.com/">AEJS blog</a>)</p></div>
+	
+        <hr>
+    	   
+        <h2>Comments</h2>
+		<div id="disqus_thread"></div>
 <script type="text/javascript">
-    var disqus_shortname = 'mwcz';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
+    var disqus_shortname = 'mwcz'; 
+    var disqus_title = 'LUT';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
 </script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+        </div>
+        
+        <div class="span3">
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header"> 
+                Site
+                </li>
+            
+                <li><a href="http://localhost:8000/">Archives</a>
+                <li><a href="http://localhost:8000/tags.html">Tags</a>
+                <li><a href="http://localhost/" rel="alternate">Atom feed</a></li>
+                            </ul>
+            </div>
+
+
+                        <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header"> 
+                Categories
+                </li>
+                
+                                <li><a href="http://localhost:8000/category/misc.html">misc</a></li>
+                                   
+            </ul>
+            </div>
+            
+
+            
+
+                        <div class="social">
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header"> 
+                Social
+                </li>
+           
+                                <li><a href="https://github.com/mwcz">GitHub</a></li>
+                                <li><a href="https://twitter.com/mwcz">Twitter</a></li>
+                            </ul>
+            </div>
+            </div>
+            
+        </div>  
+    </div>     </div> 
+<footer>
+<br />
+<p><a href="http://localhost:8000">mwcz.org - a blog</a> &copy; mwcz 2012</p>
+</footer>
+
+</div> <!-- /container -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-collapse.js"></script>
+<a href="https://github.com/mwcz"><img style="position: absolute; top: 40px; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub" /></a>
+ 
 </body>
 </html>
