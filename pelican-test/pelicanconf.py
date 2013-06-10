@@ -28,7 +28,7 @@ SOCIAL = (('GitHub', 'https://github.com/mwcz'),
           ('Twitter', 'https://twitter.com/mwcz'),)
 
 DEFAULT_PAGINATION = 6
-FEED_DOMAIN = 'http://localhost'
+FEED_DOMAIN = 'http://localhost:8000'
 
 MARKUP = 'md'
 
@@ -47,6 +47,10 @@ MARKUP = 'md'
 PAGE_URL     = '{slug}/index.html'
 PAGE_SAVE_AS = '{slug}/index.html'
 #PAGE_SAVE_AS = '{slug}/index.html'
+
+# Feed (syndication) settings
+FEED_ATOM = 'feeds/all.atom.xml'
+FEED_RSS = 'feeds/all.rss.xml'
 
 
 # Period archive URLS
