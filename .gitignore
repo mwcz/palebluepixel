@@ -3,4 +3,4 @@ pelican-test/Makefile
 pelican-test/srv.pid
 pelican-test/pelican.pid
 *.pyc
-output/
+pelican-test/output/*
