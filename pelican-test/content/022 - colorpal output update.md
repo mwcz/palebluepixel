@@ -18,11 +18,11 @@ freaking inputs.
 
 Blah:
 
-![Before](/img/022/before.png)
+![Before](/static/images/022/before.png)
 
 Huzzah:
 
-![After](/img/022/after.png)
+![After](/static/images/022/after.png)
 
 All eight colors can be pasted out in one fell swoop of the mouse.
 
@@ -49,7 +49,7 @@ but pretty soon it'll be ColorPal pumping out those swatches.
 
 That's not the only change.  If you're not excited, don't worry.  I am!
 
-[<img src="/img/019/colorpal_logo.png" alt="ColorPal logo" title=""
+[<static/images src="/static/images/019/colorpal_logo.png" alt="ColorPal logo" title=""
 />](/projects/colorpal)
 
 Happy coloring!

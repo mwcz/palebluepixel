@@ -4,7 +4,7 @@ Categories: html5, canvas, color
 
 [Canvas Indexed Color demo](/projects/canvas_indexed_color "Canvas Indexed Color demo")
 
-![White SVG Tiger](/img/021/hahatiger.png)
+![White SVG Tiger](/static/images/021/hahatiger.png)
 
 First, I converted the classic SVG tiger into a set of canvas drawing
 instructions using [Professor Cloud's conversion

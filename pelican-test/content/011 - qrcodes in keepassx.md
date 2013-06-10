@@ -19,7 +19,7 @@ convenient ways](http://en.wikipedia.org/wiki/Barcode) to encode text into an
 image.  In the case of the N9, it's
 [MeeScan](http://store.ovi.com/content/231518).
 
-![meescan](/img/011/meescan.png)
+![meescan](/static/images/011/meescan.png)
 
 [qrencode](http://fukuchi.org/works/qrencode/index.html.en) is an extremely
 easy to use encoder.  Pass it a string, it produces an image.
@@ -29,7 +29,7 @@ easy to use encoder.  Pass it a string, it produces an image.
 [KeePassX](http://keepassx.org) is an excellent password manager.
 Unfortunately...
 
-![KeePassX not in N9](/img/011/keepass_not_in_n9.png)
+![KeePassX not in N9](/static/images/011/keepass_not_in_n9.png)
 
 Sadly, there is no KeePassX client on the N9.  At least, not yet.  Even if
 there were, I'm skeptical that it's a good idea at all to be carrying around a
@@ -48,8 +48,8 @@ viewing.  Definitely nothing more than a proof of concept.
 
 Here it is in action.
 
-<p><a href="/img/011/keepassx_demo.png"><img class="grid_7"
-src="/img/011/keepassx_demo.png" alt="KeePassX generating a QR code" title=""
+<p><a href="/static/images/011/keepassx_demo.png"><static/images class="grid_7"
+src="/static/images/011/keepassx_demo.png" alt="KeePassX generating a QR code" title=""
 /></a></p>
 <div class="clear"></div>
 

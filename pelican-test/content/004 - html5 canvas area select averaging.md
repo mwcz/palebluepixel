@@ -20,12 +20,12 @@ Click, drag, and taste the magic. :|
         
 window.onload = function() {
  
-    img0 = new JSImage( "c0", "/img/004/kazoo.png" );
-    setTimeout("img0.draggable();",100); // enable the selection
+    static/images0 = new JSImage( "c0", "/static/images/004/kazoo.png" );
+    setTimeout("static/images0.draggable();",100); // enable the selection
  
 }
  
-var img0; // make img0 public so I can play with it in firebug more easily
+var static/images0; // make static/images0 public so I can play with it in firebug more easily
  
 </script> 
  

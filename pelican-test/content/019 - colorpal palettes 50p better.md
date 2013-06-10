@@ -2,7 +2,7 @@ Title: ColorPal palettes improved!
 Date: 2012-02-10 22:44:50
 Categories: html5, javascript, color
 
-[<img src="/img/019/colorpal_logo.png" alt="ColorPal logo" title=""
+[<static/images src="/static/images/019/colorpal_logo.png" alt="ColorPal logo" title=""
 />](/projects/colorpal)
 
 
@@ -15,7 +15,7 @@ with infrequent but *important* colors.  Here's a comparison of the old and new
 methods, on an image that is mostly black:
 
 ![comparison of palettes generated with median and
-mean](/img/019/median-mean-comparison.png)
+mean](/static/images/019/median-mean-comparison.png)
 
 You can see that with the old method, the black pixels definitely took over the
 palette.
@@ -34,7 +34,7 @@ Why the 'median' in median-cut?
 Median Cut is an algorithm typically used to reduce the number of colors in an
 image.
 
-![16 million colors versus 16 colors](/img/019/median-cut-example.png)
+![16 million colors versus 16 colors](/static/images/019/median-cut-example.png)
 
 The steps to perform median cut are fairly straightforward:
 
@@ -54,7 +54,7 @@ Mean, median, and mode all attempt to measure the
 distribution.  Worded more intuitively... they try to find the center of a set
 of numbers.  They just employ different definitions of "center".
 
-![mean, median, and mode graphed](/img/019/mean_median_mode.png)
+![mean, median, and mode graphed](/static/images/019/mean_median_mode.png)
 (Thanks [Wikipedia](http://en.wikipedia.org/wiki/Median))
 
 As you can see clearly in the dashed data set, the mean tends to follow the
@@ -86,15 +86,15 @@ distributions.  A "normal distribution" is a formal term for a "bell curve".
 
 Check out the red, green, and blue distributions for a photograph of a forest.
 
-![Forest red   pixel distribution](/img/019/forest_r.png)
-![Forest green pixel distribution](/img/019/forest_g.png)
-![Forest blue  pixel distribution](/img/019/forest_b.png)
+![Forest red   pixel distribution](/static/images/019/forest_r.png)
+![Forest green pixel distribution](/static/images/019/forest_g.png)
+![Forest blue  pixel distribution](/static/images/019/forest_b.png)
 
 For comparison, here are the distributions for a shot of NYC.
 
-![City   red   pixel distribution](/img/019/city_r.png)
-![City   green pixel distribution](/img/019/city_g.png)
-![City   blue  pixel distribution](/img/019/city_b.png)
+![City   red   pixel distribution](/static/images/019/city_r.png)
+![City   green pixel distribution](/static/images/019/city_g.png)
+![City   blue  pixel distribution](/static/images/019/city_b.png)
 
 What's next for ColorPal?  Color spaces.
 ----------------------------------------

@@ -12,10 +12,10 @@ It's powered by an early version of an old JS toolkit I wrote called JSImage.  T
         
 window.onload = function() {
  
-    img0 = new JSImage( "c0", "/img/003/kazoo.png" );
-    imgr = new JSImage( "cr", "/img/003/kazoo.png" );
-    imgg = new JSImage( "cg", "/img/003/kazoo.png" );
-    imgb = new JSImage( "cb", "/img/003/kazoo.png" );
+    static/images0 = new JSImage( "c0", "/static/images/003/kazoo.png" );
+    static/imagesr = new JSImage( "cr", "/static/images/003/kazoo.png" );
+    static/imagesg = new JSImage( "cg", "/static/images/003/kazoo.png" );
+    static/imagesb = new JSImage( "cb", "/static/images/003/kazoo.png" );
  
  
 }
@@ -25,13 +25,13 @@ function draw() {
     /**
      * Color histo canvases the color of their histo
      */
-    img0.histo( imgr.canvas, 'r', 'rgba(255,0,0,0.9)', 'rgba(0,0,0,0.8)' )
-    img0.histo( imgg.canvas, 'g', 'rgba(0,200,0,0.9)', 'rgba(0,0,0,0.8)' )
-    img0.histo( imgb.canvas, 'b', 'rgba(0,0,200,0.9)', 'rgba(0,0,0,0.8)' )
+    static/images0.histo( static/imagesr.canvas, 'r', 'rgba(255,0,0,0.9)', 'rgba(0,0,0,0.8)' )
+    static/images0.histo( static/imagesg.canvas, 'g', 'rgba(0,200,0,0.9)', 'rgba(0,0,0,0.8)' )
+    static/images0.histo( static/imagesb.canvas, 'b', 'rgba(0,0,200,0.9)', 'rgba(0,0,0,0.8)' )
  
 }
  
-var img0, imgr, imgg, imgb; // make img0 public so I can play with it in firebug more easily
+var static/images0, static/imagesr, static/imagesg, static/imagesb; // make static/images0 public so I can play with it in firebug more easily
  
 </script> 
 

@@ -17,7 +17,7 @@ This demonstrates changing contrast, value, saturation, hue, color inversion, an
     var IJS_PointOps; // make IJS_PointOps public so I can play with it in firebug more easily
     $(document).ready( function() {
 
-        IJS_PointOps = new JSImage( "IJS_PointOps", "/img/005/bee.jpg" );
+        IJS_PointOps = new JSImage( "IJS_PointOps", "/static/images/005/bee.jpg" );
     });
 
 </script> 
@@ -46,20 +46,20 @@ This demonstrates changing contrast, value, saturation, hue, color inversion, an
     <td> 
         <!-- using onmousedown instead of onclick because it improves perceived performance.
              definitely an accessibility problem, though --> 
-        <input type="image" src="/img/005/arrow_up.png" onmousedown="IJS_PointOps.value( IJS_PointOps.canvas, 10 )" /> 
-        <input type="image" src="/img/005/arrow_down.png" onmousedown="IJS_PointOps.value( IJS_PointOps.canvas, -10 )" /> 
+        <input type="image" src="/static/images/005/arrow_up.png" onmousedown="IJS_PointOps.value( IJS_PointOps.canvas, 10 )" /> 
+        <input type="image" src="/static/images/005/arrow_down.png" onmousedown="IJS_PointOps.value( IJS_PointOps.canvas, -10 )" /> 
     </td> 
     <td> 
-        <input type="image" src="/img/005/arrow_up.png" onmousedown="IJS_PointOps.contrast( IJS_PointOps.canvas, 1.1)" /> 
-        <input type="image" src="/img/005/arrow_down.png" onmousedown="IJS_PointOps.contrast( IJS_PointOps.canvas, 0.9)" /> 
+        <input type="image" src="/static/images/005/arrow_up.png" onmousedown="IJS_PointOps.contrast( IJS_PointOps.canvas, 1.1)" /> 
+        <input type="image" src="/static/images/005/arrow_down.png" onmousedown="IJS_PointOps.contrast( IJS_PointOps.canvas, 0.9)" /> 
     </td> 
     <td> 
-        <input type="image" src="/img/005/arrow_up.png" onmousedown="IJS_PointOps.saturation( IJS_PointOps.canvas, 25 )" /> 
-        <input type="image" src="/img/005/arrow_down.png" onmousedown="IJS_PointOps.saturation( IJS_PointOps.canvas, -25 )" /> 
+        <input type="image" src="/static/images/005/arrow_up.png" onmousedown="IJS_PointOps.saturation( IJS_PointOps.canvas, 25 )" /> 
+        <input type="image" src="/static/images/005/arrow_down.png" onmousedown="IJS_PointOps.saturation( IJS_PointOps.canvas, -25 )" /> 
     </td> 
     <td> 
-        <input type="image" src="/img/005/arrow_up.png" onmousedown="IJS_PointOps.hue( IJS_PointOps.canvas, 20)" /> 
-        <input type="image" src="/img/005/arrow_down.png" onmousedown="IJS_PointOps.hue( IJS_PointOps.canvas, -20)" /> 
+        <input type="image" src="/static/images/005/arrow_up.png" onmousedown="IJS_PointOps.hue( IJS_PointOps.canvas, 20)" /> 
+        <input type="image" src="/static/images/005/arrow_down.png" onmousedown="IJS_PointOps.hue( IJS_PointOps.canvas, -20)" /> 
     </td> 
     <td> 
         <button type="button" onmousedown="IJS_PointOps.invert()">invert</button> 

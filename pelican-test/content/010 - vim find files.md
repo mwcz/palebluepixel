@@ -25,13 +25,13 @@ Drawbacks
 There's no such thing as a perfect method (for doing anything), and this one has a few drawbacks.
 
 
-If you like using tabs in gvim, this probably won't work.  It opens every file in the project, and vim won't open many tabs at once.  The command `:tabnew **` in my 500-file project results in: ![Buffers menu with many files open](/img/010/too_many_file_names.png).  I typically use vim inside [Terminator](http://software.jessies.org/terminator/), and use multiple buffers in a single window, instead of in tabs.  If you do use gvim, a nice tab-like option is the Buffers menu.
+If you like using tabs in gvim, this probably won't work.  It opens every file in the project, and vim won't open many tabs at once.  The command `:tabnew **` in my 500-file project results in: ![Buffers menu with many files open](/static/images/010/too_many_file_names.png).  I typically use vim inside [Terminator](http://software.jessies.org/terminator/), and use multiple buffers in a single window, instead of in tabs.  If you do use gvim, a nice tab-like option is the Buffers menu.
 
-![Buffers menu with many files open](/img/010/vim_gui_buffer_list.png)
+![Buffers menu with many files open](/static/images/010/vim_gui_buffer_list.png)
 
 It opens all files, including binary files.  You'll never see any of them unless you switch to its buffer.
 
-![Screenshot of "Many more files to edit" message in vim](/img/010/more_files_to_edit.png)
+![Screenshot of "Many more files to edit" message in vim](/static/images/010/more_files_to_edit.png)
 
 Sources
 -------
