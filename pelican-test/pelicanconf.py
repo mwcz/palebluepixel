@@ -61,3 +61,6 @@ DAY_ARCHIVE_SAVE_AS   = '{date:%Y}/{date:%m}/{date:%d}/index.html'
 # Theme settings
 THEME = "/home/zip/workspace/pelican-themes/tuxlite_tbs"
 
+# theme tuxlite_tbs-specific settings
+ARCHIVES_URL = 'archives.html'
+
