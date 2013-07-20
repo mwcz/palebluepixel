@@ -25,8 +25,8 @@ THEME                 = environ["HOME"] + "/workspace/pelican-themes/bootlex"
 #                            HOST SETTINGS                            #
 #######################################################################
 
-SITEURL     = 'http://localhost:8000'
-FEED_DOMAIN = 'http://localhost:8000'
+SITEURL     = 'http://zipt.org'
+FEED_DOMAIN = 'http://zipt.org'
 
 
 # Blogroll
