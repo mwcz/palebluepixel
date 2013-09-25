@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/themes/bootstrap/css/bootstrap.css">
+    <style type="text/css" media="screen">
+        @media (min-width: 768px) {
+            .container {
+                max-width: 730px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <ul class="nav nav-pills pull-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/">Tech</a>
+                </li>
+                <li>
+                    <a href="/">Photos</a>
+                </li>
+                <li>
+                    <a href="/">About</a>
+                </li>
+            </ul>
+            <h1 class="text-muted">{{ site.name }}</h1>
+        </div>
+        <div class="row">
+            {{ content }}
+        </div>
+        <div class="footer">
+            <a href="https://github.com/mwcz">github.com/mwcz</a><br />
+            <a href="https://twitter.com/mwcz">twitter.com/mwcz</a><br />
+        </div>
+    </div>
+
+    <script src="/js/jquery-2.0.3.min.js" type="application/javascript" charset="utf-8"></script>
+    <script src="/themes/bootstrap/js/bootstrap.js" type="application/javascript" charset="utf-8"></script>
+</body>
+</html>
