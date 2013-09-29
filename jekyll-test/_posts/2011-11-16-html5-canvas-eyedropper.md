@@ -75,7 +75,7 @@ This is an old demo I made of an [HTML5 canvas](http://en.wikipedia.org/wiki/Can
 
 It's a pretty simple script, and works by declaring this function which handles onclick and ondrag events from the canvas.  cnvs is the canvas element, and c is the canvas's 2D rendering context object.
 
-$$code(lang=javascript)
+{% highlight js %}
 pixel = function(e) {
     // calculate the x and y coordinates of the cursor
     var static/imagesdata = c.getImageData( x, y, 1, 1 );
@@ -84,6 +84,6 @@ pixel = function(e) {
                       static/imagesdata.data[2] ];
     color.style.background = "rgb("+new_color+")";
 }
-$$/code
+{% endhighlight %}
 
 That's just a summary; the function actually does a little more than that.  Take a look at the source for this page if you're interested, and contact me if there are any questions.

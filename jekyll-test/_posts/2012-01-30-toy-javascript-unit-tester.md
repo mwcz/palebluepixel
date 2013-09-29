@@ -11,7 +11,7 @@ As a developer, I'd use a framework, write a bunch of `testBlahFoo` functions, a
 
 Then I realized... "Oh, it's just introspection."
 
-$$code(lang=javascript)
+{% highlight js %}
 // Create an object with three properties, all functions
 var myfuncs = {
     func1: function() { console.log("func it up"); },
@@ -29,13 +29,13 @@ for( func in myfuncs ) {
 // func it up
 // func's old brother
 // bring back da func
-$$/code
+{% endhighlight %}
 
 So simple.  Later, I wrote a very basic unit testing framework, purely as an educational excercise.
 
 The guts are almost simple as the example above.
 
-$$code(lang=javascript)
+{% highlight js %}
 var JTestSuite = function () {                                                                                                                                                                         
 
     var version = 0.1,
@@ -68,14 +68,14 @@ var JTestSuite = function () {
     };
 
 };
-$$/code
+{% endhighlight %}
 
 In the `run` function's loop, I first check that each property is a function before attemping to run it.  This avoids a `called_non_callable TypeError`.  I then check that the name of the property begins with the string "test".  When dynamically calling functions, it's usually a good idea to call `obj.hasOwnProperty(propname)` to ensure the property wasn't inherited from some unknown source (especially if the property you wanted to reference may have been `delete`d, but a property with the same name is now surfacing from a parent object), but in this case I'd like to leave open the possibility for inherited Test Suites.
 
 The `JTests` object created in the `init` function is a separate object that contains a bunch of assertions.  It looks something like this:
 
 
-$$code(lang=javascript)
+{% highlight js %}
 var JTests = function () {
 
     var version = 0.1,
@@ -99,7 +99,7 @@ var JTests = function () {
     };
 
 };
-$$/code
+{% endhighlight %}
 
 ...except with many more assertions. :)
 
@@ -107,7 +107,7 @@ Both `JTestSuite` and `JTests` use the [revealing module pattern](http://stackov
 
 I have a lot of ideas for improvement, like [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself)ing up the assertions, so the `{name,args,result}` object doesn't have to be defined in each assertion.  But [many others](http://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#JavaScript) have already done a great job, and I don't want to reinvent too many wheels.
 
-$$code(lang=javascript)
+{% highlight js %}
 // Define a custom handler for the result
 function test_callback( result ) {
     console.log(result);
@@ -131,7 +131,7 @@ TestSuite.testFalsy = function(jt) {
 
 // Run all the tests
 TestSuite.run();
-$$/code
+{% endhighlight %}
 
 The callback allows a user to determine how the results from the unit test should be processed or displayed.  Results could be printed to console.log, displayed on a page by adding them to the DOM, sent to a Web service with AJAX, or any arbitrary service with Web Sockets.
 

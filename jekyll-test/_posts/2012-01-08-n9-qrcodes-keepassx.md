@@ -27,7 +27,9 @@ image.  In the case of the N9, it's
 [qrencode](http://fukuchi.org/works/qrencode/index.html.en) is an extremely
 easy to use encoder.  Pass it a string, it produces an image.
 
-    qrencode "mypassword" -o mypass.png
+{% highlight bash %}
+qrencode "mypassword" -o mypass.png
+{% endhighlight %}
 
 [KeePassX](http://keepassx.org) is an excellent password manager.
 Unfortunately...
