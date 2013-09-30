@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<h2>{{ page.title }}</h2>
+<p>{{ page.date | date_to_string }}</p>
+
+<div class="col-md-12">
+    <img class="img-responsive" src="/static/images/photos/{{ page.photo }}" />
+</div>
+
+<div class="col-md-12">
+{{ content }}
+</div>
