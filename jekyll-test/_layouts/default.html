@@ -26,6 +26,28 @@
             left: -2px;
             color: black;
         }
+        /* use fontawesome instead? */
+        .glyphicon.glyphicon-github,
+        .glyphicon.glyphicon-twitter {
+            width: 24px;
+            height: 24px;
+            margin-top: -6px;
+        }
+        .glyphicon.glyphicon-github::before,
+        .glyphicon.glyphicon-twitter::before {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: 4px;
+            left: 0;
+        }
+        .glyphicon.glyphicon-github::before {
+            background-image: url(/static/images/glyphicons/glyphicons_social/png/glyphicons_social_21_github.png);
+        }
+        .glyphicon.glyphicon-twitter::before {
+            background-image: url(/static/images/glyphicons/glyphicons_social/png/glyphicons_social_31_twitter.png);
+        }
     </style>
 
 </head>
@@ -65,10 +87,19 @@
             {{ content }}
         </div>
         <div class="footer text-center">
-            <i class="glyphicon glyphicon-twitter"></i>
-            <a href="https://github.com/mwcz">github.com/mwcz</a><br />
-            <a href="https://twitter.com/mwcz">twitter.com/mwcz</a><br />
             <hr />
+            <div class="btn-toolbar">
+                <div class="btn-group">
+                    <a class="btn btn-default" href="https://github.com/mwcz">
+                        <span class="glyphicon glyphicon-github"></span>
+                        /mwcz
+                    </a>
+                    <a class="btn btn-default" href="https://twitter.com/mwcz">
+                        <span class="glyphicon glyphicon-twitter"></span>
+                        /mwcz
+                    </a>
+                </div>
+            </div>
             <i class="text-danger glyphicon glyphicon-heart"></i>
             <hr />
         </div>
