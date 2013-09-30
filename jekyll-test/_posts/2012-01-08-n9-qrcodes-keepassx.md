@@ -31,10 +31,12 @@ easy to use encoder.  Pass it a string, it produces an image.
 qrencode "mypassword" -o mypass.png
 {% endhighlight %}
 
-[KeePassX](http://keepassx.org) is an excellent password manager.
-Unfortunately...
+<p><a href="http://keepassx.org">KeePassX</a> is an excellent password manager.
+Unfortunately&hellip;</p>
 
-![KeePassX not in N9](/static/images/011/keepass_not_in_n9.png)
+<div class="alert alert-success text-center">
+<img src="/static/images/011/keepass_not_in_n9.png" alt="KeePassX not in N9" />
+</div>
 
 Sadly, there is no KeePassX client on the N9.  At least, not yet.  Even if
 there were, I'm skeptical that it's a good idea at all to be carrying around a
