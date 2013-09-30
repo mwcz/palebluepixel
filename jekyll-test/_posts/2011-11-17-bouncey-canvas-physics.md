@@ -25,7 +25,7 @@ It covers [Newton's laws of motion](http://en.wikipedia.org/wiki/Newton's_laws_o
 </style>
 
 
-<script type="text/javascript" src="/js/007/bouncey.js"></script> 
+<script type="text/javascript" src="/static/js/007/bouncey.js"></script> 
 
 <script type="text/javascript">
 

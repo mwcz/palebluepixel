@@ -25,13 +25,13 @@ window.onload = function() {
         var color = document.getElementById("color");
         var colorcode = document.getElementById("colorcode");
  
-        var static/images = new Image();
+        var images = new Image();
  
-        static/images.onload = function() {
-            cnvs.width = static/images.width;cnvs.height = static/images.height; // resize to fit image
-            c.drawImage( static/images, 0, 0 );
+        images.onload = function() {
+            cnvs.width = images.width;cnvs.height = images.height; // resize to fit image
+            c.drawImage( images, 0, 0 );
         }
-        static/images.src = "/static/images/001/kazoo.png";
+        images.src = "/static/images/001/kazoo.png";
  
         pixel = function(e) {
 
@@ -46,8 +46,8 @@ window.onload = function() {
 
             x = e.pageX - x;
             y = e.pageY - y;
-            var static/imagesdata = c.getImageData( x, y, 1, 1 );
-            var new_color = [ static/imagesdata.data[0], static/imagesdata.data[1], static/imagesdata.data[2] ];
+            var imagesdata = c.getImageData( x, y, 1, 1 );
+            var new_color = [ imagesdata.data[0], imagesdata.data[1], imagesdata.data[2] ];
             document.body.style.background = "rgb("+new_color+")";
             colorcode.innerHTML = "rgb("+new_color+")";
         }
@@ -78,10 +78,10 @@ It's a pretty simple script, and works by declaring this function which handles 
 {% highlight js %}
 pixel = function(e) {
     // calculate the x and y coordinates of the cursor
-    var static/imagesdata = c.getImageData( x, y, 1, 1 );
-    var new_color = [ static/imagesdata.data[0],
-                      static/imagesdata.data[1], 
-                      static/imagesdata.data[2] ];
+    var imagesdata = c.getImageData( x, y, 1, 1 );
+    var new_color = [ imagesdata.data[0],
+                      imagesdata.data[1], 
+                      imagesdata.data[2] ];
     color.style.background = "rgb("+new_color+")";
 }
 {% endhighlight %}

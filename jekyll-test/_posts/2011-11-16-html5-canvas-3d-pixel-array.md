@@ -26,20 +26,20 @@ function draw() {
         t = tmpl.getContext('2d');
         var color = document.getElementById("color");
  
-        var static/images = new Image();
+        var images = new Image();
  
-        static/images.onload = function() {
-            cnvs.width = static/images.width;
-            cnvs.height = static/images.height; // resize to fit image
-            tmpl.width = static/images.width;
-            tmpl.height = static/images.height; // resize to fit image
-            c.drawImage( static/images, 0, 0 );
+        images.onload = function() {
+            cnvs.width = images.width;
+            cnvs.height = images.height; // resize to fit image
+            tmpl.width = images.width;
+            tmpl.height = images.height; // resize to fit image
+            c.drawImage( images, 0, 0 );
         }
-        static/images.src = "/static/images/002/kazoo.png";
+        images.src = "/static/images/002/kazoo.png";
  
         getpixelarray = function() {
             var pixarray = new Array();
-            var static/imagesdata = c.getImageData( 0, 0, cnvs.width, cnvs.height ).data;
+            var imagesdata = c.getImageData( 0, 0, cnvs.width, cnvs.height ).data;
  
             /**
              * getImageData() returns a one-dimensional array where each element represents,
@@ -75,14 +75,14 @@ function draw() {
              * just in case a use arises for it in the future.  Likely.
              */
  
-            for( var i = 0; i < static/imagesdata.length-3; i+=4 ) {
+            for( var i = 0; i < imagesdata.length-3; i+=4 ) {
                 var x = parseInt( parseInt(i/4) % ( cnvs.width ) );
                 var y = parseInt( parseInt(i/4) / ( cnvs.width ) );
  
-                pixarray[x][y][0] = static/imagesdata[i];
-                pixarray[x][y][1] = static/imagesdata[i+1];
-                pixarray[x][y][2] = static/imagesdata[i+2];
-                pixarray[x][y][3] = static/imagesdata[i+3];
+                pixarray[x][y][0] = imagesdata[i];
+                pixarray[x][y][1] = imagesdata[i+1];
+                pixarray[x][y][2] = imagesdata[i+2];
+                pixarray[x][y][3] = imagesdata[i+3];
  
             }
  

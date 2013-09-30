@@ -22,7 +22,7 @@ First iteration (circa 2003)
 1. Log into my site, click *Add Photo*
 2. Choose the photo to upload, click *Next*
 3. Photo is shown along with 
-Very basic.  `event.pageX - static/images.offsetLeft`
+Very basic.  `event.pageX - images.offsetLeft`
 
 Second iteration (circa 2005)
 

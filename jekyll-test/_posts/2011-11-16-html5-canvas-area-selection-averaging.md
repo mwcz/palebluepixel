@@ -13,22 +13,22 @@ I used an old version of a rectangular selection tool called marquee.  I believe
 
 Click, drag, and taste the magic. :|
 
-<link rel="stylesheet" type="text/css" href="/css/004/marker.css" /> 
-<script type="text/javascript" src="/js/004/marquee/prototype_reduced.js"></script> 
-<script type="text/javascript" src="/js/004/marquee/rectmarquee.js"></script> 
-<script type="text/javascript" src="/js/004/JSImage.js"></script> 
+<link rel="stylesheet" type="text/css" href="/static/css/004/marker.css" /> 
+<script type="text/javascript" src="/static/js/004/marquee/prototype_reduced.js"></script> 
+<script type="text/javascript" src="/static/js/004/marquee/rectmarquee.js"></script> 
+<script type="text/javascript" src="/static/js/004/JSImage.js"></script> 
  
  
 <script type="text/javascript"> 
         
 window.onload = function() {
  
-    static/images0 = new JSImage( "c0", "/static/images/004/kazoo.png" );
-    setTimeout("static/images0.draggable();",100); // enable the selection
+    images0 = new JSImage( "c0", "/static/images/004/kazoo.png" );
+    setTimeout("images0.draggable();",100); // enable the selection
  
 }
  
-var static/images0; // make static/images0 public so I can play with it in firebug more easily
+var images0; // make images0 public so I can play with it in firebug more easily
  
 </script> 
  
