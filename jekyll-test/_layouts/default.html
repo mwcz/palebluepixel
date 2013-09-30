@@ -6,11 +6,12 @@
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width">
 
-    <!-- syntax highlighting CSS -->
     <link rel="stylesheet" href="/static/css/syntax.css">
 
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
     <style type="text/css" media="screen">
         @media (min-width: 768px) {
             .container {
@@ -25,28 +26,6 @@
             top: 2px;
             left: -2px;
             color: black;
-        }
-        /* use fontawesome instead? */
-        .glyphicon.glyphicon-github,
-        .glyphicon.glyphicon-twitter {
-            width: 24px;
-            height: 24px;
-            margin-top: -6px;
-        }
-        .glyphicon.glyphicon-github::before,
-        .glyphicon.glyphicon-twitter::before {
-            content: '';
-            position: absolute;
-            width: 24px;
-            height: 24px;
-            top: 4px;
-            left: 0;
-        }
-        .glyphicon.glyphicon-github::before {
-            background-image: url(/static/images/glyphicons/glyphicons_social/png/glyphicons_social_21_github.png);
-        }
-        .glyphicon.glyphicon-twitter::before {
-            background-image: url(/static/images/glyphicons/glyphicons_social/png/glyphicons_social_31_twitter.png);
         }
     </style>
 
@@ -91,11 +70,11 @@
             <div class="btn-toolbar">
                 <div class="btn-group">
                     <a class="btn btn-default" href="https://github.com/mwcz">
-                        <span class="glyphicon glyphicon-github"></span>
+                        <i class="icon-github-alt icon-large"></i>
                         /mwcz
                     </a>
                     <a class="btn btn-default" href="https://twitter.com/mwcz">
-                        <span class="glyphicon glyphicon-twitter"></span>
+                        <i class="icon-twitter icon-large text-info"></i>
                         /mwcz
                     </a>
                 </div>
