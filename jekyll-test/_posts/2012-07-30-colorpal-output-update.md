@@ -2,7 +2,8 @@
 layout: post
 title: ColorPal Output Update
 date: 2012-07-30 22:30:00
-categories: html5 javascript color
+tags: html5 javascript color
+categories: blog
 ---
 
 Hi pals.

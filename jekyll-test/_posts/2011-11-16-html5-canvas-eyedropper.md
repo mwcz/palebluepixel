@@ -3,6 +3,7 @@ layout: post
 title: HTML5 Canvas eyedropper
 date: 2011-11-16 15:25:00
 tags: html5 canvas color colorpal
+categories: blog
 ---
 
 <style type="text/css"> 

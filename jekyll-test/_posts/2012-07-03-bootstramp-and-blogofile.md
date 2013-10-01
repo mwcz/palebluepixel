@@ -2,7 +2,8 @@
 layout: post
 title: Bootstrap &amp; Blogofile
 date: 2012-07-03 22:44:50
-categories: bootstrap
+tags: bootstrap
+categories: blog
 ---
 
 Surprise.

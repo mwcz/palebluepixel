@@ -2,7 +2,8 @@
 layout: post
 title: HTML5 tool for creating color palettes from an image
 date: 2011-11-17 22:25:00
-categories: html5 canvas color colorpal
+tags: html5 canvas color colorpal
+categories: blog
 ---
 
 For an [HCI](http://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction) class project in Fall 2009, I pulled together some of my previous demos to make this integrated tool.  It was just a prototype, and I haven't taken the time to get the code set up and working on this blog.  If anyone is interested, I can dig up the code and send it along.

@@ -2,7 +2,8 @@
 layout: post
 title: ColorPal Alpha
 date: 2012-01-16 22:15:50
-categories: html5 javascript color
+tags: html5 javascript color
+categories: blog
 ---
 
 Introducing ColorPal!

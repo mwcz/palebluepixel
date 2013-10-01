@@ -1,3 +1,4 @@
 name: clayto.com
 markdown: redcarpet
 pygments: true
+permalink: /:categories/:year/:month/:day/:title

@@ -2,7 +2,8 @@
 layout: post
 title: How not to use CSS3
 date: 2011-11-17 20:25:00
-categories: html5 css3 typography
+tags: html5 css3 typography
+categories: blog
 ---
 
 How to ruin a good thing...

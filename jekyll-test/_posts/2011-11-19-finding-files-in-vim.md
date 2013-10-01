@@ -1,7 +1,8 @@
 ---
 layout: post
 title: finding files in vim
-categories: vim tools
+tags: vim tools
+categories: blog
 date: 2011-11-19 13:50:03
 published: false
 ---

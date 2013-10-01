@@ -2,7 +2,8 @@
 layout: post
 title: Opcode patterns 70% finished
 date: 2011-10-13 22:27:50
-categories: aejs html5 javascript amiga
+tags: aejs html5 javascript amiga
+categories: blog
 ---
 
 genlut.py is really filling out.  It generates the LUT for all 68k opcodes (68000 only), and I'm about 70% done.  77 down, 34 to go.

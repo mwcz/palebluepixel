@@ -2,7 +2,8 @@
 layout: post
 title: The N9, QR-Codes, and KeePassX
 date: 2012-01-08 22:27:50
-categories: general keepass n9
+tags: general keepass n9
+categories: blog
 ---
 
 *Update: I happened across a [KeePass

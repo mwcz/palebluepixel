@@ -2,7 +2,8 @@
 layout: post
 title: Bouncey returns - more canvas physics
 date: 2011-11-17 22:25:00
-categories: html5 canvas physics javascript bouncey
+tags: html5 canvas physics javascript bouncey
+categories: blog
 ---
 
 This is a slightly upgraded version of the physics demo I showed in my [last post](/2011/11/17/bouncey---canvas-physics/).

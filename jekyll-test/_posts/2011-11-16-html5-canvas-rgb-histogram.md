@@ -2,7 +2,8 @@
 layout: post
 title: HTML5 canvas RGB histogram
 date: 2011-11-16 17:25:00
-categories: html5 canvas color jsimage
+tags: html5 canvas color jsimage
+categories: blog
 ---
 
 This is yet another demo from around 2009.  It's simple enough.  Click a button, draw an unbinned RGB histogram of the source image.

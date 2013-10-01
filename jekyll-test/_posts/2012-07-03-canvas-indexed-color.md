@@ -2,7 +2,8 @@
 layout: post
 title: Canvas Indexed Color
 date: 2012-07-03 23:44:50
-categories: html5 canvas color
+tags: html5 canvas color
+categories: blog
 ---
 
 [Canvas Indexed Color demo](/projects/canvas_indexed_color "Canvas Indexed Color demo")

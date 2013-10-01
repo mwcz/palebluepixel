@@ -6,6 +6,7 @@ tags       : general mwcz.org
 categories : blog
 author     : mwcz
 layout     : post
+root: blog
 ---
 
 <script type="text/javascript">
