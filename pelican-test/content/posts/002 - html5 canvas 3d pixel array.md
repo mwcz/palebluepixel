@@ -1,6 +1,7 @@
 Title: HTML5 canvas 3D pixel array
 Date: 2011-11-16 16:25:00
-Categories: html5, canvas, color, colorpal
+Tags: html5, canvas, color, colorpal
+Category: blog
 
 This is another demo from 2009-ish.  When I started experimenting with canvas, I felt uncomfortable with the 1-dimensionality of [CanvasPixelArray](https://developer.mozilla.org/en/DOM/CanvasPixelArray).  I wrote this script to convert it into a more logical format: X by Y by RGBA.  Let me rephrase that.  By "more logical", I mean "more logical, *to me*, *at the time*).  1D is fine, and I can't think of any use for this script.  But, nonetheless, here it is, including the original description.
 

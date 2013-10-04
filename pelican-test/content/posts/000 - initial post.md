@@ -3,6 +3,7 @@ Date: 2011-11-16 15:25:00
 Tags: general, mwcz.org
 Slug: initial-post
 Author: mwcz
+Category: blog
 
 <script type="text/javascript">
     window.onload = function() { document.getElementById("email").href = "mailto:%6D%77%63@%63%6C%61%79%74%6F.%6F%72%67"; };

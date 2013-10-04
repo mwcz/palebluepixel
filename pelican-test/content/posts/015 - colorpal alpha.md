@@ -1,6 +1,7 @@
 Title: ColorPal Alpha
 Date: 2012-01-16 22:15:50
-Categories: html5, javascript, color
+Tags: html5, javascript, color
+Category: blog
 
 Introducing ColorPal!
 

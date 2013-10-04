@@ -68,8 +68,10 @@ PAGE_URL              = '{slug}/'
 PAGE_SAVE_AS          = '{slug}/index.html'
 
 # Feed (syndication) settings
-FEED_ATOM             = 'feeds/all.atom.xml'
+FEED_ATOM             = 'feeds/atom.xml'
+FEED_ALL_ATOM         = 'feeds/all.atom.xml'
 FEED_RSS              = 'feeds/all.rss.xml'
+FEED_ALL_RSS          = 'feeds/rss.xml'
 
 # tag paths
 TAG_URL               = 'tag/{slug}/'

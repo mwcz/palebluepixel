@@ -1,6 +1,7 @@
 Title: ColorPal palettes improved!
 Date: 2012-02-10 22:44:50
-Categories: html5, javascript, color
+Tags: html5, javascript, color
+Category: blog
 
 [<static/images src="/static/images/019/colorpal_logo.png" alt="ColorPal logo" title=""
 />](/projects/colorpal)

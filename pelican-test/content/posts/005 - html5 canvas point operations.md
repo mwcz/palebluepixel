@@ -1,6 +1,7 @@
 Title: HTML5 canvas point operations
 Date: 2011-11-17 19:25:00
-Categories: html5, canvas, color, image processing, jsimage
+Tags: html5, canvas, color, image processing, jsimage
+Category: blog
 
 This is the last demo I made using [JSImage](https://github.com/mwcz/jsimage).  I created it some time around 2009-2010.  At the time, I had checked out an [imaging book](http://www.amazon.com/Digital-Image-Processing-Algorithmic-Introduction/dp/1846283795) from my university's library at least ten times.  Most of the exercises in that book I implemented in Python using [PIL](http://www.pythonware.com/products/pil/), but point operations were simple enough to port to JavaScript quickly.
 
