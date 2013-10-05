@@ -1,0 +1,16 @@
+---
+layout: default
+title: clayto.com
+---
+
+<h3>Projects</h3>
+<ul>
+    {% for post in site.posts %}
+        {% if post.categories contains 'blog' %}
+            <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+{% include list_blog.html %}
+
