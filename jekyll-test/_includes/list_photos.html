@@ -1,16 +1,14 @@
 <div class="row">
 {% for post in site.posts %}
     {% if post.categories contains 'photos' %}
-    <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
+    <div class="col-md-12">
+        <a href="{{ post.url }}" alt="{{ post.title }}">
+            <img src="/static/images/photos/{{ post.img }}" class="img-responsive" alt="">
+        </a>
+        <div class="caption">
             <a href="{{ post.url }}" alt="{{ post.title }}">
-                <img src="/static/images/photos/{{ post.img }}" class="img-responsive" alt="">
+                <h3>{{ post.title }}</h3>
             </a>
-            <div class="caption">
-                <a href="{{ post.url }}" alt="{{ post.title }}">
-                    <h3>{{ post.title }}</h3>
-                </a>
-            </div>
         </div>
     </div>
     {% endif %}
