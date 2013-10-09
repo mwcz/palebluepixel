@@ -2,3 +2,6 @@ name: clayto.com
 markdown: redcarpet
 pygments: true
 permalink: /:categories/:year/:month/:day/:title
+
+# path to the lessc executable
+lessc: lessc
