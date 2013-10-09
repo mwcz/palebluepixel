@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>LUT</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/css/syntax.css">
+
+    <link rel="stylesheet" type='text/css' href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type='text/css' href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
+
+    <!-- Custom CSS -->
+    <style type="text/css" media="screen">
+        body { font-family: 'Lato', sans-serif; }
+        @media (min-width: 768px) {
+            .container {
+                max-width: 930px;
+            }
+        }
+        .header {
+            text-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+        }
+        .header .nav-pills .glyphicon {
+            position : relative;
+            top      : 2px;
+            left     : -2px;
+            color    : black;
+        }
+        .clayto-photo-list img {
+            width: 100%;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <ul class="nav nav-pills pull-right">
+                <li>
+                    <a href="/">
+                        <span class="glyphicon glyphicon-globe"></span>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="/blog">
+                        <span class="glyphicon glyphicon-floppy-disk"></span>
+                        Tech
+                    </a>
+                </li>
+                <li>
+                    <a href="/photos">
+                        <span class="glyphicon glyphicon-camera"></span>
+                        Photos
+                    </a>
+                </li>
+                <li>
+                    <a href="/about">
+                        <span class="glyphicon glyphicon-barcode"></span>
+                        About
+                    </a>
+                </li>
+            </ul>
+            <h1 class="text-muted">clayto.com</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>LUT</h2>
+<p>22 Sep 2011</p>
+
+<div>
+<p>Decoding is easy. Decoding requires a lot of typing. (I am starting to believe this is true of every aspect of interpreted emulation...)</p>
+
+<p>For the AEJS decoder, I am creating a <a href="http://en.wikipedia.org/wiki/Lookup_table">look-up table</a> with every possible pattern for each instruction. It was my first idea, but I initially discarded it as &quot;wasteful and inelegant&quot;. Later, I accepted it as &quot;really fast&quot;.</p>
+
+<p>I&#39;m generating a large set of bit patterns that map to 68k opcodes, like so:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">0100101011111010 -&gt; BGND
+0100101011111100 -&gt; ILLEGAL
+0100111001110000 -&gt; RESET
+0100111001110001 -&gt; NOP
+0100111001110010 -&gt; STOP
+0100111001110011 -&gt; RTE
+</code></pre></div>
+<p>The current code can be found <a href="https://github.com/mwcz/AEJS/blob/master/src/genlut.py">here</a>.</p>
+
+<p>Yes, it&#39;s written in Python and yes, AEJS is a JavaScript project.  There&#39;s a reason.  I see two approaches to generating the LUT (look-up table).</p>
+
+<h2>Generate the LUT on launch (dynamic)</h2>
+
+<p>This has the advantage of being easier to debug.  It also might be easier if I ever expand the emulator to other chips, like the <a href="http://en.wikipedia.org/wiki/Motorola_68020">68020</a> or <a href="http://en.wikipedia.org/wiki/Motorola_68030">68030</a>.</p>
+
+<p>It currently takes about 0.466 seconds on my machine to generate ~12,000 patterns.  That means it should take less than 2.5s to generate the full LUT.</p>
+
+<h2>Generate the LUT pre-launch (static)</h2>
+
+<p>This is what I&#39;m currently working toward.  genlut.py is currently generating about 12,000 opcode bit patterns out of a max of I&#39;m-not-sure-yet-but-slightly-less-than-65,536.</p>
+
+<p>With this method, I would run genlut.py one final time, pipe the output into a static JS file, and regex the contents into a JS array.  The LUT would never have to be generated again, and would exist happily forever-after.</p>
+
+<p>Cons: relies upon the LUT being 100% correct, as any errors would be hard to debug, and would require another run of genlut.py to fix.</p>
+
+<p>Pros: AEJS will launch faster without having to generate the LUT each time.  If I can verify that the LUT is 100% correct, this is obviously the right approach.</p>
+
+<p>I&#39;ll continue on with the static method for now, and odds are I&#39;ll stick with it.   2.5s is too big a price to pay.</p>
+
+<p>Back to work:</p>
+
+<p><a href="/static/images/013/workarea.png"><static/images class="grid_7" src="/static/images/013/workarea.png" alt=":)" title="" /></a>
+<div class="clear"></div></p>
+
+<p>(This post was copied from my old <a href="http://aejs.blogspot.com/">AEJS blog</a>)</p>
+
+</div>
+
+            </div>
+        </div>
+        <div class="footer text-center">
+            <hr />
+            <i class="text-danger glyphicon glyphicon-heart"></i>
+            <hr />
+        </div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js" type="application/javascript" charset="utf-8"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/js/bootstrap.min.js" type="application/javascript" charset="utf-8"></script>
+</body>
+</html>

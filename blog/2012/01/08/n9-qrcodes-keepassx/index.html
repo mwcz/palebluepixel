@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>The N9, QR-Codes, and KeePassX</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/css/syntax.css">
+
+    <link rel="stylesheet" type='text/css' href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type='text/css' href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
+
+    <!-- Custom CSS -->
+    <style type="text/css" media="screen">
+        body { font-family: 'Lato', sans-serif; }
+        @media (min-width: 768px) {
+            .container {
+                max-width: 930px;
+            }
+        }
+        .header {
+            text-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+        }
+        .header .nav-pills .glyphicon {
+            position : relative;
+            top      : 2px;
+            left     : -2px;
+            color    : black;
+        }
+        .clayto-photo-list img {
+            width: 100%;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <ul class="nav nav-pills pull-right">
+                <li>
+                    <a href="/">
+                        <span class="glyphicon glyphicon-globe"></span>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="/blog">
+                        <span class="glyphicon glyphicon-floppy-disk"></span>
+                        Tech
+                    </a>
+                </li>
+                <li>
+                    <a href="/photos">
+                        <span class="glyphicon glyphicon-camera"></span>
+                        Photos
+                    </a>
+                </li>
+                <li>
+                    <a href="/about">
+                        <span class="glyphicon glyphicon-barcode"></span>
+                        About
+                    </a>
+                </li>
+            </ul>
+            <h1 class="text-muted">clayto.com</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>The N9, QR-Codes, and KeePassX</h2>
+<p>08 Jan 2012</p>
+
+<div>
+<p><em>Update: I happened across a <a href="http://keepass.info/plugins.html#qrcodegen">KeePass
+plugin</a> (not the same as KeePassX)
+that displays passwords as QR codes, just like my hack below.</em></p>
+
+<p>Poor, glorious N9.</p>
+
+<p>It&#39;s impossible not to love the N9 if you&#39;re a geek, especially a programming,
+bash-loving, Linux-hankering geek.  It&#39;s like a nerd talisman.  This post isn&#39;t
+about the N9, specifically, so I&#39;ll save the love-fest for another time.</p>
+
+<p>This post is about how difficult it can be to get text (especially passwords)
+onto a smartphone securely.  I&#39;ve come to like the approach of using QR codes.
+Most (all?) smartphones have a barcode scanner, and QR codes are one of <a href="http://en.wikipedia.org/wiki/Barcode">many
+convenient ways</a> to encode text into an
+image.  In the case of the N9, it&#39;s
+<a href="http://store.ovi.com/content/231518">MeeScan</a>.</p>
+
+<p><img src="/static/images/011/meescan.png" alt="meescan"></p>
+
+<p><a href="http://fukuchi.org/works/qrencode/index.html.en">qrencode</a> is an extremely
+easy to use encoder.  Pass it a string, it produces an image.</p>
+
+<div class="highlight"><pre><code class="bash">qrencode <span class="s2">&quot;mypassword&quot;</span> -o mypass.png
+</code></pre></div>
+
+
+<p><a href="http://keepassx.org">KeePassX</a> is an excellent password manager.
+Unfortunately&hellip;</p>
+
+<div class="alert alert-success text-center">
+<img src="/static/images/011/keepass_not_in_n9.png" alt="KeePassX not in N9" />
+</div>
+
+<p>Sadly, there is no KeePassX client on the N9.  At least, not yet.  Even if
+there were, I&#39;m skeptical that it&#39;s a good idea at all to be carrying around a
+database of personal passwords on a smartphone.  It&#39;s encrypted, sure, but
+touchscreen keyboards encourage weak passphrases.  Who wants to enter a 64+
+character passphrase on a <abbr title="Virtual keyboard">vkbd</abbr>?</p>
+
+<p>This evening, I spent about an hour hacking QR-code support into KeePassX.
+It&#39;s a seriously messy hack, using
+<a href="http://en.cppreference.com/w/cpp/utility/program/system">system()</a> to call
+<code>qrencode</code>, pass in the password, then call
+<a href="http://projects.gnome.org/evince/?guid=ON">evince</a> to view it.  Even worse, I
+just tacked it onto the &quot;Copy Password&quot; function, instead of figuring out how
+to create a new menu item.  It doesn&#39;t even delete the generated image after
+viewing.  Definitely nothing more than a proof of concept.</p>
+
+<p>Here it is in action.</p>
+
+<p><a href="/static/images/011/keepassx_demo.png"><static/images class="grid_7"
+src="/static/images/011/keepassx_demo.png" alt="KeePassX generating a QR code" title=""
+/></a></p>
+
+<div class="clear"></div>
+
+<p>I won&#39;t be distributing my mod unless someone <em>really</em> wants it, but it would
+be cool to see this available as plugin to any password managers that support
+plugins.  It could be handy to have clipboard managers generate QR codes too.</p>
+
+</div>
+
+            </div>
+        </div>
+        <div class="footer text-center">
+            <hr />
+            <i class="text-danger glyphicon glyphicon-heart"></i>
+            <hr />
+        </div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js" type="application/javascript" charset="utf-8"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/js/bootstrap.min.js" type="application/javascript" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Toy javascript unit tester</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/css/syntax.css">
+
+    <link rel="stylesheet" type='text/css' href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type='text/css' href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
+
+    <!-- Custom CSS -->
+    <style type="text/css" media="screen">
+        body { font-family: 'Lato', sans-serif; }
+        @media (min-width: 768px) {
+            .container {
+                max-width: 930px;
+            }
+        }
+        .header {
+            text-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+        }
+        .header .nav-pills .glyphicon {
+            position : relative;
+            top      : 2px;
+            left     : -2px;
+            color    : black;
+        }
+        .clayto-photo-list img {
+            width: 100%;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <ul class="nav nav-pills pull-right">
+                <li>
+                    <a href="/">
+                        <span class="glyphicon glyphicon-globe"></span>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="/blog">
+                        <span class="glyphicon glyphicon-floppy-disk"></span>
+                        Tech
+                    </a>
+                </li>
+                <li>
+                    <a href="/photos">
+                        <span class="glyphicon glyphicon-camera"></span>
+                        Photos
+                    </a>
+                </li>
+                <li>
+                    <a href="/about">
+                        <span class="glyphicon glyphicon-barcode"></span>
+                        About
+                    </a>
+                </li>
+            </ul>
+            <h1 class="text-muted">clayto.com</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Toy javascript unit tester</h2>
+<p>30 Jan 2012</p>
+
+<div>
+<p>Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and had a minor epiphany.  In the back of my mind, there has always been a bit of uncertainty as to how unit testing frameworks work.  Deep in my brain I knew there was something I didn&#39;t understand, but I wasn&#39;t quite sure what.  I never gave it any conscious thought.</p>
+
+<p>As a developer, I&#39;d use a framework, write a bunch of <code>testBlahFoo</code> functions, and the framework would magically run them.  </p>
+
+<p>Then I realized... &quot;Oh, it&#39;s just introspection.&quot;</p>
+
+<div class="highlight"><pre><code class="js"><span class="c1">// Create an object with three properties, all functions</span>
+<span class="kd">var</span> <span class="nx">myfuncs</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">func1</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;func it up&quot;</span><span class="p">);</span> <span class="p">},</span>
+    <span class="nx">func2</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;func&#39;s old brother&quot;</span><span class="p">);</span> <span class="p">},</span>
+    <span class="nx">func3</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;bring back da func&quot;</span><span class="p">);</span> <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="c1">// Run all functions attached to myfuncs</span>
+<span class="k">for</span><span class="p">(</span> <span class="nx">func</span> <span class="k">in</span> <span class="nx">myfuncs</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="nx">myfuncs</span><span class="p">[</span> <span class="nx">func</span> <span class="p">]();</span>
+<span class="p">}</span>
+
+<span class="c1">// Outputs:</span>
+<span class="c1">// </span>
+<span class="c1">// func it up</span>
+<span class="c1">// func&#39;s old brother</span>
+<span class="c1">// bring back da func</span>
+</code></pre></div>
+
+<p>So simple.  Later, I wrote a very basic unit testing framework, purely as an educational excercise.</p>
+
+<p>The guts are almost simple as the example above.</p>
+
+<div class="highlight"><pre><code class="js"><span class="kd">var</span> <span class="nx">JTestSuite</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>                                                                                                                                                                         
+
+    <span class="kd">var</span> <span class="nx">version</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+        <span class="nx">jt</span><span class="p">,</span>
+
+    <span class="nx">init</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">callback</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="nx">jt</span> <span class="o">=</span> <span class="nx">JTests</span><span class="p">();</span>
+        <span class="nx">jt</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span> <span class="nx">callback</span> <span class="p">);</span>
+    <span class="p">},</span>
+
+    <span class="nx">run</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">fn</span><span class="p">,</span>
+            <span class="nx">prop</span><span class="p">;</span>
+
+        <span class="c1">// Run all functions that begin with &quot;test&quot;</span>
+        <span class="k">for</span><span class="p">(</span> <span class="nx">prop</span> <span class="k">in</span> <span class="k">this</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span> <span class="k">typeof</span> <span class="k">this</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span> <span class="o">===</span> <span class="s2">&quot;function&quot;</span> <span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span><span class="p">(</span> <span class="nx">prop</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="o">===</span> <span class="s2">&quot;test&quot;</span> <span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="k">this</span><span class="p">[</span><span class="nx">prop</span><span class="p">](</span><span class="nx">jt</span><span class="p">)</span> <span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">};</span>
+
+    <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="p">(</span><span class="k">this</span> <span class="k">instanceof</span> <span class="nx">JTestSuite</span><span class="p">)</span> <span class="p">)</span> <span class="k">return</span> <span class="k">new</span> <span class="nx">JTestSuite</span><span class="p">();</span>
+
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="nx">init</span> <span class="o">:</span> <span class="nx">init</span><span class="p">,</span>
+        <span class="nx">run</span>  <span class="o">:</span> <span class="nx">run</span>
+    <span class="p">};</span>
+
+<span class="p">};</span>
+</code></pre></div>
+
+<p>In the <code>run</code> function&#39;s loop, I first check that each property is a function before attemping to run it.  This avoids a <code>called_non_callable TypeError</code>.  I then check that the name of the property begins with the string &quot;test&quot;.  When dynamically calling functions, it&#39;s usually a good idea to call <code>obj.hasOwnProperty(propname)</code> to ensure the property wasn&#39;t inherited from some unknown source (especially if the property you wanted to reference may have been <code>delete</code>d, but a property with the same name is now surfacing from a parent object), but in this case I&#39;d like to leave open the possibility for inherited Test Suites.</p>
+
+<p>The <code>JTests</code> object created in the <code>init</code> function is a separate object that contains a bunch of assertions.  It looks something like this:</p>
+
+<div class="highlight"><pre><code class="js"><span class="kd">var</span> <span class="nx">JTests</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+
+    <span class="kd">var</span> <span class="nx">version</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+        <span class="nx">result_callback</span><span class="p">,</span>
+
+    <span class="nx">init</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">callback</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="nx">result_callback</span> <span class="o">=</span> <span class="nx">callback</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">assertTrue</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">a</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">a</span> <span class="o">===</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="nx">result_callback</span><span class="p">(</span> <span class="p">{</span>                                                                                                                                                                         
+            <span class="nx">name</span>   <span class="o">:</span> <span class="s2">&quot;assertTrue&quot;</span><span class="p">,</span>
+            <span class="nx">args</span>   <span class="o">:</span> <span class="p">[</span> <span class="nx">a</span> <span class="p">],</span>
+            <span class="nx">result</span> <span class="o">:</span> <span class="nx">result</span>
+        <span class="p">}</span> <span class="p">);</span>
+    <span class="p">};</span>
+    
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="nx">assertTrue</span> <span class="o">:</span> <span class="nx">assertTrue</span>
+    <span class="p">};</span>
+
+<span class="p">};</span>
+</code></pre></div>
+
+<p>...except with many more assertions. :)</p>
+
+<p>Both <code>JTestSuite</code> and <code>JTests</code> use the <a href="http://stackoverflow.com/a/5647397/215148">revealing module pattern</a>. </p>
+
+<p>I have a lot of ideas for improvement, like <a href="http://en.wikipedia.org/wiki/Don&#x27;t_repeat_yourself">DRY</a>ing up the assertions, so the <code>{name,args,result}</code> object doesn&#39;t have to be defined in each assertion.  But <a href="http://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#JavaScript">many others</a> have already done a great job, and I don&#39;t want to reinvent too many wheels.</p>
+
+<div class="highlight"><pre><code class="js"><span class="c1">// Define a custom handler for the result</span>
+<span class="kd">function</span> <span class="nx">test_callback</span><span class="p">(</span> <span class="nx">result</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Create a new JTestSuite object and initialize it with the callback</span>
+<span class="kd">var</span> <span class="nx">TestSuite</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">JTestSuite</span><span class="p">();</span>
+<span class="nx">TestSuite</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span> <span class="nx">test_callback</span> <span class="p">);</span>
+
+<span class="c1">// Create some tests</span>
+<span class="nx">TestSuite</span><span class="p">.</span><span class="nx">testMath</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">jt</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">jt</span><span class="p">.</span><span class="nx">assertEquals</span><span class="p">(</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span> <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="nx">TestSuite</span><span class="p">.</span><span class="nx">testFalsy</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">jt</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// [], &quot;&quot;, and &quot;0&quot; all == false in javascript</span>
+    <span class="nx">jt</span><span class="p">.</span><span class="nx">assertFalsy</span><span class="p">(</span> <span class="p">[]</span> <span class="p">);</span>
+    <span class="nx">jt</span><span class="p">.</span><span class="nx">assertFalsy</span><span class="p">(</span> <span class="s2">&quot;&quot;</span> <span class="p">);</span>
+    <span class="nx">jt</span><span class="p">.</span><span class="nx">assertFalsy</span><span class="p">(</span> <span class="s2">&quot;0&quot;</span> <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="c1">// Run all the tests</span>
+<span class="nx">TestSuite</span><span class="p">.</span><span class="nx">run</span><span class="p">();</span>
+</code></pre></div>
+
+<p>The callback allows a user to determine how the results from the unit test should be processed or displayed.  Results could be printed to console.log, displayed on a page by adding them to the DOM, sent to a Web service with AJAX, or any arbitrary service with Web Sockets.</p>
+
+<p>After writing this toy framework, and explaining it to a colleague, I was told that the Rails unit tester uses almost the exact same approach.  I&#39;d wager a few bucks that JUnit uses the Reflection API&#39;s <code>Class.getMethods()</code> to find and run all the methods added to a TestCase class.  Only a few bucks, though.</p>
+
+</div>
+
+            </div>
+        </div>
+        <div class="footer text-center">
+            <hr />
+            <i class="text-danger glyphicon glyphicon-heart"></i>
+            <hr />
+        </div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js" type="application/javascript" charset="utf-8"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/js/bootstrap.min.js" type="application/javascript" charset="utf-8"></script>
+</body>
+</html>
