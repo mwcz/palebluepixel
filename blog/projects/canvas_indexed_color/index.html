@@ -41,13 +41,13 @@ input.color {
 
 <ol class="color_palette" data-bind="template: { name: 'CIC_ColorPaletteTemplate', foreach: colors }"></ol>
 
+<canvas id="cnvs" data-bind="updateCanvas: colors"></canvas>
+
 <script type="text/html" id="CIC_ColorPaletteTemplate">
     <li>
-        <input class="color" data-bind="value: hex" /> 
+        <input class="color" data-bind="value: hex" />
     </li>
 </script>
-
-<canvas id="cnvs" data-bind="updateCanvas: colors"></canvas>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="knockout-2.0.0.js"></script>

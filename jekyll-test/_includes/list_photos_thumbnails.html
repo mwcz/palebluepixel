@@ -2,18 +2,17 @@
 
 {% comment %}
 
-Contract: a variable named photos_thumbnails_max_length must be assigned before
-this template is included.  It defines how many thumbnails to show.
+Contract: a variable named list_photos_thumbnails_max_length must be assigned
+before this template is included.  It defines how many thumbnails to show.
 
 Example code:
 
-    {% assign photos_thumbnails_max_length = 2 %}
+    {% assign list_photos_thumbnails_max_length = 2 %}
 
 {% endcomment %}
 
-{% for post in site.posts %}
+{% for post in site.posts limit:list_photos_thumbnails_max_length %}
     {% if post.categories contains 'photos' %}
-    {% if forloop.index <= photos_thumbnails_max_length %}
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
             <a href="{{ post.url }}" alt="{{ post.title }}">
@@ -26,7 +25,6 @@ Example code:
             </div>
         </div>
     </div>
-    {% endif %}
     {% endif %}
 {% endfor %}
 </div>
