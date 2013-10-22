@@ -1,19 +1,83 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>~\workspace\canvas_indexed_color.html.html</title>
-<meta name="Generator" content="Vim/7.3">
-<meta name="plugin-version" content="vim7.3_v6">
-<meta name="syntax" content="html">
-<meta name="settings" content="use_css">
-<link href="farbtastic/farbtastic.css" rel="stylesheet" type="text/css"  />
-<style type="text/css">
-<!--
-pre { color: #dcdccc; background-color: #1f1f1f; }
-body { color: #dcdccc; background-color: #1f1f1f; padding: 0; margin: 20px 0; text-align: center; }
-canvas { float: left; margin: 20px 0; }
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/css/syntax.css">
+
+    <link rel="stylesheet" type='text/css' href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type='text/css' href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js" type="application/javascript" charset="utf-8"></script>
+
+    <!-- Custom CSS -->
+    <style type="text/css" media="screen">
+        body { font-family: 'Lato', sans-serif; }
+        @media (min-width: 768px) {
+            .container {
+                max-width: 930px;
+            }
+        }
+        .header {
+            text-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+        }
+        .header .nav-pills .glyphicon {
+            position : relative;
+            top      : 2px;
+            left     : -2px;
+            color    : black;
+        }
+        .clayto-photo-list img {
+            width: 100%;
+        }
+        .clayto-project-list img {
+            margin: 0 auto;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <ul class="nav nav-pills pull-right">
+                <li>
+                    <a href="/">
+                        <span class="glyphicon glyphicon-globe"></span>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="/blog">
+                        <span class="glyphicon glyphicon-floppy-disk"></span>
+                        Tech
+                    </a>
+                </li>
+                <li>
+                    <a href="/photos">
+                        <span class="glyphicon glyphicon-camera"></span>
+                        Photos
+                    </a>
+                </li>
+                <li>
+                    <a href="/about">
+                        <span class="glyphicon glyphicon-barcode"></span>
+                        About
+                    </a>
+                </li>
+            </ul>
+            <h1 class="text-muted">clayto.com</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <style type="text/css">
+<!--
 .color_palette {
     list-style: none;
 }
@@ -34,20 +98,24 @@ input.color {
 }
 -->
 </style>
-</head>
-<body>
 
 <h1>Canvas indexed color demo</h1>
+
+<canvas id="cnvs" data-bind="updateCanvas: colors"></canvas>
 
 <ol class="color_palette" data-bind="template: { name: 'CIC_ColorPaletteTemplate', foreach: colors }"></ol>
 
 <script type="text/html" id="CIC_ColorPaletteTemplate">
     <li>
-        <input class="color" data-bind="value: hex" /> 
+        <input class="color" data-bind="value: hex" />
     </li>
 </script>
 
-<canvas id="cnvs" data-bind="updateCanvas: colors"></canvas>
+<ul style="overflow: hidden; clear: both;">
+    <li>
+        <a href="/projects/canvas_indexed_color/#000000,323232,4C4C4C,#659900,#666666,999999,#999999,#99cc32,#a51926,#a5264c,#b23259,#b26565,#b2b2b2,#cc3f4c,CCCCCC,#cccccc,#e5668c,#e59999,#e5e5b2,E8E8E8,EAEAEA,EAEAEA,EBEBEB,ECECEC,EEEEEE,EFEFEF,F1F1F1,F2F2F2,F3F3F3,F4F4F4,F5F5F5,F8F8F8,F8F8F8,F9F9F9,FAFAFA,FCFCFC,#ff727f,#ffffcc,#ffffff">White tiger</a>
+    </li>
+</ul>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="knockout-2.0.0.js"></script>
@@ -56,6 +124,16 @@ input.color {
 <script type="text/javascript" src="cic.js"></script>
 <script type="text/javascript" src="jscolor/jscolor.js"></script>
 
+            </div>
+        </div>
+        <div class="footer text-center">
+            <hr />
+            <!-- I <3 -->
+            <i class="text-danger glyphicon glyphicon-heart" title="Made with &hearts; by Michael Clayton in Raleigh"></i>
+            <hr />
+        </div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/js/bootstrap.min.js" type="application/javascript" charset="utf-8"></script>
 </body>
 </html>
-

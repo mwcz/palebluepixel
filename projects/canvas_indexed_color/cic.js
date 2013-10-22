@@ -19,7 +19,6 @@ function tupleFits( tuple1, tuple2 ) {
             message : "Object lengths not equal."
         };
     }
-
     for ( i = 0; i < tuple1.length - 1; ++i ) {
         if ( tuple1[ i ] > tuple2[ i ] ) {
             return false;
@@ -53,10 +52,10 @@ function clampTuple( tuple, max_tuple ) {
 
     var ratios = [],
         clamped_tuple = tuple.slice(0),
-        i, j; 
+        i, j;
 
 
-    // Build an array containing the ratios between each element, for 
+    // Build an array containing the ratios between each element, for
     // reference later.
 
     for ( i = 0; i < tuple.length - 1; ++i ) {
@@ -76,13 +75,13 @@ function clampTuple( tuple, max_tuple ) {
 
             clamped_tuple[i] = max_tuple[i];
 
-            // Travel towards the end of the clamped_tuple, updating elements 
+            // Travel towards the end of the clamped_tuple, updating elements
 
             for ( j = i; j < clamped_tuple.length - 1; ++j ) {
                 clamped_tuple[ j + 1 ] = clamped_tuple[ j ] / ratios[ j ];
             }
 
-            // Travel towards the beginning of the clamped_tuple, updating elements 
+            // Travel towards the beginning of the clamped_tuple, updating elements
 
             for ( j = i; j > 0; --j ) {
                 clamped_tuple[ j - 1 ] = clamped_tuple[ j ] * ratios[ j - 1 ];
@@ -100,8 +99,6 @@ function resizeCanvas() {
     var viewport_size = [ $(window).width(), $(window).height() ];
 
     canvas_actual_size = clampTuple( canvas_display_size, viewport_size );
-
-    console.log( canvas_actual_size, viewport_size );
 
     cnvs.style.width  = canvas_actual_size[0] + "px";
     cnvs.style.height = canvas_actual_size[1] + "px";
@@ -175,9 +172,12 @@ $(document).ready( function() {
         ]);
 
         self.getColorStringArray = function () {
-            var colorStringArray = [];
-            for ( var key in self.colors() ) {
-                colorStringArray.push( self.colors()[key].hex() );
+            var colorStringArray = [],
+                key;
+            for ( key in self.colors() ) {
+                if (self.colors().hasOwnProperty(key)) {
+                    colorStringArray.push( self.colors()[key].hex() );
+                }
             }
             return colorStringArray;
         };
@@ -204,12 +204,12 @@ $(document).ready( function() {
         };
     }
 
-    cvm = new CIC_ViewModel;
+    cvm = new CIC_ViewModel();
 
     ko.bindingHandlers.updateCanvas = {
-        init   : function( element, valueAccessor, allBindingsAccessor, viewModel ) {
+        init : function( element, valueAccessor, allBindingsAccessor, viewModel ) {
             // If a hash is defined, set the colors based on it
-            if ( getHash() != "" ) {
+            if ( getHash() !== "" ) {
                 var url_colors = parseHash( getHash() ),
                     i;
                 for ( i = url_colors.length - 1; i >= 0; --i ) {
