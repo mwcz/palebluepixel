@@ -1,10 +1,7 @@
-Title: My Projects
-Date: 2013-07-22 22:10
-Category: pages
-Tags: programming, photography
-Slug: my-projects
+Title: Projects
+Date: 2013-10-25 15:11
+Slug: projects
 Author: Michael Clayton
-Summary: A self-indulgent list of fun projects I've implemented.
 
     ColorPal
     mwcz.org
@@ -14,3 +11,5 @@ Summary: A self-indulgent list of fun projects I've implemented.
     Canvas Indexed Color
     Bouncey
     JSImage
+
+

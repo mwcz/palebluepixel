@@ -30,7 +30,6 @@ I replaced the aforementioned color strings with calls to `cvm`, which is a
 Knockout ViewModel (in this case, an object that holds all the color data).
 `cvm` is populated with the SVG tiger's default colors.
 
-$$code(lang=javascript)
     ko.observableArray( [
         { hex: ko.observable("#000000") },
         { hex: ko.observable("#323232") },
@@ -38,7 +37,6 @@ $$code(lang=javascript)
         { hex: ko.observable("#ff727f") },
         { hex: ko.observable("#ffffff") }
     ]);
-$$/code
 
 Play with the colors, then copy the URL and send your tiger to your friends.  :]
 

@@ -15,14 +15,30 @@ PDF_GENERATOR         = False
 DEFAULT_PAGINATION    = 6
 MARKUP                = ('md','mkd','markdown')
 DISPLAY_PAGES_ON_MENU = True
-THEME                 = environ["HOME"] + "/workspace/pelican-themes/clayto"
+#THEME                 = environ["HOME"] + "/workspace/pelican-themes/clayto"
+#THEME                 = environ["HOME"] + "/workspace/pelican-themes/gum" # GOOD!
+THEME                 = environ["HOME"] + "/workspace/pelican-bootstrap3" # GREAT!
+#THEME                 = environ["HOME"] + "/workspace/pelican-themes/pelican-cait" # GOOD!
+#THEME                 = environ["HOME"] + "/workspace/pelican-themes/tuxlite_tbs" # GOOD!
+
+#######################################
+#  pelican-bootstrap3 theme settings  #
+#######################################
+
+# display active github repos
+GITHUB_USER = 'mwcz'
+GITHUB_REPO_COUNT = 5
+GITHUB_SKIP_FORK = True
+
+# use a bootstrap theme from http://bootswatch.com/
+BOOTSTRAP_THEME = 'flatly'
 
 #######################################################################
 #                            HOST SETTINGS                            #
 #######################################################################
 
-SITEURL     = 'http://zipt.org'
-FEED_DOMAIN = 'http://zipt.org'
+SITEURL     = 'http://beta.mwcz.org'
+FEED_DOMAIN = 'http://beta.mwczzipt.org'
 
 
 # Blogroll
@@ -36,7 +52,7 @@ FEED_DOMAIN = 'http://zipt.org'
 #DEFAULT_METADATA = (('yeah', 'it is'),)
 
 # static paths will be copied under the same name
-#STATIC_PATHS = ["pictures", ]
+STATIC_PATHS = ["static", ]
 
 # A list of files to copy from the source to the destination
 #FILES_TO_COPY = (('extra/robots.txt', 'robots.txt'),)
@@ -69,14 +85,20 @@ PAGE_URL              = '{slug}/'
 PAGE_SAVE_AS          = '{slug}/index.html'
 
 # Feed (syndication) settings
-FEED_ATOM             = 'feeds/all.atom.xml'
+FEED_ATOM             = 'feeds/atom.xml'
+FEED_ALL_ATOM         = 'feeds/all.atom.xml'
 FEED_RSS              = 'feeds/all.rss.xml'
+FEED_ALL_RSS          = 'feeds/rss.xml'
 
 # tag paths
 TAG_URL               = 'tag/{slug}/'
 TAG_SAVE_AS           = 'tag/{slug}/index.html'
 TAGS_URL              = 'tags/'
 TAGS_SAVE_AS          = 'tags/index.html'
+
+# Categories paths
+CATEGORIES_URL          = 'categories/'
+CATEGORIES_SAVE_AS      = 'categories/index.html'
 
 # Category paths
 CATEGORY_URL          = 'category/{slug}/'
@@ -86,6 +108,10 @@ CATEGORY_SAVE_AS      = 'category/{slug}/index.html'
 AUTHOR_URL            = 'author/{slug}/'
 AUTHOR_SAVE_AS        = 'author/{slug}/index.html'
 
+# Disable author page since I'm the only author
+AUTHORS_URL            = 'authors/{slug}/'
+AUTHORS_SAVE_AS        = 'authors/{slug}/index.html'
+
 # Period archive URLS
 YEAR_ARCHIVE_SAVE_AS  = '{date:%Y}/index.html'
 MONTH_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%m}/index.html'
@@ -94,6 +120,12 @@ DAY_ARCHIVE_SAVE_AS   = '{date:%Y}/{date:%m}/{date:%d}/index.html'
 # theme tuxlite_tbs-specific settings
 ARCHIVES_URL          = 'archives/'
 ARCHIVES_SAVE_AS      = 'archives/index.html'
+
+# Pagination paths (and quantity)
+PAGINATION_PATTERNS = (
+    (1, '{base_name}/', '{base_name}/index.html'),
+    (2, '{base_name}/{number}/', '{base_name}/{number}/index.html'),
+)
 
 #######################################################################
 #                       SOCIAL NETWORK SETTINGS                       #
