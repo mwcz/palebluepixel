@@ -85,6 +85,10 @@
     }
     $(function () {
         equalize_project_caption_heights();
+        // TODO: sometimes height is wrong after resizing.  this fixed it but is too slow.  revisit later.
+        // $(window).resize(function () {
+        //     equalize_project_caption_heights();
+        // });
     });
 </script>
 
