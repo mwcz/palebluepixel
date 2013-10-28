@@ -1,7 +1,6 @@
 Title: Introducing AEJS
 Date: 2011-09-20 22:27:50
 Tags: aejs, html5, javascript, amiga
-Category: blog
 
 Introducing AEJS, an Amiga emulator written in JavaScript.  Wait, wording it like that makes it sound like it's finished.  It isn't.  It won't be for a long time.  AEJS is just a hobby, and will never hold a candle to UAE.
 

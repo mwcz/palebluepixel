@@ -1,7 +1,6 @@
 Title: The N9, QR-Codes, and KeePassX
 Date: 2012-01-08 22:27:50
 Tags: general, keepass, n9
-Category: blog
 
 *Update: I happened across a [KeePass
 plugin](http://keepass.info/plugins.html#qrcodegen) (not the same as KeePassX)

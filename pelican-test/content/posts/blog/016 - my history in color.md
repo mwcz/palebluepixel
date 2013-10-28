@@ -2,7 +2,6 @@ Title: My History in Color
 Date: 2012-01-16 22:15:50
 Tags: html5, javascript, color
 Status: draft
-Category: blog
 
 THIS IS A POST ABOUT THE COLOR PALETTE TOOLS OF MY FORMER AND CURRENT PHOTO SITES
 UNFINISHED

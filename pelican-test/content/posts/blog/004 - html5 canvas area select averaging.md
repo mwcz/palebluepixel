@@ -1,7 +1,6 @@
 Title: HTML5 canvas area selection averaging
 Date: 2011-11-16 18:25:00
 Tags: html5, canvas, color, jsimage, colorpal
-Category: blog
 
 This is a demo from late 2009.  It's an extension of the single-pixel [eyedropper](/blog/2011/11/16/html5-canvas-eyedropper/) I wrote previously.
 

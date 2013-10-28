@@ -1,7 +1,6 @@
 Title: Canvas Indexed Color
 Date: 2012-07-03 23:44:50
 Tags: html5, canvas, color
-Category: blog
 
 [Canvas Indexed Color demo](/projects/canvas_indexed_color "Canvas Indexed Color demo")
 

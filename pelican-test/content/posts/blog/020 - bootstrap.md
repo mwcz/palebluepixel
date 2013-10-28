@@ -2,7 +2,6 @@ Title: Bootstrap &amp; Blogofile
 Date: 2012-07-03 22:44:50
 Tags: bootstrap
 Slug: bootstrap---blogofile
-Category: blog
 
 Surprise.
 

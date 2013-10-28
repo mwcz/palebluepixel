@@ -2,7 +2,6 @@ Title: HTML5 Canvas eyedropper
 Date: 2011-11-16 15:25:00
 Tags: html5, canvas, color, colorpal
 Summary: An HTML5 Canvas eyedropper.
-Category: blog
 
 <style type="text/css"> 
     canvas { margin: 0 auto; }

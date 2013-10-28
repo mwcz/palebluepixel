@@ -1,7 +1,6 @@
 Title: ColorPal Output Update
 Date: 2012-07-30 22:30:00
 Tags: html5, javascript, color
-Category: blog
 
 Hi pals.
 

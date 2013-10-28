@@ -1,7 +1,6 @@
 Title: HTML5 canvas RGB histogram
 Date: 2011-11-16 17:25:00
 Tags: html5, canvas, color, jsimage
-Category: blog
 
 This is yet another demo from around 2009.  It's simple enough.  Click a button, draw an unbinned RGB histogram of the source image.
 

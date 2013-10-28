@@ -1,7 +1,6 @@
 Title: Bouncey - canvas physics
 Date: 2011-11-17 21:25:00
 Tags: html5, canvas, physics, javascript, bouncey
-Category: blog
 
 This is Bouncey.  It's a simple physics demo I wrote in early/mid 2011, with some contributions and bugfixes from my good friend Greg Gardner.
 
