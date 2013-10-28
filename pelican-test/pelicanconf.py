@@ -8,7 +8,7 @@ from os import environ
 #######################################################################
 
 AUTHOR                = u'mwcz'
-SITENAME              = u'mwcz.org - a blog'
+SITENAME              = u'clayto.com'
 TIMEZONE              = 'America/New_York'
 DEFAULT_LANG          = u'en'
 PDF_GENERATOR         = False
@@ -20,6 +20,14 @@ DISPLAY_PAGES_ON_MENU = True
 THEME                 = environ["HOME"] + "/workspace/pelican-bootstrap3" # GREAT!
 #THEME                 = environ["HOME"] + "/workspace/pelican-themes/pelican-cait" # GOOD!
 #THEME                 = environ["HOME"] + "/workspace/pelican-themes/tuxlite_tbs" # GOOD!
+
+DISPLAY_PAGES_ON_MENU = False
+
+TEMPLATE_PAGES = {
+        'projects.html' : 'projects/index.html'
+        }
+
+USE_FOLDER_AS_CATEGORY = True
 
 #######################################
 #  pelican-bootstrap3 theme settings  #
@@ -51,7 +59,7 @@ FEED_DOMAIN = 'http://localhost:8000'
 #DEFAULT_METADATA = (('yeah', 'it is'),)
 
 # static paths will be copied under the same name
-STATIC_PATHS = ["static", ]
+STATIC_PATHS = ["static", "projects"]
 
 # A list of files to copy from the source to the destination
 #FILES_TO_COPY = (('extra/robots.txt', 'robots.txt'),)
@@ -76,8 +84,8 @@ ARTICLE_DIR           = 'posts'
 FEED_ALL_RSS          = 'feeds/all.rss.xml'
 CATEGORY_FEED_RSS     = 'feeds/%s.rss.xml'
 
-ARTICLE_URL           = '{date:%Y}/{date:%m}/{date:%d}/{slug}/'
-ARTICLE_SAVE_AS       = '{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+ARTICLE_URL           = '{category}/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+ARTICLE_SAVE_AS       = '{category}/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
 PAGE_DIR              = 'pages'
 PAGE_URL              = '{slug}/'
@@ -100,8 +108,8 @@ CATEGORIES_URL          = 'categories/'
 CATEGORIES_SAVE_AS      = 'categories/index.html'
 
 # Category paths
-CATEGORY_URL          = 'category/{slug}/'
-CATEGORY_SAVE_AS      = 'category/{slug}/index.html'
+CATEGORY_URL          = '{slug}/'
+CATEGORY_SAVE_AS      = '{slug}/index.html'
 
 # Disable author page since I'm the only author
 AUTHOR_URL            = 'author/{slug}/'
