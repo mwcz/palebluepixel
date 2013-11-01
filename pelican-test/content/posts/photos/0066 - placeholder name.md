@@ -1,4 +1,4 @@
-Title: photo 66
+Title: One by One
 Date: 2013-07-22 22:16
 Tags: photo
 Template: photo

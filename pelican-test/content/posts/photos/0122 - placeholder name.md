@@ -1,4 +1,4 @@
-Title: photo 122
+Title: Equals
 Date: 2013-07-22 22:16
 Tags: photo
 Template: photo

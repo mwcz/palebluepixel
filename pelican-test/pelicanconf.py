@@ -24,7 +24,8 @@ THEME                 = environ["HOME"] + "/workspace/pelican-bootstrap3" # GREA
 DISPLAY_PAGES_ON_MENU = False
 
 TEMPLATE_PAGES = {
-        'projects.html' : 'projects/index.html'
+        'projects.html'           : 'projects/index.html',
+        'posts/photos/index.html' : 'photos/index.html'
         }
 
 USE_FOLDER_AS_CATEGORY = True

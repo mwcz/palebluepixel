@@ -1,4 +1,4 @@
-Title: photo 19
+Title: Not a Dog
 Date: 2013-07-22 22:16
 Tags: photo
 Template: photo

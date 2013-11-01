@@ -1,4 +1,4 @@
-Title: photo 6
+Title: Dying Day
 Date: 2013-07-22 22:16
 Tags: photo
 Template: photo
