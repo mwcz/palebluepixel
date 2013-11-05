@@ -24,8 +24,8 @@ THEME                 = environ["HOME"] + "/workspace/pelican-bootstrap3" # GREA
 DISPLAY_PAGES_ON_MENU = False
 
 TEMPLATE_PAGES = {
-        'projects.html'           : 'projects/index.html',
-        'posts/photos/index.html' : 'photos/index.html'
+        'posts/projects/index.html' : 'projects/index.html',
+        #'posts/photos/index.html'   : 'photos/index.html'
         }
 
 USE_FOLDER_AS_CATEGORY = True
@@ -41,6 +41,13 @@ GITHUB_SKIP_FORK = True
 
 # use a bootstrap theme from http://bootswatch.com/
 BOOTSTRAP_THEME = 'flatly'
+
+#######################################################################
+#                           PLUGIN SETTINGS                           #
+#######################################################################
+
+PLUGIN_PATH = '../../pelican-plugins'
+PLUGINS = ['neighbors']
 
 #######################################################################
 #                            HOST SETTINGS                            #
@@ -85,8 +92,8 @@ ARTICLE_DIR           = 'posts'
 FEED_ALL_RSS          = 'feeds/all.rss.xml'
 CATEGORY_FEED_RSS     = 'feeds/%s.rss.xml'
 
-ARTICLE_URL           = '{category}/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
-ARTICLE_SAVE_AS       = '{category}/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+ARTICLE_URL           = '{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+ARTICLE_SAVE_AS       = '{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
 PAGE_DIR              = 'pages'
 PAGE_URL              = '{slug}/'

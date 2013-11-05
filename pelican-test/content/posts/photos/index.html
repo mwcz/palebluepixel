@@ -3,14 +3,14 @@
     {% if articles %}
         {% for article in (articles_page.object_list if articles_page else articles) %}
         FIGURE OUT HOW TO KEEP BLOG POSTS OUT OF THIS PAGE
-            <article class="col-lg-3">
+            <article class="col-lg-12">
                 {#
                 <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
                 #}
                     {# Uncomment if you want to show comment counts #}
                     {#{% include 'includes/comment_count.html' %}#}
                 <a href="{{ SITEURL }}/{{ article.url }}">
-                    <img class="img-responsive" src="{{ SITEURL }}/static/images/photos/{{ article.photonum }}/small.jpg" alt="{{ article.title }}" />
+                    <img class="img-responsive" src="{{ SITEURL }}/static/images/photos/{{ article.photonum }}/big.jpg" alt="{{ article.title }}" />
                 </a>
             </article>
         {% endfor %}

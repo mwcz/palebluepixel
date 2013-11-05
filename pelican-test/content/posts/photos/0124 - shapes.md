@@ -1,7 +1,7 @@
-Title: Nebulous
+Title: Shapes
 Date: 2013-07-22 22:16
 Tags: photo
 Template: photo
-Palette: grey
-PhotoNum: 1
+Palette: white
+PhotoNum: 124
 ShootDate: SHOOTDATE
