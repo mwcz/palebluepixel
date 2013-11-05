@@ -1,7 +1,7 @@
 Title: Nebulous
-Date: 2013-07-22 22:16
+Date: 2006-07-13
 Tags: photo
 Template: photo
 Palette: grey
 PhotoNum: 1
-ShootDate: SHOOTDATE
+ShootDate: 2006-07-13

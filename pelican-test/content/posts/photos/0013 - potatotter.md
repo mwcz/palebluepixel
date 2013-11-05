@@ -1,7 +1,7 @@
 Title: Potatotter
-Date: 2013-07-22 22:16
+Date: 2006-12-09
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 13
-ShootDate: SHOOTDATE
+ShootDate: 2006-12-09

@@ -1,7 +1,7 @@
 Title: Electrons
-Date: 2013-07-22 22:16
+Date: 2006-11-19
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 12
-ShootDate: SHOOTDATE
+ShootDate: 2006-11-19

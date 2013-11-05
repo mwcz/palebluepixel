@@ -1,7 +1,7 @@
 Title: Penny Halo
-Date: 2013-07-22 22:16
+Date: 2012-06-25
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 87
-ShootDate: SHOOTDATE
+ShootDate: 2012-06-25

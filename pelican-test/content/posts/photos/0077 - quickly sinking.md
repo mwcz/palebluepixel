@@ -1,7 +1,7 @@
 Title: Quickly Sinking
-Date: 2013-07-22 22:16
+Date: 2012-05-18
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 77
-ShootDate: SHOOTDATE
+ShootDate: 2012-05-18

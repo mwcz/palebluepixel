@@ -1,7 +1,7 @@
 Title: Near a Curtain of Blue
-Date: 2013-07-22 22:16
+Date: 2011-05-16
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 61
-ShootDate: SHOOTDATE
+ShootDate: 2011-05-16

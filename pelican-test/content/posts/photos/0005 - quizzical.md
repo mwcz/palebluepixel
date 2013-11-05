@@ -1,7 +1,7 @@
 Title: Quizzical
-Date: 2013-07-22 22:16
+Date: 2006-07-21
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 5
-ShootDate: SHOOTDATE
+ShootDate: 2006-07-21

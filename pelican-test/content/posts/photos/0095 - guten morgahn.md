@@ -1,7 +1,7 @@
 Title: Guten Morgahn
-Date: 2013-07-22 22:16
+Date: 2012-07-17
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 95
-ShootDate: SHOOTDATE
+ShootDate: 2012-07-17

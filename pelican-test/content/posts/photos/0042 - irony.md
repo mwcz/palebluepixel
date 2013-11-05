@@ -1,7 +1,7 @@
 Title: Irony
-Date: 2013-07-22 22:16
+Date: 2011-04-04
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 42
-ShootDate: SHOOTDATE
+ShootDate: 2011-04-04

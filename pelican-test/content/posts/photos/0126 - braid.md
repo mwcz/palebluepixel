@@ -1,7 +1,7 @@
 Title: Braid
-Date: 2013-07-22 22:16
+Date: 2012-09-17
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 126
-ShootDate: SHOOTDATE
+ShootDate: 2012-09-17

@@ -1,7 +1,7 @@
 Title: Thrash
-Date: 2013-07-22 22:16
+Date: 2007-03-04
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 15
-ShootDate: SHOOTDATE
+ShootDate: 2007-03-04

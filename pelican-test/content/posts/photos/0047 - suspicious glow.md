@@ -1,7 +1,7 @@
 Title: Suspicious Glow
-Date: 2013-07-22 22:16
+Date: 2011-04-13
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 47
-ShootDate: SHOOTDATE
+ShootDate: 2011-04-13

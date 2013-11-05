@@ -1,7 +1,7 @@
 Title: This is the Way of the Modern World
-Date: 2013-07-22 22:16
+Date: 2011-05-13
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 60
-ShootDate: SHOOTDATE
+ShootDate: 2011-05-13

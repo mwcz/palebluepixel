@@ -1,7 +1,7 @@
 Title: Gallagher
-Date: 2013-07-22 22:16
+Date: 2011-03-18
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 35
-ShootDate: SHOOTDATE
+ShootDate: 2011-03-18

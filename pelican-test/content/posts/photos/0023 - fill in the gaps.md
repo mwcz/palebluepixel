@@ -1,7 +1,7 @@
 Title: Fill in the Gaps
-Date: 2013-07-22 22:16
+Date: 2008-07-20
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 23
-ShootDate: SHOOTDATE
+ShootDate: 2008-07-20

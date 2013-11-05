@@ -1,7 +1,7 @@
 Title: Casper
-Date: 2013-07-22 22:16
+Date: 2012-08-01
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 104
-ShootDate: SHOOTDATE
+ShootDate: 2012-08-01

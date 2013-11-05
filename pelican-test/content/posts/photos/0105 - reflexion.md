@@ -1,7 +1,7 @@
 Title: Reflexion
-Date: 2013-07-22 22:16
+Date: 2012-08-02
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 105
-ShootDate: SHOOTDATE
+ShootDate: 2012-08-02

@@ -1,7 +1,7 @@
 Title: Future?
-Date: 2013-07-22 22:16
+Date: 2011-06-13
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 73
-ShootDate: SHOOTDATE
+ShootDate: 2011-06-13

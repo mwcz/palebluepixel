@@ -1,7 +1,7 @@
 Title: Beguile
-Date: 2013-07-22 22:16
+Date: 2007-03-05
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 16
-ShootDate: SHOOTDATE
+ShootDate: 2007-03-05

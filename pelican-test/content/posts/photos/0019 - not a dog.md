@@ -1,7 +1,7 @@
 Title: Not a Dog
-Date: 2013-07-22 22:16
+Date: 2007-04-05
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 19
-ShootDate: SHOOTDATE
+ShootDate: 2007-04-05

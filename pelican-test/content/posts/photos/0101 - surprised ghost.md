@@ -1,7 +1,7 @@
 Title: Surprised Ghost
-Date: 2013-07-22 22:16
+Date: 2012-07-29
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 101
-ShootDate: SHOOTDATE
+ShootDate: 2012-07-29

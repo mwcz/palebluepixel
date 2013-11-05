@@ -1,7 +1,7 @@
 Title: Melody
-Date: 2013-07-22 22:16
+Date: 2011-04-27
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 53
-ShootDate: SHOOTDATE
+ShootDate: 2011-04-27

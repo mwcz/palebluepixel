@@ -1,7 +1,7 @@
 Title: Declutter
-Date: 2013-07-22 22:16
+Date: 2012-07-08
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 89
-ShootDate: SHOOTDATE
+ShootDate: 2012-07-08

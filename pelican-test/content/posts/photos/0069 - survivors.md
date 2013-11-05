@@ -1,7 +1,7 @@
 Title: Survivors
-Date: 2013-07-22 22:16
+Date: 2011-06-03
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 69
-ShootDate: SHOOTDATE
+ShootDate: 2011-06-03

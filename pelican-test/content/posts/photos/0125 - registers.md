@@ -1,7 +1,7 @@
 Title: Registers
-Date: 2013-07-22 22:16
+Date: 2012-09-14
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 125
-ShootDate: SHOOTDATE
+ShootDate: 2012-09-14

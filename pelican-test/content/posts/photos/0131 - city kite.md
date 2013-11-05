@@ -1,7 +1,7 @@
 Title: City Kite
-Date: 2013-07-22 22:16
+Date: 
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 131
-ShootDate: SHOOTDATE
+ShootDate: 

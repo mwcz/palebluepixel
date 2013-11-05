@@ -1,7 +1,7 @@
 Title: Or is it?
-Date: 2013-07-22 22:16
+Date: 2011-04-15
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 48
-ShootDate: SHOOTDATE
+ShootDate: 2011-04-15

@@ -1,7 +1,7 @@
 Title: The Day Races
-Date: 2013-07-22 22:16
+Date: 2011-06-01
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 68
-ShootDate: SHOOTDATE
+ShootDate: 2011-06-01

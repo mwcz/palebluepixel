@@ -1,7 +1,7 @@
 Title: Grizzled
-Date: 2013-07-22 22:16
+Date: 2007-02-17
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 14
-ShootDate: SHOOTDATE
+ShootDate: 2007-02-17

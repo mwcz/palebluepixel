@@ -1,7 +1,7 @@
 Title: One by One
-Date: 2013-07-22 22:16
+Date: 2011-05-27
 Tags: photo
 Template: photo
 Palette: white
 PhotoNum: 66
-ShootDate: SHOOTDATE
+ShootDate: 2011-05-27
