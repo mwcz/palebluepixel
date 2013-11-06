@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>clayto.com</title><link>http://localhost:8000/</link><description></description><atom:link href="http://localhost:8000/feeds/projects.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 21 Oct 2011 00:00:00 -0400</lastBuildDate><item><title>ColorPal</title><link>http://localhost:8000/2011/10/21/colorpal/</link><description>&lt;div id="cp-repo"&gt;&lt;/div&gt;
+
+&lt;script src="/static/js/repo.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+    $(function() {
+        $('#cp-repo').repo({
+            user: 'mwcz',
+            name: 'ColorPal'
+        });
+    });
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Fri, 21 Oct 2011 00:00:00 -0400</pubDate><guid>tag:localhost:8000,2011-10-21:2011/10/21/colorpal/</guid><category>html5</category><category>javascript</category><category>color</category></item></channel></rss>

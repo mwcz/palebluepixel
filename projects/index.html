@@ -3,7 +3,7 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title>Projects</title>
+    <title>clayto.com</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -11,22 +11,23 @@
 
     <!-- Open Graph tags -->
 
-            <meta property="og:type" content="article"/>
-            <meta property="og:title" content="Projects"/>
-            <meta property="og:url" content="http://beta.mwcz.org/projects/"/>
+            <meta property="og:type" content="website"/>
+            <meta property="og:title" content="clayto.com"/>
+            <meta property="og:url" content="http://localhost:8000"/>
+            <meta property="og:description" content="clayto.com"/>
 
-    <!-- Bootstrap -->
-        <link rel="stylesheet" href="http://beta.mwcz.org/theme/css/bootstrap.flatly.min.css" type="text/css"/>
-    <link href="http://beta.mwcz.org/theme/css/font-awesome.min.css" rel="stylesheet">
-    <link href="http://beta.mwcz.org/theme/css/pygments.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://beta.mwcz.org/theme/css/style.css" type="text/css"/>
+
+    <link href="http://localhost:8000/theme/css/styles.min.css?72a8cc2c" rel="stylesheet">
+
+
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="http://code.jquery.com/jquery.js"></script>
 
-        <link href="http://beta.mwcz.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="mwcz.org - a blog ATOM Feed"/>
-        <link href="http://beta.mwcz.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
-              title="mwcz.org - a blog RSS Feed"/>
+        <link href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="clayto.com ATOM Feed"/>
+        <link href="http://localhost:8000/feeds/rss.xml" type="application/atom+xml" rel="alternate"
+              title="clayto.com RSS Feed"/>
+
 
 </head>
 <body>
@@ -39,20 +40,22 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="http://beta.mwcz.org" class="navbar-brand">mwcz.org - a blog</a>
+            <a href="http://localhost:8000" class="navbar-brand">clayto.com</a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                        <li><a href="http://beta.mwcz.org/projects/">Projects</a></li>
                         <li >
-                            <a href="http://beta.mwcz.org/category/blog/">blog</a>
+                            <a href="http://localhost:8000/blog/">Blog</a>
                         </li>
                         <li >
-                            <a href="http://beta.mwcz.org/category/photos/">photos</a>
+                            <a href="http://localhost:8000/photos/">Photos</a>
+                        </li>
+                        <li >
+                            <a href="http://localhost:8000/projects/">Projects</a>
                         </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://beta.mwcz.org/archives/"><i class="icon-th-list"></i>Archives</a></li>
+                <li><a href="http://localhost:8000/archives/"><i class="icon-th-list"></i>Archives</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -61,217 +64,161 @@
 <!-- /.navbar -->
 <div class="container">
     <div class="row">
-        <div class="col-lg-9">
-    <section id="content" class="body">
-        <h1 class="entry-title">Projects</h1>
-        <div class="entry-content">
-            <div class="highlight"><pre><span class="n">ColorPal</span>
-<span class="n">mwcz</span><span class="p">.</span><span class="n">org</span>
-<span class="n">median</span><span class="o">-</span><span class="n">cut</span><span class="p">.</span><span class="n">js</span>
-<span class="n">AEJS</span>
-<span class="n">clayto</span><span class="p">.</span><span class="n">com</span>
-<span class="n">Canvas</span> <span class="n">Indexed</span> <span class="n">Color</span>
-<span class="n">Bouncey</span>
-<span class="n">JSImage</span>
-</pre></div>
+        <div class="col-lg-12">
+
+<div class="clayto-project-list">
+
+    
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+    <a href="/projects/2011/10/21/colorpal">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <img src="/static/images/projects/icon_colorpal.png" alt="ColorPal icon" class="img-responsive" />
+            </div>
+            <div class="panel-body">
+                <h3>ColorPal</h3>
+                <p>Drag an image. Get a color palette instantly. A friendly HTML5 app.</p>
+            </div>
         </div>
-    </section>
+</div>
+
+
+    
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+    <a href="/projects/mediancut">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <img src="/static/images/projects/icon_mediancut.png" alt="median-cut.js icon" class="img-responsive" />
+            </div>
+            <div class="panel-body">
+                <h3>median-cut.js</h3>
+                <p>An implementation of the median-cut algorithm in JavaScript. Powers ColorPal's palette extraction.</p>
+            </div>
         </div>
-        <div class="col-lg-3 well well-sm" id="sidebar">
-<aside>
-    <section>
-        <ul class="list-group list-group-flush">
-                <li class="list-group-item"><h4><i class="icon-home icon-large"></i>Social</h4></li>
-                    <li class="list-group-item"><a href="https://github.com/mwcz"><i
-                            class="icon-GitHub-sign icon-large"></i>GitHub
-                    </a></li>
-                    <li class="list-group-item"><a href="https://twitter.com/mwcz"><i
-                            class="icon-Twitter-sign icon-large"></i>Twitter
-                    </a></li>
+</div>
 
 
-
-            <li class="list-group-item"><a href="http://beta.mwcz.org/tags.html"><h4><i class="icon-tags icon-large"></i>Tags</h4></a></li>
-                <li class="list-group-item tag-0">
-                    <a href="http://beta.mwcz.org/tag/html5/">
-                        html5
-                    </a>
-                </li>
-                <li class="list-group-item tag-1">
-                    <a href="http://beta.mwcz.org/tag/canvas/">
-                        canvas
-                    </a>
-                </li>
-                <li class="list-group-item tag-1">
-                    <a href="http://beta.mwcz.org/tag/javascript/">
-                        javascript
-                    </a>
-                </li>
-                <li class="list-group-item tag-1">
-                    <a href="http://beta.mwcz.org/tag/color/">
-                        color
-                    </a>
-                </li>
-                <li class="list-group-item tag-2">
-                    <a href="http://beta.mwcz.org/tag/amiga/">
-                        amiga
-                    </a>
-                </li>
-                <li class="list-group-item tag-2">
-                    <a href="http://beta.mwcz.org/tag/jsimage/">
-                        jsimage
-                    </a>
-                </li>
-                <li class="list-group-item tag-2">
-                    <a href="http://beta.mwcz.org/tag/aejs/">
-                        aejs
-                    </a>
-                </li>
-                <li class="list-group-item tag-2">
-                    <a href="http://beta.mwcz.org/tag/colorpal/">
-                        colorpal
-                    </a>
-                </li>
-                <li class="list-group-item tag-3">
-                    <a href="http://beta.mwcz.org/tag/physics/">
-                        physics
-                    </a>
-                </li>
-                <li class="list-group-item tag-3">
-                    <a href="http://beta.mwcz.org/tag/bouncey/">
-                        bouncey
-                    </a>
-                </li>
-                <li class="list-group-item tag-3">
-                    <a href="http://beta.mwcz.org/tag/general/">
-                        general
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://beta.mwcz.org/tag/stackoverflow/">
-                        stackoverflow
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://beta.mwcz.org/tag/vim/">
-                        vim
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://beta.mwcz.org/tag/linux/">
-                        linux
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://beta.mwcz.org/tag/bash/">
-                        bash
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://beta.mwcz.org/tag/bootstrap/">
-                        bootstrap
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://beta.mwcz.org/tag/n9/">
-                        n9
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://beta.mwcz.org/tag/typography/">
-                        typography
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://beta.mwcz.org/tag/python/">
-                        python
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://beta.mwcz.org/tag/test/">
-                        test
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://beta.mwcz.org/tag/image-processing/">
-                        image processing
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://beta.mwcz.org/tag/git/">
-                        git
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://beta.mwcz.org/tag/testing/">
-                        testing
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://beta.mwcz.org/tag/css3/">
-                        css3
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://beta.mwcz.org/tag/mwczorg/">
-                        mwcz.org
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://beta.mwcz.org/tag/django/">
-                        django
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://beta.mwcz.org/tag/keepass/">
-                        keepass
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://beta.mwcz.org/tag/photo/">
-                        photo
-                    </a>
-                </li>
-        </ul>
-    </section>
-
-
-    <section>
-    <ul class="list-group list-group-flush">
-    <li class="list-group-item"><h4><i class="icon-github icon-large"></i>GitHub Repos</h4></li>
-        <div id="gh_repos">
-            <p class="list-group-item">Status updating...</p>
+    
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+    <a href="/projects/aejs">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <img src="/static/images/projects/icon_aejs.png" alt="AEJS icon" class="img-responsive" />
+            </div>
+            <div class="panel-body">
+                <h3>AEJS</h3>
+                <p>An early-stages Amiga 500 emulator in JavaScript and HTML5.</p>
+            </div>
         </div>
-    </ul>
-        <script type="text/javascript">
-            $(document).ready(function () {
-                if (!window.jXHR) {
-                    var jxhr = document.createElement('script');
-                    jxhr.type = 'text/javascript';
-                    jxhr.src = 'http://beta.mwcz.org/theme/js/jXHR.js';
-                    var s = document.getElementsByTagName('script')[0];
-                    s.parentNode.insertBefore(jxhr, s);
-                }
+</div>
 
-                github.showRepos({
-                    user: 'mwcz',
-                    count: 5,
-                    skip_forks: true,
-                    target: '#gh_repos'
-                });
-            });
-        </script>
-        <script src="http://beta.mwcz.org/theme/js/github.js" type="text/javascript"></script>
-    </section>
-</aside>        </div>
+
+    
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+    <a href="/projects/bouncey">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <img src="/static/images/projects/icon_bouncey.png" alt="Bouncey icon" class="img-responsive" />
+            </div>
+            <div class="panel-body">
+                <h3>Bouncey</h3>
+                <p>A relaxing JavaScript + HTML5 canvas physics simulator. Watch and be soothed.</p>
+            </div>
+        </div>
+</div>
+
+
+    
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+    <a href="/projects/canvas_indexed_color">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <img src="/static/images/projects/icon_cic.png" alt="Canvas Indexed Color icon" class="img-responsive" />
+            </div>
+            <div class="panel-body">
+                <h3>Canvas Indexed Color</h3>
+                <p>A tech demo in HTML5 canvas demonstrating an indexed-color-like effect.</p>
+            </div>
+        </div>
+</div>
+
+
+    
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+    <a href="/projects/jsimage">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <img src="/static/images/projects/icon_jsimage.png" alt="JSImage icon" class="img-responsive" />
+            </div>
+            <div class="panel-body">
+                <h3>JSImage</h3>
+                <p>A JavaScript library for basic image operations.</p>
+            </div>
+        </div>
+</div>
+
+
+    
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+    <a href="/projects/clayto">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <img src="/static/images/projects/icon_clayto.png" alt="clayto.com icon" class="img-responsive" />
+            </div>
+            <div class="panel-body">
+                <h3>clayto.com</h3>
+                <p>My photography website and tech blog.</p>
+            </div>
+        </div>
+</div>
+
+
+    
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+    <a href="/projects/mwcz">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <img src="/static/images/projects/icon_mwcz.png" alt="mwcz.org icon" class="img-responsive" />
+            </div>
+            <div class="panel-body">
+                <h3>mwcz.org</h3>
+                <p>My old tech blog. It has since been merged with my photography site.</p>
+            </div>
+        </div>
+</div>
+
+
+</div>
+
+<script type="text/javascript" charset="utf-8">
+    function equalize_project_caption_heights() {
+
+        // Get a jQuery ref to the thumbnail elements, find the max height...
+        var $projects  = $('.clayto-project-list .panel-body'),
+            max_height = Math.max.apply(this, $projects.map( function () { return $(this).height() }) );
+
+        // And set them all to the max height.
+        $projects.height(max_height);
+
+    }
+    $(function () {
+        equalize_project_caption_heights();
+        // TODO: sometimes height is wrong after resizing.  this fixed it but is too slow.  revisit later.
+        // $(window).resize(function () {
+        //     equalize_project_caption_heights();
+        // });
+    });
+</script>
+
+        </div>
     </div>
 </div>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="http://beta.mwcz.org/theme/js/bootstrap.min.js"></script>
+<script src="http://localhost:8000/theme/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="http://beta.mwcz.org/theme/js/respond.min.js"></script>
+<script src="http://localhost:8000/theme/js/respond.min.js"></script>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_shortname = 'mwcz'; // required: replace example with your forum shortname
