@@ -6,13 +6,17 @@ body {
     max-width: 930px;
   }
 }
-.clayto-photo-list img {
-  width: 100%;
+.clayto-project-list *,
+.clayto-project-list *:hover {
+  text-decoration: none;
+  color: #2c3e50;
 }
 .clayto-project-list img {
   margin: 0 auto;
 }
-.clayto-project-list h3 {
+.clayto-project-list h3,
+.clayto-project-list h3:hover {
+  color: #18bc9c;
   margin-top: 0;
 }
 .clayto-project-list .panel-body p:last-child {
@@ -26,4 +30,9 @@ body {
 }
 .clayto-project-list .panel-footer a {
   margin-right: 4px;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }

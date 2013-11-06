@@ -1,3 +1,0 @@
-Vbody {\u000a  font-family: 'Lato', sans-serif;\u000a}\u000a@media (min-width: 768px) {\u000a  .container {\u000a    max-width: 930px;\u000a  }\u000a}\u000a.clayto-photo-list img {\u000a  width: 100%;\u000a}\u000a.clayto-project-list img {\u000a  margin: 0 auto;\u000a}\u000a.clayto-project-list h3 {\u000a  margin-top: 0;\u000a}\u000a.clayto-project-list .panel-body p:last-child {\u000a  margin-bottom: 0;\u000a}\u000a.clayto-project-list .panel-footer {\u000a  padding: 15px;\u000a}\u000a.clayto-project-list .panel-footer p {\u000a  margin: 0;\u000a}\u000a.clayto-project-list .panel-footer a {\u000a  margin-right: 4px;\u000a}\u000a
-p1
-.
