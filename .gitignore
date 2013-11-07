@@ -1,6 +1,5 @@
-blog/_site/*
-pelican-test/Makefile
-pelican-test/srv.pid
-pelican-test/pelican.pid
+Makefile
+srv.pid
+pelican.pid
 *.pyc
-pelican-test/output/*
+output/*
