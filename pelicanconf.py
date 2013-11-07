@@ -15,11 +15,7 @@ PDF_GENERATOR         = False
 DEFAULT_PAGINATION    = 6
 MARKUP                = ('md','mkd','markdown')
 DISPLAY_PAGES_ON_MENU = True
-#THEME                 = environ["HOME"] + "/workspace/pelican-themes/clayto"
-#THEME                 = environ["HOME"] + "/workspace/pelican-themes/gum" # GOOD!
 THEME                 = environ["HOME"] + "/workspace/pelican-bootstrap3" # GREAT!
-#THEME                 = environ["HOME"] + "/workspace/pelican-themes/pelican-cait" # GOOD!
-#THEME                 = environ["HOME"] + "/workspace/pelican-themes/tuxlite_tbs" # GOOD!
 
 DISPLAY_PAGES_ON_MENU = False
 
@@ -50,7 +46,7 @@ BOOTSTRAP_THEME = 'flatly'
 #                           PLUGIN SETTINGS                           #
 #######################################################################
 
-PLUGIN_PATH = '../../../workspace/pelican-plugins'
+PLUGIN_PATH = environ["HOME"] + '/workspace/pelican-plugins'
 PLUGINS = ['neighbors', 'assets']
 
 # assets plugin settings

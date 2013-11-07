@@ -15,11 +15,7 @@ PDF_GENERATOR         = False
 DEFAULT_PAGINATION    = 6
 MARKUP                = ('md','mkd','markdown')
 DISPLAY_PAGES_ON_MENU = True
-#THEME                 = environ["HOME"] + "/workspace/pelican-themes/clayto"
-#THEME                 = environ["HOME"] + "/workspace/pelican-themes/gum" # GOOD!
 THEME                 = environ["HOME"] + "/workspace/pelican-bootstrap3" # GREAT!
-#THEME                 = environ["HOME"] + "/workspace/pelican-themes/pelican-cait" # GOOD!
-#THEME                 = environ["HOME"] + "/workspace/pelican-themes/tuxlite_tbs" # GOOD!
 
 DISPLAY_PAGES_ON_MENU = False
 
@@ -29,6 +25,10 @@ TEMPLATE_PAGES = {
         }
 
 USE_FOLDER_AS_CATEGORY = True
+
+DATE_FORMATS = {
+        'en': '%Y-%m-%d',
+        }
 
 #######################################
 #  pelican-bootstrap3 theme settings  #
@@ -46,7 +46,7 @@ BOOTSTRAP_THEME = 'flatly'
 #                           PLUGIN SETTINGS                           #
 #######################################################################
 
-PLUGIN_PATH = '../../../workspace/pelican-plugins'
+PLUGIN_PATH = environ["HOME"] + '/workspace/pelican-plugins'
 PLUGINS = ['neighbors', 'assets']
 
 # assets plugin settings
@@ -118,8 +118,8 @@ ARTICLE_DIR           = 'posts'
 FEED_ALL_RSS          = 'feeds/all.rss.xml'
 CATEGORY_FEED_RSS     = 'feeds/%s.rss.xml'
 
-ARTICLE_URL           = '{date:%Y}/{date:%m}/{date:%d}/{slug}/'
-ARTICLE_SAVE_AS       = '{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+ARTICLE_URL           = '{category}/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+ARTICLE_SAVE_AS       = '{category}/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
 PAGE_DIR              = 'pages'
 PAGE_URL              = '{slug}/'
