@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>clayto.com</title><link href="http://beta.mwcz.org/" rel="alternate"></link><link href="http://beta.mwcz.org/feeds/projects.atom.xml" rel="self"></link><id>http://beta.mwcz.org/</id><updated>2011-10-21T00:00:00-04:00</updated><entry><title>ColorPal</title><link href="http://beta.mwcz.org/2011/10/21/colorpal/" rel="alternate"></link><updated>2011-10-21T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:beta.mwcz.org,2011-10-21:2011/10/21/colorpal/</id><summary type="html">&lt;div id="cp-repo"&gt;&lt;/div&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>clayto.com</title><link href="http://beta.mwcz.org/" rel="alternate"></link><link href="http://beta.mwcz.org/feeds/projects.atom.xml" rel="self"></link><id>http://beta.mwcz.org/</id><updated>2011-10-21T00:00:00-04:00</updated><entry><title>ColorPal</title><link href="http://beta.mwcz.org/projects/2011/10/21/colorpal/" rel="alternate"></link><updated>2011-10-21T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:beta.mwcz.org,2011-10-21:projects/2011/10/21/colorpal/</id><summary type="html">&lt;div id="cp-repo"&gt;&lt;/div&gt;
 
 &lt;script src="/static/js/repo.js"&gt;&lt;/script&gt;
 

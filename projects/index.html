@@ -17,7 +17,7 @@
             <meta property="og:description" content="clayto.com"/>
 
 
-    <link href="http://beta.mwcz.org/theme/css/styles.min.css?38d47489" rel="stylesheet">
+    <link href="http://beta.mwcz.org/theme/css/styles.min.css?800219f0" rel="stylesheet">
 
 
     <!-- JavaScript plugins (requires jQuery) -->
@@ -80,6 +80,7 @@
                 <p>Drag an image. Get a color palette instantly. A friendly HTML5 app.</p>
             </div>
         </div>
+    </a>
 </div>
 
 
@@ -95,6 +96,7 @@
                 <p>An implementation of the median-cut algorithm in JavaScript. Powers ColorPal's palette extraction.</p>
             </div>
         </div>
+    </a>
 </div>
 
 
@@ -110,6 +112,7 @@
                 <p>An early-stages Amiga 500 emulator in JavaScript and HTML5.</p>
             </div>
         </div>
+    </a>
 </div>
 
 
@@ -125,6 +128,7 @@
                 <p>A relaxing JavaScript + HTML5 canvas physics simulator. Watch and be soothed.</p>
             </div>
         </div>
+    </a>
 </div>
 
 
@@ -140,6 +144,7 @@
                 <p>A tech demo in HTML5 canvas demonstrating an indexed-color-like effect.</p>
             </div>
         </div>
+    </a>
 </div>
 
 
@@ -155,6 +160,7 @@
                 <p>A JavaScript library for basic image operations.</p>
             </div>
         </div>
+    </a>
 </div>
 
 
@@ -170,6 +176,7 @@
                 <p>My photography website and tech blog.</p>
             </div>
         </div>
+    </a>
 </div>
 
 
@@ -185,30 +192,11 @@
                 <p>My old tech blog. It has since been merged with my photography site.</p>
             </div>
         </div>
+    </a>
 </div>
 
 
 </div>
-
-<script type="text/javascript" charset="utf-8">
-    function equalize_project_caption_heights() {
-
-        // Get a jQuery ref to the thumbnail elements, find the max height...
-        var $projects  = $('.clayto-project-list .panel-body'),
-            max_height = Math.max.apply(this, $projects.map( function () { return $(this).height() }) );
-
-        // And set them all to the max height.
-        $projects.height(max_height);
-
-    }
-    $(function () {
-        equalize_project_caption_heights();
-        // TODO: sometimes height is wrong after resizing.  this fixed it but is too slow.  revisit later.
-        // $(window).resize(function () {
-        //     equalize_project_caption_heights();
-        // });
-    });
-</script>
 
         </div>
     </div>
