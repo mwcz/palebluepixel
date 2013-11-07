@@ -55,24 +55,4 @@
         ) }}
 </div>
 
-<script type="text/javascript" charset="utf-8">
-    function equalize_project_caption_heights() {
-
-        // Get a jQuery ref to the thumbnail elements, find the max height...
-        var $projects  = $('.clayto-project-list .panel-body'),
-            max_height = Math.max.apply(this, $projects.map( function () { return $(this).height() }) );
-
-        // And set them all to the max height.
-        $projects.height(max_height);
-
-    }
-    $(function () {
-        equalize_project_caption_heights();
-        // TODO: sometimes height is wrong after resizing.  this fixed it but is too slow.  revisit later.
-        // $(window).resize(function () {
-        //     equalize_project_caption_heights();
-        // });
-    });
-</script>
-
 {% endblock %}

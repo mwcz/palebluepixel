@@ -30,6 +30,10 @@ TEMPLATE_PAGES = {
 
 USE_FOLDER_AS_CATEGORY = True
 
+DATE_FORMATS = {
+        'en': '%Y-%m-%d',
+        }
+
 #######################################
 #  pelican-bootstrap3 theme settings  #
 #######################################
@@ -46,8 +50,33 @@ BOOTSTRAP_THEME = 'flatly'
 #                           PLUGIN SETTINGS                           #
 #######################################################################
 
-PLUGIN_PATH = '../../pelican-plugins'
-PLUGINS = ['neighbors']
+PLUGIN_PATH = '../../../workspace/pelican-plugins'
+PLUGINS = ['neighbors', 'assets']
+
+# assets plugin settings
+
+ASSET_BUNDLES = (
+    #('scss', ['colors.scss', 'main.scss'], {'filters': 'pyscss'}),
+    ('less', 
+        [
+            'less/colors.less',
+            'less/clayto-styles.less',
+            ], 
+        {'filters': 'less'}
+        ),
+    ('css', 
+        [
+            'css/style.css', 
+            'css/bootstrap.%s.min.css' % BOOTSTRAP_THEME if BOOTSTRAP_THEME else 'css/bootstrap.min.css',
+            'css/font-awesome.min.css',
+            'css/html4css1.css',
+            'css/pygments.css',
+            'css/colors.css',
+            'css/clayto-styles.css',
+            ],
+        {'filters': 'cssmin'}
+        ),
+)
 
 #######################################################################
 #                            HOST SETTINGS                            #
@@ -92,8 +121,8 @@ ARTICLE_DIR           = 'posts'
 FEED_ALL_RSS          = 'feeds/all.rss.xml'
 CATEGORY_FEED_RSS     = 'feeds/%s.rss.xml'
 
-ARTICLE_URL           = '{date:%Y}/{date:%m}/{date:%d}/{slug}/'
-ARTICLE_SAVE_AS       = '{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+ARTICLE_URL           = '{category}/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+ARTICLE_SAVE_AS       = '{category}/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
 PAGE_DIR              = 'pages'
 PAGE_URL              = '{slug}/'

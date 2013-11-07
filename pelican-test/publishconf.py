@@ -8,7 +8,7 @@ from os import environ
 #######################################################################
 
 AUTHOR                = u'mwcz'
-SITENAME              = u'mwcz.org - a blog'
+SITENAME              = u'clayto.com'
 TIMEZONE              = 'America/New_York'
 DEFAULT_LANG          = u'en'
 PDF_GENERATOR         = False
@@ -20,6 +20,15 @@ DISPLAY_PAGES_ON_MENU = True
 THEME                 = environ["HOME"] + "/workspace/pelican-bootstrap3" # GREAT!
 #THEME                 = environ["HOME"] + "/workspace/pelican-themes/pelican-cait" # GOOD!
 #THEME                 = environ["HOME"] + "/workspace/pelican-themes/tuxlite_tbs" # GOOD!
+
+DISPLAY_PAGES_ON_MENU = False
+
+TEMPLATE_PAGES = {
+        'posts/projects/index.html' : 'projects/index.html',
+        #'posts/photos/index.html'   : 'photos/index.html'
+        }
+
+USE_FOLDER_AS_CATEGORY = True
 
 #######################################
 #  pelican-bootstrap3 theme settings  #
@@ -34,11 +43,43 @@ GITHUB_SKIP_FORK = True
 BOOTSTRAP_THEME = 'flatly'
 
 #######################################################################
+#                           PLUGIN SETTINGS                           #
+#######################################################################
+
+PLUGIN_PATH = '../../../workspace/pelican-plugins'
+PLUGINS = ['neighbors', 'assets']
+
+# assets plugin settings
+
+ASSET_BUNDLES = (
+    #('scss', ['colors.scss', 'main.scss'], {'filters': 'pyscss'}),
+    ('less', 
+        [
+            'less/colors.less',
+            'less/clayto-styles.less',
+            ], 
+        {'filters': 'less'}
+        ),
+    ('css', 
+        [
+            'css/style.css', 
+            'css/bootstrap.%s.min.css' % BOOTSTRAP_THEME if BOOTSTRAP_THEME else 'css/bootstrap.min.css',
+            'css/font-awesome.min.css',
+            'css/html4css1.css',
+            'css/pygments.css',
+            'css/colors.css',
+            'css/clayto-styles.css',
+            ],
+        {'filters': 'cssmin'}
+        ),
+)
+
+#######################################################################
 #                            HOST SETTINGS                            #
 #######################################################################
 
 SITEURL     = 'http://beta.mwcz.org'
-FEED_DOMAIN = 'http://beta.mwczzipt.org'
+FEED_DOMAIN = 'http://beta.mwcz.org'
 
 
 # Blogroll
@@ -52,7 +93,7 @@ FEED_DOMAIN = 'http://beta.mwczzipt.org'
 #DEFAULT_METADATA = (('yeah', 'it is'),)
 
 # static paths will be copied under the same name
-STATIC_PATHS = ["static", ]
+STATIC_PATHS = ["static", "projects"]
 
 # A list of files to copy from the source to the destination
 #FILES_TO_COPY = (('extra/robots.txt', 'robots.txt'),)
@@ -101,8 +142,8 @@ CATEGORIES_URL          = 'categories/'
 CATEGORIES_SAVE_AS      = 'categories/index.html'
 
 # Category paths
-CATEGORY_URL          = 'category/{slug}/'
-CATEGORY_SAVE_AS      = 'category/{slug}/index.html'
+CATEGORY_URL          = '{slug}/'
+CATEGORY_SAVE_AS      = '{slug}/index.html'
 
 # Disable author page since I'm the only author
 AUTHOR_URL            = 'author/{slug}/'
