@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>clayto.com</title><link>http://beta.mwcz.org/</link><description></description><atom:link href="http://beta.mwcz.org/feeds/projects.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 21 Oct 2011 00:00:00 -0400</lastBuildDate><item><title>ColorPal</title><link>http://beta.mwcz.org/projects/2011/10/21/colorpal/</link><description>&lt;div id="cp-repo"&gt;&lt;/div&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>clayto.com</title><link>http://beta.mwcz.org/</link><description></description><atom:link href="http://beta.mwcz.org/feeds/projects.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 03 Jul 2012 00:00:00 -0400</lastBuildDate><item><title>Canvas Indexed Color</title><link>http://beta.mwcz.org/projects/2012/07/03/canvas-indexed-color/</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Tue, 03 Jul 2012 00:00:00 -0400</pubDate><guid>tag:beta.mwcz.org,2012-07-03:projects/2012/07/03/canvas-indexed-color/</guid><category>html5</category><category>javascript</category><category>color</category></item><item><title>median-cut.js</title><link>http://beta.mwcz.org/projects/2012/01/16/median-cutjs/</link><description>&lt;div id="cp-repo"&gt;&lt;/div&gt;
+
+&lt;script src="/static/js/repo.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+    $(function() {
+        $('#cp-repo').repo({
+            user: 'mwcz',
+            name: 'median-cut.js'
+        });
+    });
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Mon, 16 Jan 2012 00:00:00 -0500</pubDate><guid>tag:beta.mwcz.org,2012-01-16:projects/2012/01/16/median-cutjs/</guid><category>html5</category><category>javascript</category><category>color</category></item><item><title>Bouncey</title><link>http://beta.mwcz.org/projects/2011/11/17/bouncey/</link><description>&lt;div id="cp-repo"&gt;&lt;/div&gt;
+
+&lt;script src="/static/js/repo.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+    $(function() {
+        $('#cp-repo').repo({
+            user: 'mwcz',
+            name: 'Bouncey'
+        });
+    });
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Thu, 17 Nov 2011 00:00:00 -0500</pubDate><guid>tag:beta.mwcz.org,2011-11-17:projects/2011/11/17/bouncey/</guid><category>html5</category><category>javascript</category></item><item><title>ColorPal</title><link>http://beta.mwcz.org/projects/2011/10/21/colorpal/</link><description>&lt;div id="cp-repo"&gt;&lt;/div&gt;
 
 &lt;script src="/static/js/repo.js"&gt;&lt;/script&gt;
 
@@ -10,4 +32,48 @@
             name: 'ColorPal'
         });
     });
-&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Fri, 21 Oct 2011 00:00:00 -0400</pubDate><guid>tag:beta.mwcz.org,2011-10-21:projects/2011/10/21/colorpal/</guid><category>html5</category><category>javascript</category><category>color</category></item></channel></rss>
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Fri, 21 Oct 2011 00:00:00 -0400</pubDate><guid>tag:beta.mwcz.org,2011-10-21:projects/2011/10/21/colorpal/</guid><category>html5</category><category>javascript</category><category>color</category></item><item><title>AEJS</title><link>http://beta.mwcz.org/projects/2011/09/20/aejs/</link><description>&lt;div id="cp-repo"&gt;&lt;/div&gt;
+
+&lt;script src="/static/js/repo.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+    $(function() {
+        $('#cp-repo').repo({
+            user: 'mwcz',
+            name: 'AEJS'
+        });
+    });
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Tue, 20 Sep 2011 00:00:00 -0400</pubDate><guid>tag:beta.mwcz.org,2011-09-20:projects/2011/09/20/aejs/</guid><category>html5</category><category>javascript</category></item><item><title>mwcz.org</title><link>http://beta.mwcz.org/projects/2011/03/04/mwczorg/</link><description>&lt;div id="cp-repo"&gt;&lt;/div&gt;
+
+&lt;script src="/static/js/repo.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+    $(function() {
+        $('#cp-repo').repo({
+            user: 'mwcz',
+            name: 'mwcz'
+        });
+    });
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Fri, 04 Mar 2011 00:00:00 -0500</pubDate><guid>tag:beta.mwcz.org,2011-03-04:projects/2011/03/04/mwczorg/</guid><category>html5</category><category>javascript</category><category>color</category></item><item><title>JSImage</title><link>http://beta.mwcz.org/projects/2009/04/21/jsimage/</link><description>&lt;div id="cp-repo"&gt;&lt;/div&gt;
+
+&lt;script src="/static/js/repo.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+    $(function() {
+        $('#cp-repo').repo({
+            user: 'mwcz',
+            name: 'JSImage'
+        });
+    });
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Tue, 21 Apr 2009 00:00:00 -0400</pubDate><guid>tag:beta.mwcz.org,2009-04-21:projects/2009/04/21/jsimage/</guid><category>html5</category><category>javascript</category><category>color</category></item><item><title>clayto.com</title><link>http://beta.mwcz.org/projects/2005/07/18/claytocom/</link><description>&lt;div id="cp-repo"&gt;&lt;/div&gt;
+
+&lt;script src="/static/js/repo.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+    $(function() {
+        $('#cp-repo').repo({
+            user: 'mwcz',
+            name: 'mwcz'
+        });
+    });
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Mon, 18 Jul 2005 00:00:00 -0400</pubDate><guid>tag:beta.mwcz.org,2005-07-18:projects/2005/07/18/claytocom/</guid></item></channel></rss>
