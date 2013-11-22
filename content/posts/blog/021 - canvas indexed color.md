@@ -1,4 +1,4 @@
-Title: Canvas Indexed Color
+Title: Introducing Canvas Indexed Color
 Date: 2012-07-03 23:44:50
 Tags: html5, canvas, color
 

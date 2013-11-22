@@ -1,6 +1,7 @@
-Title: AEJS
-Date: 2011-09-20
-Tags: html5, javascript
+Title: JSImage
+Slug: projects/jsimage
+Tags: html5, javascript, color
+Status: hidden
 
 <div id="cp-repo"></div>
 
@@ -9,7 +10,7 @@ Tags: html5, javascript
     $(function() {
         $('#cp-repo').repo({
             user: 'mwcz',
-            name: 'AEJS'
+            name: 'JSImage'
         });
     });
 </script>

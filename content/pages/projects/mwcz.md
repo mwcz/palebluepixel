@@ -1,6 +1,7 @@
-Title: median-cut.js
-Date: 2012-01-16
+Title: mwcz.org
+Slug: projects/mwcz.org
 Tags: html5, javascript, color
+Status: hidden
 
 <div id="cp-repo"></div>
 
@@ -9,7 +10,7 @@ Tags: html5, javascript, color
     $(function() {
         $('#cp-repo').repo({
             user: 'mwcz',
-            name: 'median-cut.js'
+            name: 'mwcz'
         });
     });
 </script>

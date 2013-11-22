@@ -1,6 +1,7 @@
-Title: Bouncey
-Date: 2011-11-17
-Tags: html5, javascript
+Title: ColorPal
+Slug: projects/colorpal
+Tags: html5, javascript, color
+Status: hidden
 
 <div id="cp-repo"></div>
 
@@ -9,7 +10,7 @@ Tags: html5, javascript
     $(function() {
         $('#cp-repo').repo({
             user: 'mwcz',
-            name: 'Bouncey'
+            name: 'ColorPal'
         });
     });
 </script>

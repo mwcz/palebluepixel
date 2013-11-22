@@ -1,5 +1,6 @@
 Title: clayto.com
-Date: 2005-07-18
+Slug: projects/clayto.com
+Status: hidden
 
 <div id="cp-repo"></div>
 

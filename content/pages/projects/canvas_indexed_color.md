@@ -1,3 +1,4 @@
 Title: Canvas Indexed Color
-Date: 2012-07-03
+Slug: projects/canvas_indexed_color
 Tags: html5, javascript, color
+Status: hidden

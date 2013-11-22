@@ -17,11 +17,14 @@ MARKUP                = ('md','mkd','markdown')
 DISPLAY_PAGES_ON_MENU = True
 THEME                 = environ["HOME"] + "/workspace/pelican-bootstrap3" # GREAT!
 
-DISPLAY_PAGES_ON_MENU = False
+DISPLAY_PAGES_ON_MENU = True
 
 TEMPLATE_PAGES = {
-        'posts/projects/index.html' : 'projects/index.html',
-        #'posts/photos/index.html'   : 'photos/index.html'
+        'pages/projects/index.html'   : 'projects/index.html'
+        }
+EXTRA_PATH_METADATA = {
+        # Give the projects page a title
+        'pages/projects/index.html': {'title': 'Projects'},
         }
 
 USE_FOLDER_AS_CATEGORY = True
