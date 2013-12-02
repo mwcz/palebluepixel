@@ -15,7 +15,7 @@ PDF_GENERATOR         = False
 DEFAULT_PAGINATION    = 6
 MARKUP                = ('md','mkd','markdown')
 DISPLAY_PAGES_ON_MENU = True
-THEME                 = environ["HOME"] + "/workspace/pelican-bootstrap3" # GREAT!
+THEME                 = environ["HOME"] + "/workspace/pelican-bootstrap3"
 
 DISPLAY_PAGES_ON_MENU = True
 
@@ -23,7 +23,8 @@ TEMPLATE_PAGES = {
         'pages/projects/index.html'   : 'projects/index.html'
         }
 EXTRA_PATH_METADATA = {
-        # Give the projects page a title
+        # Give the projects page a title to work around <title> being used for
+        # HTML pages
         'pages/projects/index.html': {'title': 'Projects'},
         }
 
@@ -50,7 +51,7 @@ BOOTSTRAP_THEME = 'flatly'
 #######################################################################
 
 PLUGIN_PATH = environ["HOME"] + '/workspace/pelican-plugins'
-PLUGINS = ['neighbors', 'assets']
+PLUGINS = ['neighbors', 'assets', 'related_posts', 'better_figures_and_images']
 
 # assets plugin settings
 
@@ -77,6 +78,10 @@ ASSET_BUNDLES = (
         ),
 )
 
+# related posts settings
+
+RELATED_POSTS_MAX = 4
+
 #######################################################################
 #                            HOST SETTINGS                            #
 #######################################################################
@@ -99,10 +104,6 @@ STATIC_PATHS = ["static", "projects"]
 
 # A list of files to copy from the source to the destination
 #FILES_TO_COPY = (('extra/robots.txt', 'robots.txt'),)
-
-
-# custom pages generated with a jinja2 template
-#TEMPLATE_PAGES = {'/projects': 'projects/index.html'}
 
 
 #######################################################################

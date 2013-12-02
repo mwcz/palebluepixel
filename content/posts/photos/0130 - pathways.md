@@ -2,6 +2,9 @@ Title: Pathways
 Date: 2013-05-01
 Tags: photo
 Template: photo
-Palette: white
+Palette0: rgb(48,55,1)
+Palette1: rgb(117,129,44)
+Palette2: rgb(91,101,2)
+Palette3: rgb(57,74,49)
 PhotoNum: 130
 ShootDate: 2013-05-01

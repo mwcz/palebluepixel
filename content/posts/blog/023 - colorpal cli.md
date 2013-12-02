@@ -1,6 +1,7 @@
 Title: ColorPal CLI!
 Date: 2013-11-07
 Tags: html5, javascript, color
+Summary: Tired of creating color palettes with ColorPal's simple, intuitive drag-and-drop interface?  Me too!  Want to jam with the console cowboys in cyber-space?  Now you can.  Now *we* can.  ![ColorPal CLI demo recording](/static/images/023/cp.node.gif "ColorPal CLI demo recording")
 
 Tired of creating color palettes with ColorPal's simple, intuitive
 drag-and-drop interface?  Me too!  Want to jam with the console cowboys in

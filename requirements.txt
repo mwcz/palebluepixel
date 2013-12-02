@@ -1,6 +1,7 @@
 Jinja2==2.7.1
 Markdown==2.3.1
 MarkupSafe==0.18
+Pillow==2.2.1
 Pygments==1.6
 Unidecode==0.04.14
 blinker==1.3

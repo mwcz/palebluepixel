@@ -2,6 +2,9 @@ Title: Braid
 Date: 2012-09-17
 Tags: photo
 Template: photo
-Palette: white
+Palette0: black
+Palette1: black
+Palette2: black
+Palette3: black
 PhotoNum: 126
 ShootDate: 2012-09-17
