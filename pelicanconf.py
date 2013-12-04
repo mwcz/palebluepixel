@@ -8,7 +8,7 @@ from os import environ
 #######################################################################
 
 AUTHOR                = u'mwcz'
-SITENAME              = u'clayto.com'
+SITENAME              = u'mwcz.org'
 TIMEZONE              = 'America/New_York'
 DEFAULT_LANG          = u'en'
 PDF_GENERATOR         = False
@@ -17,10 +17,11 @@ MARKUP                = ('md','mkd','markdown')
 DISPLAY_PAGES_ON_MENU = True
 THEME                 = environ["HOME"] + "/workspace/pelican-bootstrap3"
 
-DISPLAY_PAGES_ON_MENU = True
+DISPLAY_CATEGORIES_ON_MENU = True
 
 TEMPLATE_PAGES = {
-        'pages/projects/index.html'   : 'projects/index.html'
+        'pages/projects/index.html' : 'projects/index.html',
+        #'index.html'                : 'index.html'
         }
 EXTRA_PATH_METADATA = {
         # Give the projects page a title to work around <title> being used for
@@ -28,7 +29,8 @@ EXTRA_PATH_METADATA = {
         'pages/projects/index.html': {'title': 'Projects'},
         }
 
-USE_FOLDER_AS_CATEGORY = True
+USE_FOLDER_AS_CATEGORY = False
+DEFAULT_CATEGORY = 'Posts'
 
 DATE_FORMATS = {
         'en': '%Y-%m-%d',
@@ -51,7 +53,7 @@ BOOTSTRAP_THEME = 'flatly'
 #######################################################################
 
 PLUGIN_PATH = environ["HOME"] + '/workspace/pelican-plugins'
-PLUGINS = ['neighbors', 'assets', 'related_posts', 'better_figures_and_images']
+PLUGINS = ['neighbors', 'assets', 'related_posts']
 
 # assets plugin settings
 
@@ -121,8 +123,8 @@ ARTICLE_DIR           = 'posts'
 FEED_ALL_RSS          = 'feeds/all.rss.xml'
 CATEGORY_FEED_RSS     = 'feeds/%s.rss.xml'
 
-ARTICLE_URL           = '{category}/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
-ARTICLE_SAVE_AS       = '{category}/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+ARTICLE_URL           = '{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+ARTICLE_SAVE_AS       = '{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
 PAGE_DIR              = 'pages'
 PAGE_URL              = '{slug}/'

@@ -2,6 +2,17 @@
 
 {% block content %}
 
+<script type="text/javascript" charset="utf-8">
+$(function () {
+    // Activate the 'Projects' tab
+    {# This shouldn't be necessary.  Pelican+templates take care of nav
+       highlighting, but see my comment here
+       https://github.com/mwcz/pelican-bootstrap3/commit/bdd6141c43f5cc06e21b24055712fb3dcc6a4eec
+       for an explanation. #}
+    $(".nav a[href*='projects']").parent('li').addClass('active')
+});
+</script>
+
 <div class="clayto-project-list">
     {% import 'includes/panel.html' as project_thumbnail %}
 
