@@ -1,0 +1,1024 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>mwcz.org</title><link href="http://beta.mwcz.org/" rel="alternate"></link><link href="http://beta.mwcz.org/feeds/posts.atom.xml" rel="self"></link><id>http://beta.mwcz.org/</id><updated>2013-11-07T00:00:00-05:00</updated><entry><title>ColorPal CLI!</title><link href="http://beta.mwcz.org/2013/11/07/colorpal-cli/" rel="alternate"></link><updated>2013-11-07T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:beta.mwcz.org,2013-11-07:2013/11/07/colorpal-cli/</id><summary type="html">&lt;p&gt;Tired of creating color palettes with ColorPal's simple, intuitive
+drag-and-drop interface?  Me too!  Want to jam with the console cowboys in
+cyber-space?  Now you can.  Now &lt;em&gt;we&lt;/em&gt; can.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ColorPal CLI demo recording" src="http://beta.mwcz.org/static/images/023/cp.node.gif" title="ColorPal CLI demo recording" /&gt;&lt;/p&gt;
+&lt;p&gt;There now exists a command-line ColorPal utility.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;# Create a palette of 8 colors from image.png&lt;/span&gt;
+&lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="n"&gt;cp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt; &lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt; &lt;span class="n"&gt;fixed&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;
+
+&lt;span class="cp"&gt;# Create a palette with a dynamic number of colors.  ColorPal intelligently&lt;/span&gt;
+&lt;span class="cp"&gt;# chooses how many colors to include based on the color diversity of the&lt;/span&gt;
+&lt;span class="cp"&gt;# image.&lt;/span&gt;
+&lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="n"&gt;cp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt; &lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt; &lt;span class="n"&gt;dynamic&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If dynamic mode doesn't include enough colors, you can pass in a number from
+0.0 to 1.0, where a greater number means "include more colors".&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;# Include more colors&lt;/span&gt;
+&lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="n"&gt;cp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt; &lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt; &lt;span class="n"&gt;dynamic&lt;/span&gt; &lt;span class="mf"&gt;0.2&lt;/span&gt;
+
+&lt;span class="cp"&gt;# Even more colors&lt;/span&gt;
+&lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="n"&gt;cp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt; &lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt; &lt;span class="n"&gt;dynamic&lt;/span&gt; &lt;span class="mf"&gt;0.5&lt;/span&gt;
+
+&lt;span class="cp"&gt;# LOTS of colors&lt;/span&gt;
+&lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="n"&gt;cp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt; &lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt; &lt;span class="n"&gt;dynamic&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Currently only &lt;code&gt;png&lt;/code&gt; images are supported, because I'm using
+&lt;a href="https://github.com/niegowski/node-pngjs/"&gt;pngjs&lt;/a&gt; to decode the images, which
+(shockingly) only supports pngs.  I'd like to support other formats, but this
+is a simple prototype release, and those formats can be supported once I find a
+Node library that can decode them.&lt;/p&gt;</summary><category term="html5"></category><category term="javascript"></category><category term="color"></category></entry><entry><title>ColorPal Output Update</title><link href="http://beta.mwcz.org/2012/07/30/colorpal-output-update/" rel="alternate"></link><updated>2012-07-30T22:30:00-04:00</updated><author><name>mwcz</name></author><id>tag:beta.mwcz.org,2012-07-30:2012/07/30/colorpal-output-update/</id><summary type="html">&lt;p&gt;Hi pals.&lt;/p&gt;
+&lt;p&gt;This is a speedy post about a speedy update I made today to
+&lt;a href="/projects/colorpal/"&gt;ColorPal&lt;/a&gt;, an HTML5 tool I wrote that automatically
+generates color palettes from a photograph.&lt;/p&gt;
+&lt;p&gt;Previously, ColorPal provided hex codes for each color extracted from the
+image.  Eight individual &amp;lt;input&amp;gt;s at the bottom of the page displayed the
+colors.&lt;/p&gt;
+&lt;p&gt;I use ColorPal a lot (my own dogfood and all that) when designing websites, and
+it wasn't long before I got fed up (hah!) with copying values from eight
+freaking inputs.&lt;/p&gt;
+&lt;p&gt;Blah:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Before" src="/static/images/022/before.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Huzzah:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="After" src="/static/images/022/after.png" /&gt;&lt;/p&gt;
+&lt;p&gt;All eight colors can be pasted out in one fell swoop of the mouse.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/projects/colorpal/"&gt;ColorPal Demo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Works in Chrome and Firefox.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pro tip&lt;/strong&gt;: you can edit the values in the textarea and the palette will be
+instantly updated to reflect your edits.  This means you can also paste in
+a list of colors (hex format only for the time being).&lt;/p&gt;
+&lt;p&gt;If you try out ColorPal, let me know your thoughts on
+&lt;a href="https://twitter.com/#!/mwcz"&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here are github repos for &lt;a href="https://github.com/mwcz/ColorPal"&gt;ColorPal&lt;/a&gt; and
+&lt;a href="https://github.com/mwcz/median-cut-js"&gt;median-cut.js&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This minor update is part of the groundwork for some exciting changes to my
+sorely neglected &lt;a href="http://clayto.com/"&gt;photography site&lt;/a&gt;.  I still post photos
+regularly, but haven't given it any fresh coding love for about two years.  See
+how the colorscheme of each page matches the photograph?  That's done with an
+older palette generation implementation (which I should write about someday),
+but pretty soon it'll be ColorPal pumping out those swatches.  &lt;/p&gt;
+&lt;p&gt;That's not the only change.  If you're not excited, don't worry.  I am!&lt;/p&gt;
+&lt;p&gt;&lt;a href="/projects/colorpal"&gt;&lt;static/images src="/static/images/019/colorpal_logo.png" alt="ColorPal logo" title=""
+/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Happy coloring!&lt;/p&gt;</summary><category term="html5"></category><category term="javascript"></category><category term="color"></category></entry><entry><title>Introducing Canvas Indexed Color</title><link href="http://beta.mwcz.org/2012/07/03/introducing-canvas-indexed-color/" rel="alternate"></link><updated>2012-07-03T23:44:50-04:00</updated><author><name>mwcz</name></author><id>tag:beta.mwcz.org,2012-07-03:2012/07/03/introducing-canvas-indexed-color/</id><summary type="html">&lt;p&gt;&lt;a href="/projects/canvas_indexed_color" title="Canvas Indexed Color demo"&gt;Canvas Indexed Color demo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="White SVG Tiger" src="/static/images/021/hahatiger.png" /&gt;&lt;/p&gt;
+&lt;p&gt;First, I converted the classic SVG tiger into a set of canvas drawing
+instructions using &lt;a href="http://professorcloud.com/svg-to-canvas/" title="Professor Cloud's conversion
+tool"&gt;Professor Cloud's conversion
+tool&lt;/a&gt;.  The output looks like
+&lt;a href="https://github.com/mwcz/mwcz/blob/master/blog/projects/canvas_indexed_color/vector_images.js" title="Tiger image"&gt;this&lt;/a&gt;.  Each call to &lt;code&gt;cvm.getColor()&lt;/code&gt; used to be a string literal.  &lt;/p&gt;
+&lt;p&gt;Vim's regex saved me from having to edit &lt;em&gt;100,000&lt;/em&gt; lines of canvas instructions
+by hand to replace the color strings.&lt;/p&gt;
+&lt;p&gt;The demo uses &lt;a href="http://knockoutjs.com/" title="Knockout JS"&gt;Knockout&lt;/a&gt; for handling all
+the update/draw events as well as updating the URL hash.  Check the &lt;a href="https://github.com/mwcz/mwcz/blob/master/blog/projects/canvas_indexed_color/cic.js" title="source code"&gt;source
+code&lt;/a&gt; and you'll see that there &lt;em&gt;isn't&lt;/em&gt; a vast tangled nest of event
+wirings.  Each time one of the colors in this ViewModel is changed, Knockout
+automatically triggers the canvas redraw and the updates the URL with the new
+palette.  Conversely, if the URL is changed, the ViewModel will update itself
+with the new value.  Knockout calls this a "two-way data binding".  &lt;/p&gt;
+&lt;p&gt;I replaced the aforementioned color strings with calls to &lt;code&gt;cvm&lt;/code&gt;, which is a
+Knockout ViewModel (in this case, an object that holds all the color data).
+&lt;code&gt;cvm&lt;/code&gt; is populated with the SVG tiger's default colors.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;ko&lt;/span&gt;&lt;span class="nc"&gt;.observableArray&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;hex&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;ko.observable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;#000000&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;hex&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;ko.observable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;#323232&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="c1"&gt;// .... many more ....&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;hex&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;ko.observable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;#ff727f&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;hex&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;ko.observable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;#ffffff&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Play with the colors, then copy the URL and send your tiger to your friends.  :]&lt;/p&gt;
+&lt;p&gt;&lt;a href="/projects/canvas_indexed_color/#4c0000,#659900,#666666,#992600,#999999,#99cc32,#a51926,#a5264c,#b23259,#b26565,#b2b2b2,#cc3f4c,#cc7226,#cccccc,#e5668c,#e59999,#e5e5b2,B5E8E6,#ea8c4d,#ea8e51,#eb955c,#ec9961,#eea575,#efaa7c,#f1b288,#f2b892,#f3bf9c,#f4c6a8,#f5ccb0,#f8d8c4,#f8dcc8,#f9e2d3,#fae5d7,#fcf2eb,#ff727f,#ffffcc,#ffffff,#000000,#323232" title="Crazy tiger"&gt;Crazy tiger&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Please note, this is only a simulation of an indexed color palette.  It is not
+a true, usable, indexed-color API for canvas (someday, maybe!).&lt;/p&gt;
+&lt;p&gt;The color picker is &lt;a href="https://github.com/mattfarina/farbtastic" title="Farbtastic"&gt;Farbtastic&lt;/a&gt;.  If you're interested in reading more about the history of
+indexed color, and a &lt;strong&gt;mind-blowing&lt;/strong&gt; canvas demo, go
+&lt;a href="http://www.effectgames.com/effect/article.psp.html/joe/Old_School_Color_Cycling_with_HTML5" title="Color cycling in HTML5 canvas"&gt;here&lt;/a&gt;.&lt;/p&gt;</summary><category term="html5"></category><category term="canvas"></category><category term="color"></category></entry><entry><title>Bootstrap &amp; Blogofile</title><link href="http://beta.mwcz.org/2012/07/03/bootstrap---blogofile/" rel="alternate"></link><updated>2012-07-03T22:44:50-04:00</updated><author><name>mwcz</name></author><id>tag:beta.mwcz.org,2012-07-03:2012/07/03/bootstrap---blogofile/</id><summary type="html">&lt;p&gt;Surprise.&lt;/p&gt;
+&lt;p&gt;I've converted the site layout to
+&lt;a href="http://twitter.github.com/bootstrap" title="Twitter Bootstrap"&gt;Bootstrap&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Massive appreciation to &lt;a href="http://douglatornell.ca" title="Doug
+Latornell"&gt;Doug Latornell&lt;/a&gt; for continuing development of Blogofile, the static blog compiler
+that powers this site.  His contributions can be found at the official &lt;a href="https://github.com/EnigmaCurry/blogofile/" title="Blogofile GitHub repo"&gt;blogofile GitHub repo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Converting the layout to Bootstrap was a breeze thanks to the Mako templates.&lt;/p&gt;
+&lt;p&gt;This is a lackluster post, but I didn't want to let such a big layout change go
+by without mention.  Customization of the default Bootstrap theme is coming.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Update&lt;/em&gt; Thanks Doug, I've updated the GitHub link to point to the official repo.&lt;/p&gt;</summary><category term="bootstrap"></category></entry><entry><title>AFOMFT</title><link href="http://beta.mwcz.org/2012/05/10/afomft/" rel="alternate"></link><updated>2012-05-10T21:47:00-04:00</updated><author><name>mwcz</name></author><id>tag:beta.mwcz.org,2012-05-10:2012/05/10/afomft/</id><summary type="html">&lt;p&gt;&lt;img alt="A few of my favorite things" src="/static/images/017/afomft.png" /&gt;&lt;/p&gt;</summary><category term="html5"></category><category term="javascript"></category><category term="linux"></category><category term="python"></category><category term="django"></category><category term="vim"></category><category term="stackoverflow"></category><category term="git"></category><category term="bash"></category><category term="amiga"></category></entry><entry><title>ColorPal palettes improved!</title><link href="http://beta.mwcz.org/2012/02/10/colorpal-palettes-improved/" rel="alternate"></link><updated>2012-02-10T22:44:50-05:00</updated><author><name>mwcz</name></author><id>tag:beta.mwcz.org,2012-02-10:2012/02/10/colorpal-palettes-improved/</id><summary type="html">&lt;p&gt;&lt;a href="/projects/colorpal"&gt;&lt;static/images src="/static/images/019/colorpal_logo.png" alt="ColorPal logo" title=""
+/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In my &lt;a href="/2012/01/16/colorpal-alpha/"&gt;last post&lt;/a&gt; on the subject, I introduced
+ColorPal, my HTML5 color palette generation tool.  It didn't perform well with
+certain types of images, so I fixed it. :)&lt;/p&gt;
+&lt;p&gt;Color palettes will now match the image even better.  Especially for images
+with infrequent but &lt;em&gt;important&lt;/em&gt; colors.  Here's a comparison of the old and new
+methods, on an image that is mostly black:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="comparison of palettes generated with median and
+mean" src="/static/images/019/median-mean-comparison.png" /&gt;&lt;/p&gt;
+&lt;p&gt;You can see that with the old method, the black pixels definitely took over the
+palette.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/projects/colorpal"&gt;Try it with your own images!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For some images, this change won't affect palettes at all.  But for images with
+low-population, high-importance colors, like the one above, palettes will look
+&lt;em&gt;much&lt;/em&gt; better!&lt;/p&gt;
+&lt;p&gt;Technical discussion below.&lt;/p&gt;
+&lt;h1&gt;Why the 'median' in median-cut?&lt;/h1&gt;
+&lt;p&gt;Median Cut is an algorithm typically used to reduce the number of colors in an
+image.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="16 million colors versus 16 colors" src="/static/images/019/median-cut-example.png" /&gt;&lt;/p&gt;
+&lt;p&gt;The steps to perform median cut are fairly straightforward:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Find the smallest box which contains all the colors.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Sort the enclosed colors along the longest axis of the box.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Split the box into two regions at median of the sorted list.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Repeat the above process until the original color space has been divided
+     into N regions where N is the number of colors you want.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Not too bad, right?  The question remains, though, why median?&lt;/p&gt;
+&lt;p&gt;Mean, median, and mode all attempt to measure the
+&lt;a href="http://en.wikipedia.org/wiki/Location_parameter"&gt;location&lt;/a&gt; of a probability
+distribution.  Worded more intuitively... they try to find the center of a set
+of numbers.  They just employ different definitions of "center".&lt;/p&gt;
+&lt;p&gt;&lt;img alt="mean, median, and mode graphed" src="/static/images/019/mean_median_mode.png" /&gt;
+(Thanks &lt;a href="http://en.wikipedia.org/wiki/Median"&gt;Wikipedia&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;As you can see clearly in the dashed data set, the mean tends to follow the
+tail.  In other words, mean is useful when outliers are important.  When
+generating a color palette, outliers are essential.  Outliers may be the small
+streak of color in an otherwise drab sky, or a small red rose in the middle of
+a green field.&lt;/p&gt;
+&lt;p&gt;The goal of median cut is &lt;em&gt;not&lt;/em&gt; to generate a color palette.  It's to
+efficiently reduce the number of colors in an image.  Since my goal with
+ColorPal is to find good-lookin' colors, I've modified the algorithm to split
+boxes at the &lt;strong&gt;mean&lt;/strong&gt; instead of the &lt;strong&gt;median&lt;/strong&gt;.  Mean splits boxes closer to
+the outliers, which keeps low-population colors nicely segregated from the
+high-population colors.&lt;/p&gt;
+&lt;p&gt;Thus step 3 becomes:&lt;/p&gt;
+&lt;div class="pygments_murphy syntax_highlight"&gt;
+  3. Split the box into two regions at the &lt;b&gt;mean&lt;/b&gt; of the sorted list.
+&lt;/div&gt;
+
+&lt;p&gt;The result?  Mean Cut!  Also: awesome color palettes.&lt;/p&gt;
+&lt;h2&gt;Interesting side-note on color distributions&lt;/h2&gt;
+&lt;p&gt;Interestingly, photographs of nature tend to have nice, close-to-normal color
+distributions.  A "normal distribution" is a formal term for a "bell curve".&lt;/p&gt;
+&lt;p&gt;Check out the red, green, and blue distributions for a photograph of a forest.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Forest red   pixel distribution" src="/static/images/019/forest_r.png" /&gt;
+&lt;img alt="Forest green pixel distribution" src="/static/images/019/forest_g.png" /&gt;
+&lt;img alt="Forest blue  pixel distribution" src="/static/images/019/forest_b.png" /&gt;&lt;/p&gt;
+&lt;p&gt;For comparison, here are the distributions for a shot of NYC.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="City   red   pixel distribution" src="/static/images/019/city_r.png" /&gt;
+&lt;img alt="City   green pixel distribution" src="/static/images/019/city_g.png" /&gt;
+&lt;img alt="City   blue  pixel distribution" src="/static/images/019/city_b.png" /&gt;&lt;/p&gt;
+&lt;h2&gt;What's next for ColorPal?  Color spaces.&lt;/h2&gt;
+&lt;p&gt;Mean-cut improves ColorPal dramatically for some images, but it's still not
+perfect.  Perfection probably won't be attainable, but there are still many
+ways to improve.&lt;/p&gt;
+&lt;p&gt;My next test will be converting to a color space other than RGB.&lt;/p&gt;
+&lt;p&gt;HSL is common, and the RGB/HSL conversion formulas are in my very old JSImage
+project.  It may not turn out well, though, as the concept of "widest box"
+loses most of its meaning when each axis is a completely different unit of
+measure.  Although, in a way, I suppose RGB has a similar problem.  Red, Green,
+and Blue could be thought of as unrelated units.  I'll try it out and see how
+it goes.  I wonder if my old JavaScript RGB/HSL code has rotted away yet...&lt;/p&gt;
+&lt;p&gt;Most likely, I'll skip HSL and try one of the
+&lt;a href="http://en.wikipedia.org/wiki/Lab_color_space"&gt;Lab&lt;/a&gt; color spaces first, since
+they are not composed linear values like RGB and HSL.  Instead, Lab color
+spaces use non-linear scales that closely match human perception of color.
+Perfect for my purposes.  How fortuitious for me that CIE invented it way back
+in 1931.&lt;/p&gt;
+&lt;p&gt;There are three "Lab" color spaces: XYZ, Hunter-Lab,
+and CIELAB.  XYZ will be first to the plate, since the RGB/XYZ formulas are
+the simplest.  Let me take this opportune moment to plug
+&lt;a href="http://www.easyrgb.com/index.php?X=MATH"&gt;EasyRGB.com&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Lend a hand&lt;/h2&gt;
+&lt;p&gt;As I've mentioned before, ColorPal is in an early stage of development.  It
+needs testing in multiple browsers, and I'm very interested in hearing people's
+feedback.  Code development help is welcomed too.&lt;/p&gt;
+&lt;p&gt;If you try out ColorPal, let me know your thoughts on
+&lt;a href="https://twitter.com/#!/mwcz"&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here are github repos for &lt;a href="https://github.com/mwcz/ColorPal"&gt;ColorPal&lt;/a&gt; and
+&lt;a href="https://github.com/mwcz/median-cut-js"&gt;median-cut.js&lt;/a&gt;.&lt;/p&gt;</summary><category term="html5"></category><category term="javascript"></category><category term="color"></category></entry><entry><title>Toy javascript unit tester</title><link href="http://beta.mwcz.org/2012/01/30/toy-javascript-unit-tester/" rel="alternate"></link><updated>2012-01-30T21:50:00-05:00</updated><author><name>mwcz</name></author><id>tag:beta.mwcz.org,2012-01-30:2012/01/30/toy-javascript-unit-tester/</id><summary type="html">&lt;p&gt;Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and had a minor epiphany.  In the back of my mind, there has always been a bit of uncertainty as to how unit testing frameworks work.  Deep in my brain I knew there was something I didn't understand, but I wasn't quite sure what.  I never gave it any conscious thought.&lt;/p&gt;
+&lt;p&gt;As a developer, I'd use a framework, write a bunch of &lt;code&gt;testBlahFoo&lt;/code&gt; functions, and the framework would magically run them.  &lt;/p&gt;
+&lt;p&gt;Then I realized... "Oh, it's just introspection."&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c1"&gt;// Create an object with three properties, all functions&lt;/span&gt;
+&lt;span class="k"&gt;var&lt;/span&gt; &lt;span class="n"&gt;myfuncs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nl"&gt;func1:&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="n"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;func it up&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="nl"&gt;func2:&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="n"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;func&amp;#39;s old brother&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="nl"&gt;func3:&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="n"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;bring back da func&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;
+
+&lt;span class="c1"&gt;// Run all functions attached to myfuncs&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;func&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;myfuncs&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;myfuncs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="n"&gt;func&lt;/span&gt; &lt;span class="p"&gt;]();&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="c1"&gt;// Outputs:&lt;/span&gt;
+&lt;span class="c1"&gt;// &lt;/span&gt;
+&lt;span class="c1"&gt;// func it up&lt;/span&gt;
+&lt;span class="c1"&gt;// func&amp;#39;s old brother&lt;/span&gt;
+&lt;span class="c1"&gt;// bring back da func&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;So simple.  Later, I wrote a very basic unit testing framework, purely as an educational excercise.&lt;/p&gt;
+&lt;p&gt;The guts are almost simple as the example above.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;JTestSuite&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;version&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="nx"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+
+    &lt;span class="nx"&gt;init&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;callback&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="nx"&gt;jt&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;JTests&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+        &lt;span class="nx"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;init&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;callback&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;},&lt;/span&gt;
+
+    &lt;span class="nx"&gt;run&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;fn&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="nx"&gt;prop&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+        &lt;span class="c1"&gt;// Run all functions that begin with &amp;quot;test&amp;quot;&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;prop&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="k"&gt;typeof&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;prop&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;function&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;prop&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;slice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;test&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                    &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;prop&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+                &lt;span class="p"&gt;}&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;};&lt;/span&gt;
+
+    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt; &lt;span class="k"&gt;instanceof&lt;/span&gt; &lt;span class="nx"&gt;JTestSuite&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;JTestSuite&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="nx"&gt;init&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;init&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="nx"&gt;run&lt;/span&gt;  &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;run&lt;/span&gt;
+    &lt;span class="p"&gt;};&lt;/span&gt;
+
+&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In the &lt;code&gt;run&lt;/code&gt; function's loop, I first check that each property is a function before attemping to run it.  This avoids a &lt;code&gt;called_non_callable TypeError&lt;/code&gt;.  I then check that the name of the property begins with the string "test".  When dynamically calling functions, it's usually a good idea to call &lt;code&gt;obj.hasOwnProperty(propname)&lt;/code&gt; to ensure the property wasn't inherited from some unknown source (especially if the property you wanted to reference may have been &lt;code&gt;delete&lt;/code&gt;d, but a property with the same name is now surfacing from a parent object), but in this case I'd like to leave open the possibility for inherited Test Suites.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;JTests&lt;/code&gt; object created in the &lt;code&gt;init&lt;/code&gt; function is a separate object that contains a bunch of assertions.  It looks something like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;JTests&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;version&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="nx"&gt;result_callback&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+
+    &lt;span class="nx"&gt;init&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;callback&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="nx"&gt;result_callback&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;callback&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="nx"&gt;assertTrue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="nx"&gt;result_callback&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;                                                                                                                                                                         
+            &lt;span class="nx"&gt;name&lt;/span&gt;   &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;assertTrue&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="nx"&gt;args&lt;/span&gt;   &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="nx"&gt;result&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;result&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;};&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="nx"&gt;assertTrue&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;assertTrue&lt;/span&gt;
+    &lt;span class="p"&gt;};&lt;/span&gt;
+
+&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;...except with many more assertions. :)&lt;/p&gt;
+&lt;p&gt;Both &lt;code&gt;JTestSuite&lt;/code&gt; and &lt;code&gt;JTests&lt;/code&gt; use the &lt;a href="http://stackoverflow.com/a/5647397/215148"&gt;revealing module pattern&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;I have a lot of ideas for improvement, like &lt;a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself"&gt;DRY&lt;/a&gt;ing up the assertions, so the &lt;code&gt;{name,args,result}&lt;/code&gt; object doesn't have to be defined in each assertion.  But &lt;a href="http://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#JavaScript"&gt;many others&lt;/a&gt; have already done a great job, and I don't want to reinvent too many wheels.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c1"&gt;// Define a custom handler for the result&lt;/span&gt;
+&lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="n"&gt;test_callback&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="c1"&gt;// Create a new JTestSuite object and initialize it with the callback&lt;/span&gt;
+&lt;span class="k"&gt;var&lt;/span&gt; &lt;span class="n"&gt;TestSuite&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;JTestSuite&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="n"&gt;TestSuite&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;test_callback&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="c1"&gt;// Create some tests&lt;/span&gt;
+&lt;span class="n"&gt;TestSuite&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;testMath&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertEquals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="mh"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mh"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mh"&gt;4&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;
+
+&lt;span class="n"&gt;TestSuite&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;testFalsy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="c1"&gt;// [], &amp;quot;&amp;quot;, and &amp;quot;0&amp;quot; all == false in javascript&lt;/span&gt;
+    &lt;span class="n"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertFalsy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertFalsy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertFalsy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;0&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;
+
+&lt;span class="c1"&gt;// Run all the tests&lt;/span&gt;
+&lt;span class="n"&gt;TestSuite&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The callback allows a user to determine how the results from the unit test should be processed or displayed.  Results could be printed to console.log, displayed on a page by adding them to the DOM, sent to a Web service with AJAX, or any arbitrary service with Web Sockets.&lt;/p&gt;
+&lt;p&gt;After writing this toy framework, and explaining it to a colleague, I was told that the Rails unit tester uses almost the exact same approach.  I'd wager a few bucks that JUnit uses the Reflection API's &lt;code&gt;Class.getMethods()&lt;/code&gt; to find and run all the methods added to a TestCase class.  Only a few bucks, though.&lt;/p&gt;</summary><category term="javascript"></category><category term="testing"></category></entry><entry><title>ColorPal Alpha</title><link href="http://beta.mwcz.org/2012/01/16/colorpal-alpha/" rel="alternate"></link><updated>2012-01-16T22:15:50-05:00</updated><author><name>mwcz</name></author><id>tag:beta.mwcz.org,2012-01-16:2012/01/16/colorpal-alpha/</id><summary type="html">&lt;p&gt;Introducing ColorPal!&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ColorPal screenshot" src="/static/images/015/ss.png" /&gt;&lt;/p&gt;
+&lt;p&gt;I've been toying with color palette generation for years.  My photography website has always had some form of dynamic palette, so the theme of each page matches the photo.  You can see the current iteration &lt;a href="http://clayto.com/"&gt;here&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;static/images src="/static/images/015/tarsi.png" alt="clayto.com" title="My photo, 'Tarsi', at clayto.com" /&gt;&lt;/p&gt;
+
+&lt;p&gt;I owe the idea of photo-matching website palettes to &lt;a href="http://noahgrey.com"&gt;Noah Grey&lt;/a&gt;.  Each iteration of my photo site has gotten a slightly more advanced palette generation tool.  You can see murmurs of them in the &lt;a href="/2011/11/16/html5-canvas-eyedropper/"&gt;old&lt;/a&gt; &lt;a href="/2011/11/16/html5-canvas-area-selection-averaging/"&gt;canvas&lt;/a&gt; &lt;a href="/2011/11/17/html5-tool-for-creating-color-palettes-from-an-image/"&gt;demos&lt;/a&gt; I've posted.  Sooner or later I'll make a more thorough post about the tools I've created for each iteration of the site.  Anyway, back to ColorPal.&lt;/p&gt;
+&lt;p&gt;ColorPal is an HTML5 palette generation tool.  Currently it's in a very early stage, and I've only tested it in Chrome.  I have many ideas for improvements, and I'd love to hear anyone's ideas as well.  &lt;/p&gt;
+&lt;p&gt;&lt;static/images src="/static/images/015/colorpal_logo.png" alt="ColorPal logo" title="" style="float: right; margin: 8px" /&gt;&lt;/p&gt;
+
+&lt;p&gt;It's powered by &lt;a href="http://en.wikipedia.org/wiki/Canvas_element"&gt;canvas&lt;/a&gt;, &lt;a href="https://developer.mozilla.org/en/data_URIs"&gt;data URIs&lt;/a&gt;, &lt;a href="http://dev.w3.org/2006/webapi/FileAPI/"&gt;File API&lt;/a&gt;, and my homespun &lt;a href="http://en.wikipedia.org/wiki/Median_cut"&gt;median-cut&lt;/a&gt; implementation, which I'm calling &lt;em&gt;median-cut.js&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Bear in mind that while I've kept median-cut.js nice and clean, I did hammer out ColorPal as quickly as possible, so it's a mess.  Why?  I expect median-cut.js to be useful to other programmers, but ColorPal is just a tool for designers.  Or it will be, anyway. :)&lt;/p&gt;
+&lt;p&gt;Here are github repos for &lt;a href="https://github.com/mwcz/ColorPal"&gt;ColorPal&lt;/a&gt; and &lt;a href="https://github.com/mwcz/median-cut-js"&gt;median-cut.js&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;And, as a reward for reading to the end, a &lt;a href="/projects/colorpal/"&gt;live demo&lt;/a&gt;!&lt;/p&gt;</summary><category term="html5"></category><category term="javascript"></category><category term="color"></category></entry><entry><title>The N9, QR-Codes, and KeePassX</title><link href="http://beta.mwcz.org/2012/01/08/the-n9-qr-codes-and-keepassx/" rel="alternate"></link><updated>2012-01-08T22:27:50-05:00</updated><author><name>mwcz</name></author><id>tag:beta.mwcz.org,2012-01-08:2012/01/08/the-n9-qr-codes-and-keepassx/</id><summary type="html">&lt;p&gt;&lt;em&gt;Update: I happened across a &lt;a href="http://keepass.info/plugins.html#qrcodegen"&gt;KeePass
+plugin&lt;/a&gt; (not the same as KeePassX)
+that displays passwords as QR codes, just like my hack below.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Poor, glorious N9.&lt;/p&gt;
+&lt;p&gt;It's impossible not to love the N9 if you're a geek, especially a programming,
+bash-loving, Linux-hankering geek.  It's like a nerd talisman.  This post isn't
+about the N9, specifically, so I'll save the love-fest for another time.&lt;/p&gt;
+&lt;p&gt;This post is about how difficult it can be to get text (especially passwords)
+onto a smartphone securely.  I've come to like the approach of using QR codes.
+Most (all?) smartphones have a barcode scanner, and QR codes are one of &lt;a href="http://en.wikipedia.org/wiki/Barcode"&gt;many
+convenient ways&lt;/a&gt; to encode text into an
+image.  In the case of the N9, it's
+&lt;a href="http://store.ovi.com/content/231518"&gt;MeeScan&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="meescan" src="/static/images/011/meescan.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://fukuchi.org/works/qrencode/index.html.en"&gt;qrencode&lt;/a&gt; is an extremely
+easy to use encoder.  Pass it a string, it produces an image.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;qrencode&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;mypassword&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="n"&gt;mypass&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;a href="http://keepassx.org"&gt;KeePassX&lt;/a&gt; is an excellent password manager.
+Unfortunately...&lt;/p&gt;
+&lt;p&gt;&lt;img alt="KeePassX not in N9" src="/static/images/011/keepass_not_in_n9.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Sadly, there is no KeePassX client on the N9.  At least, not yet.  Even if
+there were, I'm skeptical that it's a good idea at all to be carrying around a
+database of personal passwords on a smartphone.  It's encrypted, sure, but
+touchscreen keyboards encourage weak passphrases.  Who wants to enter a 64+
+character passphrase on a &lt;abbr title="Virtual keyboard"&gt;vkbd&lt;/abbr&gt;?&lt;/p&gt;
+&lt;p&gt;This evening, I spent about an hour hacking QR-code support into KeePassX.
+It's a seriously messy hack, using
+&lt;a href="http://en.cppreference.com/w/cpp/utility/program/system"&gt;system()&lt;/a&gt; to call
+&lt;code&gt;qrencode&lt;/code&gt;, pass in the password, then call
+&lt;a href="http://projects.gnome.org/evince/?guid=ON"&gt;evince&lt;/a&gt; to view it.  Even worse, I
+just tacked it onto the "Copy Password" function, instead of figuring out how
+to create a new menu item.  It doesn't even delete the generated image after
+viewing.  Definitely nothing more than a proof of concept.&lt;/p&gt;
+&lt;p&gt;Here it is in action.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/static/images/011/keepassx_demo.png"&gt;&lt;static/images class="grid_7"
+src="/static/images/011/keepassx_demo.png" alt="KeePassX generating a QR code" title=""
+/&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class="clear"&gt;&lt;/div&gt;
+
+&lt;p&gt;I won't be distributing my mod unless someone &lt;em&gt;really&lt;/em&gt; wants it, but it would
+be cool to see this available as plugin to any password managers that support
+plugins.  It could be handy to have clipboard managers generate QR codes too.&lt;/p&gt;</summary><category term="general"></category><category term="keepass"></category><category term="n9"></category></entry><entry><title>Bouncey returns - more canvas physics</title><link href="http://beta.mwcz.org/2011/11/17/bouncey-returns-more-canvas-physics/" rel="alternate"></link><updated>2011-11-17T22:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:beta.mwcz.org,2011-11-17:2011/11/17/bouncey-returns-more-canvas-physics/</id><summary type="html">&lt;p&gt;This is a slightly upgraded version of the physics demo I showed in my &lt;a href="/2011/11/17/bouncey---canvas-physics/"&gt;last post&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It is still...&lt;/p&gt;
+&lt;p&gt;&lt;quote&gt;"a buggy, rudimentary, just-for-fun javascript physics simulator."&lt;/quote&gt;&lt;/p&gt;
+&lt;p&gt;This version has:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pre-defined initial states&lt;/li&gt;
+&lt;li&gt;gravity&lt;/li&gt;
+&lt;li&gt;friction&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It still has the "clinging" bug.  I know how to fix it, but didn't deem it important enough to spend time on it. :)&lt;/p&gt;
+&lt;p&gt;The &lt;a href="https://github.com/mwcz/bouncey/blob/master/bounce.html"&gt;code&lt;/a&gt; is well commented, so feel free to hack on it.&lt;/p&gt;
+&lt;p&gt;Click on one of the initial states to begin the simulation.&lt;/p&gt;
+&lt;style type="text/css"&gt;
+#cnvs {
+    margin: 0 auto;
+    border: 1px solid black;
+    -webkit-box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
+       -moz-box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
+         -o-box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
+            box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
+}
+&lt;/style&gt;
+
+&lt;script type="text/javascript" src="/static/js/008/bouncey.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;Initial states:
+&lt;button onclick="RANDOM();"&gt;Random&lt;/button&gt;
+&lt;button onclick="POOL();"&gt;POOL&lt;/button&gt;
+&lt;button onclick="HEAD_ON_COLLISION();"&gt;HEAD_ON_COLLISION&lt;/button&gt;&lt;/p&gt;
+&lt;canvas id="cnvs" width="500" height="375"&gt; 
+    Sorry, your browser does not support HTML5 canvas.  Lame.
+&lt;/canvas&gt;
+
+&lt;p&gt;&lt;button onclick="paused++;paused%=2;"&gt;Pause&lt;/button&gt; &lt;/p&gt;
+&lt;pre&gt;
+  velocity sum: &lt;span id="txt_velocity_sum"&gt;NONE&lt;/span&gt;
+x velocity sum: &lt;span id="txt_velocity_sum_x"&gt;NONE&lt;/span&gt;
+y velocity sum: &lt;span id="txt_velocity_sum_y"&gt;NONE&lt;/span&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;(The POOL initial state reproduces the clinging bug.)&lt;/p&gt;</summary><category term="html5"></category><category term="canvas"></category><category term="physics"></category><category term="javascript"></category><category term="bouncey"></category></entry><entry><title>HTML5 tool for creating color palettes from an image</title><link href="http://beta.mwcz.org/2011/11/17/html5-tool-for-creating-color-palettes-from-an-image/" rel="alternate"></link><updated>2011-11-17T22:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:beta.mwcz.org,2011-11-17:2011/11/17/html5-tool-for-creating-color-palettes-from-an-image/</id><summary type="html">&lt;p&gt;For an &lt;a href="http://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction"&gt;HCI&lt;/a&gt; class project in Fall 2009, I pulled together some of my previous demos to make this integrated tool.  It was just a prototype, and I haven't taken the time to get the code set up and working on this blog.  If anyone is interested, I can dig up the code and send it along.&lt;/p&gt;
+&lt;iframe width="580" height="550" src="http://www.youtube.com/embed/p9QiGPUiXdc" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;In retrospect, it really could have used some narration...&lt;/p&gt;</summary><category term="html5"></category><category term="canvas"></category><category term="color"></category><category term="colorpal"></category></entry><entry><title>Bouncey - canvas physics</title><link href="http://beta.mwcz.org/2011/11/17/bouncey-canvas-physics/" rel="alternate"></link><updated>2011-11-17T21:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:beta.mwcz.org,2011-11-17:2011/11/17/bouncey-canvas-physics/</id><summary type="html">&lt;p&gt;This is Bouncey.  It's a simple physics demo I wrote in early/mid 2011, with some contributions and bugfixes from my good friend Greg Gardner.&lt;/p&gt;
+&lt;p&gt;The description for &lt;a href="https://github.com/mwcz/bouncey"&gt;bouncey's github repo&lt;/a&gt; is:&lt;/p&gt;
+&lt;p&gt;&lt;quote&gt;"a buggy, rudimentary, just-for-fun javascript physics simulator."&lt;/quote&gt;&lt;/p&gt;
+&lt;p&gt;It covers &lt;a href="http://en.wikipedia.org/wiki/Newton's_laws_of_motion"&gt;Newton's laws of motion&lt;/a&gt;.&lt;/p&gt;
+&lt;style type="text/css"&gt;
+#cnvs {
+    margin: 0 auto;
+    border: 1px solid black;
+    -webkit-box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
+       -moz-box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
+         -o-box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
+            box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
+}
+&lt;/style&gt;
+
+&lt;script type="text/javascript" src="/static/js/007/bouncey.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+
+window.onload = function() {
+
+    canvas_element        = document.getElementById('cnvs');
+    canvas_element.width  = W;
+    canvas_element.height = H;
+
+    canvas = canvas_element.getContext('2d');
+
+    // create some squares with random velocities in the center of the canvas
+    // objects are stored in the format 
+    //      [ X, Y, X_velocity, Y_velocity, width, height, [R,G,B] ]
+    var x, y, w, h, v_x, v_y, r, g, b, new_obj;
+
+    // calculate all the possible initial y positions
+    y_positions = [];
+    for( var i = OBJ_HEIGHT; i &lt; H - OBJ_HEIGHT; i += 2 * OBJ_HEIGHT )
+        y_positions.push( i );
+
+    // calculate all the possible initial x positions
+    x_positions = [];
+    for( var i = OBJ_WIDTH; i &lt; W - OBJ_WIDTH; i += 2 * OBJ_WIDTH )
+        x_positions.push( i );
+
+    /*
+    */
+    for( var i = 0; i &lt; 40; ++i ) {
+
+        // create values for the object
+        x   = x_positions[ i % x_positions.length ];
+        y   = y_positions[ Math.floor( i / x_positions.length ) % y_positions.length ];
+        v_x = Math.random() * OBJ_MAX_VELOCITY*2 - OBJ_MAX_VELOCITY;
+        v_y = Math.random() * OBJ_MAX_VELOCITY*2 - OBJ_MAX_VELOCITY;
+        r   = Math.floor( Math.random() * 200 + 55 ); // random value 55..255
+        g   = Math.floor( Math.random() * 200 + 55 );
+        b   = Math.floor( Math.random() * 200 + 55 );
+
+        // add the object to the scene
+        var color = 'rgb(' + r + ',' + g + ',' + b + ')';
+        var new_obj = new Circle( x, y, OBJ_R, v_x, v_y, color );
+
+        objs.push( new_obj );
+    }
+
+    setInterval( make_frame, PERIOD );
+
+}
+
+&lt;/script&gt;
+
+&lt;p&gt;&lt;button onclick="paused++;paused%=2;"&gt;Pause&lt;/button&gt; &lt;/p&gt;
+&lt;canvas id="cnvs" width="500" height="375"&gt; 
+    Sorry, your browser does not support HTML5 canvas.  Lame.
+&lt;/canvas&gt;
+
+&lt;p&gt;An updated (but less colorful) version of bouncey is available &lt;a href="{008%20-%20bouncey%20returns.md}" title="newer bouncey"&gt;here&lt;/a&gt;.&lt;/p&gt;</summary><category term="html5"></category><category term="canvas"></category><category term="physics"></category><category term="javascript"></category><category term="bouncey"></category></entry><entry><title>How not to use CSS3</title><link href="http://beta.mwcz.org/2011/11/17/how-not-to-use-css3/" rel="alternate"></link><updated>2011-11-17T20:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:beta.mwcz.org,2011-11-17:2011/11/17/how-not-to-use-css3/</id><summary type="html">&lt;p&gt;How to ruin a good thing...&lt;/p&gt;
+&lt;p&gt;Try refreshing.&lt;/p&gt;
+&lt;style type="text/css"&gt;
+
+.css3_demo {
+    font-family: FreeSansBold;
+    text-align: center;
+    color: #efefef;
+    position: relative;
+    top: 0;
+    left: 50px;
+    font-size: 9em;
+    padding: 0;
+}
+
+@font-face { font-family: "FreeSansBold"; src: url("FreeSansBold.ttf"); }
+
+&lt;/style&gt;
+
+&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+
+// Random factors to determine x/y offsets for text shadows and amount of blur
+var x_factor    = Math.floor( Math.random() * 20 ) - 10;
+var y_factor    = Math.floor( Math.random() * 20 ) - 10;
+var blur_factor = Math.floor( Math.random() * 10 ) + 1;
+
+// Pretty colors
+var the_colors = 
+                [
+                '#7f9f7f',
+                '#dca3a3',
+                '#80d4aa',
+                '#f8f893',
+                '#ffcfaf',
+                '#e89393',
+                '#9ece9e',
+                '#c0bed1',
+                '#6c6c9c',
+                '#71d3b4',
+                '#a0afa0',
+                '#efefef'
+                ];
+
+function make_it() { // MAKE IT SHINE
+    // Build a string containing a comma-delimited list of the each shadow we want to apply
+    // sprintf would be nice here.
+    var shadows = "";
+    for( var color_index in the_colors ) {
+        shadows += 
+            color_index * x_factor + "px " + 
+            color_index * y_factor + "px " + 
+            color_index * blur_factor + "px " + 
+            the_colors[ color_index ];
+
+        // Add a comma unless we're at the end of the color set
+        if( color_index != the_colors.length - 1 )
+            shadows += ',';
+    }
+    $('.css3_demo').css( 'textShadow', shadows ); // apply the new style
+    the_colors.push( the_colors.shift() ); // move first color to the end of the list
+    //console.log( shadows );
+    setTimeout( 'make_it()', 50 ); // make the function async (kinda... effectively...) with setTimeout()
+}
+
+function move_it() { // MAKE IT MOVE
+    /* uncomment this to make it move up and down...
+    $('.css3_demo').animate( {top:'+=200'},2000, "linear" )
+           .animate( {top:'-=200'},2000, "linear", move_it );
+    */
+}
+
+$(document).ready( function() {
+    make_it();
+    move_it();
+});
+&lt;/script&gt;
+
+&lt;p&gt;&lt;span class="css3_demo"&gt;CSS3!&lt;/span&gt; &lt;/p&gt;</summary><category term="html5"></category><category term="css3"></category><category term="typography"></category></entry><entry><title>HTML5 canvas point operations</title><link href="http://beta.mwcz.org/2011/11/17/html5-canvas-point-operations/" rel="alternate"></link><updated>2011-11-17T19:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:beta.mwcz.org,2011-11-17:2011/11/17/html5-canvas-point-operations/</id><summary type="html">&lt;p&gt;This is the last demo I made using &lt;a href="https://github.com/mwcz/jsimage"&gt;JSImage&lt;/a&gt;.  I created it some time around 2009-2010.  At the time, I had checked out an &lt;a href="http://www.amazon.com/Digital-Image-Processing-Algorithmic-Introduction/dp/1846283795"&gt;imaging book&lt;/a&gt; from my university's library at least ten times.  Most of the exercises in that book I implemented in Python using &lt;a href="http://www.pythonware.com/products/pil/"&gt;PIL&lt;/a&gt;, but point operations were simple enough to port to JavaScript quickly.&lt;/p&gt;
+&lt;p&gt;Point operations are image alterations that affect all pixels equally.  Other operations, like blurring for example, each result pixel depends on adjacent pixels.&lt;/p&gt;
+&lt;p&gt;This demonstrates changing contrast, value, saturation, hue, color inversion, and threshold point operations.  Note that there is a bug with increasing value and increasing saturation which I never got around to fixing.&lt;/p&gt;
+&lt;script type="text/javascript" src="/static/js/005/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;script type="text/javascript" src="/static/js/005/jsimage.js"&gt;&lt;/script&gt; 
+&lt;script type="text/javascript" src="/static/js/005/colorspace.js"&gt;&lt;/script&gt; &lt;/p&gt;
+&lt;script type="text/javascript"&gt;
+
+    var IJS_PointOps; // make IJS_PointOps public so I can play with it in firebug more easily
+    $(document).ready( function() {
+
+        IJS_PointOps = new JSImage( "IJS_PointOps", "/static/images/005/bee.jpg" );
+    });
+
+&lt;/script&gt;
+
+&lt;canvas id="IJS_PointOps"&gt;your browser does not support canvas&lt;/canvas&gt;
+
+&lt;style type="text/css"&gt;
+#canvas-point-ops-tools-table input {
+    width: 20px;
+    height: 24px;
+}
+&lt;/style&gt;
+
+&lt;table cellpadding="4" cellspacing="0" id="canvas-point-ops-tools-table"&gt; 
+&lt;tr&gt; 
+    &lt;th&gt;Value&lt;/th&gt; 
+    &lt;th&gt;Contrast&lt;/th&gt; 
+    &lt;th&gt;Saturation&lt;/th&gt; 
+    &lt;th&gt;Hue&lt;/th&gt; 
+    &lt;th&gt;Invert&lt;/th&gt; 
+    &lt;th&gt;Threshold&lt;/th&gt; 
+&lt;/tr&gt;
+
+&lt;tr&gt; 
+    &lt;td&gt; 
+        &lt;!-- using onmousedown instead of onclick because it improves perceived performance.
+             definitely an accessibility problem, though --&gt; 
+        &lt;input type="image" src="/static/images/005/arrow_up.png" onmousedown="IJS_PointOps.value( IJS_PointOps.canvas, 10 )" /&gt; 
+        &lt;input type="image" src="/static/images/005/arrow_down.png" onmousedown="IJS_PointOps.value( IJS_PointOps.canvas, -10 )" /&gt; 
+    &lt;/td&gt; 
+    &lt;td&gt; 
+        &lt;input type="image" src="/static/images/005/arrow_up.png" onmousedown="IJS_PointOps.contrast( IJS_PointOps.canvas, 1.1)" /&gt; 
+        &lt;input type="image" src="/static/images/005/arrow_down.png" onmousedown="IJS_PointOps.contrast( IJS_PointOps.canvas, 0.9)" /&gt; 
+    &lt;/td&gt; 
+    &lt;td&gt; 
+        &lt;input type="image" src="/static/images/005/arrow_up.png" onmousedown="IJS_PointOps.saturation( IJS_PointOps.canvas, 25 )" /&gt; 
+        &lt;input type="image" src="/static/images/005/arrow_down.png" onmousedown="IJS_PointOps.saturation( IJS_PointOps.canvas, -25 )" /&gt; 
+    &lt;/td&gt; 
+    &lt;td&gt; 
+        &lt;input type="image" src="/static/images/005/arrow_up.png" onmousedown="IJS_PointOps.hue( IJS_PointOps.canvas, 20)" /&gt; 
+        &lt;input type="image" src="/static/images/005/arrow_down.png" onmousedown="IJS_PointOps.hue( IJS_PointOps.canvas, -20)" /&gt; 
+    &lt;/td&gt; 
+    &lt;td&gt; 
+        &lt;button type="button" onmousedown="IJS_PointOps.invert()"&gt;invert&lt;/button&gt; 
+    &lt;/td&gt; 
+    &lt;td&gt; 
+        &lt;button type="button" onmousedown="IJS_PointOps.threshold( IJS_PointOps.canvas, document.getElementById('t').value )"&gt;threshold&lt;/button&gt; 
+        &lt;br /&gt; 
+        &lt;input type="text" value="127" maxlength="3" size="3" id="t" /&gt; 
+    &lt;/td&gt; 
+&lt;/tr&gt; 
+
+&lt;/table&gt;</summary><category term="html5"></category><category term="canvas"></category><category term="color"></category><category term="image processing"></category><category term="jsimage"></category></entry><entry><title>HTML5 canvas area selection averaging</title><link href="http://beta.mwcz.org/2011/11/16/html5-canvas-area-selection-averaging/" rel="alternate"></link><updated>2011-11-16T18:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:beta.mwcz.org,2011-11-16:2011/11/16/html5-canvas-area-selection-averaging/</id><summary type="html">&lt;p&gt;This is a demo from late 2009.  It's an extension of the single-pixel &lt;a href="/2011/11/16/html5-canvas-eyedropper/"&gt;eyedropper&lt;/a&gt; I wrote previously.&lt;/p&gt;
+&lt;p&gt;It's powered by an early version of an old JS toolkit I wrote called JSImage.  The latest version is available at my &lt;a href="https://github.com/mwcz/jsimage"&gt;JSImage github repo&lt;/a&gt;.  Don't be fooled by the 2011 commits, those are just artifacts from svn-&amp;gt;git migration.  No guarantees that the histo's are actually correct. :)&lt;/p&gt;
+&lt;p&gt;I used an old version of a rectangular selection tool called marquee.  I believe it's still located &lt;a href="http://marqueetool.net/"&gt;here&lt;/a&gt; but I can't be totally sure that's the same project.&lt;/p&gt;
+&lt;p&gt;Click, drag, and taste the magic. :|&lt;/p&gt;
+&lt;canvas id="c0"&gt;
+    Your browser does not support the &amp;lt;canvas&amp;gt; element. Lame.
+&lt;/canvas&gt;
+
+&lt;style type="text/css"&gt;
+    canvas {
+        margin     : 0 auto;
+        outline    : 36px solid black;
+        margin     : 46px auto;
+        transition : 0.1168s all ease;
+        display    : block;
+        cursor     : crosshair;
+    }
+&lt;/style&gt;
+
+&lt;p&gt;&lt;link rel="stylesheet" type="text/css" href="/static/css/004/marker.css" /&gt;&lt;/p&gt;
+&lt;script type="text/javascript" src="/static/js/004/marquee/prototype_reduced.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript" src="/static/js/004/marquee/rectmarquee.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript" src="/static/js/004/JSImage.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+
+$(function() {
+
+    images0 = new JSImage( "c0", "/static/images/004/kazoo.png" );
+    setTimeout(function(){images0.draggable();},100); // enable the selection
+
+});
+
+&lt;/script&gt;</summary><category term="html5"></category><category term="canvas"></category><category term="color"></category><category term="jsimage"></category><category term="colorpal"></category></entry><entry><title>HTML5 canvas RGB histogram</title><link href="http://beta.mwcz.org/2011/11/16/html5-canvas-rgb-histogram/" rel="alternate"></link><updated>2011-11-16T17:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:beta.mwcz.org,2011-11-16:2011/11/16/html5-canvas-rgb-histogram/</id><summary type="html">&lt;p&gt;This is yet another demo from around 2009.  It's simple enough.  Click a
+button, draw an unbinned RGB histogram of the source image.&lt;/p&gt;
+&lt;p&gt;It's powered by an early version of an old JS toolkit I wrote called JSImage.
+The latest version is available at my &lt;a href="https://github.com/mwcz/jsimage"&gt;JSImage github
+repo&lt;/a&gt;.  Don't be fooled by the 2011 commits,
+those are just artifacts from svn-&amp;gt;git migration.  No guarantees that the
+histo's are actually correct. :)&lt;/p&gt;
+&lt;div class="panel panel-default"&gt;
+    &lt;div class="panel-heading"&gt;
+        &lt;b&gt;Original image&lt;/b&gt;
+    &lt;/div&gt;
+    &lt;div class="panel-body"&gt;
+        &lt;canvas id="c0"&gt;
+            Your browser does not support the &amp;lt;canvas&amp;gt; element. Lame.
+        &lt;/canvas&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;input type="button" onclick="draw_histo()" value="Draw histograms" /&gt;&lt;/p&gt;
+&lt;div class="row"&gt;
+    &lt;div class="col-xs-12 col-sm-4"&gt;
+    &lt;div class="panel panel-default"&gt;
+        &lt;div class="panel-heading"&gt;
+            &lt;b&gt;Red&lt;/b&gt;
+        &lt;/div&gt;
+        &lt;div class="panel-body"&gt;
+            &lt;canvas class="img-responsive" id="cr"&gt;
+                Your browser does not support the &amp;lt;canvas&amp;gt; element. Lame.
+            &lt;/canvas&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-xs-12 col-sm-4"&gt;
+        &lt;div class="panel panel-default"&gt;
+            &lt;div class="panel-heading"&gt;
+                &lt;b&gt;Green&lt;/b&gt;
+            &lt;/div&gt;
+            &lt;div class="panel-body"&gt;
+                &lt;canvas class="img-responsive" id="cg"&gt;
+                    Your browser does not support the &amp;lt;canvas&amp;gt; element. Lame.
+                &lt;/canvas&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-xs-12 col-sm-4"&gt;
+        &lt;div class="panel panel-default"&gt;
+            &lt;div class="panel-heading"&gt;
+                &lt;b&gt;Blue&lt;/b&gt;
+            &lt;/div&gt;
+            &lt;div class="panel-body"&gt;
+                &lt;canvas class="img-responsive" id="cb"&gt;
+                    Your browser does not support the &amp;lt;canvas&amp;gt; element. Lame.
+                &lt;/canvas&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p class="alert alert-info"&gt;I'm pretty sure the results are wrong, but here, years later, I can't be bothered to fix it. ;)&lt;/p&gt;
+
+&lt;script type="text/javascript" src="/static/js/003/JSImage.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+
+var draw_histo;
+$(function () {
+
+    var images0 = new JSImage( "c0", "/static/images/003/kazoo.png" );
+    var imagesr = new JSImage( "cr", "/static/images/003/kazoo.png" );
+    var imagesg = new JSImage( "cg", "/static/images/003/kazoo.png" );
+    var imagesb = new JSImage( "cb", "/static/images/003/kazoo.png" );
+
+    draw_histo = function () {
+
+        /**
+         * Color histo canvases the color of their histo
+         */
+        images0.histo( imagesr.canvas, 'r', 'rgba(255,0,0,0.9)', 'rgba(0,0,0,0.8)' );
+        images0.histo( imagesg.canvas, 'g', 'rgba(0,200,0,0.9)', 'rgba(0,0,0,0.8)' );
+        images0.histo( imagesb.canvas, 'b', 'rgba(0,0,200,0.9)', 'rgba(0,0,0,0.8)' );
+
+    };
+
+
+});
+&lt;/script&gt;</summary><category term="html5"></category><category term="canvas"></category><category term="color"></category><category term="jsimage"></category></entry><entry><title>HTML5 canvas 3D pixel array</title><link href="http://beta.mwcz.org/2011/11/16/html5-canvas-3d-pixel-array/" rel="alternate"></link><updated>2011-11-16T16:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:beta.mwcz.org,2011-11-16:2011/11/16/html5-canvas-3d-pixel-array/</id><summary type="html">&lt;p&gt;This is another demo from 2009-ish.  When I started experimenting with canvas, I felt uncomfortable with the 1-dimensionality of &lt;a href="https://developer.mozilla.org/en/DOM/CanvasPixelArray"&gt;CanvasPixelArray&lt;/a&gt;.  I wrote this script to convert it into a more logical format: X by Y by RGBA.  Let me rephrase that.  By "more logical", I mean "more logical, &lt;em&gt;to me&lt;/em&gt;, &lt;em&gt;at the time&lt;/em&gt;).  1D is fine, and I can't think of any use for this script.  But, nonetheless, here it is, including the original description.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;
+
+$(function() {
+    var c;
+    var cnvs;
+
+    function draw() {
+
+        cnvs = document.getElementById("c");
+        tmpl = document.getElementById("t");
+
+        if( cnvs.getContext) { // Check for canvas support
+
+            c = cnvs.getContext('2d');
+            t = tmpl.getContext('2d');
+            var color = document.getElementById("color");
+
+            var images = new Image();
+
+            images.onload = function() {
+                cnvs.width = images.width;
+                cnvs.height = images.height; // resize to fit image
+                tmpl.width = images.width;
+                tmpl.height = images.height; // resize to fit image
+                c.drawImage( images, 0, 0 );
+            }
+            images.src = "/static/images/002/kazoo.png";
+
+            getpixelarray = function() {
+                var pixarray = new Array();
+                var imagesdata = c.getImageData( 0, 0, cnvs.width, cnvs.height ).data;
+
+                /**
+                 * getImageData() returns a one-dimensional array where each element represents,
+                 * one subpixel.  So a full set of pixels looks like this:
+                 *
+                 *      (R, G, B, A, R, G, B, A, R, G, B, A, ...)
+                 *
+                 * Ugly, right?  Yeah.  So I'm translating them into a 2D array where the origin
+                 * (sadly) is at the top left.
+                 *
+                 * When doing the translation, I'm also starting at the bottom right, so there
+                 * only has to be ONE array enlarge operation each for the X and Y arrays.
+                 */
+
+                // build empty pix array.  we'll fill it later
+                //console.time("build empty array");
+                for( var x = cnvs.width-1; x &gt;= 0; x-- ) {
+
+                    pixarray[x] = new Array(); // insert new vertical array
+
+                    for( var y = cnvs.height-1; y &gt;= 0; y-- ) {
+
+                        pixarray[x][y] = new Array(0,0,0,0);
+
+                    }
+
+                }
+
+
+                /**
+                 * Now we fill up the pix array with real values.
+                 * We don't REALLY need the alpha channel, but I'm including it
+                 * just in case a use arises for it in the future.  Likely.
+                 */
+
+                for( var i = 0; i &lt; imagesdata.length-3; i+=4 ) {
+                    var x = parseInt( parseInt(i/4) % ( cnvs.width ) );
+                    var y = parseInt( parseInt(i/4) / ( cnvs.width ) );
+
+                    pixarray[x][y][0] = imagesdata[i];
+                    pixarray[x][y][1] = imagesdata[i+1];
+                    pixarray[x][y][2] = imagesdata[i+2];
+                    pixarray[x][y][3] = imagesdata[i+3];
+
+                }
+
+
+                for( var y = 0; y &lt; cnvs.height; y++ ) { // loop over y
+                    for( var x = 0; x &lt; cnvs.width; x++ ) { // loop over x
+                        t.fillStyle = "rgba(" + pixarray[x][y][0] + "," + pixarray[x][y][1] + "," + pixarray[x][y][2] + "," + pixarray[x][y][3] + ")";
+                        t.fillRect(x, y, 1, 1);
+                    }
+                }
+
+                return pixarray;
+            }
+
+
+        }
+    }
+    draw();
+
+});
+&lt;/script&gt;
+
+&lt;h1&gt;canvas pixarray&lt;/h1&gt;
+&lt;p&gt;After loading an image file into a &amp;lt;canvas&amp;gt; element, you can retrieve its
+pixels with &lt;code&gt;getImageData()&lt;/code&gt;.  The problem (not really a problem, more an
+inconvenience) is that the array of pixels is one-dimensional.  &lt;code&gt;getImageData&lt;/code&gt; returns pixels in the following format:&lt;/p&gt;
+&lt;pre&gt;
+( R&lt;sub&gt;0&lt;/sub&gt;, G&lt;sub&gt;0&lt;/sub&gt;, B&lt;sub&gt;0&lt;/sub&gt;, A&lt;sub&gt;1&lt;/sub&gt;, R&lt;sub&gt;1&lt;/sub&gt;, G&lt;sub&gt;1&lt;/sub&gt;, B&lt;sub&gt;1&lt;/sub&gt;, A&lt;sub&gt;1&lt;/sub&gt;, ... )
+&lt;/pre&gt;
+
+&lt;p&gt;As a human, that's really tough to work with, so this script converts that to a more
+logical 3D array (X by Y by RGBA)&lt;/p&gt;
+&lt;p&gt;&lt;input type="button" value="Convert 1D pixel array -&gt; 3D pixel array" onclick="getpixelarray();" /&amp;gt;&lt;/p&gt;
+&lt;div class="row"&gt;
+    &lt;div class="col-xs-6"&gt;
+        &lt;div class="panel panel-default"&gt;
+            &lt;div class="panel-heading"&gt;
+                &lt;b&gt;
+                    Image drawn directly from image file
+                &lt;/b&gt;
+            &lt;/div&gt;
+            &lt;div class="panel-body"&gt;
+                &lt;canvas class="img-responsive" id="c" width="650" height="250"&gt;
+                    Your browser does not support the &amp;lt;canvas&amp;gt; element.
+                    Lame.
+                &lt;/canvas&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-xs-6"&gt;
+        &lt;div class="panel panel-default"&gt;
+            &lt;div class="panel-heading"&gt;
+                &lt;b&gt;
+                    Image drawn from the 3D image array
+                &lt;/b&gt;
+            &lt;/div&gt;
+            &lt;div class="panel-body"&gt;
+                &lt;canvas class="img-responsive" id="t" width="650" height="250"&gt;
+                    Your browser does not support the &amp;lt;canvas&amp;gt; element.
+                    Lame.
+                &lt;/canvas&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</summary><category term="html5"></category><category term="canvas"></category><category term="color"></category><category term="colorpal"></category></entry><entry><title>HTML5 Canvas eyedropper</title><link href="http://beta.mwcz.org/2011/11/16/html5-canvas-eyedropper/" rel="alternate"></link><updated>2011-11-16T15:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:beta.mwcz.org,2011-11-16:2011/11/16/html5-canvas-eyedropper/</id><summary type="html">&lt;style type="text/css"&gt;
+    canvas {
+        margin        : 0 auto;
+        border-width  : 36px;
+        border-style  : solid;
+        border-radius : 16px;
+        transition    : 0.1168s all ease;
+        margin        : 0 auto;
+        display       : block;
+        cursor        : crosshair;
+    }
+&lt;/style&gt;
+
+&lt;script type="text/javascript"&gt;
+
+$(function() {
+var c;
+var cnvs = document.getElementById("c");
+
+if( cnvs.getContext) { // Check for canvas support
+// DRAW FUN STUFF!
+
+    c = cnvs.getContext('2d');
+    var color = document.getElementById("color");
+    var colorcode = document.getElementById("colorcode");
+
+    var images = new Image();
+
+    images.onload = function() {
+        cnvs.width = images.width;cnvs.height = images.height; // resize to fit image
+        c.drawImage( images, 0, 0 );
+    }
+    images.src = "/static/images/001/kazoo.png";
+
+    pixel = function(e) {
+
+        // find the element's position
+        var x = 0;
+        var y = 0;
+        var o = cnvs;
+        do {
+            x += o.offsetLeft;
+            y += o.offsetTop;
+        } while (o = o.offsetParent);
+
+        x = e.pageX - x - 36; // 36 = border width
+        y = e.pageY - y - 36; // 36 = border width
+        var imagesdata = c.getImageData( x, y, 1, 1 );
+        var new_color = [ imagesdata.data[0], imagesdata.data[1], imagesdata.data[2] ];
+        cnvs.style.borderColor = "rgb("+new_color+")";
+        colorcode.innerHTML = "rgb("+new_color+")";
+    }
+
+    cnvs.onmousedown = function(e) {
+        cnvs.onmousemove = pixel; // fire pixel() while user is dragging
+        cnvs.onclick = pixel; // only so it will still fire if user doesn't drag at all
+    }
+
+    cnvs.onmouseup = function() {
+        cnvs.onmousemove = null;
+    }
+
+}
+});
+
+&lt;/script&gt;
+
+&lt;p&gt;This is an old demo I made of an &lt;a href="http://en.wikipedia.org/wiki/Canvas_element"&gt;HTML5 canvas&lt;/a&gt; eyedropper.  Circa 2009, I believe.  Just click and drag on the image to see it in action.&lt;/p&gt;
+&lt;p&gt;&lt;span id="colorcode"&gt;rgb(0,0,0)&lt;/span&gt;&lt;/p&gt;
+&lt;canvas id="c"&gt;Sorry, in order to view this demo you need a Web browser that supports HTML5 canvas.&lt;/canvas&gt;
+
+&lt;p&gt;It's a pretty simple script, and works by declaring this function which handles onclick and ondrag events from the canvas.  cnvs is the canvas element, and c is the canvas's 2D rendering context object.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;pixel&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="c1"&gt;// calculate the x and y coordinates of the cursor&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;imagesdata&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;c&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getImageData&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;new_color&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt; &lt;span class="nx"&gt;imagesdata.data&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                      &lt;span class="nx"&gt;imagesdata&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                      &lt;span class="nx"&gt;imagesdata&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="p"&gt;];&lt;/span&gt;
+    &lt;span class="nx"&gt;color&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;style&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;background&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;rgb(&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nx"&gt;new_color&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;That's just a summary; the function actually does a little more than that.  Take a look at the source for this page if you're interested.&lt;/p&gt;</summary><category term="html5"></category><category term="canvas"></category><category term="color"></category><category term="colorpal"></category></entry><entry><title>Opcode patterns 70% finished</title><link href="http://beta.mwcz.org/2011/10/13/opcode-patterns-70-finished/" rel="alternate"></link><updated>2011-10-13T22:27:50-04:00</updated><author><name>mwcz</name></author><id>tag:beta.mwcz.org,2011-10-13:2011/10/13/opcode-patterns-70-finished/</id><summary type="html">&lt;p&gt;genlut.py is really filling out.  It generates the LUT for all 68k opcodes (68000 only), and I'm about 70% done.  77 down, 34 to go.&lt;/p&gt;
+&lt;p&gt;The OPCODES dict defines the first two bytes of each opcode, both static bits and operands.  The operand strings act as keys into the PATTERNS struct, which contains all possible values for each operand.&lt;/p&gt;
+&lt;p&gt;The recursive function gen() is fed an opcode pattern which may contain operand strings as well as static bits.  Some operand patterns contain other operand patterns, so gen() keeps recursing until all operand patterns are gone.  Once a set of totally static bits has been created, those bits are added to INSTRUCTIONS, along with the name of the opcode.&lt;/p&gt;
+&lt;p&gt;The PATTERNS, OPCODES, and INSTRUCTIONS dicts are all named poorly, and the whole solution  isn't ultra-elegant, but it does follow the structure of the 68k PRM pretty intuitively and is easy to edit.  Once it's complete, I should never need to run it again.&lt;/p&gt;
+&lt;p&gt;(This post was copied from my old &lt;a href="http://aejs.blogspot.com/"&gt;AEJS blog&lt;/a&gt;)&lt;/p&gt;</summary><category term="aejs"></category><category term="html5"></category><category term="javascript"></category><category term="amiga"></category></entry><entry><title>LUT</title><link href="http://beta.mwcz.org/2011/09/22/lut/" rel="alternate"></link><updated>2011-09-22T22:27:50-04:00</updated><author><name>mwcz</name></author><id>tag:beta.mwcz.org,2011-09-22:2011/09/22/lut/</id><summary type="html">&lt;p&gt;Decoding is easy. Decoding requires a lot of typing. (I am starting to believe this is true of ever aspect of interpreted emulation...)&lt;/p&gt;
+&lt;p&gt;For the AEJS decoder, I am creating a &lt;a href="http://en.wikipedia.org/wiki/Lookup_table"&gt;look-up table&lt;/a&gt; with every possible pattern for each instruction. It was my first idea, but I initially discarded it as "wasteful and inelegant". Later, I accepted it as "really fast".&lt;/p&gt;
+&lt;p&gt;I'm generating a large set of bit patterns that map to 68k opcodes, like so:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="mo"&gt;0100101011111010&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;BGND&lt;/span&gt;
+&lt;span class="mo"&gt;0100101011111100&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;ILLEGAL&lt;/span&gt;
+&lt;span class="mo"&gt;0100111001110000&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;RESET&lt;/span&gt;
+&lt;span class="mo"&gt;0100111001110001&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;NOP&lt;/span&gt;
+&lt;span class="mo"&gt;0100111001110010&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;STOP&lt;/span&gt;
+&lt;span class="mo"&gt;0100111001110011&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;RTE&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The current code can be found &lt;a href="https://github.com/mwcz/AEJS/blob/master/src/genlut.py"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Yes, it's written in Python and yes, AEJS is a JavaScript project.  There's a reason.  I see two approaches to generating the LUT (look-up table).&lt;/p&gt;
+&lt;h2&gt;Generate the LUT on launch (dynamic)&lt;/h2&gt;
+&lt;p&gt;This has the advantage of being easier to debug.  It also might be easier if I ever expand the emulator to other chips, like the &lt;a href="http://en.wikipedia.org/wiki/Motorola_68020"&gt;68020&lt;/a&gt; or &lt;a href="http://en.wikipedia.org/wiki/Motorola_68030"&gt;68030&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It currently takes about 0.466 seconds on my machine to generate ~12,000 patterns.  That means it should take less than 2.5s to generate the full LUT.&lt;/p&gt;
+&lt;h2&gt;Generate the LUT pre-launch (static)&lt;/h2&gt;
+&lt;p&gt;This is what I'm currently working toward.  genlut.py is currently generating about 12,000 opcode bit patterns out of a max of I'm-not-sure-yet-but-slightly-less-than-65,536.&lt;/p&gt;
+&lt;p&gt;With this method, I would run genlut.py one final time, pipe the output into a static JS file, and regex the contents into a JS array.  The LUT would never have to be generated again, and would exist happily forever-after.&lt;/p&gt;
+&lt;p&gt;Cons: relies upon the LUT being 100% correct, as any errors would be hard to debug, and would require another run of genlut.py to fix.&lt;/p&gt;
+&lt;p&gt;Pros: AEJS will launch faster without having to generate the LUT each time.  If I can verify that the LUT is 100% correct, this is obviously the right approach.&lt;/p&gt;
+&lt;p&gt;I'll continue on with the static method for now, and odds are I'll stick with it.   2.5s is too big a price to pay.&lt;/p&gt;
+&lt;p&gt;Back to work:&lt;/p&gt;
+&lt;p&gt;&lt;a href="/static/images/013/workarea.png"&gt;&lt;static/images class="grid_7" src="/static/images/013/workarea.png" alt=":)" title="" /&gt;&lt;/a&gt;
+&lt;div class="clear"&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;(This post was copied from my old &lt;a href="http://aejs.blogspot.com/"&gt;AEJS blog&lt;/a&gt;)&lt;/p&gt;</summary><category term="aejs"></category><category term="html5"></category><category term="javascript"></category><category term="amiga"></category></entry><entry><title>Introducing AEJS</title><link href="http://beta.mwcz.org/2011/09/20/introducing-aejs/" rel="alternate"></link><updated>2011-09-20T22:27:50-04:00</updated><author><name>mwcz</name></author><id>tag:beta.mwcz.org,2011-09-20:2011/09/20/introducing-aejs/</id><summary type="html">&lt;p&gt;Introducing AEJS, an Amiga emulator written in JavaScript.  Wait, wording it like that makes it sound like it's finished.  It isn't.  It won't be for a long time.  AEJS is just a hobby, and will never hold a candle to UAE.&lt;/p&gt;
+&lt;p&gt;Why the Amiga?  Given that this is my first emulator, it would have been much easier to go with a 6502 or 8080 instead, but I didn't grow up with those; I grew up with a 68k powering an Amiga 500.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://starringthecomputer.com/feature.php?f=122"&gt;&lt;static/images src="/static/images/012/stepfather_iii_amiga_500_2.jpg" alt="Amiga 500 in Stepfather III" title="" /&gt;&lt;/p&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Why JavaScript?  Fabrice Bellard didn't make any excuses for writing an x86 emulator in JavaScript, so I won't either.&lt;/p&gt;
+&lt;p&gt;I'll be using this blog to share updates on the project.  Progress, problems, etc.  Anyone with interest or knowledge of 68k arch or Amiga chipsets is welcome to get involved.&lt;/p&gt;
+&lt;p&gt;Next up: completing the code to generate an opcode lookup table.&lt;/p&gt;
+&lt;p&gt;(This post was copied from my old &lt;a href="http://aejs.blogspot.com/"&gt;AEJS blog&lt;/a&gt;)&lt;/p&gt;</summary><category term="aejs"></category><category term="html5"></category><category term="javascript"></category><category term="amiga"></category></entry></feed>

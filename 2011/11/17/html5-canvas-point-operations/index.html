@@ -17,21 +17,22 @@
             <meta property="og:description" content="This is the last demo I made using JSImage. I created it some time around 2009-2010. At the time, I had checked out an imaging book from my university's library at least ten times. Most of the exercises in that book I implemented in Python using PIL, but point ..."/>
 
 
-    <link href="http://beta.mwcz.org/theme/css/styles.min.css?38d47489" rel="stylesheet">
+        <link href="http://beta.mwcz.org/theme/css/styles.min.css?394abe1a" rel="stylesheet">
+
 
 
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="http://code.jquery.com/jquery.js"></script>
 
         <link href="http://beta.mwcz.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="clayto.com ATOM Feed"/>
+              title="mwcz.org ATOM Feed"/>
         <link href="http://beta.mwcz.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
-              title="clayto.com RSS Feed"/>
+              title="mwcz.org RSS Feed"/>
 
 
 </head>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -40,19 +41,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="http://beta.mwcz.org" class="navbar-brand">clayto.com</a>
+            <a href="http://beta.mwcz.org" class="navbar-brand">mwcz.org</a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                         <li class="active">
-                            <a href="http://beta.mwcz.org/blog/">Blog</a>
+                            <a href="http://beta.mwcz.org/posts/">Posts</a>
                         </li>
-                        <li >
-                            <a href="http://beta.mwcz.org/photos/">Photos</a>
-                        </li>
-                        <li >
-                            <a href="http://beta.mwcz.org/projects/">Projects</a>
-                        </li>
+                        <li><a href="http://beta.mwcz.org/projects/">
+                            Projects
+                        </a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="http://beta.mwcz.org/archives/"><i class="icon-th-list"></i>Archives</a></li>
@@ -62,9 +60,7 @@
     </div>
 </nav>
 <!-- /.navbar -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12">
+<main role="main" class="container clayto-container">
     <section id="content">
         <article>
             <header class="page-header">
@@ -77,35 +73,13 @@
                 </h1>
             </header>
             <div class="entry-content">
-                <div class="panel">
-                    <div class="panel-body">
-<footer class="post-info">
-    <span class="label label-default">Date</span>
-    <span class="published">
-        <i class="icon-calendar"></i>Thu 17 November 2011
-    </span>
-
-
-
-<span class="label label-default">Tags</span>
-	<a href="http://beta.mwcz.org/tag/html5/">html5</a>
-        /
-	<a href="http://beta.mwcz.org/tag/canvas/">canvas</a>
-        /
-	<a href="http://beta.mwcz.org/tag/color/">color</a>
-        /
-	<a href="http://beta.mwcz.org/tag/image-processing/">image processing</a>
-        /
-	<a href="http://beta.mwcz.org/tag/jsimage/">jsimage</a>
-</footer><!-- /.post-info -->                    </div>
-                </div>
                 <p>This is the last demo I made using <a href="https://github.com/mwcz/jsimage">JSImage</a>.  I created it some time around 2009-2010.  At the time, I had checked out an <a href="http://www.amazon.com/Digital-Image-Processing-Algorithmic-Introduction/dp/1846283795">imaging book</a> from my university's library at least ten times.  Most of the exercises in that book I implemented in Python using <a href="http://www.pythonware.com/products/pil/">PIL</a>, but point operations were simple enough to port to JavaScript quickly.</p>
 <p>Point operations are image alterations that affect all pixels equally.  Other operations, like blurring for example, each result pixel depends on adjacent pixels.</p>
 <p>This demonstrates changing contrast, value, saturation, hue, color inversion, and threshold point operations.  Note that there is a bug with increasing value and increasing saturation which I never got around to fixing.</p>
-<script type="text/javascript" src="/js/005/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/005/jquery.min.js"></script>
 
-<p><script type="text/javascript" src="/js/005/jsimage.js"></script> 
-<script type="text/javascript" src="/js/005/colorspace.js"></script> </p>
+<p><script type="text/javascript" src="/static/js/005/jsimage.js"></script> 
+<script type="text/javascript" src="/static/js/005/colorspace.js"></script> </p>
 <script type="text/javascript">
 
     var IJS_PointOps; // make IJS_PointOps public so I can play with it in firebug more easily
@@ -166,8 +140,25 @@
 
 </table>
             </div>
+
             <!-- /.entry-content -->
-    <hr />
+<footer class="clayto-post-info alert">
+    <span class="published">
+        Published on 2011-11-17 and filed under 
+    </span>
+
+
+
+	<a href="http://beta.mwcz.org/tag/html5/">html5</a>
+        /
+	<a href="http://beta.mwcz.org/tag/canvas/">canvas</a>
+        /
+	<a href="http://beta.mwcz.org/tag/color/">color</a>
+        /
+	<a href="http://beta.mwcz.org/tag/image-processing/">image processing</a>
+        /
+	<a href="http://beta.mwcz.org/tag/jsimage/">jsimage</a>
+</footer><!-- /.post-info -->    <hr />
     <section class="comments" id="comments">
         <h2>Comments</h2>
         <div id="disqus_thread"></div>
@@ -191,12 +182,46 @@
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
     </section>
+<section class="clayto-related-posts" id="clayto-related-posts">
+    <h2>Might these be of interest?</h2>
+
+        <article>
+            <h2><a href="http://beta.mwcz.org/2011/11/16/html5-canvas-rgb-histogram/">HTML5 canvas RGB histogram</a></h2>
+            <div class="summary"><p>This is yet another demo from around 2009.  It's simple enough.  Click a
+button, draw an unbinned RGB histogram of the source image.</p>
+<p>It's powered by an early version of an old JS toolkit I wrote called JSImage.
+The latest version is available at my <a href="https://github.com/mwcz/jsimage">JSImage github
+repo ...</a></p>
+                <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/2011/11/16/html5-canvas-rgb-histogram/">more ...</a>
+            </div>
         </article>
+        <article>
+            <h2><a href="http://beta.mwcz.org/2011/11/16/html5-canvas-area-selection-averaging/">HTML5 canvas area selection averaging</a></h2>
+            <div class="summary"><p>This is a demo from late 2009.  It's an extension of the single-pixel <a href="/2011/11/16/html5-canvas-eyedropper/">eyedropper</a> I wrote previously.</p>
+<p>It's powered by an early version of an old JS toolkit I wrote called JSImage.  The latest version is available at my <a href="https://github.com/mwcz/jsimage">JSImage github repo</a>.  Don't be fooled by the ...</p>
+                <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/2011/11/16/html5-canvas-area-selection-averaging/">more ...</a>
+            </div>
+        </article>
+        <article>
+            <h2><a href="http://beta.mwcz.org/2011/11/17/html5-tool-for-creating-color-palettes-from-an-image/">HTML5 tool for creating color palettes from an image</a></h2>
+            <div class="summary"><p>For an <a href="http://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction">HCI</a> class project in Fall 2009, I pulled together some of my previous demos to make this integrated tool.  It was just a prototype, and I haven't taken the time to get the code set up and working on this blog.  If anyone is interested, I can ...</p>
+                <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/2011/11/17/html5-tool-for-creating-color-palettes-from-an-image/">more ...</a>
+            </div>
+        </article>
+        <article>
+            <h2><a href="http://beta.mwcz.org/2011/11/16/html5-canvas-eyedropper/">HTML5 Canvas eyedropper</a></h2>
+            <div class="summary"><p>An HTML5 Canvas eyedropper.</p>
+                <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/2011/11/16/html5-canvas-eyedropper/">more ...</a>
+            </div>
+        </article>
+</section>        </article>
     </section>
 
-        </div>
-    </div>
-</div>
+</main>
+
+<footer>
+    <div class="navbar-default navbar-static-top clayto-footer"></div>
+</footer>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="http://beta.mwcz.org/theme/js/bootstrap.min.js"></script>

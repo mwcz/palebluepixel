@@ -17,21 +17,22 @@
             <meta property="og:description" content="This is Bouncey. It's a simple physics demo I wrote in early/mid 2011, with some contributions and bugfixes from my good friend Greg Gardner. The description for bouncey's github repo is: "a buggy, rudimentary, just-for-fun javascript physics simulator." It covers Newton's laws of motion. #cnvs { margin ..."/>
 
 
-    <link href="http://beta.mwcz.org/theme/css/styles.min.css?38d47489" rel="stylesheet">
+        <link href="http://beta.mwcz.org/theme/css/styles.min.css?394abe1a" rel="stylesheet">
+
 
 
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="http://code.jquery.com/jquery.js"></script>
 
         <link href="http://beta.mwcz.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="clayto.com ATOM Feed"/>
+              title="mwcz.org ATOM Feed"/>
         <link href="http://beta.mwcz.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
-              title="clayto.com RSS Feed"/>
+              title="mwcz.org RSS Feed"/>
 
 
 </head>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -40,19 +41,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="http://beta.mwcz.org" class="navbar-brand">clayto.com</a>
+            <a href="http://beta.mwcz.org" class="navbar-brand">mwcz.org</a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                         <li class="active">
-                            <a href="http://beta.mwcz.org/blog/">Blog</a>
+                            <a href="http://beta.mwcz.org/posts/">Posts</a>
                         </li>
-                        <li >
-                            <a href="http://beta.mwcz.org/photos/">Photos</a>
-                        </li>
-                        <li >
-                            <a href="http://beta.mwcz.org/projects/">Projects</a>
-                        </li>
+                        <li><a href="http://beta.mwcz.org/projects/">
+                            Projects
+                        </a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="http://beta.mwcz.org/archives/"><i class="icon-th-list"></i>Archives</a></li>
@@ -62,9 +60,7 @@
     </div>
 </nav>
 <!-- /.navbar -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12">
+<main role="main" class="container clayto-container">
     <section id="content">
         <article>
             <header class="page-header">
@@ -77,28 +73,6 @@
                 </h1>
             </header>
             <div class="entry-content">
-                <div class="panel">
-                    <div class="panel-body">
-<footer class="post-info">
-    <span class="label label-default">Date</span>
-    <span class="published">
-        <i class="icon-calendar"></i>Thu 17 November 2011
-    </span>
-
-
-
-<span class="label label-default">Tags</span>
-	<a href="http://beta.mwcz.org/tag/html5/">html5</a>
-        /
-	<a href="http://beta.mwcz.org/tag/canvas/">canvas</a>
-        /
-	<a href="http://beta.mwcz.org/tag/physics/">physics</a>
-        /
-	<a href="http://beta.mwcz.org/tag/javascript/">javascript</a>
-        /
-	<a href="http://beta.mwcz.org/tag/bouncey/">bouncey</a>
-</footer><!-- /.post-info -->                    </div>
-                </div>
                 <p>This is Bouncey.  It's a simple physics demo I wrote in early/mid 2011, with some contributions and bugfixes from my good friend Greg Gardner.</p>
 <p>The description for <a href="https://github.com/mwcz/bouncey">bouncey's github repo</a> is:</p>
 <p><quote>"a buggy, rudimentary, just-for-fun javascript physics simulator."</quote></p>
@@ -114,7 +88,7 @@
 }
 </style>
 
-<script type="text/javascript" src="/js/007/bouncey.js"></script>
+<script type="text/javascript" src="/static/js/007/bouncey.js"></script>
 
 <script type="text/javascript">
 
@@ -174,8 +148,25 @@ window.onload = function() {
 
 <p>An updated (but less colorful) version of bouncey is available <a href="{008%20-%20bouncey%20returns.md}" title="newer bouncey">here</a>.</p>
             </div>
+
             <!-- /.entry-content -->
-    <hr />
+<footer class="clayto-post-info alert">
+    <span class="published">
+        Published on 2011-11-17 and filed under 
+    </span>
+
+
+
+	<a href="http://beta.mwcz.org/tag/html5/">html5</a>
+        /
+	<a href="http://beta.mwcz.org/tag/canvas/">canvas</a>
+        /
+	<a href="http://beta.mwcz.org/tag/physics/">physics</a>
+        /
+	<a href="http://beta.mwcz.org/tag/javascript/">javascript</a>
+        /
+	<a href="http://beta.mwcz.org/tag/bouncey/">bouncey</a>
+</footer><!-- /.post-info -->    <hr />
     <section class="comments" id="comments">
         <h2>Comments</h2>
         <div id="disqus_thread"></div>
@@ -199,12 +190,54 @@ window.onload = function() {
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
     </section>
+<section class="clayto-related-posts" id="clayto-related-posts">
+    <h2>Might these be of interest?</h2>
+
+        <article>
+            <h2><a href="http://beta.mwcz.org/2011/11/17/bouncey-returns-more-canvas-physics/">Bouncey returns - more canvas physics</a></h2>
+            <div class="summary"><p>This is a slightly upgraded version of the physics demo I showed in my <a href="/2011/11/17/bouncey---canvas-physics/">last post</a>.</p>
+<p>It is still...</p>
+<p><quote>"a buggy, rudimentary, just-for-fun javascript physics simulator."</quote></p>
+<p>This version has:</p>
+<ul>
+<li>pre-defined initial states</li>
+<li>gravity</li>
+<li>friction</li>
+</ul>
+<p>It still has the "clinging" bug.  I know how to fix it, but didn't deem ...</p>
+                <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/2011/11/17/bouncey-returns-more-canvas-physics/">more ...</a>
+            </div>
         </article>
+        <article>
+            <h2><a href="http://beta.mwcz.org/2011/11/16/html5-canvas-rgb-histogram/">HTML5 canvas RGB histogram</a></h2>
+            <div class="summary"><p>This is yet another demo from around 2009.  It's simple enough.  Click a
+button, draw an unbinned RGB histogram of the source image.</p>
+<p>It's powered by an early version of an old JS toolkit I wrote called JSImage.
+The latest version is available at my <a href="https://github.com/mwcz/jsimage">JSImage github
+repo ...</a></p>
+                <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/2011/11/16/html5-canvas-rgb-histogram/">more ...</a>
+            </div>
+        </article>
+        <article>
+            <h2><a href="http://beta.mwcz.org/2011/11/17/html5-canvas-point-operations/">HTML5 canvas point operations</a></h2>
+            <div class="summary"><p>This is the last demo I made using <a href="https://github.com/mwcz/jsimage">JSImage</a>.  I created it some time around 2009-2010.  At the time, I had checked out an <a href="http://www.amazon.com/Digital-Image-Processing-Algorithmic-Introduction/dp/1846283795">imaging book</a> from my university's library at least ten times.  Most of the exercises in that book I implemented in Python using <a href="http://www.pythonware.com/products/pil/">PIL</a>, but point ...</p>
+                <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/2011/11/17/html5-canvas-point-operations/">more ...</a>
+            </div>
+        </article>
+        <article>
+            <h2><a href="http://beta.mwcz.org/2012/01/16/colorpal-alpha/">ColorPal Alpha</a></h2>
+            <div class="summary"><p>Introducing ColorPal! <img alt="ColorPal screenshot" src="/static/images/015/ss.png" /></p>
+                <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/2012/01/16/colorpal-alpha/">more ...</a>
+            </div>
+        </article>
+</section>        </article>
     </section>
 
-        </div>
-    </div>
-</div>
+</main>
+
+<footer>
+    <div class="navbar-default navbar-static-top clayto-footer"></div>
+</footer>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="http://beta.mwcz.org/theme/js/bootstrap.min.js"></script>

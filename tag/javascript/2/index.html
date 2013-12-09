@@ -3,7 +3,7 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title>clayto.com - javascript</title>
+    <title>mwcz.org - javascript</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -12,26 +12,27 @@
     <!-- Open Graph tags -->
 
             <meta property="og:type" content="website"/>
-            <meta property="og:title" content="clayto.com"/>
+            <meta property="og:title" content="mwcz.org"/>
             <meta property="og:url" content="http://beta.mwcz.org"/>
-            <meta property="og:description" content="clayto.com"/>
+            <meta property="og:description" content="mwcz.org"/>
 
 
-    <link href="http://beta.mwcz.org/theme/css/styles.min.css?800219f0" rel="stylesheet">
+        <link href="http://beta.mwcz.org/theme/css/styles.min.css?394abe1a" rel="stylesheet">
+
 
 
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="http://code.jquery.com/jquery.js"></script>
 
         <link href="http://beta.mwcz.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="clayto.com ATOM Feed"/>
+              title="mwcz.org ATOM Feed"/>
         <link href="http://beta.mwcz.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
-              title="clayto.com RSS Feed"/>
+              title="mwcz.org RSS Feed"/>
 
 
 </head>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -40,19 +41,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="http://beta.mwcz.org" class="navbar-brand">clayto.com</a>
+            <a href="http://beta.mwcz.org" class="navbar-brand">mwcz.org</a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                         <li >
-                            <a href="http://beta.mwcz.org/blog/">Blog</a>
+                            <a href="http://beta.mwcz.org/posts/">Posts</a>
                         </li>
-                        <li >
-                            <a href="http://beta.mwcz.org/photos/">Photos</a>
-                        </li>
-                        <li >
-                            <a href="http://beta.mwcz.org/projects/">Projects</a>
-                        </li>
+                        <li><a href="http://beta.mwcz.org/projects/">
+                            Projects
+                        </a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="http://beta.mwcz.org/archives/"><i class="icon-th-list"></i>Archives</a></li>
@@ -62,40 +60,16 @@
     </div>
 </nav>
 <!-- /.navbar -->
-<div class="container">
+<main role="main" class="container clayto-container">
+
     <div class="row">
-        <div class="col-lg-12">
-    <div class="row">
-                <article class="col-md-4 col-sm-6 col-lg-4">
-                    <h2><a href="http://beta.mwcz.org/blog/2012/01/16/colorpal-alpha/">ColorPal Alpha</a></h2>
-                    <div class="summary"><p>Introducing ColorPal!</p>
-<p><img alt="ColorPal screenshot" src="/static/images/015/ss.png" /></p>
-<p>I've been toying with color palette generation for years.  My photography website has always had some form of dynamic palette, so the theme of each page matches the photo.  You can see the current iteration <a href="http://clayto.com/">here</a>:</p>
-<p><static/images src="/static/images/015/tarsi.png" alt="clayto.com" title="My photo, 'Tarsi', at clayto.com" /></p>
 
-<p>I owe the idea of photo-matching website palettes to <a href="http://noahgrey.com">Noah Grey ...</a></p>
-                        <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/blog/2012/01/16/colorpal-alpha/">more ...</a>
-                    </div>
-                </article>
-                <article class="col-md-4 col-sm-6 col-lg-4">
-                    <h2><a href="http://beta.mwcz.org/projects/2012/01/16/median-cutjs/">median-cut.js</a></h2>
-                    <div class="summary"><div id="cp-repo"></div>
-
-<script src="/static/js/repo.js"></script>
-
-<script>
-    $(function() {
-        $('#cp-repo').repo({
-            user: 'mwcz',
-            name: 'median-cut.js'
-        });
-    });
-</script>
-                        <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/projects/2012/01/16/median-cutjs/">more ...</a>
-                    </div>
-                </article>
-                <article class="col-md-4 col-sm-6 col-lg-4">
-                    <h2><a href="http://beta.mwcz.org/blog/2011/11/17/bouncey-returns-more-canvas-physics/">Bouncey returns - more canvas physics</a></h2>
+                <article class="col-xs-12">
+                    <h2>
+                        <a href="http://beta.mwcz.org/2011/11/17/bouncey-returns-more-canvas-physics/">
+                            Bouncey returns - more canvas physics
+                        </a>
+                    </h2>
                     <div class="summary"><p>This is a slightly upgraded version of the physics demo I showed in my <a href="/2011/11/17/bouncey---canvas-physics/">last post</a>.</p>
 <p>It is still...</p>
 <p><quote>"a buggy, rudimentary, just-for-fun javascript physics simulator."</quote></p>
@@ -106,11 +80,15 @@
 <li>friction</li>
 </ul>
 <p>It still has the "clinging" bug.  I know how to fix it, but didn't deem ...</p>
-                        <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/blog/2011/11/17/bouncey-returns-more-canvas-physics/">more ...</a>
+                        <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/2011/11/17/bouncey-returns-more-canvas-physics/">more ...</a>
                     </div>
                 </article>
-                <article class="col-md-4 col-sm-6 col-lg-4">
-                    <h2><a href="http://beta.mwcz.org/blog/2011/11/17/bouncey-canvas-physics/">Bouncey - canvas physics</a></h2>
+                <article class="col-xs-12">
+                    <h2>
+                        <a href="http://beta.mwcz.org/2011/11/17/bouncey-canvas-physics/">
+                            Bouncey - canvas physics
+                        </a>
+                    </h2>
                     <div class="summary"><p>This is Bouncey.  It's a simple physics demo I wrote in early/mid 2011, with some contributions and bugfixes from my good friend Greg Gardner.</p>
 <p>The description for <a href="https://github.com/mwcz/bouncey">bouncey's github repo</a> is:</p>
 <p><quote>"a buggy, rudimentary, just-for-fun javascript physics simulator."</quote></p>
@@ -118,41 +96,40 @@
 <style type="text/css">
 #cnvs {
     margin ...</style>
-                        <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/blog/2011/11/17/bouncey-canvas-physics/">more ...</a>
+                        <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/2011/11/17/bouncey-canvas-physics/">more ...</a>
                     </div>
                 </article>
-                <article class="col-md-4 col-sm-6 col-lg-4">
-                    <h2><a href="http://beta.mwcz.org/projects/2011/11/17/bouncey/">Bouncey</a></h2>
-                    <div class="summary"><div id="cp-repo"></div>
-
-<script src="/static/js/repo.js"></script>
-
-<script>
-    $(function() {
-        $('#cp-repo').repo({
-            user: 'mwcz',
-            name: 'Bouncey'
-        });
-    });
-</script>
-                        <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/projects/2011/11/17/bouncey/">more ...</a>
+                <article class="col-xs-12">
+                    <h2>
+                        <a href="http://beta.mwcz.org/2011/10/13/opcode-patterns-70-finished/">
+                            Opcode patterns 70% finished
+                        </a>
+                    </h2>
+                    <div class="summary"><p>genlut.py is really filling out.  It generates the LUT for all 68k opcodes (68000 only), and I'm about 70% done.  77 down, 34 to go.</p>
+<p>The OPCODES dict defines the first two bytes of each opcode, both static bits and operands.  The operand strings act as keys into ...</p>
+                        <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/2011/10/13/opcode-patterns-70-finished/">more ...</a>
                     </div>
                 </article>
-                <article class="col-md-4 col-sm-6 col-lg-4">
-                    <h2><a href="http://beta.mwcz.org/projects/2011/10/21/colorpal/">ColorPal</a></h2>
-                    <div class="summary"><div id="cp-repo"></div>
-
-<script src="/static/js/repo.js"></script>
-
-<script>
-    $(function() {
-        $('#cp-repo').repo({
-            user: 'mwcz',
-            name: 'ColorPal'
-        });
-    });
-</script>
-                        <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/projects/2011/10/21/colorpal/">more ...</a>
+                <article class="col-xs-12">
+                    <h2>
+                        <a href="http://beta.mwcz.org/2011/09/22/lut/">
+                            LUT
+                        </a>
+                    </h2>
+                    <div class="summary"><p>Decoding is easy. Decoding requires a lot of typing. (I am starting to believe this is true of ever aspect of interpreted emulation...)</p>
+<p>For the AEJS decoder, I am creating a <a href="http://en.wikipedia.org/wiki/Lookup_table">look-up table</a> with every possible pattern for each instruction. It was my first idea, but I initially discarded it ...</p>
+                        <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/2011/09/22/lut/">more ...</a>
+                    </div>
+                </article>
+                <article class="col-xs-12">
+                    <h2>
+                        <a href="http://beta.mwcz.org/2011/09/20/introducing-aejs/">
+                            Introducing AEJS
+                        </a>
+                    </h2>
+                    <div class="summary"><p>Introducing AEJS, an Amiga emulator written in JavaScript.  Wait, wording it like that makes it sound like it's finished.  It isn't.  It won't be for a long time.  AEJS is just a hobby, and will never hold a candle to UAE.</p>
+<p>Why the Amiga?  Given that this ...</p>
+                        <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/2011/09/20/introducing-aejs/">more ...</a>
                     </div>
                 </article>
         </div> <!-- /.row -->
@@ -173,20 +150,13 @@
                         2
                     </a>
                 </li>
-                <li class="">
-                    <a href="http://beta.mwcz.org/tag/javascript/3">
-                        3
-                    </a>
-                </li>
-                <li class="next">
-                    <a href="http://beta.mwcz.org/tag/javascript/3">
-                        &raquo;
-                    </a>
-                </li>
+                <li class="next disabled"><a href="#">&raquo;</a></li>
         </ul>
-        </div>
-    </div>
-</div>
+</main>
+
+<footer>
+    <div class="navbar-default navbar-static-top clayto-footer"></div>
+</footer>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="http://beta.mwcz.org/theme/js/bootstrap.min.js"></script>

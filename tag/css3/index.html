@@ -3,7 +3,7 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title>clayto.com - css3</title>
+    <title>mwcz.org - css3</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -12,26 +12,27 @@
     <!-- Open Graph tags -->
 
             <meta property="og:type" content="website"/>
-            <meta property="og:title" content="clayto.com"/>
+            <meta property="og:title" content="mwcz.org"/>
             <meta property="og:url" content="http://beta.mwcz.org"/>
-            <meta property="og:description" content="clayto.com"/>
+            <meta property="og:description" content="mwcz.org"/>
 
 
-    <link href="http://beta.mwcz.org/theme/css/styles.min.css?800219f0" rel="stylesheet">
+        <link href="http://beta.mwcz.org/theme/css/styles.min.css?394abe1a" rel="stylesheet">
+
 
 
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="http://code.jquery.com/jquery.js"></script>
 
         <link href="http://beta.mwcz.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="clayto.com ATOM Feed"/>
+              title="mwcz.org ATOM Feed"/>
         <link href="http://beta.mwcz.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
-              title="clayto.com RSS Feed"/>
+              title="mwcz.org RSS Feed"/>
 
 
 </head>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -40,19 +41,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="http://beta.mwcz.org" class="navbar-brand">clayto.com</a>
+            <a href="http://beta.mwcz.org" class="navbar-brand">mwcz.org</a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                         <li >
-                            <a href="http://beta.mwcz.org/blog/">Blog</a>
+                            <a href="http://beta.mwcz.org/posts/">Posts</a>
                         </li>
-                        <li >
-                            <a href="http://beta.mwcz.org/photos/">Photos</a>
-                        </li>
-                        <li >
-                            <a href="http://beta.mwcz.org/projects/">Projects</a>
-                        </li>
+                        <li><a href="http://beta.mwcz.org/projects/">
+                            Projects
+                        </a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="http://beta.mwcz.org/archives/"><i class="icon-th-list"></i>Archives</a></li>
@@ -62,12 +60,16 @@
     </div>
 </nav>
 <!-- /.navbar -->
-<div class="container">
+<main role="main" class="container clayto-container">
+
     <div class="row">
-        <div class="col-lg-12">
-    <div class="row">
-                <article class="col-md-4 col-sm-6 col-lg-4">
-                    <h2><a href="http://beta.mwcz.org/blog/2011/11/17/how-not-to-use-css3/">How not to use CSS3</a></h2>
+
+                <article class="col-xs-12">
+                    <h2>
+                        <a href="http://beta.mwcz.org/2011/11/17/how-not-to-use-css3/">
+                            How not to use CSS3
+                        </a>
+                    </h2>
                     <div class="summary"><p>How to ruin a good thing...</p>
 <p>Try refreshing.</p>
 <style type="text/css">
@@ -93,14 +95,16 @@
 
 // Random factors to determine x/y offsets for text shadows and amount of blur
 var x_factor    = Math.floor ...</script>
-                        <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/blog/2011/11/17/how-not-to-use-css3/">more ...</a>
+                        <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/2011/11/17/how-not-to-use-css3/">more ...</a>
                     </div>
                 </article>
         </div> <!-- /.row -->
 
-        </div>
-    </div>
-</div>
+</main>
+
+<footer>
+    <div class="navbar-default navbar-static-top clayto-footer"></div>
+</footer>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="http://beta.mwcz.org/theme/js/bootstrap.min.js"></script>

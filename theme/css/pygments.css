@@ -1,6 +1,6 @@
 /* Pygments theme based on the rdark vim colorscheme */
 /* From: https://github.com/uraimo/pygments-vimstyles/blob/master/rdark.css */
-.highlight  { background: #1e2426; color: #babdb6}
+.highlight  { color: #babdb6}
 .highlight .hll { background-color: #ffffcc }
 .highlight .c { color: #656763} /* Comment */
 .highlight .err { color: #babdb6} /* Error */

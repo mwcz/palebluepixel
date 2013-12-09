@@ -1,4 +1,8 @@
+@bootswatch-theme: "flatly";
+
+@import "bootswatch/@{bootswatch-theme}/variables.less";
 @import "bootstrap/mixins.less";
+@import "bootstrap/panels.less";
 
 body { font-family: 'Lato', sans-serif; }
 
@@ -7,6 +11,10 @@ body { font-family: 'Lato', sans-serif; }
         max-width: 930px;
     }
 }
+
+/*********************************************************************
+ *                           Project list                            *
+ *********************************************************************/
 
 .clayto-project-list {
     * {
@@ -118,4 +126,79 @@ img {
   .col-lg-6:nth-child(2n+1){
     clear: left;
   }
+}
+
+/*********************************************************************
+ *                           Related Posts                           *
+ *********************************************************************/
+
+.clayto-related-posts {
+    .make-row();
+    * {
+        font-size: 1.2rem;
+    }
+    article {
+        .make-xs-column(12);
+        .make-sm-column(6);
+        .make-lg-column(3);
+    }
+}
+
+/*********************************************************************
+ *                              Photos                               *
+ *********************************************************************/
+
+.clayto-photo-list {
+    width: 100%;
+    article {
+        padding: 30px;
+        margin: 0px auto;
+    }
+}
+
+/*********************************************************************
+ *                              Header                               *
+ *********************************************************************/
+
+// remove excessive whitespace between navbar and page title
+.navbar {
+}
+.page-header {
+    &, h1 {
+        margin-top: 0;
+    }
+}
+article h2 {
+    margin-top: 0;
+}
+
+/*********************************************************************
+ *                              Footer                               *
+ *********************************************************************/
+
+.clayto-footer {
+    height: 60px;
+    margin-top: @grid-gutter-width;
+}
+
+/*********************************************************************
+ *                             Post info                             *
+ *********************************************************************/
+
+.clayto-post-info {
+    // background, border, text-color
+    .alert-variant(@gray-light, @gray-lighter, @brand-primary);
+}
+
+/*********************************************************************
+ *                          Post summaries                           *
+ *********************************************************************/
+
+// Don't let summary images get too big
+.summary {
+    margin-bottom: @grid-gutter-width;
+    img {
+        max-width: 168px;
+        .panel;
+    }
 }

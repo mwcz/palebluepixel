@@ -17,21 +17,22 @@
             <meta property="og:description" content="Update: I happened across a KeePass plugin (not the same as KeePassX) that displays passwords as QR codes, just like my hack below. Poor, glorious N9. It's impossible not to love the N9 if you're a geek, especially a programming, bash-loving, Linux-hankering geek. It's like a nerd ..."/>
 
 
-    <link href="http://beta.mwcz.org/theme/css/styles.min.css?38d47489" rel="stylesheet">
+        <link href="http://beta.mwcz.org/theme/css/styles.min.css?394abe1a" rel="stylesheet">
+
 
 
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="http://code.jquery.com/jquery.js"></script>
 
         <link href="http://beta.mwcz.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="clayto.com ATOM Feed"/>
+              title="mwcz.org ATOM Feed"/>
         <link href="http://beta.mwcz.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
-              title="clayto.com RSS Feed"/>
+              title="mwcz.org RSS Feed"/>
 
 
 </head>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -40,19 +41,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="http://beta.mwcz.org" class="navbar-brand">clayto.com</a>
+            <a href="http://beta.mwcz.org" class="navbar-brand">mwcz.org</a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                         <li class="active">
-                            <a href="http://beta.mwcz.org/blog/">Blog</a>
+                            <a href="http://beta.mwcz.org/posts/">Posts</a>
                         </li>
-                        <li >
-                            <a href="http://beta.mwcz.org/photos/">Photos</a>
-                        </li>
-                        <li >
-                            <a href="http://beta.mwcz.org/projects/">Projects</a>
-                        </li>
+                        <li><a href="http://beta.mwcz.org/projects/">
+                            Projects
+                        </a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="http://beta.mwcz.org/archives/"><i class="icon-th-list"></i>Archives</a></li>
@@ -62,9 +60,7 @@
     </div>
 </nav>
 <!-- /.navbar -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12">
+<main role="main" class="container clayto-container">
     <section id="content">
         <article>
             <header class="page-header">
@@ -77,24 +73,6 @@
                 </h1>
             </header>
             <div class="entry-content">
-                <div class="panel">
-                    <div class="panel-body">
-<footer class="post-info">
-    <span class="label label-default">Date</span>
-    <span class="published">
-        <i class="icon-calendar"></i>Sun 08 January 2012
-    </span>
-
-
-
-<span class="label label-default">Tags</span>
-	<a href="http://beta.mwcz.org/tag/general/">general</a>
-        /
-	<a href="http://beta.mwcz.org/tag/keepass/">keepass</a>
-        /
-	<a href="http://beta.mwcz.org/tag/n9/">n9</a>
-</footer><!-- /.post-info -->                    </div>
-                </div>
                 <p><em>Update: I happened across a <a href="http://keepass.info/plugins.html#qrcodegen">KeePass
 plugin</a> (not the same as KeePassX)
 that displays passwords as QR codes, just like my hack below.</em></p>
@@ -142,8 +120,21 @@ src="/static/images/011/keepassx_demo.png" alt="KeePassX generating a QR code" t
 be cool to see this available as plugin to any password managers that support
 plugins.  It could be handy to have clipboard managers generate QR codes too.</p>
             </div>
+
             <!-- /.entry-content -->
-    <hr />
+<footer class="clayto-post-info alert">
+    <span class="published">
+        Published on 2012-01-08 and filed under 
+    </span>
+
+
+
+	<a href="http://beta.mwcz.org/tag/general/">general</a>
+        /
+	<a href="http://beta.mwcz.org/tag/keepass/">keepass</a>
+        /
+	<a href="http://beta.mwcz.org/tag/n9/">n9</a>
+</footer><!-- /.post-info -->    <hr />
     <section class="comments" id="comments">
         <h2>Comments</h2>
         <div id="disqus_thread"></div>
@@ -167,12 +158,17 @@ plugins.  It could be handy to have clipboard managers generate QR codes too.</p
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
     </section>
-        </article>
+<section class="clayto-related-posts" id="clayto-related-posts">
+    <h2>Might these be of interest?</h2>
+
+</section>        </article>
     </section>
 
-        </div>
-    </div>
-</div>
+</main>
+
+<footer>
+    <div class="navbar-default navbar-static-top clayto-footer"></div>
+</footer>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="http://beta.mwcz.org/theme/js/bootstrap.min.js"></script>
