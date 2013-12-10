@@ -16,12 +16,12 @@
             <meta property="og:url" content="http://beta.mwcz.org/projects/aejs/"/>
 
 
-        <link href="http://beta.mwcz.org/theme/css/styles.min.css?394abe1a" rel="stylesheet">
+        <link href="http://beta.mwcz.org/theme/css/styles.min.css?e5840c1c" rel="stylesheet">
 
 
 
     <!-- JavaScript plugins (requires jQuery) -->
-    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
         <link href="http://beta.mwcz.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
               title="mwcz.org ATOM Feed"/>
@@ -63,18 +63,57 @@
     <section id="content" class="body">
         <h1 class="entry-title">AEJS</h1>
         <div class="entry-content">
-            <div id="cp-repo"></div>
+            <p>AEJS was an experimental Amiga 500 emulator written in JavaScript.  It stands
+for Amiga Emulator JavaScript and was pronounced "aegis".</p>
+<hr />
+<div class="row">
+    <div class="col-xs-12 col-sm-6">
+        <img style="height: 168px" src="http://beta.mwcz.org/static/projects/aejs/icon_aejs.png" title="AEJS logo" alt="AEJS logo" />
+    </div>
+    <div class="col-xs-12 col-sm-6">
+        <img style="height: 150px" src="http://beta.mwcz.org/static/projects/aejs/log.png" title="AEJS log" alt="AEJS log" />
+    </div>
+</div>
 
-<script src="/static/js/repo.js"></script>
+<hr />
+<p>I made a handful of <a href="/tag/aejs/" title="Posts about AEJS">posts about AEJS</a> while it was still being developed.</p>
+<p>I started development on it for some damn good reasons:</p>
+<ul>
+<li>The HTML5 era introduced new APIs which finally made it possible: <a href="http://www.w3.org/TR/webaudio/" title="Web Audio API">Web
+   Audio</a> <a href="http://www.w3.org/TR/FileAPI/" title="File API">File</a> <a href="http://www.w3.org/TR/2dcontext/" title="Canvas 2D context">Canvas</a> <a href="http://www.w3.org/TR/fullscreen/" title="Fullscreen API">Fullscreen</a> <a href="http://www.w3.org/TR/gamepad/" title="Gamepad API">Gamepad</a></li>
+<li>JavaScript performance was finally good enough to make it feasible</li>
+<li>It bridged front-end web development with low-level machine code, both of
+   which are super awesome</li>
+<li>I still have the Amiga 500 I played with obsessively since 3 years-old</li>
+<li>The <a href="https://en.wikipedia.org/wiki/Motorola_68000" title="Motorola 68000">68000</a> is legendary and I wanted to find out why</li>
+</ul>
+<p>I stopped development for some equally good reasons:</p>
+<ul>
+<li>I became busy with other projects which could be finished in a reasonable
+   timeframe (I'm looking at you, <a href="http://colorpal.org/" title="ColorPal">ColorPal</a>)</li>
+<li>The final nail in the coffin was realizing that while JavaScript was
+   definitely up to the task, there was pretty much no reason to write it
+   entirely in JavaScript when it could be written in C and compiled to JS with
+   <a href="http://emscripten.org" title="emscripten">emscripten</a>.  The result would be faster, more robust, and type-safe.</li>
+</ul>
+<hr />
+<div class="row">
+    <div class="text-center col-xs-12 col-sm-6">
+        <img src="http://beta.mwcz.org/static/projects/aejs/splash.png" title="AEJS splash screen" alt="AEJS splash screen" />
+    </div>
+</div>
 
-<script>
-    $(function() {
-        $('#cp-repo').repo({
-            user: 'mwcz',
-            name: 'AEJS'
-        });
-    });
-</script>
+<hr />
+<p>Astoundingly observant readers will notice that <a href="https://github.com/naTmeg/ScriptedAmigaEmulator" title="ScriptedAmigaEmulator">Scripted Amiga Emulator</a>
+came out at around the same time I stopped contributing to AEJS.  It's based on
+<a href="https://github.com/tonioni/WinUAE" title="WinUAE">WinUAE</a> and was ported (by hand, I believe) from C++ to JavaScript.  A very
+impressive project, but not at all what I was going for with AEJS.  AEJS was
+about fueling my curiosity and exploration.  SAE is extremely impressive and
+works very well, but it didn't demotivate me in any way.</p>
+<p>I may come up with some even better reasons to resume development at some point
+in the future.  I still love my old Amiga 500 and want to see it live on in
+some fashion.  I don't like having pet projects nipping at my heels that never
+go anywhere, though, so I'm calling this one dead (<a href="https://github.com/mwcz/AEJS/" title="AEJS on GitHub">for now</a>).</p>
         </div>
     </section>
 </main>

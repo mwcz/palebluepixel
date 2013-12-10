@@ -17,12 +17,12 @@
             <meta property="og:description" content="mwcz.org"/>
 
 
-        <link href="http://beta.mwcz.org/theme/css/styles.min.css?394abe1a" rel="stylesheet">
+        <link href="http://beta.mwcz.org/theme/css/styles.min.css?e5840c1c" rel="stylesheet">
 
 
 
     <!-- JavaScript plugins (requires jQuery) -->
-    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
         <link href="http://beta.mwcz.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
               title="mwcz.org ATOM Feed"/>
@@ -62,69 +62,72 @@
 <!-- /.navbar -->
 <main role="main" class="container clayto-container">
 
-    /home/mwc/workspace/mwcz/content/posts/023 - colorpal cli.md
-<br>
+<style type="text/css">
+#cnvs {
+    background-color: #1f1f1f;
+    margin: 0 auto;
+    border: 1px solid black;
+    -webkit-box-shadow: 0px 2px 18px rgba( 0, 0, 0, 0.7 );
+       -moz-box-shadow: 0px 2px 18px rgba( 0, 0, 0, 0.7 );
+         -o-box-shadow: 0px 2px 18px rgba( 0, 0, 0, 0.7 );
+            box-shadow: 0px 2px 18px rgba( 0, 0, 0, 0.7 );
+}
+</style>
+<script type="text/javascript" src="/static/js/007/bouncey.js"></script>
+<script type="text/javascript">
 
-    /home/mwc/workspace/mwcz/content/posts/022 - colorpal output update.md
-<br>
+$(function() {
 
-    /home/mwc/workspace/mwcz/content/posts/021 - canvas indexed color.md
-<br>
+    canvas_element        = document.getElementById('cnvs');
+    canvas_element.width  = W;
+    canvas_element.height = H;
 
-    /home/mwc/workspace/mwcz/content/posts/020 - bootstrap.md
-<br>
+    canvas = canvas_element.getContext('2d');
 
-    /home/mwc/workspace/mwcz/content/posts/017 - AFOMFT.md
-<br>
+    // create some squares with random velocities in the center of the canvas
+    // objects are stored in the format 
+    //      [ X, Y, X_velocity, Y_velocity, width, height, [R,G,B] ]
+    var x, y, w, h, v_x, v_y, r, g, b, new_obj;
 
-    /home/mwc/workspace/mwcz/content/posts/019 - colorpal palettes 50p better.md
-<br>
+    // calculate all the possible initial y positions
+    y_positions = [];
+    for( var i = OBJ_HEIGHT; i < H - OBJ_HEIGHT; i += 2 * OBJ_HEIGHT )
+        y_positions.push( i );
 
-    /home/mwc/workspace/mwcz/content/posts/018 - toy javascript unit tester.md
-<br>
+    // calculate all the possible initial x positions
+    x_positions = [];
+    for( var i = OBJ_WIDTH; i < W - OBJ_WIDTH; i += 2 * OBJ_WIDTH )
+        x_positions.push( i );
 
-    /home/mwc/workspace/mwcz/content/posts/015 - colorpal alpha.md
-<br>
+    /*
+    */
+    for( var i = 0; i < 40; ++i ) {
 
-    /home/mwc/workspace/mwcz/content/posts/011 - qrcodes in keepassx.md
-<br>
+        // create values for the object
+        x   = x_positions[ i % x_positions.length ];
+        y   = y_positions[ Math.floor( i / x_positions.length ) % y_positions.length ];
+        v_x = Math.random() * OBJ_MAX_VELOCITY*2 - OBJ_MAX_VELOCITY;
+        v_y = Math.random() * OBJ_MAX_VELOCITY*2 - OBJ_MAX_VELOCITY;
+        r   = Math.floor( Math.random() * 200 + 55 ); // random value 55..255
+        g   = Math.floor( Math.random() * 200 + 55 );
+        b   = Math.floor( Math.random() * 200 + 55 );
 
-    /home/mwc/workspace/mwcz/content/posts/008 - bouncey returns.md
-<br>
+        // add the object to the scene
+        var color = 'rgb(' + r + ',' + g + ',' + b + ')';
+        var new_obj = new Circle( x, y, OBJ_R, v_x, v_y, color );
 
-    /home/mwc/workspace/mwcz/content/posts/009 - color palette prototype.md
-<br>
+        objs.push( new_obj );
+    }
 
-    /home/mwc/workspace/mwcz/content/posts/007 - bouncey, html5 canvas physics.md
-<br>
+    setInterval( make_frame, PERIOD );
 
-    /home/mwc/workspace/mwcz/content/posts/006 - how not to use css3.md
-<br>
+});
 
-    /home/mwc/workspace/mwcz/content/posts/005 - html5 canvas point operations.md
-<br>
+</script>
 
-    /home/mwc/workspace/mwcz/content/posts/004 - html5 canvas area select averaging.md
-<br>
-
-    /home/mwc/workspace/mwcz/content/posts/003 - html5 canvas histogram.md
-<br>
-
-    /home/mwc/workspace/mwcz/content/posts/002 - html5 canvas 3d pixel array.md
-<br>
-
-    /home/mwc/workspace/mwcz/content/posts/001 - html5 canvas eyedropper.md
-<br>
-
-    /home/mwc/workspace/mwcz/content/posts/014 - opcode patterns 70 percent finished.md
-<br>
-
-    /home/mwc/workspace/mwcz/content/posts/013 - lut.md
-<br>
-
-    /home/mwc/workspace/mwcz/content/posts/012 - introducing aejs.md
-<br>
-
+<canvas class="img-responsive" id="cnvs" width="500" height="375"> 
+    Sorry, your browser does not support HTML5 canvas.  Lame.
+</canvas>
 
 </main>
 

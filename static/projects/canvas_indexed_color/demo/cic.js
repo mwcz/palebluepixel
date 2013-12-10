@@ -96,7 +96,7 @@ function clampTuple( tuple, max_tuple ) {
 }
 
 function resizeCanvas() {
-    var viewport_size = [ $(window).width(), $(window).height() ];
+    var viewport_size = [ $(cnvs).parent().width(), $(cnvs).parent().height() ];
 
     canvas_actual_size = clampTuple( canvas_display_size, viewport_size );
 
