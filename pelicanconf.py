@@ -21,7 +21,7 @@ DISPLAY_CATEGORIES_ON_MENU = True
 
 TEMPLATE_PAGES = {
         'pages/projects/index.html' : 'projects/index.html',
-        #'index.html'                : 'index.html'
+        'index.html'                : 'index.html'
         }
 EXTRA_PATH_METADATA = {
         # Give the projects page a title to work around <title> being used for
@@ -88,8 +88,8 @@ RELATED_POSTS_MAX = 4
 #                            HOST SETTINGS                            #
 #######################################################################
 
-SITEURL     = 'http://localhost:8000'
-FEED_DOMAIN = 'http://localhost:8000'
+SITEURL     = 'http://localhost:8001'
+FEED_DOMAIN = 'http://localhost:8001'
 
 # Blogroll
 #LINKS =  (('Pelican', 'http://docs.notmyidea.org/alexis/pelican/'),

@@ -34,8 +34,8 @@ Works in Chrome and Firefox.
 instantly updated to reflect your edits.  This means you can also paste in
 a list of colors (hex format only for the time being).
 
-If you it out ColorPal, shoot me an [email](mailto:mwc@clayto.org) or give me a
-shout on [Twitter](https://twitter.com/#!/mwcz) with your thoughts.
+If you try out ColorPal, let me know your thoughts on
+[Twitter](https://twitter.com/#!/mwcz).
 
 Here are github repos for [ColorPal](https://github.com/mwcz/ColorPal) and
 [median-cut.js](https://github.com/mwcz/median-cut-js).

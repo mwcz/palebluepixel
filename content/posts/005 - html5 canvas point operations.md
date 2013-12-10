@@ -8,9 +8,9 @@ Point operations are image alterations that affect all pixels equally.  Other op
 
 This demonstrates changing contrast, value, saturation, hue, color inversion, and threshold point operations.  Note that there is a bug with increasing value and increasing saturation which I never got around to fixing.
 
-<script type="text/javascript" src="/js/005/jquery.min.js"></script> 
-<script type="text/javascript" src="/js/005/jsimage.js"></script> 
-<script type="text/javascript" src="/js/005/colorspace.js"></script> 
+<script type="text/javascript" src="/static/js/005/jquery.min.js"></script> 
+<script type="text/javascript" src="/static/js/005/jsimage.js"></script> 
+<script type="text/javascript" src="/static/js/005/colorspace.js"></script> 
 
 <script type="text/javascript"> 
            

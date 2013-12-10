@@ -100,7 +100,7 @@ function JSImage( arg_canvas_id, arg_image_src ) {
             //console.log(rect);
             var av = that.avg( rect );
             //console.log(av);
-            document.body.style.background = "rgb(" + av[0] + "," + av[1] + "," + av[2] + ")";
+            canvas_element.style.outlineColor = "rgb(" + av[0] + "," + av[1] + "," + av[2] + ")";
         });
     }
 

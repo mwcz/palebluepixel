@@ -2,60 +2,91 @@ Title: HTML5 canvas RGB histogram
 Date: 2011-11-16 17:25:00
 Tags: html5, canvas, color, jsimage
 
-This is yet another demo from around 2009.  It's simple enough.  Click a button, draw an unbinned RGB histogram of the source image.
+This is yet another demo from around 2009.  It's simple enough.  Click a
+button, draw an unbinned RGB histogram of the source image.
 
-It's powered by an early version of an old JS toolkit I wrote called JSImage.  The latest version is available at my [JSImage github repo](https://github.com/mwcz/jsimage).  Don't be fooled by the 2011 commits, those are just artifacts from svn-&gt;git migration.  No guarantees that the histo's are actually correct. :)
+It's powered by an early version of an old JS toolkit I wrote called JSImage.
+The latest version is available at my [JSImage github
+repo](https://github.com/mwcz/jsimage).  Don't be fooled by the 2011 commits,
+those are just artifacts from svn-&gt;git migration.  No guarantees that the
+histo's are actually correct. :)
 
-<script type="text/javascript" src="/js/003/JSImage.js"></script> 
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <b>Original image</b>
+    </div>
+    <div class="panel-body">
+        <canvas id="c0">
+            Your browser does not support the &lt;canvas&gt; element. Lame.
+        </canvas>
+    </div>
+</div>
 
-<script type="text/javascript"> 
-        
-window.onload = function() {
- 
-    static/images0 = new JSImage( "c0", "/static/images/003/kazoo.png" );
-    static/imagesr = new JSImage( "cr", "/static/images/003/kazoo.png" );
-    static/imagesg = new JSImage( "cg", "/static/images/003/kazoo.png" );
-    static/imagesb = new JSImage( "cb", "/static/images/003/kazoo.png" );
- 
- 
-}
- 
-function draw() {
- 
-    /**
-     * Color histo canvases the color of their histo
-     */
-    static/images0.histo( static/imagesr.canvas, 'r', 'rgba(255,0,0,0.9)', 'rgba(0,0,0,0.8)' )
-    static/images0.histo( static/imagesg.canvas, 'g', 'rgba(0,200,0,0.9)', 'rgba(0,0,0,0.8)' )
-    static/images0.histo( static/imagesb.canvas, 'b', 'rgba(0,0,200,0.9)', 'rgba(0,0,0,0.8)' )
- 
-}
- 
-var static/images0, static/imagesr, static/imagesg, static/imagesb; // make static/images0 public so I can play with it in firebug more easily
- 
-</script> 
+<input type="button" onclick="draw_histo()" value="Draw histograms" />
 
-<canvas id="c0"> 
-    Your browser does not support the <canvas> element. Lame.
-</canvas> 
+<div class="row">
+    <div class="col-xs-12 col-sm-4">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <b>Red</b>
+        </div>
+        <div class="panel-body">
+            <canvas class="img-responsive" id="cr">
+                Your browser does not support the &lt;canvas&gt; element. Lame.
+            </canvas>
+        </div>
+    </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <b>Green</b>
+            </div>
+            <div class="panel-body">
+                <canvas class="img-responsive" id="cg">
+                    Your browser does not support the &lt;canvas&gt; element. Lame.
+                </canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <b>Blue</b>
+            </div>
+            <div class="panel-body">
+                <canvas class="img-responsive" id="cb">
+                    Your browser does not support the &lt;canvas&gt; element. Lame.
+                </canvas>
+            </div>
+        </div>
+    </div>
+</div>
 
-<button type="button" onclick="draw()">draw histograms</button> 
+<p class="alert alert-info">I'm pretty sure the results are wrong, but here, years later, I can't be bothered to fix it. ;)</p>
 
-Red:
+<script type="text/javascript" src="/static/js/003/JSImage.js"></script>
+<script type="text/javascript">
 
-<canvas id="cr"> 
-    Your browser does not support the <canvas> element. Lame.
-</canvas> 
+var draw_histo;
+$(function () {
 
-Green:
+    var images0 = new JSImage( "c0", "/static/images/003/kazoo.png" );
+    var imagesr = new JSImage( "cr", "/static/images/003/kazoo.png" );
+    var imagesg = new JSImage( "cg", "/static/images/003/kazoo.png" );
+    var imagesb = new JSImage( "cb", "/static/images/003/kazoo.png" );
 
-<canvas id="cg"> 
-    Your browser does not support the <canvas> element. Lame.
-</canvas> 
+    draw_histo = function () {
 
-Blue:
+        /**
+         * Color histo canvases the color of their histo
+         */
+        images0.histo( imagesr.canvas, 'r', 'rgba(255,0,0,0.9)', 'rgba(0,0,0,0.8)' );
+        images0.histo( imagesg.canvas, 'g', 'rgba(0,200,0,0.9)', 'rgba(0,0,0,0.8)' );
+        images0.histo( imagesb.canvas, 'b', 'rgba(0,0,200,0.9)', 'rgba(0,0,0,0.8)' );
 
-<canvas id="cb"> 
-    Your browser does not support the <canvas> element. Lame.
-</canvas> 
+    };
 
+
+});
+</script>

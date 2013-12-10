@@ -32,7 +32,7 @@ Click on one of the initial states to begin the simulation.
 </style>
 
 
-<script type="text/javascript" src="/js/008/bouncey.js"></script> 
+<script type="text/javascript" src="/static/js/008/bouncey.js"></script> 
 
 
 Initial states:

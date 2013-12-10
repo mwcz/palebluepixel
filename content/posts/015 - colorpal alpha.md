@@ -11,7 +11,7 @@ Introducing ColorPal!
 
 <p><static/images src="/static/images/015/tarsi.png" alt="clayto.com" title="My photo, 'Tarsi', at clayto.com" /></p>
 
-I owe the idea of photo-matching website palettes to [Noah Grey](http://noahgrey.com).  Each iteration of my photo site has gotten a slightly more advanced palette generation tool.  You can see murmurs of them in the [old]({001 - html5 canvas eyedropper.md}) [canvas]({004 - html5 canvas area select averaging.md) [demos]({009 - color palette prototype.md) I've posted.  Sooner or later I'll make a more thorough post about the tools I've created for each iteration of the site.  Anyway, back to ColorPal.
+I owe the idea of photo-matching website palettes to [Noah Grey](http://noahgrey.com).  Each iteration of my photo site has gotten a slightly more advanced palette generation tool.  You can see murmurs of them in the [old](/2011/11/16/html5-canvas-eyedropper/) [canvas](/2011/11/16/html5-canvas-area-selection-averaging/) [demos](/2011/11/17/html5-tool-for-creating-color-palettes-from-an-image/) I've posted.  Sooner or later I'll make a more thorough post about the tools I've created for each iteration of the site.  Anyway, back to ColorPal.
 
 ColorPal is an HTML5 palette generation tool.  Currently it's in a very early stage, and I've only tested it in Chrome.  I have many ideas for improvements, and I'd love to hear anyone's ideas as well.  
 
