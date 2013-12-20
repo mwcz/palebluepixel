@@ -3,17 +3,21 @@ Slug: projects/aejs
 Tags: html5, javascript
 Status: hidden
 
-AEJS was an experimental Amiga 500 emulator written in JavaScript.  It stands
-for Amiga Emulator JavaScript and was pronounced "aegis".
+AEJS was an experimental Amiga 500 emulator written in JavaScript.  The name
+stands for Amiga Emulator JavaScript and is pronounced "aegis".
 
 -------------------------------------------------------------------------------
 
 <div class="row">
     <div class="col-xs-12 col-sm-6">
-        <img style="height: 168px" src="{filename}/static/projects/aejs/icon_aejs.png" title="AEJS logo" alt="AEJS logo" />
+        <img style="height: 168px"
+        src="{filename}/static/projects/aejs/icon_aejs.png" title="AEJS logo"
+        alt="AEJS logo" />
     </div>
     <div class="col-xs-12 col-sm-6">
-        <img style="height: 150px" src="{filename}/static/projects/aejs/log.png" title="AEJS log" alt="AEJS log" />
+        <img style="height: 150px"
+        src="{filename}/static/projects/aejs/log.png" title="AEJS log"
+        alt="AEJS log" />
     </div>
 </div>
 
@@ -23,8 +27,9 @@ I made a handful of [posts about AEJS][12] while it was still being developed.
 
 I started development on it for some damn good reasons:
 
- - The HTML5 era introduced new APIs which finally made it possible: [Web
-   Audio][1] [File][2] [Canvas][3] [Fullscreen][4] [Gamepad][5]
+ - The HTML5 era introduced new APIs which finally made it possible: 
+   [Typed arrays][13], [Web Audio][1], [File][2], [Canvas][3], [Fullscreen][4],
+   [Gamepad][5]
  - JavaScript performance was finally good enough to make it feasible
  - It bridged front-end web development with low-level machine code, both of
    which are super awesome
@@ -44,7 +49,8 @@ I stopped development for some equally good reasons:
 
 <div class="row">
     <div class="text-center col-xs-12 col-sm-6">
-        <img src="{filename}/static/projects/aejs/splash.png" title="AEJS splash screen" alt="AEJS splash screen" />
+        <img src="{filename}/static/projects/aejs/splash.png" 
+        title="AEJS splash screen" alt="AEJS splash screen" />
     </div>
 </div>
 
@@ -62,6 +68,10 @@ in the future.  I still love my old Amiga 500 and want to see it live on in
 some fashion.  I don't like having pet projects nipping at my heels that never
 go anywhere, though, so I'm calling this one dead ([for now][11]).
 
+*Addendum*: I just learned today (2013-12-16) that Christian Stefansen ported
+PUAE (Portable Universal Amiga Emulator) to PNaCl.  This allows UAE to run
+inside any Chrome browser.  [Check it out][14] or [fork it][15].
+
 [1]: http://www.w3.org/TR/webaudio/ "Web Audio API"
 [2]: http://www.w3.org/TR/FileAPI/ "File API"
 [3]: http://www.w3.org/TR/2dcontext/ "Canvas 2D context"
@@ -74,3 +84,7 @@ go anywhere, though, so I'm calling this one dead ([for now][11]).
 [10]: http://emscripten.org "emscripten"
 [11]: https://github.com/mwcz/AEJS/ "AEJS on GitHub"
 [12]: /tag/aejs/ "Posts about AEJS"
+[13]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays
+    "JavaScript typed arrays"
+[14]: http://pnacl-amiga-emulator.appspot.com/ "PNaCl port of PUAE"
+[15]: https://github.com/cstefansen/PUAE "PNaCl PUAE port's source code"
