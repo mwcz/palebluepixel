@@ -6,7 +6,7 @@ Status: hidden
 [mwcz.org][9] is this blog.  A technical blog with posts about web development,
 image processing, and generally celebrating programming.
 
-![mwcz.org screenshot](/static/images/projects/screenshot_mwcz.png "mwcz.org screenshot")
+![mwcz.org screenshot]({filename}/static/images/projects/screenshot_mwcz.png "mwcz.org screenshot")
 
 It's currently powered by:
 

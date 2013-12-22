@@ -4,14 +4,14 @@ Status: hidden
 
 [clayto.com][1] is my homemade photography website.
 
-![mwcz.org screenshot](/static/images/projects/screenshot_clayto.png "clayto.com screenshot")
+![mwcz.org screenshot]({filename}/static/images/projects/screenshot_clayto.png "clayto.com screenshot")
 
 I've run a photography site in some fashion since 2003.  Inspired by the
 photography presentation ideas of [Noah Grey's][6] photography site, the site's color scheme always matches the photo being viewed, as Noah did (or used to!).
 
 Here are four examples of the color schemes
 
-![example of color theme matching images](/static/images/projects/screenshot_clayto_palettes_small.png "example of color theme matching images")
+![example of color theme matching images]({filename}/static/images/projects/screenshot_clayto_palettes_small.png "example of color theme matching images")
 
 Images [1][9], [2][10], [3][11], [4][12].
 
