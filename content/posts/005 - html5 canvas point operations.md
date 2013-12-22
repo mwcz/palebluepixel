@@ -8,67 +8,85 @@ Point operations are image alterations that affect all pixels equally.  Other op
 
 This demonstrates changing contrast, value, saturation, hue, color inversion, and threshold point operations.  Note that there is a bug with increasing value and increasing saturation which I never got around to fixing.
 
-<script type="text/javascript" src="/static/js/005/jquery.min.js"></script> 
-<script type="text/javascript" src="/static/js/005/jsimage.js"></script> 
-<script type="text/javascript" src="/static/js/005/colorspace.js"></script> 
+<script type="text/javascript" src="/static/js/005/jsimage.js"></script>
+<script type="text/javascript" src="/static/js/005/colorspace.js"></script>
 
-<script type="text/javascript"> 
-           
-    var IJS_PointOps; // make IJS_PointOps public so I can play with it in firebug more easily
+<script type="text/javascript">
+
+    var IJS_PointOps;
     $(document).ready( function() {
-
         IJS_PointOps = new JSImage( "IJS_PointOps", "/static/images/005/bee.jpg" );
     });
 
-</script> 
-
-
-<canvas id="IJS_PointOps">your browser does not support canvas</canvas> 
-
-<style type="text/css">
-#canvas-point-ops-tools-table input {
-    width: 20px;
-    height: 24px;
-}
+</script>
+<style type="text/css" media="screen">
+    .btn-group .glyphicon { margin-right: 0 }
+    .point-ops-demo { font-size: 0.9em }
+    .form-control.threshold { width: 4em }
 </style>
- 
-<table cellpadding="4" cellspacing="0" id="canvas-point-ops-tools-table"> 
-<tr> 
-    <th>Value</th> 
-    <th>Contrast</th> 
-    <th>Saturation</th> 
-    <th>Hue</th> 
-    <th>Invert</th> 
-    <th>Threshold</th> 
-</tr> 
 
-<tr> 
-    <td> 
-        <!-- using onmousedown instead of onclick because it improves perceived performance.
-             definitely an accessibility problem, though --> 
-        <input type="image" src="/static/images/005/arrow_up.png" onmousedown="IJS_PointOps.value( IJS_PointOps.canvas, 10 )" /> 
-        <input type="image" src="/static/images/005/arrow_down.png" onmousedown="IJS_PointOps.value( IJS_PointOps.canvas, -10 )" /> 
-    </td> 
-    <td> 
-        <input type="image" src="/static/images/005/arrow_up.png" onmousedown="IJS_PointOps.contrast( IJS_PointOps.canvas, 1.1)" /> 
-        <input type="image" src="/static/images/005/arrow_down.png" onmousedown="IJS_PointOps.contrast( IJS_PointOps.canvas, 0.9)" /> 
-    </td> 
-    <td> 
-        <input type="image" src="/static/images/005/arrow_up.png" onmousedown="IJS_PointOps.saturation( IJS_PointOps.canvas, 25 )" /> 
-        <input type="image" src="/static/images/005/arrow_down.png" onmousedown="IJS_PointOps.saturation( IJS_PointOps.canvas, -25 )" /> 
-    </td> 
-    <td> 
-        <input type="image" src="/static/images/005/arrow_up.png" onmousedown="IJS_PointOps.hue( IJS_PointOps.canvas, 20)" /> 
-        <input type="image" src="/static/images/005/arrow_down.png" onmousedown="IJS_PointOps.hue( IJS_PointOps.canvas, -20)" /> 
-    </td> 
-    <td> 
-        <button type="button" onmousedown="IJS_PointOps.invert()">invert</button> 
-    </td> 
-    <td> 
-        <button type="button" onmousedown="IJS_PointOps.threshold( IJS_PointOps.canvas, document.getElementById('t').value )">threshold</button> 
-        <br /> 
-        <input type="text" value="127" maxlength="3" size="3" id="t" /> 
-    </td> 
-</tr> 
+<canvas class="img-responsive" id="IJS_PointOps">your browser does not support canvas</canvas>
 
-</table> 
+<div class="row point-ops-demo">
+
+    <div class="col-xs-6">
+        Value (Brightness)
+        <br />
+        <div class="btn-group">
+            <button class="btn btn-default" onmousedown="IJS_PointOps.value( IJS_PointOps.canvas, 10 )"><i class="glyphicon glyphicon-arrow-up"></i></button>
+            <button class="btn btn-default" onmousedown="IJS_PointOps.value( IJS_PointOps.canvas, -10 )"><i class="glyphicon glyphicon-arrow-down"></i></button>
+        </div>
+    </div>
+
+    <div class="col-xs-6">
+        Contrast
+        <br />
+        <div class="btn-group">
+            <button class="btn btn-default" onmousedown="IJS_PointOps.contrast( IJS_PointOps.canvas, 1.1)" ><i class="glyphicon glyphicon-arrow-up"></i></button>
+            <button class="btn btn-default" onmousedown="IJS_PointOps.contrast( IJS_PointOps.canvas, 0.9)" ><i class="glyphicon glyphicon-arrow-down"></i></button>
+        </div>
+    </div>
+
+    <div class="col-xs-6">
+        Saturation
+        <br />
+        <div class="btn-group">
+            <button class="btn btn-default" onmousedown="IJS_PointOps.saturation( IJS_PointOps.canvas, 25 )" ><i class="glyphicon glyphicon-arrow-up"></i></button>
+            <button class="btn btn-default" onmousedown="IJS_PointOps.saturation( IJS_PointOps.canvas, -25 )" ><i class="glyphicon glyphicon-arrow-down"></i></button>
+        </div>
+    </div>
+
+    <div class="col-xs-6">
+        Hue
+        <br />
+        <div class="btn-group">
+            <button class="btn btn-default" onmousedown="IJS_PointOps.hue( IJS_PointOps.canvas, 20)" ><i class="glyphicon glyphicon-arrow-up"></i></button>
+            <button class="btn btn-default" onmousedown="IJS_PointOps.hue( IJS_PointOps.canvas, -20)" ><i class="glyphicon glyphicon-arrow-down"></i></button>
+        </div>
+    </div>
+
+    <div class="col-xs-6">
+        <br />
+        <div class="btn-group">
+            <button class="btn btn-default" onmousedown="IJS_PointOps.invert()">Invert</button>
+        </div>
+    </div>
+
+    <div class="col-xs-6">
+        <br />
+        <div class="input-group">
+            <span class="input-group-btn">
+                <button class="btn btn-default" onmousedown="IJS_PointOps.threshold( IJS_PointOps.canvas, document.getElementById('t').value )">Threshold</button>
+            </span>
+            <input type="text" value="127" class="form-control threshold" maxlength="3" size="3" id="t" />
+        </div>
+    </div>
+
+    <div class="col-xs-6">
+        <br />
+        <button class="btn btn-default" onclick="IJS_PointOps = new JSImage( 'IJS_PointOps', '/static/images/005/bee.jpg' );">Reset</button>
+    </div>
+
+</div>
+
+<br />
