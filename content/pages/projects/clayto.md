@@ -6,14 +6,19 @@ Status: hidden
 
 ![mwcz.org screenshot]({filename}/static/images/projects/screenshot_clayto.png "clayto.com screenshot")
 
-I've run a photography site in some fashion since 2003.  Inspired by the
-photography presentation ideas of [Noah Grey's][6] photography site, the site's color scheme always matches the photo being viewed, as Noah did (or used to!).
+I started clayto.com in 2003.  Inspired by [Noah Grey's][6] photography
+presentation ideas, the site's color scheme always matches the photo being
+viewed, as Noah did (or used to!).
 
-Here are four examples of the color schemes
+Here are four examples of the color schemes:
 
 ![example of color theme matching images]({filename}/static/images/projects/screenshot_clayto_palettes_small.png "example of color theme matching images")
 
 Images [1][9], [2][10], [3][11], [4][12].
+
+The color schemes are automatically generated when a photo is posted.  A
+"suggested palette" is displayed, along with a color picker, and a tool to
+sample colors directly from the image.
 
 The site as it exists now was written in 2007-2008, as my first Django project.
 It needs some serious TLC in the form of bringing it into the twenty-tens with
