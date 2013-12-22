@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mwcz.org</title><link>http://beta.mwcz.org/</link><description></description><atom:link href="http://beta.mwcz.org/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 07 Nov 2013 00:00:00 -0500</lastBuildDate><item><title>ColorPal CLI!</title><link>http://beta.mwcz.org/2013/11/07/colorpal-cli/</link><description>&lt;p&gt;Tired of creating color palettes with ColorPal's simple, intuitive
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mwcz.org</title><link>http://beta.mwcz.org/</link><description></description><atom:link href="http://beta.mwcz.org/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 22 Dec 2013 00:00:00 -0500</lastBuildDate><item><title>Super easy image resizing in GIMP</title><link>http://beta.mwcz.org/2013/12/22/super-easy-image-resizing-in-gimp/</link><description>&lt;p&gt;Ever been here?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I want to make a new image (say) twice the size of the current one, hmm...&lt;/p&gt;
+&lt;p&gt;/me opens gnome-calculator | python shell | bc&lt;/p&gt;
+&lt;p&gt;/me tippity types the current width * 2&lt;/p&gt;
+&lt;p&gt;/me tippity types the current height * 2&lt;/p&gt;
+&lt;p&gt;/me tippity types the results back into the Create New Image dialog&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I've done that countless times.  As I was about to do the same thing once more,
+I thought "Hmm, wouldn't it be nice if we could do simple math inside the New
+Image dialog?  Well, I tried it and it worked.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="GIMP math recording" src="http://beta.mwcz.org/static/images/024/gimp_math.gif" title="GIMP math recording" /&gt;&lt;/p&gt;
+&lt;p&gt;The feature was added in GIMP 2.8, so it's fairly recent.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Enhancements have also been made to the size entry widget, which is used for
+inputting most of the x, y, width, height parameters. For example, in the
+scale dialog it is now possible to write “50%” in the Width field to scale
+the image to 50% of the width. Expressions such as “30in + 40px” and “4 *
+5.4in” work, too.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;From the &lt;a href="http://docs.gimp.org/2.8/en/gimp-introduction-whats-new.html" title="GIMP User Manual"&gt;GIMP User Manual&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Sun, 22 Dec 2013 00:00:00 -0500</pubDate><guid>tag:beta.mwcz.org,2013-12-22:2013/12/22/super-easy-image-resizing-in-gimp/</guid><category>gimp</category></item><item><title>ColorPal CLI!</title><link>http://beta.mwcz.org/2013/11/07/colorpal-cli/</link><description>&lt;p&gt;Tired of creating color palettes with ColorPal's simple, intuitive
 drag-and-drop interface?  Me too!  Want to jam with the console cowboys in
 cyber-space?  Now you can.  Now &lt;em&gt;we&lt;/em&gt; can.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="ColorPal CLI demo recording" src="http://beta.mwcz.org/static/images/023/cp.node.gif" title="ColorPal CLI demo recording" /&gt;&lt;/p&gt;
@@ -108,7 +128,7 @@ that powers this site.  His contributions can be found at the official &lt;a hre
 &lt;p&gt;Converting the layout to Bootstrap was a breeze thanks to the Mako templates.&lt;/p&gt;
 &lt;p&gt;This is a lackluster post, but I didn't want to let such a big layout change go
 by without mention.  Customization of the default Bootstrap theme is coming.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Update&lt;/em&gt; Thanks Doug, I've updated the GitHub link to point to the official repo.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Tue, 03 Jul 2012 22:44:50 -0400</pubDate><guid>tag:beta.mwcz.org,2012-07-03:2012/07/03/bootstrap---blogofile/</guid><category>bootstrap</category></item><item><title>AFOMFT</title><link>http://beta.mwcz.org/2012/05/10/afomft/</link><description>&lt;p&gt;&lt;img alt="A few of my favorite things" src="/static/images/017/afomft.png" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Thu, 10 May 2012 21:47:00 -0400</pubDate><guid>tag:beta.mwcz.org,2012-05-10:2012/05/10/afomft/</guid><category>html5</category><category>javascript</category><category>linux</category><category>python</category><category>django</category><category>vim</category><category>stackoverflow</category><category>git</category><category>bash</category><category>amiga</category></item><item><title>ColorPal palettes improved!</title><link>http://beta.mwcz.org/2012/02/10/colorpal-palettes-improved/</link><description>&lt;p&gt;&lt;a href="/projects/colorpal"&gt;&lt;static/images src="/static/images/019/colorpal_logo.png" alt="ColorPal logo" title=""
+&lt;p&gt;&lt;em&gt;Update&lt;/em&gt; Thanks Doug, I've updated the GitHub link to point to the official repo.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Tue, 03 Jul 2012 22:44:50 -0400</pubDate><guid>tag:beta.mwcz.org,2012-07-03:2012/07/03/bootstrap---blogofile/</guid><category>bootstrap</category><category>mwcz.org</category></item><item><title>AFOMFT</title><link>http://beta.mwcz.org/2012/05/10/afomft/</link><description>&lt;p&gt;&lt;img alt="A few of my favorite things" src="/static/images/017/afomft.png" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Thu, 10 May 2012 21:47:00 -0400</pubDate><guid>tag:beta.mwcz.org,2012-05-10:2012/05/10/afomft/</guid><category>html5</category><category>javascript</category><category>linux</category><category>python</category><category>django</category><category>vim</category><category>stackoverflow</category><category>git</category><category>bash</category><category>amiga</category></item><item><title>ColorPal palettes improved!</title><link>http://beta.mwcz.org/2012/02/10/colorpal-palettes-improved/</link><description>&lt;p&gt;&lt;a href="/projects/colorpal"&gt;&lt;static/images src="/static/images/019/colorpal_logo.png" alt="ColorPal logo" title=""
 /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;In my &lt;a href="/2012/01/16/colorpal-alpha/"&gt;last post&lt;/a&gt; on the subject, I introduced
 ColorPal, my HTML5 color palette generation tool.  It didn't perform well with
@@ -581,69 +601,90 @@ $(document).ready( function() {
 &lt;p&gt;&lt;span class="css3_demo"&gt;CSS3!&lt;/span&gt; &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Thu, 17 Nov 2011 20:25:00 -0500</pubDate><guid>tag:beta.mwcz.org,2011-11-17:2011/11/17/how-not-to-use-css3/</guid><category>html5</category><category>css3</category><category>typography</category></item><item><title>HTML5 canvas point operations</title><link>http://beta.mwcz.org/2011/11/17/html5-canvas-point-operations/</link><description>&lt;p&gt;This is the last demo I made using &lt;a href="https://github.com/mwcz/jsimage"&gt;JSImage&lt;/a&gt;.  I created it some time around 2009-2010.  At the time, I had checked out an &lt;a href="http://www.amazon.com/Digital-Image-Processing-Algorithmic-Introduction/dp/1846283795"&gt;imaging book&lt;/a&gt; from my university's library at least ten times.  Most of the exercises in that book I implemented in Python using &lt;a href="http://www.pythonware.com/products/pil/"&gt;PIL&lt;/a&gt;, but point operations were simple enough to port to JavaScript quickly.&lt;/p&gt;
 &lt;p&gt;Point operations are image alterations that affect all pixels equally.  Other operations, like blurring for example, each result pixel depends on adjacent pixels.&lt;/p&gt;
 &lt;p&gt;This demonstrates changing contrast, value, saturation, hue, color inversion, and threshold point operations.  Note that there is a bug with increasing value and increasing saturation which I never got around to fixing.&lt;/p&gt;
-&lt;script type="text/javascript" src="/static/js/005/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/static/js/005/jsimage.js"&gt;&lt;/script&gt;
 
-&lt;p&gt;&lt;script type="text/javascript" src="/static/js/005/jsimage.js"&gt;&lt;/script&gt; 
-&lt;script type="text/javascript" src="/static/js/005/colorspace.js"&gt;&lt;/script&gt; &lt;/p&gt;
+&lt;script type="text/javascript" src="/static/js/005/colorspace.js"&gt;&lt;/script&gt;
+
 &lt;script type="text/javascript"&gt;
 
-    var IJS_PointOps; // make IJS_PointOps public so I can play with it in firebug more easily
+    var IJS_PointOps;
     $(document).ready( function() {
-
         IJS_PointOps = new JSImage( "IJS_PointOps", "/static/images/005/bee.jpg" );
     });
 
 &lt;/script&gt;
 
-&lt;canvas id="IJS_PointOps"&gt;your browser does not support canvas&lt;/canvas&gt;
-
-&lt;style type="text/css"&gt;
-#canvas-point-ops-tools-table input {
-    width: 20px;
-    height: 24px;
-}
+&lt;style type="text/css" media="screen"&gt;
+    .btn-group .glyphicon { margin-right: 0 }
+    .point-ops-demo { font-size: 0.9em }
+    .form-control.threshold { width: 4em }
 &lt;/style&gt;
 
-&lt;table cellpadding="4" cellspacing="0" id="canvas-point-ops-tools-table"&gt; 
-&lt;tr&gt; 
-    &lt;th&gt;Value&lt;/th&gt; 
-    &lt;th&gt;Contrast&lt;/th&gt; 
-    &lt;th&gt;Saturation&lt;/th&gt; 
-    &lt;th&gt;Hue&lt;/th&gt; 
-    &lt;th&gt;Invert&lt;/th&gt; 
-    &lt;th&gt;Threshold&lt;/th&gt; 
-&lt;/tr&gt;
+&lt;canvas class="img-responsive" id="IJS_PointOps"&gt;your browser does not support canvas&lt;/canvas&gt;
 
-&lt;tr&gt; 
-    &lt;td&gt; 
-        &lt;!-- using onmousedown instead of onclick because it improves perceived performance.
-             definitely an accessibility problem, though --&gt; 
-        &lt;input type="image" src="/static/images/005/arrow_up.png" onmousedown="IJS_PointOps.value( IJS_PointOps.canvas, 10 )" /&gt; 
-        &lt;input type="image" src="/static/images/005/arrow_down.png" onmousedown="IJS_PointOps.value( IJS_PointOps.canvas, -10 )" /&gt; 
-    &lt;/td&gt; 
-    &lt;td&gt; 
-        &lt;input type="image" src="/static/images/005/arrow_up.png" onmousedown="IJS_PointOps.contrast( IJS_PointOps.canvas, 1.1)" /&gt; 
-        &lt;input type="image" src="/static/images/005/arrow_down.png" onmousedown="IJS_PointOps.contrast( IJS_PointOps.canvas, 0.9)" /&gt; 
-    &lt;/td&gt; 
-    &lt;td&gt; 
-        &lt;input type="image" src="/static/images/005/arrow_up.png" onmousedown="IJS_PointOps.saturation( IJS_PointOps.canvas, 25 )" /&gt; 
-        &lt;input type="image" src="/static/images/005/arrow_down.png" onmousedown="IJS_PointOps.saturation( IJS_PointOps.canvas, -25 )" /&gt; 
-    &lt;/td&gt; 
-    &lt;td&gt; 
-        &lt;input type="image" src="/static/images/005/arrow_up.png" onmousedown="IJS_PointOps.hue( IJS_PointOps.canvas, 20)" /&gt; 
-        &lt;input type="image" src="/static/images/005/arrow_down.png" onmousedown="IJS_PointOps.hue( IJS_PointOps.canvas, -20)" /&gt; 
-    &lt;/td&gt; 
-    &lt;td&gt; 
-        &lt;button type="button" onmousedown="IJS_PointOps.invert()"&gt;invert&lt;/button&gt; 
-    &lt;/td&gt; 
-    &lt;td&gt; 
-        &lt;button type="button" onmousedown="IJS_PointOps.threshold( IJS_PointOps.canvas, document.getElementById('t').value )"&gt;threshold&lt;/button&gt; 
-        &lt;br /&gt; 
-        &lt;input type="text" value="127" maxlength="3" size="3" id="t" /&gt; 
-    &lt;/td&gt; 
-&lt;/tr&gt; 
+&lt;div class="row point-ops-demo"&gt;
 
-&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Thu, 17 Nov 2011 19:25:00 -0500</pubDate><guid>tag:beta.mwcz.org,2011-11-17:2011/11/17/html5-canvas-point-operations/</guid><category>html5</category><category>canvas</category><category>color</category><category>image processing</category><category>jsimage</category></item><item><title>HTML5 canvas area selection averaging</title><link>http://beta.mwcz.org/2011/11/16/html5-canvas-area-selection-averaging/</link><description>&lt;p&gt;This is a demo from late 2009.  It's an extension of the single-pixel &lt;a href="/2011/11/16/html5-canvas-eyedropper/"&gt;eyedropper&lt;/a&gt; I wrote previously.&lt;/p&gt;
+    &lt;div class="col-xs-6"&gt;
+        Value (Brightness)
+        &lt;br /&gt;
+        &lt;div class="btn-group"&gt;
+            &lt;button class="btn btn-default" onmousedown="IJS_PointOps.value( IJS_PointOps.canvas, 10 )"&gt;&lt;i class="glyphicon glyphicon-arrow-up"&gt;&lt;/i&gt;&lt;/button&gt;
+            &lt;button class="btn btn-default" onmousedown="IJS_PointOps.value( IJS_PointOps.canvas, -10 )"&gt;&lt;i class="glyphicon glyphicon-arrow-down"&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="col-xs-6"&gt;
+        Contrast
+        &lt;br /&gt;
+        &lt;div class="btn-group"&gt;
+            &lt;button class="btn btn-default" onmousedown="IJS_PointOps.contrast( IJS_PointOps.canvas, 1.1)" &gt;&lt;i class="glyphicon glyphicon-arrow-up"&gt;&lt;/i&gt;&lt;/button&gt;
+            &lt;button class="btn btn-default" onmousedown="IJS_PointOps.contrast( IJS_PointOps.canvas, 0.9)" &gt;&lt;i class="glyphicon glyphicon-arrow-down"&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="col-xs-6"&gt;
+        Saturation
+        &lt;br /&gt;
+        &lt;div class="btn-group"&gt;
+            &lt;button class="btn btn-default" onmousedown="IJS_PointOps.saturation( IJS_PointOps.canvas, 25 )" &gt;&lt;i class="glyphicon glyphicon-arrow-up"&gt;&lt;/i&gt;&lt;/button&gt;
+            &lt;button class="btn btn-default" onmousedown="IJS_PointOps.saturation( IJS_PointOps.canvas, -25 )" &gt;&lt;i class="glyphicon glyphicon-arrow-down"&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="col-xs-6"&gt;
+        Hue
+        &lt;br /&gt;
+        &lt;div class="btn-group"&gt;
+            &lt;button class="btn btn-default" onmousedown="IJS_PointOps.hue( IJS_PointOps.canvas, 20)" &gt;&lt;i class="glyphicon glyphicon-arrow-up"&gt;&lt;/i&gt;&lt;/button&gt;
+            &lt;button class="btn btn-default" onmousedown="IJS_PointOps.hue( IJS_PointOps.canvas, -20)" &gt;&lt;i class="glyphicon glyphicon-arrow-down"&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="col-xs-6"&gt;
+        &lt;br /&gt;
+        &lt;div class="btn-group"&gt;
+            &lt;button class="btn btn-default" onmousedown="IJS_PointOps.invert()"&gt;Invert&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="col-xs-6"&gt;
+        &lt;br /&gt;
+        &lt;div class="input-group"&gt;
+            &lt;span class="input-group-btn"&gt;
+                &lt;button class="btn btn-default" onmousedown="IJS_PointOps.threshold( IJS_PointOps.canvas, document.getElementById('t').value )"&gt;Threshold&lt;/button&gt;
+            &lt;/span&gt;
+            &lt;input type="text" value="127" class="form-control threshold" maxlength="3" size="3" id="t" /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="col-xs-6"&gt;
+        &lt;br /&gt;
+        &lt;button class="btn btn-default" onclick="IJS_PointOps = new JSImage( 'IJS_PointOps', '/static/images/005/bee.jpg' );"&gt;Reset&lt;/button&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Thu, 17 Nov 2011 19:25:00 -0500</pubDate><guid>tag:beta.mwcz.org,2011-11-17:2011/11/17/html5-canvas-point-operations/</guid><category>html5</category><category>canvas</category><category>color</category><category>image processing</category><category>jsimage</category></item><item><title>HTML5 canvas area selection averaging</title><link>http://beta.mwcz.org/2011/11/16/html5-canvas-area-selection-averaging/</link><description>&lt;p&gt;This is a demo from late 2009.  It's an extension of the single-pixel &lt;a href="/2011/11/16/html5-canvas-eyedropper/"&gt;eyedropper&lt;/a&gt; I wrote previously.&lt;/p&gt;
 &lt;p&gt;It's powered by an early version of an old JS toolkit I wrote called JSImage.  The latest version is available at my &lt;a href="https://github.com/mwcz/jsimage"&gt;JSImage github repo&lt;/a&gt;.  Don't be fooled by the 2011 commits, those are just artifacts from svn-&amp;gt;git migration.  No guarantees that the histo's are actually correct. :)&lt;/p&gt;
 &lt;p&gt;I used an old version of a rectangular selection tool called marquee.  I believe it's still located &lt;a href="http://marqueetool.net/"&gt;here&lt;/a&gt; but I can't be totally sure that's the same project.&lt;/p&gt;
 &lt;p&gt;Click, drag, and taste the magic. :|&lt;/p&gt;

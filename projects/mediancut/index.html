@@ -16,7 +16,15 @@
             <meta property="og:url" content="http://beta.mwcz.org/projects/mediancut/"/>
 
 
-        <link href="http://beta.mwcz.org/theme/css/styles.min.css?e5840c1c" rel="stylesheet">
+    <!--[if gte IE 9]
+    <style type="text/css">
+        .gradient {
+            filter: none;
+        }
+    </style>
+    <![endif]-->
+
+        <link href="http://beta.mwcz.org/theme/css/styles.min.css?800b5497" rel="stylesheet">
 
 
 
@@ -63,18 +71,17 @@
     <section id="content" class="body">
         <h1 class="entry-title">median-cut.js</h1>
         <div class="entry-content">
-            <div id="cp-repo"></div>
-
-<script src="/static/js/repo.js"></script>
-
-<script>
-    $(function() {
-        $('#cp-repo').repo({
-            user: 'mwcz',
-            name: 'median-cut.js'
-        });
-    });
-</script>
+            <p>The unfortunately-named <code>median-cut.js</code> is the library that powers
+<a href="http://colorpal.org/" title="ColorPal">ColorPal's</a> palette generation.</p>
+<p>I say it's unfortunately named, because it doesn't actually implement the
+classical median-cut algorithm.  It's identical, except that instead of cutting
+the boxes at their median, they are cut at the mean instead.  This results in
+more pleasing color palettes in most cases.</p>
+<p>Here's a comparison:</p>
+<p><img alt="median-cut vs mean-cut comparison image" src="/static/images/019/median-mean-comparison.png" title="median-cut vs mean-cut comparison image" /></p>
+<p>If you're interested in median-cut vs mean-cut, see <a href="/2012/02/10/colorpal-palettes-improved/" title="Post about mean-cut">this post</a> for a
+technical discussion.</p>
+<p>The code is <a href="https://github.com/mwcz/median-cut-js" title="median-cut.js GitHub repository">available on GitHub</a>.</p>
         </div>
     </section>
 </main>

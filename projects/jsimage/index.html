@@ -16,7 +16,15 @@
             <meta property="og:url" content="http://beta.mwcz.org/projects/jsimage/"/>
 
 
-        <link href="http://beta.mwcz.org/theme/css/styles.min.css?e5840c1c" rel="stylesheet">
+    <!--[if gte IE 9]
+    <style type="text/css">
+        .gradient {
+            filter: none;
+        }
+    </style>
+    <![endif]-->
+
+        <link href="http://beta.mwcz.org/theme/css/styles.min.css?800b5497" rel="stylesheet">
 
 
 
@@ -63,7 +71,13 @@
     <section id="content" class="body">
         <h1 class="entry-title">JSImage</h1>
         <div class="entry-content">
-            <div id="cp-repo"></div>
+            <p>JSImage was a basic, buggy, just-for-fun image processing library that I wrote
+in 2008/2009 when I first started seriously studying JavaScript.</p>
+<p>A stumbled across a <a href="http://imagingbook.com/books/englisch-edition-3-vol-softcover/" title="Principles of Digital Image Processing">book</a> in my university library, and started
+implementing the algorithms on the newly available HTML5 canvas element.</p>
+<p>I've made <a href="/tag/jsimage" title="Posts about JSImage">several posts</a> about JSImage which contain live demos.</p>
+<p>I don't recommend anyone use JSImage, but here's the code if you fancy a skim:</p>
+<div id="cp-repo"></div>
 
 <script src="/static/js/repo.js"></script>
 
@@ -75,6 +89,8 @@
         });
     });
 </script>
+
+<p>I think I put more work into code formatting than correct output. ;)</p>
         </div>
     </section>
 </main>

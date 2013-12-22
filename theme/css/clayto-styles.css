@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:700,400);
 .panel {
   margin-bottom: 21px;
   background-color: #ffffff;
@@ -239,6 +240,33 @@
 }
 body {
   font-family: 'Lato', sans-serif;
+  background: #ffffff;
+  background: #f0f0f0;
+  /* Old Browsers */
+  background: -moz-linear-gradient(left, #f0f0f0 0%, #ffffff 35%, #ffffff 65%, #f0f0f0 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(left top, right top, color-stop(0%, #f0f0f0), color-stop(35%, #ffffff), color-stop(65%, #ffffff), color-stop(100%, #f0f0f0));
+  /* Chrome,Safari4+  */
+  background: -webkit-linear-gradient(left, #f0f0f0 0%, #ffffff 35%, #ffffff 65%, #f0f0f0 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #f0f0f0 0%, #ffffff 35%, #ffffff 65%, #f0f0f0 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #f0f0f0 0%, #ffffff 35%, #ffffff 65%, #f0f0f0 100%);
+  /* IE 10+ */
+  background: linear-gradient(to right, #f0f0f0 0%, #ffffff 35%, #ffffff 65%, #f0f0f0 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0f0f0', endColorstr='#f0f0f0', GradientType=1);
+  /* IE6-9 */
+
+}
+/*********************************************************************
+ *                    bootstrap.flatly overrides                     *
+ *********************************************************************/
+body {
+  font-size: 16px;
+}
+blockquote p {
+  font-size: 16px;
 }
 @media (min-width: 768px) {
   .container {
@@ -403,6 +431,12 @@ img {
 /*********************************************************************
  *                              Header                               *
  *********************************************************************/
+.navbar {
+  background: url(/theme/images/background-navbar-white-noise.png);
+}
+.navbar a {
+  text-shadow: 0.2px 2.2px 7px rgba(0, 0, 0, 0.4);
+}
 .page-header,
 .page-header h1 {
   margin-top: 0;
@@ -411,12 +445,24 @@ article h2,
 section h1 {
   margin-top: 0;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Oswald', sans-serif;
+}
 /*********************************************************************
  *                              Footer                               *
  *********************************************************************/
 .clayto-footer {
   height: 60px;
   margin-top: 30px;
+  background: url(/theme/images/background-navbar-white-noise.png);
+}
+.clayto-footer a {
+  text-shadow: 0.2px 2.2px 7px rgba(0, 0, 0, 0.4);
 }
 /*********************************************************************
  *                             Post info                             *

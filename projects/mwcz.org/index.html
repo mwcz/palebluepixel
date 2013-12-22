@@ -16,7 +16,15 @@
             <meta property="og:url" content="http://beta.mwcz.org/projects/mwcz.org/"/>
 
 
-        <link href="http://beta.mwcz.org/theme/css/styles.min.css?e5840c1c" rel="stylesheet">
+    <!--[if gte IE 9]
+    <style type="text/css">
+        .gradient {
+            filter: none;
+        }
+    </style>
+    <![endif]-->
+
+        <link href="http://beta.mwcz.org/theme/css/styles.min.css?800b5497" rel="stylesheet">
 
 
 
@@ -63,18 +71,19 @@
     <section id="content" class="body">
         <h1 class="entry-title">mwcz.org</h1>
         <div class="entry-content">
-            <div id="cp-repo"></div>
-
-<script src="/static/js/repo.js"></script>
-
-<script>
-    $(function() {
-        $('#cp-repo').repo({
-            user: 'mwcz',
-            name: 'mwcz'
-        });
-    });
-</script>
+            <p><a href="/" title="mwcz.org">mwcz.org</a> is this blog.  A technical blog with posts about web development,
+image processing, and generally celebrating programming.</p>
+<p><img alt="mwcz.org screenshot" src="http://beta.mwcz.org/static/images/projects/screenshot_mwcz.png" title="mwcz.org screenshot" /></p>
+<p>It's currently powered by:</p>
+<ul>
+<li><strong><a href="http://python.org/" title="Python website">Python</a></strong> - a large and powerful snake</li>
+<li><strong><a href="http://blog.getpelican.com/" title="Pelican website">Pelican</a></strong> - Python-powered static website generator</li>
+<li><strong><a href="http://getbootstrap.com/" title="Bootstrap website">Bootstrap 3</a></strong> - front-end library</li>
+<li><strong><a href="http://lesscss.org/" title="LESS css preprocessor website">LESS</a></strong> - CSS preprocessor</li>
+<li><strong><a href="https://github.com/trevorturk/pygments" title="Pygments website">Pygments</a></strong> - syntax highlighting for code examples, <a href="https://github.com/uraimo/pygments-vimstyles" title="Pygments vimstyles">rdark</a> theme</li>
+<li><strong><a href="http://pages.github.com/" title="GitHub pages website">GitHub pages</a></strong> - hosting</li>
+</ul>
+<p>I've made some <a href="http://localhost:8001/tag/mwczorg/" title="Posts about mwcz.org">blog posts</a> about this site.</p>
         </div>
     </section>
 </main>
