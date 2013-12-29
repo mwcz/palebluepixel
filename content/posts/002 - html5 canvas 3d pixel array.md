@@ -115,7 +115,7 @@ inconvenience) is that the array of pixels is one-dimensional.  `getImageData` r
 As a human, that's really tough to work with, so this script converts that to a more
 logical 3D array (X by Y by RGBA)
 
-<input type="button" value="Convert 1D pixel array -> 3D pixel array" onclick="getpixelarray();" />
+<input class="btn btn-primary" type="button" value="Convert 1D pixel array into 3D pixel array" onclick="getpixelarray();" />
 
 <div class="row">
     <div class="col-xs-6">

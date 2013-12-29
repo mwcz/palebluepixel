@@ -17,7 +17,7 @@ It's currently powered by:
  - **[Pygments][6]** - syntax highlighting for code examples, [rdark][8] theme
  - **[GitHub pages][7]** - hosting
 
-I've made some [blog posts][1] about this site.
+I've made some [posts about this site][1].
 
 [1]: http://localhost:8001/tag/mwczorg/ "Posts about mwcz.org"
 [2]: http://python.org/ "Python website"
