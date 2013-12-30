@@ -29,7 +29,7 @@ The site is currently powered by:
 
  - **[Python][2]** - a comedy troupe
  - **[Django][3]** - Python web development framework
- - **[960.gs][4]** - a vintage but groundbreakingatthetime CSS grid ;)
+ - **[960.gs][4]** - a vintage CSS grid, groundbreaking at the time though
  - **[Piwik][5]** - open-source web analytics
  - and a custom color extraction algorithm that automatically suggests colors,
    then allows the user to tweak the colors to their liking

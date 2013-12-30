@@ -3,10 +3,14 @@
 {% block content %}
 
     <div class="jumbotron">
-        <h1>mwcz.org <small>Color, code, and computing.</small></h1>
-        <p></p>
+        <div class="row">
+            <h1 class="col-xs-9">mwcz.org <small>Color, code, and computing.</small></h1>
+        </div>
     </div>
 
-    {{ super() }}
+    <div class="row">
+        <div class="col-xs-12 col-md-6">Blog posts</div>
+        <div class="col-xs-12 col-md-6">Projects</div>
+    </div>
 
 {% endblock content %}
