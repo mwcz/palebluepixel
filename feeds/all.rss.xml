@@ -22,36 +22,47 @@ the image to 50% of the width. Expressions such as “30in + 40px” and “4 *
 &lt;p&gt;From the &lt;a href="http://docs.gimp.org/2.8/en/gimp-introduction-whats-new.html" title="GIMP User Manual"&gt;GIMP User Manual&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Sun, 22 Dec 2013 00:00:00 -0500</pubDate><guid>tag:beta.mwcz.org,2013-12-22:2013/12/22/super-easy-image-resizing-in-gimp/</guid><category>gimp</category></item><item><title>ColorPal CLI!</title><link>http://beta.mwcz.org/2013/11/07/colorpal-cli/</link><description>&lt;p&gt;Tired of creating color palettes with ColorPal's simple, intuitive
 drag-and-drop interface?  Me too!  Want to jam with the console cowboys in
 cyber-space?  Now you can.  Now &lt;em&gt;we&lt;/em&gt; can.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ColorPal CLI demo recording" src="http://beta.mwcz.org/static/images/023/cp.node.gif" title="ColorPal CLI demo recording" /&gt;&lt;/p&gt;
-&lt;p&gt;There now exists a command-line ColorPal utility.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;# Create a palette of 8 colors from image.png&lt;/span&gt;
-&lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="n"&gt;cp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt; &lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt; &lt;span class="n"&gt;fixed&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;
+&lt;p&gt;&lt;img alt="ColorPal CLI logo" src="http://beta.mwcz.org/static/images/023/colorpal_cli_logo.png" title="ColorPal CLI logo" /&gt;&lt;/p&gt;
+&lt;h2&gt;Demo!&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="n"&gt;cpal&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="n"&gt;hex&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="n"&gt;MyImage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt;
 
-&lt;span class="cp"&gt;# Create a palette with a dynamic number of colors.  ColorPal intelligently&lt;/span&gt;
-&lt;span class="cp"&gt;# chooses how many colors to include based on the color diversity of the&lt;/span&gt;
-&lt;span class="cp"&gt;# image.&lt;/span&gt;
-&lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="n"&gt;cp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt; &lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt; &lt;span class="n"&gt;dynamic&lt;/span&gt;
+&lt;span class="cp"&gt;#07070b&lt;/span&gt;
+&lt;span class="cp"&gt;#bac0c4&lt;/span&gt;
+&lt;span class="cp"&gt;#d1bd66&lt;/span&gt;
+&lt;span class="cp"&gt;#7e8899&lt;/span&gt;
+&lt;span class="cp"&gt;#696964&lt;/span&gt;
+&lt;span class="cp"&gt;#c4b441&lt;/span&gt;
+&lt;span class="cp"&gt;#65683e&lt;/span&gt;
+&lt;span class="cp"&gt;#394434&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;If dynamic mode doesn't include enough colors, you can pass in a number from
-0.0 to 1.0, where a greater number means "include more colors".&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;# Include more colors&lt;/span&gt;
-&lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="n"&gt;cp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt; &lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt; &lt;span class="n"&gt;dynamic&lt;/span&gt; &lt;span class="mf"&gt;0.2&lt;/span&gt;
-
-&lt;span class="cp"&gt;# Even more colors&lt;/span&gt;
-&lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="n"&gt;cp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt; &lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt; &lt;span class="n"&gt;dynamic&lt;/span&gt; &lt;span class="mf"&gt;0.5&lt;/span&gt;
-
-&lt;span class="cp"&gt;# LOTS of colors&lt;/span&gt;
-&lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="n"&gt;cp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt; &lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt; &lt;span class="n"&gt;dynamic&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Get it!&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;npm&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt; &lt;span class="n"&gt;canvas&lt;/span&gt; &lt;span class="n"&gt;requirejs&lt;/span&gt; &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;dependencies&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;mwcz&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;colorpal&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;cli&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
+&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;colorpal&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;cli&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Currently only &lt;code&gt;png&lt;/code&gt; images are supported, because I'm using
-&lt;a href="https://github.com/niegowski/node-pngjs/"&gt;pngjs&lt;/a&gt; to decode the images, which
-(shockingly) only supports pngs.  I'd like to support other formats, but this
-is a simple prototype release, and those formats can be supported once I find a
-Node library that can decode them.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Thu, 07 Nov 2013 00:00:00 -0500</pubDate><guid>tag:beta.mwcz.org,2013-11-07:2013/11/07/colorpal-cli/</guid><category>html5</category><category>javascript</category><category>color</category></item><item><title>ColorPal Output Update</title><link>http://beta.mwcz.org/2012/07/30/colorpal-output-update/</link><description>&lt;p&gt;Hi pals.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Use it!&lt;/h2&gt;
+&lt;p&gt;Visit the &lt;a href="/projects/colorpal-cli" title="ColorPal CLI project page"&gt;projcet page&lt;/a&gt; for the full documentation, or simply run the
+command without any arguments to see the help text.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Generate&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;color&lt;/span&gt; &lt;span class="n"&gt;palette&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;an&lt;/span&gt; &lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nl"&gt;USAGE:&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="n"&gt;cpal&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt; &lt;span class="n"&gt;IMAGE&lt;/span&gt;
+
+&lt;span class="nl"&gt;Options:&lt;/span&gt;
+  &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;size&lt;/span&gt;     &lt;span class="n"&gt;Generate&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;fixed&lt;/span&gt; &lt;span class="n"&gt;size&lt;/span&gt; &lt;span class="n"&gt;palette&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;specify&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;colors&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+
+  &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;dynamic&lt;/span&gt;  &lt;span class="n"&gt;Generate&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;palette&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sized&lt;/span&gt; &lt;span class="n"&gt;dynamically&lt;/span&gt; &lt;span class="n"&gt;based&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;color&lt;/span&gt; &lt;span class="n"&gt;diversity&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;can&lt;/span&gt; &lt;span class="n"&gt;optionally&lt;/span&gt; &lt;span class="n"&gt;specify&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="mf"&gt;0.0&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;where&lt;/span&gt; &lt;span class="n"&gt;larger&lt;/span&gt; &lt;span class="n"&gt;numbers&lt;/span&gt; &lt;span class="n"&gt;increase&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;colors&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+
+  &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;   &lt;span class="n"&gt;Specify&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt; &lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;  &lt;span class="n"&gt;Available&lt;/span&gt; &lt;span class="n"&gt;formats&lt;/span&gt; &lt;span class="n"&gt;are&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;scss&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sass&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;less&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;rgb&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;hex&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The code is &lt;a href="https://github.com/mwcz/colorpal-cli" title="ColorPal CLI code repository"&gt;available on GitHub&lt;/a&gt; and I welcome any feedback, bug reports,
+pull requests, etc.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Thu, 07 Nov 2013 00:00:00 -0500</pubDate><guid>tag:beta.mwcz.org,2013-11-07:2013/11/07/colorpal-cli/</guid><category>html5</category><category>javascript</category><category>color</category><category>colorpal</category></item><item><title>ColorPal Output Update</title><link>http://beta.mwcz.org/2012/07/30/colorpal-output-update/</link><description>&lt;p&gt;Hi pals.&lt;/p&gt;
 &lt;p&gt;This is a speedy post about a speedy update I made today to
 &lt;a href="/projects/colorpal/"&gt;ColorPal&lt;/a&gt;, an HTML5 tool I wrote that automatically
 generates color palettes from a photograph.&lt;/p&gt;
@@ -84,7 +95,7 @@ but pretty soon it'll be ColorPal pumping out those swatches.  &lt;/p&gt;
 &lt;p&gt;That's not the only change.  If you're not excited, don't worry.  I am!&lt;/p&gt;
 &lt;p&gt;&lt;a href="/projects/colorpal"&gt;&lt;static/images src="/static/images/019/colorpal_logo.png" alt="ColorPal logo" title=""
 /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Happy coloring!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Mon, 30 Jul 2012 22:30:00 -0400</pubDate><guid>tag:beta.mwcz.org,2012-07-30:2012/07/30/colorpal-output-update/</guid><category>html5</category><category>javascript</category><category>color</category></item><item><title>Introducing Canvas Indexed Color</title><link>http://beta.mwcz.org/2012/07/03/introducing-canvas-indexed-color/</link><description>&lt;p&gt;&lt;a href="/projects/canvas_indexed_color" title="Canvas Indexed Color demo"&gt;Canvas Indexed Color demo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Happy coloring!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Mon, 30 Jul 2012 22:30:00 -0400</pubDate><guid>tag:beta.mwcz.org,2012-07-30:2012/07/30/colorpal-output-update/</guid><category>html5</category><category>javascript</category><category>color</category><category>colorpal</category></item><item><title>Introducing Canvas Indexed Color</title><link>http://beta.mwcz.org/2012/07/03/introducing-canvas-indexed-color/</link><description>&lt;p&gt;&lt;a href="/projects/canvas_indexed_color" title="Canvas Indexed Color demo"&gt;Canvas Indexed Color demo&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="White SVG Tiger" src="/static/images/021/hahatiger.png" /&gt;&lt;/p&gt;
 &lt;p&gt;First, I converted the classic SVG tiger into a set of canvas drawing
 instructions using &lt;a href="http://professorcloud.com/svg-to-canvas/" title="Professor Cloud's conversion
@@ -228,7 +239,7 @@ feedback.  Code development help is welcomed too.&lt;/p&gt;
 &lt;p&gt;If you try out ColorPal, let me know your thoughts on
 &lt;a href="https://twitter.com/#!/mwcz"&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Here are github repos for &lt;a href="https://github.com/mwcz/ColorPal"&gt;ColorPal&lt;/a&gt; and
-&lt;a href="https://github.com/mwcz/median-cut-js"&gt;median-cut.js&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Fri, 10 Feb 2012 22:44:50 -0500</pubDate><guid>tag:beta.mwcz.org,2012-02-10:2012/02/10/colorpal-palettes-improved/</guid><category>html5</category><category>javascript</category><category>color</category></item><item><title>Toy javascript unit tester</title><link>http://beta.mwcz.org/2012/01/30/toy-javascript-unit-tester/</link><description>&lt;p&gt;Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and had a minor epiphany.  In the back of my mind, there has always been a bit of uncertainty as to how unit testing frameworks work.  Deep in my brain I knew there was something I didn't understand, but I wasn't quite sure what.  I never gave it any conscious thought.&lt;/p&gt;
+&lt;a href="https://github.com/mwcz/median-cut-js"&gt;median-cut.js&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Fri, 10 Feb 2012 22:44:50 -0500</pubDate><guid>tag:beta.mwcz.org,2012-02-10:2012/02/10/colorpal-palettes-improved/</guid><category>html5</category><category>javascript</category><category>color</category><category>colorpal</category></item><item><title>Toy javascript unit tester</title><link>http://beta.mwcz.org/2012/01/30/toy-javascript-unit-tester/</link><description>&lt;p&gt;Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and had a minor epiphany.  In the back of my mind, there has always been a bit of uncertainty as to how unit testing frameworks work.  Deep in my brain I knew there was something I didn't understand, but I wasn't quite sure what.  I never gave it any conscious thought.&lt;/p&gt;
 &lt;p&gt;As a developer, I'd use a framework, write a bunch of &lt;code&gt;testBlahFoo&lt;/code&gt; functions, and the framework would magically run them.  &lt;/p&gt;
 &lt;p&gt;Then I realized... "Oh, it's just introspection."&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c1"&gt;// Create an object with three properties, all functions&lt;/span&gt;
@@ -358,7 +369,7 @@ feedback.  Code development help is welcomed too.&lt;/p&gt;
 &lt;p&gt;It's powered by &lt;a href="http://en.wikipedia.org/wiki/Canvas_element"&gt;canvas&lt;/a&gt;, &lt;a href="https://developer.mozilla.org/en/data_URIs"&gt;data URIs&lt;/a&gt;, &lt;a href="http://dev.w3.org/2006/webapi/FileAPI/"&gt;File API&lt;/a&gt;, and my homespun &lt;a href="http://en.wikipedia.org/wiki/Median_cut"&gt;median-cut&lt;/a&gt; implementation, which I'm calling &lt;em&gt;median-cut.js&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Bear in mind that while I've kept median-cut.js nice and clean, I did hammer out ColorPal as quickly as possible, so it's a mess.  Why?  I expect median-cut.js to be useful to other programmers, but ColorPal is just a tool for designers.  Or it will be, anyway. :)&lt;/p&gt;
 &lt;p&gt;Here are github repos for &lt;a href="https://github.com/mwcz/ColorPal"&gt;ColorPal&lt;/a&gt; and &lt;a href="https://github.com/mwcz/median-cut-js"&gt;median-cut.js&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;And, as a reward for reading to the end, a &lt;a href="/projects/colorpal/"&gt;live demo&lt;/a&gt;!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Mon, 16 Jan 2012 22:15:50 -0500</pubDate><guid>tag:beta.mwcz.org,2012-01-16:2012/01/16/colorpal-alpha/</guid><category>html5</category><category>javascript</category><category>color</category></item><item><title>The N9, QR-Codes, and KeePassX</title><link>http://beta.mwcz.org/2012/01/08/the-n9-qr-codes-and-keepassx/</link><description>&lt;p&gt;&lt;em&gt;Update: I happened across a &lt;a href="http://keepass.info/plugins.html#qrcodegen"&gt;KeePass
+&lt;p&gt;And, as a reward for reading to the end, a &lt;a href="/projects/colorpal/"&gt;live demo&lt;/a&gt;!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Mon, 16 Jan 2012 22:15:50 -0500</pubDate><guid>tag:beta.mwcz.org,2012-01-16:2012/01/16/colorpal-alpha/</guid><category>html5</category><category>javascript</category><category>color</category><category>colorpal</category></item><item><title>The N9, QR-Codes, and KeePassX</title><link>http://beta.mwcz.org/2012/01/08/the-n9-qr-codes-and-keepassx/</link><description>&lt;p&gt;&lt;em&gt;Update: I happened across a &lt;a href="http://keepass.info/plugins.html#qrcodegen"&gt;KeePass
 plugin&lt;/a&gt; (not the same as KeePassX)
 that displays passwords as QR codes, just like my hack below.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Poor, glorious N9.&lt;/p&gt;
@@ -911,7 +922,7 @@ inconvenience) is that the array of pixels is one-dimensional.  &lt;code&gt;getI
 
 &lt;p&gt;As a human, that's really tough to work with, so this script converts that to a more
 logical 3D array (X by Y by RGBA)&lt;/p&gt;
-&lt;p&gt;&lt;input type="button" value="Convert 1D pixel array -&gt; 3D pixel array" onclick="getpixelarray();" /&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;input class="btn btn-primary" type="button" value="Convert 1D pixel array into 3D pixel array" onclick="getpixelarray();" /&gt;&lt;/p&gt;
 &lt;div class="row"&gt;
     &lt;div class="col-xs-6"&gt;
         &lt;div class="panel panel-default"&gt;

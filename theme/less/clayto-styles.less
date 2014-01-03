@@ -26,8 +26,13 @@ body {
 body {
     font-size: 16px;
 }
-blockquote p {
-    font-size: 16px;
+blockquote {
+
+    border-left: 5px solid rgb(200, 200, 200);
+
+    p {
+      font-size: 16px;
+    }
 }
 
 @media (min-width: 768px) {
@@ -185,12 +190,14 @@ img {
  *********************************************************************/
 
 // remove excessive whitespace between navbar and page title
-.navbar {
+.clayto-navbar {
     background: url(/theme/images/background-navbar-white-noise.png);
+
     a {
         text-shadow: 0.2px 2.2px 7px rgba(0,0,0,0.4)
     }
 }
+
 .page-header {
     &, h1 {
         margin-top: 0;
@@ -205,6 +212,20 @@ h1, h2, h3, h4, h5, h6 {
     font-family: @title-font;
 }
 
+.jumbotron {
+    position: relative;
+    background: url("/static/images/projects/icon_colorpal_cli.png") no-repeat center center;
+    text-shadow: 0px 2px 2px rgba(0,0,0,0.4);
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+        font-size: 50px;
+    }
+}
+
 /*********************************************************************
  *                              Footer                               *
  *********************************************************************/
@@ -212,7 +233,7 @@ h1, h2, h3, h4, h5, h6 {
 .clayto-footer {
     height: 60px;
     margin-top: @grid-gutter-width;
-    .navbar;
+    background: url(/theme/images/background-navbar-white-noise.png);
 }
 
 /*********************************************************************
@@ -236,3 +257,4 @@ h1, h2, h3, h4, h5, h6 {
         .panel;
     }
 }
+

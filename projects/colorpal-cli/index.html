@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>ColorPal CLI</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="ColorPal CLI"/>
+            <meta property="og:url" content="http://beta.mwcz.org/projects/colorpal-cli/"/>
+
+
+    <!--[if gte IE 9]
+    <style type="text/css">
+        .gradient {
+            filter: none;
+        }
+    </style>
+    <![endif]-->
+
+        <link href="http://beta.mwcz.org/theme/css/styles.min.css?c19a61b8" rel="stylesheet">
+
+
+
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+        <link href="http://beta.mwcz.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="mwcz.org ATOM Feed"/>
+        <link href="http://beta.mwcz.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
+              title="mwcz.org RSS Feed"/>
+
+
+</head>
+<body>
+<nav class="clayto-navbar navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://beta.mwcz.org" class="navbar-brand">mwcz.org</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li >
+                            <a href="http://beta.mwcz.org/posts/">Posts</a>
+                        </li>
+                        <li><a href="http://beta.mwcz.org/projects/">
+                            Projects
+                        </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://beta.mwcz.org/archives/"><i class="icon-th-list"></i>Archives</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</nav>
+<!-- /.navbar -->
+<main role="main" class="container clayto-container">
+    <section id="content" class="body">
+        <h1 class="entry-title">ColorPal CLI</h1>
+        <div class="entry-content">
+            <p>ColorPal CLI is a command-line version of <a href="/projects/colorpal" title="ColorPal project page">ColorPal</a>, my HTML5 color palette
+generator.</p>
+<hr />
+<h2>Demo!</h2>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">node</span> <span class="n">cpal</span><span class="p">.</span><span class="n">js</span> <span class="o">-</span><span class="n">f</span> <span class="n">hex</span> <span class="o">-</span><span class="n">s</span> <span class="mi">8</span> <span class="n">MyImage</span><span class="p">.</span><span class="n">png</span>
+
+<span class="cp">#07070b</span>
+<span class="cp">#bac0c4</span>
+<span class="cp">#d1bd66</span>
+<span class="cp">#7e8899</span>
+<span class="cp">#696964</span>
+<span class="cp">#c4b441</span>
+<span class="cp">#65683e</span>
+<span class="cp">#394434</span>
+</pre></div>
+
+
+<hr />
+<h2>Get it!</h2>
+<div class="highlight"><pre><span class="n">npm</span> <span class="n">install</span> <span class="o">-</span><span class="n">g</span> <span class="n">canvas</span> <span class="n">requirejs</span> <span class="err">#</span> <span class="n">install</span> <span class="n">dependencies</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="err">@</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">:</span><span class="n">mwcz</span><span class="o">/</span><span class="n">colorpal</span><span class="o">-</span><span class="n">cli</span><span class="p">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">colorpal</span><span class="o">-</span><span class="n">cli</span>
+</pre></div>
+
+
+<hr />
+<h2>Use it!</h2>
+<p>To display the help text, simply run the command without any arguments.</p>
+<div class="highlight"><pre><span class="n">node</span> <span class="n">cpal</span><span class="p">.</span><span class="n">js</span>
+
+<span class="n">Generate</span> <span class="n">a</span> <span class="n">color</span> <span class="n">palette</span> <span class="n">from</span> <span class="n">an</span> <span class="n">image</span><span class="o">!</span> <span class="o">:</span><span class="p">)</span>
+<span class="nl">USAGE:</span> <span class="n">node</span> <span class="n">cpal</span><span class="p">.</span><span class="n">js</span> <span class="n">IMAGE</span>
+
+<span class="nl">Options:</span>
+  <span class="o">-</span><span class="n">s</span><span class="p">,</span> <span class="o">--</span><span class="n">size</span>     <span class="n">Generate</span> <span class="n">a</span> <span class="n">fixed</span> <span class="n">size</span> <span class="n">palette</span><span class="p">;</span> <span class="n">you</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">colors</span> <span class="n">you</span> <span class="n">want</span><span class="p">.</span>
+
+  <span class="o">-</span><span class="n">d</span><span class="p">,</span> <span class="o">--</span><span class="n">dynamic</span>  <span class="n">Generate</span> <span class="n">a</span> <span class="n">palette</span><span class="p">,</span> <span class="n">sized</span> <span class="n">dynamically</span> <span class="n">based</span> <span class="n">on</span> <span class="n">the</span> <span class="n">color</span> <span class="n">diversity</span> <span class="n">of</span> <span class="n">the</span> <span class="n">image</span><span class="p">;</span> <span class="n">you</span> <span class="n">can</span> <span class="n">optionally</span> <span class="n">specify</span> <span class="n">a</span> <span class="n">number</span> <span class="n">from</span> <span class="mf">0.0</span> <span class="n">to</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">where</span> <span class="n">larger</span> <span class="n">numbers</span> <span class="n">increase</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">colors</span><span class="p">.</span>
+
+  <span class="o">-</span><span class="n">f</span><span class="p">,</span> <span class="o">--</span><span class="n">format</span>   <span class="n">Specify</span> <span class="n">the</span> <span class="n">output</span> <span class="n">format</span><span class="p">.</span>  <span class="n">Available</span> <span class="n">formats</span> <span class="n">are</span><span class="o">:</span> <span class="n">scss</span><span class="p">,</span> <span class="n">sass</span><span class="p">,</span> <span class="n">json</span><span class="p">,</span> <span class="n">less</span><span class="p">,</span> <span class="n">rgb</span><span class="p">,</span> <span class="n">hex</span>
+</pre></div>
+
+
+<p>Let's dive right in by generating palettes from the sample images included with the
+project.</p>
+<div class="highlight"><pre><span class="n">node</span> <span class="n">cpal</span><span class="p">.</span><span class="n">js</span> <span class="n">images</span><span class="o">/</span><span class="n">hugepic</span><span class="p">.</span><span class="n">png</span>
+
+<span class="p">[</span> <span class="p">[</span> <span class="mi">144</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">178</span> <span class="p">],</span>
+  <span class="p">[</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">146</span> <span class="p">],</span>
+  <span class="p">[</span> <span class="mi">171</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">6</span> <span class="p">],</span>
+  <span class="p">[</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">85</span> <span class="p">],</span>
+  <span class="p">[</span> <span class="mi">238</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">120</span> <span class="p">],</span>
+  <span class="p">[</span> <span class="mi">219</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">32</span> <span class="p">]</span> <span class="p">]</span>
+</pre></div>
+
+
+<p>To visualize what just happened, ColorPal turned this:</p>
+<p><img alt="hugepic.png" src="http://beta.mwcz.org/static/images/projects/colorpal-cli/hugepic_small.png" title="hugepic.png" /></p>
+<p>Into this:</p>
+<p><img alt="hugepic.png colors" src="http://beta.mwcz.org/static/images/projects/colorpal-cli/hugepic_colors.png" title="hugepic.png colors" /></p>
+<p>Let's try again with a different image.</p>
+<div class="highlight"><pre><span class="n">node</span> <span class="n">cpal</span><span class="p">.</span><span class="n">js</span> <span class="n">images</span><span class="o">/</span><span class="n">issue3</span><span class="p">.</span><span class="n">png</span>
+
+<span class="p">[</span> <span class="p">[</span> <span class="mi">165</span><span class="p">,</span> <span class="mi">219</span><span class="p">,</span> <span class="mi">144</span> <span class="p">],</span> <span class="p">[</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">181</span><span class="p">,</span> <span class="mi">75</span> <span class="p">],</span> <span class="p">[</span> <span class="mi">254</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">203</span> <span class="p">]</span> <span class="p">]</span>
+</pre></div>
+
+
+<p>Only three colors this time?  This image has very few colors, so ColorPal
+decided to create a smaller palette.</p>
+<p><img alt="issue3.png" src="http://beta.mwcz.org/static/images/projects/colorpal-cli/issue3_small.png" title="issue3.png" />
+<img alt="issue3.png colors" src="http://beta.mwcz.org/static/images/projects/colorpal-cli/issue3_colors.png" title="issue3.png colors" /></p>
+<p>To generate a specific number of colors, use the <code>-s</code> option.</p>
+<div class="highlight"><pre><span class="cp"># generate 8 colors from the same image</span>
+<span class="n">node</span> <span class="n">cpal</span><span class="p">.</span><span class="n">js</span> <span class="o">-</span><span class="n">s</span> <span class="mi">8</span> <span class="n">images</span><span class="o">/</span><span class="n">issue3</span><span class="p">.</span><span class="n">png</span>
+</pre></div>
+
+
+<p>You can also specify the output format.  <code>json</code> is the default, but several others are available.</p>
+<p>Hex:</p>
+<div class="highlight"><pre><span class="n">node</span> <span class="n">cpal</span><span class="p">.</span><span class="n">js</span> <span class="n">images</span><span class="o">/</span><span class="n">issue3</span><span class="p">.</span><span class="n">png</span> <span class="o">-</span><span class="n">f</span> <span class="n">hex</span>
+<span class="cp">#a5db90</span>
+<span class="cp">#3ab54b</span>
+<span class="cp">#fefacb</span>
+</pre></div>
+
+
+<p>LESS:</p>
+<div class="highlight"><pre><span class="n">node</span> <span class="n">cpal</span><span class="p">.</span><span class="n">js</span> <span class="n">images</span><span class="o">/</span><span class="n">issue3</span><span class="p">.</span><span class="n">png</span> <span class="o">-</span><span class="n">f</span> <span class="n">less</span>
+<span class="err">@</span><span class="n">color0</span><span class="o">:</span> <span class="n">rgb</span><span class="p">(</span><span class="mi">165</span><span class="p">,</span><span class="mi">219</span><span class="p">,</span><span class="mi">144</span><span class="p">);</span>
+<span class="err">@</span><span class="n">color1</span><span class="o">:</span> <span class="n">rgb</span><span class="p">(</span><span class="mi">58</span><span class="p">,</span><span class="mi">181</span><span class="p">,</span><span class="mi">75</span><span class="p">);</span>
+<span class="err">@</span><span class="n">color2</span><span class="o">:</span> <span class="n">rgb</span><span class="p">(</span><span class="mi">254</span><span class="p">,</span><span class="mi">250</span><span class="p">,</span><span class="mi">203</span><span class="p">);</span>
+</pre></div>
+
+
+<p>SCSS/SASS:</p>
+<div class="highlight"><pre><span class="n">node</span> <span class="n">cpal</span><span class="p">.</span><span class="n">js</span> <span class="n">images</span><span class="o">/</span><span class="n">issue3</span><span class="p">.</span><span class="n">png</span> <span class="o">-</span><span class="n">f</span> <span class="n">scss</span>
+<span class="err">$</span><span class="n">color0</span><span class="o">:</span> <span class="n">rgb</span><span class="p">(</span><span class="mi">165</span><span class="p">,</span><span class="mi">219</span><span class="p">,</span><span class="mi">144</span><span class="p">);</span>
+<span class="err">$</span><span class="n">color1</span><span class="o">:</span> <span class="n">rgb</span><span class="p">(</span><span class="mi">58</span><span class="p">,</span><span class="mi">181</span><span class="p">,</span><span class="mi">75</span><span class="p">);</span>
+<span class="err">$</span><span class="n">color2</span><span class="o">:</span> <span class="n">rgb</span><span class="p">(</span><span class="mi">254</span><span class="p">,</span><span class="mi">250</span><span class="p">,</span><span class="mi">203</span><span class="p">);</span>
+</pre></div>
+
+
+<p>ColorPal also has a <a href="http://colorpal.org/" title="colorpal.org">web interface</a> which you might find more convenient,
+depending on your needs  The command-line utility is very convenient if you
+need to automate palette generation for a large number of images.</p>
+<p>All the code is available <a href="https://github.com/mwcz/colorpal-cli" title="GitHub page for ColorPal CLI">on GitHub</a>.  Bug reports and pull requests are
+much appreciated. :)</p>
+<p>I've written other <a href="/tag/colorpal" title="Posts about ColorPal">posts about ColorPal</a>.</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="navbar-default navbar-static-top clayto-footer"></div>
+</footer>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://beta.mwcz.org/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://beta.mwcz.org/theme/js/respond.min.js"></script>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'mwcz'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+</body>
+</html>
