@@ -42,6 +42,39 @@ blockquote {
 }
 
 /*********************************************************************
+ *                             Homepage                              *
+ *********************************************************************/
+
+.clayto-home-col {
+    height              : 600px;
+    padding             : @grid-gutter-width / 2;
+
+    h2 {
+        color: @brand-primary;
+        margin-top: 0px;
+        small {
+            display: block;
+            clear: both;
+        }
+    }
+}
+.clayto-home-col-link {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.clayto-home-col-photos   {
+    background-image    : url("/static/images/home/photos-col-bg.jpg");
+}
+.clayto-home-col-code     {
+    background-image    : url("/static/images/home/code-col-bg.jpg");
+}
+.clayto-home-col-projects {
+    background-image    : url("/static/images/home/projects-col-bg.jpg");
+}
+
+/*********************************************************************
  *                           Project list                            *
  *********************************************************************/
 
