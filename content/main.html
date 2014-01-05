@@ -2,15 +2,37 @@
 
 {% block content %}
 
-    <div class="jumbotron">
-        <div class="row">
-            <h1 class="col-xs-9">mwcz.org <small>Color, code, and computing.</small></h1>
-        </div>
-    </div>
-
     <div class="row">
-        <div class="col-xs-12 col-md-6">Blog posts</div>
-        <div class="col-xs-12 col-md-6">Projects</div>
+        <div class="col-xs-12 col-md-4">
+            <a class="clayto-home-col-link" href="/posts" title="my blog posts">
+                <div class="clayto-home-col clayto-home-col-code">
+                    <h2>
+                        Posts
+                        <small>Thoughts on code & color.</small>
+                    </h2>
+                </div>
+            </a>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <a class="clayto-home-col-link" href="/projects" title="my programming projects">
+                <div class="clayto-home-col clayto-home-col-projects">
+                    <h2>
+                        Projects
+                        <small>Code you can use.</small>
+                    </h2>
+                </div>
+            </a>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <a class="clayto-home-col-link" href="http://clayto.com/" title="my photographs">
+                <div class="clayto-home-col clayto-home-col-photos">
+                    <h2>
+                        Photographs
+                        <small>Enthusiast photographs at clayto.com</small>
+                    </h2>
+                </div>
+            </a>
+        </div>
     </div>
 
 {% endblock content %}
