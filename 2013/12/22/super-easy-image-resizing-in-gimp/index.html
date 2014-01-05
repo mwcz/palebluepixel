@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>Super easy image resizing in GIMP</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Super easy image resizing in GIMP"/>
+            <meta property="og:url" content="http://beta.mwcz.org/2013/12/22/super-easy-image-resizing-in-gimp/"/>
+            <meta property="og:description" content=""/>
+
+
+    <!--[if gte IE 9]
+    <style type="text/css">
+        .gradient {
+            filter: none;
+        }
+    </style>
+    <![endif]-->
+
+        <link href="http://beta.mwcz.org/theme/css/styles.min.css?d595d567" rel="stylesheet">
+
+
+
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+        <link href="http://beta.mwcz.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="mwcz.org ATOM Feed"/>
+        <link href="http://beta.mwcz.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
+              title="mwcz.org RSS Feed"/>
+
+
+</head>
+<body>
+<nav class="clayto-navbar navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://beta.mwcz.org" class="navbar-brand">mwcz.org</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="http://beta.mwcz.org/posts/">Posts</a>
+                        </li>
+                        <li><a href="http://beta.mwcz.org/projects/">
+                            Projects
+                        </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://beta.mwcz.org/archives/"><i class="icon-th-list"></i>Archives</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</nav>
+<!-- /.navbar -->
+<main role="main" class="container clayto-container">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://beta.mwcz.org/2013/12/22/super-easy-image-resizing-in-gimp/"
+                       rel="bookmark"
+                       title="Permalink to Super easy image resizing in GIMP">
+                        Super easy image resizing in GIMP
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <p>Ever been here?</p>
+<blockquote>
+<p>I want to make a new image (say) twice the size of the current one, hmm...</p>
+<p>/me opens gnome-calculator | python shell | bc</p>
+<p>/me tippity types the current width * 2</p>
+<p>/me tippity types the current height * 2</p>
+<p>/me tippity types the results back into the Create New Image dialog</p>
+</blockquote>
+<p>I've done that countless times.  As I was about to do the same thing once more,
+I thought "Hmm, wouldn't it be nice if we could do simple math inside the New
+Image dialog?  Well, I tried it and it worked.</p>
+<p><img alt="GIMP math recording" src="http://beta.mwcz.org/static/images/024/gimp_math.gif" title="GIMP math recording" /></p>
+<p>The feature was added in GIMP 2.8, so it's fairly recent.</p>
+<blockquote>
+<p>Enhancements have also been made to the size entry widget, which is used for
+inputting most of the x, y, width, height parameters. For example, in the
+scale dialog it is now possible to write “50%” in the Width field to scale
+the image to 50% of the width. Expressions such as “30in + 40px” and “4 *
+5.4in” work, too.</p>
+</blockquote>
+<p>From the <a href="http://docs.gimp.org/2.8/en/gimp-introduction-whats-new.html" title="GIMP User Manual">GIMP User Manual</a>.</p>
+            </div>
+
+            <!-- /.entry-content -->
+<footer class="clayto-post-info alert">
+    <span class="published">
+        Published on 2013-12-22 and filed under 
+    </span>
+
+
+
+	<a href="http://beta.mwcz.org/tag/gimp/">gimp</a>
+</footer><!-- /.post-info -->    <hr />
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'mwcz'; // required: replace example with your forum shortname
+            var disqus_identifier = 'super-easy-image-resizing-in-gimp';
+            var disqus_url = 'http://beta.mwcz.org/2013/12/22/super-easy-image-resizing-in-gimp/';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+<section class="clayto-related-posts" id="clayto-related-posts">
+</section>        </article>
+    </section>
+
+</main>
+
+<footer>
+    <div class="navbar-default navbar-static-top clayto-footer"></div>
+</footer>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://beta.mwcz.org/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://beta.mwcz.org/theme/js/respond.min.js"></script>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'mwcz'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+</body>
+</html>

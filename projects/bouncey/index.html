@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>Bouncey</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Bouncey"/>
+            <meta property="og:url" content="http://beta.mwcz.org/projects/bouncey/"/>
+
+
+    <!--[if gte IE 9]
+    <style type="text/css">
+        .gradient {
+            filter: none;
+        }
+    </style>
+    <![endif]-->
+
+        <link href="http://beta.mwcz.org/theme/css/styles.min.css?d595d567" rel="stylesheet">
+
+
+
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+        <link href="http://beta.mwcz.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="mwcz.org ATOM Feed"/>
+        <link href="http://beta.mwcz.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
+              title="mwcz.org RSS Feed"/>
+
+
+</head>
+<body>
+<nav class="clayto-navbar navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://beta.mwcz.org" class="navbar-brand">mwcz.org</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li >
+                            <a href="http://beta.mwcz.org/posts/">Posts</a>
+                        </li>
+                        <li><a href="http://beta.mwcz.org/projects/">
+                            Projects
+                        </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://beta.mwcz.org/archives/"><i class="icon-th-list"></i>Archives</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</nav>
+<!-- /.navbar -->
+<main role="main" class="container clayto-container">
+    <section id="content" class="body">
+        <h1 class="entry-title">Bouncey</h1>
+        <div class="entry-content">
+            <p>Bouncey is a simple physics demo I wrote in early/mid 2011, with
+some contributions and bugfixes from my good friend Greg Gardner.</p>
+<p>Fun, simple, and oddly relaxing.</p>
+<hr />
+<style type="text/css">
+#cnvs {
+    background-color: #1f1f1f;
+    margin: 0 auto;
+    border: 1px solid black;
+    -webkit-box-shadow: 0px 2px 18px rgba( 0, 0, 0, 0.7 );
+       -moz-box-shadow: 0px 2px 18px rgba( 0, 0, 0, 0.7 );
+         -o-box-shadow: 0px 2px 18px rgba( 0, 0, 0, 0.7 );
+            box-shadow: 0px 2px 18px rgba( 0, 0, 0, 0.7 );
+}
+</style>
+
+<script type="text/javascript" src="/static/js/007/bouncey.js"></script>
+
+<script type="text/javascript">
+
+$(function() {
+
+    canvas_element        = document.getElementById('cnvs');
+    canvas_element.width  = W;
+    canvas_element.height = H;
+
+    canvas = canvas_element.getContext('2d');
+
+    // create some squares with random velocities in the center of the canvas
+    // objects are stored in the format 
+    //      [ X, Y, X_velocity, Y_velocity, width, height, [R,G,B] ]
+    var x, y, w, h, v_x, v_y, r, g, b, new_obj;
+
+    // calculate all the possible initial y positions
+    y_positions = [];
+    for( var i = OBJ_HEIGHT; i < H - OBJ_HEIGHT; i += 2 * OBJ_HEIGHT )
+        y_positions.push( i );
+
+    // calculate all the possible initial x positions
+    x_positions = [];
+    for( var i = OBJ_WIDTH; i < W - OBJ_WIDTH; i += 2 * OBJ_WIDTH )
+        x_positions.push( i );
+
+    /*
+    */
+    for( var i = 0; i < 40; ++i ) {
+
+        // create values for the object
+        x   = x_positions[ i % x_positions.length ];
+        y   = y_positions[ Math.floor( i / x_positions.length ) % y_positions.length ];
+        v_x = Math.random() * OBJ_MAX_VELOCITY*2 - OBJ_MAX_VELOCITY;
+        v_y = Math.random() * OBJ_MAX_VELOCITY*2 - OBJ_MAX_VELOCITY;
+        r   = Math.floor( Math.random() * 200 + 55 ); // random value 55..255
+        g   = Math.floor( Math.random() * 200 + 55 );
+        b   = Math.floor( Math.random() * 200 + 55 );
+
+        // add the object to the scene
+        var color = 'rgb(' + r + ',' + g + ',' + b + ')';
+        var new_obj = new Circle( x, y, OBJ_R, v_x, v_y, color );
+
+        objs.push( new_obj );
+    }
+
+    setInterval( make_frame, PERIOD );
+
+});
+
+</script>
+
+<canvas class="img-responsive" id="cnvs" width="500" height="375"> 
+    Sorry, your browser does not support HTML5 canvas.  Lame.
+</canvas>
+
+<hr />
+<p><a href="/tag/bouncey/" title="Posts about Bouncey">Posts about Bouncey</a></p>
+<p><a href="https://github.com/mwcz/bouncey/" title="Bouncey on GitHub">Bouncey's code on GitHub</a></p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="navbar-default navbar-static-top clayto-footer"></div>
+</footer>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://beta.mwcz.org/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://beta.mwcz.org/theme/js/respond.min.js"></script>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'mwcz'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+</body>
+</html>

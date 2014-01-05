@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>Canvas Indexed Color</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Canvas Indexed Color"/>
+            <meta property="og:url" content="http://beta.mwcz.org/projects/canvas_indexed_color/"/>
+
+
+    <!--[if gte IE 9]
+    <style type="text/css">
+        .gradient {
+            filter: none;
+        }
+    </style>
+    <![endif]-->
+
+        <link href="http://beta.mwcz.org/theme/css/styles.min.css?d595d567" rel="stylesheet">
+
+
+
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+        <link href="http://beta.mwcz.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="mwcz.org ATOM Feed"/>
+        <link href="http://beta.mwcz.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
+              title="mwcz.org RSS Feed"/>
+
+
+</head>
+<body>
+<nav class="clayto-navbar navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://beta.mwcz.org" class="navbar-brand">mwcz.org</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li >
+                            <a href="http://beta.mwcz.org/posts/">Posts</a>
+                        </li>
+                        <li><a href="http://beta.mwcz.org/projects/">
+                            Projects
+                        </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://beta.mwcz.org/archives/"><i class="icon-th-list"></i>Archives</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</nav>
+<!-- /.navbar -->
+<main role="main" class="container clayto-container">
+    <section id="content" class="body">
+        <h1 class="entry-title">Canvas Indexed Color</h1>
+        <div class="entry-content">
+            <p>What have we here?  It's a limited demonstration of <a href="https://en.wikipedia.org/wiki/Indexed_color" title="Indexed color: Wikipedia">indexed color</a> within the HTML5 canvas element.</p>
+<style type="text/css">
+.color_palette {
+    list-style: none;
+}
+.panel-body {
+    background-color: #1f1f1f;
+}
+.palette-panel-body a.btn {
+    margin: 6px;
+}
+.color_palette li {
+    float: left;
+    display: inline;
+}
+input.color {
+    height: 58px;
+    width: 58px;
+    margin: 2px;
+    text-align: center;
+    cursor: crosshair;
+    font-size: 0.8em;
+    padding: 0;
+}
+#cnvs {
+    width: 400px;
+    height: 400px;
+}
+</style>
+
+<div class="row">
+    <div class="col-md-6 col-xs-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                SVG tiger rendered to a &lt;canvas&gt;
+            </div>
+            <div class="panel-body">
+                <canvas class="img-responsive" id="cnvs" data-bind="updateCanvas: colors"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xs-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Distinct pixel values
+            </div>
+            <div class="panel-body palette-panel-body">
+                <ol class="color_palette" data-bind="template: { name: 'CIC_ColorPaletteTemplate', foreach: colors }"></ol>
+                <div class="clearfix"></div>
+                <hr />
+                <a class="btn btn-primary" onclick="location.assign('/projects/canvas_indexed_color/#000000,323232,4C4C4C,#659900,#666666,999999,#999999,#99cc32,#a51926,#a5264c,#b23259,#b26565,#b2b2b2,#cc3f4c,CCCCCC,#cccccc,#e5668c,#e59999,#e5e5b2,E8E8E8,EAEAEA,EAEAEA,EBEBEB,ECECEC,EEEEEE,EFEFEF,F1F1F1,F2F2F2,F3F3F3,F4F4F4,F5F5F5,F8F8F8,F8F8F8,F9F9F9,FAFAFA,FCFCFC,#ff727f,#ffffcc,#ffffff'); location.reload(); return false;" href="/projects/canvas_indexed_color/#000000,323232,4C4C4C,#659900,#666666,999999,#999999,#99cc32,#a51926,#a5264c,#b23259,#b26565,#b2b2b2,#cc3f4c,CCCCCC,#cccccc,#e5668c,#e59999,#e5e5b2,E8E8E8,EAEAEA,EAEAEA,EBEBEB,ECECEC,EEEEEE,EFEFEF,F1F1F1,F2F2F2,F3F3F3,F4F4F4,F5F5F5,F8F8F8,F8F8F8,F9F9F9,FAFAFA,FCFCFC,#ff727f,#ffffcc,#ffffff">Create a white tiger</a>
+                <a class="btn btn-primary" id="cic-tiger-scan" onclick="location.assign('/projects/canvas_indexed_color/#ED0202,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,#FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,#FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,#FFFFFF,FFFFFF,#FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,#FFFFFF,FFFFFF,#ffffff,FFFFFF,FFFFFF,FFFFFF'); location.reload(); return false;" href="/projects/canvas_indexed_color/#ED0202,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,#FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,#FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,#FFFFFF,FFFFFF,#FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,#FFFFFF,FFFFFF,#ffffff,FFFFFF,FFFFFF,FFFFFF">Tiger scan!</a>
+                <a class="btn btn-primary" onclick="cvm.cycleColors(); return false;" href="">Cycle colors</a>
+                <a class="btn btn-primary" href="/projects/canvas_indexed_color">Reset to classic SVG tiger</a>
+                <a class="btn btn-primary" onclick="copyToClipboard(location.href); return false;" href="/projects/canvas_indexed_color">Copy URL to clipboard</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function copyToClipboard (text) {
+  window.prompt ("To copy to clipboard: press Ctrl+C, then Enter\n\n (use Cmd+C if you're on a Mac)", text);
+}
+</script>
+
+<script type="text/html" id="CIC_ColorPaletteTemplate">
+    <li>
+        <input class="color btn" data-bind="value: hex" />
+    </li>
+</script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/knockout/2.3.0/knockout-min.js"></script>
+
+<script type="text/javascript" src="/static/projects/canvas_indexed_color/demo/farbtastic/farbtastic.js"></script>
+
+<script type="text/javascript" src="/static/projects/canvas_indexed_color/demo/vector_images.js"></script>
+
+<script type="text/javascript" src="/static/projects/canvas_indexed_color/demo/cic.js"></script>
+
+<script type="text/javascript" src="/static/projects/canvas_indexed_color/demo/jscolor/jscolor.js"></script>
+
+<p>This is a pretty limited demo and doesn't <em>actually</em> implement an indexed color
+API for the canvas element; it merely simulated indexed color.  To really see
+the power of indexed color, check out this brilliant <a href="http://www.effectgames.com/effect/article.psp.html/joe/Old_School_Color_Cycling_with_HTML5" title="Amazing color cycling demo">color cycling demo</a>.
+It's still beautiful today, but seeing it in the 90s was mind-blowing.</p>
+<p><strong>Credits</strong></p>
+<ul>
+<li><a href="http://knockoutjs.com/" title="Knockout.js">Knockout</a> for its very nice UI/data structure binding</li>
+<li>The color picker is <a href="https://github.com/mattfarina/farbtastic" title="Farbtastic color picker">Farbtastic</a></li>
+<li>Whoever created the postscript/ghostscript tiger.  I found <a href="http://ptspts.blogspot.com/2010/12/dramatic-colored-picture-of-tigers-head.html" title="GhostScript tiger author archeology">some clues</a> but no true author.</li>
+</ul>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="navbar-default navbar-static-top clayto-footer"></div>
+</footer>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://beta.mwcz.org/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://beta.mwcz.org/theme/js/respond.min.js"></script>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'mwcz'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+</body>
+</html>

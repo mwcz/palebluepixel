@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>Toy javascript unit tester</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Toy javascript unit tester"/>
+            <meta property="og:url" content="http://beta.mwcz.org/2012/01/30/toy-javascript-unit-tester/"/>
+            <meta property="og:description" content="Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and had a minor epiphany. In the back of my mind, there has always been a bit of uncertainty as to how unit testing frameworks work. Deep in my brain I ..."/>
+
+
+    <!--[if gte IE 9]
+    <style type="text/css">
+        .gradient {
+            filter: none;
+        }
+    </style>
+    <![endif]-->
+
+        <link href="http://beta.mwcz.org/theme/css/styles.min.css?d595d567" rel="stylesheet">
+
+
+
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+        <link href="http://beta.mwcz.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="mwcz.org ATOM Feed"/>
+        <link href="http://beta.mwcz.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
+              title="mwcz.org RSS Feed"/>
+
+
+</head>
+<body>
+<nav class="clayto-navbar navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://beta.mwcz.org" class="navbar-brand">mwcz.org</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="http://beta.mwcz.org/posts/">Posts</a>
+                        </li>
+                        <li><a href="http://beta.mwcz.org/projects/">
+                            Projects
+                        </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://beta.mwcz.org/archives/"><i class="icon-th-list"></i>Archives</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</nav>
+<!-- /.navbar -->
+<main role="main" class="container clayto-container">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://beta.mwcz.org/2012/01/30/toy-javascript-unit-tester/"
+                       rel="bookmark"
+                       title="Permalink to Toy javascript unit tester">
+                        Toy javascript unit tester
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <p>Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and had a minor epiphany.  In the back of my mind, there has always been a bit of uncertainty as to how unit testing frameworks work.  Deep in my brain I knew there was something I didn't understand, but I wasn't quite sure what.  I never gave it any conscious thought.</p>
+<p>As a developer, I'd use a framework, write a bunch of <code>testBlahFoo</code> functions, and the framework would magically run them.  </p>
+<p>Then I realized... "Oh, it's just introspection."</p>
+<div class="highlight"><pre><span class="c1">// Create an object with three properties, all functions</span>
+<span class="k">var</span> <span class="n">myfuncs</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nl">func1:</span> <span class="k">function</span><span class="p">()</span> <span class="p">{</span> <span class="n">console</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="s">&quot;func it up&quot;</span><span class="p">);</span> <span class="p">},</span>
+    <span class="nl">func2:</span> <span class="k">function</span><span class="p">()</span> <span class="p">{</span> <span class="n">console</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="s">&quot;func&#39;s old brother&quot;</span><span class="p">);</span> <span class="p">},</span>
+    <span class="nl">func3:</span> <span class="k">function</span><span class="p">()</span> <span class="p">{</span> <span class="n">console</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="s">&quot;bring back da func&quot;</span><span class="p">);</span> <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="c1">// Run all functions attached to myfuncs</span>
+<span class="k">for</span><span class="p">(</span> <span class="n">func</span> <span class="n">in</span> <span class="n">myfuncs</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="n">myfuncs</span><span class="p">[</span> <span class="n">func</span> <span class="p">]();</span>
+<span class="p">}</span>
+
+<span class="c1">// Outputs:</span>
+<span class="c1">// </span>
+<span class="c1">// func it up</span>
+<span class="c1">// func&#39;s old brother</span>
+<span class="c1">// bring back da func</span>
+</pre></div>
+
+
+<p>So simple.  Later, I wrote a very basic unit testing framework, purely as an educational excercise.</p>
+<p>The guts are almost simple as the example above.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">JTestSuite</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+
+    <span class="kd">var</span> <span class="nx">version</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+        <span class="nx">jt</span><span class="p">,</span>
+
+    <span class="nx">init</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">callback</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="nx">jt</span> <span class="o">=</span> <span class="nx">JTests</span><span class="p">();</span>
+        <span class="nx">jt</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span> <span class="nx">callback</span> <span class="p">);</span>
+    <span class="p">},</span>
+
+    <span class="nx">run</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">fn</span><span class="p">,</span>
+            <span class="nx">prop</span><span class="p">;</span>
+
+        <span class="c1">// Run all functions that begin with &quot;test&quot;</span>
+        <span class="k">for</span><span class="p">(</span> <span class="nx">prop</span> <span class="k">in</span> <span class="k">this</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span> <span class="k">typeof</span> <span class="k">this</span><span class="cp">[</span><span class="nx">prop</span><span class="cp">]</span> <span class="o">===</span> <span class="s2">&quot;function&quot;</span> <span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span><span class="p">(</span> <span class="nx">prop</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="o">===</span> <span class="s2">&quot;test&quot;</span> <span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="k">this</span><span class="cp">[</span><span class="nx">prop</span><span class="cp">]</span><span class="p">(</span><span class="nx">jt</span><span class="p">)</span> <span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">};</span>
+
+    <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="p">(</span><span class="k">this</span> <span class="k">instanceof</span> <span class="nx">JTestSuite</span><span class="p">)</span> <span class="p">)</span> <span class="k">return</span> <span class="k">new</span> <span class="nx">JTestSuite</span><span class="p">();</span>
+
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="nx">init</span> <span class="o">:</span> <span class="nx">init</span><span class="p">,</span>
+        <span class="nx">run</span>  <span class="o">:</span> <span class="nx">run</span>
+    <span class="p">};</span>
+
+<span class="p">};</span>
+</pre></div>
+
+
+<p>In the <code>run</code> function's loop, I first check that each property is a function before attemping to run it.  This avoids a <code>called_non_callable TypeError</code>.  I then check that the name of the property begins with the string "test".  When dynamically calling functions, it's usually a good idea to call <code>obj.hasOwnProperty(propname)</code> to ensure the property wasn't inherited from some unknown source (especially if the property you wanted to reference may have been <code>delete</code>d, but a property with the same name is now surfacing from a parent object), but in this case I'd like to leave open the possibility for inherited Test Suites.</p>
+<p>The <code>JTests</code> object created in the <code>init</code> function is a separate object that contains a bunch of assertions.  It looks something like this:</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">JTests</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+
+    <span class="kd">var</span> <span class="nx">version</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+        <span class="nx">result_callback</span><span class="p">,</span>
+
+    <span class="nx">init</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">callback</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="nx">result_callback</span> <span class="o">=</span> <span class="nx">callback</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">assertTrue</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">a</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">a</span> <span class="o">===</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="nx">result_callback</span><span class="p">(</span> <span class="p">{</span>                                                                                                                                                                         
+            <span class="nx">name</span>   <span class="o">:</span> <span class="s2">&quot;assertTrue&quot;</span><span class="p">,</span>
+            <span class="nx">args</span>   <span class="o">:</span> <span class="cp">[</span> <span class="nx">a</span> <span class="cp">]</span><span class="p">,</span>
+            <span class="nx">result</span> <span class="o">:</span> <span class="nx">result</span>
+        <span class="p">}</span> <span class="p">);</span>
+    <span class="p">};</span>
+
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="nx">assertTrue</span> <span class="o">:</span> <span class="nx">assertTrue</span>
+    <span class="p">};</span>
+
+<span class="p">};</span>
+</pre></div>
+
+
+<p>...except with many more assertions. :)</p>
+<p>Both <code>JTestSuite</code> and <code>JTests</code> use the <a href="http://stackoverflow.com/a/5647397/215148">revealing module pattern</a>. </p>
+<p>I have a lot of ideas for improvement, like <a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself">DRY</a>ing up the assertions, so the <code>{name,args,result}</code> object doesn't have to be defined in each assertion.  But <a href="http://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#JavaScript">many others</a> have already done a great job, and I don't want to reinvent too many wheels.</p>
+<div class="highlight"><pre><span class="c1">// Define a custom handler for the result</span>
+<span class="k">function</span> <span class="n">test_callback</span><span class="p">(</span> <span class="n">result</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="n">console</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Create a new JTestSuite object and initialize it with the callback</span>
+<span class="k">var</span> <span class="n">TestSuite</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JTestSuite</span><span class="p">();</span>
+<span class="n">TestSuite</span><span class="p">.</span><span class="n">init</span><span class="p">(</span> <span class="n">test_callback</span> <span class="p">);</span>
+
+<span class="c1">// Create some tests</span>
+<span class="n">TestSuite</span><span class="p">.</span><span class="n">testMath</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">jt</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">jt</span><span class="p">.</span><span class="n">assertEquals</span><span class="p">(</span> <span class="mh">2</span> <span class="o">+</span> <span class="mh">2</span><span class="p">,</span> <span class="mh">4</span> <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="n">TestSuite</span><span class="p">.</span><span class="n">testFalsy</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">jt</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// [], &quot;&quot;, and &quot;0&quot; all == false in javascript</span>
+    <span class="n">jt</span><span class="p">.</span><span class="n">assertFalsy</span><span class="p">(</span> <span class="p">[]</span> <span class="p">);</span>
+    <span class="n">jt</span><span class="p">.</span><span class="n">assertFalsy</span><span class="p">(</span> <span class="s">&quot;&quot;</span> <span class="p">);</span>
+    <span class="n">jt</span><span class="p">.</span><span class="n">assertFalsy</span><span class="p">(</span> <span class="s">&quot;0&quot;</span> <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="c1">// Run all the tests</span>
+<span class="n">TestSuite</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>
+</pre></div>
+
+
+<p>The callback allows a user to determine how the results from the unit test should be processed or displayed.  Results could be printed to console.log, displayed on a page by adding them to the DOM, sent to a Web service with AJAX, or any arbitrary service with Web Sockets.</p>
+<p>After writing this toy framework, and explaining it to a colleague, I was told that the Rails unit tester uses almost the exact same approach.  I'd wager a few bucks that JUnit uses the Reflection API's <code>Class.getMethods()</code> to find and run all the methods added to a TestCase class.  Only a few bucks, though.</p>
+            </div>
+
+            <!-- /.entry-content -->
+<footer class="clayto-post-info alert">
+    <span class="published">
+        Published on 2012-01-30 and filed under 
+    </span>
+
+
+
+	<a href="http://beta.mwcz.org/tag/javascript/">javascript</a>
+        /
+	<a href="http://beta.mwcz.org/tag/testing/">testing</a>
+</footer><!-- /.post-info -->    <hr />
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'mwcz'; // required: replace example with your forum shortname
+            var disqus_identifier = 'toy-javascript-unit-tester';
+            var disqus_url = 'http://beta.mwcz.org/2012/01/30/toy-javascript-unit-tester/';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+<section class="clayto-related-posts" id="clayto-related-posts">
+        <h2>Might these be of interest?</h2>
+
+            <article>
+                <h2><a href="http://beta.mwcz.org/2012/05/10/afomft/">AFOMFT</a></h2>
+                <div class="summary"><p><img alt="A few of my favorite things" src="/static/images/017/afomft.png" /></p>
+                    <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/2012/05/10/afomft/">more ...</a>
+                </div>
+            </article>
+            <article>
+                <h2><a href="http://beta.mwcz.org/2012/01/16/colorpal-alpha/">ColorPal Alpha</a></h2>
+                <div class="summary"><p>Introducing ColorPal! <img alt="ColorPal screenshot" src="/static/images/015/ss.png" /></p>
+                    <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/2012/01/16/colorpal-alpha/">more ...</a>
+                </div>
+            </article>
+            <article>
+                <h2><a href="http://beta.mwcz.org/2012/02/10/colorpal-palettes-improved/">ColorPal palettes improved!</a></h2>
+                <div class="summary"><p><a href="/projects/colorpal"><static/images src="/static/images/019/colorpal_logo.png" alt="ColorPal logo" title=""
+/></a></p>
+<p>In my <a href="/2012/01/16/colorpal-alpha/">last post</a> on the subject, I introduced
+ColorPal, my HTML5 color palette generation tool.  It didn't perform well with
+certain types of images, so I fixed it. :)</p>
+<p>Color palettes will now match the image even ...</p>
+                    <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/2012/02/10/colorpal-palettes-improved/">more ...</a>
+                </div>
+            </article>
+            <article>
+                <h2><a href="http://beta.mwcz.org/2011/10/13/opcode-patterns-70-finished/">Opcode patterns 70% finished</a></h2>
+                <div class="summary"><p>genlut.py is really filling out.  It generates the LUT for all 68k opcodes (68000 only), and I'm about 70% done.  77 down, 34 to go.</p>
+<p>The OPCODES dict defines the first two bytes of each opcode, both static bits and operands.  The operand strings act as keys into ...</p>
+                    <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/2011/10/13/opcode-patterns-70-finished/">more ...</a>
+                </div>
+            </article>
+</section>        </article>
+    </section>
+
+</main>
+
+<footer>
+    <div class="navbar-default navbar-static-top clayto-footer"></div>
+</footer>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://beta.mwcz.org/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://beta.mwcz.org/theme/js/respond.min.js"></script>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'mwcz'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+</body>
+</html>

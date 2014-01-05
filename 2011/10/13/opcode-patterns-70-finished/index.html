@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>Opcode patterns 70% finished</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Opcode patterns 70% finished"/>
+            <meta property="og:url" content="http://beta.mwcz.org/2011/10/13/opcode-patterns-70-finished/"/>
+            <meta property="og:description" content="genlut.py is really filling out. It generates the LUT for all 68k opcodes (68000 only), and I'm about 70% done. 77 down, 34 to go. The OPCODES dict defines the first two bytes of each opcode, both static bits and operands. The operand strings act as keys into ..."/>
+
+
+    <!--[if gte IE 9]
+    <style type="text/css">
+        .gradient {
+            filter: none;
+        }
+    </style>
+    <![endif]-->
+
+        <link href="http://beta.mwcz.org/theme/css/styles.min.css?d595d567" rel="stylesheet">
+
+
+
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+        <link href="http://beta.mwcz.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="mwcz.org ATOM Feed"/>
+        <link href="http://beta.mwcz.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
+              title="mwcz.org RSS Feed"/>
+
+
+</head>
+<body>
+<nav class="clayto-navbar navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://beta.mwcz.org" class="navbar-brand">mwcz.org</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="http://beta.mwcz.org/posts/">Posts</a>
+                        </li>
+                        <li><a href="http://beta.mwcz.org/projects/">
+                            Projects
+                        </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://beta.mwcz.org/archives/"><i class="icon-th-list"></i>Archives</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</nav>
+<!-- /.navbar -->
+<main role="main" class="container clayto-container">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://beta.mwcz.org/2011/10/13/opcode-patterns-70-finished/"
+                       rel="bookmark"
+                       title="Permalink to Opcode patterns 70% finished">
+                        Opcode patterns 70% finished
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <p>genlut.py is really filling out.  It generates the LUT for all 68k opcodes (68000 only), and I'm about 70% done.  77 down, 34 to go.</p>
+<p>The OPCODES dict defines the first two bytes of each opcode, both static bits and operands.  The operand strings act as keys into the PATTERNS struct, which contains all possible values for each operand.</p>
+<p>The recursive function gen() is fed an opcode pattern which may contain operand strings as well as static bits.  Some operand patterns contain other operand patterns, so gen() keeps recursing until all operand patterns are gone.  Once a set of totally static bits has been created, those bits are added to INSTRUCTIONS, along with the name of the opcode.</p>
+<p>The PATTERNS, OPCODES, and INSTRUCTIONS dicts are all named poorly, and the whole solution  isn't ultra-elegant, but it does follow the structure of the 68k PRM pretty intuitively and is easy to edit.  Once it's complete, I should never need to run it again.</p>
+<p>(This post was copied from my old <a href="http://aejs.blogspot.com/">AEJS blog</a>)</p>
+            </div>
+
+            <!-- /.entry-content -->
+<footer class="clayto-post-info alert">
+    <span class="published">
+        Published on 2011-10-13 and filed under 
+    </span>
+
+
+
+	<a href="http://beta.mwcz.org/tag/aejs/">aejs</a>
+        /
+	<a href="http://beta.mwcz.org/tag/html5/">html5</a>
+        /
+	<a href="http://beta.mwcz.org/tag/javascript/">javascript</a>
+        /
+	<a href="http://beta.mwcz.org/tag/amiga/">amiga</a>
+</footer><!-- /.post-info -->    <hr />
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'mwcz'; // required: replace example with your forum shortname
+            var disqus_identifier = 'opcode-patterns-70-finished';
+            var disqus_url = 'http://beta.mwcz.org/2011/10/13/opcode-patterns-70-finished/';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+<section class="clayto-related-posts" id="clayto-related-posts">
+        <h2>Might these be of interest?</h2>
+
+            <article>
+                <h2><a href="http://beta.mwcz.org/2011/09/22/lut/">LUT</a></h2>
+                <div class="summary"><p>Decoding is easy. Decoding requires a lot of typing. (I am starting to believe this is true of ever aspect of interpreted emulation...)</p>
+<p>For the AEJS decoder, I am creating a <a href="http://en.wikipedia.org/wiki/Lookup_table">look-up table</a> with every possible pattern for each instruction. It was my first idea, but I initially discarded it ...</p>
+                    <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/2011/09/22/lut/">more ...</a>
+                </div>
+            </article>
+            <article>
+                <h2><a href="http://beta.mwcz.org/2011/09/20/introducing-aejs/">Introducing AEJS</a></h2>
+                <div class="summary"><p>Introducing AEJS, an Amiga emulator written in JavaScript.  Wait, wording it like that makes it sound like it's finished.  It isn't.  It won't be for a long time.  AEJS is just a hobby, and will never hold a candle to UAE.</p>
+<p>Why the Amiga?  Given that this ...</p>
+                    <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/2011/09/20/introducing-aejs/">more ...</a>
+                </div>
+            </article>
+            <article>
+                <h2><a href="http://beta.mwcz.org/2012/05/10/afomft/">AFOMFT</a></h2>
+                <div class="summary"><p><img alt="A few of my favorite things" src="/static/images/017/afomft.png" /></p>
+                    <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/2012/05/10/afomft/">more ...</a>
+                </div>
+            </article>
+            <article>
+                <h2><a href="http://beta.mwcz.org/2012/07/30/colorpal-output-update/">ColorPal Output Update</a></h2>
+                <div class="summary"><p>Hi pals.</p>
+<p>This is a speedy post about a speedy update I made today to
+<a href="/projects/colorpal/">ColorPal</a>, an HTML5 tool I wrote that automatically
+generates color palettes from a photograph.</p>
+<p>Previously, ColorPal provided hex codes for each color extracted from the
+image.  Eight individual &lt;input&gt;s at the bottom of the ...</p>
+                    <a class="btn btn-default btn-xs" href="http://beta.mwcz.org/2012/07/30/colorpal-output-update/">more ...</a>
+                </div>
+            </article>
+</section>        </article>
+    </section>
+
+</main>
+
+<footer>
+    <div class="navbar-default navbar-static-top clayto-footer"></div>
+</footer>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://beta.mwcz.org/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://beta.mwcz.org/theme/js/respond.min.js"></script>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'mwcz'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+</body>
+</html>
