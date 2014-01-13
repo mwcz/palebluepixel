@@ -282,6 +282,12 @@ blockquote p {
     max-width: 930px;
   }
 }
+a {
+  color: #18bc9c;
+}
+a:visited {
+  color: #128f76;
+}
 /*********************************************************************
  *                             Homepage                              *
  *********************************************************************/
@@ -290,8 +296,8 @@ blockquote p {
   padding: 15px;
 }
 .clayto-home-col h2 {
-  color: #2c3e50;
   margin-top: 0px;
+  color: #2c3e50;
 }
 .clayto-home-col h2 small {
   display: block;

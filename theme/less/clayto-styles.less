@@ -40,6 +40,10 @@ blockquote {
         max-width: 930px;
     }
 }
+a {
+  color: @brand-success;
+  &:visited { color: darken(@brand-success, 10%); }
+}
 
 /*********************************************************************
  *                             Homepage                              *
@@ -50,8 +54,8 @@ blockquote {
     padding             : @grid-gutter-width / 2;
 
     h2 {
-        color: @brand-primary;
         margin-top: 0px;
+        color: @brand-primary;
         small {
             display: block;
             clear: both;
