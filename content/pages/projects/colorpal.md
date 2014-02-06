@@ -3,7 +3,9 @@ Slug: projects/colorpal
 Tags: html5, javascript, color, colorpal
 Status: hidden
 
-ColorPal is an HTML5 color palette generator.  Here's a gif demonstrating how to use ColorPal.  The color quality in gifs is pretty terrible, but you can still see the basic usage.
+[ColorPal][4] is an HTML5 color palette generator.  Here's a gif demonstrating
+how to use ColorPal.  The color quality in gifs is pretty terrible, but you can
+still see the basic usage.
 
 <p class="col-xs-12 col-md-8"><img class="img-responsive" src="{filename}/static/images/projects/recording_colorpal.gif" title="ColorPal recording" alt="ColorPal recording" /></p>
 
