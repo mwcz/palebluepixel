@@ -3,7 +3,7 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title>ColorPal</title>
+    <title>Drop64</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -12,8 +12,8 @@
     <!-- Open Graph tags -->
 
             <meta property="og:type" content="article"/>
-            <meta property="og:title" content="ColorPal"/>
-            <meta property="og:url" content="http://mwcz.org/projects/colorpal/"/>
+            <meta property="og:title" content="Drop64"/>
+            <meta property="og:url" content="http://mwcz.org/projects/drop64/"/>
 
 
     <!--[if gte IE 9]
@@ -69,15 +69,22 @@
 <!-- /.navbar -->
 <main role="main" class="container clayto-container">
     <section id="content" class="body">
-        <h1 class="entry-title">ColorPal</h1>
+        <h1 class="entry-title">Drop64</h1>
         <div class="entry-content">
-            <p><a href="http://colorpal.org/" title="colorpal.org">ColorPal</a> is an HTML5 color palette generator.  Here's a gif demonstrating
-how to use ColorPal.  The color quality in gifs is pretty terrible, but you can
-still see the basic usage.</p>
-<p class="col-xs-12 col-md-8"><img class="img-responsive" src="http://mwcz.org/static/images/projects/recording_colorpal.gif" title="ColorPal recording" alt="ColorPal recording" /></p>
-
-<p>ColorPal also has a <a href="/2013/11/07/colorpal-cli/" title="ColorPal's CLI">command-line interface</a>, powered by <a href="http://nodejs.org/" title="Node.js official site">Node.js</a>.</p>
-<p>I've written some <a href="/tag/colorpal" title="Posts about ColorPal">posts about ColorPal</a>.</p>
+            <p>Drop64 is an easy drag-and-drop tool for generating <a href="http://css-tricks.com/data-uris/">Data URIs</a> from any
+file.</p>
+<p>Check it out at <a href="http://drop64.com/">drop64.com</a>.</p>
+<p>Here's a demo recording of how easy it is.</p>
+<p><img alt="Drop64 recording" src="http://mwcz.org/static/images/projects/drop64/recording.gif" title="Drop64 recording" /></p>
+<p>Some benefits of Data URIs are:</p>
+<ul>
+<li>Fewer HTTP requests means faster page loads</li>
+<li>avoid cross-origin resource loading issues (fonts in Firefox, for exapmle)</li>
+<li>you can paste the Data URI directly into your web browser URL bar to view the file (occasionally convenient)</li>
+</ul>
+<p>If you noticed the similarity to <a href="http://colorpal.org/">ColorPal</a>, well done!  I reused a lot of
+ColorPal's code in Drop64.  Almost all of it, in fact.</p>
+<p>For more information on Data URIs, check out <a href="https://developer.mozilla.org/en-US/docs/data_URIs">MDN</a> or the original <a href="http://tools.ietf.org/html/rfc2397">RFC</a>.</p>
         </div>
     </section>
 </main>
