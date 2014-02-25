@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mwcz.org</title><link>http://mwcz.org/</link><description></description><atom:link href="http://mwcz.org/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 22 Dec 2013 00:00:00 -0500</lastBuildDate><item><title>Super easy image resizing in GIMP</title><link>http://mwcz.org/2013/12/22/super-easy-image-resizing-in-gimp/</link><description>&lt;p&gt;Ever been here?&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mwcz.org</title><link>http://mwcz.org/</link><description></description><atom:link href="http://mwcz.org/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 25 Feb 2014 00:00:00 -0500</lastBuildDate><item><title>Introducing Drop64, ezpz data URI generator</title><link>http://mwcz.org/2014/02/25/introducing-drop64-ezpz-data-uri-generator/</link><description>&lt;p&gt;A few weeks ago, a &lt;a href="http://www.heyokadesign.com/"&gt;coworker&lt;/a&gt; of mine ran into some font issues.  Firefox
+doesn't allow cross-origin requests for &lt;a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face"&gt;web fonts&lt;/a&gt;, and he was using a tool
+called &lt;a href="http://www.fontsquirrel.com/"&gt;Font Squirrel&lt;/a&gt; to generate fonts, including &lt;a href="https://developer.mozilla.org/en-US/docs/data_URIs"&gt;data URIs&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Embedding a data URI for a font (or image) inside a CSS file is a common
+technique for reducing the number of HTTP requests.  In this case, it also
+negates the need for a cross-domain request to fetch the font file, because the
+file's contents are already embedded.&lt;/p&gt;
+&lt;p&gt;There was something screwy about Font Squirrel's data URIs, though.  A change
+must have been made to their tool, because all of our icons were suddenly
+shifted up.&lt;/p&gt;
+&lt;p&gt;Once we narrowed it down to a misbehaving tool, the solution was clearly to
+create a new, better behaved tool.&lt;/p&gt;
+&lt;p&gt;I pretty quickly realized that ColorPal is basically a drag-and-drop data URI
+generator.&lt;/p&gt;
+&lt;p&gt;By dropping a file into ColorPal's dropzone, the user is implicitly giving the
+browser access to that file through the HTML5 File API.  That file's contents
+are conveniently (for our purposes, anyway) exposed as a data URI.&lt;/p&gt;
+&lt;p&gt;ColorPal takes the extra steps of injecting the URI into a canvas element, then
+performing a color quantization algorithm on the resulting pixels.&lt;/p&gt;
+&lt;p&gt;Drop64 is ColorPal with a bunch of features ripped out.&lt;/p&gt;
+&lt;p&gt;So, in the span of about 20 minutes I forked ColorPal, changed the name and
+logo, ripped out the quantization algorithm, displayed the data URI into an
+output box, created a github page for it, and registered &lt;a href="http://drop64.com/"&gt;drop64.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Voila:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Drop64 recording" src="http://mwcz.org/static/images/projects/drop64/recording.gif" title="Drop64 recording" /&gt;&lt;/p&gt;
+&lt;p&gt;It's not exactly a technical marvel, and the code is still rife with ColorPal
+stuff.  I only ripped out what was absolutely necessary to get the tool working
+as fast as possible.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://drop64.com/"&gt;Try it out&lt;/a&gt; or &lt;a href="https://github.com/mwcz/Drop64"&gt;check out the code&lt;/a&gt;.  Happy hacking.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Tue, 25 Feb 2014 00:00:00 -0500</pubDate><guid>tag:mwcz.org,2014-02-25:2014/02/25/introducing-drop64-ezpz-data-uri-generator/</guid><category>html5</category><category>javascript</category><category>data uri</category></item><item><title>Super easy image resizing in GIMP</title><link>http://mwcz.org/2013/12/22/super-easy-image-resizing-in-gimp/</link><description>&lt;p&gt;Ever been here?&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I want to make a new image (say) twice the size of the current one, hmm...&lt;/p&gt;
 &lt;p&gt;/me opens gnome-calculator | python shell | bc&lt;/p&gt;
