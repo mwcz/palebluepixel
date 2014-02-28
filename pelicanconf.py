@@ -21,7 +21,8 @@ DISPLAY_CATEGORIES_ON_MENU = True
 
 TEMPLATE_PAGES = {
         'pages/projects/index.html' : 'projects/index.html',
-        'main.html'                 : 'index.html'
+        'main.html'                 : 'index.html',
+        '404.html'                  : '404.html'
         }
 EXTRA_PATH_METADATA = {
         # Give the projects page a title to work around <title> being used for

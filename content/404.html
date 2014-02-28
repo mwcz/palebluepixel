@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<style>body { background: #000; } img.img-404 { cursor: pointer; margin: 80px auto; }</style>
+<img class="img-responsive img-404" src="/static/images/Guru_meditation.gif" alt="404 page not found">
+<script type="text/javascript" charset="utf-8">
+document.querySelector('img.img-404').onclick = function() {
+    window.history.back();
+};
+</script>
+
+{% endblock content %}
