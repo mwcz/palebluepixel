@@ -19,7 +19,7 @@ It's currently powered by:
 
 I've made some [posts about this site][1].
 
-[1]: http://localhost:8001/tag/mwczorg/ "Posts about mwcz.org"
+[1]: /tag/mwczorg/ "Posts about mwcz.org"
 [2]: http://python.org/ "Python website"
 [3]: http://blog.getpelican.com/ "Pelican website"
 [4]: http://getbootstrap.com/ "Bootstrap website"
