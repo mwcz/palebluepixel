@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mwcz.org</title><link>http://mwcz.org/</link><description></description><atom:link href="http://mwcz.org/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 25 Feb 2014 00:00:00 -0500</lastBuildDate><item><title>Introducing Drop64, ezpz data URI generator</title><link>http://mwcz.org/2014/02/25/introducing-drop64-ezpz-data-uri-generator/</link><description>&lt;p&gt;A few weeks ago, a &lt;a href="http://www.heyokadesign.com/"&gt;coworker&lt;/a&gt; of mine ran into some font issues.  Firefox
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mwcz.org</title><link>http://mwcz.org/</link><description></description><atom:link href="http://mwcz.org/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 23 Mar 2014 00:00:00 -0400</lastBuildDate><item><title>RGB WebGL Color Cube</title><link>http://mwcz.org/2014/03/23/rgb-webgl-color-cube/</link><description>&lt;p&gt;I spent a bit of time this weekend building an RGB color cube for
+&lt;a href="http://colorpal.org"&gt;ColorPal&lt;/a&gt;, using &lt;a href="http://threejs.org"&gt;Three.js&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a class="btn btn-primary btn-lg" href="/static/projects/colorpal_colorcube"&gt;Try it out!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If your web browser isn't WebGL-enabled, here's a screenshot:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Screenshot of ColorCube" src="/static/images/025/screenshot.png" title="Screenshot of ColorCube" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://threejs.org"&gt;Three.js&lt;/a&gt; has proven to be pretty fun.  The documentation is decent, but
+not comprehensive.  Some parts of the API are filled with "todo" notes instead
+of actual documentation.&lt;/p&gt;
+&lt;p&gt;The omissions in the documentation are made up for by the extensive &lt;a href="http://threejs.org/examples/"&gt;set of
+code examples&lt;/a&gt;.&lt;/p&gt;
+&lt;h1&gt;Colored particles&lt;/h1&gt;
+&lt;p&gt;The color cube uses a particle system to render 2D color points inside a 3D
+cube.  The hardest part of the implementation was figuring out how to allow
+each point to be a different color.&lt;/p&gt;
+&lt;p&gt;Eventually I found a &lt;a href="http://threejs.org/examples/#webgl_particles_billboards_colors"&gt;particle system demo with colors&lt;/a&gt;, which held the key.&lt;/p&gt;
+&lt;p&gt;By setting &lt;code&gt;vertexColors: true&lt;/code&gt; on the &lt;code&gt;ParticleSystemMaterial&lt;/code&gt;, Three.js will
+match each vertex in the &lt;code&gt;vertices&lt;/code&gt; array with a color in the &lt;code&gt;colors&lt;/code&gt; array.
+&lt;code&gt;vertices[1726]&lt;/code&gt; will use &lt;code&gt;colors[1726]&lt;/code&gt;, for example.&lt;/p&gt;
+&lt;p&gt;What's next?&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Sun, 23 Mar 2014 00:00:00 -0400</pubDate><guid>tag:mwcz.org,2014-03-23:2014/03/23/rgb-webgl-color-cube/</guid><category>html5</category><category>javascript</category><category>color</category><category>colorpal</category><category>webgl</category></item><item><title>Introducing Drop64, ezpz data URI generator</title><link>http://mwcz.org/2014/02/25/introducing-drop64-ezpz-data-uri-generator/</link><description>&lt;p&gt;A few weeks ago, a &lt;a href="http://www.heyokadesign.com/"&gt;coworker&lt;/a&gt; of mine ran into some font issues.  Firefox
 doesn't allow cross-origin requests for &lt;a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face"&gt;web fonts&lt;/a&gt;, and he was using a tool
 called &lt;a href="http://www.fontsquirrel.com/"&gt;Font Squirrel&lt;/a&gt; to generate fonts, including &lt;a href="https://developer.mozilla.org/en-US/docs/data_URIs"&gt;data URIs&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Embedding a data URI for a font (or image) inside a CSS file is a common
