@@ -14,7 +14,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="RGB WebGL Color Cube"/>
             <meta property="og:url" content="http://mwcz.org/2014/03/23/rgb-webgl-color-cube/"/>
-            <meta property="og:description" content="I spent a bit of time this weekend building an RGB color cube for ColorPal, using Three.js. Try it out! If your web browser isn't WebGL-enabled, here's a screenshot: Three.js has proven to be pretty fun. The documentation is decent, but not comprehensive. Some parts of ..."/>
+            <meta property="og:description" content="I spent a bit of time this weekend building an RGB color cube for ColorPal, using Three.js. Try it out! or view the code. If your web browser isn't WebGL-enabled, here's a screenshot: Three.js has proven to be pretty fun. The documentation is decent, but not ..."/>
 
 
     <!--[if gte IE 9]
@@ -79,7 +79,8 @@
             <div class="entry-content">
                 <p>I spent a bit of time this weekend building an RGB color cube for
 <a href="http://colorpal.org">ColorPal</a>, using <a href="http://threejs.org">Three.js</a>.</p>
-<p><a class="btn btn-primary btn-lg" href="/static/projects/colorpal_colorcube">Try it out!</a></p>
+<p><a class="btn btn-primary btn-lg" href="/static/projects/colorpal_colorcube">Try it out!</a>
+or <a href="https://github.com/mwcz/mwcz/blob/master/content/static/projects/colorpal_colorcube/js/cp-colorcube.js">view the code</a>.</p>
 <p>If your web browser isn't WebGL-enabled, here's a screenshot:</p>
 <p><img alt="Screenshot of ColorCube" src="/static/images/025/screenshot.png" title="Screenshot of ColorCube" /></p>
 <p><a href="http://threejs.org">Three.js</a> has proven to be pretty fun.  The documentation is decent, but
@@ -95,7 +96,16 @@ each point to be a different color.</p>
 <p>By setting <code>vertexColors: true</code> on the <code>ParticleSystemMaterial</code>, Three.js will
 match each vertex in the <code>vertices</code> array with a color in the <code>colors</code> array.
 <code>vertices[1726]</code> will use <code>colors[1726]</code>, for example.</p>
-<p>What's next?</p>
+<p>A vertex and a color are created for each pixel in the source image.  For the
+vertex, <span style="color: red;">red</span> values are mapped to the <code>X</code> axis,
+and similarly <span style="color: green">green</span> to <code>Y</code> and <span
+style="color: blue">blue</span> to <code>Z</code>.</p>
+<h1>Optimization</h1>
+<p>Rendering a point for each pixel in a huge image image would be overkill, so
+I used the pixel culling already present in ColorPal to scale the number of
+points down to a more reasonable <code>16384</code>.</p>
+<p>Now I'm racking my brain for an excuse to use WebGL at Red Hat...</p>
+<p>Any ideas?</p>
             </div>
 
             <!-- /.entry-content -->
@@ -154,14 +164,9 @@ image.  Eight individual &lt;input&gt;s at the bottom of the ...</p>
                 </div>
             </article>
             <article>
-                <h2><a href="http://mwcz.org/2012/02/10/colorpal-palettes-improved/">ColorPal palettes improved!</a></h2>
-                <div class="summary"><p><a href="/projects/colorpal"><static/images src="/static/images/019/colorpal_logo.png" alt="ColorPal logo" title=""
-/></a></p>
-<p>In my <a href="/2012/01/16/colorpal-alpha/">last post</a> on the subject, I introduced
-ColorPal, my HTML5 color palette generation tool.  It didn't perform well with
-certain types of images, so I fixed it. :)</p>
-<p>Color palettes will now match the image even ...</p>
-                    <a class="btn btn-default btn-xs" href="http://mwcz.org/2012/02/10/colorpal-palettes-improved/">more ...</a>
+                <h2><a href="http://mwcz.org/2013/11/07/colorpal-cli/">ColorPal CLI!</a></h2>
+                <div class="summary"><p>Tired of creating color palettes with ColorPal's simple, intuitive drag-and-drop interface?  Me too!  Want to jam with the console cowboys in cyber-space?  Now you can.  Now <em>we</em> can.  <img alt="ColorPal CLI logo" src="/static/images/023/colorpal_cli_logo.png" title="ColorPal CLI logo" /></p>
+                    <a class="btn btn-default btn-xs" href="http://mwcz.org/2013/11/07/colorpal-cli/">more ...</a>
                 </div>
             </article>
             <article>
@@ -171,9 +176,14 @@ certain types of images, so I fixed it. :)</p>
                 </div>
             </article>
             <article>
-                <h2><a href="http://mwcz.org/2013/11/07/colorpal-cli/">ColorPal CLI!</a></h2>
-                <div class="summary"><p>Tired of creating color palettes with ColorPal's simple, intuitive drag-and-drop interface?  Me too!  Want to jam with the console cowboys in cyber-space?  Now you can.  Now <em>we</em> can.  <img alt="ColorPal CLI logo" src="/static/images/023/colorpal_cli_logo.png" title="ColorPal CLI logo" /></p>
-                    <a class="btn btn-default btn-xs" href="http://mwcz.org/2013/11/07/colorpal-cli/">more ...</a>
+                <h2><a href="http://mwcz.org/2012/02/10/colorpal-palettes-improved/">ColorPal palettes improved!</a></h2>
+                <div class="summary"><p><a href="/projects/colorpal"><static/images src="/static/images/019/colorpal_logo.png" alt="ColorPal logo" title=""
+/></a></p>
+<p>In my <a href="/2012/01/16/colorpal-alpha/">last post</a> on the subject, I introduced
+ColorPal, my HTML5 color palette generation tool.  It didn't perform well with
+certain types of images, so I fixed it. :)</p>
+<p>Color palettes will now match the image even ...</p>
+                    <a class="btn btn-default btn-xs" href="http://mwcz.org/2012/02/10/colorpal-palettes-improved/">more ...</a>
                 </div>
             </article>
 </section>        </article>

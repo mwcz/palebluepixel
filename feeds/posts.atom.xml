@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>mwcz.org</title><link href="http://mwcz.org/" rel="alternate"></link><link href="http://mwcz.org/feeds/posts.atom.xml" rel="self"></link><id>http://mwcz.org/</id><updated>2014-03-23T00:00:00-04:00</updated><entry><title>RGB WebGL Color Cube</title><link href="http://mwcz.org/2014/03/23/rgb-webgl-color-cube/" rel="alternate"></link><updated>2014-03-23T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:mwcz.org,2014-03-23:2014/03/23/rgb-webgl-color-cube/</id><summary type="html">&lt;p&gt;I spent a bit of time this weekend building an RGB color cube for
 &lt;a href="http://colorpal.org"&gt;ColorPal&lt;/a&gt;, using &lt;a href="http://threejs.org"&gt;Three.js&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a class="btn btn-primary btn-lg" href="/static/projects/colorpal_colorcube"&gt;Try it out!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="btn btn-primary btn-lg" href="/static/projects/colorpal_colorcube"&gt;Try it out!&lt;/a&gt;
+or &lt;a href="https://github.com/mwcz/mwcz/blob/master/content/static/projects/colorpal_colorcube/js/cp-colorcube.js"&gt;view the code&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;If your web browser isn't WebGL-enabled, here's a screenshot:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Screenshot of ColorCube" src="/static/images/025/screenshot.png" title="Screenshot of ColorCube" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://threejs.org"&gt;Three.js&lt;/a&gt; has proven to be pretty fun.  The documentation is decent, but
@@ -17,7 +18,16 @@ each point to be a different color.&lt;/p&gt;
 &lt;p&gt;By setting &lt;code&gt;vertexColors: true&lt;/code&gt; on the &lt;code&gt;ParticleSystemMaterial&lt;/code&gt;, Three.js will
 match each vertex in the &lt;code&gt;vertices&lt;/code&gt; array with a color in the &lt;code&gt;colors&lt;/code&gt; array.
 &lt;code&gt;vertices[1726]&lt;/code&gt; will use &lt;code&gt;colors[1726]&lt;/code&gt;, for example.&lt;/p&gt;
-&lt;p&gt;What's next?&lt;/p&gt;</summary><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="webgl"></category></entry><entry><title>Introducing Drop64, ezpz data URI generator</title><link href="http://mwcz.org/2014/02/25/introducing-drop64-ezpz-data-uri-generator/" rel="alternate"></link><updated>2014-02-25T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:mwcz.org,2014-02-25:2014/02/25/introducing-drop64-ezpz-data-uri-generator/</id><summary type="html">&lt;p&gt;A few weeks ago, a &lt;a href="http://www.heyokadesign.com/"&gt;coworker&lt;/a&gt; of mine ran into some font issues.  Firefox
+&lt;p&gt;A vertex and a color are created for each pixel in the source image.  For the
+vertex, &lt;span style="color: red;"&gt;red&lt;/span&gt; values are mapped to the &lt;code&gt;X&lt;/code&gt; axis,
+and similarly &lt;span style="color: green"&gt;green&lt;/span&gt; to &lt;code&gt;Y&lt;/code&gt; and &lt;span
+style="color: blue"&gt;blue&lt;/span&gt; to &lt;code&gt;Z&lt;/code&gt;.&lt;/p&gt;
+&lt;h1&gt;Optimization&lt;/h1&gt;
+&lt;p&gt;Rendering a point for each pixel in a huge image image would be overkill, so
+I used the pixel culling already present in ColorPal to scale the number of
+points down to a more reasonable &lt;code&gt;16384&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Now I'm racking my brain for an excuse to use WebGL at Red Hat...&lt;/p&gt;
+&lt;p&gt;Any ideas?&lt;/p&gt;</summary><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="webgl"></category></entry><entry><title>Introducing Drop64, ezpz data URI generator</title><link href="http://mwcz.org/2014/02/25/introducing-drop64-ezpz-data-uri-generator/" rel="alternate"></link><updated>2014-02-25T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:mwcz.org,2014-02-25:2014/02/25/introducing-drop64-ezpz-data-uri-generator/</id><summary type="html">&lt;p&gt;A few weeks ago, a &lt;a href="http://www.heyokadesign.com/"&gt;coworker&lt;/a&gt; of mine ran into some font issues.  Firefox
 doesn't allow cross-origin requests for &lt;a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face"&gt;web fonts&lt;/a&gt;, and he was using a tool
 called &lt;a href="http://www.fontsquirrel.com/"&gt;Font Squirrel&lt;/a&gt; to generate fonts, including &lt;a href="https://developer.mozilla.org/en-US/docs/data_URIs"&gt;data URIs&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Embedding a data URI for a font (or image) inside a CSS file is a common
