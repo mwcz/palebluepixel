@@ -6,6 +6,7 @@ I spent a bit of time this weekend building an RGB color cube for
 [ColorPal][4], using [Three.js][1].
 
 <a class="btn btn-primary btn-lg" href="/static/projects/colorpal_colorcube">Try it out!</a>
+or [view the code][5].
 
 If your web browser isn't WebGL-enabled, here's a screenshot:
 
@@ -31,9 +32,24 @@ By setting `vertexColors: true` on the `ParticleSystemMaterial`, Three.js will
 match each vertex in the `vertices` array with a color in the `colors` array.
 `vertices[1726]` will use `colors[1726]`, for example.
 
-What's next?
+A vertex and a color are created for each pixel in the source image.  For the
+vertex, <span style="color: red;">red</span> values are mapped to the `X` axis,
+and similarly <span style="color: green">green</span> to `Y` and <span
+style="color: blue">blue</span> to `Z`.
+
+Optimization
+============
+
+Rendering a point for each pixel in a huge image image would be overkill, so
+I used the pixel culling already present in ColorPal to scale the number of
+points down to a more reasonable `16384`.
+
+Now I'm racking my brain for an excuse to use WebGL at Red Hat...
+
+Any ideas?
 
 [1]: http://threejs.org
 [2]: http://threejs.org/examples/
 [3]: http://threejs.org/examples/#webgl_particles_billboards_colors
 [4]: http://colorpal.org
+[5]: https://github.com/mwcz/mwcz/blob/master/content/static/projects/colorpal_colorcube/js/cp-colorcube.js
