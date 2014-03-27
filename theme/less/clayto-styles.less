@@ -8,16 +8,13 @@
 
 body {
     font-family: @body-font;
-    background: rgba(255,255,255,1);
-    background: rgba(240,240,240,1);
-    /* Old Browsers */background: -moz-linear-gradient(left, rgba(240,240,240,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 65%, rgba(240,240,240,1) 100%);
-     /* FF3.6+ */background: -webkit-gradient(left top, right top, color-stop(0%, rgba(240,240,240,1)), color-stop(35%, rgba(255,255,255,1)), color-stop(65%, rgba(255,255,255,1)), color-stop(100%, rgba(240,240,240,1)));
-    /* Chrome,Safari4+  */background: -webkit-linear-gradient(left, rgba(240,240,240,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 65%, rgba(240,240,240,1) 100%);
-     /* Chrome10+,Safari5.1+ */background: -o-linear-gradient(left, rgba(240,240,240,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 65%, rgba(240,240,240,1) 100%);
-     /* Opera 11.10+ */background: -ms-linear-gradient(left, rgba(240,240,240,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 65%, rgba(240,240,240,1) 100%);
-     /* IE 10+ */background: linear-gradient(to right, rgba(240,240,240,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 65%, rgba(240,240,240,1) 100%);
-    /* W3C */filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#f0f0f0', GradientType=1 );
-    /* IE6-9 */
+    background-color: rgba(240,240,240,1);
+    background-image: url(/theme/images/background.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 20px;
 }
 
 /*********************************************************************
@@ -49,12 +46,24 @@ p {
 }
 
 /*********************************************************************
+ *                              Global                               *
+ *********************************************************************/
+
+.clayto-container {
+    background-color: #fefefe;
+    padding: 20px;
+}
+
+
+/*********************************************************************
  *                             Homepage                              *
  *********************************************************************/
 
 .clayto-home-col {
-    height              : 600px;
-    padding             : @grid-gutter-width / 2;
+    height          : 600px;
+    padding         : @grid-gutter-width / 2;
+    background-size : cover;
+    margin-bottom: 20px;
 
     h2 {
         margin-top: 0px;
@@ -113,6 +122,8 @@ p {
             margin-right: 4px;
         }
     }
+
+    .clearfix();
 }
 
 img {
@@ -232,6 +243,7 @@ img {
 // remove excessive whitespace between navbar and page title
 .clayto-navbar {
     background: #3f3f3f;
+    border-radius: 0 !important;
 
     a {
         text-shadow: 0.2px 2.2px 7px rgba(0,0,0,0.4)

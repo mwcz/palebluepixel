@@ -57,8 +57,8 @@
             canvas_width  = ( img.width  > max_canvas_width  ) ? ( img_ratio > 1 ) ? max_canvas_width  : max_canvas_width*img_ratio  : img.width;
             canvas_height = Math.floor( canvas_width / img_ratio );
             // Resize the canvas to the image size
-            canvas.width             = canvas_width;
-            canvas.height            = canvas_width;
+            canvas.width             = 960;
+            canvas.height            = 680;
 
             // Resize the canvas with CSS to trigger CSS3 transitions
             //canvas.style.width       = canvas_width + "px";
