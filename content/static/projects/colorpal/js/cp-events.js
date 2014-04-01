@@ -45,6 +45,9 @@ function handle_file_select( evt ) {
             canvas.style.width       = canvas_width + "px";
             canvas.style.height      = canvas_height + "px";
 
+            // Clear the small canvas context
+            ctx_small.clearRect( 0, 0, canvas_small_width, canvas_small_height );
+
             // Draw the downsized image inside the canvas
             ctx_small.drawImage( img, 0, 0, canvas_small_width, canvas_small_height );
 
