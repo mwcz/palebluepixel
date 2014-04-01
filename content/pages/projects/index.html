@@ -14,68 +14,72 @@ $(function () {
 </script>
 
 <div class="clayto-project-list">
-    {% import 'includes/panel.html' as project_thumbnail %}
+    <article>
+        <div class="row">
+            {% import 'includes/panel.html' as project_thumbnail %}
 
-    {{ project_thumbnail.write(
-        body_title   = 'ColorPal',
-        body_text    = 'Drag an image. Get a color palette instantly. A friendly HTML5 app.',
-        header_image = '/static/images/projects/icon_colorpal.png',
-        link_url     = '/projects/colorpal',
-        ) }}
-    {{ project_thumbnail.write(
-        body_title   = 'ColorPal CLI',
-        body_text    = 'A command-line utility for generating color palettes from images.',
-        header_image = '/static/images/projects/icon_colorpal_cli.png',
-        link_url     = '/projects/colorpal-cli',
-        ) }}
-    {{ project_thumbnail.write(
-        body_title   = 'Drop64',
-        body_text    = 'Drag and drop tool for generating Data URIs.',
-        header_image = '/static/images/projects/icon_drop64.png',
-        link_url     = '/projects/drop64',
-        ) }}
-    {{ project_thumbnail.write(
-        body_title   = 'median-cut.js',
-        body_text    = 'An implementation of the median-cut algorithm in JavaScript. Powers ColorPal\'s palette extraction.',
-        header_image = '/static/images/projects/icon_mediancut.png',
-        link_url     = '/projects/mediancut',
-        ) }}
-    {{ project_thumbnail.write(
-        body_title   = 'mwcz.org',
-        body_text    = 'My tech &amp; programming blog (you\'re looking at it!)',
-        header_image = '/static/images/projects/icon_mwcz.png',
-        link_url     = '/projects/mwcz.org',
-        ) }}
-    {{ project_thumbnail.write(
-        body_title   = 'clayto.com',
-        body_text    =  'My photography website.',
-        header_image = '/static/images/projects/icon_clayto.png',
-        link_url     = '/projects/clayto.com',
-        ) }}
-    {{ project_thumbnail.write(
-        body_title   = 'AEJS',
-        body_text    = 'An early-stages Amiga 500 emulator in JavaScript and HTML5.',
-        header_image = '/static/images/projects/icon_aejs.png',
-        link_url     = '/projects/aejs',
-        ) }}
-    {{ project_thumbnail.write(
-        body_title   = 'Bouncey',
-        body_text    = 'A relaxing JavaScript + HTML5 canvas physics simulator. Watch and be soothed.',
-        header_image = '/static/images/projects/icon_bouncey.png',
-        link_url     = '/projects/bouncey',
-        ) }}
-    {{ project_thumbnail.write(
-        body_title   = 'Canvas Indexed Color',
-        body_text    = 'A tech demo in HTML5 canvas demonstrating an indexed-color-like effect.',
-        header_image = '/static/images/projects/icon_cic.png',
-        link_url     = '/projects/canvas_indexed_color',
-        ) }}
-    {{ project_thumbnail.write(
-        body_title   = 'JSImage',
-        body_text    = 'A JavaScript library for basic image operations.',
-        header_image = '/static/images/projects/icon_jsimage.png',
-        link_url     = '/projects/jsimage',
-        ) }}
+            {{ project_thumbnail.write(
+                body_title   = 'ColorPal',
+                body_text    = 'Drag an image. Get a color palette instantly. A friendly HTML5 app.',
+                header_image = '/static/images/projects/icon_colorpal.png',
+                link_url     = '/projects/colorpal',
+                ) }}
+            {{ project_thumbnail.write(
+                body_title   = 'ColorPal CLI',
+                body_text    = 'A command-line utility for generating color palettes from images.',
+                header_image = '/static/images/projects/icon_colorpal_cli.png',
+                link_url     = '/projects/colorpal-cli',
+                ) }}
+            {{ project_thumbnail.write(
+                body_title   = 'Drop64',
+                body_text    = 'Drag and drop tool for generating Data URIs.',
+                header_image = '/static/images/projects/icon_drop64.png',
+                link_url     = '/projects/drop64',
+                ) }}
+            {{ project_thumbnail.write(
+                body_title   = 'median-cut.js',
+                body_text    = 'An implementation of the median-cut algorithm in JavaScript. Powers ColorPal\'s palette extraction.',
+                header_image = '/static/images/projects/icon_mediancut.png',
+                link_url     = '/projects/mediancut',
+                ) }}
+            {{ project_thumbnail.write(
+                body_title   = 'mwcz.org',
+                body_text    = 'My tech &amp; programming blog (you\'re looking at it!)',
+                header_image = '/static/images/projects/icon_mwcz.png',
+                link_url     = '/projects/mwcz.org',
+                ) }}
+            {{ project_thumbnail.write(
+                body_title   = 'clayto.com',
+                body_text    =  'My photography website.',
+                header_image = '/static/images/projects/icon_clayto.png',
+                link_url     = '/projects/clayto.com',
+                ) }}
+            {{ project_thumbnail.write(
+                body_title   = 'AEJS',
+                body_text    = 'An early-stages Amiga 500 emulator in JavaScript and HTML5.',
+                header_image = '/static/images/projects/icon_aejs.png',
+                link_url     = '/projects/aejs',
+                ) }}
+            {{ project_thumbnail.write(
+                body_title   = 'Bouncey',
+                body_text    = 'A relaxing JavaScript + HTML5 canvas physics simulator. Watch and be soothed.',
+                header_image = '/static/images/projects/icon_bouncey.png',
+                link_url     = '/projects/bouncey',
+                ) }}
+            {{ project_thumbnail.write(
+                body_title   = 'Canvas Indexed Color',
+                body_text    = 'A tech demo in HTML5 canvas demonstrating an indexed-color-like effect.',
+                header_image = '/static/images/projects/icon_cic.png',
+                link_url     = '/projects/canvas_indexed_color',
+                ) }}
+            {{ project_thumbnail.write(
+                body_title   = 'JSImage',
+                body_text    = 'A JavaScript library for basic image operations.',
+                header_image = '/static/images/projects/icon_jsimage.png',
+                link_url     = '/projects/jsimage',
+                ) }}
+        </div>
+    </article>
 </div>
 
 {% endblock %}

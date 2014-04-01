@@ -54,7 +54,7 @@ BOOTSTRAP_THEME = 'flatly'
 #######################################################################
 
 PLUGIN_PATH = environ["HOME"] + '/workspace/pelican-plugins'
-PLUGINS = ['neighbors', 'assets', 'related_posts']
+PLUGINS = ['neighbors', 'assets']
 
 # assets plugin settings
 
@@ -62,14 +62,15 @@ ASSET_BUNDLES = (
     #('scss', ['colors.scss', 'main.scss'], {'filters': 'pyscss'}),
     ('less', 
         [
+            'less/bootswatch/${BOOTSTRAP_THEME}/*.less',
             'less/colors.less',
             'less/clayto-styles.less',
             ], 
         {'filters': 'less'}
         ),
-    ('css', 
+    ('css',
         [
-            'css/style.css', 
+            'css/style.css',
             'css/bootstrap.%s.min.css' % BOOTSTRAP_THEME if BOOTSTRAP_THEME else 'css/bootstrap.min.css',
             'css/font-awesome.min.css',
             'css/html4css1.css',
@@ -184,3 +185,4 @@ DISQUS_SITENAME = 'mwcz'
 SOCIAL          = (('GitHub',  'https://github.com/mwcz'),
                    ('Twitter', 'https://twitter.com/mwcz'),)
 
+USE_OPEN_GRAPH = False
