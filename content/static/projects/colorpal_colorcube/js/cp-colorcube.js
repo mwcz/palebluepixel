@@ -54,6 +54,7 @@
         var rgb;
         var vertex;
 
+        console.log(particle_cube.vertices.length);
         for (i = 0; i < rgbdata.length; i += 1) {
             rgb = rgbdata[i];
 

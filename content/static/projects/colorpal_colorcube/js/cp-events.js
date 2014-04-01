@@ -64,6 +64,9 @@
             //canvas.style.width       = canvas_width + "px";
             //canvas.style.height      = canvas_width + "px";
 
+            // Clear the small canvas context
+            ctx_small.clearRect( 0, 0, canvas_small_width, canvas_small_height );
+
             // Draw the downsized image inside the canvas
             ctx_small.drawImage( img, 0, 0, canvas_small_width, canvas_small_height );
 
@@ -98,7 +101,6 @@
             // Assign the image's src to the filesystem image's data URL
             // [http://en.wikipedia.org/wiki/Data_URI_scheme]
             img.src = e.target.result; 
-            console.log(img.src);
 
         };
     }
