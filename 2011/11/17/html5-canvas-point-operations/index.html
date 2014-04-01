@@ -9,12 +9,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Open Graph tags -->
-
-            <meta property="og:type" content="article"/>
-            <meta property="og:title" content="HTML5 canvas point operations"/>
-            <meta property="og:url" content="http://mwcz.org/2011/11/17/html5-canvas-point-operations/"/>
-            <meta property="og:description" content="This is the last demo I made using JSImage. I created it some time around 2009-2010. At the time, I had checked out an imaging book from my university's library at least ten times. Most of the exercises in that book I implemented in Python using PIL, but point ..."/>
 
 
     <!--[if gte IE 9]
@@ -25,7 +19,7 @@
     </style>
     <![endif]-->
 
-        <link href="http://mwcz.org/theme/css/styles.min.css?498b5ce9" rel="stylesheet">
+        <link href="http://mwcz.org/theme/css/styles.min.css?ca47d1a7" rel="stylesheet">
 
 
 
@@ -69,16 +63,14 @@
 </div>
 <!-- /.navbar -->
 <main role="main" class="container">
-    <div class="clayto-container">
-    <section id="content">
-        <article>
-            <header class="page-header">
-                <h1>
-                    HTML5 canvas point operations
-                </h1>
-            </header>
-            <div class="entry-content">
-                <p>This is the last demo I made using <a href="https://github.com/mwcz/jsimage">JSImage</a>.  I created it some time around 2009-2010.  At the time, I had checked out an <a href="http://www.amazon.com/Digital-Image-Processing-Algorithmic-Introduction/dp/1846283795">imaging book</a> from my university's library at least ten times.  Most of the exercises in that book I implemented in Python using <a href="http://www.pythonware.com/products/pil/">PIL</a>, but point operations were simple enough to port to JavaScript quickly.</p>
+    <article>
+        <header class="page-header">
+            <h1>
+                HTML5 canvas point operations
+            </h1>
+        </header>
+        <div class="entry-content">
+            <p>This is the last demo I made using <a href="https://github.com/mwcz/jsimage">JSImage</a>.  I created it some time around 2009-2010.  At the time, I had checked out an <a href="http://www.amazon.com/Digital-Image-Processing-Algorithmic-Introduction/dp/1846283795">imaging book</a> from my university's library at least ten times.  Most of the exercises in that book I implemented in Python using <a href="http://www.pythonware.com/products/pil/">PIL</a>, but point operations were simple enough to port to JavaScript quickly.</p>
 <p>Point operations are image alterations that affect all pixels equally.  Other operations, like blurring for example, each result pixel depends on adjacent pixels.</p>
 <p>This demonstrates changing contrast, value, saturation, hue, color inversion, and threshold point operations.  Note that there is a bug with increasing value and increasing saturation which I never got around to fixing.</p>
 <script type="text/javascript" src="/static/js/005/jsimage.js"></script>
@@ -165,9 +157,9 @@
 </div>
 
 <p><br /></p>
-            </div>
+        </div>
 
-            <!-- /.entry-content -->
+        <!-- /.entry-content -->
 <footer class="clayto-post-info alert">
     <span class="published">
         Published on 2011-11-17 and filed under 
@@ -208,42 +200,8 @@
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
     </section>
-<section class="clayto-related-posts" id="clayto-related-posts">
-        <h2>Might these be of interest?</h2>
+    </article>
 
-            <article>
-                <h2><a href="http://mwcz.org/2011/11/16/html5-canvas-rgb-histogram/">HTML5 canvas RGB histogram</a></h2>
-                <div class="summary"><p>This is yet another demo from around 2009.  It's simple enough.  Click a
-button, draw an unbinned RGB histogram of the source image.</p>
-<p>It's powered by an early version of an old JS toolkit I wrote called JSImage.
-The latest version is available at my <a href="https://github.com/mwcz/jsimage">JSImage github
-repo ...</a></p>
-                    <a class="btn btn-default btn-xs" href="http://mwcz.org/2011/11/16/html5-canvas-rgb-histogram/">more ...</a>
-                </div>
-            </article>
-            <article>
-                <h2><a href="http://mwcz.org/2011/11/16/html5-canvas-area-selection-averaging/">HTML5 canvas area selection averaging</a></h2>
-                <div class="summary"><p>This is a demo from late 2009.  It's an extension of the single-pixel <a href="/2011/11/16/html5-canvas-eyedropper/">eyedropper</a> I wrote previously.</p>
-<p>It's powered by an early version of an old JS toolkit I wrote called JSImage.  The latest version is available at my <a href="https://github.com/mwcz/jsimage">JSImage github repo</a>.  Don't be fooled by the ...</p>
-                    <a class="btn btn-default btn-xs" href="http://mwcz.org/2011/11/16/html5-canvas-area-selection-averaging/">more ...</a>
-                </div>
-            </article>
-            <article>
-                <h2><a href="http://mwcz.org/2011/11/16/html5-canvas-3d-pixel-array/">HTML5 canvas 3D pixel array</a></h2>
-                <div class="summary"><p>This is another demo from 2009-ish.  When I started experimenting with canvas, I felt uncomfortable with the 1-dimensionality of <a href="https://developer.mozilla.org/en/DOM/CanvasPixelArray">CanvasPixelArray</a>.  I wrote this script to convert it into a more logical format: X by Y by RGBA.  Let me rephrase that.  By "more logical", I mean "more logical, <em>to me ...</em></p>
-                    <a class="btn btn-default btn-xs" href="http://mwcz.org/2011/11/16/html5-canvas-3d-pixel-array/">more ...</a>
-                </div>
-            </article>
-            <article>
-                <h2><a href="http://mwcz.org/2011/11/17/html5-tool-for-creating-color-palettes-from-an-image/">HTML5 tool for creating color palettes from an image</a></h2>
-                <div class="summary"><p>For an <a href="http://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction">HCI</a> class project in Fall 2009, I pulled together some of my previous demos to make this integrated tool.  It was just a prototype, and I haven't taken the time to get the code set up and working on this blog.  If anyone is interested, I can ...</p>
-                    <a class="btn btn-default btn-xs" href="http://mwcz.org/2011/11/17/html5-tool-for-creating-color-palettes-from-an-image/">more ...</a>
-                </div>
-            </article>
-</section>        </article>
-    </section>
-
-    </div>
 </main>
 
 

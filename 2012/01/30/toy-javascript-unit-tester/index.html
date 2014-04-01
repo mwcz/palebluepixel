@@ -9,12 +9,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Open Graph tags -->
-
-            <meta property="og:type" content="article"/>
-            <meta property="og:title" content="Toy javascript unit tester"/>
-            <meta property="og:url" content="http://mwcz.org/2012/01/30/toy-javascript-unit-tester/"/>
-            <meta property="og:description" content="Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and had a minor epiphany. In the back of my mind, there has always been a bit of uncertainty as to how unit testing frameworks work. Deep in my brain I ..."/>
 
 
     <!--[if gte IE 9]
@@ -25,7 +19,7 @@
     </style>
     <![endif]-->
 
-        <link href="http://mwcz.org/theme/css/styles.min.css?498b5ce9" rel="stylesheet">
+        <link href="http://mwcz.org/theme/css/styles.min.css?ca47d1a7" rel="stylesheet">
 
 
 
@@ -69,16 +63,14 @@
 </div>
 <!-- /.navbar -->
 <main role="main" class="container">
-    <div class="clayto-container">
-    <section id="content">
-        <article>
-            <header class="page-header">
-                <h1>
-                    Toy javascript unit tester
-                </h1>
-            </header>
-            <div class="entry-content">
-                <p>Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and had a minor epiphany.  In the back of my mind, there has always been a bit of uncertainty as to how unit testing frameworks work.  Deep in my brain I knew there was something I didn't understand, but I wasn't quite sure what.  I never gave it any conscious thought.</p>
+    <article>
+        <header class="page-header">
+            <h1>
+                Toy javascript unit tester
+            </h1>
+        </header>
+        <div class="entry-content">
+            <p>Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and had a minor epiphany.  In the back of my mind, there has always been a bit of uncertainty as to how unit testing frameworks work.  Deep in my brain I knew there was something I didn't understand, but I wasn't quite sure what.  I never gave it any conscious thought.</p>
 <p>As a developer, I'd use a framework, write a bunch of <code>testBlahFoo</code> functions, and the framework would magically run them.  </p>
 <p>Then I realized... "Oh, it's just introspection."</p>
 <div class="highlight"><pre><span class="c1">// Create an object with three properties, all functions</span>
@@ -197,9 +189,9 @@
 
 <p>The callback allows a user to determine how the results from the unit test should be processed or displayed.  Results could be printed to console.log, displayed on a page by adding them to the DOM, sent to a Web service with AJAX, or any arbitrary service with Web Sockets.</p>
 <p>After writing this toy framework, and explaining it to a colleague, I was told that the Rails unit tester uses almost the exact same approach.  I'd wager a few bucks that JUnit uses the Reflection API's <code>Class.getMethods()</code> to find and run all the methods added to a TestCase class.  Only a few bucks, though.</p>
-            </div>
+        </div>
 
-            <!-- /.entry-content -->
+        <!-- /.entry-content -->
 <footer class="clayto-post-info alert">
     <span class="published">
         Published on 2012-01-30 and filed under 
@@ -234,46 +226,8 @@
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
     </section>
-<section class="clayto-related-posts" id="clayto-related-posts">
-        <h2>Might these be of interest?</h2>
+    </article>
 
-            <article>
-                <h2><a href="http://mwcz.org/2011/10/13/opcode-patterns-70-finished/">Opcode patterns 70% finished</a></h2>
-                <div class="summary"><p>genlut.py is really filling out.  It generates the LUT for all 68k opcodes (68000 only), and I'm about 70% done.  77 down, 34 to go.</p>
-<p>The OPCODES dict defines the first two bytes of each opcode, both static bits and operands.  The operand strings act as keys into ...</p>
-                    <a class="btn btn-default btn-xs" href="http://mwcz.org/2011/10/13/opcode-patterns-70-finished/">more ...</a>
-                </div>
-            </article>
-            <article>
-                <h2><a href="http://mwcz.org/2011/09/22/lut/">LUT</a></h2>
-                <div class="summary"><p>Decoding is easy. Decoding requires a lot of typing. (I am starting to believe this is true of ever aspect of interpreted emulation...)</p>
-<p>For the AEJS decoder, I am creating a <a href="http://en.wikipedia.org/wiki/Lookup_table">look-up table</a> with every possible pattern for each instruction. It was my first idea, but I initially discarded it ...</p>
-                    <a class="btn btn-default btn-xs" href="http://mwcz.org/2011/09/22/lut/">more ...</a>
-                </div>
-            </article>
-            <article>
-                <h2><a href="http://mwcz.org/2014/02/25/introducing-drop64-ezpz-data-uri-generator/">Introducing Drop64, ezpz data URI generator</a></h2>
-                <div class="summary"><p>Speed-hacking an old project for fun and... fun.</p>
-                    <a class="btn btn-default btn-xs" href="http://mwcz.org/2014/02/25/introducing-drop64-ezpz-data-uri-generator/">more ...</a>
-                </div>
-            </article>
-            <article>
-                <h2><a href="http://mwcz.org/2014/03/23/rgb-webgl-color-cube/">RGB WebGL Color Cube</a></h2>
-                <div class="summary"><p>I spent a bit of time this weekend building an RGB color cube for
-<a href="http://colorpal.org">ColorPal</a>, using <a href="http://threejs.org">Three.js</a>.</p>
-<p><a class="btn btn-primary btn-lg" href="/static/projects/colorpal_colorcube">Try it out!</a>
-or <a href="https://github.com/mwcz/mwcz/blob/master/content/static/projects/colorpal_colorcube/js/cp-colorcube.js">view the code</a>.</p>
-<p>If your web browser isn't WebGL-enabled, here's a screenshot:</p>
-<p><img alt="Screenshot of ColorCube" src="/static/images/025/screenshot.png" title="Screenshot of ColorCube" /></p>
-<p><a href="http://threejs.org">Three.js</a> has proven to be pretty fun.  The documentation is decent, but
-not ...</p>
-                    <a class="btn btn-default btn-xs" href="http://mwcz.org/2014/03/23/rgb-webgl-color-cube/">more ...</a>
-                </div>
-            </article>
-</section>        </article>
-    </section>
-
-    </div>
 </main>
 
 

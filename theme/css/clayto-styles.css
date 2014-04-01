@@ -281,15 +281,11 @@ p {
   margin: 0 0 20.5px;
 }
 /*********************************************************************
- *                              Global                               *
- *********************************************************************/
-.clayto-container {
-  background-color: #fefefe;
-  padding: 20px;
-}
-/*********************************************************************
  *                             Homepage                              *
  *********************************************************************/
+section.homepage {
+  padding-bottom: 0;
+}
 .clayto-home-col {
   height: 600px;
   padding: 15px;
@@ -298,7 +294,6 @@ p {
 }
 .clayto-home-col h2 {
   margin-top: 0px;
-  color: #2c3e50;
 }
 .clayto-home-col h2 small {
   display: block;
@@ -315,6 +310,15 @@ p {
 }
 .clayto-home-col-projects {
   background-image: url("/static/images/home/projects-col-bg.jpg");
+}
+/*********************************************************************
+ *                               Posts                               *
+ *********************************************************************/
+article,
+section {
+  background-color: #ffffff;
+  padding: 18px;
+  margin-bottom: 18px;
 }
 /*********************************************************************
  *                           Project list                            *
@@ -344,8 +348,11 @@ p {
 .clayto-project-list .panel-footer a {
   margin-right: 4px;
 }
-.clayto-project-list:before,
-.clayto-project-list:after {
+.clayto-project-list article {
+  padding-bottom: 0;
+}
+.clayto-project-list article:before,
+.clayto-project-list article:after {
   content: " ";
   /* 1 */
 
@@ -353,7 +360,7 @@ p {
   /* 2 */
 
 }
-.clayto-project-list:after {
+.clayto-project-list article:after {
   clear: both;
 }
 img {
@@ -489,6 +496,7 @@ img {
 .clayto-navbar {
   background: #3f3f3f;
   border-radius: 0 !important;
+  border: none !important;
 }
 .clayto-navbar a {
   text-shadow: 0.2px 2.2px 7px rgba(0, 0, 0, 0.4);
@@ -552,9 +560,6 @@ h6 {
 /*********************************************************************
  *                          Post summaries                           *
  *********************************************************************/
-.summary {
-  margin-bottom: 30px;
-}
 .summary img {
   max-width: 168px;
   margin-bottom: 21px;
