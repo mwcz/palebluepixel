@@ -46,6 +46,14 @@ p {
 }
 
 /*********************************************************************
+ *                              Global                               *
+ *********************************************************************/
+
+img {
+    .img-responsive();
+}
+
+/*********************************************************************
  *                             Homepage                              *
  *********************************************************************/
 
@@ -57,14 +65,19 @@ section.homepage {
     height          : 600px;
     padding         : @grid-gutter-width / 2;
     background-size : cover;
-    margin-bottom: 20px;
+    margin-bottom   : 20px;
 
     h2 {
-        margin-top: 0px;
-        small {
-            display: block;
-            clear: both;
-        }
+        margin-top    : 0px;
+        margin-bottom : 7px;
+    }
+    p {
+        display: block;
+        clear: both;
+        color: white;
+    }
+    p, h2 {
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
     }
 }
 .clayto-home-col-link {
@@ -131,10 +144,6 @@ article, section {
         .clearfix();
         padding-bottom: 0;
     }
-}
-
-img {
-    .img-responsive();
 }
 
 /* Automatically clear bootstrap columns */
@@ -270,6 +279,7 @@ section h1 {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: @title-font;
+	letter-spacing: -0.04em;
 }
 
 .jumbotron {

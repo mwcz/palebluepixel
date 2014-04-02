@@ -1,7 +1,19 @@
-@import url(http://fonts.googleapis.com/css?family=Oswald:700,400);
 /*********************************************************************
  *                           Import fonts                            *
  *********************************************************************/
+@font-face {
+  font-family: Xolonium;
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/xolonium-fonts-2.2/fonts/Xolonium-Regular.otf");
+}
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/lato-regular/Lato-Regular.eot");
+  src: url("../fonts/lato-regular/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-regular/Lato-Regular.ttf") format("truetype"), url("../fonts/lato-regular/Lato-Regular.svg") format("svg");
+}
 /*********************************************************************
  *                   Site-wide font name variables                   *
  *********************************************************************/
@@ -281,6 +293,14 @@ p {
   margin: 0 0 20.5px;
 }
 /*********************************************************************
+ *                              Global                               *
+ *********************************************************************/
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/*********************************************************************
  *                             Homepage                              *
  *********************************************************************/
 section.homepage {
@@ -294,10 +314,16 @@ section.homepage {
 }
 .clayto-home-col h2 {
   margin-top: 0px;
+  margin-bottom: 7px;
 }
-.clayto-home-col h2 small {
+.clayto-home-col p {
   display: block;
   clear: both;
+  color: white;
+}
+.clayto-home-col p,
+.clayto-home-col h2 {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 .clayto-home-col-link:hover {
   text-decoration: none;
@@ -362,11 +388,6 @@ section {
 }
 .clayto-project-list article:after {
   clear: both;
-}
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
 }
 /* Automatically clear bootstrap columns */
 /*  Tablet  */
@@ -515,7 +536,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Xolonium', sans-serif;
+  letter-spacing: -0.04em;
 }
 .jumbotron {
   position: relative;
