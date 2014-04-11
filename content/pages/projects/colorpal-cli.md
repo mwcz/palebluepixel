@@ -6,8 +6,6 @@ Status: hidden
 ColorPal CLI is a command-line version of [ColorPal][5], my HTML5 color palette
 generator.
 
--------------------------------------------------------------------------------
-
 ## Demo!
 
     $ node cpal.js -f hex -s 8 MyImage.png
@@ -21,15 +19,11 @@ generator.
     #65683e
     #394434
 
--------------------------------------------------------------------------------
-
 ## Get it!
 
     npm install -g canvas requirejs # install dependencies
     git clone git@github.com:mwcz/colorpal-cli.git
     cd colorpal-cli
-
--------------------------------------------------------------------------------
 
 ## Use it!
 
@@ -86,21 +80,21 @@ To generate a specific number of colors, use the `-s` option.
 
 You can also specify the output format.  `json` is the default, but several others are available.
 
-Hex:
+#### Hex output:
 
     node cpal.js images/issue3.png -f hex
     #a5db90
     #3ab54b
     #fefacb
 
-LESS:
+#### LESS output:
 
     node cpal.js images/issue3.png -f less
     @color0: rgb(165,219,144);
     @color1: rgb(58,181,75);
     @color2: rgb(254,250,203);
 
-SCSS/SASS:
+#### SCSS/SASS output:
 
     node cpal.js images/issue3.png -f scss
     $color0: rgb(165,219,144);

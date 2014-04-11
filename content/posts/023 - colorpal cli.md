@@ -22,15 +22,11 @@ cyber-space?  Now you can.  Now *we* can.
     #65683e
     #394434
 
--------------------------------------------------------------------------------
-
 ## Get it!
 
     npm install -g canvas requirejs # install dependencies
     git clone git@github.com:mwcz/colorpal-cli.git
     cd colorpal-cli
-
--------------------------------------------------------------------------------
 
 ## Use it!
 

@@ -59,29 +59,27 @@ PLUGINS = ['neighbors', 'assets']
 # assets plugin settings
 
 ASSET_BUNDLES = (
-    #('scss', ['colors.scss', 'main.scss'], {'filters': 'pyscss'}),
-    ('less', 
-        [
-            'less/bootswatch/${BOOTSTRAP_THEME}/*.less',
-            'less/colors.less',
-            'less/clayto-styles.less',
-            ], 
-        {'filters': 'less'}
-        ),
-    ('css',
-        [
-            'css/style.css',
-            'css/bootstrap.%s.min.css' % BOOTSTRAP_THEME if BOOTSTRAP_THEME else 'css/bootstrap.min.css',
-            'css/font-awesome.min.css',
-            'css/html4css1.css',
-            'css/pygments.css',
-            'css/colors.css',
-            'css/clayto-styles.css',
-            ],
-        {}
-        #{'filters': 'cssmin'}
-        ),
-)
+        #('scss', ['colors.scss', 'main.scss'], {'filters': 'pyscss'}),
+        ('less', 
+            [
+                'less/bootswatch/${BOOTSTRAP_THEME}/*.less',
+                'less/colors.less',
+                'less/clayto-styles.less',
+                ], 
+            {'filters': 'less'}
+            ),
+        ('css',
+            [
+                'css/bootstrap.%s.min.css' % BOOTSTRAP_THEME if BOOTSTRAP_THEME else 'css/bootstrap.min.css',
+                'css/font-awesome.min.css',
+                'css/html4css1.css',
+                'css/pygments.css',
+                'css/colors.css',
+                'css/clayto-styles.css',
+                ],
+            {'filters': 'cssmin'}
+            ),
+        )
 
 # related posts settings
 
