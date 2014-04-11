@@ -19,7 +19,12 @@
     </style>
     <![endif]-->
 
-        <link href="http://mwcz.org/theme/css/styles.min.css?90522858" rel="stylesheet">
+            <link href="http://mwcz.org/theme/css/bootstrap.flatly.min.css" rel="stylesheet">
+            <link href="http://mwcz.org/theme/css/font-awesome.min.css" rel="stylesheet">
+            <link href="http://mwcz.org/theme/css/html4css1.css" rel="stylesheet">
+            <link href="http://mwcz.org/theme/css/pygments.css" rel="stylesheet">
+            <link href="http://mwcz.org/theme/css/colors.css" rel="stylesheet">
+            <link href="http://mwcz.org/theme/css/clayto-styles.css" rel="stylesheet">
 
 
 
@@ -68,7 +73,6 @@
         <div class="entry-content">
             <p>ColorPal CLI is a command-line version of <a href="/projects/colorpal" title="ColorPal project page">ColorPal</a>, my HTML5 color palette
 generator.</p>
-<hr />
 <h2>Demo!</h2>
 <div class="highlight"><pre><span class="err">$</span> <span class="n">node</span> <span class="n">cpal</span><span class="p">.</span><span class="n">js</span> <span class="o">-</span><span class="n">f</span> <span class="n">hex</span> <span class="o">-</span><span class="n">s</span> <span class="mi">8</span> <span class="n">MyImage</span><span class="p">.</span><span class="n">png</span>
 
@@ -83,7 +87,6 @@ generator.</p>
 </pre></div>
 
 
-<hr />
 <h2>Get it!</h2>
 <div class="highlight"><pre><span class="n">npm</span> <span class="n">install</span> <span class="o">-</span><span class="n">g</span> <span class="n">canvas</span> <span class="n">requirejs</span> <span class="err">#</span> <span class="n">install</span> <span class="n">dependencies</span>
 <span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="err">@</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">:</span><span class="n">mwcz</span><span class="o">/</span><span class="n">colorpal</span><span class="o">-</span><span class="n">cli</span><span class="p">.</span><span class="n">git</span>
@@ -91,7 +94,6 @@ generator.</p>
 </pre></div>
 
 
-<hr />
 <h2>Use it!</h2>
 <p>To display the help text, simply run the command without any arguments.</p>
 <div class="highlight"><pre><span class="n">node</span> <span class="n">cpal</span><span class="p">.</span><span class="n">js</span>
@@ -143,7 +145,7 @@ decided to create a smaller palette.</p>
 
 
 <p>You can also specify the output format.  <code>json</code> is the default, but several others are available.</p>
-<p>Hex:</p>
+<h4>Hex output:</h4>
 <div class="highlight"><pre><span class="n">node</span> <span class="n">cpal</span><span class="p">.</span><span class="n">js</span> <span class="n">images</span><span class="o">/</span><span class="n">issue3</span><span class="p">.</span><span class="n">png</span> <span class="o">-</span><span class="n">f</span> <span class="n">hex</span>
 <span class="cp">#a5db90</span>
 <span class="cp">#3ab54b</span>
@@ -151,7 +153,7 @@ decided to create a smaller palette.</p>
 </pre></div>
 
 
-<p>LESS:</p>
+<h4>LESS output:</h4>
 <div class="highlight"><pre><span class="n">node</span> <span class="n">cpal</span><span class="p">.</span><span class="n">js</span> <span class="n">images</span><span class="o">/</span><span class="n">issue3</span><span class="p">.</span><span class="n">png</span> <span class="o">-</span><span class="n">f</span> <span class="n">less</span>
 <span class="err">@</span><span class="n">color0</span><span class="o">:</span> <span class="n">rgb</span><span class="p">(</span><span class="mi">165</span><span class="p">,</span><span class="mi">219</span><span class="p">,</span><span class="mi">144</span><span class="p">);</span>
 <span class="err">@</span><span class="n">color1</span><span class="o">:</span> <span class="n">rgb</span><span class="p">(</span><span class="mi">58</span><span class="p">,</span><span class="mi">181</span><span class="p">,</span><span class="mi">75</span><span class="p">);</span>
@@ -159,7 +161,7 @@ decided to create a smaller palette.</p>
 </pre></div>
 
 
-<p>SCSS/SASS:</p>
+<h4>SCSS/SASS output:</h4>
 <div class="highlight"><pre><span class="n">node</span> <span class="n">cpal</span><span class="p">.</span><span class="n">js</span> <span class="n">images</span><span class="o">/</span><span class="n">issue3</span><span class="p">.</span><span class="n">png</span> <span class="o">-</span><span class="n">f</span> <span class="n">scss</span>
 <span class="err">$</span><span class="n">color0</span><span class="o">:</span> <span class="n">rgb</span><span class="p">(</span><span class="mi">165</span><span class="p">,</span><span class="mi">219</span><span class="p">,</span><span class="mi">144</span><span class="p">);</span>
 <span class="err">$</span><span class="n">color1</span><span class="o">:</span> <span class="n">rgb</span><span class="p">(</span><span class="mi">58</span><span class="p">,</span><span class="mi">181</span><span class="p">,</span><span class="mi">75</span><span class="p">);</span>
@@ -175,7 +177,6 @@ much appreciated. :)</p>
 <p>I've written other <a href="/tag/colorpal" title="Posts about ColorPal">posts about ColorPal</a>.</p>
         </div>
     </section>
-    <hr />
     <section class="comments" id="comments">
         <h2>Comments</h2>
         <div id="disqus_thread"></div>

@@ -93,7 +93,6 @@ cyber-space?  Now you can.  Now &lt;em&gt;we&lt;/em&gt; can.&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;hr /&gt;
 &lt;h2&gt;Get it!&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;npm&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt; &lt;span class="n"&gt;canvas&lt;/span&gt; &lt;span class="n"&gt;requirejs&lt;/span&gt; &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;dependencies&lt;/span&gt;
 &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;mwcz&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;colorpal&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;cli&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
@@ -101,7 +100,6 @@ cyber-space?  Now you can.  Now &lt;em&gt;we&lt;/em&gt; can.&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;hr /&gt;
 &lt;h2&gt;Use it!&lt;/h2&gt;
 &lt;p&gt;Visit the &lt;a href="/projects/colorpal-cli" title="ColorPal CLI project page"&gt;projcet page&lt;/a&gt; for the full documentation, or simply run the
 command without any arguments to see the help text.&lt;/p&gt;
