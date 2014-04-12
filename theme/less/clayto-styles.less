@@ -1,7 +1,7 @@
-@import "fonts.less";
 
 @bootswatch-theme: "flatly";
 
+@import "fonts.less";
 @import "bootswatch/@{bootswatch-theme}/variables.less";
 @import "bootstrap/mixins.less";
 @import "bootstrap/panels.less";
@@ -113,6 +113,10 @@ article, section {
     background-color : @body-bg;
     padding          : @padding-large-vertical;
     margin-bottom    : @padding-large-vertical;
+    -webkit-box-shadow: 0px 0px 18px 0 rgba(0, 0, 0, 0.1);
+       -moz-box-shadow: 0px 0px 18px 0 rgba(0, 0, 0, 0.1);
+         -o-box-shadow: 0px 0px 18px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 18px 0 rgba(0, 0, 0, 0.1);
     .clearfix();
 }
 
