@@ -60,7 +60,6 @@ PLUGINS = ['neighbors', 'assets']
 # assets plugin settings
 
 ASSET_BUNDLES = (
-        #('scss', ['colors.scss', 'main.scss'], {'filters': 'pyscss'}),
         ('less',
             [
                 'less/bootswatch/%s/*.less' % BOOTSTRAP_THEME,
@@ -71,10 +70,9 @@ ASSET_BUNDLES = (
         ('css',
             [
                 ('css/bootstrap.%s.min.css' % BOOTSTRAP_THEME) if BOOTSTRAP_THEME else 'css/bootstrap.min.css',
-                'css/pygments.css',
                 'css/clayto-styles.css',
+                'css/pygments.css',
                 ],
-            #{'filters': 'cssutils'}
             {}
             ),
         )
