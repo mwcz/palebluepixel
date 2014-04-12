@@ -16,7 +16,7 @@ PDF_GENERATOR         = False
 DEFAULT_PAGINATION    = 6
 MARKUP                = ('md','mkd','markdown')
 DISPLAY_PAGES_ON_MENU = True
-THEME                 = environ["HOME"] + "/workspace/pelican-bootstrap3"
+THEME                 = environ["HOME"] + "/workspace/mwcz-theme"
 
 DISPLAY_CATEGORIES_ON_MENU = True
 
