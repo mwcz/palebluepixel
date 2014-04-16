@@ -8,7 +8,7 @@
 
 body {
     font-family: @body-font;
-    background-color: #3f3f3f;
+    background-color: @gray-light;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -45,7 +45,6 @@ p {
 }
 
 .navbar {
-    margin-bottom: 0px;
 }
 
 /*********************************************************************
@@ -117,10 +116,10 @@ article, section {
     background-color : @body-bg;
     padding          : @padding-large-vertical;
     margin-bottom    : @padding-large-vertical;
-    -webkit-box-shadow: 0px 0px 18px 0 rgba(0, 0, 0, 0.1);
-       -moz-box-shadow: 0px 0px 18px 0 rgba(0, 0, 0, 0.1);
-         -o-box-shadow: 0px 0px 18px 0 rgba(0, 0, 0, 0.1);
-            box-shadow: 0px 0px 18px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 18px 0 rgba(0, 0, 0, 0.2);
+       -moz-box-shadow: 0px 0px 18px 0 rgba(0, 0, 0, 0.2);
+         -o-box-shadow: 0px 0px 18px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 18px 0 rgba(0, 0, 0, 0.2);
     .clearfix();
 }
 
@@ -142,9 +141,10 @@ article, section {
 }
 
 .highlight pre {
-    .fullwidth();
     background-color: #202020;
     color: #777;
+    border: none;
+    border-radius: 0;
 }
 
 
@@ -353,7 +353,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .clayto-post-info {
     // background, border, text-color
-    .alert-variant(@gray-light, @gray-lighter, @brand-primary);
+    .alert-variant(@gray-dark, @gray-lighter, @gray-lighter);
     .fullwidth();
     /* move post info to the bottom of the box */
     margin-bottom: -@padding-large-vertical;
