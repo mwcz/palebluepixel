@@ -3,3 +3,4 @@ srv.pid
 pelican.pid
 *.pyc
 output/*
+cache
