@@ -2,12 +2,12 @@
 @bootswatch-theme: "flatly";
 
 @import "fonts.less";
+@import "bootswatch/@{bootswatch-theme}/mixins.less";
 @import "bootswatch/@{bootswatch-theme}/variables.less";
-@import "bootstrap/mixins.less";
-@import "bootstrap/panels.less";
+@import "bootswatch/@{bootswatch-theme}/panels.less";
 
 body {
-    font-family: @body-font;
+    font-family: @font-family-sans-serif;
     background-color: @gray-light;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -44,7 +44,8 @@ p {
     margin: 0 0 20.5px;
 }
 
-.navbar {
+.clayto-navbar.navbar .nav li.active a {
+    background-color: @gray-darker !important;
 }
 
 /*********************************************************************
@@ -319,7 +320,7 @@ section h1 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: @title-font;
+    font-family: @font-family-serif;
 	letter-spacing: -0.04em;
 }
 

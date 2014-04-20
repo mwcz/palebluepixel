@@ -1,28 +1,24 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:700|Inconsolata:400,700);
 /*********************************************************************
  *                           Import fonts                            *
  *********************************************************************/
 @font-face {
-  font-family: LiberationMono-Bold;
+  font-family: "Liberation Mono";
+  font-style: normal;
+  src: url("../fonts/liberation-fonts-ttf-2.00.1/LiberationMono-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: LiberationSerif-Bold;
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/liberation-fonts-ttf-2.00.1/LiberationSerif-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: LiberationSans-Bold;
   font-style: normal;
   font-weight: bold;
   src: url("../fonts/liberation-fonts-ttf-2.00.1/LiberationSans-Bold.ttf") format("truetype");
 }
-@font-face {
-  font-family: LiberationSans-Regular;
-  font-style: normal;
-  font-weight: bold;
-  src: url("../fonts/liberation-fonts-ttf-2.00.1/LiberationSans-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: Lato;
-  font-style: normal;
-  font-weight: bold;
-  src: url("../fonts/lato-regular/Lato-Regular.eot");
-  src: url("../fonts/lato-regular/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-regular/Lato-Regular.ttf") format("truetype"), url("../fonts/lato-regular/Lato-Regular.svg") format("svg");
-}
-/*********************************************************************
- *                   Site-wide font name variables                   *
- *********************************************************************/
 .panel {
   margin-bottom: 21px;
   background-color: #ffffff;
@@ -263,7 +259,7 @@
   border-bottom-color: #3498db;
 }
 body {
-  font-family: 'LiberationSans-Regular', sans-serif;
+  font-family: 'LiberationSerif-Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background-color: #b4bcc2;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -296,6 +292,9 @@ a:visited {
 }
 p {
   margin: 0 0 20.5px;
+}
+.clayto-navbar.navbar .nav li.active a {
+  background-color: #222222 !important;
 }
 /*********************************************************************
  *                              Global                               *
@@ -589,7 +588,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'LiberationMono-Bold', sans-serif;
+  font-family: 'Roboto Slab', Georgia, "Times New Roman", Times, serif;
   letter-spacing: -0.04em;
 }
 .jumbotron {
