@@ -60,13 +60,6 @@ PLUGINS = ['neighbors', 'assets',]
 # assets plugin settings
 
 ASSET_BUNDLES = (
-        ('less',
-            [
-                'less/bootswatch/%s/*.less' % BOOTSTRAP_THEME,
-                'less/clayto-styles.less',
-                ],
-            {'filters': 'less'}
-            ),
         ('css',
             [
                 ('css/bootstrap.%s.min.css' % BOOTSTRAP_THEME) if BOOTSTRAP_THEME else 'css/bootstrap.min.css',
