@@ -7,9 +7,6 @@ from os import environ
 #                            MISC SETTINGS                            #
 #######################################################################
 
-CACHE_CONTENT = True
-LOAD_CONTENT_CACHE = True
-
 DEBUG                 = True
 AUTHOR                = u'mwcz'
 SITENAME              = u'mwcz.org'
