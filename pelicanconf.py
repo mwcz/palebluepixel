@@ -54,8 +54,8 @@ BOOTSTRAP_THEME = 'flatly'
 #                           PLUGIN SETTINGS                           #
 #######################################################################
 
-PLUGIN_PATH = environ["HOME"] + '/workspace/pelican-plugins'
-PLUGINS = ['neighbors', 'assets']
+PLUGIN_PATH = [environ["HOME"] + '/workspace/pelican-plugins',]
+PLUGINS = ['neighbors', 'assets',]
 
 # assets plugin settings
 
