@@ -7,7 +7,7 @@ from os import environ
 #                            MISC SETTINGS                            #
 #######################################################################
 
-DEBUG                 = False
+DEBUG                 = True
 AUTHOR                = u'mwcz'
 SITENAME              = u'mwcz.org'
 TIMEZONE              = 'America/New_York'
