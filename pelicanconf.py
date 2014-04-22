@@ -60,17 +60,28 @@ PLUGINS = ['neighbors', 'assets',]
 # assets plugin settings
 
 ASSET_BUNDLES = (
-        ('less',
+        ('bootstrap',
             [
-                'less/bootswatch/%s/*.less' % BOOTSTRAP_THEME,
+                ('less/bootswatch/%s/bootstrap.less' % BOOTSTRAP_THEME) if BOOTSTRAP_THEME else 'less/bootstrap/bootstrap.less',
+                ],
+            {
+                'filters': 'less',
+                'output': 'css/bootstrap.css' if DEBUG else 'css/bootstrap.min.css',
+                }
+            ),
+        ('clayto',
+            [
                 'less/clayto-styles.less',
                 ],
-            {'filters': 'less'}
+            {
+                'filters': 'less',
+                'output': 'css/clayto-styles.css' if DEBUG else 'css/clayto-styles.min.css',
+                }
             ),
         ('css',
             [
-                ('css/bootstrap.%s.min.css' % BOOTSTRAP_THEME) if BOOTSTRAP_THEME else 'css/bootstrap.min.css',
-                'css/clayto-styles.css',
+                'css/bootstrap.css' if DEBUG else 'css/bootstrap.min.css',
+                'css/clayto-styles.css' if DEBUG else 'css/clayto-styles.min.css',
                 'css/pygments.css',
                 ],
             {}
