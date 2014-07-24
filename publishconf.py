@@ -69,19 +69,19 @@ ASSET_BUNDLES = (
                 'output': 'css/bootstrap.css' if DEBUG else 'css/bootstrap.min.css',
                 }
             ),
-        ('clayto',
+        ('pbp',
             [
-                'less/clayto-styles.less',
+                'less/styles.less',
                 ],
             {
                 'filters': 'less',
-                'output': 'css/clayto-styles.css' if DEBUG else 'css/clayto-styles.min.css',
+                'output': 'css/styles.css' if DEBUG else 'css/styles.min.css',
                 }
             ),
         ('css',
             [
                 'css/bootstrap.css' if DEBUG else 'css/bootstrap.min.css',
-                'css/clayto-styles.css' if DEBUG else 'css/clayto-styles.min.css',
+                'css/styles.css' if DEBUG else 'css/styles.min.css',
                 'css/pygments.css',
                 ],
             {}
