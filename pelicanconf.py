@@ -185,7 +185,7 @@ PAGINATION_PATTERNS = (
 #######################################################################
 
 GITHUB_URL      = 'https://github.com/mwcz'
-DISQUS_SITENAME = 'mwcz'
+DISQUS_SITENAME = False #'mwcz'
 SOCIAL          = (('GitHub',  'https://github.com/mwcz'),
                    ('Twitter', 'https://twitter.com/mwcz'),)
 
