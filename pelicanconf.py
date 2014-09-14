@@ -8,8 +8,8 @@ from os import environ
 #######################################################################
 
 DEBUG                 = True
-AUTHOR                = u'mwcz'
-SITENAME              = u'mwcz.org'
+AUTHOR                = u'Michael Clayton'
+SITENAME              = u'Pale Blue Pixel'
 TIMEZONE              = 'America/New_York'
 DEFAULT_LANG          = u'en'
 PDF_GENERATOR         = False
@@ -71,10 +71,12 @@ ASSET_BUNDLES = (
             ),
         ('pbp',
             [
+                ('less/bootswatch/%s/bootstrap.less' % BOOTSTRAP_THEME) if BOOTSTRAP_THEME else 'less/bootstrap/bootstrap.less',
                 'less/styles.less',
+                'css/pygments.css',
                 ],
             {
-                'filters': 'less',
+                'filters': 'less' if DEBUG else 'less,cssmin',
                 'output': 'css/styles.css' if DEBUG else 'css/styles.min.css',
                 }
             ),

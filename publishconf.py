@@ -7,16 +7,16 @@ from os import environ
 #                            MISC SETTINGS                            #
 #######################################################################
 
-DEBUG                 = True
-AUTHOR                = u'mwcz'
-SITENAME              = u'mwcz.org'
+DEBUG                 = False
+AUTHOR                = u'Michael Clayton'
+SITENAME              = u'Pale Blue Pixel'
 TIMEZONE              = 'America/New_York'
 DEFAULT_LANG          = u'en'
 PDF_GENERATOR         = False
 DEFAULT_PAGINATION    = 6
 MARKUP                = ('md','mkd','markdown')
 DISPLAY_PAGES_ON_MENU = True
-THEME                 = environ["HOME"] + "/workspace/mwcz-theme"
+THEME                 = "../palebluepixel-theme"
 
 DISPLAY_CATEGORIES_ON_MENU = True
 
@@ -54,7 +54,7 @@ BOOTSTRAP_THEME = 'flatly'
 #                           PLUGIN SETTINGS                           #
 #######################################################################
 
-PLUGIN_PATH = [environ["HOME"] + '/workspace/pelican-plugins',]
+PLUGIN_PATHS = [environ["HOME"] + '/workspace/pelican-plugins',]
 PLUGINS = ['neighbors', 'assets',]
 
 # assets plugin settings
@@ -71,10 +71,12 @@ ASSET_BUNDLES = (
             ),
         ('pbp',
             [
+                ('less/bootswatch/%s/bootstrap.less' % BOOTSTRAP_THEME) if BOOTSTRAP_THEME else 'less/bootstrap/bootstrap.less',
                 'less/styles.less',
+                'css/pygments.css',
                 ],
             {
-                'filters': 'less',
+                'filters': 'less' if DEBUG else 'less,cssmin',
                 'output': 'css/styles.css' if DEBUG else 'css/styles.min.css',
                 }
             ),
@@ -96,8 +98,8 @@ RELATED_POSTS_MAX = 4
 #                            HOST SETTINGS                            #
 #######################################################################
 
-SITEURL     = 'http://mwcz.org'
-FEED_DOMAIN = 'http://mwcz.org'
+SITEURL     = 'http://palebluepixel.org'
+FEED_DOMAIN = 'http://palebluepixel.org'
 
 
 # Blogroll
@@ -122,8 +124,7 @@ STATIC_PATHS = ["static", "projects"]
 #######################################################################
 
 PATH                  = 'content'
-PAGE_DIR              = 'pages'
-ARTICLE_DIR           = 'posts'
+ARTICLE_PATHS         = ['posts']
 
 # TODO the mwcz.org tag is actually slugified into "mwczorg" but the link still
 # reads "mwcz.org" so it 404's
@@ -135,7 +136,7 @@ CATEGORY_FEED_RSS     = 'feeds/%s.rss.xml'
 ARTICLE_URL           = '{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS       = '{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
-PAGE_DIR              = 'pages'
+PAGE_PATHS            = ['pages']
 PAGE_URL              = '{slug}/'
 PAGE_SAVE_AS          = '{slug}/index.html'
 
@@ -187,7 +188,7 @@ PAGINATION_PATTERNS = (
 #######################################################################
 
 GITHUB_URL      = 'https://github.com/mwcz'
-DISQUS_SITENAME = 'mwcz'
+DISQUS_SITENAME = False #'mwcz'
 SOCIAL          = (('GitHub',  'https://github.com/mwcz'),
                    ('Twitter', 'https://twitter.com/mwcz'),)
 

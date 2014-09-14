@@ -14,7 +14,6 @@ Fun, simple, and oddly relaxing.
 #cnvs {
     background-color: #1f1f1f;
     margin: 0 auto;
-    border: 1px solid black;
     -webkit-box-shadow: 0px 2px 18px rgba( 0, 0, 0, 0.7 );
        -moz-box-shadow: 0px 2px 18px rgba( 0, 0, 0, 0.7 );
          -o-box-shadow: 0px 2px 18px rgba( 0, 0, 0, 0.7 );
