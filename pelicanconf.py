@@ -8,7 +8,7 @@ from os import environ
 #######################################################################
 
 DEBUG                 = True
-AUTHOR                = u'Michael Clayton'
+AUTHOR                = u'mwcz'
 SITENAME              = u'Pale Blue Pixel'
 TIMEZONE              = 'America/New_York'
 DEFAULT_LANG          = u'en'
@@ -55,7 +55,11 @@ BOOTSTRAP_THEME = 'flatly'
 #######################################################################
 
 PLUGIN_PATHS = [environ["HOME"] + '/workspace/pelican-plugins',]
-PLUGINS = ['neighbors', 'assets',]
+PLUGINS = ['neighbors', 'assets', 'extract_toc']
+
+# extract_toc plugin settings
+
+MD_EXTENSIONS = (['toc'])
 
 # assets plugin settings
 
@@ -181,6 +185,8 @@ PAGINATION_PATTERNS = (
     (1, '{base_name}/', '{base_name}/index.html'),
     (2, '{base_name}/{number}/', '{base_name}/{number}/index.html'),
 )
+
+SUMMARY_MAX_LENGTH = 20
 
 #######################################################################
 #                       SOCIAL NETWORK SETTINGS                       #

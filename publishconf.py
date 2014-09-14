@@ -8,7 +8,7 @@ from os import environ
 #######################################################################
 
 DEBUG                 = False
-AUTHOR                = u'Michael Clayton'
+AUTHOR                = u'mwcz'
 SITENAME              = u'Pale Blue Pixel'
 TIMEZONE              = 'America/New_York'
 DEFAULT_LANG          = u'en'
@@ -182,6 +182,8 @@ PAGINATION_PATTERNS = (
     (1, '{base_name}/', '{base_name}/index.html'),
     (2, '{base_name}/{number}/', '{base_name}/{number}/index.html'),
 )
+
+SUMMARY_MAX_LENGTH = 20
 
 #######################################################################
 #                       SOCIAL NETWORK SETTINGS                       #
