@@ -1,6 +1,7 @@
 Title: Raspberry Pi Timelapse Camera
 Date: 2014-05-15
 Tags: programming, raspberry pi, photography, timelapse, camera
+Status: draft
 
 I built a timelapse camera with a raspberry pi.
 

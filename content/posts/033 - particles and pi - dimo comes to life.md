@@ -1,10 +1,8 @@
 Title: Particles and π - DiMo Comes to Life
 Date: 2014-08-25
-Tags: programming, javascript, requirejs, amd, threejs, webgl, 3d, art
+Tags: programming, javascript, requirejs, amd, threejs, webgl, 3d, art, sparkcon, geekspark
 Image: /static/images/033/ring-anim.gif
-
-[TOC]
-
+Summary: A player walks up Fayetteville St in Raleigh, North Carolina.  [SparkCon][sparkcon] has begun, and dozens of artists are ...
 
 A player walks up Fayetteville St in Raleigh, North Carolina.
 [SparkCon][sparkcon] has begun, and dozens of artists are strewn along the
@@ -15,72 +13,109 @@ as if creating their art is more important than how long it lasts.
 
 Up ahead is a gnarly-looking wrought-iron handrail covered in small
 stegasaurus-like spikes.  The spikes make its use as a handrail questionable,
-but it does serve well to keep pedestrians from plummeting into the stairwell
-below.
+but it does keep pedestrians from plummeting into the stairwell below.
 
 The stairwell looks dingy, but a large green arrow points down, and so she
 descends to escape the rain.
 
-It's very dark inside, but she finds three glowing batons lying on a pedistal.
-One red, one green, and one blue.  On the far wall, masses of colored dots
-swirl around three circles, also red, green, and blue.  She picks up the red
-baton, and the red circle moves.
+It's dark inside, but on the far wall, swirling clouds of colored dots orbit
+around three circles.  The silhouettes of three children stand on pedistals
+near the wall, each one waving an illuminated baton.
 
-![silhouettes of players playing dimo]({filename}/static/images/033/silhouette-chairs-dimo.jpg "silhouettes of players playing dimo")
+<figure>
+    <img src="{filename}/static/images/033/dimo-kids.jpg" alt="children playing DiMo">
+    <figcaption>photo by Yujin Kim</figcaption>
+</figure>
 
-A camera mounted on a high wall reads the position of the 
+After watching closely for a few moments, the rules of motion start to come
+together in her mind.  Each child's baton is emanating a different color; red,
+green, and blue.  As they swing the batons, large red, green, and blue circles
+swoosh through the colored clouds.  
 
-# Players
-## camera input
-### link to Ian's site, 
-## movement smoothing low-pass
-## websockets & json
+The large colored circles seem to exert an attractive gravitational force on
+the particles.  Orbits are formed, and tiny solar systems glow brilliantly.
 
-# particles
-## coloring methods
-### accel and velocity-based sine cycles [pictures and/or videos!]
-### shaders (glsl essentials)
+<figure>
 
-# application concerns
-## architecture (threejs app design tendencies and how to overcome them)
+    <iframe id="dimo-demo" src="//player.vimeo.com/video/106179566" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
 
-# configuration
-## datgui and presets (preset screenshots)
-
-# resources
-## glsl essentials
-## threejs
-
-# thanks
-## ian
-## ben
-## justis
-## the volunteers
-## raleigh fish market
-## geekspark and sparkcon
-## the visitors!
+    <figcaption>
+        <a href="http://vimeo.com/106179566">GeekSPARK: Digital Motion (DiMo) setup timelapse</a> from <a href="http://vimeo.com/mwcz">mwc</a> on <a href="https://vimeo.com">Vimeo</a>.
+    </figcaption>
+</figure>
 
 
- - threejs features being used
- - datgui
- - threejs + requirejs architecture
- - 
+She takes one step forward, hoping to participate.  Her footstep echoes down
+the length of the room.  The children turn at the sound, and the batons
+suddenly clatter to the ground.  They've vanished.  It's her turn now.
 
-![Roughly evenly-spaced sine waves][sinewaves]
 
-The functions are roughly:
 
-    red(x)   = ( sin( accel_m * pi * 2 + 2.25 * pi/4 ) + 1 )/2
-    green(x) = ( sin( accel_m * pi * 2 + 5    * pi/4 ) + 1 )/2
-    blue(x)  = ( sin( accel_m * pi * 2 + 7.5  * pi/4 ) + 1 )/2
+# What's DiMo?
 
-TODO: update the functions above to actually reflect what's in DiMo
+DiMo (short for Digital Motion) is an annual exhibit at GeekSPARK, which itself
+is a branch of SparkCon.  I haven't been to any previous years' installations,
+but this year included digital visualizations projected onto a large wall, with
+three LED batons that visitors could use to control the visualizations.
 
-Near the end of the project, things were going well.  The gravity felt great,
-player movements were smooth, 50,000 particles ran pretty smoothly on a common
-laptop, and player recognition was perfect.  The one thing that was lacking is
-it didn't *look* spectacular.  In essence, it looked cool, but only to geeks.
+This (2014) was my first year as a volunteer, but it was a tremendously
+educational and *fun* experience, so I'll definitely be back next year.
 
+Detailed technical information about the implementation is availble
+in [this follow-up post][nextpost].
+
+
+
+# Thanks
+
+I've written mostly about my own contribution to DiMo here, because that's what
+I'm most familiar with, but in reality it was only a piece of the DiMo puzzle.
+There were two other visualizations, both of which used the lighted batons as
+input.  I would love to link to their creators' websites, but I'm still waiting
+on URLs.  Thanks to them!
+
+Ian Hands, for organizing the project, asking me to participate, and coming up
+with the whole damn idea.
+
+Ben Pritchett for code contributions to the renderer and the server, and for
+his work on two input sources (music BPM and a *brain machine*) which didn't
+make it into this year's exhibit, but we'll almost certainly use next year.
+
+Justis Peters is the lead coordinator of GeekSPARK, and, I think, the founder
+of DiMo, and none of this would have happened without him.
+
+Thanks also to the [Raleigh Fish Market Gallery][fishmarket] for providing us a
+venue and letting us paint the projection wall white.
+
+Most of all, thank you to the visitors who descended that dingy stairwell to
+see our exhibits!  Seeing their smiles as they waved batons, created swirling
+universes, was incredibly rewarding.  Everyone seemed to have fun.  One kid
+liked it so much he cried when it was time to leave.
+
+You can find all the code at our [GitHub group][geeksparkrh].  The
+visualization code described in this post is in the [dimo-renderer][renderer]
+repo.
+
+<script>
+    function set_vimeo_iframe_height() {
+        var ifr = document.getElementById('dimo-demo');
+        ifr.height = ifr.offsetWidth / 1.497;
+        console.log(ifr);
+        console.log(ifr.offsetWidth);
+        console.log(ifr.offsetHeight);
+    }
+    document.addEventListener('DOMContentLoaded', set_vimeo_iframe_height);
+    window.addEventListener('resize', set_vimeo_iframe_height);
+</script>
 
 [sinewaves]: {filename}/static/images/033/sine_waves.png
 [sparkcon]: http://www.sparkcon.com/
+[geeksparkrh]: https://github.com/geekspark-rh/
+[renderer]: https://github.com/geekspark-rh/dimo-renderer
+[justis]: https://twitter.com/justis
+[iphands]: https://twitter.com/ianpagehands
+[gpucalc]: http://vimeo.com/97329154
+[ws]: https://en.wikipedia.org/wiki/WebSocket
+[opencv]: http://opencv.org/
+[fishmarket]: https://www.facebook.com/ncsufishmarket
+[nextpost]: "{filename}034 - the deconstruction of falling particles.md"
