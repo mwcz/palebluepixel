@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>    A RequireJS Architecture for ThreeJS Applications
+</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <!--[if gte IE 9]
+    <style type="text/css">
+        .gradient {
+            filter: none;
+        }
+    </style>
+    <![endif]-->
+
+            <link href="http://palebluepixel.org/theme/css/styles.min.css?0c248b20" rel="stylesheet">
+
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://palebluepixel.org/theme/js/jquery.min.js"></script>
+
+        <link href="http://palebluepixel.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Pale Blue Pixel ATOM Feed"/>
+        <link href="http://palebluepixel.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
+              title="Pale Blue Pixel RSS Feed"/>
+
+
+</head>
+<body>
+<div class="container">
+    <nav class="pbp-navbar" role="navigation">
+        
+        <a href="/">
+            <img class="pbp-logo" src="http://palebluepixel.org/theme/images/logo.svg" />
+        </a>
+    </nav>
+</div>
+<!-- /.navbar -->
+<main role="main" class="container">
+    <article>
+        <header class="page-header">
+            <h2>
+                A RequireJS Architecture for ThreeJS Applications
+            </h2>
+        </header>
+        <div class="entry-content">
+            <nav class="toc"></nav>
+            <p>While working on DiMo, I found myself at the <a href="http://threejs.org/examples/">ThreeJS
+examples</a> page quite often, searching for working examples.</p>
+<pre><code>&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;title&gt;a threejs app!&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;script src="../build/three.min.js"&gt;&lt;/script&gt;
+
+        &lt;script id="vertexShader" type="x-shader/x-vertex"&gt;
+            &lt;!-- dozens of lines of vertex shader (GLSL) code --&gt;
+        &lt;/script&gt;
+
+        &lt;script id="fragmentShader" type="x-shader/x-fragment"&gt;
+            &lt;!-- dozens of lines of fragment shader (GLSL) code --&gt;
+        &lt;/script&gt;
+
+        &lt;script&gt;
+            &lt;!-- hundreds of lines of ThreeJS code --&gt;
+        &lt;/script&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>With luck, the ThreeJS code might reside in a separate <code>.js</code> file, but that's
+the extent of the </p>
+<pre><code>src
+├── index.html
+├── css
+│   └── app.scss
+├── img
+│   └── many images
+├── js
+│   ├── camera.js
+│   ├── config.js
+│   ├── config-panel.js
+│   ├── gravity.js
+│   ├── main.js
+│   ├── mouse.js
+│   ├── origin.js
+│   ├── particle_colors.js
+│   ├── particles.js
+│   ├── player_colors.js
+│   ├── players.js
+│   ├── presets.js
+│   ├── require.config.js
+│   ├── scene.js
+│   ├── timer.js
+│   └── viewport.js
+├── shaders
+│   ├── particle.frag
+│   ├── player.frag
+│   └── vertex.vert
+└── lib
+    └── requirejs, threejs, datgui, et al
+</code></pre>
+<p>I have absolutely no experience architecting 3D applications, so the actual
+separations of concern are probably quite misguided!  However, even if
+misguided, it proved to be much easier to work with than a single monolithic
+HTML file.</p>
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="content-type" content="text/html; charset=UTF-8"&gt;
+
+    &lt;title&gt;Geekspark DiMo&lt;/title&gt;
+
+&lt;link href="css/app.min.css" rel="stylesheet" type="text/css"&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;script data-main="js/require.config" src="lib/requirejs/require.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+        </div>
+
+        <!-- /.entry-content -->
+    </article>
+
+</main>
+
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://palebluepixel.org/theme/js/respond.min.js"></script>
+</body>
+</html>

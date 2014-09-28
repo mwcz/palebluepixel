@@ -1,0 +1,339 @@
+
+@bootswatch-theme: "flatly";
+
+@import "colors";
+@import "fonts";
+@import "bootstrap-col-clear";
+@import "elements/elements";
+@import "bootswatch/@{bootswatch-theme}/mixins";
+@import "bootswatch/@{bootswatch-theme}/variables";
+@import "bootswatch/@{bootswatch-theme}/panels";
+
+body {
+    font-family      : @pbp-font-body;
+    font-size        : @pbp-base-font-size;
+    background-color : @pbp-bg-color;
+    color            : @pbp-fg-color;
+    margin           : 0;
+    padding          : 0;
+}
+
+/*********************************************************************
+ *                    bootstrap.flatly overrides                     *
+ *********************************************************************/
+blockquote {
+    border-left: 5px solid lighten(@pbp-bg-color, 4%);
+    color: @pbp-pale-blue;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 830px;
+    }
+}
+a {
+
+    text-decoration : none !important;
+    border-bottom   : 1px dotted;
+    color           : @pbp-pale-blue;
+    outline-color   : lighten(@pbp-bg-color, 32%);
+    border-color    : lighten(@pbp-bg-color, 16%);
+
+    &:hover         {
+        color           : lighten(@pbp-pale-blue, 16%);
+        border-bottom   : 1px solid;
+        border-color    : lighten(@pbp-bg-color, 32%);
+    }
+    &:visited       {
+        color: darken(@pbp-pale-blue, 16%); 
+    }
+    &:visited:hover {
+        color: lighten(@pbp-pale-blue, 16%); 
+    }
+
+}
+
+p {
+    margin: 0 0 20.5px;
+}
+
+code {
+    padding          : 4px 3px 2px 4px;
+    margin           : 0px 1.2px;
+}
+pre, .highlight, code, pre code {
+    font-family      : @pbp-font-mono;
+    background-color : darken(@pbp-bg-color, 5%);
+    color            : darken(@pbp-fg-color, 5%);
+    border           : none;
+}
+
+.page-header {
+    margin: 42px 0px 8px;
+    border-bottom: none;
+}
+
+.container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+hr {
+    border-color: lighten(@pbp-bg-color, 16%);
+}
+
+/*********************************************************************
+ *                              Global                               *
+ *********************************************************************/
+
+/* Flat-inspired full width element */
+.fullwidth {
+    padding       : @padding-large-vertical;
+    border-radius : 0;
+    width         : calc(~"100% + @{padding-large-vertical} * 2");
+    position      : relative;
+    left          : -@padding-large-vertical;
+    border        : none;
+}
+
+img {
+    .img-responsive() !important;
+}
+
+/*********************************************************************
+ *                               Posts                               *
+ *********************************************************************/
+
+article, section {
+    background-color : transparent;
+    padding          : @padding-large-vertical;
+    margin-bottom    : @padding-large-vertical;
+    .clearfix();
+}
+
+.entry-content img {
+    max-width : 100%;
+    height    : auto;
+    margin    : 0 auto;
+}
+
+.highlight pre {
+    background-color : darken(@pbp-bg-color, 16%);
+    color            : darken(@pbp-fg-color, 16%);
+    border           : none;
+    border-radius    : 0;
+}
+
+.pbp-post-thumbnail {
+    .make-xs-column(12);
+    .make-sm-column(4);
+    .make-md-column(4);
+    .make-lg-column(3);
+}
+
+
+
+/*********************************************************************
+ *                           Project list                            *
+ *********************************************************************/
+
+.pbp-project-summary {
+    margin-bottom: 2rem;
+    &:last-child { margin-bottom: inherit; }
+
+    .clearfix();
+
+    & .pbp-project-summary-image {
+        .make-sm-column(3);
+        .make-xs-column(12);
+    }
+    & .pbp-project-summary-description {
+        h3 { display: inline-block; }
+        .make-sm-column(9);
+        .make-xs-column(12);
+    }
+}
+
+.pbp-project-list {
+    * {
+        &, &:hover {
+            text-decoration: none;
+        }
+    }
+    img {
+        margin: 0 auto;
+    }
+    h3 {
+        &, &:hover {
+            margin-top: 0;
+        }
+    }
+    .panel-body p:last-child {
+        margin-bottom: 0;
+    }
+    .panel-footer {
+        padding: 15px;
+        p {
+            margin: 0;
+        }
+        a {
+            margin-right: 4px;
+        }
+    }
+    .panel,
+    .panel-body,
+    .panel-heading,
+    .panel-footer {
+        background-color: transparent;
+        border: 0;
+    }
+
+    article {
+        .clearfix();
+        padding-bottom: 0;
+    }
+}
+/*********************************************************************
+ *                              Navbar                               *
+ *********************************************************************/
+.pbp-navbar {
+    height              : 64px;
+    width               : 64px;
+    margin              : 32px 0 16px 50%;
+    .translate(-50%, 0);
+}
+.pbp-logo {
+
+    width: 100%;
+    height: 100%;
+
+    // position: relative;
+    // height: 64px;
+    // width: 64px;
+    // display: block;
+
+    // .smaller {
+    //     width        : 2px;
+    //     height       : 2px;
+    //     background   : @pbp-pale-blue;
+    //     border-color : @pbp-bg-color;
+    //     border       : none;
+    //     z-index      : 2;
+    // }
+    // .larger {
+    //     width      : 100%;
+    //     height     : 100%;
+    //     border     : 6px solid lighten(@pbp-bg-color, 16%);
+    //     background : transparent;
+    //     z-index    : 1;
+    // }
+
+    // .circle,
+    // .square {
+    //     position      : absolute;
+    //     left          : 50%;
+    //     top           : 50%;
+    //     .translate(-50%, -50%);
+    //     .transition(0.309s);
+    // }
+
+    // .circle {
+    //     .smaller;
+    //     border-radius: 50%;
+    // }
+    // .square {
+    //     .larger;
+    // }
+
+    // &:hover {
+    //     .circle {
+    //         .larger;
+    //     }
+    //     .square {
+    //         .smaller;
+    //     }
+    // }
+
+}
+
+/*********************************************************************
+ *                              Header                               *
+ *********************************************************************/
+
+.page-header {
+    &, h1 {
+        margin-top: 0;
+    }
+}
+article h2,
+section h1 {
+    margin-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family     : @pbp-font-title;
+    color           : darken(@pbp-pale-blue, 16%);
+}
+
+/*********************************************************************
+ *                              Footer                               *
+ *********************************************************************
+.pbp-footer {
+    height: 60px;
+    argin-top: @grid-gutter-width;
+    background: url(/theme/images/background-navbar-white-noise.png);
+}
+
+/*********************************************************************
+ *                               Math                                *
+ *********************************************************************/
+
+figure {
+    margin: 1rem 0;
+    figcaption {
+        text-align : center;
+        font-size  : 0.8 * @pbp-base-font-size;
+        color      : darken(@pbp-pale-blue, 32%);
+
+        &::after { content: ")"; }
+        &::before { content: "("; }
+    }
+    .math {
+        padding : 0.5rem 0;
+        text-align: center;
+        &:first-child { padding-top: 3rem; }
+        &:last-child { padding-bottom: 3rem; }
+    }
+}
+
+/*********************************************************************
+ *                             Post info                             *
+ *********************************************************************/
+
+.pbp-post-info {
+    // background, border, text-color
+    .alert-variant(@gray-dark, @gray-lighter, @gray-lighter);
+    .fullwidth();
+    /* move post info to the bottom of the box */
+    margin-bottom: -@padding-large-vertical;
+}
+
+/*********************************************************************
+ *                          Post summaries                           *
+ *********************************************************************/
+
+// Don't let summary images get too big
+.summary {
+    img {
+        max-width: 512px;
+    }
+}
+
+/*********************************************************************
+ *                           Post comments                           *
+ *********************************************************************/
+
+#comments {
+    h2 { margin-top: 0; }
+}
+

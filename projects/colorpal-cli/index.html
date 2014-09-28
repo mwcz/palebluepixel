@@ -19,45 +19,25 @@
     </style>
     <![endif]-->
 
-            <link href="http://mwcz.org/theme/css/bootstrap.css?a38d327a" rel="stylesheet">
-            <link href="http://mwcz.org/theme/css/clayto-styles.css?cb8940d7" rel="stylesheet">
+            <link href="http://palebluepixel.org/theme/css/styles.min.css?0c248b20" rel="stylesheet">
 
     <!-- JavaScript plugins (requires jQuery) -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="http://palebluepixel.org/theme/js/jquery.min.js"></script>
 
-        <link href="http://mwcz.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="mwcz.org ATOM Feed"/>
-        <link href="http://mwcz.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
-              title="mwcz.org RSS Feed"/>
+        <link href="http://palebluepixel.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Pale Blue Pixel ATOM Feed"/>
+        <link href="http://palebluepixel.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
+              title="Pale Blue Pixel RSS Feed"/>
 
 
 </head>
 <body>
 <div class="container">
-    <nav class="clayto-navbar navbar navbar-default" role="navigation">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="http://mwcz.org" class="navbar-brand">mwcz.org</a>
-        </div>
-        <div class="collapse navbar-collapse navbar-responsive-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav">
-                        <li >
-                            <a href="http://mwcz.org/posts/">Posts</a>
-                        </li>
-                        <li><a href="http://mwcz.org/projects/">
-                            Projects
-                        </a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://mwcz.org/archives/"><i class="icon-th-list"></i>Archives</a></li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+    <nav class="pbp-navbar" role="navigation">
+        
+        <a href="/">
+            <img class="pbp-logo" src="http://palebluepixel.org/theme/images/logo.svg" />
+        </a>
     </nav>
 </div>
 <!-- /.navbar -->
@@ -118,9 +98,9 @@ project.</p>
 
 
 <p>To visualize what just happened, ColorPal turned this:</p>
-<p><img alt="hugepic.png" src="http://mwcz.org/static/images/projects/colorpal-cli/hugepic_small.png" title="hugepic.png" /></p>
+<p><img alt="hugepic.png" src="http://palebluepixel.org/static/images/projects/colorpal-cli/hugepic_small.png" title="hugepic.png" /></p>
 <p>Into this:</p>
-<p><img alt="hugepic.png colors" src="http://mwcz.org/static/images/projects/colorpal-cli/hugepic_colors.png" title="hugepic.png colors" /></p>
+<p><img alt="hugepic.png colors" src="http://palebluepixel.org/static/images/projects/colorpal-cli/hugepic_colors.png" title="hugepic.png colors" /></p>
 <p>Let's try again with a different image.</p>
 <div class="highlight"><pre><span class="n">node</span> <span class="n">cpal</span><span class="p">.</span><span class="n">js</span> <span class="n">images</span><span class="o">/</span><span class="n">issue3</span><span class="p">.</span><span class="n">png</span>
 
@@ -130,8 +110,8 @@ project.</p>
 
 <p>Only three colors this time?  This image has very few colors, so ColorPal
 decided to create a smaller palette.</p>
-<p><img alt="issue3.png" src="http://mwcz.org/static/images/projects/colorpal-cli/issue3_small.png" title="issue3.png" />
-<img alt="issue3.png colors" src="http://mwcz.org/static/images/projects/colorpal-cli/issue3_colors.png" title="issue3.png colors" /></p>
+<p><img alt="issue3.png" src="http://palebluepixel.org/static/images/projects/colorpal-cli/issue3_small.png" title="issue3.png" />
+<img alt="issue3.png colors" src="http://palebluepixel.org/static/images/projects/colorpal-cli/issue3_colors.png" title="issue3.png colors" /></p>
 <p>To generate a specific number of colors, use the <code>-s</code> option.</p>
 <div class="highlight"><pre><span class="cp"># generate 8 colors from the same image</span>
 <span class="n">node</span> <span class="n">cpal</span><span class="p">.</span><span class="n">js</span> <span class="o">-</span><span class="n">s</span> <span class="mi">8</span> <span class="n">images</span><span class="o">/</span><span class="n">issue3</span><span class="p">.</span><span class="n">png</span>
@@ -171,49 +151,13 @@ much appreciated. :)</p>
 <p>I've written other <a href="/tag/colorpal" title="Posts about ColorPal">posts about ColorPal</a>.</p>
         </div>
     </section>
-    <section class="comments" id="comments">
-        <h2>Comments</h2>
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-            var disqus_shortname = 'mwcz'; // required: replace example with your forum shortname
-            var disqus_identifier = 'projects/colorpal-cli';
-            var disqus_url = 'http://mwcz.org/projects/colorpal-cli/';
-
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function () {
-                var dsq = document.createElement('script');
-                dsq.type = 'text/javascript';
-                dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
-            Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-    </section>
 </main>
 
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="http://mwcz.org/theme/js/bootstrap.min.js"></script>
+<script src="http://palebluepixel.org/theme/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="http://mwcz.org/theme/js/respond.min.js"></script>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'mwcz'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function () {
-            var s = document.createElement('script');
-            s.async = true;
-            s.type = 'text/javascript';
-            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-        }());
-    </script>
+<script src="http://palebluepixel.org/theme/js/respond.min.js"></script>
 </body>
 </html>
