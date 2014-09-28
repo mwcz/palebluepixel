@@ -158,42 +158,36 @@ the image to 50% of the width. Expressions such as “30in + 40px” and “4 *
 drag-and-drop interface?  Me too!  Want to jam with the console cowboys in
 cyber-space?  Now you can.  Now &lt;em&gt;we&lt;/em&gt; can.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="ColorPal CLI logo" src="http://palebluepixel.org/static/images/023/colorpal_cli_logo.png" title="ColorPal CLI logo" /&gt;&lt;/p&gt;
-&lt;h2&gt;Demo!&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="n"&gt;cpal&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="n"&gt;hex&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="n"&gt;MyImage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt;
+&lt;h2 id="demo"&gt;Demo!&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;$ node cpal.js -f hex -s 8 MyImage.png
 
-&lt;span class="cp"&gt;#07070b&lt;/span&gt;
-&lt;span class="cp"&gt;#bac0c4&lt;/span&gt;
-&lt;span class="cp"&gt;#d1bd66&lt;/span&gt;
-&lt;span class="cp"&gt;#7e8899&lt;/span&gt;
-&lt;span class="cp"&gt;#696964&lt;/span&gt;
-&lt;span class="cp"&gt;#c4b441&lt;/span&gt;
-&lt;span class="cp"&gt;#65683e&lt;/span&gt;
-&lt;span class="cp"&gt;#394434&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h2&gt;Get it!&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;npm&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt; &lt;span class="n"&gt;canvas&lt;/span&gt; &lt;span class="n"&gt;requirejs&lt;/span&gt; &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;dependencies&lt;/span&gt;
-&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;mwcz&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;colorpal&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;cli&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
-&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;colorpal&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;cli&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h2&gt;Use it!&lt;/h2&gt;
+#07070b
+#bac0c4
+#d1bd66
+#7e8899
+#696964
+#c4b441
+#65683e
+#394434
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id="get-it"&gt;Get it!&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g canvas requirejs # install dependencies
+git clone git@github.com:mwcz/colorpal-cli.git
+cd colorpal-cli
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id="use-it"&gt;Use it!&lt;/h2&gt;
 &lt;p&gt;Visit the &lt;a href="/projects/colorpal-cli" title="ColorPal CLI project page"&gt;projcet page&lt;/a&gt; for the full documentation, or simply run the
 command without any arguments to see the help text.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Generate&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;color&lt;/span&gt; &lt;span class="n"&gt;palette&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;an&lt;/span&gt; &lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="nl"&gt;USAGE:&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="n"&gt;cpal&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt; &lt;span class="n"&gt;IMAGE&lt;/span&gt;
+&lt;pre&gt;&lt;code&gt;Generate a color palette from an image! :)
+USAGE: node cpal.js IMAGE
 
-&lt;span class="nl"&gt;Options:&lt;/span&gt;
-  &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;size&lt;/span&gt;     &lt;span class="n"&gt;Generate&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;fixed&lt;/span&gt; &lt;span class="n"&gt;size&lt;/span&gt; &lt;span class="n"&gt;palette&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;specify&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;colors&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+Options:
+  -s, --size     Generate a fixed size palette; you specify the number of colors you want.
 
-  &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;dynamic&lt;/span&gt;  &lt;span class="n"&gt;Generate&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;palette&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sized&lt;/span&gt; &lt;span class="n"&gt;dynamically&lt;/span&gt; &lt;span class="n"&gt;based&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;color&lt;/span&gt; &lt;span class="n"&gt;diversity&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;can&lt;/span&gt; &lt;span class="n"&gt;optionally&lt;/span&gt; &lt;span class="n"&gt;specify&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="mf"&gt;0.0&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;where&lt;/span&gt; &lt;span class="n"&gt;larger&lt;/span&gt; &lt;span class="n"&gt;numbers&lt;/span&gt; &lt;span class="n"&gt;increase&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;colors&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+  -d, --dynamic  Generate a palette, sized dynamically based on the color diversity of the image; you can optionally specify a number from 0.0 to 1.0, where larger numbers increase the number of colors.
 
-  &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;   &lt;span class="n"&gt;Specify&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt; &lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;  &lt;span class="n"&gt;Available&lt;/span&gt; &lt;span class="n"&gt;formats&lt;/span&gt; &lt;span class="n"&gt;are&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;scss&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sass&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;less&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;rgb&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;hex&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+  -f, --format   Specify the output format.  Available formats are: scss, sass, json, less, rgb, hex
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The code is &lt;a href="https://github.com/mwcz/colorpal-cli" title="ColorPal CLI code repository"&gt;available on GitHub&lt;/a&gt; and I welcome any feedback, bug reports,
 pull requests, etc.&lt;/p&gt;</summary><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category></entry><entry><title>ColorPal Output Update</title><link href="http://palebluepixel.org/2012/07/30/colorpal-output-update/" rel="alternate"></link><updated>2012-07-30T22:30:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-07-30:2012/07/30/colorpal-output-update/</id><summary type="html">&lt;p&gt;Hi pals.&lt;/p&gt;
 &lt;p&gt;This is a speedy post about a speedy update I made today to
@@ -247,16 +241,14 @@ with the new value.  Knockout calls this a "two-way data binding".  &lt;/p&gt;
 &lt;p&gt;I replaced the aforementioned color strings with calls to &lt;code&gt;cvm&lt;/code&gt;, which is a
 Knockout ViewModel (in this case, an object that holds all the color data).
 &lt;code&gt;cvm&lt;/code&gt; is populated with the SVG tiger's default colors.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;ko&lt;/span&gt;&lt;span class="nc"&gt;.observableArray&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt;
-    &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;hex&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;ko.observable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;#000000&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;},&lt;/span&gt;
-    &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;hex&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;ko.observable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;#323232&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;},&lt;/span&gt;
-    &lt;span class="c1"&gt;// .... many more ....&lt;/span&gt;
-    &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;hex&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;ko.observable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;#ff727f&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;},&lt;/span&gt;
-    &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;hex&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;ko.observable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;#ffffff&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;pre&gt;&lt;code&gt;ko.observableArray( [
+    { hex: ko.observable("#000000") },
+    { hex: ko.observable("#323232") },
+    // .... many more ....
+    { hex: ko.observable("#ff727f") },
+    { hex: ko.observable("#ffffff") }
+]);
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Play with the colors, then copy the URL and send your tiger to your friends.  :]&lt;/p&gt;
 &lt;p&gt;&lt;a href="/projects/canvas_indexed_color/#4c0000,#659900,#666666,#992600,#999999,#99cc32,#a51926,#a5264c,#b23259,#b26565,#b2b2b2,#cc3f4c,#cc7226,#cccccc,#e5668c,#e59999,#e5e5b2,B5E8E6,#ea8c4d,#ea8e51,#eb955c,#ec9961,#eea575,#efaa7c,#f1b288,#f2b892,#f3bf9c,#f4c6a8,#f5ccb0,#f8d8c4,#f8dcc8,#f9e2d3,#fae5d7,#fcf2eb,#ff727f,#ffffcc,#ffffff,#000000,#323232" title="Crazy tiger"&gt;Crazy tiger&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Please note, this is only a simulation of an indexed color palette.  It is not
@@ -289,7 +281,7 @@ palette.&lt;/p&gt;
 low-population, high-importance colors, like the one above, palettes will look
 &lt;em&gt;much&lt;/em&gt; better!&lt;/p&gt;
 &lt;p&gt;Technical discussion below.&lt;/p&gt;
-&lt;h1&gt;Why the 'median' in median-cut?&lt;/h1&gt;
+&lt;h1 id="why-the-median-in-median-cut"&gt;Why the 'median' in median-cut?&lt;/h1&gt;
 &lt;p&gt;Median Cut is an algorithm typically used to reduce the number of colors in an
 image.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="16 million colors versus 16 colors" src="/static/images/019/median-cut-example.png" /&gt;&lt;/p&gt;
@@ -333,7 +325,7 @@ high-population colors.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p&gt;The result?  Mean Cut!  Also: awesome color palettes.&lt;/p&gt;
-&lt;h2&gt;Interesting side-note on color distributions&lt;/h2&gt;
+&lt;h2 id="interesting-side-note-on-color-distributions"&gt;Interesting side-note on color distributions&lt;/h2&gt;
 &lt;p&gt;Interestingly, photographs of nature tend to have nice, close-to-normal color
 distributions.  A "normal distribution" is a formal term for a "bell curve".&lt;/p&gt;
 &lt;p&gt;Check out the red, green, and blue distributions for a photograph of a forest.&lt;/p&gt;
@@ -344,7 +336,7 @@ distributions.  A "normal distribution" is a formal term for a "bell curve".&lt;
 &lt;p&gt;&lt;img alt="City   red   pixel distribution" src="/static/images/019/city_r.png" /&gt;
 &lt;img alt="City   green pixel distribution" src="/static/images/019/city_g.png" /&gt;
 &lt;img alt="City   blue  pixel distribution" src="/static/images/019/city_b.png" /&gt;&lt;/p&gt;
-&lt;h2&gt;What's next for ColorPal?  Color spaces.&lt;/h2&gt;
+&lt;h2 id="whats-next-for-colorpal-color-spaces"&gt;What's next for ColorPal?  Color spaces.&lt;/h2&gt;
 &lt;p&gt;Mean-cut improves ColorPal dramatically for some images, but it's still not
 perfect.  Perfection probably won't be attainable, but there are still many
 ways to improve.&lt;/p&gt;
@@ -365,7 +357,7 @@ in 1931.&lt;/p&gt;
 and CIELAB.  XYZ will be first to the plate, since the RGB/XYZ formulas are
 the simplest.  Let me take this opportune moment to plug
 &lt;a href="http://www.easyrgb.com/index.php?X=MATH"&gt;EasyRGB.com&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;Lend a hand&lt;/h2&gt;
+&lt;h2 id="lend-a-hand"&gt;Lend a hand&lt;/h2&gt;
 &lt;p&gt;As I've mentioned before, ColorPal is in an early stage of development.  It
 needs testing in multiple browsers, and I'm very interested in hearing people's
 feedback.  Code development help is welcomed too.&lt;/p&gt;
@@ -375,120 +367,112 @@ feedback.  Code development help is welcomed too.&lt;/p&gt;
 &lt;a href="https://github.com/mwcz/median-cut-js"&gt;median-cut.js&lt;/a&gt;.&lt;/p&gt;</summary><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category></entry><entry><title>Toy javascript unit tester</title><link href="http://palebluepixel.org/2012/01/30/toy-javascript-unit-tester/" rel="alternate"></link><updated>2012-01-30T21:50:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-01-30:2012/01/30/toy-javascript-unit-tester/</id><summary type="html">&lt;p&gt;Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and had a minor epiphany.  In the back of my mind, there has always been a bit of uncertainty as to how unit testing frameworks work.  Deep in my brain I knew there was something I didn't understand, but I wasn't quite sure what.  I never gave it any conscious thought.&lt;/p&gt;
 &lt;p&gt;As a developer, I'd use a framework, write a bunch of &lt;code&gt;testBlahFoo&lt;/code&gt; functions, and the framework would magically run them.  &lt;/p&gt;
 &lt;p&gt;Then I realized... "Oh, it's just introspection."&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c1"&gt;// Create an object with three properties, all functions&lt;/span&gt;
-&lt;span class="k"&gt;var&lt;/span&gt; &lt;span class="n"&gt;myfuncs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nl"&gt;func1:&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="n"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;func it up&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;},&lt;/span&gt;
-    &lt;span class="nl"&gt;func2:&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="n"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;func&amp;#39;s old brother&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;},&lt;/span&gt;
-    &lt;span class="nl"&gt;func3:&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="n"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;bring back da func&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;pre&gt;&lt;code&gt;// Create an object with three properties, all functions
+var myfuncs = {
+    func1: function() { console.log("func it up"); },
+    func2: function() { console.log("func's old brother"); },
+    func3: function() { console.log("bring back da func"); }
+};
 
-&lt;span class="c1"&gt;// Run all functions attached to myfuncs&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;func&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;myfuncs&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="n"&gt;myfuncs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="n"&gt;func&lt;/span&gt; &lt;span class="p"&gt;]();&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
+// Run all functions attached to myfuncs
+for( func in myfuncs ) {
+    myfuncs[ func ]();
+}
 
-&lt;span class="c1"&gt;// Outputs:&lt;/span&gt;
-&lt;span class="c1"&gt;// &lt;/span&gt;
-&lt;span class="c1"&gt;// func it up&lt;/span&gt;
-&lt;span class="c1"&gt;// func&amp;#39;s old brother&lt;/span&gt;
-&lt;span class="c1"&gt;// bring back da func&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+// Outputs:
+// 
+// func it up
+// func's old brother
+// bring back da func
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;So simple.  Later, I wrote a very basic unit testing framework, purely as an educational excercise.&lt;/p&gt;
 &lt;p&gt;The guts are almost simple as the example above.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;JTestSuite&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;pre&gt;&lt;code&gt;var JTestSuite = function () {
 
-    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;version&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="nx"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    var version = 0.1,
+        jt,
 
-    &lt;span class="nx"&gt;init&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;callback&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="nx"&gt;jt&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;JTests&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-        &lt;span class="nx"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;init&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;callback&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="p"&gt;},&lt;/span&gt;
+    init = function( callback ) {
+        jt = JTests();
+        jt.init( callback );
+    },
 
-    &lt;span class="nx"&gt;run&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;fn&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-            &lt;span class="nx"&gt;prop&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    run = function() {
+        var fn,
+            prop;
 
-        &lt;span class="c1"&gt;// Run all functions that begin with &amp;quot;test&amp;quot;&lt;/span&gt;
-        &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;prop&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="k"&gt;typeof&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;prop&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;function&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;prop&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;slice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;test&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                    &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;prop&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-                &lt;span class="p"&gt;}&lt;/span&gt;
-            &lt;span class="p"&gt;}&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-    &lt;span class="p"&gt;};&lt;/span&gt;
+        // Run all functions that begin with "test"
+        for( prop in this ) {
+            if( typeof this[prop] === "function" ) {
+                if( prop.slice(0,4) === "test" ) {
+                    console.log( this[prop](jt) );
+                }
+            }
+        }
+    };
 
-    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt; &lt;span class="k"&gt;instanceof&lt;/span&gt; &lt;span class="nx"&gt;JTestSuite&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;JTestSuite&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    if( !(this instanceof JTestSuite) ) return new JTestSuite();
 
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="nx"&gt;init&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;init&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="nx"&gt;run&lt;/span&gt;  &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;run&lt;/span&gt;
-    &lt;span class="p"&gt;};&lt;/span&gt;
+    return {
+        init : init,
+        run  : run
+    };
 
-&lt;span class="p"&gt;};&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+};
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;In the &lt;code&gt;run&lt;/code&gt; function's loop, I first check that each property is a function before attemping to run it.  This avoids a &lt;code&gt;called_non_callable TypeError&lt;/code&gt;.  I then check that the name of the property begins with the string "test".  When dynamically calling functions, it's usually a good idea to call &lt;code&gt;obj.hasOwnProperty(propname)&lt;/code&gt; to ensure the property wasn't inherited from some unknown source (especially if the property you wanted to reference may have been &lt;code&gt;delete&lt;/code&gt;d, but a property with the same name is now surfacing from a parent object), but in this case I'd like to leave open the possibility for inherited Test Suites.&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;JTests&lt;/code&gt; object created in the &lt;code&gt;init&lt;/code&gt; function is a separate object that contains a bunch of assertions.  It looks something like this:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;JTests&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;pre&gt;&lt;code&gt;var JTests = function () {
 
-    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;version&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="nx"&gt;result_callback&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    var version = 0.1,
+        result_callback,
 
-    &lt;span class="nx"&gt;init&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;callback&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="nx"&gt;result_callback&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;callback&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
+    init = function( callback ) {
+        result_callback = callback;
+    }
 
-    &lt;span class="nx"&gt;assertTrue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="nx"&gt;result_callback&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;                                                                                                                                                                         
-            &lt;span class="nx"&gt;name&lt;/span&gt;   &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;assertTrue&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-            &lt;span class="nx"&gt;args&lt;/span&gt;   &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-            &lt;span class="nx"&gt;result&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;result&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="p"&gt;};&lt;/span&gt;
+    assertTrue = function( a ) {
+        var result = a === false;
+        result_callback( {                                                                                                                                                                         
+            name   : "assertTrue",
+            args   : [ a ],
+            result : result
+        } );
+    };
 
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="nx"&gt;assertTrue&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;assertTrue&lt;/span&gt;
-    &lt;span class="p"&gt;};&lt;/span&gt;
+    return {
+        assertTrue : assertTrue
+    };
 
-&lt;span class="p"&gt;};&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+};
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;...except with many more assertions. :)&lt;/p&gt;
 &lt;p&gt;Both &lt;code&gt;JTestSuite&lt;/code&gt; and &lt;code&gt;JTests&lt;/code&gt; use the &lt;a href="http://stackoverflow.com/a/5647397/215148"&gt;revealing module pattern&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;I have a lot of ideas for improvement, like &lt;a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself"&gt;DRY&lt;/a&gt;ing up the assertions, so the &lt;code&gt;{name,args,result}&lt;/code&gt; object doesn't have to be defined in each assertion.  But &lt;a href="http://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#JavaScript"&gt;many others&lt;/a&gt; have already done a great job, and I don't want to reinvent too many wheels.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c1"&gt;// Define a custom handler for the result&lt;/span&gt;
-&lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="n"&gt;test_callback&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="n"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;pre&gt;&lt;code&gt;// Define a custom handler for the result
+function test_callback( result ) {
+    console.log(result);
+}
 
-&lt;span class="c1"&gt;// Create a new JTestSuite object and initialize it with the callback&lt;/span&gt;
-&lt;span class="k"&gt;var&lt;/span&gt; &lt;span class="n"&gt;TestSuite&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;JTestSuite&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-&lt;span class="n"&gt;TestSuite&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;test_callback&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+// Create a new JTestSuite object and initialize it with the callback
+var TestSuite = new JTestSuite();
+TestSuite.init( test_callback );
 
-&lt;span class="c1"&gt;// Create some tests&lt;/span&gt;
-&lt;span class="n"&gt;TestSuite&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;testMath&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="n"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertEquals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="mh"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mh"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mh"&gt;4&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="p"&gt;};&lt;/span&gt;
+// Create some tests
+TestSuite.testMath = function(jt) {
+    jt.assertEquals( 2 + 2, 4 );
+};
 
-&lt;span class="n"&gt;TestSuite&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;testFalsy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="c1"&gt;// [], &amp;quot;&amp;quot;, and &amp;quot;0&amp;quot; all == false in javascript&lt;/span&gt;
-    &lt;span class="n"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertFalsy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="n"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertFalsy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="n"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertFalsy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;0&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="p"&gt;};&lt;/span&gt;
+TestSuite.testFalsy = function(jt) {
+    // [], "", and "0" all == false in javascript
+    jt.assertFalsy( [] );
+    jt.assertFalsy( "" );
+    jt.assertFalsy( "0" );
+};
 
-&lt;span class="c1"&gt;// Run all the tests&lt;/span&gt;
-&lt;span class="n"&gt;TestSuite&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+// Run all the tests
+TestSuite.run();
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The callback allows a user to determine how the results from the unit test should be processed or displayed.  Results could be printed to console.log, displayed on a page by adding them to the DOM, sent to a Web service with AJAX, or any arbitrary service with Web Sockets.&lt;/p&gt;
 &lt;p&gt;After writing this toy framework, and explaining it to a colleague, I was told that the Rails unit tester uses almost the exact same approach.  I'd wager a few bucks that JUnit uses the Reflection API's &lt;code&gt;Class.getMethods()&lt;/code&gt; to find and run all the methods added to a TestCase class.  Only a few bucks, though.&lt;/p&gt;</summary><category term="javascript"></category><category term="testing"></category></entry><entry><title>ColorPal Alpha</title><link href="http://palebluepixel.org/2012/01/16/colorpal-alpha/" rel="alternate"></link><updated>2012-01-16T22:15:50-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-01-16:2012/01/16/colorpal-alpha/</id><summary type="html">&lt;p&gt;Introducing ColorPal!&lt;/p&gt;
 &lt;p&gt;&lt;img alt="ColorPal screenshot" src="/static/images/015/ss.png" /&gt;&lt;/p&gt;
@@ -518,10 +502,8 @@ image.  In the case of the N9, it's
 &lt;p&gt;&lt;img alt="meescan" src="/static/images/011/meescan.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://fukuchi.org/works/qrencode/index.html.en"&gt;qrencode&lt;/a&gt; is an extremely
 easy to use encoder.  Pass it a string, it produces an image.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;qrencode&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;mypassword&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="n"&gt;mypass&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;pre&gt;&lt;code&gt;qrencode "mypassword" -o mypass.png
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;a href="http://keepassx.org"&gt;KeePassX&lt;/a&gt; is an excellent password manager.
 Unfortunately...&lt;/p&gt;
 &lt;p&gt;&lt;img alt="KeePassX not in N9" src="/static/images/011/keepass_not_in_n9.png" /&gt;&lt;/p&gt;
@@ -1045,7 +1027,7 @@ $(function() {
 });
 &lt;/script&gt;
 
-&lt;h1&gt;canvas pixarray&lt;/h1&gt;
+&lt;h1 id="canvas-pixarray"&gt;canvas pixarray&lt;/h1&gt;
 &lt;p&gt;After loading an image file into a &amp;lt;canvas&amp;gt; element, you can retrieve its
 pixels with &lt;code&gt;getImageData()&lt;/code&gt;.  The problem (not really a problem, more an
 inconvenience) is that the array of pixels is one-dimensional.  &lt;code&gt;getImageData&lt;/code&gt; returns pixels in the following format:&lt;/p&gt;
@@ -1159,17 +1141,15 @@ if( cnvs.getContext) { // Check for canvas support
 &lt;canvas id="c"&gt;Sorry, in order to view this demo you need a Web browser that supports HTML5 canvas.&lt;/canvas&gt;
 
 &lt;p&gt;It's a pretty simple script, and works by declaring this function which handles onclick and ondrag events from the canvas.  cnvs is the canvas element, and c is the canvas's 2D rendering context object.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;pixel&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="c1"&gt;// calculate the x and y coordinates of the cursor&lt;/span&gt;
-    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;imagesdata&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;c&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getImageData&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;new_color&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt; &lt;span class="nx"&gt;imagesdata.data&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                      &lt;span class="nx"&gt;imagesdata&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                      &lt;span class="nx"&gt;imagesdata&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="p"&gt;];&lt;/span&gt;
-    &lt;span class="nx"&gt;color&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;style&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;background&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;rgb(&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nx"&gt;new_color&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;pre&gt;&lt;code&gt;pixel = function(e) {
+    // calculate the x and y coordinates of the cursor
+    var imagesdata = c.getImageData( x, y, 1, 1 );
+    var new_color = [ imagesdata.data[0],
+                      imagesdata.data[1],
+                      imagesdata.data[2] ];
+    color.style.background = "rgb("+new_color+")";
+}
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;That's just a summary; the function actually does a little more than that.  Take a look at the source for this page if you're interested.&lt;/p&gt;</summary><category term="html5"></category><category term="canvas"></category><category term="color"></category><category term="colorpal"></category></entry><entry><title>Opcode patterns 70% finished</title><link href="http://palebluepixel.org/2011/10/13/opcode-patterns-70-finished/" rel="alternate"></link><updated>2011-10-13T22:27:50-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-10-13:2011/10/13/opcode-patterns-70-finished/</id><summary type="html">&lt;p&gt;genlut.py is really filling out.  It generates the LUT for all 68k opcodes (68000 only), and I'm about 70% done.  77 down, 34 to go.&lt;/p&gt;
 &lt;p&gt;The OPCODES dict defines the first two bytes of each opcode, both static bits and operands.  The operand strings act as keys into the PATTERNS struct, which contains all possible values for each operand.&lt;/p&gt;
 &lt;p&gt;The recursive function gen() is fed an opcode pattern which may contain operand strings as well as static bits.  Some operand patterns contain other operand patterns, so gen() keeps recursing until all operand patterns are gone.  Once a set of totally static bits has been created, those bits are added to INSTRUCTIONS, along with the name of the opcode.&lt;/p&gt;
@@ -1177,21 +1157,19 @@ if( cnvs.getContext) { // Check for canvas support
 &lt;p&gt;(This post was copied from my old &lt;a href="http://aejs.blogspot.com/"&gt;AEJS blog&lt;/a&gt;)&lt;/p&gt;</summary><category term="aejs"></category><category term="html5"></category><category term="javascript"></category><category term="amiga"></category></entry><entry><title>LUT</title><link href="http://palebluepixel.org/2011/09/22/lut/" rel="alternate"></link><updated>2011-09-22T22:27:50-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-09-22:2011/09/22/lut/</id><summary type="html">&lt;p&gt;Decoding is easy. Decoding requires a lot of typing. (I am starting to believe this is true of ever aspect of interpreted emulation...)&lt;/p&gt;
 &lt;p&gt;For the AEJS decoder, I am creating a &lt;a href="http://en.wikipedia.org/wiki/Lookup_table"&gt;look-up table&lt;/a&gt; with every possible pattern for each instruction. It was my first idea, but I initially discarded it as "wasteful and inelegant". Later, I accepted it as "really fast".&lt;/p&gt;
 &lt;p&gt;I'm generating a large set of bit patterns that map to 68k opcodes, like so:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="mo"&gt;0100101011111010&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;BGND&lt;/span&gt;
-&lt;span class="mo"&gt;0100101011111100&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;ILLEGAL&lt;/span&gt;
-&lt;span class="mo"&gt;0100111001110000&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;RESET&lt;/span&gt;
-&lt;span class="mo"&gt;0100111001110001&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;NOP&lt;/span&gt;
-&lt;span class="mo"&gt;0100111001110010&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;STOP&lt;/span&gt;
-&lt;span class="mo"&gt;0100111001110011&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;RTE&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;pre&gt;&lt;code&gt;0100101011111010 -&amp;gt; BGND
+0100101011111100 -&amp;gt; ILLEGAL
+0100111001110000 -&amp;gt; RESET
+0100111001110001 -&amp;gt; NOP
+0100111001110010 -&amp;gt; STOP
+0100111001110011 -&amp;gt; RTE
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The current code can be found &lt;a href="https://github.com/mwcz/AEJS/blob/master/src/genlut.py"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Yes, it's written in Python and yes, AEJS is a JavaScript project.  There's a reason.  I see two approaches to generating the LUT (look-up table).&lt;/p&gt;
-&lt;h2&gt;Generate the LUT on launch (dynamic)&lt;/h2&gt;
+&lt;h2 id="generate-the-lut-on-launch-dynamic"&gt;Generate the LUT on launch (dynamic)&lt;/h2&gt;
 &lt;p&gt;This has the advantage of being easier to debug.  It also might be easier if I ever expand the emulator to other chips, like the &lt;a href="http://en.wikipedia.org/wiki/Motorola_68020"&gt;68020&lt;/a&gt; or &lt;a href="http://en.wikipedia.org/wiki/Motorola_68030"&gt;68030&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;It currently takes about 0.466 seconds on my machine to generate ~12,000 patterns.  That means it should take less than 2.5s to generate the full LUT.&lt;/p&gt;
-&lt;h2&gt;Generate the LUT pre-launch (static)&lt;/h2&gt;
+&lt;h2 id="generate-the-lut-pre-launch-static"&gt;Generate the LUT pre-launch (static)&lt;/h2&gt;
 &lt;p&gt;This is what I'm currently working toward.  genlut.py is currently generating about 12,000 opcode bit patterns out of a max of I'm-not-sure-yet-but-slightly-less-than-65,536.&lt;/p&gt;
 &lt;p&gt;With this method, I would run genlut.py one final time, pipe the output into a static JS file, and regex the contents into a JS array.  The LUT would never have to be generated again, and would exist happily forever-after.&lt;/p&gt;
 &lt;p&gt;Cons: relies upon the LUT being 100% correct, as any errors would be hard to debug, and would require another run of genlut.py to fix.&lt;/p&gt;

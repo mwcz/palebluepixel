@@ -47,102 +47,84 @@
         <div class="entry-content">
             <p>ColorPal CLI is a command-line version of <a href="/projects/colorpal" title="ColorPal project page">ColorPal</a>, my HTML5 color palette
 generator.</p>
-<h2>Demo!</h2>
-<div class="highlight"><pre><span class="err">$</span> <span class="n">node</span> <span class="n">cpal</span><span class="p">.</span><span class="n">js</span> <span class="o">-</span><span class="n">f</span> <span class="n">hex</span> <span class="o">-</span><span class="n">s</span> <span class="mi">8</span> <span class="n">MyImage</span><span class="p">.</span><span class="n">png</span>
+<h2 id="demo">Demo!</h2>
+<pre><code>$ node cpal.js -f hex -s 8 MyImage.png
 
-<span class="cp">#07070b</span>
-<span class="cp">#bac0c4</span>
-<span class="cp">#d1bd66</span>
-<span class="cp">#7e8899</span>
-<span class="cp">#696964</span>
-<span class="cp">#c4b441</span>
-<span class="cp">#65683e</span>
-<span class="cp">#394434</span>
-</pre></div>
-
-
-<h2>Get it!</h2>
-<div class="highlight"><pre><span class="n">npm</span> <span class="n">install</span> <span class="o">-</span><span class="n">g</span> <span class="n">canvas</span> <span class="n">requirejs</span> <span class="err">#</span> <span class="n">install</span> <span class="n">dependencies</span>
-<span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="err">@</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">:</span><span class="n">mwcz</span><span class="o">/</span><span class="n">colorpal</span><span class="o">-</span><span class="n">cli</span><span class="p">.</span><span class="n">git</span>
-<span class="n">cd</span> <span class="n">colorpal</span><span class="o">-</span><span class="n">cli</span>
-</pre></div>
-
-
-<h2>Use it!</h2>
+#07070b
+#bac0c4
+#d1bd66
+#7e8899
+#696964
+#c4b441
+#65683e
+#394434
+</code></pre>
+<h2 id="get-it">Get it!</h2>
+<pre><code>npm install -g canvas requirejs # install dependencies
+git clone git@github.com:mwcz/colorpal-cli.git
+cd colorpal-cli
+</code></pre>
+<h2 id="use-it">Use it!</h2>
 <p>To display the help text, simply run the command without any arguments.</p>
-<div class="highlight"><pre><span class="n">node</span> <span class="n">cpal</span><span class="p">.</span><span class="n">js</span>
+<pre><code>node cpal.js
 
-<span class="n">Generate</span> <span class="n">a</span> <span class="n">color</span> <span class="n">palette</span> <span class="n">from</span> <span class="n">an</span> <span class="n">image</span><span class="o">!</span> <span class="o">:</span><span class="p">)</span>
-<span class="nl">USAGE:</span> <span class="n">node</span> <span class="n">cpal</span><span class="p">.</span><span class="n">js</span> <span class="n">IMAGE</span>
+Generate a color palette from an image! :)
+USAGE: node cpal.js IMAGE
 
-<span class="nl">Options:</span>
-  <span class="o">-</span><span class="n">s</span><span class="p">,</span> <span class="o">--</span><span class="n">size</span>     <span class="n">Generate</span> <span class="n">a</span> <span class="n">fixed</span> <span class="n">size</span> <span class="n">palette</span><span class="p">;</span> <span class="n">you</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">colors</span> <span class="n">you</span> <span class="n">want</span><span class="p">.</span>
+Options:
+  -s, --size     Generate a fixed size palette; you specify the number of colors you want.
 
-  <span class="o">-</span><span class="n">d</span><span class="p">,</span> <span class="o">--</span><span class="n">dynamic</span>  <span class="n">Generate</span> <span class="n">a</span> <span class="n">palette</span><span class="p">,</span> <span class="n">sized</span> <span class="n">dynamically</span> <span class="n">based</span> <span class="n">on</span> <span class="n">the</span> <span class="n">color</span> <span class="n">diversity</span> <span class="n">of</span> <span class="n">the</span> <span class="n">image</span><span class="p">;</span> <span class="n">you</span> <span class="n">can</span> <span class="n">optionally</span> <span class="n">specify</span> <span class="n">a</span> <span class="n">number</span> <span class="n">from</span> <span class="mf">0.0</span> <span class="n">to</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">where</span> <span class="n">larger</span> <span class="n">numbers</span> <span class="n">increase</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">colors</span><span class="p">.</span>
+  -d, --dynamic  Generate a palette, sized dynamically based on the color diversity of the image; you can optionally specify a number from 0.0 to 1.0, where larger numbers increase the number of colors.
 
-  <span class="o">-</span><span class="n">f</span><span class="p">,</span> <span class="o">--</span><span class="n">format</span>   <span class="n">Specify</span> <span class="n">the</span> <span class="n">output</span> <span class="n">format</span><span class="p">.</span>  <span class="n">Available</span> <span class="n">formats</span> <span class="n">are</span><span class="o">:</span> <span class="n">scss</span><span class="p">,</span> <span class="n">sass</span><span class="p">,</span> <span class="n">json</span><span class="p">,</span> <span class="n">less</span><span class="p">,</span> <span class="n">rgb</span><span class="p">,</span> <span class="n">hex</span>
-</pre></div>
-
-
+  -f, --format   Specify the output format.  Available formats are: scss, sass, json, less, rgb, hex
+</code></pre>
 <p>Let's dive right in by generating palettes from the sample images included with the
 project.</p>
-<div class="highlight"><pre><span class="n">node</span> <span class="n">cpal</span><span class="p">.</span><span class="n">js</span> <span class="n">images</span><span class="o">/</span><span class="n">hugepic</span><span class="p">.</span><span class="n">png</span>
+<pre><code>node cpal.js images/hugepic.png
 
-<span class="p">[</span> <span class="p">[</span> <span class="mi">144</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">178</span> <span class="p">],</span>
-  <span class="p">[</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">146</span> <span class="p">],</span>
-  <span class="p">[</span> <span class="mi">171</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">6</span> <span class="p">],</span>
-  <span class="p">[</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">85</span> <span class="p">],</span>
-  <span class="p">[</span> <span class="mi">238</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">120</span> <span class="p">],</span>
-  <span class="p">[</span> <span class="mi">219</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">32</span> <span class="p">]</span> <span class="p">]</span>
-</pre></div>
-
-
+[ [ 144, 43, 178 ],
+  [ 37, 10, 146 ],
+  [ 171, 52, 6 ],
+  [ 11, 3, 85 ],
+  [ 238, 72, 120 ],
+  [ 219, 66, 32 ] ]
+</code></pre>
 <p>To visualize what just happened, ColorPal turned this:</p>
 <p><img alt="hugepic.png" src="http://palebluepixel.org/static/images/projects/colorpal-cli/hugepic_small.png" title="hugepic.png" /></p>
 <p>Into this:</p>
 <p><img alt="hugepic.png colors" src="http://palebluepixel.org/static/images/projects/colorpal-cli/hugepic_colors.png" title="hugepic.png colors" /></p>
 <p>Let's try again with a different image.</p>
-<div class="highlight"><pre><span class="n">node</span> <span class="n">cpal</span><span class="p">.</span><span class="n">js</span> <span class="n">images</span><span class="o">/</span><span class="n">issue3</span><span class="p">.</span><span class="n">png</span>
+<pre><code>node cpal.js images/issue3.png
 
-<span class="p">[</span> <span class="p">[</span> <span class="mi">165</span><span class="p">,</span> <span class="mi">219</span><span class="p">,</span> <span class="mi">144</span> <span class="p">],</span> <span class="p">[</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">181</span><span class="p">,</span> <span class="mi">75</span> <span class="p">],</span> <span class="p">[</span> <span class="mi">254</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">203</span> <span class="p">]</span> <span class="p">]</span>
-</pre></div>
-
-
+[ [ 165, 219, 144 ], [ 58, 181, 75 ], [ 254, 250, 203 ] ]
+</code></pre>
 <p>Only three colors this time?  This image has very few colors, so ColorPal
 decided to create a smaller palette.</p>
 <p><img alt="issue3.png" src="http://palebluepixel.org/static/images/projects/colorpal-cli/issue3_small.png" title="issue3.png" />
 <img alt="issue3.png colors" src="http://palebluepixel.org/static/images/projects/colorpal-cli/issue3_colors.png" title="issue3.png colors" /></p>
 <p>To generate a specific number of colors, use the <code>-s</code> option.</p>
-<div class="highlight"><pre><span class="cp"># generate 8 colors from the same image</span>
-<span class="n">node</span> <span class="n">cpal</span><span class="p">.</span><span class="n">js</span> <span class="o">-</span><span class="n">s</span> <span class="mi">8</span> <span class="n">images</span><span class="o">/</span><span class="n">issue3</span><span class="p">.</span><span class="n">png</span>
-</pre></div>
-
-
+<pre><code># generate 8 colors from the same image
+node cpal.js -s 8 images/issue3.png
+</code></pre>
 <p>You can also specify the output format.  <code>json</code> is the default, but several others are available.</p>
-<h4>Hex output:</h4>
-<div class="highlight"><pre><span class="n">node</span> <span class="n">cpal</span><span class="p">.</span><span class="n">js</span> <span class="n">images</span><span class="o">/</span><span class="n">issue3</span><span class="p">.</span><span class="n">png</span> <span class="o">-</span><span class="n">f</span> <span class="n">hex</span>
-<span class="cp">#a5db90</span>
-<span class="cp">#3ab54b</span>
-<span class="cp">#fefacb</span>
-</pre></div>
-
-
-<h4>LESS output:</h4>
-<div class="highlight"><pre><span class="n">node</span> <span class="n">cpal</span><span class="p">.</span><span class="n">js</span> <span class="n">images</span><span class="o">/</span><span class="n">issue3</span><span class="p">.</span><span class="n">png</span> <span class="o">-</span><span class="n">f</span> <span class="n">less</span>
-<span class="err">@</span><span class="n">color0</span><span class="o">:</span> <span class="n">rgb</span><span class="p">(</span><span class="mi">165</span><span class="p">,</span><span class="mi">219</span><span class="p">,</span><span class="mi">144</span><span class="p">);</span>
-<span class="err">@</span><span class="n">color1</span><span class="o">:</span> <span class="n">rgb</span><span class="p">(</span><span class="mi">58</span><span class="p">,</span><span class="mi">181</span><span class="p">,</span><span class="mi">75</span><span class="p">);</span>
-<span class="err">@</span><span class="n">color2</span><span class="o">:</span> <span class="n">rgb</span><span class="p">(</span><span class="mi">254</span><span class="p">,</span><span class="mi">250</span><span class="p">,</span><span class="mi">203</span><span class="p">);</span>
-</pre></div>
-
-
-<h4>SCSS/SASS output:</h4>
-<div class="highlight"><pre><span class="n">node</span> <span class="n">cpal</span><span class="p">.</span><span class="n">js</span> <span class="n">images</span><span class="o">/</span><span class="n">issue3</span><span class="p">.</span><span class="n">png</span> <span class="o">-</span><span class="n">f</span> <span class="n">scss</span>
-<span class="err">$</span><span class="n">color0</span><span class="o">:</span> <span class="n">rgb</span><span class="p">(</span><span class="mi">165</span><span class="p">,</span><span class="mi">219</span><span class="p">,</span><span class="mi">144</span><span class="p">);</span>
-<span class="err">$</span><span class="n">color1</span><span class="o">:</span> <span class="n">rgb</span><span class="p">(</span><span class="mi">58</span><span class="p">,</span><span class="mi">181</span><span class="p">,</span><span class="mi">75</span><span class="p">);</span>
-<span class="err">$</span><span class="n">color2</span><span class="o">:</span> <span class="n">rgb</span><span class="p">(</span><span class="mi">254</span><span class="p">,</span><span class="mi">250</span><span class="p">,</span><span class="mi">203</span><span class="p">);</span>
-</pre></div>
-
-
+<h4 id="hex-output">Hex output:</h4>
+<pre><code>node cpal.js images/issue3.png -f hex
+#a5db90
+#3ab54b
+#fefacb
+</code></pre>
+<h4 id="less-output">LESS output:</h4>
+<pre><code>node cpal.js images/issue3.png -f less
+@color0: rgb(165,219,144);
+@color1: rgb(58,181,75);
+@color2: rgb(254,250,203);
+</code></pre>
+<h4 id="scsssass-output">SCSS/SASS output:</h4>
+<pre><code>node cpal.js images/issue3.png -f scss
+$color0: rgb(165,219,144);
+$color1: rgb(58,181,75);
+$color2: rgb(254,250,203);
+</code></pre>
 <p>ColorPal also has a <a href="http://colorpal.org/" title="colorpal.org">web interface</a> which you might find more convenient,
 depending on your needs  The command-line utility is very convenient if you
 need to automate palette generation for a large number of images.</p>
