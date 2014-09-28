@@ -55,7 +55,11 @@ BOOTSTRAP_THEME = 'flatly'
 #######################################################################
 
 PLUGIN_PATHS = [environ["HOME"] + '/workspace/pelican-plugins',]
-PLUGINS = ['neighbors', 'assets',]
+PLUGINS = ['neighbors', 'assets', 'extract_toc']
+
+# extract_toc plugin settings
+
+MD_EXTENSIONS = (['toc'])
 
 # assets plugin settings
 
