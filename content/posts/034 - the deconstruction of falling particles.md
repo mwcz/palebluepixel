@@ -3,6 +3,7 @@ Date: 2014-09-20
 Tags: programming, javascript, requirejs, amd, threejs, webgl, 3d, art, sparkcon, geekspark
 Image: /static/images/034/ring-explosion.png
 Summary: How DiMo was made.
+Status: draft
 
 
 # Players

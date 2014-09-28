@@ -58,6 +58,8 @@ is a branch of SparkCon.  I haven't been to any previous years' installations,
 but this year included digital visualizations projected onto a large wall, with
 three LED batons that visitors could use to control the visualizations.
 
+![ring animation in dimo]({filename}/static/images/033/ring-anim.gif)
+
 This (2014) was my first year as a volunteer, but it was a tremendously
 educational and *fun* experience, so I'll definitely be back next year.
 
