@@ -26,7 +26,7 @@ swoosh through the colored clouds.  &lt;/p&gt;
 the particles.  Orbits are formed, and tiny solar systems glow brilliantly.&lt;/p&gt;
 &lt;figure&gt;
 
-    &lt;iframe id="dimo-demo" src="//player.vimeo.com/video/107405612" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+    &lt;iframe id="dimo-demo" src="//player.vimeo.com/video/107405612" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 
     &lt;figcaption&gt;
         &lt;a href="http://vimeo.com/107405612"&gt;GeekSPARK: Digital Motion (DiMo) desktop demo&lt;/a&gt; from &lt;a href="http://vimeo.com/mwcz"&gt;mwc&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.
@@ -72,9 +72,6 @@ repo.&lt;/p&gt;
     function set_vimeo_iframe_height() {
         var ifr = document.getElementById('dimo-demo');
         ifr.height = ifr.offsetWidth / 1.497;
-        console.log(ifr);
-        console.log(ifr.offsetWidth);
-        console.log(ifr.offsetHeight);
     }
     document.addEventListener('DOMContentLoaded', set_vimeo_iframe_height);
     window.addEventListener('resize', set_vimeo_iframe_height);
