@@ -37,13 +37,12 @@ the particles.  Orbits are formed, and tiny solar systems glow brilliantly.
 
 <figure>
 
-    <iframe id="dimo-demo" src="//player.vimeo.com/video/106179566" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+    <iframe id="dimo-demo" src="//player.vimeo.com/video/107405612" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
     <figcaption>
-        <a href="http://vimeo.com/106179566">GeekSPARK: Digital Motion (DiMo) setup timelapse</a> from <a href="http://vimeo.com/mwcz">mwc</a> on <a href="https://vimeo.com">Vimeo</a>.
+        <a href="http://vimeo.com/107405612">GeekSPARK: Digital Motion (DiMo) desktop demo</a> from <a href="http://vimeo.com/mwcz">mwc</a> on <a href="https://vimeo.com">Vimeo</a>.
     </figcaption>
 </figure>
-
 
 She takes one step forward, hoping to participate.  Her footstep echoes down
 the length of the room.  The children turn at the sound, and the batons
