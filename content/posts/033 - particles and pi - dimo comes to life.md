@@ -37,7 +37,7 @@ the particles.  Orbits are formed, and tiny solar systems glow brilliantly.
 
 <figure>
 
-    <iframe id="dimo-demo" src="//player.vimeo.com/video/107405612" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <iframe id="dimo-demo" src="//player.vimeo.com/video/107405612" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
     <figcaption>
         <a href="http://vimeo.com/107405612">GeekSPARK: Digital Motion (DiMo) desktop demo</a> from <a href="http://vimeo.com/mwcz">mwc</a> on <a href="https://vimeo.com">Vimeo</a>.
@@ -101,9 +101,6 @@ repo.
     function set_vimeo_iframe_height() {
         var ifr = document.getElementById('dimo-demo');
         ifr.height = ifr.offsetWidth / 1.497;
-        console.log(ifr);
-        console.log(ifr.offsetWidth);
-        console.log(ifr.offsetHeight);
     }
     document.addEventListener('DOMContentLoaded', set_vimeo_iframe_height);
     window.addEventListener('resize', set_vimeo_iframe_height);
