@@ -100,7 +100,7 @@ repo.
 <script>
     function set_vimeo_iframe_height() {
         var ifr = document.getElementById('dimo-demo');
-        ifr.height = ifr.offsetWidth / 1.497;
+        ifr.height = ifr.offsetWidth / (1920/1080);
     }
     document.addEventListener('DOMContentLoaded', set_vimeo_iframe_height);
     window.addEventListener('resize', set_vimeo_iframe_height);
