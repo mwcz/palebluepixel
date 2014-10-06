@@ -3,12 +3,14 @@ Date: 2014-09-20
 Tags: programming, javascript, requirejs, amd, threejs, webgl, 3d, art, sparkcon, geekspark
 Image: /static/images/034/ring-explosion.png
 Summary: How DiMo was made.
-Status: draft
 
+Everything is made out of something else.
+
+[Live demo][demo]
 
 # Players
 
-Playres wave batons around and cool stuff happens!
+Players wave batons around and cool stuff happens!
 
 ## camera input
 
@@ -104,6 +106,8 @@ the result.
 
 ![image of the swaths of color][swath-colors]
 
+Yes!  Swaths of color, cycling through the spectrum like a rainbow.
+
 ### shaders (glsl essentials)
 
 # application concerns
@@ -121,7 +125,8 @@ function render_math() {
 $('.math').each(render_math);
 </script>
 
-[sinewaves]: {filename}/static/images/033/sine_waves.png
+[sinewaves]: {filename}/static/images/034/sine_waves.png
+[demo]: /static/projects/dimo/
 [sparkcon]: http://www.sparkcon.com/
 [geeksparkrh]: https://github.com/geekspark-rh/
 [renderer]: https://github.com/geekspark-rh/dimo-renderer

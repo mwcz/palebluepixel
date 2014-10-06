@@ -44,18 +44,14 @@ the particles.  Orbits are formed, and tiny solar systems glow brilliantly.
     </figcaption>
 </figure>
 
-She takes one step forward, hoping to participate.  Her footstep echoes down
-the length of the room.  The children turn at the sound, and the batons
-suddenly clatter to the ground.  They've vanished.  It's her turn now.
-
-
-
-# What's DiMo?
-
 DiMo (short for Digital Motion) is an annual exhibit at GeekSPARK, which itself
 is a branch of SparkCon.  I haven't been to any previous years' installations,
 but this year included digital visualizations projected onto a large wall, with
 three LED batons that visitors could use to control the visualizations.
+
+I created one of the three "exhibits".  Each exhibit used the same set of
+input: the coordinates of the colored batons.  My exhibit is a particle gravity
+simulation, created with [three.js][3js].  
 
 ![ring animation in dimo]({filename}/static/images/033/ring-anim.gif)
 
@@ -117,3 +113,4 @@ repo.
 [opencv]: http://opencv.org/
 [fishmarket]: https://www.facebook.com/ncsufishmarket
 [nextpost]: "{filename}034 - the deconstruction of falling particles.md"
+[3js]: http://threejs.org/
