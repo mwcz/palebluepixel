@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>    DiMo: The Deconstruction of Falling Stars
+</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <!--[if gte IE 9]
+    <style type="text/css">
+        .gradient {
+            filter: none;
+        }
+    </style>
+    <![endif]-->
+
+            <link href="http://palebluepixel.org/theme/css/styles.min.css?d979403b" rel="stylesheet">
+
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://palebluepixel.org/theme/js/jquery.min.js"></script>
+
+        <link href="http://palebluepixel.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Pale Blue Pixel ATOM Feed"/>
+        <link href="http://palebluepixel.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
+              title="Pale Blue Pixel RSS Feed"/>
+
+
+</head>
+<body>
+<div class="container">
+    <nav class="pbp-navbar" role="navigation">
+        
+        <a href="/">
+            <img class="pbp-logo" src="http://palebluepixel.org/theme/images/logo.svg" />
+        </a>
+    </nav>
+</div>
+<!-- /.navbar -->
+<main role="main" class="container">
+    <article>
+        <header class="page-header">
+            <h2>
+                DiMo: The Deconstruction of Falling Stars
+            </h2>
+        </header>
+        <div class="entry-content">
+            <nav class="toc"></nav>
+            <p>Imagine a solitary blue dot.</p>
+<p><img alt="small dot" src="http://palebluepixel.org/static/images/034/smalldot.png" /></p>
+<p>Unless you let your imagination run away with itself, this is going to be a
+pretty boring dot.  Now, imagine a second, larger dot (you can pick the color).</p>
+<p><img alt="small dot and large dot" src="http://palebluepixel.org/static/images/034/smalldot-largedot.png" /></p>
+<p>Red, nice choice!  The scene is now slightly more interesting, since now you've
+got two dots to think about.  You can ponder their positions, and relative
+sizes.  No motion though; still pretty boring!</p>
+<p>Pretty soon, your keen and restless mind will imagine that the larger dot
+exerts a gravitational pull on the smaller one.  The small dot begins moving
+towards the large one.  It's speed increases exponentially the closer it gets.
+Now an orbit can form.  Thanks, Newton!</p>
+<p><img alt="orbit" src="http://palebluepixel.org/static/images/034/orbit.gif" title="When I recorded this gif, it lined up *completely* by chance.  So lucky.  It would have been a PITA to try to line up the dot so the orbit looped smoothly!  There is a slight jump, but it's subtle." /></p>
+<p>The dot's orbit is reminiscent of a planet orbiting a star.  Neat.</p>
+<p>Wait, did you see that?  You just moved the big dot.  Look again!  Now there
+are thousands and thousands of tiny dots, each being accelerated toward the big
+dot!</p>
+<figure>
+
+    <iframe id="dimo-demo" src="//player.vimeo.com/video/108714486" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+    <figcaption>
+        <a href="http://vimeo.com/108714486">View on vimeo</a>
+    </figcaption>
+
+</figure>
+
+<p>Peculiar.  The multitude of dots starts to look <em>oddly</em> reminiscent of fluid
+sloshing around in a container.  Or a cloud of gas forming a star.  Weird, huh?
+Maybe they're the same thing!</p>
+<p>Now, before I ramble on any further, let your imagination take a rest while you
+try out the simulation!</p>
+<p><a class="btn btn-default btn-lg" href="/static/projects/dimo/">Launch live demo!</a></p>
+
+<p>A reasonably recent web browser required.  WebGL is required, which means
+Firefox 4+ or Chrome 9+.</p>
+<h2 id="the-premise">The Premise</h2>
+<p><strong>Players wave illuminated batons around and cool stuff happens!</strong></p>
+<p>See <a href="/2014/08/25/particles-and-p-dimo-comes-to-life/">DiMo Comes to Life</a> for a , not-at-all dramatized
+summary of DiMo.</p>
+<p>"DiMo" is a recurring interactive art exhibit at GeekSpark, which is held
+during SparkCon each year in Raleigh, NC.  This year, I created the particle
+gravity simulation visualization for DiMo.  There was also a visualization of
+Conway's Game of Life, and an original game where players eat doritos and spray
+soda at people who eat doritos.</p>
+<h2 id="particles">Particles</h2>
+<p>Particles swirl around and look cool.</p>
+<h3 id="gravity">Gravity</h3>
+<p>The gravity acceleration function has been rewritten a few times.  First with
+inlined calculations, then with ThreeJS vector objects, then with
+<a href="http://glmatrix.net/">glmatrix</a>, and then inlined again.  The inlined code performance wasn't
+distinguishable from the glmatrix implementation.  Since the glmatrix API,
+although a little unconventional, is excellent and much more readable, I stuck
+with it.</p>
+<p>ThreeJS's vector calculations, on the other hand, were awful.  Each function
+call created a new vector object.  Each acceleration calculation caused the
+creation of 12 vector objects.</p>
+<pre><code> 10,000 particles    *
+    60 fps           *
+    12 objects       *
+     3 player pieces
+---------------------------------
+ 21,600,000 new objects per second
+</code></pre>
+<p>Needless to say, the performance was terrible.  I then implemented the gravity
+equation using glmatrix's in-place vector operations.  glmatrix's vector
+functions insert their output into an existing vector instead of creating a new
+vector for each function call, like ThreeJS' API does.  The number of new
+objects created per second by the gravity equation dropped from <code>21,600,000</code>
+down to zero.</p>
+<p>glmatrix served quite well for a while, but in the end I improved performance
+even more by writing an inline gravity equation by hand.  Perhaps it was just
+function call overhead that was hurting performance.</p>
+<h3 id="coloring-methods">Coloring methods</h3>
+<p>Once the gravity function was implemented, some beautification was in order.</p>
+<p>Originally, each particle in dimo was randomly assigned either red, green, or
+blue.</p>
+<p><img alt="early dimo image, with randomly assigned colors" src="http://palebluepixel.org/static/images/034/random-colors.png" /></p>
+<p>The gravitational swirls may look kinda cool, but the colors are hectic.  This
+<em>isn't</em> one of those rare cases where randomness is beautiful.  It occurred to
+me that seeing big swaths of color through all the particles might look
+better.</p>
+<h4 id="cololololololors">Cololololololors</h4>
+<p>But what criteria should be used to decide what color each particle should
+receive?</p>
+<p>The simplest approach would be to color the particles based on their distance
+from the players, and that's essentially what I did.  The equations below use
+each particle's speed <em>and</em> acceleration to determine what color they should be
+assigned each frame.</p>
+<figure>
+    <div role="math">
+        n = \dfrac{2\pi \cdot \lvert\vec{v}\rvert \cdot \lvert\vec{a}\rvert}{a_{max}}
+    </div>
+    <div role="math">
+        \red{R(n)}   = \dfrac{\cos(n + 1.76714) + 1}{2}
+    </div>
+    <div role="math">
+        \green{G(n)} = \dfrac{\cos(n + 3.92699) + 1}{2}
+    </div>
+    <div role="math">
+        \blue{B(n)} = \dfrac{\cos(n + 5.89048) + 1}{2}
+    </div>
+</figure>
+
+<p><span role="math">\vec{a}</span> is the acceleration vector, and <span
+role="math">\vec{v}</span> is the velocity vector.  <span
+role="math">a_{max}</span> is the maximum magnitude an acceleration vector is
+allowed to have (configurable via the "max accel" parameter in the UI config
+panel).</p>
+<p>The range of <code>cos</code> and <code>sin</code> are <code>-1..1</code>, but the color values I needed are
+<code>0..1</code>.  The <code>+1</code> addition shifts the output into <code>0..2</code>, and the <code>/2</code> division
+scales it down to <code>0..1</code>.</p>
+<p>When graphed, they look like this.</p>
+<p><img alt="Roughly evenly-spaced sine waves" src="http://palebluepixel.org/static/images/034/sine_waves.png" /></p>
+<p>The cosine allows the colors to cycle repeatedly (R,G,B,R,G,B,...) as the
+input, <span role="math">n</span>, increases.  Here's the result.</p>
+<p><img alt="image of the swaths of color" src="http://palebluepixel.org/static/images/034/swath-colors.png" /></p>
+<p><em>Yes!</em>  Swaths of color, cycling through the spectrum like a rainbow.</p>
+<h4 id="the-grand-programmers-utopia-gpu">The Grand Programmers' Utopia (GPU)</h4>
+<p>After bumping up against my CPU's limits while implementing gravity, I was
+certain of one thing: I wanted to rely on the CPU as little as possible.</p>
+<p>I had a vague intuition that pixel shaders were the answer, since, hey, pixel
+shaders control the colors of pixels, right?  It turned out my understanding of
+shaders was pretty far off, but they <em>are</em> the right tool for the job.</p>
+<p>Shaders are small programs that run on your video card's processor(s) (the
+"GPU").  They come in a variety of languages, but shaders in WebGL are written
+in <a href="https://en.wikipedia.org/wiki/OpenGL_Shading_Language">GLSL</a>, a subset of C.</p>
+<p>Learning about and writing the shaders was the most fun and educational aspect
+of this project, mostly because graphics programming is uniquely rewarding
+among all types of programming.  Often an unanticipated quirk of an equation
+(or even a typo!) will result in a very cool surprise.  In short, "just trying
+stuff" pays off <em>far</em> more than in any other branch of programming.</p>
+<h4 id="more-than-colors">More than colors?</h4>
+<p>The more particles I add to the visualization, the better it looks.  1,000
+particles just look like a bunch of specks, but 100,000 particles start to look
+like clouds of swirling vapor.  Since the gravity calculations are so
+demanding, I wanted to offload as much work as possible onto the GPU.</p>
+<p>The Web doesn't currently have an API for doing general-purpose calculations on
+the GPU (although <a href="https://en.wikipedia.org/wiki/WebCL">WebCL</a> is in the pipeline).  It is possible to do
+limited calculations, by doing your calculation in a fragment shader and
+encoding the results, as pixel color values, into an in-memory texture (FBO).</p>
+<p>Sadly, a combination of limited time and inexperience prevented me from getting
+the gravity calculations onto the GPU.</p>
+<p>In 2012, Edouard Coulon created a similar particle gravity simulation called
+<a href="http://www.chromeexperiments.com/detail/gpu-particle-attractors/?f=">GPU Particle Attractors</a>, using the texture approach, and
+achieved 1,000,000 particles.  Tragically, his website is gone and I couldn't
+find his demo hosted anywhere else.  Edouard, if you read this, please reach
+out to me.  I'd love to learn from your work.</p>
+<p>In the end, I had to settle for 25,000 particles on my laptop.  For the art
+installation, we used a pretty beefy gaming rig, and I was able to bump it up
+to 50,000 (thanks Charan!).</p>
+<h3 id="whats-next">What's next?</h3>
+<p>Here's my wishlist for further improvements to DiMo.</p>
+<ul>
+<li>do gravity calculations on the GPU, which would enable either...<ul>
+<li>several orders of magnitude more particles, or</li>
+<li>particles can exert gravity on each other</li>
+</ul>
+</li>
+<li>add a calibration system which would determine how many particles a user's
+   computer is capable of rendering</li>
+<li>adjust the canvas sizing code, to allow DiMo to be easily embedded in other
+   pages (it currently full-screens itself)</li>
+<li>add even more configuration parameters and presets.  DiMo is capable of a
+   nice range of effects and patterns, but many of them require nitpicky
+   tweaking of sliders</li>
+</ul>
+<p>More likely, I'll use what I learned from DiMo on a super-secret future
+project.</p>
+<p><link rel="stylesheet" type="text/css" href="http://palebluepixel.org/static/js/033/katex/katex.min.css">
+<script src="http://palebluepixel.org/static/js/033/katex/katex.min.js"></script>
+<script>
+    function set_vimeo_iframe_height() {
+        var ifr = document.getElementById('dimo-demo');
+        ifr.height = ifr.offsetWidth / (1280/720);
+    }
+    document.addEventListener('DOMContentLoaded', set_vimeo_iframe_height);
+    window.addEventListener('resize', set_vimeo_iframe_height);
+    function render_math() {
+        katex.render(this.innerHTML, this);
+    }
+    $('[role=math]').each(render_math);
+</script></p>
+        </div>
+
+        <!-- /.entry-content -->
+    </article>
+
+</main>
+
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://palebluepixel.org/theme/js/respond.min.js"></script>
+</body>
+</html>

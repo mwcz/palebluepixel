@@ -9,6 +9,12 @@
 @import "bootswatch/@{bootswatch-theme}/variables";
 @import "bootswatch/@{bootswatch-theme}/panels";
 
+html {
+    // force scrollbar to avoid left-shift when navigating from a page without
+    // a scrollbar to a page with a scrollbar.
+    overflow-y: scroll;
+}
+
 body {
     font-family      : @pbp-font-body;
     font-size        : @pbp-base-font-size;
@@ -51,6 +57,72 @@ a {
         color: lighten(@pbp-pale-blue, 16%); 
     }
 
+}
+
+.btn {
+    .transition(0.1618s);
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn-default {
+    background-color : darken(@pbp-bg-color, 4%);
+    border-color     : lighten(@pbp-bg-color, 8%);
+
+    &:hover,
+    &:focus {
+        background-color : lighten(@pbp-bg-color, 0%);
+        border-color     : lighten(@pbp-bg-color, 8%);
+    }
+
+    &:active {
+        background-color : darken(@pbp-bg-color, 4%);
+        border-color     : lighten(@pbp-bg-color, 8%);
+    }
+}
+
+.pagination {
+
+    position: relative;
+    left: 50%;
+    .translate(-50%, 0);
+
+    & > li > a,
+    & > li > span {
+        background-color: darken(@pbp-bg-color, 4%);
+        border-width: 0;
+
+        &:hover {
+            background-color: lighten(@pbp-bg-color, 4%);
+        }
+    }
+
+    & > .active {
+        & > a,
+        & > span,
+        & > a:hover,
+        & > span:hover,
+        & > a:focus,
+        & > span:focus {
+            background-color: darken(@pbp-bg-color, 7%);
+            border-width: 0;
+        }
+    }
+
+    & > .disabled {
+        & > a,
+        & > span,
+        & > a:hover,
+        & > span:hover,
+        & > a:focus,
+        & > span:focus {
+            background-color: darken(@pbp-bg-color, 4%);
+            border-width: 0;
+            color: lighten(@pbp-bg-color, 4%);
+        }
+    }
 }
 
 p {
@@ -289,16 +361,14 @@ h1, h2, h3, h4, h5, h6 {
  *********************************************************************/
 
 figure {
-    margin: 1rem 0;
+    margin: 3rem 0;
     figcaption {
         text-align : center;
         font-size  : 0.8 * @pbp-base-font-size;
-        color      : darken(@pbp-pale-blue, 32%);
+        color      : darken(@pbp-pale-blue, 16%);
 
-        &::after { content: ")"; }
-        &::before { content: "("; }
     }
-    .math {
+    [role=math] {
         padding : 0.5rem 0;
         text-align: center;
         &:first-child { padding-top: 3rem; }

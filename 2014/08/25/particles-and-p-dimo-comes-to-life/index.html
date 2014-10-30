@@ -20,7 +20,7 @@
     </style>
     <![endif]-->
 
-            <link href="http://palebluepixel.org/theme/css/styles.min.css?0c248b20" rel="stylesheet">
+            <link href="http://palebluepixel.org/theme/css/styles.min.css?d979403b" rel="stylesheet">
 
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="http://palebluepixel.org/theme/js/jquery.min.js"></script>
@@ -81,42 +81,45 @@ the particles.  Orbits are formed, and tiny solar systems glow brilliantly.</p>
     <iframe id="dimo-demo" src="//player.vimeo.com/video/107405612" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
     <figcaption>
-        <a href="http://vimeo.com/107405612">GeekSPARK: Digital Motion (DiMo) desktop demo</a> from <a href="http://vimeo.com/mwcz">mwc</a> on <a href="https://vimeo.com">Vimeo</a>.
+        <a href="http://vimeo.com/107405612">GeekSPARK: Digital Motion (DiMo) desktop demo</a>
     </figcaption>
+
 </figure>
 
-<p>She takes one step forward, hoping to participate.  Her footstep echoes down
-the length of the room.  The children turn at the sound, and the batons
-suddenly clatter to the ground.  They've vanished.  It's her turn now.</p>
-<h1 id="whats-dimo">What's DiMo?</h1>
 <p>DiMo (short for Digital Motion) is an annual exhibit at GeekSPARK, which itself
 is a branch of SparkCon.  I haven't been to any previous years' installations,
 but this year included digital visualizations projected onto a large wall, with
 three LED batons that visitors could use to control the visualizations.</p>
-<p><img alt="ring animation in dimo" src="http://palebluepixel.org/static/images/033/ring-anim.gif" /></p>
+<p>I created one of the three "exhibits", the one you see in the video.  Each
+exhibit used the same set of input: the coordinates of the colored batons.  My
+exhibit is a particle gravity simulation, created with WebGL (<a href="http://threejs.org/">three.js</a>,
+specifically), <a href="https://en.wikipedia.org/wiki/OpenGL_Shading_Language">GLSL</a>, and many other tools.</p>
+<p>I'm working on a follow-up post, with technical information about the
+implementation.  <em>Update</em> it's 
+<a href="http://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/">here</a>!</p>
 <p>This (2014) was my first year as a volunteer, but it was a tremendously
 educational and <em>fun</em> experience, so I'll definitely be back next year.</p>
-<p>Detailed technical information about the implementation is availble
-in <a href="" title="{filename}034 - the deconstruction of falling particles.md">this follow-up post</a>.</p>
 <h1 id="thanks">Thanks</h1>
 <p>I've written mostly about my own contribution to DiMo here, because that's what
 I'm most familiar with, but in reality it was only a piece of the DiMo puzzle.
 There were two other visualizations, both of which used the lighted batons as
 input.  I would love to link to their creators' websites, but I'm still waiting
-on URLs.  Thanks to them!</p>
-<p>Ian Hands, for organizing the project, asking me to participate, and coming up
-with the whole damn idea.</p>
+on URLs.  Thanks to them, too!</p>
+<p>Ian Hands, for organizing the project, asking me to participate, writing the
+input server, and coming up with the whole idea.</p>
 <p>Ben Pritchett for code contributions to the renderer and the server, and for
 his work on two input sources (music BPM and a <em>brain machine</em>) which didn't
 make it into this year's exhibit, but we'll almost certainly use next year.</p>
 <p>Justis Peters is the lead coordinator of GeekSPARK, and, I think, the founder
 of DiMo, and none of this would have happened without him.</p>
 <p>Thanks also to the <a href="https://www.facebook.com/ncsufishmarket">Raleigh Fish Market Gallery</a> for providing us a
-venue and letting us paint the projection wall white.</p>
+venue and letting us paint the projection wall white, and to Yujin Kim for
+taking some awesome pictures.</p>
 <p>Most of all, thank you to the visitors who descended that dingy stairwell to
-see our exhibits!  Seeing their smiles as they waved batons, created swirling
-universes, was incredibly rewarding.  Everyone seemed to have fun.  One kid
-liked it so much he cried when it was time to leave.</p>
+see our exhibits!  Seeing their smiles as they waved the batons was incredibly
+rewarding.  Everyone seemed to have fun.  One kid liked it so much he cried
+when it was time to leave.</p>
+<p><img alt="ring animation in dimo" src="http://palebluepixel.org/static/images/033/ring-anim.gif" /></p>
 <p>You can find all the code at our <a href="https://github.com/geekspark-rh/">GitHub group</a>.  The
 visualization code described in this post is in the <a href="https://github.com/geekspark-rh/dimo-renderer">dimo-renderer</a>
 repo.</p>

@@ -20,7 +20,7 @@
     </style>
     <![endif]-->
 
-            <link href="http://palebluepixel.org/theme/css/styles.min.css?0c248b20" rel="stylesheet">
+            <link href="http://palebluepixel.org/theme/css/styles.min.css?d979403b" rel="stylesheet">
 
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="http://palebluepixel.org/theme/js/jquery.min.js"></script>
@@ -52,24 +52,44 @@
         <div class="entry-content">
             <nav class="toc"></nav>
             <p>I spent a bit of time this weekend building an RGB color cube for
-<a href="http://colorpal.org">ColorPal</a>, using <a href="http://threejs.org">Three.js</a>.</p>
-<p><a class="btn btn-primary btn-lg" href="/static/projects/colorpal_colorcube">Try it out!</a>
-or <a href="https://github.com/mwcz/mwcz/blob/master/content/static/projects/colorpal_colorcube/js/cp-colorcube.js">view the code</a>.</p>
-<p>If your web browser isn't WebGL-enabled, here's a screenshot:</p>
-<p><img alt="Screenshot of ColorCube" src="/static/images/025/screenshot.png" title="Screenshot of ColorCube" /></p>
+<a href="http://colorpal.org">ColorPal</a>, using <a href="http://threejs.org">Three.js</a>.  Drag and drop any image, and you'll see a
+cube with all the pixels of your image mapped into 3D space.</p>
+<p><a class="btn btn-default btn-lg"
+href="/static/projects/colorpal_colorcube">Launch live demo!</a> and <a href="https://github.com/mwcz/mwcz/blob/master/content/static/projects/colorpal_colorcube/js/cp-colorcube.js">view the
+code</a>.</p>
+<p>Your web browser must support WebGL, which at this point in history means a
+fairly recent Firefox or Chrome.  In case your web browser doesn't support
+WebGL, here's a video to enjoy while you download <a href="https://duckduckgo.com/l/?kh=-1&amp;uddg=https%3A%2F%2Fnightly.mozilla.org%2F">Firefox Nightly</a>. ;)</p>
+<figure>
+
+    <iframe id="colorcube-demo" src="//player.vimeo.com/video/108080970"
+    width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen
+    allowfullscreen></iframe>
+
+    <figcaption>
+        A <a href="http://vimeo.com/107405612">recording</a> of the colorcube
+        with a couple of sample images, including the <a
+        href="http://colorpal.org/" title="ColorPal, a color palette
+        generator">ColorPal</a> logo.
+    </figcaption>
+</figure>
+
 <p><a href="http://threejs.org">Three.js</a> has proven to be pretty fun.  The documentation is decent, but
 not comprehensive.  Some parts of the API are filled with "todo" notes instead
 of actual documentation.</p>
-<p>The omissions in the documentation are made up for by the extensive <a href="http://threejs.org/examples/">set of
-code examples</a>.</p>
+<p>Luckily, the omissions in the documentation are made up for by the extensive
+<a href="http://threejs.org/examples/">set of code examples</a>.  Any time I couldn't get what I needed from the API
+docs, I skimmed the examples until I found an existing scene that had the
+effect I needed.</p>
+<p>For this demo, drawing a cube was easy, and even populating it with dots was easy, but </p>
 <h1 id="colored-particles">Colored particles</h1>
 <p>The color cube uses a particle system to render 2D color points inside a 3D
-cube.  The hardest part of the implementation was figuring out how to allow
-each point to be a different color.</p>
+cube.</p>
 <p>Eventually I found a <a href="http://threejs.org/examples/#webgl_particles_billboards_colors">particle system demo with colors</a>, which held the key.</p>
 <p>By setting <code>vertexColors: true</code> on the <code>ParticleSystemMaterial</code>, Three.js will
 match each vertex in the <code>vertices</code> array with a color in the <code>colors</code> array.
 <code>vertices[1726]</code> will use <code>colors[1726]</code>, for example.</p>
+<p><img alt="Screenshot of ColorCube" src="/static/images/025/screenshot.png" title="Screenshot of ColorCube" /></p>
 <p>A vertex and a color are created for each pixel in the source image.  For the
 vertex, <span style="color: red;">red</span> values are mapped to the <code>X</code> axis,
 and similarly <span style="color: green">green</span> to <code>Y</code> and <span
@@ -77,9 +97,20 @@ style="color: blue">blue</span> to <code>Z</code>.</p>
 <h1 id="optimization">Optimization</h1>
 <p>Rendering a point for each pixel in a huge image image would be overkill, so
 I used the pixel culling already present in ColorPal to scale the number of
-points down to a more reasonable <code>16384</code>.</p>
+points down to a more reasonable 128<sup>2</sup>.  Increasing that number also
+increases the quality of the cube.  If you look closely in the video above, the
+ColorPal logo cube has gaps in it.  The better the quality, the longer the
+startup time, though.</p>
 <p>Now I'm racking my brain for an excuse to use WebGL at Red Hat...</p>
 <p>Any ideas?</p>
+<script>
+    function set_vimeo_iframe_height() {
+        var ifr = document.getElementById('colorcube-demo');
+        ifr.height = ifr.offsetWidth / (1280/720);
+    }
+    document.addEventListener('DOMContentLoaded', set_vimeo_iframe_height);
+    window.addEventListener('resize', set_vimeo_iframe_height);
+</script>
         </div>
 
         <!-- /.entry-content -->

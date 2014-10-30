@@ -3,11 +3,15 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-    <title>ColorPal!</title>
+    <title>ColorPal (colorcube version)!</title>
 
 <meta name="Generator" content="Vim/7.3">
 <meta name="plugin-version" content="vim7.3_v10">
 <meta name="syntax" content="html">
+<meta name="settings" content="use_css,pre_wrap,expand_tabs">
+
+<link href="http://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Ovo'       rel='stylesheet' type='text/css'>
 
 <link href="includes/farbtastic/farbtastic.css" rel="stylesheet" type="text/css"  />
 <link href="css/960_24_col.css"                 rel="stylesheet" type="text/css">
@@ -18,10 +22,12 @@
 
 <div class="container_24 container">
 
+    <img class="grid_3" src="images/colorpal_logo_cubed.jpg" alt="ColorPal (colorcube) logo" />
+
     <h1 class="grid_11">ColorPal!</h1>
 
     <p class="grid_10 instructions">
-        Want to generate a color palette from an image?
+        Want to generate a <b>color cube</b> from an image?
         <br />
         Drag your image into the box below. :)
     </p>
@@ -33,16 +39,6 @@
     <div data-bind = "template: { name: 'CP_PaletteTemplate' }"></div>
 
     <script id="CP_PaletteTemplate" type="text/html">
-        <div id="cp-swatches"
-             data-bind = "css: { off: !palette_created() }">
-        {{each(index,hex) colors}}
-        <div 
-            class="cp-border cp-swatch grid_3" 
-            id="cp-swatch-${index}" 
-            data-bind="style: { backgroundColor: hex }"> 
-        </div>
-        {{/each}}
-        </div> <!-- /#cp-swatches -->
     </script>
 
     <div data-bind="template: { name: 'CP_PaletteColorCodeTemplate' }"></div>

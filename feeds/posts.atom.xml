@@ -1,5 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Pale Blue Pixel</title><link href="http://palebluepixel.org/" rel="alternate"></link><link href="http://palebluepixel.org/feeds/posts.atom.xml" rel="self"></link><id>http://palebluepixel.org/</id><updated>2014-08-25T00:00:00-04:00</updated><entry><title>Particles and π - DiMo Comes to Life</title><link href="http://palebluepixel.org/2014/08/25/particles-and-p-dimo-comes-to-life/" rel="alternate"></link><updated>2014-08-25T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-08-25:2014/08/25/particles-and-p-dimo-comes-to-life/</id><summary type="html">&lt;p&gt;A player walks up Fayetteville St in Raleigh, North Carolina.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pale Blue Pixel</title><link href="http://palebluepixel.org/" rel="alternate"></link><link href="http://palebluepixel.org/feeds/posts.atom.xml" rel="self"></link><id>http://palebluepixel.org/</id><updated>2014-10-30T00:00:00-04:00</updated><entry><title>DiMo: The Deconstruction of Falling Stars</title><link href="http://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/" rel="alternate"></link><updated>2014-10-30T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-10-30:2014/10/30/dimo-the-deconstruction-of-falling-stars/</id><summary type="html">&lt;p&gt;Imagine a solitary blue dot.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="small dot" src="http://palebluepixel.org/static/images/034/smalldot.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Unless you let your imagination run away with itself, this is going to be a
+pretty boring dot.  Now, imagine a second, larger dot (you can pick the color).&lt;/p&gt;
+&lt;p&gt;&lt;img alt="small dot and large dot" src="http://palebluepixel.org/static/images/034/smalldot-largedot.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Red, nice choice!  The scene is now slightly more interesting, since now you've
+got two dots to think about.  You can ponder their positions, and relative
+sizes.  No motion though; still pretty boring!&lt;/p&gt;
+&lt;p&gt;Pretty soon, your keen and restless mind will imagine that the larger dot
+exerts a gravitational pull on the smaller one.  The small dot begins moving
+towards the large one.  It's speed increases exponentially the closer it gets.
+Now an orbit can form.  Thanks, Newton!&lt;/p&gt;
+&lt;p&gt;&lt;img alt="orbit" src="http://palebluepixel.org/static/images/034/orbit.gif" title="When I recorded this gif, it lined up *completely* by chance.  So lucky.  It would have been a PITA to try to line up the dot so the orbit looped smoothly!  There is a slight jump, but it's subtle." /&gt;&lt;/p&gt;
+&lt;p&gt;The dot's orbit is reminiscent of a planet orbiting a star.  Neat.&lt;/p&gt;
+&lt;p&gt;Wait, did you see that?  You just moved the big dot.  Look again!  Now there
+are thousands and thousands of tiny dots, each being accelerated toward the big
+dot!&lt;/p&gt;
+&lt;figure&gt;
+
+    &lt;iframe id="dimo-demo" src="//player.vimeo.com/video/108714486" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+    &lt;figcaption&gt;
+        &lt;a href="http://vimeo.com/108714486"&gt;View on vimeo&lt;/a&gt;
+    &lt;/figcaption&gt;
+
+&lt;/figure&gt;
+
+&lt;p&gt;Peculiar.  The multitude of dots starts to look &lt;em&gt;oddly&lt;/em&gt; reminiscent of fluid
+sloshing around in a container.  Or a cloud of gas forming a star.  Weird, huh?
+Maybe they're the same thing!&lt;/p&gt;
+&lt;p&gt;Now, before I ramble on any further, let your imagination take a rest while you
+try out the simulation!&lt;/p&gt;
+&lt;p&gt;&lt;a class="btn btn-default btn-lg" href="/static/projects/dimo/"&gt;Launch live demo!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A reasonably recent web browser required.  WebGL is required, which means
+Firefox 4+ or Chrome 9+.&lt;/p&gt;
+&lt;h2 id="the-premise"&gt;The Premise&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Players wave illuminated batons around and cool stuff happens!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;See &lt;a href="/2014/08/25/particles-and-p-dimo-comes-to-life/"&gt;DiMo Comes to Life&lt;/a&gt; for a , not-at-all dramatized
+summary of DiMo.&lt;/p&gt;
+&lt;p&gt;"DiMo" is a recurring interactive art exhibit at GeekSpark, which is held
+during SparkCon each year in Raleigh, NC.  This year, I created the particle
+gravity simulation visualization for DiMo.  There was also a visualization of
+Conway's Game of Life, and an original game where players eat doritos and spray
+soda at people who eat doritos.&lt;/p&gt;
+&lt;h2 id="particles"&gt;Particles&lt;/h2&gt;
+&lt;p&gt;Particles swirl around and look cool.&lt;/p&gt;
+&lt;h3 id="gravity"&gt;Gravity&lt;/h3&gt;
+&lt;p&gt;The gravity acceleration function has been rewritten a few times.  First with
+inlined calculations, then with ThreeJS vector objects, then with
+&lt;a href="http://glmatrix.net/"&gt;glmatrix&lt;/a&gt;, and then inlined again.  The inlined code performance wasn't
+distinguishable from the glmatrix implementation.  Since the glmatrix API,
+although a little unconventional, is excellent and much more readable, I stuck
+with it.&lt;/p&gt;
+&lt;p&gt;ThreeJS's vector calculations, on the other hand, were awful.  Each function
+call created a new vector object.  Each acceleration calculation caused the
+creation of 12 vector objects.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; 10,000 particles    *
+    60 fps           *
+    12 objects       *
+     3 player pieces
+---------------------------------
+ 21,600,000 new objects per second
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Needless to say, the performance was terrible.  I then implemented the gravity
+equation using glmatrix's in-place vector operations.  glmatrix's vector
+functions insert their output into an existing vector instead of creating a new
+vector for each function call, like ThreeJS' API does.  The number of new
+objects created per second by the gravity equation dropped from &lt;code&gt;21,600,000&lt;/code&gt;
+down to zero.&lt;/p&gt;
+&lt;p&gt;glmatrix served quite well for a while, but in the end I improved performance
+even more by writing an inline gravity equation by hand.  Perhaps it was just
+function call overhead that was hurting performance.&lt;/p&gt;
+&lt;h3 id="coloring-methods"&gt;Coloring methods&lt;/h3&gt;
+&lt;p&gt;Once the gravity function was implemented, some beautification was in order.&lt;/p&gt;
+&lt;p&gt;Originally, each particle in dimo was randomly assigned either red, green, or
+blue.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="early dimo image, with randomly assigned colors" src="http://palebluepixel.org/static/images/034/random-colors.png" /&gt;&lt;/p&gt;
+&lt;p&gt;The gravitational swirls may look kinda cool, but the colors are hectic.  This
+&lt;em&gt;isn't&lt;/em&gt; one of those rare cases where randomness is beautiful.  It occurred to
+me that seeing big swaths of color through all the particles might look
+better.&lt;/p&gt;
+&lt;h4 id="cololololololors"&gt;Cololololololors&lt;/h4&gt;
+&lt;p&gt;But what criteria should be used to decide what color each particle should
+receive?&lt;/p&gt;
+&lt;p&gt;The simplest approach would be to color the particles based on their distance
+from the players, and that's essentially what I did.  The equations below use
+each particle's speed &lt;em&gt;and&lt;/em&gt; acceleration to determine what color they should be
+assigned each frame.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;div role="math"&gt;
+        n = \dfrac{2\pi \cdot \lvert\vec{v}\rvert \cdot \lvert\vec{a}\rvert}{a_{max}}
+    &lt;/div&gt;
+    &lt;div role="math"&gt;
+        \red{R(n)}   = \dfrac{\cos(n + 1.76714) + 1}{2}
+    &lt;/div&gt;
+    &lt;div role="math"&gt;
+        \green{G(n)} = \dfrac{\cos(n + 3.92699) + 1}{2}
+    &lt;/div&gt;
+    &lt;div role="math"&gt;
+        \blue{B(n)} = \dfrac{\cos(n + 5.89048) + 1}{2}
+    &lt;/div&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;span role="math"&gt;\vec{a}&lt;/span&gt; is the acceleration vector, and &lt;span
+role="math"&gt;\vec{v}&lt;/span&gt; is the velocity vector.  &lt;span
+role="math"&gt;a_{max}&lt;/span&gt; is the maximum magnitude an acceleration vector is
+allowed to have (configurable via the "max accel" parameter in the UI config
+panel).&lt;/p&gt;
+&lt;p&gt;The range of &lt;code&gt;cos&lt;/code&gt; and &lt;code&gt;sin&lt;/code&gt; are &lt;code&gt;-1..1&lt;/code&gt;, but the color values I needed are
+&lt;code&gt;0..1&lt;/code&gt;.  The &lt;code&gt;+1&lt;/code&gt; addition shifts the output into &lt;code&gt;0..2&lt;/code&gt;, and the &lt;code&gt;/2&lt;/code&gt; division
+scales it down to &lt;code&gt;0..1&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;When graphed, they look like this.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Roughly evenly-spaced sine waves" src="http://palebluepixel.org/static/images/034/sine_waves.png" /&gt;&lt;/p&gt;
+&lt;p&gt;The cosine allows the colors to cycle repeatedly (R,G,B,R,G,B,...) as the
+input, &lt;span role="math"&gt;n&lt;/span&gt;, increases.  Here's the result.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image of the swaths of color" src="http://palebluepixel.org/static/images/034/swath-colors.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Yes!&lt;/em&gt;  Swaths of color, cycling through the spectrum like a rainbow.&lt;/p&gt;
+&lt;h4 id="the-grand-programmers-utopia-gpu"&gt;The Grand Programmers' Utopia (GPU)&lt;/h4&gt;
+&lt;p&gt;After bumping up against my CPU's limits while implementing gravity, I was
+certain of one thing: I wanted to rely on the CPU as little as possible.&lt;/p&gt;
+&lt;p&gt;I had a vague intuition that pixel shaders were the answer, since, hey, pixel
+shaders control the colors of pixels, right?  It turned out my understanding of
+shaders was pretty far off, but they &lt;em&gt;are&lt;/em&gt; the right tool for the job.&lt;/p&gt;
+&lt;p&gt;Shaders are small programs that run on your video card's processor(s) (the
+"GPU").  They come in a variety of languages, but shaders in WebGL are written
+in &lt;a href="https://en.wikipedia.org/wiki/OpenGL_Shading_Language"&gt;GLSL&lt;/a&gt;, a subset of C.&lt;/p&gt;
+&lt;p&gt;Learning about and writing the shaders was the most fun and educational aspect
+of this project, mostly because graphics programming is uniquely rewarding
+among all types of programming.  Often an unanticipated quirk of an equation
+(or even a typo!) will result in a very cool surprise.  In short, "just trying
+stuff" pays off &lt;em&gt;far&lt;/em&gt; more than in any other branch of programming.&lt;/p&gt;
+&lt;h4 id="more-than-colors"&gt;More than colors?&lt;/h4&gt;
+&lt;p&gt;The more particles I add to the visualization, the better it looks.  1,000
+particles just look like a bunch of specks, but 100,000 particles start to look
+like clouds of swirling vapor.  Since the gravity calculations are so
+demanding, I wanted to offload as much work as possible onto the GPU.&lt;/p&gt;
+&lt;p&gt;The Web doesn't currently have an API for doing general-purpose calculations on
+the GPU (although &lt;a href="https://en.wikipedia.org/wiki/WebCL"&gt;WebCL&lt;/a&gt; is in the pipeline).  It is possible to do
+limited calculations, by doing your calculation in a fragment shader and
+encoding the results, as pixel color values, into an in-memory texture (FBO).&lt;/p&gt;
+&lt;p&gt;Sadly, a combination of limited time and inexperience prevented me from getting
+the gravity calculations onto the GPU.&lt;/p&gt;
+&lt;p&gt;In 2012, Edouard Coulon created a similar particle gravity simulation called
+&lt;a href="http://www.chromeexperiments.com/detail/gpu-particle-attractors/?f="&gt;GPU Particle Attractors&lt;/a&gt;, using the texture approach, and
+achieved 1,000,000 particles.  Tragically, his website is gone and I couldn't
+find his demo hosted anywhere else.  Edouard, if you read this, please reach
+out to me.  I'd love to learn from your work.&lt;/p&gt;
+&lt;p&gt;In the end, I had to settle for 25,000 particles on my laptop.  For the art
+installation, we used a pretty beefy gaming rig, and I was able to bump it up
+to 50,000 (thanks Charan!).&lt;/p&gt;
+&lt;h3 id="whats-next"&gt;What's next?&lt;/h3&gt;
+&lt;p&gt;Here's my wishlist for further improvements to DiMo.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;do gravity calculations on the GPU, which would enable either...&lt;ul&gt;
+&lt;li&gt;several orders of magnitude more particles, or&lt;/li&gt;
+&lt;li&gt;particles can exert gravity on each other&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;add a calibration system which would determine how many particles a user's
+   computer is capable of rendering&lt;/li&gt;
+&lt;li&gt;adjust the canvas sizing code, to allow DiMo to be easily embedded in other
+   pages (it currently full-screens itself)&lt;/li&gt;
+&lt;li&gt;add even more configuration parameters and presets.  DiMo is capable of a
+   nice range of effects and patterns, but many of them require nitpicky
+   tweaking of sliders&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;More likely, I'll use what I learned from DiMo on a super-secret future
+project.&lt;/p&gt;
+&lt;p&gt;&lt;link rel="stylesheet" type="text/css" href="http://palebluepixel.org/static/js/033/katex/katex.min.css"&gt;
+&lt;script src="http://palebluepixel.org/static/js/033/katex/katex.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+    function set_vimeo_iframe_height() {
+        var ifr = document.getElementById('dimo-demo');
+        ifr.height = ifr.offsetWidth / (1280/720);
+    }
+    document.addEventListener('DOMContentLoaded', set_vimeo_iframe_height);
+    window.addEventListener('resize', set_vimeo_iframe_height);
+    function render_math() {
+        katex.render(this.innerHTML, this);
+    }
+    $('[role=math]').each(render_math);
+&lt;/script&gt;&lt;/p&gt;</summary><category term="programming"></category><category term="javascript"></category><category term="requirejs"></category><category term="amd"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category></entry><entry><title>Particles and π - DiMo Comes to Life</title><link href="http://palebluepixel.org/2014/08/25/particles-and-p-dimo-comes-to-life/" rel="alternate"></link><updated>2014-08-25T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-08-25:2014/08/25/particles-and-p-dimo-comes-to-life/</id><summary type="html">&lt;p&gt;A player walks up Fayetteville St in Raleigh, North Carolina.
 &lt;a href="http://www.sparkcon.com/"&gt;SparkCon&lt;/a&gt; has begun, and dozens of artists are strewn along the
 street, hard at work creating elaborate chalk art on the asphalt.  A light rain
 is falling, and some artists are holding umbrellas over their work, some have
@@ -29,42 +211,45 @@ the particles.  Orbits are formed, and tiny solar systems glow brilliantly.&lt;/
     &lt;iframe id="dimo-demo" src="//player.vimeo.com/video/107405612" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 
     &lt;figcaption&gt;
-        &lt;a href="http://vimeo.com/107405612"&gt;GeekSPARK: Digital Motion (DiMo) desktop demo&lt;/a&gt; from &lt;a href="http://vimeo.com/mwcz"&gt;mwc&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.
+        &lt;a href="http://vimeo.com/107405612"&gt;GeekSPARK: Digital Motion (DiMo) desktop demo&lt;/a&gt;
     &lt;/figcaption&gt;
+
 &lt;/figure&gt;
 
-&lt;p&gt;She takes one step forward, hoping to participate.  Her footstep echoes down
-the length of the room.  The children turn at the sound, and the batons
-suddenly clatter to the ground.  They've vanished.  It's her turn now.&lt;/p&gt;
-&lt;h1 id="whats-dimo"&gt;What's DiMo?&lt;/h1&gt;
 &lt;p&gt;DiMo (short for Digital Motion) is an annual exhibit at GeekSPARK, which itself
 is a branch of SparkCon.  I haven't been to any previous years' installations,
 but this year included digital visualizations projected onto a large wall, with
 three LED batons that visitors could use to control the visualizations.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ring animation in dimo" src="http://palebluepixel.org/static/images/033/ring-anim.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;I created one of the three "exhibits", the one you see in the video.  Each
+exhibit used the same set of input: the coordinates of the colored batons.  My
+exhibit is a particle gravity simulation, created with WebGL (&lt;a href="http://threejs.org/"&gt;three.js&lt;/a&gt;,
+specifically), &lt;a href="https://en.wikipedia.org/wiki/OpenGL_Shading_Language"&gt;GLSL&lt;/a&gt;, and many other tools.&lt;/p&gt;
+&lt;p&gt;I'm working on a follow-up post, with technical information about the
+implementation.  &lt;em&gt;Update&lt;/em&gt; it's 
+&lt;a href="http://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/"&gt;here&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;This (2014) was my first year as a volunteer, but it was a tremendously
 educational and &lt;em&gt;fun&lt;/em&gt; experience, so I'll definitely be back next year.&lt;/p&gt;
-&lt;p&gt;Detailed technical information about the implementation is availble
-in &lt;a href="" title="{filename}034 - the deconstruction of falling particles.md"&gt;this follow-up post&lt;/a&gt;.&lt;/p&gt;
 &lt;h1 id="thanks"&gt;Thanks&lt;/h1&gt;
 &lt;p&gt;I've written mostly about my own contribution to DiMo here, because that's what
 I'm most familiar with, but in reality it was only a piece of the DiMo puzzle.
 There were two other visualizations, both of which used the lighted batons as
 input.  I would love to link to their creators' websites, but I'm still waiting
-on URLs.  Thanks to them!&lt;/p&gt;
-&lt;p&gt;Ian Hands, for organizing the project, asking me to participate, and coming up
-with the whole damn idea.&lt;/p&gt;
+on URLs.  Thanks to them, too!&lt;/p&gt;
+&lt;p&gt;Ian Hands, for organizing the project, asking me to participate, writing the
+input server, and coming up with the whole idea.&lt;/p&gt;
 &lt;p&gt;Ben Pritchett for code contributions to the renderer and the server, and for
 his work on two input sources (music BPM and a &lt;em&gt;brain machine&lt;/em&gt;) which didn't
 make it into this year's exhibit, but we'll almost certainly use next year.&lt;/p&gt;
 &lt;p&gt;Justis Peters is the lead coordinator of GeekSPARK, and, I think, the founder
 of DiMo, and none of this would have happened without him.&lt;/p&gt;
 &lt;p&gt;Thanks also to the &lt;a href="https://www.facebook.com/ncsufishmarket"&gt;Raleigh Fish Market Gallery&lt;/a&gt; for providing us a
-venue and letting us paint the projection wall white.&lt;/p&gt;
+venue and letting us paint the projection wall white, and to Yujin Kim for
+taking some awesome pictures.&lt;/p&gt;
 &lt;p&gt;Most of all, thank you to the visitors who descended that dingy stairwell to
-see our exhibits!  Seeing their smiles as they waved batons, created swirling
-universes, was incredibly rewarding.  Everyone seemed to have fun.  One kid
-liked it so much he cried when it was time to leave.&lt;/p&gt;
+see our exhibits!  Seeing their smiles as they waved the batons was incredibly
+rewarding.  Everyone seemed to have fun.  One kid liked it so much he cried
+when it was time to leave.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ring animation in dimo" src="http://palebluepixel.org/static/images/033/ring-anim.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;You can find all the code at our &lt;a href="https://github.com/geekspark-rh/"&gt;GitHub group&lt;/a&gt;.  The
 visualization code described in this post is in the &lt;a href="https://github.com/geekspark-rh/dimo-renderer"&gt;dimo-renderer&lt;/a&gt;
 repo.&lt;/p&gt;
@@ -76,24 +261,44 @@ repo.&lt;/p&gt;
     document.addEventListener('DOMContentLoaded', set_vimeo_iframe_height);
     window.addEventListener('resize', set_vimeo_iframe_height);
 &lt;/script&gt;</summary><category term="programming"></category><category term="javascript"></category><category term="requirejs"></category><category term="amd"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category></entry><entry><title>RGB WebGL Color Cube</title><link href="http://palebluepixel.org/2014/03/23/rgb-webgl-color-cube/" rel="alternate"></link><updated>2014-03-23T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-03-23:2014/03/23/rgb-webgl-color-cube/</id><summary type="html">&lt;p&gt;I spent a bit of time this weekend building an RGB color cube for
-&lt;a href="http://colorpal.org"&gt;ColorPal&lt;/a&gt;, using &lt;a href="http://threejs.org"&gt;Three.js&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a class="btn btn-primary btn-lg" href="/static/projects/colorpal_colorcube"&gt;Try it out!&lt;/a&gt;
-or &lt;a href="https://github.com/mwcz/mwcz/blob/master/content/static/projects/colorpal_colorcube/js/cp-colorcube.js"&gt;view the code&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;If your web browser isn't WebGL-enabled, here's a screenshot:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Screenshot of ColorCube" src="/static/images/025/screenshot.png" title="Screenshot of ColorCube" /&gt;&lt;/p&gt;
+&lt;a href="http://colorpal.org"&gt;ColorPal&lt;/a&gt;, using &lt;a href="http://threejs.org"&gt;Three.js&lt;/a&gt;.  Drag and drop any image, and you'll see a
+cube with all the pixels of your image mapped into 3D space.&lt;/p&gt;
+&lt;p&gt;&lt;a class="btn btn-default btn-lg"
+href="/static/projects/colorpal_colorcube"&gt;Launch live demo!&lt;/a&gt; and &lt;a href="https://github.com/mwcz/mwcz/blob/master/content/static/projects/colorpal_colorcube/js/cp-colorcube.js"&gt;view the
+code&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Your web browser must support WebGL, which at this point in history means a
+fairly recent Firefox or Chrome.  In case your web browser doesn't support
+WebGL, here's a video to enjoy while you download &lt;a href="https://duckduckgo.com/l/?kh=-1&amp;amp;uddg=https%3A%2F%2Fnightly.mozilla.org%2F"&gt;Firefox Nightly&lt;/a&gt;. ;)&lt;/p&gt;
+&lt;figure&gt;
+
+    &lt;iframe id="colorcube-demo" src="//player.vimeo.com/video/108080970"
+    width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen
+    allowfullscreen&gt;&lt;/iframe&gt;
+
+    &lt;figcaption&gt;
+        A &lt;a href="http://vimeo.com/107405612"&gt;recording&lt;/a&gt; of the colorcube
+        with a couple of sample images, including the &lt;a
+        href="http://colorpal.org/" title="ColorPal, a color palette
+        generator"&gt;ColorPal&lt;/a&gt; logo.
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
 &lt;p&gt;&lt;a href="http://threejs.org"&gt;Three.js&lt;/a&gt; has proven to be pretty fun.  The documentation is decent, but
 not comprehensive.  Some parts of the API are filled with "todo" notes instead
 of actual documentation.&lt;/p&gt;
-&lt;p&gt;The omissions in the documentation are made up for by the extensive &lt;a href="http://threejs.org/examples/"&gt;set of
-code examples&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Luckily, the omissions in the documentation are made up for by the extensive
+&lt;a href="http://threejs.org/examples/"&gt;set of code examples&lt;/a&gt;.  Any time I couldn't get what I needed from the API
+docs, I skimmed the examples until I found an existing scene that had the
+effect I needed.&lt;/p&gt;
+&lt;p&gt;For this demo, drawing a cube was easy, and even populating it with dots was easy, but &lt;/p&gt;
 &lt;h1 id="colored-particles"&gt;Colored particles&lt;/h1&gt;
 &lt;p&gt;The color cube uses a particle system to render 2D color points inside a 3D
-cube.  The hardest part of the implementation was figuring out how to allow
-each point to be a different color.&lt;/p&gt;
+cube.&lt;/p&gt;
 &lt;p&gt;Eventually I found a &lt;a href="http://threejs.org/examples/#webgl_particles_billboards_colors"&gt;particle system demo with colors&lt;/a&gt;, which held the key.&lt;/p&gt;
 &lt;p&gt;By setting &lt;code&gt;vertexColors: true&lt;/code&gt; on the &lt;code&gt;ParticleSystemMaterial&lt;/code&gt;, Three.js will
 match each vertex in the &lt;code&gt;vertices&lt;/code&gt; array with a color in the &lt;code&gt;colors&lt;/code&gt; array.
 &lt;code&gt;vertices[1726]&lt;/code&gt; will use &lt;code&gt;colors[1726]&lt;/code&gt;, for example.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Screenshot of ColorCube" src="/static/images/025/screenshot.png" title="Screenshot of ColorCube" /&gt;&lt;/p&gt;
 &lt;p&gt;A vertex and a color are created for each pixel in the source image.  For the
 vertex, &lt;span style="color: red;"&gt;red&lt;/span&gt; values are mapped to the &lt;code&gt;X&lt;/code&gt; axis,
 and similarly &lt;span style="color: green"&gt;green&lt;/span&gt; to &lt;code&gt;Y&lt;/code&gt; and &lt;span
@@ -101,9 +306,20 @@ style="color: blue"&gt;blue&lt;/span&gt; to &lt;code&gt;Z&lt;/code&gt;.&lt;/p&gt
 &lt;h1 id="optimization"&gt;Optimization&lt;/h1&gt;
 &lt;p&gt;Rendering a point for each pixel in a huge image image would be overkill, so
 I used the pixel culling already present in ColorPal to scale the number of
-points down to a more reasonable &lt;code&gt;16384&lt;/code&gt;.&lt;/p&gt;
+points down to a more reasonable 128&lt;sup&gt;2&lt;/sup&gt;.  Increasing that number also
+increases the quality of the cube.  If you look closely in the video above, the
+ColorPal logo cube has gaps in it.  The better the quality, the longer the
+startup time, though.&lt;/p&gt;
 &lt;p&gt;Now I'm racking my brain for an excuse to use WebGL at Red Hat...&lt;/p&gt;
-&lt;p&gt;Any ideas?&lt;/p&gt;</summary><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="webgl"></category></entry><entry><title>Introducing Drop64, ezpz data URI generator</title><link href="http://palebluepixel.org/2014/02/25/introducing-drop64-ezpz-data-uri-generator/" rel="alternate"></link><updated>2014-02-25T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-02-25:2014/02/25/introducing-drop64-ezpz-data-uri-generator/</id><summary type="html">&lt;p&gt;A few weeks ago, a &lt;a href="http://www.heyokadesign.com/"&gt;coworker&lt;/a&gt; of mine ran into some font issues.  Firefox
+&lt;p&gt;Any ideas?&lt;/p&gt;
+&lt;script&gt;
+    function set_vimeo_iframe_height() {
+        var ifr = document.getElementById('colorcube-demo');
+        ifr.height = ifr.offsetWidth / (1280/720);
+    }
+    document.addEventListener('DOMContentLoaded', set_vimeo_iframe_height);
+    window.addEventListener('resize', set_vimeo_iframe_height);
+&lt;/script&gt;</summary><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="webgl"></category></entry><entry><title>Introducing Drop64, ezpz data URI generator</title><link href="http://palebluepixel.org/2014/02/25/introducing-drop64-ezpz-data-uri-generator/" rel="alternate"></link><updated>2014-02-25T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-02-25:2014/02/25/introducing-drop64-ezpz-data-uri-generator/</id><summary type="html">&lt;p&gt;A few weeks ago, a &lt;a href="http://www.heyokadesign.com/"&gt;coworker&lt;/a&gt; of mine ran into some font issues.  Firefox
 doesn't allow cross-origin requests for &lt;a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face"&gt;web fonts&lt;/a&gt;, and he was using a tool
 called &lt;a href="http://www.fontsquirrel.com/"&gt;Font Squirrel&lt;/a&gt; to generate fonts, including &lt;a href="https://developer.mozilla.org/en-US/docs/data_URIs"&gt;data URIs&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Embedding a data URI for a font (or image) inside a CSS file is a common

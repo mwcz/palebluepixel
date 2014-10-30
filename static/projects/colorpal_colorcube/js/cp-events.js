@@ -13,8 +13,8 @@
         img_width           = 0,
         img_height          = 0,
         max_canvas_width    = 468,
-        canvas_small_height = 128,
-        canvas_small_width  = 128;
+        canvas_small_height = 256,
+        canvas_small_width  = 256;
 
     function handle_file_select( evt ) {
 
@@ -63,6 +63,11 @@
             // Resize the canvas with CSS to trigger CSS3 transitions
             //canvas.style.width       = canvas_width + "px";
             //canvas.style.height      = canvas_width + "px";
+
+            // canvas_small.width  = img.width;
+            // canvas_small_width  = img.width;
+            // canvas_small.height = img.height;
+            // canvas_small_height = img.height;
 
             // Clear the small canvas context
             ctx_small.clearRect( 0, 0, canvas_small_width, canvas_small_height );
