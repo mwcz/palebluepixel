@@ -268,7 +268,7 @@ href="/static/projects/colorpal_colorcube"&gt;Launch live demo!&lt;/a&gt; and &l
 code&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Your web browser must support WebGL, which at this point in history means a
 fairly recent Firefox or Chrome.  In case your web browser doesn't support
-WebGL, here's a video to enjoy while you download &lt;a href="https://duckduckgo.com/l/?kh=-1&amp;amp;uddg=https%3A%2F%2Fnightly.mozilla.org%2F"&gt;Firefox Nightly&lt;/a&gt;. ;)&lt;/p&gt;
+WebGL, here's a video to enjoy while you download &lt;a href="https://nightly.mozilla.org/"&gt;Firefox Nightly&lt;/a&gt;. ;)&lt;/p&gt;
 &lt;figure&gt;
 
     &lt;iframe id="colorcube-demo" src="//player.vimeo.com/video/108080970"
