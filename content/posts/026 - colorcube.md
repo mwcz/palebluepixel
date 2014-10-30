@@ -87,4 +87,4 @@ Any ideas?
 [3]: http://threejs.org/examples/#webgl_particles_billboards_colors
 [4]: http://colorpal.org
 [5]: https://github.com/mwcz/mwcz/blob/master/content/static/projects/colorpal_colorcube/js/cp-colorcube.js
-[ffn]: https://duckduckgo.com/l/?kh=-1&uddg=https%3A%2F%2Fnightly.mozilla.org%2F
+[ffn]: https://nightly.mozilla.org/
