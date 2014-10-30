@@ -40,8 +40,9 @@ the particles.  Orbits are formed, and tiny solar systems glow brilliantly.
     <iframe id="dimo-demo" src="//player.vimeo.com/video/107405612" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
     <figcaption>
-        <a href="http://vimeo.com/107405612">GeekSPARK: Digital Motion (DiMo) desktop demo</a> from <a href="http://vimeo.com/mwcz">mwc</a> on <a href="https://vimeo.com">Vimeo</a>.
+        <a href="http://vimeo.com/107405612">GeekSPARK: Digital Motion (DiMo) desktop demo</a>
     </figcaption>
+    
 </figure>
 
 DiMo (short for Digital Motion) is an annual exhibit at GeekSPARK, which itself
@@ -49,17 +50,19 @@ is a branch of SparkCon.  I haven't been to any previous years' installations,
 but this year included digital visualizations projected onto a large wall, with
 three LED batons that visitors could use to control the visualizations.
 
-I created one of the three "exhibits".  Each exhibit used the same set of
-input: the coordinates of the colored batons.  My exhibit is a particle gravity
-simulation, created with [three.js][3js].  
+I created one of the three "exhibits", the one you see in the video.  Each
+exhibit used the same set of input: the coordinates of the colored batons.  My
+exhibit is a particle gravity simulation, created with WebGL ([three.js][3js],
+specifically), [GLSL][glsl], and many other tools.
 
-![ring animation in dimo]({filename}/static/images/033/ring-anim.gif)
+I'm working on a follow-up post, with technical information about the
+implementation.  *Update* it's 
+[here]({filename}/posts/034 - the deconstruction of falling particles.md)!
+
+
 
 This (2014) was my first year as a volunteer, but it was a tremendously
 educational and *fun* experience, so I'll definitely be back next year.
-
-Detailed technical information about the implementation is availble
-in [this follow-up post][nextpost].
 
 
 
@@ -69,10 +72,10 @@ I've written mostly about my own contribution to DiMo here, because that's what
 I'm most familiar with, but in reality it was only a piece of the DiMo puzzle.
 There were two other visualizations, both of which used the lighted batons as
 input.  I would love to link to their creators' websites, but I'm still waiting
-on URLs.  Thanks to them!
+on URLs.  Thanks to them, too!
 
-Ian Hands, for organizing the project, asking me to participate, and coming up
-with the whole damn idea.
+Ian Hands, for organizing the project, asking me to participate, writing the
+input server, and coming up with the whole idea.
 
 Ben Pritchett for code contributions to the renderer and the server, and for
 his work on two input sources (music BPM and a *brain machine*) which didn't
@@ -82,12 +85,15 @@ Justis Peters is the lead coordinator of GeekSPARK, and, I think, the founder
 of DiMo, and none of this would have happened without him.
 
 Thanks also to the [Raleigh Fish Market Gallery][fishmarket] for providing us a
-venue and letting us paint the projection wall white.
+venue and letting us paint the projection wall white, and to Yujin Kim for
+taking some awesome pictures.
 
 Most of all, thank you to the visitors who descended that dingy stairwell to
-see our exhibits!  Seeing their smiles as they waved batons, created swirling
-universes, was incredibly rewarding.  Everyone seemed to have fun.  One kid
-liked it so much he cried when it was time to leave.
+see our exhibits!  Seeing their smiles as they waved the batons was incredibly
+rewarding.  Everyone seemed to have fun.  One kid liked it so much he cried
+when it was time to leave.
+
+![ring animation in dimo]({filename}/static/images/033/ring-anim.gif)
 
 You can find all the code at our [GitHub group][geeksparkrh].  The
 visualization code described in this post is in the [dimo-renderer][renderer]
@@ -102,7 +108,6 @@ repo.
     window.addEventListener('resize', set_vimeo_iframe_height);
 </script>
 
-[sinewaves]: {filename}/static/images/033/sine_waves.png
 [sparkcon]: http://www.sparkcon.com/
 [geeksparkrh]: https://github.com/geekspark-rh/
 [renderer]: https://github.com/geekspark-rh/dimo-renderer
@@ -112,5 +117,5 @@ repo.
 [ws]: https://en.wikipedia.org/wiki/WebSocket
 [opencv]: http://opencv.org/
 [fishmarket]: https://www.facebook.com/ncsufishmarket
-[nextpost]: "{filename}034 - the deconstruction of falling particles.md"
 [3js]: http://threejs.org/
+[glsl]: https://en.wikipedia.org/wiki/OpenGL_Shading_Language

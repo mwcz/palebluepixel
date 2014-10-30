@@ -1,55 +1,82 @@
 Title: DiMo: The Deconstruction of Falling Stars
-Date: 2014-09-20
+Date: 2014-10-30
 Tags: programming, javascript, requirejs, amd, threejs, webgl, 3d, art, sparkcon, geekspark
 Image: /static/images/034/ring-explosion.png
-Summary: How DiMo was made.
+Summary: The construction of a WebGL particle physics gravity simulation *slash* interactive art installation.
 
-Everything is made out of something else.
+Imagine a solitary blue dot.
 
-[Live demo][demo]
+![small dot][smalldot]
 
-# Players
+Unless you let your imagination run away with itself, this is going to be a
+pretty boring dot.  Now, imagine a second, larger dot (you can pick the color).
 
-Players wave batons around and cool stuff happens!
+![small dot and large dot][smalldotlargedot]
 
-## camera input
+Red, nice choice!  The scene is now slightly more interesting, since now you've
+got two dots to think about.  You can ponder their positions, and relative
+sizes.  No motion though; still pretty boring!
 
-Camera input is analysed by OpenCV.
+Pretty soon, your keen and restless mind will imagine that the larger dot
+exerts a gravitational pull on the smaller one.  The small dot begins moving
+towards the large one.  It's speed increases exponentially the closer it gets.
+Now an orbit can form.  Thanks, Newton!
 
-The visualization uses [WebSockets][ws] to connect to a Python server.  That
-Python server, in turn, connects to a webcam and uses [OpenCV][opencv] to find
-the locations of the red, green, and blue batons.  It then relays the
-coordinates of each baton back to the visualization, which draws them on the
-screen.
+![orbit][orbit]
 
-Near the end of the project, things were going well.  The gravity felt great,
-player movements were smooth, 50,000 particles ran pretty smoothly on a common
-laptop, and player recognition was perfect.  The one thing that was lacking is
-it didn't *look* spectacular.  In essence, it looked cool, but only to geeks
-who .
+The dot's orbit is reminiscent of a planet orbiting a star.  Neat.
 
+Wait, did you see that?  You just moved the big dot.  Look again!  Now there
+are thousands and thousands of tiny dots, each being accelerated toward the big
+dot!
 
-## movement smoothing low-pass
+<figure>
 
-The movement was jerky, so I smoothed it.
+    <iframe id="dimo-demo" src="//player.vimeo.com/video/108714486" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-## websockets & json
+    <figcaption>
+        <a href="http://vimeo.com/108714486">View on vimeo</a>
+    </figcaption>
 
-The Python server listens for incoming websocket connections.  When the DiMo
-webpage is visited, it establishes a websockets connection with the server.
-Then they trade places, and the webpage listens for messages from the server.
+</figure>
 
-# particles
+Peculiar.  The multitude of dots starts to look *oddly* reminiscent of fluid
+sloshing around in a container.  Or a cloud of gas forming a star.  Weird, huh?
+Maybe they're the same thing!
+
+Now, before I ramble on any further, let your imagination take a rest while you
+try out the simulation!
+
+<p><a class="btn btn-default btn-lg" href="/static/projects/dimo/">Launch live demo!</a></p>
+
+A reasonably recent web browser required.  WebGL is required, which means
+Firefox 4+ or Chrome 9+.
+
+## The Premise
+
+**Players wave illuminated batons around and cool stuff happens!**
+
+See [DiMo Comes to Life][prevpost] for a , not-at-all dramatized
+summary of DiMo.
+
+"DiMo" is a recurring interactive art exhibit at GeekSpark, which is held
+during SparkCon each year in Raleigh, NC.  This year, I created the particle
+gravity simulation visualization for DiMo.  There was also a visualization of
+Conway's Game of Life, and an original game where players eat doritos and spray
+soda at people who eat doritos.
+
+## Particles
 
 Particles swirl around and look cool.
 
-## gravity
+### Gravity
 
-Gravity has been written a few times.  First with inlined calculations, then
-with ThreeJS vector objects, then with [glmatrix][glm], and then inlined again.
-The inlined code performance wasn't distinguishable from the glmatrix
-implementation.  Since the glmatrix API, although a little unconventional, is
-excellent and much more readable, I stuck with it.
+The gravity acceleration function has been rewritten a few times.  First with
+inlined calculations, then with ThreeJS vector objects, then with
+[glmatrix][glm], and then inlined again.  The inlined code performance wasn't
+distinguishable from the glmatrix implementation.  Since the glmatrix API,
+although a little unconventional, is excellent and much more readable, I stuck
+with it.
 
 ThreeJS's vector calculations, on the other hand, were awful.  Each function
 call created a new vector object.  Each acceleration calculation caused the
@@ -62,36 +89,65 @@ creation of 12 vector objects.
     ---------------------------------
      21,600,000 new objects per second
 
-Needless to say, the performance was terrible.  glmatrix's in-place vector
-operations solved this, and due to the better readability, it won out over
-inline calculations.
 
-## coloring methods
-### accel and velocity-based sine cycles [pictures and/or videos!]
 
-Trigonometry and web development aren't a pair usually seen together in public.
+Needless to say, the performance was terrible.  I then implemented the gravity
+equation using glmatrix's in-place vector operations.  glmatrix's vector
+functions insert their output into an existing vector instead of creating a new
+vector for each function call, like ThreeJS' API does.  The number of new
+objects created per second by the gravity equation dropped from `21,600,000`
+down to zero.
 
-Originally, each particle in dimo was given a color of either red, green, or
-blue, assigned randomly when the simulation started.
+glmatrix served quite well for a while, but in the end I improved performance
+even more by writing an inline gravity equation by hand.  Perhaps it was just
+function call overhead that was hurting performance.
 
-![silhouettes of players playing dimo][random-colors]
+### Coloring methods
 
-This *isn't* one of those rare miracles where randomness is beautiful.
+Once the gravity function was implemented, some beautification was in order.
+
+Originally, each particle in dimo was randomly assigned either red, green, or
+blue.
+
+![early dimo image, with randomly assigned colors][random-colors]
+
+The gravitational swirls may look kinda cool, but the colors are hectic.  This
+*isn't* one of those rare cases where randomness is beautiful.  It occurred to
+me that seeing big swaths of color through all the particles might look
+better.
+
+
+
+#### Cololololololors
+
+But what criteria should be used to decide what color each particle should
+receive?
+
+The simplest approach would be to color the particles based on their distance
+from the players, and that's essentially what I did.  The equations below use
+each particle's speed *and* acceleration to determine what color they should be
+assigned each frame.
 
 <figure>
-    <div class="math">
-        x = \dfrac{2\pi \cdot \lvert\vec{v}\rvert \cdot \lvert\vec{a}\rvert}{a_{max}}
+    <div role="math">
+        n = \dfrac{2\pi \cdot \lvert\vec{v}\rvert \cdot \lvert\vec{a}\rvert}{a_{max}}
     </div>
-    <div class="math">
-        \red{R(x)} = \cos(x + 1.76714) + 1) / 2
+    <div role="math">
+        \red{R(n)}   = \dfrac{\cos(n + 1.76714) + 1}{2}
     </div>
-    <div class="math">
-        \green{G(x)} = \cos(x + 3.92699) + 1) / 2
+    <div role="math">
+        \green{G(n)} = \dfrac{\cos(n + 3.92699) + 1}{2}
     </div>
-    <div class="math">
-        \blue{B(x)} = \cos(x + 5.89048) + 1) / 2
+    <div role="math">
+        \blue{B(n)} = \dfrac{\cos(n + 5.89048) + 1}{2}
     </div>
 </figure>
+
+<span role="math">\vec{a}</span> is the acceleration vector, and <span
+role="math">\vec{v}</span> is the velocity vector.  <span
+role="math">a_{max}</span> is the maximum magnitude an acceleration vector is
+allowed to have (configurable via the "max accel" parameter in the UI config
+panel).
 
 The range of `cos` and `sin` are `-1..1`, but the color values I needed are
 `0..1`.  The `+1` addition shifts the output into `0..2`, and the `/2` division
@@ -101,32 +157,92 @@ When graphed, they look like this.
 
 ![Roughly evenly-spaced sine waves][sinewaves]
 
-These functions provide a pleasing cycling between the three colors.  Here's
-the result.
+The cosine allows the colors to cycle repeatedly (R,G,B,R,G,B,...) as the
+input, <span role="math">n</span>, increases.  Here's the result.
 
 ![image of the swaths of color][swath-colors]
 
-Yes!  Swaths of color, cycling through the spectrum like a rainbow.
+*Yes!*  Swaths of color, cycling through the spectrum like a rainbow.
 
-### shaders (glsl essentials)
+#### The Grand Programmers' Utopia (GPU)
 
-# application concerns
-## architecture (threejs app design tendencies and how to overcome them)
+After bumping up against my CPU's limits while implementing gravity, I was
+certain of one thing: I wanted to rely on the CPU as little as possible.
 
-# configuration
-## datgui and presets (preset screenshots)
+I had a vague intuition that pixel shaders were the answer, since, hey, pixel
+shaders control the colors of pixels, right?  It turned out my understanding of
+shaders was pretty far off, but they *are* the right tool for the job.
+
+Shaders are small programs that run on your video card's processor(s) (the
+"GPU").  They come in a variety of languages, but shaders in WebGL are written
+in [GLSL][glsl], a subset of C.
+
+Learning about and writing the shaders was the most fun and educational aspect
+of this project, mostly because graphics programming is uniquely rewarding
+among all types of programming.  Often an unanticipated quirk of an equation
+(or even a typo!) will result in a very cool surprise.  In short, "just trying
+stuff" pays off *far* more than in any other branch of programming.
+
+#### More than colors?
+
+The more particles I add to the visualization, the better it looks.  1,000
+particles just look like a bunch of specks, but 100,000 particles start to look
+like clouds of swirling vapor.  Since the gravity calculations are so
+demanding, I wanted to offload as much work as possible onto the GPU.
+
+The Web doesn't currently have an API for doing general-purpose calculations on
+the GPU (although [WebCL][webcl] is in the pipeline).  It is possible to do
+limited calculations, by doing your calculation in a fragment shader and
+encoding the results, as pixel color values, into an in-memory texture (FBO).
+
+Sadly, a combination of limited time and inexperience prevented me from getting
+the gravity calculations onto the GPU.
+
+In 2012, Edouard Coulon created a similar particle gravity simulation called
+[GPU Particle Attractors][gpgpu-attractors], using the texture approach, and
+achieved 1,000,000 particles.  Tragically, his website is gone and I couldn't
+find his demo hosted anywhere else.  Edouard, if you read this, please reach
+out to me.  I'd love to learn from your work.
+
+In the end, I had to settle for 25,000 particles on my laptop.  For the art
+installation, we used a pretty beefy gaming rig, and I was able to bump it up
+to 50,000 (thanks Charan!).
+
+### What's next?
+
+Here's my wishlist for further improvements to DiMo.
+
+ - do gravity calculations on the GPU, which would enable either...
+    * several orders of magnitude more particles, or
+    * particles can exert gravity on each other
+ - add a calibration system which would determine how many particles a user's
+   computer is capable of rendering
+ - adjust the canvas sizing code, to allow DiMo to be easily embedded in other
+   pages (it currently full-screens itself)
+ - add even more configuration parameters and presets.  DiMo is capable of a
+   nice range of effects and patterns, but many of them require nitpicky
+   tweaking of sliders
+
+More likely, I'll use what I learned from DiMo on a super-secret future
+project.
 
 <link rel="stylesheet" type="text/css" href="{filename}/static/js/033/katex/katex.min.css">
 <script src="{filename}/static/js/033/katex/katex.min.js"></script>
 <script>
-function render_math() {
-    katex.render(this.innerHTML, this);
-}
-$('.math').each(render_math);
+    function set_vimeo_iframe_height() {
+        var ifr = document.getElementById('dimo-demo');
+        ifr.height = ifr.offsetWidth / (1280/720);
+    }
+    document.addEventListener('DOMContentLoaded', set_vimeo_iframe_height);
+    window.addEventListener('resize', set_vimeo_iframe_height);
+    function render_math() {
+        katex.render(this.innerHTML, this);
+    }
+    $('[role=math]').each(render_math);
 </script>
 
+[prevpost]: /2014/08/25/particles-and-p-dimo-comes-to-life/
 [sinewaves]: {filename}/static/images/034/sine_waves.png
-[demo]: /static/projects/dimo/
 [sparkcon]: http://www.sparkcon.com/
 [geeksparkrh]: https://github.com/geekspark-rh/
 [renderer]: https://github.com/geekspark-rh/dimo-renderer
@@ -138,3 +254,12 @@ $('.math').each(render_math);
 [random-colors]: {filename}/static/images/034/random-colors.png
 [swath-colors]: {filename}/static/images/034/swath-colors.png
 [glm]: http://glmatrix.net/
+[smalldot]: {filename}/static/images/034/smalldot.png
+[smalldotlargedot]: {filename}/static/images/034/smalldot-largedot.png
+[orbit]: {filename}/static/images/034/orbit.gif "When I recorded this gif, it lined up *completely* by chance.  So lucky.  It would have been a PITA to try to line up the dot so the orbit looped smoothly!  There is a slight jump, but it's subtle."
+[caniusewebgl]: https://en.wikipedia.org/wiki/WebGL#Desktop_browsers
+[input]: https://github.com/geekspark-rh/dimo-input
+[glsl]: https://en.wikipedia.org/wiki/OpenGL_Shading_Language
+[gpgpu-attractors]: http://www.chromeexperiments.com/detail/gpu-particle-attractors/?f=
+[gpgpu]: https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units
+[webcl]: https://en.wikipedia.org/wiki/WebCL

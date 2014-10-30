@@ -10,50 +10,28 @@ function main() {
         "preset": "RGB",
         "closed": false,
         "remembered": {
-            "Default": {
+            "RGB": {
                 "0": {},
-                "1": {}
+                "1": {},
+                "2": {},
+                "3": {},
+                "4": {}
             },
             "Fire": {
-                "0": {},
-                "1": {
-                    "MAX_VEL": 4,
-                    "MIN_ACCEL_DIST": 44,
-                    "size": 8
-                },
-                "2": {
-                    "color0": {
-                        "r": 1,
-                        "g": 0.9999999999999998,
-                        "b": 0
-                    },
-                    "color1": {
-                        "r": 1,
-                        "g": 0.5294117647058825,
-                        "b": 0
-                    },
-                    "color2": {
-                        "r": 1,
-                        "g": 0,
-                        "b": 0
-                    }
-                }
-            },
-            "RGB": {
                 "0": {
-                    "MAX_ACCEL": 1.5,
-                    "CYCLE_ACCELERATION": false,
-                    "RANDOM_GRAVITY_VARIANCE": 0
+                    "MAX_ACCEL": 0.06769734090000354,
+                    "CYCLE_ACCELERATION": true,
+                    "RANDOM_GRAVITY_VARIANCE": 1
                 },
                 "1": {
-                    "smoothing": 0.4,
-                    "size": 42.350508357745994
+                    "smoothing": 0.5,
+                    "size": 84.70101671549199
                 },
                 "2": {},
                 "3": {
-                    "MAX_VEL": 10.940547992417715,
+                    "MAX_VEL": 1.5881440634154746,
                     "MIN_ACCEL_DIST": 0,
-                    "size": 8
+                    "size": 19.065138721351026
                 },
                 "4": {
                     "color0": {
@@ -62,57 +40,66 @@ function main() {
                         "b": 0
                     },
                     "color1": {
-                        "r": 0,
-                        "g": 1,
+                        "r": 1,
+                        "g": 0,
                         "b": 0
                     },
                     "color2": {
-                        "r": 0,
-                        "g": 0.5,
-                        "b": 1
+                        "r": 1,
+                        "g": 0.0588235294117645,
+                        "b": 0
                     }
                 }
             },
             "Stars": {
-                "0": {},
-                "1": {
-                    "MAX_VEL": 2.9998276753403412,
-                    "MIN_ACCEL_DIST": 28.67482336722385,
-                    "size": 8
-                },
-                "2": {
-                    "color0": {
-                        "r": 0.9509803921568627,
-                        "g": 0.9509803921568627,
-                        "b": 0.8204536716647444
-                    },
-                    "color1": {
-                        "r": 0.9117647058823529,
-                        "g": 0.9001967569034534,
-                        "b": 0.7151095732410611
-                    },
-                    "color2": {
-                        "r": 0.9117647058823529,
-                        "g": 0.8686478051428185,
-                        "b": 0.5452710495963091
-                    }
-                }
-            },
-            "FAST": {
                 "0": {
-                    "MAX_ACCEL": 1.5,
+                    "MAX_ACCEL": 0.18,
                     "CYCLE_ACCELERATION": false,
-                    "RANDOM_GRAVITY_VARIANCE": 0
+                    "RANDOM_GRAVITY_VARIANCE": 0.2
                 },
                 "1": {
-                    "smoothing": 0.4,
-                    "size": 42.350508357745994
+                    "smoothing": 0.5,
+                    "size": 158.10856453558503
                 },
                 "2": {},
                 "3": {
-                    "MAX_VEL": 10.940547992417715,
+                    "MAX_VEL": 5.9996553506806825,
+                    "MIN_ACCEL_DIST": 44,
+                    "size": 5.168878166465621
+                },
+                "4": {
+                    "color0": {
+                        "r": 0.9607843137254902,
+                        "g": 0.9109166157812606,
+                        "b": 0.8665897731641676
+                    },
+                    "color1": {
+                        "r": 0.8823529411764706,
+                        "g": 0.8090779564420923,
+                        "b": 0.5709342560553632
+                    },
+                    "color2": {
+                        "r": 0.8235294117647058,
+                        "g": 0.6691770133659,
+                        "b": 0.29873125720876587
+                    }
+                }
+            },
+            "Orbits": {
+                "0": {
+                    "MAX_ACCEL": 0.37,
+                    "CYCLE_ACCELERATION": false,
+                    "RANDOM_GRAVITY_VARIANCE": 0.2
+                },
+                "1": {
+                    "smoothing": 0.5,
+                    "size": 256
+                },
+                "2": {},
+                "3": {
+                    "MAX_VEL": 6.352576253661899,
                     "MIN_ACCEL_DIST": 0,
-                    "size": 8
+                    "size": 11.422195416164053
                 },
                 "4": {
                     "color0": {
@@ -139,7 +126,7 @@ function main() {
                 "closed": false,
                 "folders": {}
             },
-            "players": {
+            "Players": {
                 "preset": "Default",
                 "closed": false,
                 "folders": {}
@@ -148,9 +135,14 @@ function main() {
                 "preset": "Default",
                 "closed": false,
                 "folders": {}
+            },
+            "Info": {
+                "preset": "Default",
+                "closed": false,
+                "folders": {}
             }
         }
-    };
+    }
 }
 
 define(deps, main);

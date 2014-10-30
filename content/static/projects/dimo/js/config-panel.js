@@ -65,13 +65,17 @@ function main(
 
     var players_folder = gui.addFolder('Players');
 
-    players_folder.add(players, 'smoothing', 0, 1)
-        .step(0.1)
+    players_folder.add(players, 'smoothing', 0, 0.99)
+        .step(0.01)
         .name('input smoothing')
         .onChange(players.set_smoothing);
     players_folder.add(players, 'size', 0, 256)
         .name('player size')
         .onChange(players.set_size);
+    players_folder.add(players, 'count', 1, 3)
+        .step(1)
+        .name('player count')
+        .onChange(players.set_count);
     if (config.INPUT_TYPE === 'mouse') {
         players_folder.add(players, 'activate_next_player')
             .name('Spacebar toggles player');

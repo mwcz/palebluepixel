@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <title>Geekspark DiMo</title>
+
+<link href="css/app.min.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+<div id="container"></div>
+
+<script src="lib/dat.gui/dat.gui.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+var FizzyText = function() {
+
+  this.color0 = "#ffae23"; // CSS string
+  this.color1 = [ 0, 128, 255 ]; // RGB array
+  this.color2 = [ 0, 128, 255, 0.3 ]; // RGB with alpha
+  this.color3 = { h: 350, s: 0.9, v: 0.3 }; // Hue, saturation, value
+
+  // Define render logic ...
+
+};
+
+window.onload = function() {
+
+  var text = new FizzyText();
+  var gui = new dat.GUI();
+
+  gui.addColor(text, 'color0');
+  gui.addColor(text, 'color1');
+  gui.addColor(text, 'color2');
+  gui.addColor(text, 'color3');
+
+};
+</script>
+
+</body>
+</html>

@@ -38,8 +38,6 @@ function main(
 
     var renderer;
 
-    var origin;
-
     var fps = 60;
     var now;
     var then = Date.now();
@@ -57,9 +55,6 @@ function main(
     }
 
     function init() {
-
-        origin = new THREE.Vector3( 0, 0, 0 );
-        origin.mass = 30;
 
         scene.add( particles.system );
         scene.add( players.system );
@@ -108,16 +103,17 @@ function main(
 
         requestAnimationFrame( animate );
 
-        now = Date.now();
-        delta = now - then;
+        // now = Date.now();
+        // delta = now - then;
+        render();
 
-        if (delta > interval) {
-            then = now - (delta % interval);
-            render();
-            if (conf.DISPLAY_STATS) {
-                stats.update();
-            }
-        }
+        // if (delta > interval) {
+        //     then = now - (delta % interval);
+        //     render();
+        //     if (conf.DISPLAY_STATS) {
+        //         stats.update();
+        //     }
+        // }
 
     }
 

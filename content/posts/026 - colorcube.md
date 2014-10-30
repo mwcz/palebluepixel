@@ -7,8 +7,8 @@ I spent a bit of time this weekend building an RGB color cube for
 [ColorPal][4], using [Three.js][1].  Drag and drop any image, and you'll see a
 cube with all the pixels of your image mapped into 3D space.
 
-<a class="btn btn-primary btn-lg"
-href="/static/projects/colorpal_colorcube">Live demo!</a> and [view the
+<a class="btn btn-default btn-lg"
+href="/static/projects/colorpal_colorcube">Launch live demo!</a> and [view the
 code][5].
 
 Your web browser must support WebGL, which at this point in history means a
