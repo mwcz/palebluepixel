@@ -5,15 +5,15 @@ Summary: ![GIMP math recording](/static/images/024/gimp_math.gif "GIMP math reco
 
 Ever been here?
 
- > I want to make a new image (say) twice the size of the current one, hmm...
-
- > /me opens gnome-calculator | python shell | bc
-
- > /me tippity types the current width * 2
-
- > /me tippity types the current height * 2
-
- > /me tippity types the results back into the Create New Image dialog
+ > I want to double the size of this image
+>
+ > open calculator
+ >
+ > type in current width * 2
+ >
+ > type in current height * 2
+ >
+ > paste results back into the Create New Image dialog
 
 I've done that countless times.  As I was about to do the same thing once more,
 I thought "Hmm, wouldn't it be nice if we could do simple math inside the New
