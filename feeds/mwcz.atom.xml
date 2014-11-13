@@ -349,11 +349,11 @@ stuff.  I only ripped out what was absolutely necessary to get the tool working
 as fast as possible.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://drop64.com/"&gt;Try it out&lt;/a&gt; or &lt;a href="https://github.com/mwcz/Drop64"&gt;check out the code&lt;/a&gt;.  Happy hacking.&lt;/p&gt;</summary><category term="html5"></category><category term="javascript"></category><category term="data uri"></category></entry><entry><title>Super easy image resizing in GIMP</title><link href="http://palebluepixel.org/2013/12/22/super-easy-image-resizing-in-gimp/" rel="alternate"></link><updated>2013-12-22T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2013-12-22:2013/12/22/super-easy-image-resizing-in-gimp/</id><summary type="html">&lt;p&gt;Ever been here?&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;I want to make a new image (say) twice the size of the current one, hmm...&lt;/p&gt;
-&lt;p&gt;/me opens gnome-calculator | python shell | bc&lt;/p&gt;
-&lt;p&gt;/me tippity types the current width * 2&lt;/p&gt;
-&lt;p&gt;/me tippity types the current height * 2&lt;/p&gt;
-&lt;p&gt;/me tippity types the results back into the Create New Image dialog&lt;/p&gt;
+&lt;p&gt;I want to double the size of this image&lt;/p&gt;
+&lt;p&gt;open calculator&lt;/p&gt;
+&lt;p&gt;type in current width * 2&lt;/p&gt;
+&lt;p&gt;type in current height * 2&lt;/p&gt;
+&lt;p&gt;paste results back into the Create New Image dialog&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;I've done that countless times.  As I was about to do the same thing once more,
 I thought "Hmm, wouldn't it be nice if we could do simple math inside the New

@@ -30,6 +30,9 @@ body {
 blockquote {
     border-left: 5px solid lighten(@pbp-bg-color, 4%);
     color: @pbp-pale-blue;
+    p {
+        font-weight: 400;
+    }
 }
 
 @media (min-width: 768px) {
@@ -49,6 +52,10 @@ a {
         color           : lighten(@pbp-pale-blue, 16%);
         border-bottom   : 1px solid;
         border-color    : lighten(@pbp-bg-color, 32%);
+    }
+    &:focus {
+        color         : lighten(@pbp-pale-blue, 16%);
+        outline-color : @pbp-pale-blue;
     }
     &:visited       {
         color: darken(@pbp-pale-blue, 16%); 
@@ -94,8 +101,10 @@ a {
         background-color: darken(@pbp-bg-color, 4%);
         border-width: 0;
 
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: lighten(@pbp-bg-color, 4%);
+            color: darken(@pbp-fg-color, 4%);
         }
     }
 
@@ -107,6 +116,7 @@ a {
         & > a:focus,
         & > span:focus {
             background-color: darken(@pbp-bg-color, 7%);
+            color: darken(@pbp-fg-color, 4%);
             border-width: 0;
         }
     }
