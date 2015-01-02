@@ -3,8 +3,9 @@ Slug: projects/dimo
 Tags: programming, javascript, requirejs, amd, threejs, webgl, 3d, art, sparkcon, geekspark
 Status: hidden
 
-DiMo is an interactive art exhibit I created (along with fellow Red Hat
-engineers Ian Hands and Ben Pritchett) for the SparkCon festival.
+DiMo is an artistic partical simulation and interactive art exhibit I created
+(along with fellow Red Hat engineers Ian Hands and Ben Pritchett) for the
+SparkCon festival.
 
 <p><a class="btn btn-default btn-lg" href="/static/projects/dimo/">Launch live demo!</a></p>
 
