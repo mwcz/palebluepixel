@@ -67,16 +67,17 @@ soda at people who eat doritos.
 
 ## Particles
 
-Particles swirl around and look cool.
+The particles' main job is to swirl around and look cool.  They are pulled
+gravitationally toward the player pieces, but the particles themselves don't
+exert gravity on each other.
 
 ### Gravity
 
-The gravity acceleration function has been rewritten a few times.  First with
-inlined calculations, then with ThreeJS vector objects, then with
-[glmatrix][glm], and then inlined again.  The inlined code performance wasn't
-distinguishable from the glmatrix implementation.  Since the glmatrix API,
-although a little unconventional, is excellent and much more readable, I stuck
-with it.
+The gravity calculation was written first with inlined calculations, then with
+ThreeJS vector objects, then with [glmatrix][glm], and then inlined again.  The
+inlined code performance wasn't distinguishable from the glmatrix
+implementation.  Since glmatrix is very fast and much more readable, I stuck
+with it for a while.
 
 ThreeJS's vector calculations, on the other hand, were awful.  Each function
 call created a new vector object.  Each acceleration calculation caused the
@@ -89,9 +90,7 @@ creation of 12 vector objects.
     ---------------------------------
      21,600,000 new objects per second
 
-
-
-Needless to say, the performance was terrible.  I then implemented the gravity
+Needless to say, the performance was *terrible*.  I then implemented the gravity
 equation using glmatrix's in-place vector operations.  glmatrix's vector
 functions insert their output into an existing vector instead of creating a new
 vector for each function call, like ThreeJS' API does.  The number of new

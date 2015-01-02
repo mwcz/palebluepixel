@@ -14,7 +14,7 @@ TIMEZONE              = 'America/New_York'
 DEFAULT_LANG          = u'en'
 PDF_GENERATOR         = False
 DEFAULT_PAGINATION    = 6
-MARKUP                = ('md','mkd','markdown')
+OUTPUT_SOURCES        = True
 DISPLAY_PAGES_ON_MENU = True
 THEME                 = "../palebluepixel-theme"
 
@@ -55,7 +55,7 @@ BOOTSTRAP_THEME = 'flatly'
 #######################################################################
 
 PLUGIN_PATHS = [environ["HOME"] + '/workspace/pelican-plugins',]
-PLUGINS = ['neighbors', 'assets', 'extract_toc']
+PLUGINS = ['neighbors', 'assets', 'extract_toc', 'series',]
 
 # extract_toc plugin settings
 
@@ -64,35 +64,21 @@ MD_EXTENSIONS = (['toc'])
 # assets plugin settings
 
 ASSET_BUNDLES = (
-        ('bootstrap',
-            [
-                ('less/bootswatch/%s/bootstrap.less' % BOOTSTRAP_THEME) if BOOTSTRAP_THEME else 'less/bootstrap/bootstrap.less',
-                ],
-            {
-                'filters': 'less',
-                'output': 'css/bootstrap.css' if DEBUG else 'css/bootstrap.min.css',
-                }
-            ),
         ('pbp',
             [
-                ('less/bootswatch/%s/bootstrap.less' % BOOTSTRAP_THEME) if BOOTSTRAP_THEME else 'less/bootstrap/bootstrap.less',
-                'less/styles.less',
-                'css/pygments.css',
+                ('static/less/bootswatch/%s/bootstrap.less' % BOOTSTRAP_THEME) if BOOTSTRAP_THEME else 'static/less/bootstrap/bootstrap.less',
+                'static/less/styles.less',
+                'static/lib/prism/prism.css',
                 ],
             {
                 'filters': 'less' if DEBUG else 'less,cssmin',
-                'output': 'css/styles.css' if DEBUG else 'css/styles.min.css',
                 }
             ),
-        ('css',
-            [
-                'css/bootstrap.css' if DEBUG else 'css/bootstrap.min.css',
-                'css/styles.css' if DEBUG else 'css/styles.min.css',
-                'css/pygments.css',
-                ],
-            {}
-            ),
         )
+
+ASSET_SOURCE_PATHS = (
+    environ["HOME"] + '/workspace/palebluepixel-theme',
+)
 
 # related posts settings
 

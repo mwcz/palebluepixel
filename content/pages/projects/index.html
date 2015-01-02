@@ -19,6 +19,12 @@ $(function () {
             {% import 'includes/panel.html' as project_thumbnail %}
 
             {{ project_thumbnail.write(
+                body_title   = 'DiMo',
+                body_text    = 'An interactive art installation created for SparkCon, powered by ThreeJS/WebGL.',
+                header_image = '/static/images/projects/icon_dimo.png',
+                link_url     = '/projects/dimo',
+                ) }}
+            {{ project_thumbnail.write(
                 body_title   = 'ColorPal',
                 body_text    = 'Drag an image. Get a color palette instantly. A friendly HTML5 app.',
                 header_image = '/static/images/projects/icon_colorpal.png',
