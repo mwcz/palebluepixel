@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>    Naming Names - Anonymity is Dead
+</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <!--[if gte IE 9]
+    <style type="text/css">
+        .gradient {
+            filter: none;
+        }
+    </style>
+    <![endif]-->
+
+            <link href="http://palebluepixel.org/theme/css/styles.min.css?86ba1222" rel="stylesheet">
+
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://palebluepixel.org/theme/js/jquery.min.js"></script>
+
+        <link href="http://palebluepixel.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Pale Blue Pixel ATOM Feed"/>
+        <link href="http://palebluepixel.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
+              title="Pale Blue Pixel RSS Feed"/>
+
+
+</head>
+<body>
+<div class="container">
+    <nav class="pbp-navbar" role="navigation">
+        
+        <a href="/">
+            <img class="pbp-logo" src="http://palebluepixel.org/theme/images/logo.svg" />
+        </a>
+    </nav>
+</div>
+<!-- /.navbar -->
+<main role="main" class="container">
+    <article>
+        <header class="page-header">
+            <h2>
+                Naming Names - Anonymity is Dead
+            </h2>
+        </header>
+        <div class="entry-content">
+            <nav class="toc"></nav>
+            <blockquote>
+
+    There are only two hard problems in computer science: cache invalidation,
+    naming things, and off-by-one errors.
+
+    <footer>
+        <cite>
+            Phil Karlton, but I can't find a name for the original source...
+        </cite>
+    </footer>
+</blockquote>
+
+<p>Contriving names for things is so commonplace for computer programmers that we
+may be thinking up names more often than any other profession.  Every day,
+usually dozens of times, I find myself trying to imagine the perfect name for a
+function or variable or module.  Then I remember that there's a term for the
+<em>process</em> of formulating the perfect name for a thing.</p>
+<p>I just can't remember what it's called...</p>
+<p>Then I find myself sitting there, trying to think of the perfect name for the
+process of creating the perfect name for a thing when I should be <em>actually</em>
+dreaming up the perfect name for that thing.</p>
+<figure>
+    <img src="/static/images/036/naming.gif" alt="naming is hard" />
+    <figcaption>Naming is hard.</figcaption>
+</figure>
+
+<p>Can you relate?  The word, by the way, is...</p>
+<dl>
+    <dt>onomastics - n.</dt>
+    <dd>1. The study of the origins and forms of proper names.</dd>
+    <dd>2. The study of the origins and forms of terms used in specialized fields.</dd>
+    <dd>3. The system that underlies the formation and use of proper names or terms used in specialized fields.</dd>
+</dl>
+
+<p>Short, but informative names are important in all programming languages, though
+JavaScript's anonymous functions do pose a unique temptation.</p>
+<p>For those unfamiliar, an anonymous function is, unsurprisingly, a function
+declaration without a name.</p>
+<p>A named function:</p>
+<pre><code>function count_sheep() { /* code */ }
+</code></pre>
+<p>An anonymous function:</p>
+<pre><code>function () { /* code */ }
+</code></pre>
+<p>One has a name, one doesn't.  Other than two low-level (and usually
+inconsequental) behavioral differences, they're drop-in replacements for one
+another.  The primary difference is that one has a name, so you can tell what
+it does.  So, pick the one that has the name!  Easy choice, right?</p>
+<p>I wish!  Choosing a name is a very real mental tax.  Choosing a <em>good</em> name
+is time-consuming and often impossible.  That is why, I feel, anonymous
+functions are used so commonly in JavaScript programs.</p>
+<p>Anonymous functions <strong>free the programmer from the responsibility of choosing a
+name</strong>.</p>
+<p>As a practical example, here's some code from the <a href="http://datatables.net/examples/api/api_in_init.html">jQuery DataTables example
+page</a>, with three nested anonymous functions.</p>
+<pre><code>$(document).ready(function() {
+    $('#example').dataTable( {
+        "initComplete": function () {
+            var api = this.api();
+            api.$('td').click( function () {
+                api.search( this.innerHTML ).draw();
+            } );
+        }
+    } );
+} );
+</code></pre>
+<p>There are much (<strong>much</strong>!) more deeply nested examples of the Pyramid of Doom,
+but this one serves well as an example.  If it had been implemented with short,
+named functions, it would be something like the following.</p>
+<pre><code>$(document).ready( create_datatable );
+
+function create_datatable() {
+    $('#example').dataTable( {
+        "initComplete": init_datatable_api
+    } );
+}
+
+function init_datatable_api() {
+    var api = this.api();
+    api.$('td').click( filter_datatable );
+}
+
+function filter_datatable() {
+    api.search( this.innerHTML ).draw();
+}
+</code></pre>
+<p>This updated code isn't perfect, to be sure, but the first line really
+exemplifies this benefits of this approach, to me.  <code>$(document).ready(
+create_datatable )</code> reads so clearly.</p>
+<p>The joy of small functions is a discovery I'm making and re-making every day.
+I've been <em>craving</em> a programming style like this for years, but it wasn't
+until I read <a href="http://amzn.com/1449360726">Functional JavaScript</a> (and all the FP talk on
+<a href="http://www.reddit.com/r/programming">r/programming</a>) that my eyes opened.</p>
+<p>Very, very small, reusable functions are a joy to work with.  Give it a try, if
+you haven't yet!</p>
+<script>
+$('pre code').each(add_prism_js);
+function add_prism_js(i, el) {
+    $(el).addClass('language-javascript');
+}
+</script>
+        </div>
+
+        <!-- /.entry-content -->
+    </article>
+
+</main>
+
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<script src="http://palebluepixel.org/theme/lib/prism/prism.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://palebluepixel.org/theme/js/respond.min.js"></script>
+</body>
+</html>

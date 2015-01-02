@@ -24,14 +24,22 @@ body {
     padding          : 0;
 }
 
+blockquote cite::before {
+    content: '—';
+    color: lighten(@pbp-bg-color, 16%);
+}
+
 /*********************************************************************
  *                    bootstrap.flatly overrides                     *
  *********************************************************************/
 blockquote {
-    border-left: 5px solid lighten(@pbp-bg-color, 4%);
+    border-left: 5px solid lighten(@pbp-bg-color, 8%);
     color: @pbp-pale-blue;
     p {
         font-weight: 400;
+    }
+    cite {
+        font-size: 0.8 * @pbp-base-font-size;
     }
 }
 
@@ -135,8 +143,8 @@ a {
     }
 }
 
-p {
-    margin: 0 0 20.5px;
+pre, p {
+    margin: 10.25px 0 20.5px;
 }
 
 code {

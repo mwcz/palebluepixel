@@ -1,5 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pale Blue Pixel</title><link>http://palebluepixel.org/</link><description></description><atom:link href="http://palebluepixel.org/feeds/mwcz.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 30 Oct 2014 00:00:00 -0400</lastBuildDate><item><title>DiMo: The Deconstruction of Falling Stars</title><link>http://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/</link><description>&lt;p&gt;Imagine a solitary blue dot.&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pale Blue Pixel</title><link>http://palebluepixel.org/</link><description></description><atom:link href="http://palebluepixel.org/feeds/mwcz.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 04 Dec 2014 00:00:00 -0500</lastBuildDate><item><title>Naming Names - Anonymity is Dead</title><link>http://palebluepixel.org/2014/12/04/naming-names-anonymity-is-dead/</link><description>&lt;blockquote&gt;
+
+    There are only two hard problems in computer science: cache invalidation,
+    naming things, and off-by-one errors.
+
+    &lt;footer&gt;
+        &lt;cite&gt;
+            Phil Karlton, but I can't find a name for the original source...
+        &lt;/cite&gt;
+    &lt;/footer&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Contriving names for things is so commonplace for computer programmers that we
+may be thinking up names more often than any other profession.  Every day,
+usually dozens of times, I find myself trying to imagine the perfect name for a
+function or variable or module.  Then I remember that there's a term for the
+&lt;em&gt;process&lt;/em&gt; of formulating the perfect name for a thing.&lt;/p&gt;
+&lt;p&gt;I just can't remember what it's called...&lt;/p&gt;
+&lt;p&gt;Then I find myself sitting there, trying to think of the perfect name for the
+process of creating the perfect name for a thing when I should be &lt;em&gt;actually&lt;/em&gt;
+dreaming up the perfect name for that thing.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src="/static/images/036/naming.gif" alt="naming is hard" /&gt;
+    &lt;figcaption&gt;Naming is hard.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Can you relate?  The word, by the way, is...&lt;/p&gt;
+&lt;dl&gt;
+    &lt;dt&gt;onomastics - n.&lt;/dt&gt;
+    &lt;dd&gt;1. The study of the origins and forms of proper names.&lt;/dd&gt;
+    &lt;dd&gt;2. The study of the origins and forms of terms used in specialized fields.&lt;/dd&gt;
+    &lt;dd&gt;3. The system that underlies the formation and use of proper names or terms used in specialized fields.&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;p&gt;Short, but informative names are important in all programming languages, though
+JavaScript's anonymous functions do pose a unique temptation.&lt;/p&gt;
+&lt;p&gt;For those unfamiliar, an anonymous function is, unsurprisingly, a function
+declaration without a name.&lt;/p&gt;
+&lt;p&gt;A named function:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;function count_sheep() { /* code */ }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An anonymous function:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;function () { /* code */ }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;One has a name, one doesn't.  Other than two low-level (and usually
+inconsequental) behavioral differences, they're drop-in replacements for one
+another.  The primary difference is that one has a name, so you can tell what
+it does.  So, pick the one that has the name!  Easy choice, right?&lt;/p&gt;
+&lt;p&gt;I wish!  Choosing a name is a very real mental tax.  Choosing a &lt;em&gt;good&lt;/em&gt; name
+is time-consuming and often impossible.  That is why, I feel, anonymous
+functions are used so commonly in JavaScript programs.&lt;/p&gt;
+&lt;p&gt;Anonymous functions &lt;strong&gt;free the programmer from the responsibility of choosing a
+name&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;As a practical example, here's some code from the &lt;a href="http://datatables.net/examples/api/api_in_init.html"&gt;jQuery DataTables example
+page&lt;/a&gt;, with three nested anonymous functions.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$(document).ready(function() {
+    $('#example').dataTable( {
+        "initComplete": function () {
+            var api = this.api();
+            api.$('td').click( function () {
+                api.search( this.innerHTML ).draw();
+            } );
+        }
+    } );
+} );
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;There are much (&lt;strong&gt;much&lt;/strong&gt;!) more deeply nested examples of the Pyramid of Doom,
+but this one serves well as an example.  If it had been implemented with short,
+named functions, it would be something like the following.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$(document).ready( create_datatable );
+
+function create_datatable() {
+    $('#example').dataTable( {
+        "initComplete": init_datatable_api
+    } );
+}
+
+function init_datatable_api() {
+    var api = this.api();
+    api.$('td').click( filter_datatable );
+}
+
+function filter_datatable() {
+    api.search( this.innerHTML ).draw();
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This updated code isn't perfect, to be sure, but the first line really
+exemplifies this benefits of this approach, to me.  &lt;code&gt;$(document).ready(
+create_datatable )&lt;/code&gt; reads so clearly.&lt;/p&gt;
+&lt;p&gt;The joy of small functions is a discovery I'm making and re-making every day.
+I've been &lt;em&gt;craving&lt;/em&gt; a programming style like this for years, but it wasn't
+until I read &lt;a href="http://amzn.com/1449360726"&gt;Functional JavaScript&lt;/a&gt; (and all the FP talk on
+&lt;a href="http://www.reddit.com/r/programming"&gt;r/programming&lt;/a&gt;) that my eyes opened.&lt;/p&gt;
+&lt;p&gt;Very, very small, reusable functions are a joy to work with.  Give it a try, if
+you haven't yet!&lt;/p&gt;
+&lt;script&gt;
+$('pre code').each(add_prism_js);
+function add_prism_js(i, el) {
+    $(el).addClass('language-javascript');
+}
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Thu, 04 Dec 2014 00:00:00 -0500</pubDate><guid>tag:palebluepixel.org,2014-12-04:2014/12/04/naming-names-anonymity-is-dead/</guid><category>programming</category><category>javascript</category></item><item><title>DiMo: The Deconstruction of Falling Stars</title><link>http://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/</link><description>&lt;p&gt;Imagine a solitary blue dot.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="small dot" src="http://palebluepixel.org/static/images/034/smalldot.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Unless you let your imagination run away with itself, this is going to be a
 pretty boring dot.  Now, imagine a second, larger dot (you can pick the color).&lt;/p&gt;
@@ -45,14 +145,15 @@ gravity simulation visualization for DiMo.  There was also a visualization of
 Conway's Game of Life, and an original game where players eat doritos and spray
 soda at people who eat doritos.&lt;/p&gt;
 &lt;h2 id="particles"&gt;Particles&lt;/h2&gt;
-&lt;p&gt;Particles swirl around and look cool.&lt;/p&gt;
+&lt;p&gt;The particles' main job is to swirl around and look cool.  They are pulled
+gravitationally toward the player pieces, but the particles themselves don't
+exert gravity on each other.&lt;/p&gt;
 &lt;h3 id="gravity"&gt;Gravity&lt;/h3&gt;
-&lt;p&gt;The gravity acceleration function has been rewritten a few times.  First with
-inlined calculations, then with ThreeJS vector objects, then with
-&lt;a href="http://glmatrix.net/"&gt;glmatrix&lt;/a&gt;, and then inlined again.  The inlined code performance wasn't
-distinguishable from the glmatrix implementation.  Since the glmatrix API,
-although a little unconventional, is excellent and much more readable, I stuck
-with it.&lt;/p&gt;
+&lt;p&gt;The gravity calculation was written first with inlined calculations, then with
+ThreeJS vector objects, then with &lt;a href="http://glmatrix.net/"&gt;glmatrix&lt;/a&gt;, and then inlined again.  The
+inlined code performance wasn't distinguishable from the glmatrix
+implementation.  Since glmatrix is very fast and much more readable, I stuck
+with it for a while.&lt;/p&gt;
 &lt;p&gt;ThreeJS's vector calculations, on the other hand, were awful.  Each function
 call created a new vector object.  Each acceleration calculation caused the
 creation of 12 vector objects.&lt;/p&gt;
@@ -63,7 +164,7 @@ creation of 12 vector objects.&lt;/p&gt;
 ---------------------------------
  21,600,000 new objects per second
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Needless to say, the performance was terrible.  I then implemented the gravity
+&lt;p&gt;Needless to say, the performance was &lt;em&gt;terrible&lt;/em&gt;.  I then implemented the gravity
 equation using glmatrix's in-place vector operations.  glmatrix's vector
 functions insert their output into an existing vector instead of creating a new
 vector for each function call, like ThreeJS' API does.  The number of new
