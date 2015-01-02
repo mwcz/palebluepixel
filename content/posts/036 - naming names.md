@@ -1,5 +1,5 @@
 Title: Naming Names - Anonymity is Dead
-Date: 2014-12-04
+Date: 2015-01-01
 Tags: programming, javascript
 Image: /static/images/036/naming.gif
 Summary: Naming things is hard enough, and JavaScript doesn't make it any easier.  Should anonymous functions be considered harmful?
