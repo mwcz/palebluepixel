@@ -1,7 +1,8 @@
 Title: Raspberry Pi Timelapse Camera
 Date: 2014-05-15
 Tags: programming, raspberry pi, photography, timelapse, camera
-Status: draft
+Image: /static/images/028/scene_morning_light.jpg
+Draft: true
 
 I built a timelapse camera with a raspberry pi.
 
@@ -9,6 +10,7 @@ Hardware:
 
  - [A small gorillapod][1]
  - [Raspbery Pi camera][2]
+ - [Raspberry Pi Model B][rpib]
 
 Software:
 
@@ -18,36 +20,51 @@ this post.
 ![Timelapse scene](/static/images/028/scene_morning_light.jpg "Timelapse scene")
 
 I didn't secure the pi very well when I first framed the shot, and it wound up
-getting bumped several times.  After being bumped, it would continue to take
-shots for hours (or days).
-
-After compiling all the still images into a video, the bumps are extremely
-jarring.  To alleviate that problem, I used [Georg Martius' vid.stab][3] to
-stabilize the video.
+getting bumped several times.  Lesson learned: make sure 
 
 File naming
 -----------
 
-I used Epoch times as filenames.
+I used Epoch time for the filenames.
 
     1396020890.jpg
     1396021196.jpg
     1396021502.jpg
     1396021808.jpg
 
-This was a spontaneous decision, but turned out to have some unexpected
-benefits.  Eliminating night-time shots was one of them, since it involved only
-some pretty simple algebra, and no messy date math.
+This was a spontaneous decision, chosen for convenience, but turned out to have
+some unexpected benefits.
+
+Eliminating night-time shots was 
 
 Doing some modulo math on the epoch times made isolating the dark hours easy.
-All we need to know is the number of seconds in a minute, hour, and day.
+Since Epoch time is measured in seconds, all we need to know is the number of
+seconds in a minute, hour, and day.
 
+    # number of seconds in a minute/hour/day
     minute = 60
     hour   = 3600
     day    = 86400
 
-Let's say we want to eliminate any shot taken between 8 PM and 7 AM.  Take the
-first timelapse shot above, `1396020890`.
+Now that we have those values, we can play around with [modulo][mod]
+<sup>%</sup> math to find some cool stuff.
+
+The first order of business is to eliminate any photos taken at nighttime,
+because they're all too dark to be useful.  Using `1396020890` as an example...
+
+        1396020890 % 86400 = 56090
+
+`86400` is the number of seconds in a day, and what this operation does is
+essentially remove the day/month/year components.  What's left is the time
+since the stroke of midnight (still in seconds).
+
+<figure>
+    <div role="math">
+        \dfrac{56090 seconds since midnight}{3600 seconds/hour}
+    </div>
+</figure>
+
+Dividing 
 
     time = 1396020890
     seconds_after_midnight = time % day # gives us the number of seconds after midnight
@@ -69,7 +86,24 @@ with my intervalometer, but I couldn't take a timelapse that tight with my
 current raspi timelapse script.  The drift would add about 50% to the interval,
 throwing the ending framerate off completely.
 
+<link rel="stylesheet" type="text/css" href="{filename}/static/js/033/katex/katex.min.css">
+<script src="{filename}/static/js/033/katex/katex.min.js"></script>
+<script>
+    function set_vimeo_iframe_height() {
+        var ifr = document.getElementById('dimo-demo');
+        ifr.height = ifr.offsetWidth / (1280/720);
+    }
+    document.addEventListener('DOMContentLoaded', set_vimeo_iframe_height);
+    window.addEventListener('resize', set_vimeo_iframe_height);
+    function render_math() {
+        katex.render(this.innerHTML, this);
+    }
+    $('[role=math]').each(render_math);
+</script>
 
 [1]: http://amzn.com/B008YE0HAW
 [2]: http://www.raspberrypi.org/product/camera-module/
 [3]: http://public.hronopik.de/vid.stab/features.php?lang=en "video stabilization in linux"
+[epoch]: https://en.wikipedia.org/wiki/Epoch_time
+[rpib]: https://en.wikipedia.org/wiki/Raspberry_Pi
+[mod]: https://en.wikipedia.org/wiki/Modulo_operation
