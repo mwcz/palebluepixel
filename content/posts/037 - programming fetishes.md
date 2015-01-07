@@ -2,6 +2,7 @@ Title: Programming Fetishes
 Date: 2014-12-08
 Tags: programming
 Status: draft
+Mwc: 37
 
 <blockquote>
     Solve your users’ problems rather than indulging your own programming fetishes.

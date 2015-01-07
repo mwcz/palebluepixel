@@ -1,6 +1,7 @@
 Title: finding files in vim
 Tags: vim, tools
 Date: 2011-11-19 13:50:03
+Mwc: 10
 Status: draft
 
 Huge problem with this method: with my vim command autocomplete settings, vim will not cycle through matching names.  If I do :b style<Tab>, it will find the style.css for each theme, but will not cycle through them.  

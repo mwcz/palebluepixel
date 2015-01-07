@@ -1,6 +1,7 @@
 Title: Confessions of a Tracker
 Date: 2014-05-28
 Tags: programming, javascript, analytics, tracking, paf
+Mwc: 30
 Status: draft
 
 PAF features:

@@ -2,6 +2,7 @@ Title: RGB WebGL Color Cube
 Date: 2014-03-23
 Tags: html5, javascript, color, colorpal, webgl
 Image: /static/images/026/colorcube.jpg
+Mwc: 26
 
 I spent a bit of time this weekend building an RGB color cube for
 [ColorPal][4], using [Three.js][1].  Drag and drop any image, and you'll see a

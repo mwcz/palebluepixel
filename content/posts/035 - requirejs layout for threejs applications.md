@@ -1,7 +1,9 @@
 Title: A RequireJS Architecture for ThreeJS Applications
 Date: 2014-09-20
 Tags: programming, javascript, requirejs, amd, threejs, webgl, 3d
+Mwc: 35
 Status: draft
+TwitterWidgetID: 552862041153998849
 
 While working on DiMo, I found myself at the [ThreeJS
 examples][threejsexamples] page quite often, searching for working examples.

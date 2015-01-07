@@ -2,6 +2,7 @@ Title: Super easy image resizing in GIMP
 Date: 2013-12-22
 Tags: gimp
 Summary: ![GIMP math recording](/static/images/024/gimp_math.gif "GIMP math recording")
+Mwc: 24
 
 Ever been here?
 

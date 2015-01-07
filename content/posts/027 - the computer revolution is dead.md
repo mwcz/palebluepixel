@@ -2,6 +2,7 @@ Title: The Computer Revolution is Dead
 Date: 2014-04-23
 Tags: programming, computer science
 Status: draft
+Mwc: 27
 
 Long live the computer revolution!
 
