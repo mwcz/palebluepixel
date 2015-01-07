@@ -21,5 +21,7 @@ the [SparkCon][sparkcon] festival in 2014.
  - [Particles and π - DiMo Comes to Life]({filename}/posts/033 - particles and pi - dimo comes to life.md) - more about the exhibit at SparkCon!
  - [Source code][dimogit] - the GitHub repo for the visualization
 
+![ring animation in dimo]({filename}/static/images/033/ring-anim.gif)
+
 [sparkcon]: https://en.wikipedia.org/wiki/Sparkcon
 [dimogit]: https://github.com/geekspark-rh/dimo-renderer
