@@ -17,7 +17,7 @@ the [SparkCon][sparkcon] festival in 2014.
 
 ## More information
 
- - [The Deconstruction of Falling Particles]({filename}/posts/034 - the deconstruction of falling particles.md) - technical info about how DiMo was built
+ - [The Deconstruction of Falling Stars]({filename}/posts/034 - the deconstruction of falling particles.md) - technical info about how DiMo was built
  - [Particles and π - DiMo Comes to Life]({filename}/posts/033 - particles and pi - dimo comes to life.md) - more about the exhibit at SparkCon!
  - [Source code][dimogit] - the GitHub repo for the visualization
 
