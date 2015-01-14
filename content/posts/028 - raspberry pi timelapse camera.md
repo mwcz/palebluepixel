@@ -3,7 +3,7 @@ Date: 2014-05-15
 Tags: programming, raspberry pi, photography, timelapse, camera
 Image: /static/images/028/scene_morning_light.jpg
 Mwc: 28
-Draft: true
+Status: draft
 
 I built a timelapse camera with a raspberry pi.
 
