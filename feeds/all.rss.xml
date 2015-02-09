@@ -175,8 +175,7 @@ even more by writing an inline gravity equation by hand.  Perhaps it was just
 function call overhead that was hurting performance.&lt;/p&gt;
 &lt;h3 id="coloring-methods"&gt;Coloring methods&lt;/h3&gt;
 &lt;p&gt;Once the gravity function was implemented, some beautification was in order.&lt;/p&gt;
-&lt;p&gt;Originally, each particle in dimo was randomly assigned either red, green, or
-blue.&lt;/p&gt;
+&lt;p&gt;Originally, each particle was randomly assigned either red, green, or blue.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="early dimo image, with randomly assigned colors" src="http://palebluepixel.org/static/images/034/random-colors.png" /&gt;&lt;/p&gt;
 &lt;p&gt;The gravitational swirls may look kinda cool, but the colors are hectic.  This
 &lt;em&gt;isn't&lt;/em&gt; one of those rare cases where randomness is beautiful.  It occurred to
@@ -252,7 +251,7 @@ out to me.  I'd love to learn from your work.&lt;/p&gt;
 installation, we used a pretty beefy gaming rig, and I was able to bump it up
 to 50,000 (thanks Charan!).&lt;/p&gt;
 &lt;h3 id="whats-next"&gt;What's next?&lt;/h3&gt;
-&lt;p&gt;Here's my wishlist for further improvements to DiMo.&lt;/p&gt;
+&lt;p&gt;Here's my wishlist for further improvements to the visualization.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;do gravity calculations on the GPU, which would enable either...&lt;ul&gt;
 &lt;li&gt;several orders of magnitude more particles, or&lt;/li&gt;
@@ -261,8 +260,8 @@ to 50,000 (thanks Charan!).&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;add a calibration system which would determine how many particles a user's
    computer is capable of rendering&lt;/li&gt;
-&lt;li&gt;adjust the canvas sizing code, to allow DiMo to be easily embedded in other
-   pages (it currently full-screens itself)&lt;/li&gt;
+&lt;li&gt;adjust the canvas sizing code, to allow the visualization to be easily
+   embedded in other pages (it currently full-screens itself)&lt;/li&gt;
 &lt;li&gt;add even more configuration parameters and presets.  DiMo is capable of a
    nice range of effects and patterns, but many of them require nitpicky
    tweaking of sliders&lt;/li&gt;
