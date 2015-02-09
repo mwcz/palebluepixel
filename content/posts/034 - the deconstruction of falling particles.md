@@ -107,8 +107,7 @@ function call overhead that was hurting performance.
 
 Once the gravity function was implemented, some beautification was in order.
 
-Originally, each particle in dimo was randomly assigned either red, green, or
-blue.
+Originally, each particle was randomly assigned either red, green, or blue.
 
 ![early dimo image, with randomly assigned colors][random-colors]
 
@@ -211,15 +210,15 @@ to 50,000 (thanks Charan!).
 
 ### What's next?
 
-Here's my wishlist for further improvements to DiMo.
+Here's my wishlist for further improvements to the visualization.
 
  - do gravity calculations on the GPU, which would enable either...
     * several orders of magnitude more particles, or
     * particles can exert gravity on each other
  - add a calibration system which would determine how many particles a user's
    computer is capable of rendering
- - adjust the canvas sizing code, to allow DiMo to be easily embedded in other
-   pages (it currently full-screens itself)
+ - adjust the canvas sizing code, to allow the visualization to be easily
+   embedded in other pages (it currently full-screens itself)
  - add even more configuration parameters and presets.  DiMo is capable of a
    nice range of effects and patterns, but many of them require nitpicky
    tweaking of sliders
