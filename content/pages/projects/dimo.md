@@ -17,6 +17,7 @@ Pritchett) for the [SparkCon][sparkcon] festival in 2014.
 
 ## More information
 
+ - [Opensource.com article about DiMo 2014][osdc]
  - [The Deconstruction of Falling Stars]({filename}/posts/034 - the deconstruction of falling particles.md) - technical info about how it was built
  - [Particles and π - DiMo Comes to Life]({filename}/posts/033 - particles and pi - dimo comes to life.md) - more about the exhibit at SparkCon!
  - [Source code][dimogit] - the GitHub repo for the visualization
@@ -25,3 +26,4 @@ Pritchett) for the [SparkCon][sparkcon] festival in 2014.
 
 [sparkcon]: https://en.wikipedia.org/wiki/Sparkcon
 [dimogit]: https://github.com/geekspark-rh/dimo-renderer
+[osdc]: http://opensource.com/life/15/2/sparkcon-geekspark-digital-motion-exhibit
