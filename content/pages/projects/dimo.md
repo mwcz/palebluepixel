@@ -1,6 +1,6 @@
 Title: DiMo: Particles
 Slug: projects/dimo
-Tags: programming, javascript, requirejs, amd, threejs, webgl, 3d, art, sparkcon, geekspark
+Tags: programming, javascript, requirejs, amd, threejs, webgl, 3d, art, sparkcon, geekspark, physics
 Status: hidden
 
 <img class="col-md-7" src="{filename}/static/images/projects/dimo/setup.jpg" alt="night-before setup image" style="padding-left: 0; padding-right: 30px" />
