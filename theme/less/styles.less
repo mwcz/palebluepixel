@@ -425,3 +425,32 @@ figure {
     h2 { margin-top: 0; }
 }
 
+/*********************************************************************
+ *                             Bar chart                             *
+ *********************************************************************/
+
+.pbp-barchart {
+    .pbp-barchart-labels,
+    .pbp-barchart-values {
+        float: left;
+        width: 50%;
+    }
+    .pbp-barchart-bar {
+        position    : relative;
+        font-size   : 1em;
+        height      : 1.2em;
+        margin      : 0 3px;
+        line-height : 1;
+        clear       : both;
+        float       : left;
+    }
+    .pbp-barchart-labels .pbp-barchart-bar {
+        float: right;
+    }
+    .pbp-barchart-values .pbp-barchart-bar {
+        background-color : darken(@pbp-pale-blue, 16%);
+        &:hover {
+            background-color : @pbp-pale-blue;
+        }
+    }
+}
