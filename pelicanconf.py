@@ -185,3 +185,15 @@ SOCIAL          = (('GitHub',  'https://github.com/mwcz'),
                    ('Twitter', 'https://twitter.com/mwcz'),)
 
 USE_OPEN_GRAPH = False
+
+#######################################################################
+#                           JINJA2 SETTINGS                           #
+#######################################################################
+
+from functools import partial
+
+JINJA_FILTERS = {
+    'sort_by_article_count': partial(
+        sorted,
+        key=lambda tags: len(tags[1]),
+        reverse=True)} # reversed for descending order
