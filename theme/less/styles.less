@@ -283,20 +283,43 @@ article, section {
         padding-bottom: 0;
     }
 }
+
 /*********************************************************************
  *                              Navbar                               *
  *********************************************************************/
 .pbp-navbar {
-    height              : 64px;
-    width               : 64px;
-    margin              : 32px 0 16px 50%;
-    .translate(-50%, 0);
+    padding    : 32px 0 20px;
+    text-align : center;
 }
-.pbp-logo {
+#pbp-logo {
 
-    width: 100%;
-    height: 100%;
+    width           : 100%;
+    height          : 100%;
 
+    padding         : 8px 12px;
+
+    letter-spacing  : 0.2em;
+    font-size       : 1.6em;
+    font-family     : @pbp-font-title;
+
+    color           : darken(@pbp-bg-color, 64%);
+    text-decoration : none;
+    border          : none;
+
+    transition      : 0.416s ease-out color;
+
+    &:hover {
+        color : lighten(@pbp-bg-color, 70%);
+    }
+
+    .pbp-dot {
+        display : inline-block;
+        color   : @pbp-pale-blue;
+    }
+
+    // these were written for the dynamic hover svg logo.  might bring it back
+    // at some point when browser support is better.
+    // 
     // position: relative;
     // height: 64px;
     // width: 64px;
@@ -426,6 +449,13 @@ figure {
 }
 
 /*********************************************************************
+ *                             Homepage                              *
+ *********************************************************************/
+.pbp-homepage {
+    font-size: 1.4 * @pbp-base-font-size;
+}
+
+/*********************************************************************
  *                             Bar chart                             *
  *********************************************************************/
 
@@ -433,24 +463,38 @@ figure {
     .pbp-barchart-labels,
     .pbp-barchart-values {
         float: left;
-        width: 50%;
     }
     .pbp-barchart-bar {
         position    : relative;
         font-size   : 1em;
-        height      : 1.2em;
-        margin      : 0 3px;
+        margin      : 0 1px;
         line-height : 1;
+        padding     : 4px;
         clear       : both;
         float       : left;
     }
-    .pbp-barchart-labels .pbp-barchart-bar {
-        float: right;
+    .pbp-barchart-labels {
+        width: 23.4%;
+        .pbp-barchart-bar {
+            float: right;
+        }
     }
-    .pbp-barchart-values .pbp-barchart-bar {
-        background-color : darken(@pbp-pale-blue, 16%);
-        &:hover {
-            background-color : @pbp-pale-blue;
+    .pbp-barchart-values {
+        width: 76.5%;
+        .pbp-barchart-bar {
+            text-align       : right;
+            background-color : darken(@pbp-pale-blue, 16%);
+            &:hover {
+                background-color : @pbp-pale-blue;
+            }
+        }
+        :visited .pbp-barchart-bar {
+            color            : darken(@pbp-pale-blue, 16%);
+            background-color : darken(@pbp-pale-blue, 32%);
+            &:hover {
+                color            : lighten(@pbp-pale-blue, 16%);
+                background-color : @pbp-pale-blue;
+            }
         }
     }
 }
