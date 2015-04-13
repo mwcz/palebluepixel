@@ -9,34 +9,38 @@
     {% set latest_article = articles|first %}
     {% set latest_project = [ 'DiMo', '/projects/dimo' ] %}
 
+
     <p>
-        {{ SITENAME }} is a utterly inadequate tribute to Carl Sagan's Cosmos,
-        the craft of computer programming, and the beauty of algorithmic art.
-        The two main sections are a
-        <a href="/posts" title="my blog posts">technical blog</a>
-        and some colorful and interactive
-        <a href="/projects" title="my programming projects">projects</a>.
+        Hello, Web.  Welcome to {{ SITENAME }}, where
+        <a href="https://twitter.com/mwcz">mwcz</a> writes about
+        {{ sorted_tags[0][0] }},
+        {{ sorted_tags[1][0] }}, and
+        {{ sorted_tags[2][0] }}, but you can find 
+        <a href="/tags" title="all the tags">other things</a> here too.
     </p>
 
     <p>
-        Most of the content orbits around
-        <a href="{{ sorted_tags[0][0].url }}">{{ sorted_tags[0][0] }}</a>,
-        <a href="{{ sorted_tags[1][0].url }}">{{ sorted_tags[1][0] }}</a>, and
-        <a href="{{ sorted_tags[2][0].url }}">{{ sorted_tags[2][0] }}</a>,
-        but you can find <a href="/tags" title="all the tags">other things</a>
-        here too.
+        <img class="homepage-silhouette" src="/static/images/home/dimo-2014-silhouette.png" alt="kinect depth map silhouette" />
+
+        If you look closely, you'll find some interesting, interactive
+        <a href="/projects" title="my programming projects">projects</a>,
+        and a really dull <a href="/posts" title="my blog posts">technical blog</a>.
     </p>
 
     <p>
-        My most recent blog post is 
+        The most recent project is an interactive art exhibit called 
+        <a title="my latest project, {{ latest_project[0] }}" href="{{ latest_project[1] }}">{{ latest_project[0] }}</a>,
+        take a look at that if you look at anything.
+    </p>
+
+    <p>
+        You can skip the most recent blog post,
         <a href="{{ latest_article.url }}">{{ latest_article.title }}</a>.
     </p>
 
     <p>
-        My most recent project is an interactive art exhibit called 
-        <a title="my latest project, {{ latest_project[0] }}" href="{{ latest_project[1] }}">{{ latest_project[0] }}</a>.
-    </p>
 
+    </p>
 </section>
 
 {% endblock content %}

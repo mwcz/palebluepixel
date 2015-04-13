@@ -38,6 +38,8 @@ DATE_FORMATS = {
         'en': '%Y-%m-%d',
         }
 
+CACHE_CONTENT = False
+
 #######################################
 #  pelican-bootstrap3 theme settings  #
 #######################################
@@ -63,22 +65,22 @@ MD_EXTENSIONS = (['toc'])
 
 # assets plugin settings
 
-ASSET_BUNDLES = (
-        ('pbp',
-            [
-                ('static/less/bootswatch/%s/bootstrap.less' % BOOTSTRAP_THEME) if BOOTSTRAP_THEME else 'static/less/bootstrap/bootstrap.less',
-                'static/less/styles.less',
-                'static/lib/prism/prism.css',
-                ],
-            {
-                'filters': 'less' if DEBUG else 'less,cssmin',
-                }
-            ),
-        )
+ASSET_BUNDLES = [
+    ('pbp',
+     [
+         ('static/less/bootswatch/%s/bootstrap.less' % BOOTSTRAP_THEME) if BOOTSTRAP_THEME else 'static/less/bootstrap/bootstrap.less',
+         'static/less/styles.less',
+         'static/lib/prism/prism.css',
+     ],
+     {
+         'filters': 'less' if DEBUG else 'less,cssmin',
+     }
+    ),
+]
 
-ASSET_SOURCE_PATHS = (
+ASSET_SOURCE_PATHS = [
     environ["HOME"] + '/workspace/palebluepixel-theme',
-)
+]
 
 # related posts settings
 

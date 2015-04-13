@@ -38,6 +38,8 @@ DATE_FORMATS = {
         'en': '%Y-%m-%d',
         }
 
+CACHE_CONTENT = False
+
 #######################################
 #  pelican-bootstrap3 theme settings  #
 #######################################
