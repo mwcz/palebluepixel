@@ -68,6 +68,7 @@ MD_EXTENSIONS = (['toc'])
 ASSET_BUNDLES = [
     ('pbp',
      [
+         'static/less/font-imports.less',
          ('static/less/bootswatch/%s/bootstrap.less' % BOOTSTRAP_THEME) if BOOTSTRAP_THEME else 'static/less/bootstrap/bootstrap.less',
          'static/less/styles.less',
          'static/lib/prism/prism.css',
