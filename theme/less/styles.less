@@ -302,7 +302,7 @@ article, section {
     font-size       : 1.6em;
     font-family     : @pbp-font-title;
 
-    color           : darken(@pbp-bg-color, 64%);
+    color           : lighten(@pbp-bg-color, 32%);
     text-decoration : none;
     border          : none;
 
@@ -380,7 +380,8 @@ article, section {
 }
 article h2,
 section h1 {
-    margin-top: 0;
+    margin-top : 0;
+    text-align : center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -451,6 +452,7 @@ figure {
 /*********************************************************************
  *                             Homepage                              *
  *********************************************************************/
+
 .pbp-homepage {
     font-size: 1.2 * @pbp-base-font-size;
     .homepage-silhouette {
@@ -502,3 +504,9 @@ figure {
         }
     }
 }
+
+/*********************************************************************
+ *                          Twitter widget                           *
+ *********************************************************************/
+
+.twitter-timeline { width: 100% !important; }
