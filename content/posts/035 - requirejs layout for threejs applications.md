@@ -5,69 +5,57 @@ Mwc: 35
 Status: draft
 TwitterWidgetID: 552862041153998849
 
-While working on DiMo, I found myself at the [ThreeJS
+While working on [DiMo][dimo], I found myself at the [ThreeJS
 examples][threejsexamples] page quite often, searching for working examples.
 
-    <html lang="en">
-        <head>
-            <title>a threejs app!</title>
-        </head>
-        <body>
+    <script id="vertexShader" type="x-shader/x-vertex">
+        <!-- dozens of lines of vertex shader (GLSL) code -->
+    </script>
 
-            <script src="../build/three.min.js"></script>
+    <script id="fragmentShader" type="x-shader/x-fragment">
+        <!-- dozens of lines of fragment shader (GLSL) code -->
+    </script>
 
-            <script id="vertexShader" type="x-shader/x-vertex">
-                <!-- dozens of lines of vertex shader (GLSL) code -->
-            </script>
+    <script>
+        <!-- hundreds of lines of ThreeJS code -->
+    </script>
 
-            <script id="fragmentShader" type="x-shader/x-fragment">
-                <!-- dozens of lines of fragment shader (GLSL) code -->
-            </script>
+I do believe that's the best way to distribute *demos*.  Sometimes sloppier
+something looks, the more people will hack on it, and I mean that in the
+kindest possible way.  Hackiness begets hackers.
 
-            <script>
-                <!-- hundreds of lines of ThreeJS code -->
-            </script>
-
-        </body>
-    </html>
-
-With luck, the ThreeJS code might reside in a separate `.js` file, but that's
-the extent of the 
-
-    src
-    ├── index.html
-    ├── css
-    │   └── app.scss
-    ├── img
-    │   └── many images
-    ├── js
-    │   ├── camera.js
-    │   ├── config.js
-    │   ├── config-panel.js
-    │   ├── gravity.js
-    │   ├── main.js
-    │   ├── mouse.js
-    │   ├── origin.js
-    │   ├── particle_colors.js
-    │   ├── particles.js
-    │   ├── player_colors.js
-    │   ├── players.js
-    │   ├── presets.js
-    │   ├── require.config.js
-    │   ├── scene.js
-    │   ├── timer.js
-    │   └── viewport.js
-    ├── shaders
-    │   ├── particle.frag
-    │   ├── player.frag
-    │   └── vertex.vert
-    └── lib
-        └── requirejs, threejs, datgui, et al
+<pre style="line-height: 1.2"><code style="line-height: 1"><!--
+-->src
+├── index.html
+├── js
+│   ├── camera.js
+│   ├── config.js
+│   ├── config-panel.js
+│   ├── gravity.js
+│   ├── main.js
+│   ├── mouse.js
+│   ├── origin.js
+│   ├── particle_colors.js
+│   ├── particles.js
+│   ├── player_colors.js
+│   ├── players.js
+│   ├── presets.js
+│   ├── require.config.js
+│   ├── scene.js
+│   ├── timer.js
+│   └── viewport.js
+├── shaders
+│   ├── particle.frag
+│   ├── player.frag
+│   └── vertex.vert
+└── lib
+    └── libraries like threejs, datgui, et al
+</code></pre>
 
 I have absolutely no experience architecting 3D applications, so the actual
 separations of concern are probably quite misguided!  However, even if
 misguided, it proved to be much easier to work with than a single monolithic
-HTML file.
+script file.
 
     <!doctype html>
     <html>
@@ -86,6 +74,12 @@ HTML file.
     </body>
     </html>
 
+<script>
+$('pre code').each(add_prism_js);
+function add_prism_js(i, el) {
+    $(el).addClass('language-markup');
+}
+</script>
 
-
+[dimo]: /projects/dimo
 [threejsexamples]: http://threejs.org/examples/
