@@ -21,7 +21,7 @@
     <![endif]-->
 
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
-            <link href="http://palebluepixel.org/theme/css/styles.min.css?8b4537c6" rel="stylesheet">
+            <link href="http://palebluepixel.org/theme/css/styles.min.css?fc29535c" rel="stylesheet">
 
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="http://palebluepixel.org/theme/js/jquery.min.js"></script>
@@ -49,39 +49,26 @@
         </header>
         <div class="entry-content">
             <nav class="toc"></nav>
-            <p>While working on DiMo, I found myself at the <a href="http://threejs.org/examples/">ThreeJS
+            <p>While working on <a href="/projects/dimo">DiMo</a>, I found myself at the <a href="http://threejs.org/examples/">ThreeJS
 examples</a> page quite often, searching for working examples.</p>
-<pre><code>&lt;html lang="en"&gt;
-    &lt;head&gt;
-        &lt;title&gt;a threejs app!&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
+<pre><code>&lt;script id="vertexShader" type="x-shader/x-vertex"&gt;
+    &lt;!-- dozens of lines of vertex shader (GLSL) code --&gt;
+&lt;/script&gt;
 
-        &lt;script src="../build/three.min.js"&gt;&lt;/script&gt;
+&lt;script id="fragmentShader" type="x-shader/x-fragment"&gt;
+    &lt;!-- dozens of lines of fragment shader (GLSL) code --&gt;
+&lt;/script&gt;
 
-        &lt;script id="vertexShader" type="x-shader/x-vertex"&gt;
-            &lt;!-- dozens of lines of vertex shader (GLSL) code --&gt;
-        &lt;/script&gt;
-
-        &lt;script id="fragmentShader" type="x-shader/x-fragment"&gt;
-            &lt;!-- dozens of lines of fragment shader (GLSL) code --&gt;
-        &lt;/script&gt;
-
-        &lt;script&gt;
-            &lt;!-- hundreds of lines of ThreeJS code --&gt;
-        &lt;/script&gt;
-
-    &lt;/body&gt;
-&lt;/html&gt;
+&lt;script&gt;
+    &lt;!-- hundreds of lines of ThreeJS code --&gt;
+&lt;/script&gt;
 </code></pre>
-<p>With luck, the ThreeJS code might reside in a separate <code>.js</code> file, but that's
-the extent of the </p>
-<pre><code>src
+<p>I do believe that's the best way to distribute <em>demos</em>.  Sometimes sloppier
+something looks, the more people will hack on it, and I mean that in the
+kindest possible way.  Hackiness begets hackers.</p>
+<pre style="line-height: 1.2"><code style="line-height: 1"><!--
+-->src
 ├── index.html
-├── css
-│   └── app.scss
-├── img
-│   └── many images
 ├── js
 │   ├── camera.js
 │   ├── config.js
@@ -104,12 +91,13 @@ the extent of the </p>
 │   ├── player.frag
 │   └── vertex.vert
 └── lib
-    └── requirejs, threejs, datgui, et al
+    └── libraries like threejs, datgui, et al
 </code></pre>
+
 <p>I have absolutely no experience architecting 3D applications, so the actual
 separations of concern are probably quite misguided!  However, even if
 misguided, it proved to be much easier to work with than a single monolithic
-HTML file.</p>
+script file.</p>
 <pre><code>&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -127,14 +115,26 @@ HTML file.</p>
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
+<script>
+$('pre code').each(add_prism_js);
+function add_prism_js(i, el) {
+    $(el).addClass('language-markup');
+}
+</script>
         </div>
 
         <!-- /.entry-content -->
 
-        <section class="comments" id="comments">
-            <h2>Comments</h2>
-            <a data-chrome="" class="twitter-timeline" data-dnt="true" data-widget-id="552862041153998849">#pbpx35 Tweets</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
-        </section>
+        <footer>
+            <small>
+                This article was published on
+                <time datetime="2014-09-20" pubdate="">2014-09-20</time>
+                by <a href="https://twitter.com/mwcz" title="mwcz twitter" rel="author">mwcz</a>
+                and tagged with
+                    <a href="http://palebluepixel.org/tag/programming" rel="category">programming</a>,                    <a href="http://palebluepixel.org/tag/javascript" rel="category">javascript</a>,                    <a href="http://palebluepixel.org/tag/requirejs" rel="category">requirejs</a>,                    <a href="http://palebluepixel.org/tag/amd" rel="category">amd</a>,                    <a href="http://palebluepixel.org/tag/threejs" rel="category">threejs</a>,                    <a href="http://palebluepixel.org/tag/webgl" rel="category">webgl</a>, and                    <a href="http://palebluepixel.org/tag/3d" rel="category">3d</a>.
+            </small>
+        </footer>
+
     </article>
 
 </main>
