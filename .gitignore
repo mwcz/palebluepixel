@@ -1,3 +1,4 @@
+Makefile
 srv.pid
 pelican.pid
 *.pyc
