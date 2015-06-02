@@ -200,7 +200,7 @@ article, section {
     margin-bottom    : @padding-large-vertical;
     .clearfix();
 
-    footer:last-child {
+    & > footer:last-child {
         text-align       : center;
         background-color : darken(@pbp-bg-color, 4%);
         padding          : @padding-base-horizontal @padding-large-horizontal;
@@ -416,15 +416,6 @@ section h1 {
 h1, h2, h3, h4, h5, h6 {
     font-family     : @pbp-font-title;
     color           : darken(@pbp-pale-blue, 16%);
-}
-
-/*********************************************************************
- *                              Footer                               *
- *********************************************************************
-.pbp-footer {
-    height: 60px;
-    argin-top: @grid-gutter-width;
-    background: url(/theme/images/background-navbar-white-noise.png);
 }
 
 /*********************************************************************
