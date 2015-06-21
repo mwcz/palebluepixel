@@ -1,5 +1,5 @@
 Title: The Lurking Horror
-Date: 2015-06-20
+Date: 2015-06-20 21:13:00
 Tags: text adventure, terminal, cool-retro-term, gaming, nostalgia
 Image: /static/images/037/lurking-horror-crt.png
 Mwc: 37
