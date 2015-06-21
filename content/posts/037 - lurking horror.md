@@ -1,21 +1,37 @@
-Title: Lurking Horror
-Date: 2015-01-16
-Tags: text adventure, terminal, cool-retro-term, gaming
-Status: draft
-Mwc: 38
+Title: The Lurking Horror
+Date: 2015-06-20
+Tags: text adventure, terminal, cool-retro-term, gaming, nostalgia
+Image: /static/images/037/lurking-horror-crt.png
+Mwc: 37
 
+In the midst of this beastly summer we've just entered, nothing seems farther
+away than the lung-clenching air of winter.  When things are this hot, and
+pools and popsicles fail to cool, there's one foolproof way to get into the
+spirit of winter: The Lurking Horror.
 
-[asked the author][gh-issue]
+> ... you practically froze to death slogging over here from the dorm.  Not to
+> mention jumping at every shadow, what with all the recent disappearances.
 
-First [install cool-retro-term][install].
+The Lurking Horror is a classic Infocom text adventure and a sibling of Zork.
+For best results, couple this game with Cool-Retro-Term, a Cathode-Ray-Tube
+terminal monitor simulator.  <abbr title="Cool-Retro-Term">CRT</abbr> boots you
+off your 2015 high-DPI display and beams you into a world of 1980s nostalgia.
 
-Then install the open-source of the Z-machine, frotz.
+First [install cool-retro-term][install].  Then install [frotz][frotz] (the
+Z-Machine engine which runs all the old Infocom text adventures).
 
     sudo yum install frotz
+
+Locate `LURKING.DAT` in your copy of Lurking Horror, and...
+
     frotz LURKING.DAT
 
-Grab your clicky keyboard, make CRT fullscreen, turn off the lights, and
-immerse yourself in the cathode rays.
+![The Lurking Horror running in Cool-Retro-Term](/static/images/037/lurking-horror-crt.png)
+
+Crank up the AC, grab your clicky keyboard, make CRT fullscreen, turn off the
+lights, and bathe in the cool cathode rays.
 
 [gh-issue]: https://github.com/Swordfish90/cool-retro-term/issues/208
 [install]: https://github.com/Swordfish90/cool-retro-term#get-cool-retro-term
+[lhwiki]: https://en.wikipedia.org/wiki/The_Lurking_Horror
+[frotz]: https://github.com/DavidGriffith/frotz
