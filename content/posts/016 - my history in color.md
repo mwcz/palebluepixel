@@ -1,6 +1,6 @@
 Title: My History in Color
 Date: 2012-01-16 22:15:50
-Tags: html5, javascript, color
+Tags: html5, javascript, color, web
 Mwc: 16
 Status: draft
 

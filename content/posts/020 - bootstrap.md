@@ -1,6 +1,6 @@
 Title: Bootstrap &amp; Blogofile
 Date: 2012-07-03 22:44:50
-Tags: bootstrap, mwcz.org
+Tags: bootstrap, mwcz.org, web
 Slug: bootstrap---blogofile
 Mwc: 20
 

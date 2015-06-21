@@ -1,6 +1,6 @@
 Title: RequireJS Arguments Undefined
 Date: 2014-06-09
-Tags: programming, javascript, requirejs, amd
+Tags: programming, javascript, requirejs, amd, web
 Status: draft
 Mwc: 31
 

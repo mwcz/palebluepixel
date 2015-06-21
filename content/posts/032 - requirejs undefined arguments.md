@@ -1,6 +1,6 @@
 Title: RequireJS Dynamic Dependencies
 Date: 2014-07-23
-Tags: programming, javascript, requirejs, amd
+Tags: programming, javascript, requirejs, amd, web
 Mwc: 32
 Status: draft
 

@@ -1,6 +1,6 @@
 Title: RGB WebGL Color Cube
 Date: 2014-03-23
-Tags: html5, javascript, color, colorpal, webgl
+Tags: html5, javascript, color, colorpal, webgl, web
 Image: /static/images/026/colorcube.jpg
 Mwc: 26
 

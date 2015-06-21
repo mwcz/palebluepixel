@@ -1,6 +1,6 @@
 Title: Introducing Canvas Indexed Color
 Date: 2012-07-03 23:44:50
-Tags: html5, canvas, color
+Tags: html5, canvas, color, web
 Summary: ![White SVG Tiger](/static/images/021/hahatiger.png)
 Mwc: 21
 
