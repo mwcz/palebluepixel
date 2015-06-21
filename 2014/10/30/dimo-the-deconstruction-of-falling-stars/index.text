@@ -1,6 +1,6 @@
 Title: DiMo: The Deconstruction of Falling Stars
 Date: 2014-10-30
-Tags: programming, javascript, requirejs, amd, threejs, webgl, 3d, art, sparkcon, geekspark, dimo, physics
+Tags: programming, javascript, requirejs, amd, threejs, webgl, 3d, art, sparkcon, geekspark, dimo, physics, web
 Image: /static/images/034/ring-explosion.png
 Summary: The construction of a WebGL particle physics gravity simulation *slash* interactive art installation.
 Mwc: 34

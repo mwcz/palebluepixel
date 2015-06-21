@@ -1,6 +1,6 @@
 Title: Toy javascript unit tester
 Date: 2012-01-30 21:50:00
-Tags: javascript, testing
+Tags: javascript, testing, web
 Mwc: 18
 
 Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and had a minor epiphany.  In the back of my mind, there has always been a bit of uncertainty as to how unit testing frameworks work.  Deep in my brain I knew there was something I didn't understand, but I wasn't quite sure what.  I never gave it any conscious thought.

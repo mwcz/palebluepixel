@@ -1,6 +1,6 @@
 Title: HTML5 canvas RGB histogram
 Date: 2011-11-16 17:25:00
-Tags: html5, canvas, color, jsimage
+Tags: html5, canvas, color, jsimage, web
 Mwc: 3
 
 This is yet another demo from around 2009.  It's simple enough.  Click a

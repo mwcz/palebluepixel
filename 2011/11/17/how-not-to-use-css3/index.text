@@ -1,6 +1,6 @@
 Title: How not to use CSS3
 Date: 2011-11-17 20:25:00
-Tags: html5, css3, typography
+Tags: html5, css3, typography, web
 Mwc: 6
 
 How to ruin a good thing...
