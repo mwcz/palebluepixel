@@ -2,6 +2,7 @@ Title: WebAssembly is the Keystone
 Date: 2015-06-20 22:52:24
 Tags: wasm, web, javascript
 Image: /static/images/038/asm.png
+TwitterWidgetID: 612458413184942080
 Mwc: 38
 
 Within the last two days, WebAssembly (**wasm**) has graced the eyeballs of
