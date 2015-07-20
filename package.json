@@ -1,0 +1,22 @@
+{
+  "name": "palebluepixel",
+  "version": "0.0.0",
+  "description": "This is my blog.",
+  "main": "csspurify.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mwcz/palebluepixel.git"
+  },
+  "author": "mwcz",
+  "license": "GPLv2",
+  "bugs": {
+    "url": "https://github.com/mwcz/palebluepixel/issues"
+  },
+  "devDependencies": {
+    "purify-css": "~1.0.17",
+    "diveSync": "~0.3.0"
+  }
+}

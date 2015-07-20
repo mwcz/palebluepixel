@@ -49,12 +49,13 @@ regenerate: clean
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 serve:
-	cd $(OUTPUTDIR) && python -m SimpleHTTPServer
+	@echo "Serving at http://localhost:8001"
+	http-server -o -a localhost -p 8001 ./output/
 
 devserver:
 	$(BASEDIR)/develop_server.sh restart
 
-publish:
+publish: clean
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
 ssh_upload: publish
@@ -69,7 +70,18 @@ dropbox_upload: publish
 ftp_upload: publish
 	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "mirror -R $(OUTPUTDIR) $(FTP_TARGET_DIR) ; quit"
 
-github: publish
+purifycss: savecss
+	node csspurify.js > output/theme/css/styles.min.css
+	rm ./styles.min.css
+
+savecss:
+	mv output/theme/css/styles.min.css ./
+
+restorecss:
+	mv styles.min.css output/theme/css/
+
+github: publish purifycss
+	echo "palebluepixel.org" > $(OUTPUTDIR)/CNAME
 	ghp-import $(OUTPUTDIR)
 	git push origin gh-pages
 
