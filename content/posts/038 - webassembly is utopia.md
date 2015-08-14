@@ -26,22 +26,40 @@ himself:
     </footer>
 </blockquote>
 
+Back then, Tim enabled the first Web browser to follow links to newsgroups and
+FTP servers.  By linking up a slew of existing content, the Web became much
+more useful.
+
 This realization is pretty potent.  The web has taken over the world because of
-the power of linking things together, even things not yet on the web.  Of HTML,
-HTTP, and URL, the big three inventions of the early web, Tim saw the
-now-humble URL as the most vital.  Today, we can effortlessly follow URLs to
-most any type of media file, but the keystone is still missing.
+the power of linking things together, especially things not yet on the web.  I
+was initially surprised that Tim saw the now-humble URL as the most vital Web
+technology and had it standardized before HTTP and HTML.
+
+Today, we can follow URLs to images, videos, articles, text, PDFs; most types
+of media are linkable.  Clicking/tapping a link is the most commonplace thing
+in the world.
+
+There's one type of content that still isn't linkable, though: *Applications*.
 
 For the past ten years, the JavaScript revolution has been trying to make real
 the dream of **following a URL to an application**.
 
+It's been a circuitous, roundabout, and partially successful journey.
+[Emscripten][emscripten] has made it possible and [asm.js][asmjs] made it
+faster.
+
+My great hope for WebAssembly is that it can bring the world's teeming vault of
+existing applications onto the web, with very little fuss.  Imagine using
+Photoshop merely by going to `photoshop.adobe.com`, and you'll have some idea
+of where WebAssembly might carry us.
+
 ---
 
-After the announcement, I read every bit of documentation currently available,
-about a dozen articles, joined the [W3C Community Group][w3cgroup], and have
-been hanging out in the IRC channel (`irc://irc.w3.org:6667/#webassembly`).  I
-don't want to speak too soon, but I'm pretty well convinced that wasm is the
-next revolution.
+After the WebAssembly announcement, I read every bit of documentation currently
+available, about a dozen articles, joined the [W3C Community Group][w3cgroup],
+and have been hanging out in the IRC channel
+(`irc://irc.w3.org:6667/#webassembly`).  I don't want to speak too soon, but
+I'm pretty well convinced that wasm is the next revolution.
 
 <!-- I'm imagining a future where this is a desktop shortcut:
 
@@ -73,3 +91,5 @@ For further reading, here are some of the best articles I've found:
 [axel_article]: www.2ality.com/2015/06/web-assembly.html
 [w3cgroup]: https://www.w3.org/community/webassembly/
 [faq]: https://github.com/WebAssembly/design/blob/master/FAQ.md
+[emscripten]: http://emscripten.org/
+[asmjs]: http://asmjs.org/
