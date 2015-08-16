@@ -225,6 +225,7 @@ article, section {
     .make-sm-column(4);
     .make-md-column(4);
     .make-lg-column(3);
+    float: right !important;
 }
 
 
@@ -416,6 +417,11 @@ section h1 {
 h1, h2, h3, h4, h5, h6 {
     font-family     : @pbp-font-title;
     color           : darken(@pbp-pale-blue, 16%);
+}
+
+// for blog post list
+article > h2 {
+    margin-top: 0;
 }
 
 /*********************************************************************
