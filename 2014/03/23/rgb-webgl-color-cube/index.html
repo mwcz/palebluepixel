@@ -80,7 +80,7 @@ of actual documentation.</p>
 docs, I skimmed the examples until I found an existing scene that had the
 effect I needed.</p>
 <p>For this demo, drawing a cube was easy, and even populating it with dots was easy, but </p>
-<h1 id="colored-particles">Colored particles</h1>
+<h2 id="colored-particles">Colored particles</h2>
 <p>The color cube uses a particle system to render 2D color points inside a 3D
 cube.</p>
 <p>Eventually I found a <a href="http://threejs.org/examples/#webgl_particles_billboards_colors">particle system demo with colors</a>, which held the key.</p>
@@ -92,7 +92,7 @@ match each vertex in the <code>vertices</code> array with a color in the <code>c
 vertex, <span style="color: red;">red</span> values are mapped to the <code>X</code> axis,
 and similarly <span style="color: green">green</span> to <code>Y</code> and <span
 style="color: blue">blue</span> to <code>Z</code>.</p>
-<h1 id="optimization">Optimization</h1>
+<h2 id="optimization">Optimization</h2>
 <p>Rendering a point for each pixel in a huge image image would be overkill, so
 I used the pixel culling already present in ColorPal to scale the number of
 points down to a more reasonable 128<sup>2</sup>.  Increasing that number also

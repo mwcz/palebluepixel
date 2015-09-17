@@ -479,7 +479,7 @@ of actual documentation.&lt;/p&gt;
 docs, I skimmed the examples until I found an existing scene that had the
 effect I needed.&lt;/p&gt;
 &lt;p&gt;For this demo, drawing a cube was easy, and even populating it with dots was easy, but &lt;/p&gt;
-&lt;h1 id="colored-particles"&gt;Colored particles&lt;/h1&gt;
+&lt;h2 id="colored-particles"&gt;Colored particles&lt;/h2&gt;
 &lt;p&gt;The color cube uses a particle system to render 2D color points inside a 3D
 cube.&lt;/p&gt;
 &lt;p&gt;Eventually I found a &lt;a href="http://threejs.org/examples/#webgl_particles_billboards_colors"&gt;particle system demo with colors&lt;/a&gt;, which held the key.&lt;/p&gt;
@@ -491,7 +491,7 @@ match each vertex in the &lt;code&gt;vertices&lt;/code&gt; array with a color in
 vertex, &lt;span style="color: red;"&gt;red&lt;/span&gt; values are mapped to the &lt;code&gt;X&lt;/code&gt; axis,
 and similarly &lt;span style="color: green"&gt;green&lt;/span&gt; to &lt;code&gt;Y&lt;/code&gt; and &lt;span
 style="color: blue"&gt;blue&lt;/span&gt; to &lt;code&gt;Z&lt;/code&gt;.&lt;/p&gt;
-&lt;h1 id="optimization"&gt;Optimization&lt;/h1&gt;
+&lt;h2 id="optimization"&gt;Optimization&lt;/h2&gt;
 &lt;p&gt;Rendering a point for each pixel in a huge image image would be overkill, so
 I used the pixel culling already present in ColorPal to scale the number of
 points down to a more reasonable 128&lt;sup&gt;2&lt;/sup&gt;.  Increasing that number also
