@@ -42,7 +42,7 @@ effect I needed.
 For this demo, drawing a cube was easy, and even populating it with dots was easy, but 
 
 Colored particles
-=================
+-----------------
 
 The color cube uses a particle system to render 2D color points inside a 3D
 cube.
@@ -61,7 +61,7 @@ and similarly <span style="color: green">green</span> to `Y` and <span
 style="color: blue">blue</span> to `Z`.
 
 Optimization
-============
+------------
 
 Rendering a point for each pixel in a huge image image would be overkill, so
 I used the pixel culling already present in ColorPal to scale the number of
