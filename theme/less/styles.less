@@ -420,8 +420,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 // for blog post list
-article > h2 {
-    margin-top: 0;
+article {
+
+    // for time element direct children of article (ie, blog post list, not
+    // blog post full)
+    & > .meta {
+        color     : darken(desaturate(@pbp-pale-blue, 100%), 32%);
+        font-size : 12px;
+        padding   : 0;
+        margin    : 0;
+    }
+
+    header > h2 {
+        margin-top: 0;
+    }
 }
 
 /*********************************************************************
@@ -483,7 +495,7 @@ figure {
     font-size: 1.2 * @pbp-base-font-size;
     .homepage-silhouette {
         max-width: 100%;
-        float: right;
+        margin: @padding-large-vertical auto;
     }
 }
 

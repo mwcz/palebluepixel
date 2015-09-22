@@ -110,7 +110,6 @@ pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;backgrou
 .col-xs-6{width:50%}
 .col-xs-5{width:41.66666667%}
 table{max-width:100%;background-color:transparent}
-th{text-align:left}
 .table{width:100%;margin-bottom:21px}
 .table>thead>tr>th,.table>tbody>tr>th,.table>tfoot>tr>th,.table>thead>tr>td,.table>tbody>tr>td,.table>tfoot>tr>td{padding:8px;line-height:1.42857143;vertical-align:top;border-top:1px solid #ecf0f1}
 .table>thead>tr>th{vertical-align:bottom;border-bottom:2px solid #ecf0f1}
@@ -709,7 +708,8 @@ article>footer,section>footer{text-align:center;background-color:#0d0d0d;padding
 .page-header,.page-header h1{margin-top:0}
 article h1,section h1{margin-top:0;margin-bottom:26px;text-align:center;font-size:30.96px}
 h1,h2,h3,h4{font-family:"Linux Libertine";color:#6082b3}
-article>h2{margin-top:0}
+article>.meta{color:#606060;font-size:12px;padding:0;margin:0}
+article header>h2{margin-top:0}
 figure{margin:3rem 0}
 figure figcaption{text-align:center;font-size:13.76px;color:#6082b3}
 figure [role=math]{padding:.5rem 0;text-align:center}
@@ -718,7 +718,7 @@ figure [role=math]:last-child{padding-bottom:3rem}
 .summary img{max-width:512px}
 #comments h2{margin-top:0}
 .pbp-homepage{font-size:20.64px}
-.pbp-homepage .homepage-silhouette{max-width:100%;float:right}
+.pbp-homepage .homepage-silhouette{max-width:100%;margin:18px auto}
 .pbp-barchart .pbp-barchart-labels,.pbp-barchart .pbp-barchart-values{float:left}
 .pbp-barchart .pbp-barchart-bar{position:relative;font-size:1em;margin:0 1px;line-height:1;padding:4px;clear:both;float:left}
 .pbp-barchart .pbp-barchart-labels{width:23.4%}
