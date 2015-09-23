@@ -649,7 +649,7 @@ a.list-group-item.active .list-group-item-text,a.list-group-item.active:hover .l
 .panel-info{border-color:#3498db}
 .panel-info>.panel-heading{color:#fff;background-color:#3498db;border-color:#3498db}
 html{overflow-y:scroll}
-body{font-family:Lato;font-size:17.2px;background-color:#171717;color:#f2f2f2;margin:0;padding:0}
+body{font-family:Lato;font-size:17.2px;background-color:#171717;color:#f2f2f2;margin:0;padding:10px 15px}
 blockquote cite::before{content:'—';color:#404040}
 blockquote{border-left:5px solid #2b2b2b;color:#97adcd}
 blockquote p{font-weight:400}
