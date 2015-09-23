@@ -2,6 +2,8 @@ Title: Bootstrap &amp; Blogofile
 Date: 2012-07-03 22:44:50
 Tags: bootstrap, mwcz.org, web
 Slug: bootstrap---blogofile
+Summary: I've converted the site layout to bootstrap.
+Status: draft
 Mwc: 20
 
 Surprise.
@@ -11,7 +13,8 @@ I've converted the site layout to
 
 Massive appreciation to [Doug Latornell](http://douglatornell.ca "Doug
 Latornell") for continuing development of Blogofile, the static blog compiler
-that powers this site.  His contributions can be found at the official [blogofile GitHub repo](https://github.com/EnigmaCurry/blogofile/ "Blogofile GitHub repo").
+that powers this site.  His contributions can be found at the official
+[blogofile GitHub repo](https://github.com/EnigmaCurry/blogofile/ "Blogofile GitHub repo").
 
 Converting the layout to Bootstrap was a breeze thanks to the Mako templates.
 
