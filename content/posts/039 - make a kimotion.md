@@ -3,6 +3,7 @@ Date: 2015-09-17
 Tags: programming, javascript, threejs, webgl, 3d, 2d, art, sparkcon, geekspark, dimo, physics, web, kimotion
 Gallery: 039
 Mwc: 39
+Status: draft
 
 
 A year ago, I had the joy of working on Digital Motion, an interactive digital
