@@ -3,7 +3,7 @@ GitPython==0.3.2.1
 Jinja2==2.8
 Markdown==2.5.2
 MarkupSafe==0.23
-Pillow==2.2.1
+PIL==1.1.7
 Pygments==2.0.2
 Sphinx==1.2.2
 Unidecode==0.04.18

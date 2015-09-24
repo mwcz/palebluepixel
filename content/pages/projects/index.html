@@ -19,8 +19,14 @@ $(function () {
             {% import 'includes/panel.html' as project_thumbnail %}
 
             {{ project_thumbnail.write(
-                body_title   = 'DiMo',
-                body_text    = 'An interactive art installation and particle simulation created for SparkCon and powered by ThreeJS/WebGL.',
+                body_title   = 'Kimotion',
+                body_text    = 'A framework for building art exhibits that respond to participants\' motion.',
+                header_image = '/static/images/projects/icon_dimo.png',
+                link_url     = '/projects/kimotion',
+                ) }}
+            {{ project_thumbnail.write(
+                body_title   = 'DiMo: Particles',
+                body_text    = 'An interactive art installation and particle simulation created for SPARKcon and powered by ThreeJS/WebGL.',
                 header_image = '/static/images/projects/icon_dimo.png',
                 link_url     = '/projects/dimo',
                 ) }}
