@@ -24,7 +24,15 @@ WebSockets code.  I spent an extimated 80 hours building [DiMo:
 Particles][dimo-particles], mostly false starts and glitch hunting.  I'm sure
 Wray and Rippy have similar stories.
 
+{{ gallery }}
 
+Creative coding is so much fun that I can't help but want more people to get
+involved.  Nothing cures curmudgeony coders faster than working on a project
+where breaking things usually makes it *better*.
+
+With the steep learning curve, though, few would get involved.  There would
+need to be a shared foundation to build upon.  It should be easy to install and
+start coding.
 
 ![kimotion thumbnails][thumbnails]
 
@@ -42,10 +50,11 @@ curve, but enables detailed 3D scenes.
 
  - **Greg Gardner** for taking over and perfecting the kimotion server,
    implementing record/replay for easy development, and helping me debug
-   COUNTLESS graphical glitches and client issues, and being a software
+   *countless* graphical glitches and client issues, and being a software
    architecture guiding hand
  - **Jared Sprague** for creating the immaculate Fish game, beloved by all
-   children, and 
+   children, building a new computer to run the exhibit, and cohosting the
+   event with me
  - **Ben Pritchett** for tutorial docs and the great Snake mod
  - **Dave Yarwood** for contribution to docs, great questions, and
    allllllmost-finished music mod
