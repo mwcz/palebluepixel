@@ -5,6 +5,7 @@ Summary: Kimotion is a new framework for building interactive art exhibits.  It 
 Image: /static/images/gallery/400x/gallery/039/DSCF0634.JPG
 Gallery: 039
 Mwc: 39
+TwitterWidgetID: 647816206326595584
 
 A year ago, I had the joy of working on Digital Motion, an [interactive
 art][intart] exhibit for Raleigh's annual art festival, [SPARKcon][sparkcon].
