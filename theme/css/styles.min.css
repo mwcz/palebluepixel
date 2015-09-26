@@ -649,11 +649,12 @@ a.list-group-item.active .list-group-item-text,a.list-group-item.active:hover .l
 .panel-info{border-color:#3498db}
 .panel-info>.panel-heading{color:#fff;background-color:#3498db;border-color:#3498db}
 html{overflow-y:scroll}
-body{font-family:Lato;font-size:17.2px;background-color:#171717;color:#f2f2f2;margin:0;padding:10px 15px}
+body{font-family:Lato;font-size:19px;background-color:#171717;color:#f2f2f2;margin:0;padding:10px 15px}
 blockquote cite::before{content:'—';color:#404040}
 blockquote{border-left:5px solid #2b2b2b;color:#97adcd}
 blockquote p{font-weight:400}
-blockquote cite{font-size:13.76px}
+blockquote cite{font-size:15.2px}
+dd{margin-inline-start:40px}
 a{text-decoration:none!important;border-bottom:1px dotted;color:#97adcd;outline-color:#696969;border-color:#404040}
 a:hover{color:#ced8e7;border-bottom:1px solid;border-color:#696969}
 a:focus{color:#ced8e7;outline-color:#97adcd}
@@ -706,18 +707,18 @@ article>footer,section>footer{text-align:center;background-color:#0d0d0d;padding
 #pbp-logo .pbp-dot{display:inline-block;color:#97adcd;z-index:20;position:relative}
 #pbp-logo::after{content:"";position:absolute;z-index:10;top:0;left:0;width:100%;height:100%;background:-moz-linear-gradient(top,rgba(0,0,0,0) 0,#171717 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(0,0,0,0)),color-stop(100%,#171717));background:-webkit-linear-gradient(top,rgba(0,0,0,0) 0,#171717 100%);background:-o-linear-gradient(top,rgba(0,0,0,0) 0,#171717 100%);background:-ms-linear-gradient(top,rgba(0,0,0,0) 0,#171717 100%);background:linear-gradient(to bottom,rgba(0,0,0,0) 0,#171717 100%)}
 .page-header,.page-header h1{margin-top:0}
-article h1,section h1{margin-top:0;margin-bottom:26px;text-align:center;font-size:30.96px}
+article h1,section h1{margin-top:0;margin-bottom:26px;text-align:center;font-size:34.2px}
 h1,h2,h3,h4{font-family:"Linux Libertine";color:#6082b3}
 article>.meta{color:#606060;font-size:12px;padding:0;margin:0}
 article header>h2{margin-top:0}
 figure{margin:3rem 0}
-figure figcaption{text-align:center;font-size:13.76px;color:#6082b3}
+figure figcaption{text-align:center;font-size:15.2px;color:#6082b3}
 figure [role=math]{padding:.5rem 0;text-align:center}
 figure [role=math]:first-child{padding-top:3rem}
 figure [role=math]:last-child{padding-bottom:3rem}
 .summary img{max-width:512px}
 #comments h2{margin-top:0}
-.pbp-homepage{font-size:20.64px}
+.pbp-homepage{font-size:22.8px}
 .pbp-homepage .homepage-silhouette{max-width:100%;margin:18px auto}
 .pbp-barchart .pbp-barchart-labels,.pbp-barchart .pbp-barchart-values{float:left}
 .pbp-barchart .pbp-barchart-bar{position:relative;font-size:1em;margin:0 1px;line-height:1;padding:4px;clear:both;float:left}
@@ -729,6 +730,9 @@ figure [role=math]:last-child{padding-bottom:3rem}
 .pbp-barchart .pbp-barchart-values :visited .pbp-barchart-bar{color:#6082b3;background-color:#3f5a82}
 .pbp-barchart .pbp-barchart-values :visited .pbp-barchart-bar:hover{color:#ced8e7;background-color:#97adcd}
 .twitter-timeline{width:100%!important}
+ul.gallery{padding:0;margin:0;list-style:none;overflow:auto}
+ul.gallery li{float:left;margin:4px}
+ul.gallery li img{display:inline!important}
 code[class*="language-"],pre[class*="language-"]{color:white;direction:ltr;font-family:Consolas,Monaco,'Andale Mono',monospace;text-align:left;text-shadow:0 -0.1em .2em black;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}
 pre[class*="language-"]{overflow:auto}
 pre[class*="language-"]::selection{background:#27292a}

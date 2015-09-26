@@ -43,6 +43,10 @@ blockquote {
     }
 }
 
+dd {
+    margin-inline-start: 40px;
+}
+
 @media (min-width: 768px) {
     .container {
         max-width: 830px;
@@ -549,3 +553,21 @@ figure {
  *********************************************************************/
 
 .twitter-timeline { width: 100% !important; }
+
+/*********************************************************************
+ *                             Gallery                               *
+ *********************************************************************/
+
+ul.gallery {
+    padding    : 0;
+    margin     : 0;
+    list-style : none;
+    overflow   : auto;
+    li {
+        float: left;
+        margin: 4px;
+        img {
+            display: inline !important;
+        }
+    }
+}

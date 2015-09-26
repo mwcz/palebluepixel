@@ -1,5 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Pale Blue Pixel</title><link href="http://palebluepixel.org/" rel="alternate"></link><link href="http://palebluepixel.org/feeds/mwcz.atom.xml" rel="self"></link><id>http://palebluepixel.org/</id><updated>2015-06-20T22:52:24-04:00</updated><entry><title>WebAssembly is the Keystone</title><link href="http://palebluepixel.org/2015/06/20/webassembly-is-the-keystone/" rel="alternate"></link><updated>2015-06-20T22:52:24-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-06-20:2015/06/20/webassembly-is-the-keystone/</id><summary type="html">&lt;p&gt;Within the last two days, WebAssembly (&lt;strong&gt;wasm&lt;/strong&gt;) has graced the eyeballs of
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pale Blue Pixel</title><link href="http://palebluepixel.org/" rel="alternate"></link><link href="http://palebluepixel.org/feeds/mwcz.atom.xml" rel="self"></link><id>http://palebluepixel.org/</id><updated>2015-09-26T00:00:00-04:00</updated><entry><title>Make a Kimotion!</title><link href="http://palebluepixel.org/2015/09/26/make-a-kimotion/" rel="alternate"></link><updated>2015-09-26T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-09-26:2015/09/26/make-a-kimotion/</id><summary type="html">&lt;p&gt;A year ago, I had the joy of working on Digital Motion, an &lt;a href="https://en.wikipedia.org/wiki/Interactive_art"&gt;interactive
+art&lt;/a&gt; exhibit for Raleigh's annual art festival, &lt;a href="https://en.wikipedia.org/wiki/Sparkcon"&gt;SPARKcon&lt;/a&gt;.
+The month leading up to SPARKcon 2014 was a mad dash of perfecting the graphics
+and physics equations of my &lt;a href="/projects/dimo"&gt;DiMo: Particles&lt;/a&gt; display.  After a
+wonderful weekend of watching visitors enjoy the weird things we made, a lesson
+began congealing itself in my mind.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Creating interactive art exhibits from scratch is &lt;strong&gt;really&lt;/strong&gt; hard.  Maybe I
+can share some of this work, so others can focus on the art...&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Creative coding is &lt;em&gt;so much fun&lt;/em&gt; that I can't help but wish more people were
+involved.  Nothing cures curmudgeony coders faster than working on a project
+where mistakes often make it &lt;em&gt;better&lt;/em&gt;.  With such a steep learning curve,
+though, few would get involved.  There would need to be a shared foundation.&lt;/p&gt;
+&lt;h3 id="enter-kimotion"&gt;Enter Kimotion&lt;/h3&gt;
+&lt;p&gt;&lt;a href="http://kimotion.xyz"&gt;Kimotion&lt;/a&gt; is a new framework for building interactive art
+exhibits.  It will appeal mostly to the Programmer Artist types.  Think
+"Warrior Poet", but with keyboards.&lt;/p&gt;
+&lt;p&gt;With Kimotion, you can create a "mod" which is essentially your own blank
+canvas.  On the canvas, you can paint pixels, but not boring, everyday pixels.
+What you paint can be animated by the movements of the people in the room.&lt;/p&gt;
+&lt;p&gt;Videos speak louder than text, so here are some videos of a variety of mods.&lt;/p&gt;
+&lt;iframe id="vimeo-player" src="https://player.vimeo.com/video/136951447" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;div class="vimeo-thumbnail"&gt; &lt;img src="http://kimotion.xyz/images/video_thumbnails/9.jpg" data-vid-src="https://player.vimeo.com/video/136951447" /&gt; &lt;/div&gt;
+
+&lt;div class="vimeo-thumbnail"&gt; &lt;img src="http://kimotion.xyz/images/video_thumbnails/11.jpg" data-vid-src="https://player.vimeo.com/video/137905577" /&gt; &lt;/div&gt;
+
+&lt;div class="vimeo-thumbnail"&gt; &lt;img src="http://kimotion.xyz/images/video_thumbnails/3.jpg" data-vid-src="https://player.vimeo.com/video/126292045" /&gt; &lt;/div&gt;
+
+&lt;div class="vimeo-thumbnail"&gt; &lt;img src="http://kimotion.xyz/images/video_thumbnails/10.jpg" data-vid-src="https://player.vimeo.com/video/137762679" /&gt; &lt;/div&gt;
+
+&lt;div class="vimeo-thumbnail"&gt; &lt;img src="http://kimotion.xyz/images/video_thumbnails/6.jpg" data-vid-src="https://player.vimeo.com/video/136126008" /&gt; &lt;/div&gt;
+
+&lt;div class="vimeo-thumbnail"&gt; &lt;img src="http://kimotion.xyz/images/video_thumbnails/5.jpg" data-vid-src="https://player.vimeo.com/video/133870922" /&gt; &lt;/div&gt;
+
+&lt;p&gt;I began building Kimotion in February of 2015, well in advance of SPARKcon X,
+which took place in September.  This was a far cry from the single month of
+harebrained scampering of the year before!  The extra time, and the existance
+of a true framework, allowed many more people to create visualizations (aka
+"mods").  In the end, fifteen mods were created in time for the SPARKcon
+exhibit.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Over a thousand&lt;/em&gt; people visited our exhibit last weekend.  It's hard to put
+into words how rewarding it is to see so many children and adults enjoy the sum
+of our planning, hard work, and creativity.&lt;/p&gt;
+&lt;h3 id="gallery"&gt;Gallery&lt;/h3&gt;
+&lt;p&gt;Here are some photos from SPARKcon X (2015), and setup the night before.&lt;/p&gt;
+&lt;p&gt;{{ gallery }}&lt;/p&gt;
+&lt;h3 id="the-future"&gt;The future&lt;/h3&gt;
+&lt;p&gt;What's next for Kimotion?  Several SPARKcon attendees had excellent ideas.
+From installing Kimotion in schools to putting a permanent installation in
+their own homes.&lt;/p&gt;
+&lt;p&gt;I love the school idea in particular because, if last weekend was any
+indication, kids love this thing and it really encouraged them to move (a lot).&lt;/p&gt;
+&lt;p&gt;It would cost a school system very little.  Schools already have (one would
+hope) computers and projectors or smartboards.  Kimotion itself is free and
+open-source.  The only cost would be the Kinect.  First-edition Kinects often
+sell for less than $30 each.  If anyone on a PTA or school board reads this and
+finds it interesting, &lt;a href="mailto:mwc@clayto.com"&gt;email&lt;/a&gt; or &lt;a
+href="https://twitter.com/mwcz"&gt;tweet&lt;/a&gt; me.&lt;/p&gt;
+&lt;p&gt;I started Kimotion with the hope that it would encourage programmers to use
+their skills to create elegance that everyone can appreciate.  If children are
+also encouraged to exercise, I won't complain!&lt;/p&gt;
+&lt;h3 id="e-pluribus-unum"&gt;E Pluribus Unum&lt;/h3&gt;
+&lt;p&gt;I can't express how grateful I am to everyone who contributed to Kimotion
+itself, created mods, and made the Digital Motion exhibit at SPARKcon a huge
+success this year.&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;Greg Gardner&lt;/dt&gt;
+&lt;dd&gt;for taking over and perfecting the kimotion server, implementing record/replay for easy development, and helping me debug *countless* graphical glitches and client issues, and being a software architecture guiding hand&lt;/dd&gt;
+&lt;dt&gt;Jared Sprague&lt;/dt&gt;
+&lt;dd&gt;for creating the immaculate Fish game mod, beloved by all children, building a new computer to run the exhibit, and cohosting the event with me&lt;/dd&gt;
+&lt;dt&gt;Ben Pritchett&lt;/dt&gt;
+&lt;dd&gt;for writing tutorial documentation and the great Snake mod&lt;/dd&gt;
+&lt;dt&gt;Cas Roberts&lt;/dt&gt;
+&lt;dd&gt;for endless encouragement and great ideas, including the very successful recording/replay scheme&lt;/dd&gt;
+&lt;dt&gt;Truett Thompson&lt;/dt&gt;
+&lt;dd&gt;for keeping geekSPARK on track, on schedule, and funded&lt;/dd&gt;
+&lt;dt&gt;Kevin Howell&lt;/dt&gt;
+&lt;dd&gt;for creating the enigmatic, unexplainable, and beautiful Spiral mod&lt;/dd&gt;
+&lt;dt&gt;Ian Hands&lt;/dt&gt;
+&lt;dd&gt;for looping me into the most fun project I've ever worked on&lt;/dd&gt;
+&lt;dt&gt;Noel White&lt;/dt&gt;
+&lt;dd&gt;for so much organizational geekSPARK work and fundraising&lt;/dd&gt;
+&lt;dt&gt;Mary Hands&lt;/dt&gt;
+&lt;dd&gt;for saving the entire exhibit friday night when we were flummoxed by hardware failure&lt;/dd&gt;
+&lt;dt&gt;Kyle Buchanan&lt;/dt&gt;
+&lt;dd&gt;for great questions and alllllllmost finishing his Starfighter mod&lt;/dd&gt;
+&lt;dt&gt;Justis Peters&lt;/dt&gt;
+&lt;dd&gt;for paving the DiMo trail for the rest of us to follow&lt;/dd&gt;
+&lt;dt&gt;Dave Yarwood&lt;/dt&gt;
+&lt;dd&gt;for contribution to docs, great questions, and allllllmost-finished music mod&lt;/dd&gt;
+&lt;dt&gt;Rowen Sprague&lt;/dt&gt;
+&lt;dd&gt;for being the official tester&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;h3 id="more-information"&gt;More information&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://kimotion.xyz"&gt;Kimotion main project page&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/mwcz/Kimotion"&gt;Kimotion source code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/projects/dimo"&gt;More about last year's exhibit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://opensource.com/life/15/2/sparkcon-geekspark-digital-motion-exhibit"&gt;Opensource.com article about DiMo 2014&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/"&gt;The Deconstruction of Falling Stars&lt;/a&gt; - technical info about how it was built&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://palebluepixel.org/2014/08/25/particles-and-p-dimo-comes-to-life/"&gt;Particles and π - DiMo Comes to Life&lt;/a&gt; - more about the exhibit at SparkCon!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;style type="text/css"&gt;
+.vimeo-thumbnail {
+    cursor   : pointer;
+    position : relative;
+    z-index  : 9;
+    display  : inline-block;
+    width    : 32.2%;
+}
+
+.vimeo-thumbnail::before {
+    color       : white;
+    content     : "\25B6";
+    opacity     : 0.8;
+    position    : absolute;
+    display     : block;
+    text-shadow : 0 0 6px black;
+    z-index     : 100;
+    font-size   : 50px;
+    left        : 50%;
+    top         : 42%;
+    transform   : translate(-50%, -50%);
+}
+
+.vimeo-thumbnail:hover::before {
+    opacity     : 1;
+    text-shadow : 0 0 6px white;
+}
+&lt;/style&gt;
+
+&lt;script&gt;
+var iframe = $('iframe#vimeo-player');
+
+function handle_vid_click() {
+    iframe.attr('src', $(this).find('[data-vid-src]').attr('data-vid-src') + '?autoplay=1');
+}
+
+function init_vimeo_picker() {
+    // get every img with data-vid-src
+    // get ref to iframe
+    // create onclick for each img which sets iframe's src to data-vid-src
+    var vidlinks = $('.vimeo-thumbnail');
+    vidlinks.on('click', handle_vid_click);
+}
+
+init_vimeo_picker();
+
+function set_vimeo_iframe_height() {
+    iframe.attr('height', iframe.width() / (1280/720) );
+}
+
+document.addEventListener('DOMContentLoaded', set_vimeo_iframe_height);
+window.addEventListener('resize', set_vimeo_iframe_height);
+&lt;/script&gt;</summary><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="2d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category><category term="kimotion"></category></entry><entry><title>WebAssembly is the Keystone</title><link href="http://palebluepixel.org/2015/06/20/webassembly-is-the-keystone/" rel="alternate"></link><updated>2015-06-20T22:52:24-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-06-20:2015/06/20/webassembly-is-the-keystone/</id><summary type="html">&lt;p&gt;Within the last two days, WebAssembly (&lt;strong&gt;wasm&lt;/strong&gt;) has graced the eyeballs of
 every JavaScript developer.  If wasm is new to you, the articles linked at the
 end of this post fully describe what wasm &lt;em&gt;is&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Since that's been covered, I'd like to talk about one impact wasm will
