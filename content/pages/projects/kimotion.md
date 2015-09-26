@@ -15,6 +15,14 @@ Pritchett) for the [SparkCon][sparkcon] festival in 2014.
 
 <p style="clear:both;height:0">&nbsp;</p>
 
+### The design of Kimotion
+
+Depending on your preferences, a mod can be written using either [p5][p5js] or
+[ThreeJS][threejs].  p5 gets your ideas onto the screen quickly with 2D drawing
+functions like `triangle()` to draw a triangle, and `line()` to draw a line.
+ThreeJS has a steeper learning curve, but enables detailed 3D scenes.
+
+
 <hr>
 
 ## More information

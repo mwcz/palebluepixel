@@ -124,6 +124,7 @@ IMAGE_PATH = 'images' #os.path.join(PATH, 'images')
 THUMBNAIL_DIR = 'static/images/gallery'
 THUMBNAIL_SIZES = {
     '900x': '900x?',
+    '400x': '400x?',
     '150x': '150x?'
 }
 THUMBNAIL_KEEP_NAME = True

@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*- #
 
 from os import environ
+import os
 
 #######################################################################
 #                            MISC SETTINGS                            #
@@ -57,7 +58,7 @@ BOOTSTRAP_THEME = 'flatly'
 #######################################################################
 
 PLUGIN_PATHS = [environ["HOME"] + '/workspace/pelican-plugins',]
-PLUGINS = ['neighbors', 'assets', 'extract_toc', 'series',]
+PLUGINS = ['neighbors', 'assets', 'extract_toc', 'series', 'gallery', 'thumbnailer',]
 
 # extract_toc plugin settings
 
@@ -106,7 +107,7 @@ FEED_DOMAIN = 'http://palebluepixel.org'
 #DEFAULT_METADATA = (('yeah', 'it is'),)
 
 # static paths will be copied under the same name
-STATIC_PATHS = ["static", "projects"]
+STATIC_PATHS = ["static", "projects",]
 
 # A list of files to copy from the source to the destination
 #FILES_TO_COPY = (('extra/robots.txt', 'robots.txt'),)
@@ -118,6 +119,18 @@ STATIC_PATHS = ["static", "projects"]
 
 PATH                  = 'content'
 ARTICLE_PATHS         = ['posts']
+
+# thumbnailer settings
+IMAGE_PATH = 'images' #os.path.join(PATH, 'images')
+THUMBNAIL_DIR = 'static/images/gallery'
+THUMBNAIL_SIZES = {
+    '900x': '900x?',
+    '400x': '400x?',
+    '150x': '150x?'
+}
+THUMBNAIL_KEEP_NAME = True
+THUMBNAIL_KEEP_TREE = True
+
 
 # TODO the mwcz.org tag is actually slugified into "mwczorg" but the link still
 # reads "mwcz.org" so it 404's
