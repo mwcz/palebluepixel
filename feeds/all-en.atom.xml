@@ -567,12 +567,16 @@ three LED batons that visitors could use to control the visualizations.&lt;/p&gt
 exhibit used the same set of input: the coordinates of the colored batons.  My
 exhibit is a particle gravity simulation, created with WebGL (&lt;a href="http://threejs.org/"&gt;three.js&lt;/a&gt;,
 specifically), &lt;a href="https://en.wikipedia.org/wiki/OpenGL_Shading_Language"&gt;GLSL&lt;/a&gt;, and many other tools.&lt;/p&gt;
+&lt;h2 id="event-photos"&gt;Event photos&lt;/h2&gt;
+&lt;p&gt;Enjoy these photos from Digital Motion at SPARKcon 2014.&lt;/p&gt;
+&lt;p&gt;{{ gallery }}&lt;/p&gt;
 &lt;p&gt;I'm working on a follow-up post, with technical information about the
 implementation.  &lt;em&gt;Update&lt;/em&gt; it's 
 &lt;a href="http://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/"&gt;here&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;This (2014) was my first year as a volunteer, but it was a tremendously
-educational and &lt;em&gt;fun&lt;/em&gt; experience, so I'll definitely be back next year.&lt;/p&gt;
-&lt;h1 id="thanks"&gt;Thanks&lt;/h1&gt;
+educational and &lt;em&gt;fun&lt;/em&gt; experience, so I'll definitely be back next year.
+&lt;em&gt;Update&lt;/em&gt; &lt;a href="http://palebluepixel.org/2015/09/26/make-a-kimotion/"&gt;2015's exhibit info and pictures!&lt;/a&gt;!&lt;/p&gt;
+&lt;h2 id="thanks"&gt;Thanks&lt;/h2&gt;
 &lt;p&gt;I've written mostly about my own contribution to DiMo here, because that's what
 I'm most familiar with, but in reality it was only a piece of the DiMo puzzle.
 There were two other visualizations, both of which used the lighted batons as
