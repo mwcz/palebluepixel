@@ -4,6 +4,7 @@ Tags: programming, javascript, requirejs, amd, threejs, webgl, 3d, art, sparkcon
 Image: /static/images/033/ring-anim.gif
 Summary: A player walks up Fayetteville St in Raleigh, North Carolina.  SparkCon has begun, and dozens of artists are ...
 TwitterWidgetID: 552863179194511360
+Gallery: 033
 Mwc: 33
 
 A player walks up Fayetteville St in Raleigh, North Carolina.
@@ -57,6 +58,12 @@ exhibit used the same set of input: the coordinates of the colored batons.  My
 exhibit is a particle gravity simulation, created with WebGL ([three.js][3js],
 specifically), [GLSL][glsl], and many other tools.
 
+## Event photos
+
+Enjoy these photos from Digital Motion at SPARKcon 2014.
+
+{{ gallery }}
+
 I'm working on a follow-up post, with technical information about the
 implementation.  *Update* it's 
 [here]({filename}/posts/034 - the deconstruction of falling particles.md)!
@@ -65,10 +72,11 @@ implementation.  *Update* it's
 
 This (2014) was my first year as a volunteer, but it was a tremendously
 educational and *fun* experience, so I'll definitely be back next year.
+*Update* [2015's exhibit info and pictures!]({filename}/posts/039 - make a kimotion.md)!
 
 
 
-# Thanks
+## Thanks
 
 I've written mostly about my own contribution to DiMo here, because that's what
 I'm most familiar with, but in reality it was only a piece of the DiMo puzzle.
