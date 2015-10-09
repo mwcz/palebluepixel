@@ -7,7 +7,7 @@
     {% set sorted_tags = tags|sort_by_article_count %}
 
     {% set latest_article = articles|first %}
-    {% set latest_project = [ 'DiMo', '/projects/dimo' ] %}
+    {% set latest_project = [ 'Kimotion', '/projects/Kimotion' ] %}
 
 
     <p>
@@ -23,24 +23,15 @@
     <p>
         <img class="homepage-silhouette" src="/static/images/home/dimo-2014-silhouette.png" alt="kinect depth map silhouette" />
 
-        If you look closely, you'll find some interesting, interactive
-        <a href="/projects" title="my programming projects">projects</a>,
-        and a really dull <a href="/posts" title="my blog posts">technical blog</a>.
+        I'm a purveyor of <a href="/projects" title="my programming projects">colorful toys</a>
+        and <a href="/posts" title="my blog posts">boring blog posts</a>.
     </p>
 
     <p>
-        The most recent project is an interactive art exhibit called 
-        <a title="my latest project, {{ latest_project[0] }}" href="{{ latest_project[1] }}">{{ latest_project[0] }}</a>,
-        take a look at that if you look at anything.
-    </p>
-
-    <p>
-        You can skip the most recent blog post,
-        <a href="{{ latest_article.url }}">{{ latest_article.title }}</a>.
-    </p>
-
-    <p>
-
+        My most recent project is an interactive art framework called 
+        <a title="my latest project, {{ latest_project[0] }}" href="{{ latest_project[1] }}">{{ latest_project[0] }}</a>.
+        My latest blog post, <a href="{{ latest_article.url }}">{{ latest_article.title }}</a>, is also about the framework, but you
+        can totally skip it.
     </p>
 </section>
 

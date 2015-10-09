@@ -3,37 +3,96 @@ Slug: projects/kimotion
 Tags: programming, javascript, threejs, webgl, 3d, 2d, art, sparkcon, geekspark, dimo, physics, web, kimotion
 Status: hidden
 
-<img class="col-md-7" src="{filename}/static/images/projects/dimo/setup.jpg" alt="night-before setup image" style="padding-left: 0; padding-right: 30px" />
+<img class="col-md-7" src="/static/images/gallery/900x/gallery/039/600_5782.JPG" alt="kids playing with kimotion" style="padding-left: 0; padding-right: 30px" />
 
-Kimotion is a digital art framework that responds to your motion.
+Kimotion is a framework for building reactive art displays.
 
-DiMo: Particles is an artistic particle physics simulation and interactive art
-exhibit I created (along with fellow Red Hat engineers Ian Hands and Ben
-Pritchett) for the [SparkCon][sparkcon] festival in 2014.
+Creating an interactive art exhibit with Kimotion is easy.  Draw your ideas in
+either [2D][p5js] or [3D][threejs].  Kimotion will provide information about
+the scene, which you can use to influence your display.
 
-<p><a class="btn btn-default btn-lg" href="/static/projects/dimo/">Launch live demo!</a></p>
+Learn more at [kimotion.xyz][kimotion-web], or if you want to see it in
+action...
 
-<p style="clear:both;height:0">&nbsp;</p>
+<p class="text-center"><a class="btn btn-default btn-lg" href="http://kimotion.xyz/live">Launch live demo!</a></p>
 
-### The design of Kimotion
+## Video clips
 
-Depending on your preferences, a mod can be written using either [p5][p5js] or
-[ThreeJS][threejs].  p5 gets your ideas onto the screen quickly with 2D drawing
-functions like `triangle()` to draw a triangle, and `line()` to draw a line.
-ThreeJS has a steeper learning curve, but enables detailed 3D scenes.
+These images, when played in rapid succession, create the illusion of motion!
 
+<iframe id="vimeo-player" src="https://player.vimeo.com/video/136951447" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
+<div class="vimeo-thumbnail"> <img src="http://kimotion.xyz/images/video_thumbnails/9.jpg" data-vid-src="https://player.vimeo.com/video/136951447" /> </div>
+<div class="vimeo-thumbnail"> <img src="http://kimotion.xyz/images/video_thumbnails/11.jpg" data-vid-src="https://player.vimeo.com/video/137905577" /> </div>
+<div class="vimeo-thumbnail"> <img src="http://kimotion.xyz/images/video_thumbnails/3.jpg" data-vid-src="https://player.vimeo.com/video/126292045" /> </div>
+<div class="vimeo-thumbnail"> <img src="http://kimotion.xyz/images/video_thumbnails/10.jpg" data-vid-src="https://player.vimeo.com/video/137762679" /> </div>
+<div class="vimeo-thumbnail"> <img src="http://kimotion.xyz/images/video_thumbnails/6.jpg" data-vid-src="https://player.vimeo.com/video/136126008" /> </div>
+<div class="vimeo-thumbnail"> <img src="http://kimotion.xyz/images/video_thumbnails/5.jpg" data-vid-src="https://player.vimeo.com/video/133870922" /> </div>
+
+<style type="text/css">
+.vimeo-thumbnail {
+    cursor   : pointer;
+    position : relative;
+    z-index  : 9;
+    display  : inline-block;
+    width    : 32.2%;
+}
+
+.vimeo-thumbnail::before {
+    color       : white;
+    content     : "\25B6";
+    opacity     : 0.8;
+    position    : absolute;
+    display     : block;
+    text-shadow : 0 0 6px black;
+    z-index     : 100;
+    font-size   : 50px;
+    left        : 50%;
+    top         : 42%;
+    transform   : translate(-50%, -50%);
+}
+
+.vimeo-thumbnail:hover::before {
+    opacity     : 1;
+    text-shadow : 0 0 6px white;
+}
+</style>
+
+<script>
+var iframe = $('iframe#vimeo-player');
+
+function handle_vid_click() {
+    iframe.attr('src', $(this).find('[data-vid-src]').attr('data-vid-src') + '?autoplay=1');
+}
+
+function init_vimeo_picker() {
+    // get every img with data-vid-src
+    // get ref to iframe
+    // create onclick for each img which sets iframe's src to data-vid-src
+    var vidlinks = $('.vimeo-thumbnail');
+    vidlinks.on('click', handle_vid_click);
+}
+
+init_vimeo_picker();
+
+function set_vimeo_iframe_height() {
+    iframe.attr('height', iframe.width() / (1280/720) );
+}
+
+document.addEventListener('DOMContentLoaded', set_vimeo_iframe_height);
+window.addEventListener('resize', set_vimeo_iframe_height);
+</script>
 <hr>
 
 ## More information
 
- - [Opensource.com article about DiMo 2014][osdc]
- - [The Deconstruction of Falling Stars]({filename}/posts/034 - the deconstruction of falling particles.md) - technical info about how it was built
- - [Particles and π - DiMo Comes to Life]({filename}/posts/033 - particles and pi - dimo comes to life.md) - more about the exhibit at SparkCon!
- - [Source code][dimogit] - the GitHub repo for the visualization
+ - [Kimotion at SPARKcon 2015]({filename}/posts/039 - make a kimotion.md) - all about the Kimotion setup at the SPARKcon festival
+ - [View source][repo] - Kimotion's GitHub repository
+ - [DiMo: Particles][dimo] - the predecessor of Kimotion
 
-![ring animation in dimo]({filename}/static/images/033/ring-anim.gif)
-
-[sparkcon]: https://en.wikipedia.org/wiki/Sparkcon
-[dimogit]: https://github.com/geekspark-rh/dimo-renderer
+[dimo]: /projects/dimo
+[repo]: https://github.com/mwcz/Kimotion
 [osdc]: http://opensource.com/life/15/2/sparkcon-geekspark-digital-motion-exhibit
+[kimotion-web]: http://kimotion.xyz
+[p5js]: http://p5js.org
+[threejs]: http://threejs.org
