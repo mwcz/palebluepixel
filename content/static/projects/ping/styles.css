@@ -239,14 +239,16 @@ a { color: #29D; }
 a:visited { color: #9727BD; }
 
 #description {
-    padding: 10px;
-    font-family: sans-serif;
-    position: absolute;
-    z-index: 300;
-    bottom: 0;
-    width: 600px;
-    left: 50%;
-    transform: translateX(-50%);
+    padding     : 10px;
+    font-family : sans-serif;
+    position    : absolute;
+    z-index     : 300;
+    background  : rgba(0,0,0,0.6);
+    overflow    : auto;
+    bottom      : 0;
+    width       : 600px;
+    left        : 50%;
+    transform   : translateX(-50%);
     -webkit-animation : fadeOutAnimation 15s 1 linear forwards;
        -moz-animation : fadeOutAnimation 15s 1 linear forwards;
          -o-animation : fadeOutAnimation 15s 1 linear forwards;
