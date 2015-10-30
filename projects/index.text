@@ -28,6 +28,12 @@ $(function () {
                 link_url     = '/projects/kimotion',
                 ) }}
             {{ project_thumbnail.write(
+                body_title   = 'Ping',
+                body_text    = 'A four-player pong clone created for Red Hat annual customer conference.',
+                header_image = '/static/images/projects/icon_ping.png',
+                link_url     = '/projects/ping',
+                ) }}
+            {{ project_thumbnail.write(
                 body_title   = 'DiMo: Particles',
                 body_text    = 'An interactive art installation and particle simulation created for SPARKcon and powered by ThreeJS/WebGL.',
                 header_image = '/static/images/projects/icon_dimo.png',

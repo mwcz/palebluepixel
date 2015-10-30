@@ -239,49 +239,13 @@ a { color: #29D; }
 a:visited { color: #9727BD; }
 
 #description {
-    padding: 10px;
-    font-family: sans-serif;
-    position: absolute;
-    z-index: 300;
-    bottom: 0;
-    width: 600px;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-animation : fadeOutAnimation 15s 1 linear forwards;
-       -moz-animation : fadeOutAnimation 15s 1 linear forwards;
-         -o-animation : fadeOutAnimation 15s 1 linear forwards;
-            animation : fadeOutAnimation 15s 1 linear forwards;
-}
-
-/* A progress bar that shows how much longer the description will be visible. */
-
-@keyframes progressAnimation {
-  0%   { width: 0%; }
-  100% { width: 100%; }
-}
-@-o-keyframes progressAnimation{
-  0%   { width: 0%; }
-  100% { width: 100%; }
-}
-@-moz-keyframes progressAnimation{
-  0%   { width: 0%; }
-  100% { width: 100%; }
-}
-@-webkit-keyframes progressAnimation{
-  0%   { width: 0%; }
-  100% { width: 100%; }
-}
-
-#description .progress {
-    box-shadow : 0px 0px 10px #29D, 0px 0px 5px #29D;
-    background : #29D;
-    height     : 2px;
-    width      : 0%;
-    position   : absolute;
-    top        : 0;
-    left       : 0;
-    -webkit-animation : progressAnimation 15s 1 linear forwards;
-       -moz-animation : progressAnimation 15s 1 linear forwards;
-         -o-animation : progressAnimation 15s 1 linear forwards;
-            animation : progressAnimation 15s 1 linear forwards;
+    padding     : 10px;
+    position    : absolute;
+    z-index     : 300;
+    overflow    : auto;
+    bottom      : 0;
+    width       : 600px;
+    left        : 50%;
+    text-align  : center;
+    transform   : translateX(-50%);
 }
