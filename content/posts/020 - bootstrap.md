@@ -1,6 +1,6 @@
 Title: Bootstrap &amp; Blogofile
 Date: 2012-07-03 22:44:50
-Tags: bootstrap, mwcz.org, web
+Tags: bootstrap, web
 Slug: bootstrap---blogofile
 Summary: I've converted the site layout to bootstrap.
 Status: draft

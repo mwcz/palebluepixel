@@ -5,7 +5,7 @@ median-cut.js is a JavaScript implementation of the [Median Cut](https://en.wiki
 
 Median cut is also useful for finding a color palette that "represents" an image.
 
-median-cut.js was created for use in [ColorPal](http://mwcz.org/2012/01/16/colorpal-alpha/).
+median-cut.js was created for use in [ColorPal](http://palebluepixel.org/2012/01/16/colorpal-alpha/).
 
 USAGE
 -----

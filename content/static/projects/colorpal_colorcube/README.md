@@ -6,9 +6,9 @@ ColorPal!
 Blog posts about ColorPal
 -------------------------
 
-- [ColorPal output update](http://mwcz.org/2012/07/30/colorpal-output-update/)
-- [ColorPal algorithm improved](http://mwcz.org/2012/02/10/colorpal-palettes-improved!/)
-- [ColorPal Alpha announcement](http://mwcz.org/2012/01/16/colorpal-alpha/)
+- [ColorPal output update](http://palebluepixel.org/2012/07/30/colorpal-output-update/)
+- [ColorPal algorithm improved](http://palebluepixel.org/2012/02/10/colorpal-palettes-improved!/)
+- [ColorPal Alpha announcement](http://palebluepixel.org/2012/01/16/colorpal-alpha/)
 
 Usage
 -----

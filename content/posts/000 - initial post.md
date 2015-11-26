@@ -1,6 +1,6 @@
 Title: Initial post
 Date: 2011-11-16 15:25:00
-Tags: general, mwcz.org
+Tags: general
 Slug: initial-post
 Author: mwcz
 Status: draft
@@ -18,4 +18,4 @@ If you're viewing through a browser that isn't Chrome, things might look bad, or
 
 To kick things off, I'll make a series of posts showing off some old, shameful canvas demos I've made.
 
-If you'd like to get in touch with me, feel free to use [Twitter](https://twitter.com/#!/mwcz) or <a id="email">email</a>.
+If you'd like to get in touch with me, feel free to use [Twitter](https://twitter.com/mwcz) or <a id="email">email</a>.
