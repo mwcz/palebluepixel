@@ -64,10 +64,10 @@ $(function () {
                 link_url     = '/projects/mediancut',
                 ) }}
             {{ project_thumbnail.write(
-                body_title   = 'mwcz.org',
+                body_title   = 'Pale Blue Pixel',
                 body_text    = 'My tech &amp; programming blog (you\'re looking at it!)',
-                header_image = '/static/images/projects/icon_mwcz.png',
-                link_url     = '/projects/mwcz.org',
+                header_image = '/static/images/projects/icon_palebluepixel.png',
+                link_url     = '/projects/palebluepixel',
                 ) }}
             {{ project_thumbnail.write(
                 body_title   = 'clayto.com',
