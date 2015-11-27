@@ -76,7 +76,7 @@ ASSET_BUNDLES = [
          'static/css/jquery.lightbox.css',
      ],
      {
-         'filters': 'less' if DEBUG else 'less,cssmin',
+         'filters': 'less' if DEBUG else 'less',
      }
     ),
 ]
