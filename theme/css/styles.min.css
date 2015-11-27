@@ -3531,10 +3531,6 @@ pre[data-line] {
   outline: 5px solid #fff;
   box-shadow: 0 0 20px #000;
 }
-body.blurred > * {
-  -webkit-filter: blur(2px);
-  -webkit-transform: translate3d(0, 0, 0);
-}
 .lightbox__button:hover,
 .lightbox__button:focus {
   opacity: 1;
