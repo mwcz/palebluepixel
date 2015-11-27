@@ -2964,6 +2964,9 @@ blockquote {
 blockquote p {
   font-weight: 400;
 }
+blockquote p:first-child {
+  margin-top: 0;
+}
 blockquote cite {
   font-size: 15.2px;
 }
