@@ -11,6 +11,8 @@
 
 
     <p>
+        <img class="homepage-silhouette" src="/static/images/home/dimo-2014-silhouette.jpg" alt="kinect depth map silhouette" />
+
         Hi Web, I'm glad everyone could make it!  Welcome to {{ SITENAME }},
         where <a href="https://twitter.com/mwcz">I</a> write about the
         <a href="/tag/{{ sorted_tags[0][0] }}">#{{ sorted_tags[0][0] }}</a>,
@@ -24,8 +26,6 @@
     </p>
 
     <p>
-        <img class="homepage-silhouette" src="/static/images/home/dimo-2014-silhouette.jpg" alt="kinect depth map silhouette" />
-
         My most recent project is an interactive art framework called 
         <a title="my latest project, {{ latest_project[0] }}" href="{{ latest_project[1] }}">{{ latest_project[0] }}</a>.
         My latest blog post, <a href="{{ latest_article.url }}">{{ latest_article.title }}</a>, is also about the framework, but you
