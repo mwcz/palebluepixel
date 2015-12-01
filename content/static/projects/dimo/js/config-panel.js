@@ -111,11 +111,14 @@ function main(
 
     var info_folder = gui.addFolder('Info');
     info_folder.add({
-        f: function() { window.open('http://twitter.com/mwcz') }
-    }, 'f').name('@mwcz');
+        f: function() { window.open('http://palebluepixel.org/projects/dimo'); }
+    }, 'f').name('More about this');
     info_folder.add({
-        f: function() { window.open('https://github.com/geekspark-rh/dimo-renderer') }
-    }, 'f').name('Source code');
+        f: function() { window.open('https://github.com/geekspark-rh/dimo-renderer'); }
+    }, 'f').name('View source');
+    info_folder.add({
+        f: function() { window.open('http://twitter.com/mwcz'); }
+    }, 'f').name('Twitter @mwcz');
 
     grav_folder.open();
     players_folder.open();
