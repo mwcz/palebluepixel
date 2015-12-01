@@ -303,14 +303,14 @@ article, section {
 /*********************************************************************
  *                              Navbar                               *
  *********************************************************************/
-.pbp-dot-hide() {
-    max-width : 0;
-    left      : 0;
-    top       : -64px;
-    opacity   : 0;
+.pbp-dot-idle() {
+    // max-width : 0;
+    // left      : 0;
+    // top       : -64px;
+    // opacity   : 0;
 }
 
-.pbp-dot-show() {
+.pbp-dot-active() {
     max-width   : 20px;
     left        : 0;
     top         : 0;
@@ -344,7 +344,7 @@ article, section {
     &:hover, &:active {
         color : lighten(@pbp-bg-color, 70%);
         .pbp-dot {
-            .pbp-dot-show();
+            .pbp-dot-active();
         }
     }
 
@@ -357,7 +357,7 @@ article, section {
         overflow    : visible;
         line-height : 1;
 
-        .pbp-dot-hide();
+        .pbp-dot-idle();
 
         -webkit-transition: max-width 1.0*@pbp-logo-transition-timer linear,
                             left      1.5*@pbp-logo-transition-timer linear,
