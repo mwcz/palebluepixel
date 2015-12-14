@@ -1,5 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pale Blue Pixel</title><link>http://palebluepixel.org/</link><description></description><atom:link href="http://localhost:8001/feeds/mwcz.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 26 Sep 2015 00:00:00 -0400</lastBuildDate><item><title>Make a Kimotion!</title><link>http://palebluepixel.org/2015/09/26/make-a-kimotion/</link><description>&lt;p&gt;A year ago, I had the joy of working on Digital Motion, an &lt;a href="https://en.wikipedia.org/wiki/Interactive_art"&gt;interactive
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pale Blue Pixel</title><link>http://palebluepixel.org/</link><description></description><atom:link href="http://localhost:8001/feeds/mwcz.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 13 Dec 2015 00:00:00 -0500</lastBuildDate><item><title>The Last Conceit</title><link>http://palebluepixel.org/2015/12/13/the-last-conceit/</link><description>&lt;p&gt;Humans have had it rough for the past few centuries!  Emotionally, I mean.  It
+used to be so clear that we were privileged and important, the favorite child
+of creation.  How could it not be so?  Our planet was the fulcrum around which
+every heavenly body in the universe orbited.  We were the dominant form of life
+on Earth, and we were fairly certain that ourselves and our world were the
+creation of a loving but tempermental and sometimes murdery god.&lt;/p&gt;
+&lt;p&gt;The second chapter of &lt;a href="https://en.wikipedia.org/wiki/The_Varieties_of_Scientific_Experience"&gt;The Varieties of Scientific Experience&lt;/a&gt; by
+Carl Sagan documents the following recently discovered demerits:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;We're not in a central position in the universe.  Our Earth orbits around
+   the sun.  Our solar system is not at the center of our galaxy.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Our Sun is a typical star, with no special features to distinguish it from
+   the 1,000,000,000,000,000,000,000,000 other stars universe.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Not only that, stars are made of the same stuff we find right here on our
+   Earth.  That's not so majestic!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Our earth is approximately 4,500,000,000 years old, but humans developed
+   recently, 1,000,000 years ago or so.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Humans are made of the same stuff and share a common lineage with all other
+   life on Earth.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The way we experience time is not from a &lt;a href="https://en.wikipedia.org/wiki/Preferred_frame"&gt;privileged frame of
+   reference&lt;/a&gt;.  There is nothing special about our position in the
+   universe or our motion through it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Carl then suggests that one idea of human privilege is still with us.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Well, if we don't have a distinctive position or velocity or acceleration, or
+a separate origin from the other plants and animals, then at least, maybe, we
+are the smartest beings in the entire universe.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Carl goes on to say that discovering extraterrestrial intelligence could
+silence this latest in a long line of human conceits.  Whatever other outcomes
+an indisputable alien encounter would have, I'm quite sure Carl is right about
+this one.  However, there is another aspirant approaching, and it's almost
+ready to snatch the &lt;em&gt;Smartest Kids in the Universe&lt;/em&gt; trophy from humanity's
+collective hands.&lt;/p&gt;
+&lt;p&gt;The next great blow to our egos will be the discovery that intelligence can
+arise from ordinary matter, that is, melted sand.  Artificial intelligence is
+complex and controversial, but I'm quite certain the intelligence of our
+computer systems will continue to increase, and the vastness of the universe
+suggests to me that we will probably create intelligence long before we
+discover it on another planet.&lt;/p&gt;
+&lt;p&gt;It's difficult to imagine how AI with greater-than-human intelligence would
+change our existence.  People will probably say, "it's just programmed to act
+that way", or "it's not human, it's not &lt;em&gt;thinking&lt;/em&gt;".  Many, maybe even most,
+people won't accept AI as truly intelligent.  In many ways, it would be even
+&lt;em&gt;more&lt;/em&gt; alien than a biological extra-terrestrial species.&lt;/p&gt;
+&lt;p&gt;Carl again:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A grinding of heels can be heard screeching across the last five centuries as
+scientists have revealed the non-centrality of our position and as many others
+have fought to resist that insight to the bitter end.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;My take is that our undistinguished position in the universe is freeing.
+Humans have a lot of traits, some admirable and some less so, but &lt;em&gt;we&lt;/em&gt; get to
+choose which to value.  In any case, we should probably stop looking to the
+universe for our sense of self-worth.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Sun, 13 Dec 2015 00:00:00 -0500</pubDate><guid>tag:palebluepixel.org,2015-12-13:2015/12/13/the-last-conceit/</guid><category>philosophy</category><category>technology</category><category>ai</category></item><item><title>Make a Kimotion!</title><link>http://palebluepixel.org/2015/09/26/make-a-kimotion/</link><description>&lt;p&gt;A year ago, I had the joy of working on Digital Motion, an &lt;a href="https://en.wikipedia.org/wiki/Interactive_art"&gt;interactive
 art&lt;/a&gt; exhibit for Raleigh's annual art festival, &lt;a href="https://en.wikipedia.org/wiki/Sparkcon"&gt;SPARKcon&lt;/a&gt;.
 The month leading up to SPARKcon 2014 was a mad dash of perfecting the graphics
 and physics equations of my &lt;a href="/projects/dimo"&gt;DiMo: Particles&lt;/a&gt; display.  After a
