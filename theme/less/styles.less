@@ -245,13 +245,13 @@ article, section {
  *********************************************************************/
 
 .pbp-project-summary {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-    width: percentage(1/3);
-    background: darken(@pbp-bg-color, 2%);
-    border: 6px solid @pbp-bg-color;
-    margin: 0;
+    display         : flex;
+    flex-flow       : column wrap;
+    justify-content : flex-start;
+    width           : percentage(1/3);
+    background      : darken(@pbp-bg-color, 2%);
+    border          : 6px solid @pbp-bg-color;
+    margin          : 0;
 
     @media (max-width: 800px) {
         width: percentage(1/2);
@@ -276,12 +276,14 @@ article, section {
             height: 140px !important;
         }
     }
+    .pbp-project-summary-description {
+        flex: 1; // push footer to bottom
+    }
     .pbp-project-summary-footer {
 
         display    : flex;
         flex-wrap  : wrap;
         width      : 100%;
-        margin-top : auto;
 
         // add comfort padding only in NxM grid, when it's a single column, don't add padding
         @media (min-width: 500px) {
