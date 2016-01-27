@@ -25,7 +25,7 @@ stands for Amiga Emulator JavaScript and is pronounced "aegis".
 
 I made a handful of [posts about AEJS][12] while it was still being developed.
 
-I started development on it for some damn good reasons:
+My motivation came from these sources:
 
  - The HTML5 era introduced new APIs which finally made it possible: 
    [Typed arrays][13], [Web Audio][1], [File][2], [Canvas][3], [Fullscreen][4],
