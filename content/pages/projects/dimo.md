@@ -91,6 +91,10 @@ These pictures are from the art exhibit at geekSPARK in 2014.
 
 ![ring animation in dimo]({filename}/static/images/033/ring-anim.gif)
 
+<script>
+    $('ul.gallery li a').lightbox();
+</script>
+
 [sparkcon]: https://en.wikipedia.org/wiki/Sparkcon
 [dimogit]: https://github.com/geekspark-rh/dimo-renderer
 [osdc]: http://opensource.com/life/15/2/sparkcon-geekspark-digital-motion-exhibit
