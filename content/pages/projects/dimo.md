@@ -15,6 +15,73 @@ Pritchett) for the [SparkCon][sparkcon] festival in 2014.
 
 <hr>
 
+## Pictures
+
+These pictures are from the art exhibit at geekSPARK in 2014.
+
+<ul class="gallery">
+    <li>
+        <a class="033" href="/static/images/gallery/900x/gallery/033/10013368_871255312919531_5881241576350532414_o.jpg">
+            <img src="/static/images/gallery/150x/gallery/033/10013368_871255312919531_5881241576350532414_o.jpg">
+        </a>
+    </li>
+    <li>
+        <a class="033" href="/static/images/gallery/900x/gallery/033/10580799_871254542919608_1816772758209337747_o.jpg">
+            <img src="/static/images/gallery/150x/gallery/033/10580799_871254542919608_1816772758209337747_o.jpg">
+        </a>
+    </li>
+    <li>
+        <a class="033" href="/static/images/gallery/900x/gallery/033/10644570_871254519586277_4290439540460583283_o.jpg">
+            <img src="/static/images/gallery/150x/gallery/033/10644570_871254519586277_4290439540460583283_o.jpg">
+        </a>
+    </li>
+    <li>
+        <a class="033" href="/static/images/gallery/900x/gallery/033/10658989_871255002919562_79865546183345571_o.jpg">
+            <img src="/static/images/gallery/150x/gallery/033/10658989_871255002919562_79865546183345571_o.jpg">
+        </a>
+    </li>
+    <li>
+        <a class="033" href="/static/images/gallery/900x/gallery/033/10697197_871254042919658_2820380637844609709_o.jpg">
+            <img src="/static/images/gallery/150x/gallery/033/10697197_871254042919658_2820380637844609709_o.jpg">
+        </a>
+    </li>
+    <li>
+        <a class="033" href="/static/images/gallery/900x/gallery/033/10697293_871254016252994_1650185932437797_o.jpg">
+            <img src="/static/images/gallery/150x/gallery/033/10697293_871254016252994_1650185932437797_o.jpg">
+        </a>
+    </li>
+    <li>
+        <a class="033" href="/static/images/gallery/900x/gallery/033/10697410_871253922919670_7881565892151073815_o.jpg">
+            <img src="/static/images/gallery/150x/gallery/033/10697410_871253922919670_7881565892151073815_o.jpg">
+        </a>
+    </li>
+    <li>
+        <a class="033" href="/static/images/gallery/900x/gallery/033/10703827_871253986252997_4040612333085976762_o.jpg">
+            <img src="/static/images/gallery/150x/gallery/033/10703827_871253986252997_4040612333085976762_o.jpg">
+        </a>
+    </li>
+    <li>
+        <a class="033" href="/static/images/gallery/900x/gallery/033/10704272_871254139586315_6206692776828369253_o.jpg">
+            <img src="/static/images/gallery/150x/gallery/033/10704272_871254139586315_6206692776828369253_o.jpg">
+        </a>
+    </li>
+    <li>
+        <a class="033" href="/static/images/gallery/900x/gallery/033/10704423_871255046252891_750121642927058427_o.jpg">
+            <img src="/static/images/gallery/150x/gallery/033/10704423_871255046252891_750121642927058427_o.jpg">
+        </a>
+    </li>
+    <li>
+        <a class="033" href="/static/images/gallery/900x/gallery/033/1502585_871254572919605_7760842459458815901_o.jpg">
+            <img src="/static/images/gallery/150x/gallery/033/1502585_871254572919605_7760842459458815901_o.jpg">
+        </a>
+    </li>
+    <li>
+        <a class="033" href="/static/images/gallery/900x/gallery/033/1537647_871255289586200_8763611356260241819_o.jpg">
+            <img src="/static/images/gallery/150x/gallery/033/1537647_871255289586200_8763611356260241819_o.jpg">
+        </a>
+    </li>
+</ul>
+
 ## More information
 
  - [Opensource.com article about DiMo 2014][osdc]
