@@ -58,7 +58,14 @@ BOOTSTRAP_THEME = 'flatly'
 #######################################################################
 
 PLUGIN_PATHS = [environ["HOME"] + '/workspace/pelican-plugins',]
-PLUGINS = ['neighbors', 'assets', 'extract_toc', 'series', 'gallery', 'thumbnailer', ]
+PLUGINS = [
+    'neighbors',
+    'assets',
+    'extract_toc',
+    'series',
+    'gallery',
+    'pelican-jinja2content',
+]
 
 # extract_toc plugin settings
 

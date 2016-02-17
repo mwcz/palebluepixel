@@ -16,6 +16,9 @@ RELATIVE_URLS = False
 
 DELETE_OUTPUT_DIRECTORY = True
 
+# only use the thumbnailer plugin for production builds because it's sloooooooow
+PLUGINS.append('thumbnailer')
+
 # Following items are often useful when publishing
 
 #DISQUS_SITENAME = ""
