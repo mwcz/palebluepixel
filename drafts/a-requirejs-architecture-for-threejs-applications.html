@@ -22,7 +22,7 @@
     <![endif]-->
 
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
-            <link href="http://palebluepixel.org/theme/css/styles.min.css?16657707" rel="stylesheet">
+            <link href="http://palebluepixel.org/theme/css/styles.min.css?b8c15638" rel="stylesheet">
 
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="http://palebluepixel.org/theme/js/jquery.min.js"></script>
@@ -59,23 +59,19 @@
         </header>
         <div class="entry-content">
             <nav class="toc"></nav>
-            <p>While working on <a href="/projects/dimo">DiMo</a>, I found myself at the <a href="http://threejs.org/examples/">ThreeJS
-examples</a> page quite often, searching for working examples.</p>
-<pre><code>&lt;script id="vertexShader" type="x-shader/x-vertex"&gt;
+            <p>While working on <a href="/projects/dimo">DiMo</a>, I found myself at the <a href="http://threejs.org/examples/">ThreeJS examples</a> page quite often, searching for working examples.</p>
+<pre><code>&lt;script id=&quot;vertexShader&quot; type=&quot;x-shader/x-vertex&quot;&gt;
     &lt;!-- dozens of lines of vertex shader (GLSL) code --&gt;
 &lt;/script&gt;
 
-&lt;script id="fragmentShader" type="x-shader/x-fragment"&gt;
+&lt;script id=&quot;fragmentShader&quot; type=&quot;x-shader/x-fragment&quot;&gt;
     &lt;!-- dozens of lines of fragment shader (GLSL) code --&gt;
 &lt;/script&gt;
 
 &lt;script&gt;
     &lt;!-- hundreds of lines of ThreeJS code --&gt;
-&lt;/script&gt;
-</code></pre>
-<p>I do believe that's the best way to distribute <em>demos</em>.  Sometimes sloppier
-something looks, the more people will hack on it, and I mean that in the
-kindest possible way.  Hackiness begets hackers.</p>
+&lt;/script&gt;</code></pre>
+<p>I do believe that's the best way to distribute <em>demos</em>. Sometimes sloppier something looks, the more people will hack on it, and I mean that in the kindest possible way. Hackiness begets hackers.</p>
 <pre style="line-height: 1.2"><code style="line-height: 1"><!--
 -->src
 ├── index.html
@@ -103,34 +99,30 @@ kindest possible way.  Hackiness begets hackers.</p>
 └── lib
     └── libraries like threejs, datgui, et al
 </code></pre>
-
-<p>I have absolutely no experience architecting 3D applications, so the actual
-separations of concern are probably quite misguided!  However, even if
-misguided, it proved to be much easier to work with than a single monolithic
-script file.</p>
+<p>I have absolutely no experience architecting 3D applications, so the actual separations of concern are probably quite misguided! However, even if misguided, it proved to be much easier to work with than a single monolithic script file.</p>
 <pre><code>&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
-&lt;meta http-equiv="content-type" content="text/html; charset=UTF-8"&gt;
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
 
     &lt;title&gt;Geekspark DiMo&lt;/title&gt;
 
-&lt;link href="css/app.min.css" rel="stylesheet" type="text/css"&gt;
+&lt;link href=&quot;css/app.min.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
 
 &lt;/head&gt;
 &lt;body&gt;
 
-&lt;script data-main="js/require.config" src="lib/requirejs/require.js"&gt;&lt;/script&gt;
+&lt;script data-main=&quot;js/require.config&quot; src=&quot;lib/requirejs/require.js&quot;&gt;&lt;/script&gt;
 
 &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+&lt;/html&gt;</code></pre>
 <script>
 $('pre code').each(add_prism_js);
 function add_prism_js(i, el) {
     $(el).addClass('language-markup');
 }
 </script>
+
         </div>
 
         <!-- /.entry-content -->

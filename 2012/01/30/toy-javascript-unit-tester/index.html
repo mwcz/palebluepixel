@@ -22,7 +22,7 @@
     <![endif]-->
 
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
-            <link href="http://palebluepixel.org/theme/css/styles.min.css?16657707" rel="stylesheet">
+            <link href="http://palebluepixel.org/theme/css/styles.min.css?b8c15638" rel="stylesheet">
 
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="http://palebluepixel.org/theme/js/jquery.min.js"></script>
@@ -59,14 +59,14 @@
         </header>
         <div class="entry-content">
             <nav class="toc"></nav>
-            <p>Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and had a minor epiphany.  In the back of my mind, there has always been a bit of uncertainty as to how unit testing frameworks work.  Deep in my brain I knew there was something I didn't understand, but I wasn't quite sure what.  I never gave it any conscious thought.</p>
-<p>As a developer, I'd use a framework, write a bunch of <code>testBlahFoo</code> functions, and the framework would magically run them.  </p>
-<p>Then I realized... "Oh, it's just introspection."</p>
+            <p>Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and had a minor epiphany. In the back of my mind, there has always been a bit of uncertainty as to how unit testing frameworks work. Deep in my brain I knew there was something I didn't understand, but I wasn't quite sure what. I never gave it any conscious thought.</p>
+<p>As a developer, I'd use a framework, write a bunch of <code>testBlahFoo</code> functions, and the framework would magically run them.</p>
+<p>Then I realized... &quot;Oh, it's just introspection.&quot;</p>
 <pre><code>// Create an object with three properties, all functions
 var myfuncs = {
-    func1: function() { console.log("func it up"); },
-    func2: function() { console.log("func's old brother"); },
-    func3: function() { console.log("bring back da func"); }
+    func1: function() { console.log(&quot;func it up&quot;); },
+    func2: function() { console.log(&quot;func&#39;s old brother&quot;); },
+    func3: function() { console.log(&quot;bring back da func&quot;); }
 };
 
 // Run all functions attached to myfuncs
@@ -77,10 +77,9 @@ for( func in myfuncs ) {
 // Outputs:
 // 
 // func it up
-// func's old brother
-// bring back da func
-</code></pre>
-<p>So simple.  Later, I wrote a very basic unit testing framework, purely as an educational excercise.</p>
+// func&#39;s old brother
+// bring back da func</code></pre>
+<p>So simple. Later, I wrote a very basic unit testing framework, purely as an educational excercise.</p>
 <p>The guts are almost simple as the example above.</p>
 <pre><code>var JTestSuite = function () {
 
@@ -96,10 +95,10 @@ for( func in myfuncs ) {
         var fn,
             prop;
 
-        // Run all functions that begin with "test"
+        // Run all functions that begin with &quot;test&quot;
         for( prop in this ) {
-            if( typeof this[prop] === "function" ) {
-                if( prop.slice(0,4) === "test" ) {
+            if( typeof this[prop] === &quot;function&quot; ) {
+                if( prop.slice(0,4) === &quot;test&quot; ) {
                     console.log( this[prop](jt) );
                 }
             }
@@ -113,10 +112,9 @@ for( func in myfuncs ) {
         run  : run
     };
 
-};
-</code></pre>
-<p>In the <code>run</code> function's loop, I first check that each property is a function before attemping to run it.  This avoids a <code>called_non_callable TypeError</code>.  I then check that the name of the property begins with the string "test".  When dynamically calling functions, it's usually a good idea to call <code>obj.hasOwnProperty(propname)</code> to ensure the property wasn't inherited from some unknown source (especially if the property you wanted to reference may have been <code>delete</code>d, but a property with the same name is now surfacing from a parent object), but in this case I'd like to leave open the possibility for inherited Test Suites.</p>
-<p>The <code>JTests</code> object created in the <code>init</code> function is a separate object that contains a bunch of assertions.  It looks something like this:</p>
+};</code></pre>
+<p>In the <code>run</code> function's loop, I first check that each property is a function before attemping to run it. This avoids a <code>called_non_callable TypeError</code>. I then check that the name of the property begins with the string &quot;test&quot;. When dynamically calling functions, it's usually a good idea to call <code>obj.hasOwnProperty(propname)</code> to ensure the property wasn't inherited from some unknown source (especially if the property you wanted to reference may have been <code>delete</code>d, but a property with the same name is now surfacing from a parent object), but in this case I'd like to leave open the possibility for inherited Test Suites.</p>
+<p>The <code>JTests</code> object created in the <code>init</code> function is a separate object that contains a bunch of assertions. It looks something like this:</p>
 <pre><code>var JTests = function () {
 
     var version = 0.1,
@@ -129,21 +127,20 @@ for( func in myfuncs ) {
     assertTrue = function( a ) {
         var result = a === false;
         result_callback( {                                                                                                                                                                         
-            name   : "assertTrue",
+            name   : &quot;assertTrue&quot;,
             args   : [ a ],
             result : result
         } );
     };
-
+    
     return {
         assertTrue : assertTrue
     };
 
-};
-</code></pre>
+};</code></pre>
 <p>...except with many more assertions. :)</p>
-<p>Both <code>JTestSuite</code> and <code>JTests</code> use the <a href="http://stackoverflow.com/a/5647397/215148">revealing module pattern</a>. </p>
-<p>I have a lot of ideas for improvement, like <a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself">DRY</a>ing up the assertions, so the <code>{name,args,result}</code> object doesn't have to be defined in each assertion.  But <a href="http://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#JavaScript">many others</a> have already done a great job, and I don't want to reinvent too many wheels.</p>
+<p>Both <code>JTestSuite</code> and <code>JTests</code> use the <a href="http://stackoverflow.com/a/5647397/215148">revealing module pattern</a>.</p>
+<p>I have a lot of ideas for improvement, like <a href="http://en.wikipedia.org/wiki/Don&#39;t_repeat_yourself">DRY</a>ing up the assertions, so the <code>{name,args,result}</code> object doesn't have to be defined in each assertion. But <a href="http://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#JavaScript">many others</a> have already done a great job, and I don't want to reinvent too many wheels.</p>
 <pre><code>// Define a custom handler for the result
 function test_callback( result ) {
     console.log(result);
@@ -159,17 +156,16 @@ TestSuite.testMath = function(jt) {
 };
 
 TestSuite.testFalsy = function(jt) {
-    // [], "", and "0" all == false in javascript
+    // [], &quot;&quot;, and &quot;0&quot; all == false in javascript
     jt.assertFalsy( [] );
-    jt.assertFalsy( "" );
-    jt.assertFalsy( "0" );
+    jt.assertFalsy( &quot;&quot; );
+    jt.assertFalsy( &quot;0&quot; );
 };
 
 // Run all the tests
-TestSuite.run();
-</code></pre>
-<p>The callback allows a user to determine how the results from the unit test should be processed or displayed.  Results could be printed to console.log, displayed on a page by adding them to the DOM, sent to a Web service with AJAX, or any arbitrary service with Web Sockets.</p>
-<p>After writing this toy framework, and explaining it to a colleague, I was told that the Rails unit tester uses almost the exact same approach.  I'd wager a few bucks that JUnit uses the Reflection API's <code>Class.getMethods()</code> to find and run all the methods added to a TestCase class.  Only a few bucks, though.</p>
+TestSuite.run();</code></pre>
+<p>The callback allows a user to determine how the results from the unit test should be processed or displayed. Results could be printed to console.log, displayed on a page by adding them to the DOM, sent to a Web service with AJAX, or any arbitrary service with Web Sockets.</p>
+<p>After writing this toy framework, and explaining it to a colleague, I was told that the Rails unit tester uses almost the exact same approach. I'd wager a few bucks that JUnit uses the Reflection API's <code>Class.getMethods()</code> to find and run all the methods added to a TestCase class. Only a few bucks, though.</p>
         </div>
 
         <!-- /.entry-content -->

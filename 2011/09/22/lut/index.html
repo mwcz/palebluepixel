@@ -22,7 +22,7 @@
     <![endif]-->
 
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
-            <link href="http://palebluepixel.org/theme/css/styles.min.css?16657707" rel="stylesheet">
+            <link href="http://palebluepixel.org/theme/css/styles.min.css?b8c15638" rel="stylesheet">
 
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="http://palebluepixel.org/theme/js/jquery.min.js"></script>
@@ -60,29 +60,30 @@
         <div class="entry-content">
             <nav class="toc"></nav>
             <p>Decoding is easy. Decoding requires a lot of typing. (I am starting to believe this is true of ever aspect of interpreted emulation...)</p>
-<p>For the AEJS decoder, I am creating a <a href="http://en.wikipedia.org/wiki/Lookup_table">look-up table</a> with every possible pattern for each instruction. It was my first idea, but I initially discarded it as "wasteful and inelegant". Later, I accepted it as "really fast".</p>
+<p>For the AEJS decoder, I am creating a <a href="http://en.wikipedia.org/wiki/Lookup_table">look-up table</a> with every possible pattern for each instruction. It was my first idea, but I initially discarded it as &quot;wasteful and inelegant&quot;. Later, I accepted it as &quot;really fast&quot;.</p>
 <p>I'm generating a large set of bit patterns that map to 68k opcodes, like so:</p>
 <pre><code>0100101011111010 -&gt; BGND
 0100101011111100 -&gt; ILLEGAL
 0100111001110000 -&gt; RESET
 0100111001110001 -&gt; NOP
 0100111001110010 -&gt; STOP
-0100111001110011 -&gt; RTE
-</code></pre>
+0100111001110011 -&gt; RTE</code></pre>
 <p>The current code can be found <a href="https://github.com/mwcz/AEJS/blob/master/src/genlut.py">here</a>.</p>
-<p>Yes, it's written in Python and yes, AEJS is a JavaScript project.  There's a reason.  I see two approaches to generating the LUT (look-up table).</p>
+<p>Yes, it's written in Python and yes, AEJS is a JavaScript project. There's a reason. I see two approaches to generating the LUT (look-up table).</p>
 <h2 id="generate-the-lut-on-launch-dynamic">Generate the LUT on launch (dynamic)</h2>
-<p>This has the advantage of being easier to debug.  It also might be easier if I ever expand the emulator to other chips, like the <a href="http://en.wikipedia.org/wiki/Motorola_68020">68020</a> or <a href="http://en.wikipedia.org/wiki/Motorola_68030">68030</a>.</p>
-<p>It currently takes about 0.466 seconds on my machine to generate ~12,000 patterns.  That means it should take less than 2.5s to generate the full LUT.</p>
+<p>This has the advantage of being easier to debug. It also might be easier if I ever expand the emulator to other chips, like the <a href="http://en.wikipedia.org/wiki/Motorola_68020">68020</a> or <a href="http://en.wikipedia.org/wiki/Motorola_68030">68030</a>.</p>
+<p>It currently takes about 0.466 seconds on my machine to generate ~12,000 patterns. That means it should take less than 2.5s to generate the full LUT.</p>
 <h2 id="generate-the-lut-pre-launch-static">Generate the LUT pre-launch (static)</h2>
-<p>This is what I'm currently working toward.  genlut.py is currently generating about 12,000 opcode bit patterns out of a max of I'm-not-sure-yet-but-slightly-less-than-65,536.</p>
-<p>With this method, I would run genlut.py one final time, pipe the output into a static JS file, and regex the contents into a JS array.  The LUT would never have to be generated again, and would exist happily forever-after.</p>
+<p>This is what I'm currently working toward. genlut.py is currently generating about 12,000 opcode bit patterns out of a max of I'm-not-sure-yet-but-slightly-less-than-65,536.</p>
+<p>With this method, I would run genlut.py one final time, pipe the output into a static JS file, and regex the contents into a JS array. The LUT would never have to be generated again, and would exist happily forever-after.</p>
 <p>Cons: relies upon the LUT being 100% correct, as any errors would be hard to debug, and would require another run of genlut.py to fix.</p>
-<p>Pros: AEJS will launch faster without having to generate the LUT each time.  If I can verify that the LUT is 100% correct, this is obviously the right approach.</p>
-<p>I'll continue on with the static method for now, and odds are I'll stick with it.   2.5s is too big a price to pay.</p>
+<p>Pros: AEJS will launch faster without having to generate the LUT each time. If I can verify that the LUT is 100% correct, this is obviously the right approach.</p>
+<p>I'll continue on with the static method for now, and odds are I'll stick with it. 2.5s is too big a price to pay.</p>
 <p>Back to work:</p>
-<p><a href="/static/images/013/workarea.png"><static/images class="grid_7" src="/static/images/013/workarea.png" alt=":)" title="" /></a>
-<div class="clear"></div></p>
+<a href="/static/images/013/workarea.png"><static/images class="grid_7" src="/static/images/013/workarea.png" alt=":)" title="" /></a>
+<div class="clear">
+
+</div>
 <p>(This post was copied from my old <a href="http://aejs.blogspot.com/">AEJS blog</a>)</p>
         </div>
 

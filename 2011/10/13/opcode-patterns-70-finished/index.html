@@ -22,7 +22,7 @@
     <![endif]-->
 
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
-            <link href="http://palebluepixel.org/theme/css/styles.min.css?16657707" rel="stylesheet">
+            <link href="http://palebluepixel.org/theme/css/styles.min.css?b8c15638" rel="stylesheet">
 
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="http://palebluepixel.org/theme/js/jquery.min.js"></script>
@@ -59,10 +59,10 @@
         </header>
         <div class="entry-content">
             <nav class="toc"></nav>
-            <p>genlut.py is really filling out.  It generates the LUT for all 68k opcodes (68000 only), and I'm about 70% done.  77 down, 34 to go.</p>
-<p>The OPCODES dict defines the first two bytes of each opcode, both static bits and operands.  The operand strings act as keys into the PATTERNS struct, which contains all possible values for each operand.</p>
-<p>The recursive function gen() is fed an opcode pattern which may contain operand strings as well as static bits.  Some operand patterns contain other operand patterns, so gen() keeps recursing until all operand patterns are gone.  Once a set of totally static bits has been created, those bits are added to INSTRUCTIONS, along with the name of the opcode.</p>
-<p>The PATTERNS, OPCODES, and INSTRUCTIONS dicts are all named poorly, and the whole solution  isn't ultra-elegant, but it does follow the structure of the 68k PRM pretty intuitively and is easy to edit.  Once it's complete, I should never need to run it again.</p>
+            <p>genlut.py is really filling out. It generates the LUT for all 68k opcodes (68000 only), and I'm about 70% done. 77 down, 34 to go.</p>
+<p>The OPCODES dict defines the first two bytes of each opcode, both static bits and operands. The operand strings act as keys into the PATTERNS struct, which contains all possible values for each operand.</p>
+<p>The recursive function gen() is fed an opcode pattern which may contain operand strings as well as static bits. Some operand patterns contain other operand patterns, so gen() keeps recursing until all operand patterns are gone. Once a set of totally static bits has been created, those bits are added to INSTRUCTIONS, along with the name of the opcode.</p>
+<p>The PATTERNS, OPCODES, and INSTRUCTIONS dicts are all named poorly, and the whole solution isn't ultra-elegant, but it does follow the structure of the 68k PRM pretty intuitively and is easy to edit. Once it's complete, I should never need to run it again.</p>
 <p>(This post was copied from my old <a href="http://aejs.blogspot.com/">AEJS blog</a>)</p>
         </div>
 

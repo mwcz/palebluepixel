@@ -22,7 +22,7 @@
     <![endif]-->
 
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
-            <link href="http://palebluepixel.org/theme/css/styles.min.css?16657707" rel="stylesheet">
+            <link href="http://palebluepixel.org/theme/css/styles.min.css?b8c15638" rel="stylesheet">
 
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="http://palebluepixel.org/theme/js/jquery.min.js"></script>
@@ -71,7 +71,6 @@
         cursor        : crosshair;
     }
 </style>
-
 <script type="text/javascript">
 
 $(function() {
@@ -125,22 +124,21 @@ if( cnvs.getContext) { // Check for canvas support
 });
 
 </script>
-
-<p>This is an old demo I made of an <a href="http://en.wikipedia.org/wiki/Canvas_element">HTML5 canvas</a> eyedropper.  Circa 2009, I believe.  Just click and drag on the image to see it in action.</p>
+<p>This is an old demo I made of an <a href="http://en.wikipedia.org/wiki/Canvas_element">HTML5 canvas</a> eyedropper. Circa 2009, I believe. Just click and drag on the image to see it in action.</p>
 <p><span id="colorcode">rgb(0,0,0)</span></p>
-<canvas id="c">Sorry, in order to view this demo you need a Web browser that supports HTML5 canvas.</canvas>
-
-<p>It's a pretty simple script, and works by declaring this function which handles onclick and ondrag events from the canvas.  cnvs is the canvas element, and c is the canvas's 2D rendering context object.</p>
+<canvas id="c">
+Sorry, in order to view this demo you need a Web browser that supports HTML5 canvas.
+</canvas>
+<p>It's a pretty simple script, and works by declaring this function which handles onclick and ondrag events from the canvas. cnvs is the canvas element, and c is the canvas's 2D rendering context object.</p>
 <pre><code>pixel = function(e) {
     // calculate the x and y coordinates of the cursor
     var imagesdata = c.getImageData( x, y, 1, 1 );
     var new_color = [ imagesdata.data[0],
                       imagesdata.data[1],
                       imagesdata.data[2] ];
-    color.style.background = "rgb("+new_color+")";
-}
-</code></pre>
-<p>That's just a summary; the function actually does a little more than that.  Take a look at the source for this page if you're interested.</p>
+    color.style.background = &quot;rgb(&quot;+new_color+&quot;)&quot;;
+}</code></pre>
+<p>That's just a summary; the function actually does a little more than that. Take a look at the source for this page if you're interested.</p>
         </div>
 
         <!-- /.entry-content -->

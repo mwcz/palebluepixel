@@ -22,7 +22,7 @@
     <![endif]-->
 
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
-            <link href="http://palebluepixel.org/theme/css/styles.min.css?16657707" rel="stylesheet">
+            <link href="http://palebluepixel.org/theme/css/styles.min.css?b8c15638" rel="stylesheet">
 
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="http://palebluepixel.org/theme/js/jquery.min.js"></script>
@@ -59,26 +59,26 @@
         </header>
         <div class="entry-content">
             <nav class="toc"></nav>
-            <p>Huge problem with this method: with my vim command autocomplete settings, vim will not cycle through matching names.  If I do :b style<Tab>, it will find the style.css for each theme, but will not cycle through them.<br />
-Iirc the vim settings cause it to either print a list of all matching names when you hit tab, OR cycle through each match.  If I can configure it to print the list on the first tab, and cycle through on each subsequent tab, it might work.  Leaving this unpublished until then.</p>
-<p>Eclipse Ctrl+Shift+R
-Emacs http://www.emacswiki.org/emacs/FindFileInProject
-TextMate cmd-T</p>
+            <p>Huge problem with this method: with my vim command autocomplete settings, vim will not cycle through matching names. If I do :b style<Tab>, it will find the style.css for each theme, but will not cycle through them.<br />Iirc the vim settings cause it to either print a list of all matching names when you hit tab, OR cycle through each match. If I can configure it to print the list on the first tab, and cycle through on each subsequent tab, it might work. Leaving this unpublished until then.</p>
+<p>Eclipse Ctrl+Shift+R Emacs http://www.emacswiki.org/emacs/FindFileInProject TextMate cmd-T</p>
 <pre><code>cd ~/workspace/myproject/
 vim
-:n **
-</code></pre>
-<p>These commands will recursively open every file in the project.  It might seem wasteful</p>
-<pre><code>:q!
-</code></pre>
+:n **</code></pre>
+<p>These commands will recursively open every file in the project. It might seem wasteful</p>
+<pre><code>:q!</code></pre>
 <h2 id="drawbacks">Drawbacks</h2>
 <p>There's no such thing as a perfect method (for doing anything), and this one has a few drawbacks.</p>
-<p>If you like using tabs in gvim, this probably won't work.  It opens every file in the project, and vim won't open many tabs at once.  The command <code>:tabnew **</code> in my 500-file project results in: <img alt="Buffers menu with many files open" src="/static/images/010/too_many_file_names.png" />.  I typically use vim inside <a href="http://software.jessies.org/terminator/">Terminator</a>, and use multiple buffers in a single window, instead of in tabs.  If you do use gvim, a nice tab-like option is the Buffers menu.</p>
-<p><img alt="Buffers menu with many files open" src="/static/images/010/vim_gui_buffer_list.png" /></p>
-<p>It opens all files, including binary files.  You'll never see any of them unless you switch to its buffer.</p>
-<p><img alt="Screenshot of &quot;Many more files to edit&quot; message in vim" src="/static/images/010/more_files_to_edit.png" /></p>
+<p>If you like using tabs in gvim, this probably won't work. It opens every file in the project, and vim won't open many tabs at once. The command <code>:tabnew **</code> in my 500-file project results in: <img src="/static/images/010/too_many_file_names.png" alt="Buffers menu with many files open" />. I typically use vim inside <a href="http://software.jessies.org/terminator/">Terminator</a>, and use multiple buffers in a single window, instead of in tabs. If you do use gvim, a nice tab-like option is the Buffers menu.</p>
+<figure>
+<img src="/static/images/010/vim_gui_buffer_list.png" alt="Buffers menu with many files open" /><figcaption>Buffers menu with many files open</figcaption>
+</figure>
+<p>It opens all files, including binary files. You'll never see any of them unless you switch to its buffer.</p>
+<figure>
+<img src="/static/images/010/more_files_to_edit.png" alt="Screenshot of &quot;Many more files to edit&quot; message in vim" /><figcaption>Screenshot of &quot;Many more files to edit&quot; message in vim</figcaption>
+</figure>
 <h2 id="sources">Sources</h2>
 <p><a href="http://vimdoc.sourceforge.net/htmldoc/editing.html#:next">Documentation for the :next command</a></p>
+
         </div>
 
         <!-- /.entry-content -->
