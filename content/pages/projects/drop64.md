@@ -10,7 +10,7 @@ Check it out at [drop64.com][2].
 
 Here's a demo recording of how easy it is.
 
-![Drop64 recording]({filename}/static/images/projects/drop64/recording.gif Drop64 recording)
+![Drop64 recording]({filename}/static/images/projects/drop64/recording.gif)
 
 Some benefits of Data URIs are:
 
