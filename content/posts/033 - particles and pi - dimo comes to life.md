@@ -45,7 +45,7 @@ the particles.  Orbits are formed, and tiny solar systems glow brilliantly.
     <figcaption>
         <a href="http://vimeo.com/107405612">GeekSPARK: Digital Motion (DiMo) desktop demo</a>
     </figcaption>
-    
+
 </figure>
 
 DiMo (short for Digital Motion) is an annual exhibit at GeekSPARK, which itself
