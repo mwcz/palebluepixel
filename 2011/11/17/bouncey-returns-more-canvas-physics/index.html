@@ -61,14 +61,14 @@
             <nav class="toc"></nav>
             <p>This is a slightly upgraded version of the physics demo I showed in my <a href="/2011/11/17/bouncey---canvas-physics/">last post</a>.</p>
 <p>It is still...</p>
-<p><quote>&quot;a buggy, rudimentary, just-for-fun javascript physics simulator.&quot;</quote></p>
+<p><quote>"a buggy, rudimentary, just-for-fun javascript physics simulator."</quote></p>
 <p>This version has:</p>
 <ul>
 <li>pre-defined initial states</li>
 <li>gravity</li>
 <li>friction</li>
 </ul>
-<p>It still has the &quot;clinging&quot; bug. I know how to fix it, but didn't deem it important enough to spend time on it. :)</p>
+<p>It still has the "clinging" bug.  I know how to fix it, but didn't deem it important enough to spend time on it. :)</p>
 <p>The <a href="https://github.com/mwcz/bouncey/blob/master/bounce.html">code</a> is well commented, so feel free to hack on it.</p>
 <p>Click on one of the initial states to begin the simulation.</p>
 <style type="text/css">
@@ -81,28 +81,24 @@
             box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
 }
 </style>
+
 <script type="text/javascript" src="/static/js/008/bouncey.js"></script>
-Initial states:
-<button onclick="RANDOM();">
-Random
-</button>
-<button onclick="POOL();">
-POOL
-</button>
-<button onclick="HEAD_ON_COLLISION();">
-HEAD_ON_COLLISION
-</button>
-<canvas id="cnvs" width="500" height="375">
-<pre><code>Sorry, your browser does not support HTML5 canvas.  Lame.</code></pre>
+
+<p>Initial states:
+<button onclick="RANDOM();">Random</button>
+<button onclick="POOL();">POOL</button>
+<button onclick="HEAD_ON_COLLISION();">HEAD_ON_COLLISION</button></p>
+<canvas id="cnvs" width="500" height="375"> 
+    Sorry, your browser does not support HTML5 canvas.  Lame.
 </canvas>
-<button onclick="paused++;paused%=2;">
-Pause
-</button>
+
+<p><button onclick="paused++;paused%=2;">Pause</button> </p>
 <pre>
   velocity sum: <span id="txt_velocity_sum">NONE</span>
 x velocity sum: <span id="txt_velocity_sum_x">NONE</span>
 y velocity sum: <span id="txt_velocity_sum_y">NONE</span>
 </pre>
+
 <p>(The POOL initial state reproduces the clinging bug.)</p>
         </div>
 

@@ -71,6 +71,7 @@
         cursor        : crosshair;
     }
 </style>
+
 <script type="text/javascript">
 
 $(function() {
@@ -124,21 +125,24 @@ if( cnvs.getContext) { // Check for canvas support
 });
 
 </script>
-<p>This is an old demo I made of an <a href="http://en.wikipedia.org/wiki/Canvas_element">HTML5 canvas</a> eyedropper. Circa 2009, I believe. Just click and drag on the image to see it in action.</p>
+
+<p>This is an old demo I made of an <a href="http://en.wikipedia.org/wiki/Canvas_element">HTML5 canvas</a> eyedropper.  Circa 2009, I believe.  Just click and drag on the image to see it in action.</p>
 <p><span id="colorcode">rgb(0,0,0)</span></p>
-<canvas id="c">
-Sorry, in order to view this demo you need a Web browser that supports HTML5 canvas.
-</canvas>
-<p>It's a pretty simple script, and works by declaring this function which handles onclick and ondrag events from the canvas. cnvs is the canvas element, and c is the canvas's 2D rendering context object.</p>
-<pre><code>pixel = function(e) {
-    // calculate the x and y coordinates of the cursor
-    var imagesdata = c.getImageData( x, y, 1, 1 );
-    var new_color = [ imagesdata.data[0],
-                      imagesdata.data[1],
-                      imagesdata.data[2] ];
-    color.style.background = &quot;rgb(&quot;+new_color+&quot;)&quot;;
-}</code></pre>
-<p>That's just a summary; the function actually does a little more than that. Take a look at the source for this page if you're interested.</p>
+<canvas id="c">Sorry, in order to view this demo you need a Web browser that supports HTML5 canvas.</canvas>
+
+<p>It's a pretty simple script, and works by declaring this function which handles onclick and ondrag events from the canvas.  cnvs is the canvas element, and c is the canvas's 2D rendering context object.</p>
+<div class="highlight"><pre><span class="nx">pixel</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// calculate the x and y coordinates of the cursor</span>
+    <span class="kd">var</span> <span class="nx">imagesdata</span> <span class="o">=</span> <span class="nx">c</span><span class="p">.</span><span class="nx">getImageData</span><span class="p">(</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">new_color</span> <span class="o">=</span> <span class="cp">[</span> <span class="nx">imagesdata.data</span><span class="err">[</span><span class="mi">0</span><span class="cp">]</span><span class="p">,</span>
+                      <span class="nx">imagesdata</span><span class="p">.</span><span class="nx">data</span><span class="cp">[</span><span class="mi">1</span><span class="cp">]</span><span class="p">,</span>
+                      <span class="nx">imagesdata</span><span class="p">.</span><span class="nx">data</span><span class="cp">[</span><span class="mi">2</span><span class="cp">]</span> <span class="p">];</span>
+    <span class="nx">color</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">background</span> <span class="o">=</span> <span class="s2">&quot;rgb(&quot;</span><span class="o">+</span><span class="nx">new_color</span><span class="o">+</span><span class="s2">&quot;)&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>That's just a summary; the function actually does a little more than that.  Take a look at the source for this page if you're interested.</p>
         </div>
 
         <!-- /.entry-content -->

@@ -60,20 +60,16 @@
         <div class="entry-content">
             <nav class="toc"></nav>
             <p>Introducing ColorPal!</p>
-<figure>
-<img src="/static/images/015/ss.png" alt="ColorPal screenshot" /><figcaption>ColorPal screenshot</figcaption>
-</figure>
-<p>I've been toying with color palette generation for years. My photography website has always had some form of dynamic palette, so the theme of each page matches the photo. You can see the current iteration <a href="http://clayto.com/">here</a>:</p>
-<p>
-<static/images src="/static/images/015/tarsi.png" alt="clayto.com" title="My photo, 'Tarsi', at clayto.com" />
-</p>
-<p>I owe the idea of photo-matching website palettes to <a href="http://noahgrey.com">Noah Grey</a>. Each iteration of my photo site has gotten a slightly more advanced palette generation tool. You can see murmurs of them in the <a href="/2011/11/16/html5-canvas-eyedropper/">old</a> <a href="/2011/11/16/html5-canvas-area-selection-averaging/">canvas</a> <a href="/2011/11/17/html5-tool-for-creating-color-palettes-from-an-image/">demos</a> I've posted. Sooner or later I'll make a more thorough post about the tools I've created for each iteration of the site. Anyway, back to ColorPal.</p>
-<p>ColorPal is an HTML5 palette generation tool. Currently it's in a very early stage, and I've only tested it in Chrome. I have many ideas for improvements, and I'd love to hear anyone's ideas as well.</p>
-<p>
-<static/images src="/static/images/015/colorpal_logo.png" alt="ColorPal logo" title="" style="float: right; margin: 8px" />
-</p>
+<p><img alt="ColorPal screenshot" src="/static/images/015/ss.png" /></p>
+<p>I've been toying with color palette generation for years.  My photography website has always had some form of dynamic palette, so the theme of each page matches the photo.  You can see the current iteration <a href="http://clayto.com/">here</a>:</p>
+<p><static/images src="/static/images/015/tarsi.png" alt="clayto.com" title="My photo, 'Tarsi', at clayto.com" /></p>
+
+<p>I owe the idea of photo-matching website palettes to <a href="http://noahgrey.com">Noah Grey</a>.  Each iteration of my photo site has gotten a slightly more advanced palette generation tool.  You can see murmurs of them in the <a href="/2011/11/16/html5-canvas-eyedropper/">old</a> <a href="/2011/11/16/html5-canvas-area-selection-averaging/">canvas</a> <a href="/2011/11/17/html5-tool-for-creating-color-palettes-from-an-image/">demos</a> I've posted.  Sooner or later I'll make a more thorough post about the tools I've created for each iteration of the site.  Anyway, back to ColorPal.</p>
+<p>ColorPal is an HTML5 palette generation tool.  Currently it's in a very early stage, and I've only tested it in Chrome.  I have many ideas for improvements, and I'd love to hear anyone's ideas as well.  </p>
+<p><static/images src="/static/images/015/colorpal_logo.png" alt="ColorPal logo" title="" style="float: right; margin: 8px" /></p>
+
 <p>It's powered by <a href="http://en.wikipedia.org/wiki/Canvas_element">canvas</a>, <a href="https://developer.mozilla.org/en/data_URIs">data URIs</a>, <a href="http://dev.w3.org/2006/webapi/FileAPI/">File API</a>, and my homespun <a href="http://en.wikipedia.org/wiki/Median_cut">median-cut</a> implementation, which I'm calling <em>median-cut.js</em>.</p>
-<p>Bear in mind that while I've kept median-cut.js nice and clean, I did hammer out ColorPal as quickly as possible, so it's a mess. Why? I expect median-cut.js to be useful to other programmers, but ColorPal is just a tool for designers. Or it will be, anyway. :)</p>
+<p>Bear in mind that while I've kept median-cut.js nice and clean, I did hammer out ColorPal as quickly as possible, so it's a mess.  Why?  I expect median-cut.js to be useful to other programmers, but ColorPal is just a tool for designers.  Or it will be, anyway. :)</p>
 <p>Here are github repos for <a href="https://github.com/mwcz/ColorPal">ColorPal</a> and <a href="https://github.com/mwcz/median-cut-js">median-cut.js</a>.</p>
 <p>And, as a reward for reading to the end, a <a href="/projects/colorpal/">live demo</a>!</p>
         </div>

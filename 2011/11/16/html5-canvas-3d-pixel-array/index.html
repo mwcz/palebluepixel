@@ -59,7 +59,7 @@
         </header>
         <div class="entry-content">
             <nav class="toc"></nav>
-            <p>This is another demo from 2009-ish. When I started experimenting with canvas, I felt uncomfortable with the 1-dimensionality of <a href="https://developer.mozilla.org/en/DOM/CanvasPixelArray">CanvasPixelArray</a>. I wrote this script to convert it into a more logical format: X by Y by RGBA. Let me rephrase that. By &quot;more logical&quot;, I mean &quot;more logical, <em>to me</em>, <em>at the time</em>). 1D is fine, and I can't think of any use for this script. But, nonetheless, here it is, including the original description.</p>
+            <p>This is another demo from 2009-ish.  When I started experimenting with canvas, I felt uncomfortable with the 1-dimensionality of <a href="https://developer.mozilla.org/en/DOM/CanvasPixelArray">CanvasPixelArray</a>.  I wrote this script to convert it into a more logical format: X by Y by RGBA.  Let me rephrase that.  By "more logical", I mean "more logical, <em>to me</em>, <em>at the time</em>).  1D is fine, and I can't think of any use for this script.  But, nonetheless, here it is, including the original description.</p>
 <script type="text/javascript">
 
 $(function() {
@@ -155,44 +155,49 @@ $(function() {
 
 });
 </script>
-<h1 id="canvas-pixarray">canvas pixarray</h1>
-<p>After loading an image file into a &lt;canvas&gt; element, you can retrieve its pixels with <code>getImageData()</code>. The problem (not really a problem, more an inconvenience) is that the array of pixels is one-dimensional. <code>getImageData</code> returns pixels in the following format:</p>
+
+<h1>canvas pixarray</h1>
+<p>After loading an image file into a &lt;canvas&gt; element, you can retrieve its
+pixels with <code>getImageData()</code>.  The problem (not really a problem, more an
+inconvenience) is that the array of pixels is one-dimensional.  <code>getImageData</code> returns pixels in the following format:</p>
 <pre>
 ( R<sub>0</sub>, G<sub>0</sub>, B<sub>0</sub>, A<sub>1</sub>, R<sub>1</sub>, G<sub>1</sub>, B<sub>1</sub>, A<sub>1</sub>, ... )
 </pre>
-<p>As a human, that's really tough to work with, so this script converts that to a more logical 3D array (X by Y by RGBA)</p>
+
+<p>As a human, that's really tough to work with, so this script converts that to a more
+logical 3D array (X by Y by RGBA)</p>
 <p><input class="btn btn-primary" type="button" value="Convert 1D pixel array into 3D pixel array" onclick="getpixelarray();" /></p>
 <div class="row">
-<pre><code>&lt;div class=&quot;col-xs-6&quot;&gt;
-    &lt;div class=&quot;panel panel-default&quot;&gt;
-        &lt;div class=&quot;panel-heading&quot;&gt;
-            &lt;b&gt;
-                Image drawn directly from image file
-            &lt;/b&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;panel-body&quot;&gt;
-            &lt;canvas class=&quot;img-responsive&quot; id=&quot;c&quot; width=&quot;650&quot; height=&quot;250&quot;&gt;
-                Your browser does not support the &amp;lt;canvas&amp;gt; element.
-                Lame.
-            &lt;/canvas&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-xs-6&quot;&gt;
-    &lt;div class=&quot;panel panel-default&quot;&gt;
-        &lt;div class=&quot;panel-heading&quot;&gt;
-            &lt;b&gt;
-                Image drawn from the 3D image array
-            &lt;/b&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;panel-body&quot;&gt;
-            &lt;canvas class=&quot;img-responsive&quot; id=&quot;t&quot; width=&quot;650&quot; height=&quot;250&quot;&gt;
-                Your browser does not support the &amp;lt;canvas&amp;gt; element.
-                Lame.
-            &lt;/canvas&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+    <div class="col-xs-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <b>
+                    Image drawn directly from image file
+                </b>
+            </div>
+            <div class="panel-body">
+                <canvas class="img-responsive" id="c" width="650" height="250">
+                    Your browser does not support the &lt;canvas&gt; element.
+                    Lame.
+                </canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <b>
+                    Image drawn from the 3D image array
+                </b>
+            </div>
+            <div class="panel-body">
+                <canvas class="img-responsive" id="t" width="650" height="250">
+                    Your browser does not support the &lt;canvas&gt; element.
+                    Lame.
+                </canvas>
+            </div>
+        </div>
+    </div>
 </div>
         </div>
 

@@ -61,55 +61,105 @@
             <nav class="toc"></nav>
             <p><a href="/projects/colorpal"><static/images src="/static/images/019/colorpal_logo.png" alt="ColorPal logo" title=""
 /></a></p>
-<p>In my <a href="/2012/01/16/colorpal-alpha/">last post</a> on the subject, I introduced ColorPal, my HTML5 color palette generation tool. It didn't perform well with certain types of images, so I fixed it. :)</p>
-<p>Color palettes will now match the image even better. Especially for images with infrequent but <em>important</em> colors. Here's a comparison of the old and new methods, on an image that is mostly black:</p>
-<figure>
-<img src="/static/images/019/median-mean-comparison.png" alt="comparison of palettes generated with median and mean" /><figcaption>comparison of palettes generated with median and mean</figcaption>
-</figure>
-<p>You can see that with the old method, the black pixels definitely took over the palette.</p>
+<p>In my <a href="/2012/01/16/colorpal-alpha/">last post</a> on the subject, I introduced
+ColorPal, my HTML5 color palette generation tool.  It didn't perform well with
+certain types of images, so I fixed it. :)</p>
+<p>Color palettes will now match the image even better.  Especially for images
+with infrequent but <em>important</em> colors.  Here's a comparison of the old and new
+methods, on an image that is mostly black:</p>
+<p><img alt="comparison of palettes generated with median and
+mean" src="/static/images/019/median-mean-comparison.png" /></p>
+<p>You can see that with the old method, the black pixels definitely took over the
+palette.</p>
 <p><a href="/projects/colorpal">Try it with your own images!</a></p>
-<p>For some images, this change won't affect palettes at all. But for images with low-population, high-importance colors, like the one above, palettes will look <em>much</em> better!</p>
+<p>For some images, this change won't affect palettes at all.  But for images with
+low-population, high-importance colors, like the one above, palettes will look
+<em>much</em> better!</p>
 <p>Technical discussion below.</p>
-<h1 id="why-the-median-in-median-cut">Why the 'median' in median-cut?</h1>
-<p>Median Cut is an algorithm typically used to reduce the number of colors in an image.</p>
-<figure>
-<img src="/static/images/019/median-cut-example.png" alt="16 million colors versus 16 colors" /><figcaption>16 million colors versus 16 colors</figcaption>
-</figure>
+<h1>Why the 'median' in median-cut?</h1>
+<p>Median Cut is an algorithm typically used to reduce the number of colors in an
+image.</p>
+<p><img alt="16 million colors versus 16 colors" src="/static/images/019/median-cut-example.png" /></p>
 <p>The steps to perform median cut are fairly straightforward:</p>
-<ol type="1">
-<li><p>Find the smallest box which contains all the colors.</p></li>
-<li><p>Sort the enclosed colors along the longest axis of the box.</p></li>
-<li><p>Split the box into two regions at median of the sorted list.</p></li>
-<li><p>Repeat the above process until the original color space has been divided into N regions where N is the number of colors you want.</p></li>
+<ol>
+<li>
+<p>Find the smallest box which contains all the colors.</p>
+</li>
+<li>
+<p>Sort the enclosed colors along the longest axis of the box.</p>
+</li>
+<li>
+<p>Split the box into two regions at median of the sorted list.</p>
+</li>
+<li>
+<p>Repeat the above process until the original color space has been divided
+     into N regions where N is the number of colors you want.</p>
+</li>
 </ol>
-<p>Not too bad, right? The question remains, though, why median?</p>
-<p>Mean, median, and mode all attempt to measure the <a href="http://en.wikipedia.org/wiki/Location_parameter">location</a> of a probability distribution. Worded more intuitively... they try to find the center of a set of numbers. They just employ different definitions of &quot;center&quot;.</p>
-<p><img src="/static/images/019/mean_median_mode.png" alt="mean, median, and mode graphed" /> (Thanks <a href="http://en.wikipedia.org/wiki/Median">Wikipedia</a>)</p>
-<p>As you can see clearly in the dashed data set, the mean tends to follow the tail. In other words, mean is useful when outliers are important. When generating a color palette, outliers are essential. Outliers may be the small streak of color in an otherwise drab sky, or a small red rose in the middle of a green field.</p>
-<p>The goal of median cut is <em>not</em> to generate a color palette. It's to efficiently reduce the number of colors in an image. Since my goal with ColorPal is to find good-lookin' colors, I've modified the algorithm to split boxes at the <strong>mean</strong> instead of the <strong>median</strong>. Mean splits boxes closer to the outliers, which keeps low-population colors nicely segregated from the high-population colors.</p>
+<p>Not too bad, right?  The question remains, though, why median?</p>
+<p>Mean, median, and mode all attempt to measure the
+<a href="http://en.wikipedia.org/wiki/Location_parameter">location</a> of a probability
+distribution.  Worded more intuitively... they try to find the center of a set
+of numbers.  They just employ different definitions of "center".</p>
+<p><img alt="mean, median, and mode graphed" src="/static/images/019/mean_median_mode.png" />
+(Thanks <a href="http://en.wikipedia.org/wiki/Median">Wikipedia</a>)</p>
+<p>As you can see clearly in the dashed data set, the mean tends to follow the
+tail.  In other words, mean is useful when outliers are important.  When
+generating a color palette, outliers are essential.  Outliers may be the small
+streak of color in an otherwise drab sky, or a small red rose in the middle of
+a green field.</p>
+<p>The goal of median cut is <em>not</em> to generate a color palette.  It's to
+efficiently reduce the number of colors in an image.  Since my goal with
+ColorPal is to find good-lookin' colors, I've modified the algorithm to split
+boxes at the <strong>mean</strong> instead of the <strong>median</strong>.  Mean splits boxes closer to
+the outliers, which keeps low-population colors nicely segregated from the
+high-population colors.</p>
 <p>Thus step 3 becomes:</p>
 <div class="pygments_murphy syntax_highlight">
-<ol start="3" type="1">
-<li>Split the box into two regions at the <b>mean</b> of the sorted list.</li>
-</ol>
+  3. Split the box into two regions at the <b>mean</b> of the sorted list.
 </div>
-<p>The result? Mean Cut! Also: awesome color palettes.</p>
-<h2 id="interesting-side-note-on-color-distributions">Interesting side-note on color distributions</h2>
-<p>Interestingly, photographs of nature tend to have nice, close-to-normal color distributions. A &quot;normal distribution&quot; is a formal term for a &quot;bell curve&quot;.</p>
+
+<p>The result?  Mean Cut!  Also: awesome color palettes.</p>
+<h2>Interesting side-note on color distributions</h2>
+<p>Interestingly, photographs of nature tend to have nice, close-to-normal color
+distributions.  A "normal distribution" is a formal term for a "bell curve".</p>
 <p>Check out the red, green, and blue distributions for a photograph of a forest.</p>
-<p><img src="/static/images/019/forest_r.png" alt="Forest red pixel distribution" /> <img src="/static/images/019/forest_g.png" alt="Forest green pixel distribution" /> <img src="/static/images/019/forest_b.png" alt="Forest blue pixel distribution" /></p>
+<p><img alt="Forest red   pixel distribution" src="/static/images/019/forest_r.png" />
+<img alt="Forest green pixel distribution" src="/static/images/019/forest_g.png" />
+<img alt="Forest blue  pixel distribution" src="/static/images/019/forest_b.png" /></p>
 <p>For comparison, here are the distributions for a shot of NYC.</p>
-<p><img src="/static/images/019/city_r.png" alt="City red pixel distribution" /> <img src="/static/images/019/city_g.png" alt="City green pixel distribution" /> <img src="/static/images/019/city_b.png" alt="City blue pixel distribution" /></p>
-<h2 id="whats-next-for-colorpal-color-spaces.">What's next for ColorPal? Color spaces.</h2>
-<p>Mean-cut improves ColorPal dramatically for some images, but it's still not perfect. Perfection probably won't be attainable, but there are still many ways to improve.</p>
+<p><img alt="City   red   pixel distribution" src="/static/images/019/city_r.png" />
+<img alt="City   green pixel distribution" src="/static/images/019/city_g.png" />
+<img alt="City   blue  pixel distribution" src="/static/images/019/city_b.png" /></p>
+<h2>What's next for ColorPal?  Color spaces.</h2>
+<p>Mean-cut improves ColorPal dramatically for some images, but it's still not
+perfect.  Perfection probably won't be attainable, but there are still many
+ways to improve.</p>
 <p>My next test will be converting to a color space other than RGB.</p>
-<p>HSL is common, and the RGB/HSL conversion formulas are in my very old JSImage project. It may not turn out well, though, as the concept of &quot;widest box&quot; loses most of its meaning when each axis is a completely different unit of measure. Although, in a way, I suppose RGB has a similar problem. Red, Green, and Blue could be thought of as unrelated units. I'll try it out and see how it goes. I wonder if my old JavaScript RGB/HSL code has rotted away yet...</p>
-<p>Most likely, I'll skip HSL and try one of the <a href="http://en.wikipedia.org/wiki/Lab_color_space">Lab</a> color spaces first, since they are not composed linear values like RGB and HSL. Instead, Lab color spaces use non-linear scales that closely match human perception of color. Perfect for my purposes. How fortuitious for me that CIE invented it way back in 1931.</p>
-<p>There are three &quot;Lab&quot; color spaces: XYZ, Hunter-Lab, and CIELAB. XYZ will be first to the plate, since the RGB/XYZ formulas are the simplest. Let me take this opportune moment to plug <a href="http://www.easyrgb.com/index.php?X=MATH">EasyRGB.com</a>.</p>
-<h2 id="lend-a-hand">Lend a hand</h2>
-<p>As I've mentioned before, ColorPal is in an early stage of development. It needs testing in multiple browsers, and I'm very interested in hearing people's feedback. Code development help is welcomed too.</p>
-<p>If you try out ColorPal, let me know your thoughts on <a href="https://twitter.com/#!/mwcz">Twitter</a>.</p>
-<p>Here are github repos for <a href="https://github.com/mwcz/ColorPal">ColorPal</a> and <a href="https://github.com/mwcz/median-cut-js">median-cut.js</a>.</p>
+<p>HSL is common, and the RGB/HSL conversion formulas are in my very old JSImage
+project.  It may not turn out well, though, as the concept of "widest box"
+loses most of its meaning when each axis is a completely different unit of
+measure.  Although, in a way, I suppose RGB has a similar problem.  Red, Green,
+and Blue could be thought of as unrelated units.  I'll try it out and see how
+it goes.  I wonder if my old JavaScript RGB/HSL code has rotted away yet...</p>
+<p>Most likely, I'll skip HSL and try one of the
+<a href="http://en.wikipedia.org/wiki/Lab_color_space">Lab</a> color spaces first, since
+they are not composed linear values like RGB and HSL.  Instead, Lab color
+spaces use non-linear scales that closely match human perception of color.
+Perfect for my purposes.  How fortuitious for me that CIE invented it way back
+in 1931.</p>
+<p>There are three "Lab" color spaces: XYZ, Hunter-Lab,
+and CIELAB.  XYZ will be first to the plate, since the RGB/XYZ formulas are
+the simplest.  Let me take this opportune moment to plug
+<a href="http://www.easyrgb.com/index.php?X=MATH">EasyRGB.com</a>.</p>
+<h2>Lend a hand</h2>
+<p>As I've mentioned before, ColorPal is in an early stage of development.  It
+needs testing in multiple browsers, and I'm very interested in hearing people's
+feedback.  Code development help is welcomed too.</p>
+<p>If you try out ColorPal, let me know your thoughts on
+<a href="https://twitter.com/#!/mwcz">Twitter</a>.</p>
+<p>Here are github repos for <a href="https://github.com/mwcz/ColorPal">ColorPal</a> and
+<a href="https://github.com/mwcz/median-cut-js">median-cut.js</a>.</p>
         </div>
 
         <!-- /.entry-content -->

@@ -59,11 +59,13 @@
         </header>
         <div class="entry-content">
             <nav class="toc"></nav>
-            <p>This is the last demo I made using <a href="https://github.com/mwcz/jsimage">JSImage</a>. I created it some time around 2009-2010. At the time, I had checked out an <a href="http://www.amazon.com/Digital-Image-Processing-Algorithmic-Introduction/dp/1846283795">imaging book</a> from my university's library at least ten times. Most of the exercises in that book I implemented in Python using <a href="http://www.pythonware.com/products/pil/">PIL</a>, but point operations were simple enough to port to JavaScript quickly.</p>
-<p>Point operations are image alterations that affect all pixels equally. Other operations, like blurring for example, each result pixel depends on adjacent pixels.</p>
-<p>This demonstrates changing contrast, value, saturation, hue, color inversion, and threshold point operations. Note that there is a bug with increasing value and increasing saturation which I never got around to fixing.</p>
+            <p>This is the last demo I made using <a href="https://github.com/mwcz/jsimage">JSImage</a>.  I created it some time around 2009-2010.  At the time, I had checked out an <a href="http://www.amazon.com/Digital-Image-Processing-Algorithmic-Introduction/dp/1846283795">imaging book</a> from my university's library at least ten times.  Most of the exercises in that book I implemented in Python using <a href="http://www.pythonware.com/products/pil/">PIL</a>, but point operations were simple enough to port to JavaScript quickly.</p>
+<p>Point operations are image alterations that affect all pixels equally.  Other operations, like blurring for example, each result pixel depends on adjacent pixels.</p>
+<p>This demonstrates changing contrast, value, saturation, hue, color inversion, and threshold point operations.  Note that there is a bug with increasing value and increasing saturation which I never got around to fixing.</p>
 <script type="text/javascript" src="/static/js/005/jsimage.js"></script>
+
 <script type="text/javascript" src="/static/js/005/colorspace.js"></script>
+
 <script type="text/javascript">
 
     var IJS_PointOps;
@@ -72,73 +74,77 @@
     });
 
 </script>
+
 <style type="text/css" media="screen">
     .btn-group .glyphicon { margin-right: 0 }
     .point-ops-demo { font-size: 0.9em }
     .form-control.threshold { width: 4em }
 </style>
-<canvas class="img-responsive" id="IJS_PointOps">
-your browser does not support canvas
-</canvas>
+
+<canvas class="img-responsive" id="IJS_PointOps">your browser does not support canvas</canvas>
+
 <div class="row point-ops-demo">
-<pre><code>&lt;div class=&quot;col-xs-6&quot;&gt;
-    Value (Brightness)
-    &lt;br /&gt;
-    &lt;div class=&quot;btn-group&quot;&gt;
-        &lt;button class=&quot;btn btn-default&quot; onmousedown=&quot;IJS_PointOps.value( IJS_PointOps.canvas, 10 )&quot;&gt;&lt;i class=&quot;glyphicon glyphicon-arrow-up&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-        &lt;button class=&quot;btn btn-default&quot; onmousedown=&quot;IJS_PointOps.value( IJS_PointOps.canvas, -10 )&quot;&gt;&lt;i class=&quot;glyphicon glyphicon-arrow-down&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
 
-&lt;div class=&quot;col-xs-6&quot;&gt;
-    Contrast
-    &lt;br /&gt;
-    &lt;div class=&quot;btn-group&quot;&gt;
-        &lt;button class=&quot;btn btn-default&quot; onmousedown=&quot;IJS_PointOps.contrast( IJS_PointOps.canvas, 1.1)&quot; &gt;&lt;i class=&quot;glyphicon glyphicon-arrow-up&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-        &lt;button class=&quot;btn btn-default&quot; onmousedown=&quot;IJS_PointOps.contrast( IJS_PointOps.canvas, 0.9)&quot; &gt;&lt;i class=&quot;glyphicon glyphicon-arrow-down&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+    <div class="col-xs-6">
+        Value (Brightness)
+        <br />
+        <div class="btn-group">
+            <button class="btn btn-default" onmousedown="IJS_PointOps.value( IJS_PointOps.canvas, 10 )"><i class="glyphicon glyphicon-arrow-up"></i></button>
+            <button class="btn btn-default" onmousedown="IJS_PointOps.value( IJS_PointOps.canvas, -10 )"><i class="glyphicon glyphicon-arrow-down"></i></button>
+        </div>
+    </div>
 
-&lt;div class=&quot;col-xs-6&quot;&gt;
-    Saturation
-    &lt;br /&gt;
-    &lt;div class=&quot;btn-group&quot;&gt;
-        &lt;button class=&quot;btn btn-default&quot; onmousedown=&quot;IJS_PointOps.saturation( IJS_PointOps.canvas, 25 )&quot; &gt;&lt;i class=&quot;glyphicon glyphicon-arrow-up&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-        &lt;button class=&quot;btn btn-default&quot; onmousedown=&quot;IJS_PointOps.saturation( IJS_PointOps.canvas, -25 )&quot; &gt;&lt;i class=&quot;glyphicon glyphicon-arrow-down&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+    <div class="col-xs-6">
+        Contrast
+        <br />
+        <div class="btn-group">
+            <button class="btn btn-default" onmousedown="IJS_PointOps.contrast( IJS_PointOps.canvas, 1.1)" ><i class="glyphicon glyphicon-arrow-up"></i></button>
+            <button class="btn btn-default" onmousedown="IJS_PointOps.contrast( IJS_PointOps.canvas, 0.9)" ><i class="glyphicon glyphicon-arrow-down"></i></button>
+        </div>
+    </div>
 
-&lt;div class=&quot;col-xs-6&quot;&gt;
-    Hue
-    &lt;br /&gt;
-    &lt;div class=&quot;btn-group&quot;&gt;
-        &lt;button class=&quot;btn btn-default&quot; onmousedown=&quot;IJS_PointOps.hue( IJS_PointOps.canvas, 20)&quot; &gt;&lt;i class=&quot;glyphicon glyphicon-arrow-up&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-        &lt;button class=&quot;btn btn-default&quot; onmousedown=&quot;IJS_PointOps.hue( IJS_PointOps.canvas, -20)&quot; &gt;&lt;i class=&quot;glyphicon glyphicon-arrow-down&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+    <div class="col-xs-6">
+        Saturation
+        <br />
+        <div class="btn-group">
+            <button class="btn btn-default" onmousedown="IJS_PointOps.saturation( IJS_PointOps.canvas, 25 )" ><i class="glyphicon glyphicon-arrow-up"></i></button>
+            <button class="btn btn-default" onmousedown="IJS_PointOps.saturation( IJS_PointOps.canvas, -25 )" ><i class="glyphicon glyphicon-arrow-down"></i></button>
+        </div>
+    </div>
 
-&lt;div class=&quot;col-xs-6&quot;&gt;
-    &lt;br /&gt;
-    &lt;div class=&quot;btn-group&quot;&gt;
-        &lt;button class=&quot;btn btn-default&quot; onmousedown=&quot;IJS_PointOps.invert()&quot;&gt;Invert&lt;/button&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+    <div class="col-xs-6">
+        Hue
+        <br />
+        <div class="btn-group">
+            <button class="btn btn-default" onmousedown="IJS_PointOps.hue( IJS_PointOps.canvas, 20)" ><i class="glyphicon glyphicon-arrow-up"></i></button>
+            <button class="btn btn-default" onmousedown="IJS_PointOps.hue( IJS_PointOps.canvas, -20)" ><i class="glyphicon glyphicon-arrow-down"></i></button>
+        </div>
+    </div>
 
-&lt;div class=&quot;col-xs-6&quot;&gt;
-    &lt;br /&gt;
-    &lt;div class=&quot;input-group&quot;&gt;
-        &lt;span class=&quot;input-group-btn&quot;&gt;
-            &lt;button class=&quot;btn btn-default&quot; onmousedown=&quot;IJS_PointOps.threshold( IJS_PointOps.canvas, document.getElementById(&#39;t&#39;).value )&quot;&gt;Threshold&lt;/button&gt;
-        &lt;/span&gt;
-        &lt;input type=&quot;text&quot; value=&quot;127&quot; class=&quot;form-control threshold&quot; maxlength=&quot;3&quot; size=&quot;3&quot; id=&quot;t&quot; /&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+    <div class="col-xs-6">
+        <br />
+        <div class="btn-group">
+            <button class="btn btn-default" onmousedown="IJS_PointOps.invert()">Invert</button>
+        </div>
+    </div>
 
-&lt;div class=&quot;col-xs-6&quot;&gt;
-    &lt;br /&gt;
-    &lt;button class=&quot;btn btn-default&quot; onclick=&quot;IJS_PointOps = new JSImage( &#39;IJS_PointOps&#39;, &#39;/static/images/005/bee.jpg&#39; );&quot;&gt;Reset&lt;/button&gt;
-&lt;/div&gt;</code></pre>
+    <div class="col-xs-6">
+        <br />
+        <div class="input-group">
+            <span class="input-group-btn">
+                <button class="btn btn-default" onmousedown="IJS_PointOps.threshold( IJS_PointOps.canvas, document.getElementById('t').value )">Threshold</button>
+            </span>
+            <input type="text" value="127" class="form-control threshold" maxlength="3" size="3" id="t" />
+        </div>
+    </div>
+
+    <div class="col-xs-6">
+        <br />
+        <button class="btn btn-default" onclick="IJS_PointOps = new JSImage( 'IJS_PointOps', '/static/images/005/bee.jpg' );">Reset</button>
+    </div>
+
 </div>
+
 <p><br /></p>
         </div>
 

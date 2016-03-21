@@ -59,19 +59,25 @@
         </header>
         <div class="entry-content">
             <nav class="toc"></nav>
-            <p>While working on <a href="/projects/dimo">DiMo</a>, I found myself at the <a href="http://threejs.org/examples/">ThreeJS examples</a> page quite often, searching for working examples.</p>
-<pre><code>&lt;script id=&quot;vertexShader&quot; type=&quot;x-shader/x-vertex&quot;&gt;
-    &lt;!-- dozens of lines of vertex shader (GLSL) code --&gt;
-&lt;/script&gt;
+            <p>While working on <a href="/projects/dimo">DiMo</a>, I found myself at the <a href="http://threejs.org/examples/">ThreeJS
+examples</a> page quite often, searching for working examples.</p>
+<div class="highlight"><pre><span class="nt">&lt;script</span> <span class="na">id=</span><span class="s">&quot;vertexShader&quot;</span> <span class="na">type=</span><span class="s">&quot;x-shader/x-vertex&quot;</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- dozens of lines of vertex shader (GLSL) code --&gt;</span>
+<span class="nt">&lt;/script&gt;</span>
 
-&lt;script id=&quot;fragmentShader&quot; type=&quot;x-shader/x-fragment&quot;&gt;
-    &lt;!-- dozens of lines of fragment shader (GLSL) code --&gt;
-&lt;/script&gt;
+<span class="nt">&lt;script</span> <span class="na">id=</span><span class="s">&quot;fragmentShader&quot;</span> <span class="na">type=</span><span class="s">&quot;x-shader/x-fragment&quot;</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- dozens of lines of fragment shader (GLSL) code --&gt;</span>
+<span class="nt">&lt;/script&gt;</span>
 
-&lt;script&gt;
-    &lt;!-- hundreds of lines of ThreeJS code --&gt;
-&lt;/script&gt;</code></pre>
-<p>I do believe that's the best way to distribute <em>demos</em>. Sometimes sloppier something looks, the more people will hack on it, and I mean that in the kindest possible way. Hackiness begets hackers.</p>
+<span class="nt">&lt;script&gt;</span>
+    <span class="c">&lt;!-- hundreds of lines of ThreeJS code --&gt;</span>
+<span class="nt">&lt;/script&gt;</span>
+</pre></div>
+
+
+<p>I do believe that's the best way to distribute <em>demos</em>.  Sometimes sloppier
+something looks, the more people will hack on it, and I mean that in the
+kindest possible way.  Hackiness begets hackers.</p>
 <pre style="line-height: 1.2"><code style="line-height: 1"><!--
 -->src
 ├── index.html
@@ -99,30 +105,36 @@
 └── lib
     └── libraries like threejs, datgui, et al
 </code></pre>
-<p>I have absolutely no experience architecting 3D applications, so the actual separations of concern are probably quite misguided! However, even if misguided, it proved to be much easier to work with than a single monolithic script file.</p>
-<pre><code>&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
 
-    &lt;title&gt;Geekspark DiMo&lt;/title&gt;
+<p>I have absolutely no experience architecting 3D applications, so the actual
+separations of concern are probably quite misguided!  However, even if
+misguided, it proved to be much easier to work with than a single monolithic
+script file.</p>
+<div class="highlight"><pre><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;content-type&quot;</span> <span class="na">content=</span><span class="s">&quot;text/html; charset=UTF-8&quot;</span><span class="nt">&gt;</span>
 
-&lt;link href=&quot;css/app.min.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+    <span class="nt">&lt;title&gt;</span>Geekspark DiMo<span class="nt">&lt;/title&gt;</span>
 
-&lt;/head&gt;
-&lt;body&gt;
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;css/app.min.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span><span class="nt">&gt;</span>
 
-&lt;script data-main=&quot;js/require.config&quot; src=&quot;lib/requirejs/require.js&quot;&gt;&lt;/script&gt;
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
 
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+<span class="nt">&lt;script</span> <span class="na">data-main=</span><span class="s">&quot;js/require.config&quot;</span> <span class="na">src=</span><span class="s">&quot;lib/requirejs/require.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+
+
 <script>
 $('pre code').each(add_prism_js);
 function add_prism_js(i, el) {
     $(el).addClass('language-markup');
 }
 </script>
-
         </div>
 
         <!-- /.entry-content -->

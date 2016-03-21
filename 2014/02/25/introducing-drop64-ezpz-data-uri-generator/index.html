@@ -59,21 +59,35 @@
         </header>
         <div class="entry-content">
             <nav class="toc"></nav>
-            <p>A few weeks ago, a <a href="http://www.heyokadesign.com/">coworker</a> of mine ran into some font issues. Firefox doesn't allow cross-origin requests for <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face">web fonts</a>, and he was using a tool called <a href="http://www.fontsquirrel.com/">Font Squirrel</a> to generate fonts, including <a href="https://developer.mozilla.org/en-US/docs/data_URIs">data URIs</a>.</p>
-<p>Embedding a data URI for a font (or image) inside a CSS file is a common technique for reducing the number of HTTP requests. In this case, it also negates the need for a cross-domain request to fetch the font file, because the file's contents are already embedded.</p>
-<p>There was something screwy about Font Squirrel's data URIs, though. A change must have been made to their tool, because all of our icons were suddenly shifted up.</p>
-<p>Once we narrowed it down to a misbehaving tool, the solution was clearly to create a new, better behaved tool.</p>
-<p>I pretty quickly realized that ColorPal is basically a drag-and-drop data URI generator.</p>
-<p>By dropping a file into ColorPal's dropzone, the user is implicitly giving the browser access to that file through the HTML5 File API. That file's contents are conveniently (for our purposes, anyway) exposed as a data URI.</p>
-<p>ColorPal takes the extra steps of injecting the URI into a canvas element, then performing a color quantization algorithm on the resulting pixels.</p>
+            <p>A few weeks ago, a <a href="http://www.heyokadesign.com/">coworker</a> of mine ran into some font issues.  Firefox
+doesn't allow cross-origin requests for <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face">web fonts</a>, and he was using a tool
+called <a href="http://www.fontsquirrel.com/">Font Squirrel</a> to generate fonts, including <a href="https://developer.mozilla.org/en-US/docs/data_URIs">data URIs</a>.</p>
+<p>Embedding a data URI for a font (or image) inside a CSS file is a common
+technique for reducing the number of HTTP requests.  In this case, it also
+negates the need for a cross-domain request to fetch the font file, because the
+file's contents are already embedded.</p>
+<p>There was something screwy about Font Squirrel's data URIs, though.  A change
+must have been made to their tool, because all of our icons were suddenly
+shifted up.</p>
+<p>Once we narrowed it down to a misbehaving tool, the solution was clearly to
+create a new, better behaved tool.</p>
+<p>I pretty quickly realized that ColorPal is basically a drag-and-drop data URI
+generator.</p>
+<p>By dropping a file into ColorPal's dropzone, the user is implicitly giving the
+browser access to that file through the HTML5 File API.  That file's contents
+are conveniently (for our purposes, anyway) exposed as a data URI.</p>
+<p>ColorPal takes the extra steps of injecting the URI into a canvas element, then
+performing a color quantization algorithm on the resulting pixels.</p>
 <p>Drop64 is ColorPal with a bunch of features ripped out.</p>
-<p>So, in the span of about 20 minutes I forked ColorPal, changed the name and logo, ripped out the quantization algorithm, displayed the data URI into an output box, created a github page for it, and registered <a href="http://drop64.com/">drop64.com</a>.</p>
+<p>So, in the span of about 20 minutes I forked ColorPal, changed the name and
+logo, ripped out the quantization algorithm, displayed the data URI into an
+output box, created a github page for it, and registered <a href="http://drop64.com/">drop64.com</a>.</p>
 <p>Voila:</p>
-<figure>
-<embed src="{filename}/static/images/projects/drop64/recording.gif%20Drop64%20recording" /><figcaption>Drop64 recording</figcaption>
-</figure>
-<p>It's not exactly a technical marvel, and the code is still rife with ColorPal stuff. I only ripped out what was absolutely necessary to get the tool working as fast as possible.</p>
-<p><a href="http://drop64.com/">Try it out</a> or <a href="https://github.com/mwcz/Drop64">check out the code</a>. Happy hacking.</p>
+<p><img alt="Drop64 recording" src="http://palebluepixel.org/static/images/projects/drop64/recording.gif" title="Drop64 recording" /></p>
+<p>It's not exactly a technical marvel, and the code is still rife with ColorPal
+stuff.  I only ripped out what was absolutely necessary to get the tool working
+as fast as possible.</p>
+<p><a href="http://drop64.com/">Try it out</a> or <a href="https://github.com/mwcz/Drop64">check out the code</a>.  Happy hacking.</p>
         </div>
 
         <!-- /.entry-content -->

@@ -60,24 +60,41 @@
         <div class="entry-content">
             <nav class="toc"></nav>
             <p><a href="/projects/canvas_indexed_color" title="Canvas Indexed Color demo">Canvas Indexed Color demo</a></p>
-<figure>
-<img src="/static/images/021/hahatiger.png" alt="White SVG Tiger" /><figcaption>White SVG Tiger</figcaption>
-</figure>
-<p>First, I converted the classic SVG tiger into a set of canvas drawing instructions using <a href="http://professorcloud.com/svg-to-canvas/" title="Professor Cloud&#39;s conversion tool">Professor Cloud's conversion tool</a>. The output looks like <a href="https://github.com/mwcz/mwcz/blob/master/blog/projects/canvas_indexed_color/vector_images.js%20&quot;Tiger%20image&quot;">this</a>. Each call to <code>cvm.getColor()</code> used to be a string literal.</p>
-<p>Vim's regex saved me from having to edit <em>100,000</em> lines of canvas instructions by hand to replace the color strings.</p>
-<p>The demo uses <a href="http://knockoutjs.com/" title="Knockout JS">Knockout</a> for handling all the update/draw events as well as updating the URL hash. Check the <a href="https://github.com/mwcz/mwcz/blob/master/blog/projects/canvas_indexed_color/cic.js%20&quot;source%20code&quot;">source code</a> and you'll see that there <em>isn't</em> a vast tangled nest of event wirings. Each time one of the colors in this ViewModel is changed, Knockout automatically triggers the canvas redraw and the updates the URL with the new palette. Conversely, if the URL is changed, the ViewModel will update itself with the new value. Knockout calls this a &quot;two-way data binding&quot;.</p>
-<p>I replaced the aforementioned color strings with calls to <code>cvm</code>, which is a Knockout ViewModel (in this case, an object that holds all the color data). <code>cvm</code> is populated with the SVG tiger's default colors.</p>
-<pre><code>ko.observableArray( [
+<p><img alt="White SVG Tiger" src="/static/images/021/hahatiger.png" /></p>
+<p>First, I converted the classic SVG tiger into a set of canvas drawing
+instructions using <a href="http://professorcloud.com/svg-to-canvas/" title="Professor Cloud's conversion
+tool">Professor Cloud's conversion
+tool</a>.  The output looks like
+<a href="https://github.com/mwcz/mwcz/blob/master/blog/projects/canvas_indexed_color/vector_images.js" title="Tiger image">this</a>.  Each call to <code>cvm.getColor()</code> used to be a string literal.  </p>
+<p>Vim's regex saved me from having to edit <em>100,000</em> lines of canvas instructions
+by hand to replace the color strings.</p>
+<p>The demo uses <a href="http://knockoutjs.com/" title="Knockout JS">Knockout</a> for handling all
+the update/draw events as well as updating the URL hash.  Check the <a href="https://github.com/mwcz/mwcz/blob/master/blog/projects/canvas_indexed_color/cic.js" title="source code">source
+code</a> and you'll see that there <em>isn't</em> a vast tangled nest of event
+wirings.  Each time one of the colors in this ViewModel is changed, Knockout
+automatically triggers the canvas redraw and the updates the URL with the new
+palette.  Conversely, if the URL is changed, the ViewModel will update itself
+with the new value.  Knockout calls this a "two-way data binding".  </p>
+<p>I replaced the aforementioned color strings with calls to <code>cvm</code>, which is a
+Knockout ViewModel (in this case, an object that holds all the color data).
+<code>cvm</code> is populated with the SVG tiger's default colors.</p>
+<div class="highlight"><pre>ko.observableArray( [
     { hex: ko.observable(&quot;#000000&quot;) },
     { hex: ko.observable(&quot;#323232&quot;) },
     // .... many more ....
     { hex: ko.observable(&quot;#ff727f&quot;) },
     { hex: ko.observable(&quot;#ffffff&quot;) }
-]);</code></pre>
-<p>Play with the colors, then copy the URL and send your tiger to your friends. :]</p>
+]);
+</pre></div>
+
+
+<p>Play with the colors, then copy the URL and send your tiger to your friends.  :]</p>
 <p><a href="/projects/canvas_indexed_color/#4c0000,#659900,#666666,#992600,#999999,#99cc32,#a51926,#a5264c,#b23259,#b26565,#b2b2b2,#cc3f4c,#cc7226,#cccccc,#e5668c,#e59999,#e5e5b2,B5E8E6,#ea8c4d,#ea8e51,#eb955c,#ec9961,#eea575,#efaa7c,#f1b288,#f2b892,#f3bf9c,#f4c6a8,#f5ccb0,#f8d8c4,#f8dcc8,#f9e2d3,#fae5d7,#fcf2eb,#ff727f,#ffffcc,#ffffff,#000000,#323232" title="Crazy tiger">Crazy tiger</a>.</p>
-<p>Please note, this is only a simulation of an indexed color palette. It is not a true, usable, indexed-color API for canvas (someday, maybe!).</p>
-<p>The color picker is <a href="https://github.com/mattfarina/farbtastic%20&quot;Farbtastic&quot;">Farbtastic</a>. If you're interested in reading more about the history of indexed color, and a <strong>mind-blowing</strong> canvas demo, go <a href="http://www.effectgames.com/effect/article.psp.html/joe/Old_School_Color_Cycling_with_HTML5%20&quot;Color%20cycling%20in%20HTML5%20canvas&quot;">here</a>.</p>
+<p>Please note, this is only a simulation of an indexed color palette.  It is not
+a true, usable, indexed-color API for canvas (someday, maybe!).</p>
+<p>The color picker is <a href="https://github.com/mattfarina/farbtastic" title="Farbtastic">Farbtastic</a>.  If you're interested in reading more about the history of
+indexed color, and a <strong>mind-blowing</strong> canvas demo, go
+<a href="http://www.effectgames.com/effect/article.psp.html/joe/Old_School_Color_Cycling_with_HTML5" title="Color cycling in HTML5 canvas">here</a>.</p>
         </div>
 
         <!-- /.entry-content -->

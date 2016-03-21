@@ -59,29 +59,51 @@
         </header>
         <div class="entry-content">
             <nav class="toc"></nav>
-            <p>Within the last two days, WebAssembly (<strong>wasm</strong>) has graced the eyeballs of every JavaScript developer. If wasm is new to you, the articles linked at the end of this post fully describe what wasm <em>is</em>.</p>
-<p>Since that's been covered, I'd like to talk about one impact wasm will hopefully have on future of computing. To set the scene, a quote from the man himself:</p>
+            <p>Within the last two days, WebAssembly (<strong>wasm</strong>) has graced the eyeballs of
+every JavaScript developer.  If wasm is new to you, the articles linked at the
+end of this post fully describe what wasm <em>is</em>.</p>
+<p>Since that's been covered, I'd like to talk about one impact wasm will
+hopefully have on future of computing.  To set the scene, a quote from the man
+himself:</p>
 <blockquote>
-<pre><code>&lt;p&gt;Meanwhile, I took one quick step that would demonstrate the concept of the
-    Web as a universal, all-encompassing space.  I programmed the browser so it
-    could follow links not only to files on HTTP servers, &amp;hellip;&lt;/p&gt;
-&lt;p&gt;In one fell swoop, a huge amount of the information that was already on the
-    Internet was available on the Web.&lt;/p&gt;
-&lt;footer&gt;
-    &lt;cite&gt;
-        Tim Berners-Lee, Weaving the Web, 1999
-    &lt;/cite&gt;
-&lt;/footer&gt;</code></pre>
+    <p>Meanwhile, I took one quick step that would demonstrate the concept of the
+        Web as a universal, all-encompassing space.  I programmed the browser so it
+        could follow links not only to files on HTTP servers, &hellip;</p>
+    <p>In one fell swoop, a huge amount of the information that was already on the
+        Internet was available on the Web.</p>
+    <footer>
+        <cite>
+            Tim Berners-Lee, Weaving the Web, 1999
+        </cite>
+    </footer>
 </blockquote>
-<p>Back then, Tim enabled the first Web browser to follow links to newsgroups and FTP servers. By linking up a slew of existing content, the Web became much more useful.</p>
-<p>This realization is pretty potent. The web has taken over the world because of the power of linking things together, especially things not yet on the web. I was initially surprised that Tim saw the now-humble URL as the most vital Web technology and had it standardized before HTTP and HTML.</p>
-<p>Today, we can follow URLs to images, videos, articles, text, PDFs; most types of media are linkable. Clicking/tapping a link is the most commonplace thing in the world.</p>
+
+<p>Back then, Tim enabled the first Web browser to follow links to newsgroups and
+FTP servers.  By linking up a slew of existing content, the Web became much
+more useful.</p>
+<p>This realization is pretty potent.  The web has taken over the world because of
+the power of linking things together, especially things not yet on the web.  I
+was initially surprised that Tim saw the now-humble URL as the most vital Web
+technology and had it standardized before HTTP and HTML.</p>
+<p>Today, we can follow URLs to images, videos, articles, text, PDFs; most types
+of media are linkable.  Clicking/tapping a link is the most commonplace thing
+in the world.</p>
 <p>There's one type of content that still isn't linkable, though: <em>Applications</em>.</p>
-<p>For the past ten years, the JavaScript revolution has been trying to make real the dream of <strong>following a URL to an application</strong>.</p>
-<p>It's been a circuitous, roundabout, and partially successful journey. <a href="http://emscripten.org/">Emscripten</a> has made it possible and <a href="http://asmjs.org/">asm.js</a> made it faster.</p>
-<p>My great hope for WebAssembly is that it can bring the world's teeming vault of existing applications onto the web, with very little fuss. Imagine using Photoshop merely by going to <code>photoshop.adobe.com</code>, and you'll have some idea of where WebAssembly might carry us.</p>
+<p>For the past ten years, the JavaScript revolution has been trying to make real
+the dream of <strong>following a URL to an application</strong>.</p>
+<p>It's been a circuitous, roundabout, and partially successful journey.
+<a href="http://emscripten.org/">Emscripten</a> has made it possible and <a href="http://asmjs.org/">asm.js</a> made it
+faster.</p>
+<p>My great hope for WebAssembly is that it can bring the world's teeming vault of
+existing applications onto the web, with very little fuss.  Imagine using
+Photoshop merely by going to <code>photoshop.adobe.com</code>, and you'll have some idea
+of where WebAssembly might carry us.</p>
 <hr />
-<p>After the WebAssembly announcement, I read every bit of documentation currently available, about a dozen articles, joined the <a href="https://www.w3.org/community/webassembly/">W3C Community Group</a>, and have been hanging out in the IRC channel (<code>irc://irc.w3.org:6667/#webassembly</code>). I don't want to speak too soon, but I'm pretty well convinced that wasm is the next revolution.</p>
+<p>After the WebAssembly announcement, I read every bit of documentation currently
+available, about a dozen articles, joined the <a href="https://www.w3.org/community/webassembly/">W3C Community Group</a>,
+and have been hanging out in the IRC channel
+(<code>irc://irc.w3.org:6667/#webassembly</code>).  I don't want to speak too soon, but
+I'm pretty well convinced that wasm is the next revolution.</p>
 <!-- I'm imagining a future where this is a desktop shortcut:
 
     wasm://adobe.com/photoshop
@@ -96,6 +118,7 @@ locally.
 
 
 -->
+
 <p>For further reading, here are some of the best articles I've found:</p>
 <ul>
 <li><a href="https://github.com/WebAssembly/design/blob/master/FAQ.md">The wasm FAQ covers nearly everything</a></li>

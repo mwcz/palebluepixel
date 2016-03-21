@@ -59,61 +59,68 @@
         </header>
         <div class="entry-content">
             <nav class="toc"></nav>
-            <p>This is yet another demo from around 2009. It's simple enough. Click a button, draw an unbinned RGB histogram of the source image.</p>
-<p>It's powered by an early version of an old JS toolkit I wrote called JSImage. The latest version is available at my <a href="https://github.com/mwcz/jsimage">JSImage github repo</a>. Don't be fooled by the 2011 commits, those are just artifacts from svn-&gt;git migration. No guarantees that the histo's are actually correct. :)</p>
+            <p>This is yet another demo from around 2009.  It's simple enough.  Click a
+button, draw an unbinned RGB histogram of the source image.</p>
+<p>It's powered by an early version of an old JS toolkit I wrote called JSImage.
+The latest version is available at my <a href="https://github.com/mwcz/jsimage">JSImage github
+repo</a>.  Don't be fooled by the 2011 commits,
+those are just artifacts from svn-&gt;git migration.  No guarantees that the
+histo's are actually correct. :)</p>
 <div class="panel panel-default">
-<pre><code>&lt;div class=&quot;panel-heading&quot;&gt;
-    &lt;b&gt;Original image&lt;/b&gt;
-&lt;/div&gt;
-&lt;div class=&quot;panel-body&quot;&gt;
-    &lt;canvas id=&quot;c0&quot;&gt;
-        Your browser does not support the &amp;lt;canvas&amp;gt; element. Lame.
-    &lt;/canvas&gt;
-&lt;/div&gt;</code></pre>
+    <div class="panel-heading">
+        <b>Original image</b>
+    </div>
+    <div class="panel-body">
+        <canvas id="c0">
+            Your browser does not support the &lt;canvas&gt; element. Lame.
+        </canvas>
+    </div>
 </div>
+
 <p><input type="button" onclick="draw_histo()" value="Draw histograms" /></p>
 <div class="row">
-<pre><code>&lt;div class=&quot;col-xs-12 col-sm-4&quot;&gt;
-&lt;div class=&quot;panel panel-default&quot;&gt;
-    &lt;div class=&quot;panel-heading&quot;&gt;
-        &lt;b&gt;Red&lt;/b&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;panel-body&quot;&gt;
-        &lt;canvas class=&quot;img-responsive&quot; id=&quot;cr&quot;&gt;
-            Your browser does not support the &amp;lt;canvas&amp;gt; element. Lame.
-        &lt;/canvas&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-xs-12 col-sm-4&quot;&gt;
-    &lt;div class=&quot;panel panel-default&quot;&gt;
-        &lt;div class=&quot;panel-heading&quot;&gt;
-            &lt;b&gt;Green&lt;/b&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;panel-body&quot;&gt;
-            &lt;canvas class=&quot;img-responsive&quot; id=&quot;cg&quot;&gt;
-                Your browser does not support the &amp;lt;canvas&amp;gt; element. Lame.
-            &lt;/canvas&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-xs-12 col-sm-4&quot;&gt;
-    &lt;div class=&quot;panel panel-default&quot;&gt;
-        &lt;div class=&quot;panel-heading&quot;&gt;
-            &lt;b&gt;Blue&lt;/b&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;panel-body&quot;&gt;
-            &lt;canvas class=&quot;img-responsive&quot; id=&quot;cb&quot;&gt;
-                Your browser does not support the &amp;lt;canvas&amp;gt; element. Lame.
-            &lt;/canvas&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+    <div class="col-xs-12 col-sm-4">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <b>Red</b>
+        </div>
+        <div class="panel-body">
+            <canvas class="img-responsive" id="cr">
+                Your browser does not support the &lt;canvas&gt; element. Lame.
+            </canvas>
+        </div>
+    </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <b>Green</b>
+            </div>
+            <div class="panel-body">
+                <canvas class="img-responsive" id="cg">
+                    Your browser does not support the &lt;canvas&gt; element. Lame.
+                </canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <b>Blue</b>
+            </div>
+            <div class="panel-body">
+                <canvas class="img-responsive" id="cb">
+                    Your browser does not support the &lt;canvas&gt; element. Lame.
+                </canvas>
+            </div>
+        </div>
+    </div>
 </div>
-<p class="alert alert-info">
-I'm pretty sure the results are wrong, but here, years later, I can't be bothered to fix it. ;)
-</p>
+
+<p class="alert alert-info">I'm pretty sure the results are wrong, but here, years later, I can't be bothered to fix it. ;)</p>
+
 <script type="text/javascript" src="/static/js/003/JSImage.js"></script>
+
 <script type="text/javascript">
 
 var draw_histo;
