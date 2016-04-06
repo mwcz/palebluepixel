@@ -58,7 +58,7 @@ of our planning, hard work, and creativity.
 
 Here are some photos from SPARKcon X (2015), and setup the night before.
 
-{{ gallery }}
+$GALLERY
 
 ### The future
 
