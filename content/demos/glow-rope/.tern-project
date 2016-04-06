@@ -1,0 +1,11 @@
+{
+    "libs": [ "browser", "ecma5" ],
+    "loadEagerly": [
+        "node_modules/three/three.js",
+        "node_modules/three/examples/js/renderers/Projector.js",
+        "node_modules/three/examples/js/libs/photons.min.js"
+    ],
+    "plugins": {
+        "node": {}
+    }
+}
