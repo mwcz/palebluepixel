@@ -109,7 +109,7 @@ FEED_DOMAIN = 'http://localhost:8001'
 #DEFAULT_METADATA = (('yeah', 'it is'),)
 
 # static paths will be copied under the same name
-STATIC_PATHS = ["static", "projects",]
+STATIC_PATHS = ["static", "projects", "demos"]
 
 # A list of files to copy from the source to the destination
 #FILES_TO_COPY = (('extra/robots.txt', 'robots.txt'),)
