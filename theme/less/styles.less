@@ -64,7 +64,7 @@ a {
     border-bottom   : 1px dotted;
     color           : @pbp-pale-blue;
     outline-color   : lighten(@pbp-bg-color, 32%);
-    border-color    : lighten(@pbp-bg-color, 16%);
+    border-color    : lighten(@pbp-bg-color, 22%);
 
     &:hover         {
         color           : lighten(@pbp-pale-blue, 16%);
@@ -76,7 +76,7 @@ a {
         outline-color : @pbp-pale-blue;
     }
     &:visited       {
-        color: darken(@pbp-pale-blue, 16%); 
+        color: desaturate(darken(@pbp-pale-blue, 26%), 8%);
     }
     &:visited:hover {
         color: lighten(@pbp-pale-blue, 16%); 
@@ -556,7 +556,9 @@ figure {
  *********************************************************************/
 
 .pbp-homepage {
-    font-size: 1.2 * @pbp-base-font-size;
+    .homepage-intro {
+        font-size: 1.2 * @pbp-base-font-size;
+    }
     .homepage-silhouette {
         max-width: 100%;
         margin: @padding-large-vertical auto;
