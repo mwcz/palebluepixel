@@ -20,6 +20,21 @@ $(function () {
     {% import 'includes/panel.html' as project_thumbnail %}
 
     {{ project_thumbnail.write(
+        body_title   = 'Zorbio',
+        body_text    = 'Zorbio is a free multiplayer eat-em-up game, currently closed beta, but we will totally give you a beta key.',
+        header_image = '/static/images/projects/icon_zorbio.png',
+        link_url     = '/projects/zorbio',
+        demo_url     = 'http://zor.bio/',
+        ) }}
+    {{ project_thumbnail.write(
+        body_title   = 'Square Off',
+        body_text    = 'Square Off is a 1v1 airhockey-style game.  Place squares to deflect the disc.  We built Square Off in 72 hours for <a href="http://ludumdare.com/compo/2016/04/13/welcome-to-ludum-dare-35/">LD35</a>.',
+        header_image = '/static/images/projects/icon_sqoff.png',
+        link_url     = '/projects/squareoff',
+        demo_url     = 'http://sqoff.com/',
+        source_url   = 'https://github.com/ScriptaGames/SquareOff/',
+        ) }}
+    {{ project_thumbnail.write(
         body_title   = 'Kimotion',
         body_text    = 'Kimotion is a framework for building interactive art installations.',
         header_image = '/static/images/projects/icon_kimotion.png',
