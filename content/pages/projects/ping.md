@@ -1,6 +1,6 @@
 Title: Ping
 Slug: projects/ping
-Tags: programming, javascript, phaserjs, games, red hat, red hat summit
+Tags: programming, javascript, phaserjs, games, red hat, red hat summit, gamedev, ping
 Status: hidden
 
 <a href="/static/projects/ping">
