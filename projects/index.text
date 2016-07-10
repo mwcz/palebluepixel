@@ -133,7 +133,7 @@ $(function () {
         header_image = '/static/images/projects/icon_jsimage.png',
         link_url     = '/projects/jsimage',
         source_url   = 'https://github.com/mwcz/jsimage',
-
+        demo_url     = '/2011/11/17/html5-canvas-point-operations/',
         ) }}
 </div>
 
