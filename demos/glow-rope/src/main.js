@@ -71,14 +71,12 @@ function init() {
 
     renderer = new THREE.WebGLRenderer({
         antialias: true,
-        // alpha: true,
+        alpha: true,
         canvas: document.querySelector('canvas#traffic'),
     });
     renderer.setPixelRatio( window.devicePixelRatio );
     renderer.setSize( window.innerWidth, window.innerHeight );
     renderer.setClearColor( 0x1A0818, 1 );
-
-    document.body.appendChild( renderer.domElement );
 
     //
 
@@ -86,7 +84,9 @@ function init() {
 
     window.addEventListener( 'resize', onWindowResize, false );
     window.addEventListener( 'mousemove', onMouseMove, false );
+    window.addEventListener( 'touchmove', onMouseMove, false );
     window.addEventListener( 'click', onClick, false );
+    window.addEventListener( 'touchstart', onClick, false );
     window.addEventListener( 'mousedown', function() { return false; }, false );
 
 }

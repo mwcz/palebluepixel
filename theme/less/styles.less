@@ -196,7 +196,7 @@ hr {
     border        : none;
 }
 
-img {
+img, video {
     .img-responsive() !important;
 }
 
@@ -481,6 +481,7 @@ section h1 {
 h1, h2, h3, h4, h5, h6 {
     font-family     : @pbp-font-title;
     color           : darken(@pbp-pale-blue, 16%);
+    margin-top: 32px;
 }
 
 // for blog post list
@@ -498,6 +499,7 @@ article {
     header > h2 {
         margin-top: 0;
     }
+
 }
 
 /*********************************************************************
@@ -505,7 +507,7 @@ article {
  *********************************************************************/
 
 figure {
-    margin: 3rem 0;
+    margin: 16px 0;
     figcaption {
         text-align : center;
         font-size  : 0.8 * @pbp-base-font-size;
