@@ -6,7 +6,7 @@ Image: /static/images/gallery/400x/gallery/039/DSCF0634.JPG
 Gallery: 041
 Mwc: 41
 TwitterWidgetID: 647816206326595584
-Status: draft
+Status: hidden
 
 "*Cool,*" I thought, "*an excuse to play with WebGL at work!*"
 
