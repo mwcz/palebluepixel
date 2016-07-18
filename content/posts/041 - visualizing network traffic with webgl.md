@@ -6,7 +6,7 @@ Image: /static/images/gallery/400x/gallery/039/DSCF0634.JPG
 Gallery: 041
 Mwc: 41
 TwitterWidgetID: 647816206326595584
-Status: hidden
+Status: draft
 
 "*Cool,*" I thought, "*an excuse to play with WebGL at work!*"
 
@@ -66,7 +66,7 @@ transparent canvas soaked up all mouse clicks.  The simple CSS property
 `pointer-events: none` prevents the canvas from intercepting mouse and touch
 events.
 
-### GLSL
+### It's Pixel Time
 
 When a network request is detected, the particle system activates a tiny dot
 which travels in an arc from point A to point B.  The arcs are defined by sine
@@ -76,7 +76,7 @@ with sine wave guides showing.
 <div class="row">
     <figure class="col-sm-6">
         <img src="/static/images/041/pipeline-nosines.png" alt="pipeline with traffic particles" />
-        <figcaption>Pipeline with particles moving in arcs</figcaption>
+        <figcaption>Pipeline with particle arcs</figcaption>
     </figure>
     <figure class="col-sm-6">
         <img src="/static/images/041/pipeline-sines.png" alt="pipeline with sine wave guides" />
@@ -84,32 +84,36 @@ with sine wave guides showing.
     </figure>
 </div>
 
-To prevent the paths from overlapping too much, I increased each wave's
+To prevent the paths from overlapping with each other, I increased each wave's
 amplitude based on vertical distance to be traveled.  That's why the purple arc
 is much smaller than the blue arc, which is smaller than the green arc, etc.
 
-Initially, the particles traveled in a single-file line, which made it
-difficult to discern how many of them there were.  To remedy that, I added a
-small random horizontal offset to each particle.  The offset has less effect at
-the ends of the arc, but causes the particles to fan out near the middle.
+Initially, the particles traveled in a single-file line, which obscured the
+number of particles.  Because of overlapping, 100 particles was
+indistinguishable from 10,000.  To remedy that, I added a small random
+horizontal offset to each particle.  The offset has less effect at the ends of
+the arc, but causes the particles to fan out near the middle.
 
 The particles that enter from the right side of the screen represent network
-traffic from the audience.  The origination point of those particles moves
-randomly up and down to add more visual interest.
+traffic from the audience.  As you can see in the video below, the origination
+point of those particles moves randomly up and down to add more visual
+interest.
 
 ### Together at Last
 
 After months of collaborating from across the world, it was wonderful to meet
-the whole team in person.
+the whole team in person.  A few days later, all our hard work come together as
+well.  Here's a shot of my particle visualization from the official recording.
 
 <video style="margin: 0 auto" poster="/static/images/041/traffic-thumb.jpg" autoplay controls loop>
     <source src="/static/videos/041/traffic.webm" />
     <source src="/static/videos/041/traffic.mp4" />
 </video>
 
+
+
 Watch the full keynote here:
 
-{# summit presentation video #}
 <iframe style="display: block; margin: 0 auto;" width="100%" height="315" src="https://www.youtube.com/embed/ooA6FmTL4Dk" frameborder="0" allowfullscreen></iframe>
 
 ### Glow Rope
@@ -133,6 +137,14 @@ created a WebSocket connection to the *score microservice* to populate the
 data.  Here's a shot of the winners from the live audience.
 
 ![photo of final leaderboard](/static/images/041/leaderboard-final.jpg)
+
+### Next Year
+
+The amount of work and preparation that goes into a presentation like this was
+eye-opening for me.  A week out and tired to the bone, I was thinking "No way
+am I doing this next year!"  But the thrill of everyone's hard work coming
+together drove away any exhaustion.  I can't wait to see what we can cook up
+next year.
 
 
 [andres]: https://twitter.com/andresgalante/
