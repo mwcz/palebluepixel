@@ -59,8 +59,6 @@ over the pipeline.
 
 ![3d torus overlaid on standard webpage](/static/images/041/3d-overlay.png)
 
-{# consider removing this paragraph #}
-
 Interacting with the page below was still a problem though, because the
 transparent canvas soaked up all mouse clicks.  The simple CSS property
 `pointer-events: none` prevents the canvas from intercepting mouse and touch
