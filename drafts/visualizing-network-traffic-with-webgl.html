@@ -82,7 +82,7 @@ fond of <a href="http://threejs.org">three.js</a> particle systems for their pow
         <a href="/projects/dimo">
             <img src="/static/images/041/swath-colors.png" alt="DiMo picture" />
         </a>
-        <figcaption>Particle gravity simulation in <a href="/projects/dimo">DiMo: Particles</a></figcaption>
+        <figcaption>Particle gravity simulation in <a href="/projects/dimo">DiMo: Particles</a> (50,000 particles)</figcaption>
     </figure>
     <figure class="col-sm-6">
         <a href="/projects/kimotion">
@@ -93,9 +93,13 @@ fond of <a href="http://threejs.org">three.js</a> particle systems for their pow
 </div>
 
 <p>With an audience of 5,000 people generating network traffic, the number of
-requests would exceed what could be comfortably rendered with DOM elements and
-CSS transitions/animations.  A WebGL particle system was the clear choice to
-achieve that kind of performance.</p>
+requests would exceed what could be comfortably rendered with DOM elements, CSS
+transitions/animations, and JavaScript position updates.  WebGL particle
+systems can handle thousands of particles without breaking a sweat.  It can
+even handle millions of particles, although moving particles are often
+bottlenecked by single-threaded CPU-based position updates.  Fancy <a href="https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units">GPU
+tricks</a> can beat that limitation, although such tricks are in their
+infancy as far as WebGL goes.</p>
 <p>The next step was to show that it's possible to overlay a 3D scene on top of a
 standard webpage.  three.js makes it easy to give your scene a transparent
 background, allowing the page to show through.  Here's a torus knot floating
@@ -105,10 +109,11 @@ over the pipeline.</p>
 transparent canvas soaked up all mouse clicks.  The simple CSS property
 <code>pointer-events: none</code> prevents the canvas from intercepting mouse and touch
 events.</p>
+<p>With that established, let's make some particles.</p>
 <h3>It's Pixel Time</h3>
 <p>When a network request is detected, the particle system activates a tiny dot
 which travels in an arc from point A to point B.  The arcs are defined by sine
-waves.  Here are the particle arcs as they appear normally, and another shot
+waves.  Here are the particle arcs as they appear on-screen, and another shot
 with sine wave guides showing.</p>
 <div class="row">
     <figure class="col-sm-6">
@@ -121,7 +126,7 @@ with sine wave guides showing.</p>
     </figure>
 </div>
 
-<p>To prevent the paths from overlapping with each other, I increased each wave's
+<p>To prevent the arcs from overlapping with each other, I increased each wave's
 amplitude based on vertical distance to be traveled.  That's why the purple arc
 is much smaller than the blue arc, which is smaller than the green arc, etc.</p>
 <p>Initially, the particles traveled in a single-file line, which obscured the
@@ -135,8 +140,9 @@ point of those particles moves randomly up and down to add more visual
 interest.</p>
 <h3>Together at Last</h3>
 <p>After months of collaborating from across the world, it was wonderful to meet
-the whole team in person.  A few days later, all our hard work come together as
-well.  Here's a shot of my particle visualization from the official recording.</p>
+the whole team in person.  A few days later, all our hard work came together as
+well.  All the preparation paid off and the demo worked perfectly.  Here's a
+shot of my particle visualization from the official recording.</p>
 <video style="margin: 0 auto" poster="/static/images/041/traffic-thumb.jpg" autoplay controls loop>
     <source src="/static/videos/041/traffic.webm" />
     <source src="/static/videos/041/traffic.mp4" />
@@ -146,9 +152,9 @@ well.  Here's a shot of my particle visualization from the official recording.</
 <iframe style="display: block; margin: 0 auto;" width="100%" height="315" src="https://www.youtube.com/embed/ooA6FmTL4Dk" frameborder="0" allowfullscreen></iframe>
 
 <h3>Glow Rope</h3>
-<p>Early in the project, before real traffic data was available, I used mouse
+<p>Early in the project, before traffic data was available, I used mouse
 coordinates to control the path of each particle.  It was pretty fun, so I spun
-it off into a simple WebGL demo called <a href="/demos/glow-rope">Glow Rope</a>.  Give it a try!</p>
+it off into a simple demo called <a href="/demos/glow-rope">Glow Rope</a>.  Give it a try!</p>
 <figure>
     <a href="/demos/glow-rope"><img src="/static/images/041/glow-rope.png" alt="glow rope screenshot" /></a>
     <figcaption> <a href="/demos/glow-rope">Glow Rope</a> (mouse required) </figcaption>
@@ -183,6 +189,20 @@ next year.</p>
         </footer>
 
 
+
+
+    <div id='discourse-comments'></div>
+
+    <script type="text/javascript">
+      DiscourseEmbed = { discourseUrl: 'http://discourse.palebluepixel.org/',
+                         discourseEmbedUrl: 'http://palebluepixel.org/projects/ping/'};
+
+      (function() {
+        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+      })();
+    </script>
     </article>
 
 </main>
