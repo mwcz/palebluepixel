@@ -37,7 +37,7 @@ fond of [three.js][threejs] particle systems for their power and flexibility.
         <a href="/projects/dimo">
             <img src="/static/images/041/swath-colors.png" alt="DiMo picture" />
         </a>
-        <figcaption>Particle gravity simulation in <a href="/projects/dimo">DiMo: Particles</a></figcaption>
+        <figcaption>Particle gravity simulation in <a href="/projects/dimo">DiMo: Particles</a> (50,000 particles)</figcaption>
     </figure>
     <figure class="col-sm-6">
         <a href="/projects/kimotion">
@@ -48,9 +48,13 @@ fond of [three.js][threejs] particle systems for their power and flexibility.
 </div>
 
 With an audience of 5,000 people generating network traffic, the number of
-requests would exceed what could be comfortably rendered with DOM elements and
-CSS transitions/animations.  A WebGL particle system was the clear choice to
-achieve that kind of performance.
+requests would exceed what could be comfortably rendered with DOM elements, CSS
+transitions/animations, and JavaScript position updates.  WebGL particle
+systems can handle thousands of particles without breaking a sweat.  It can
+even handle millions of particles, although moving particles are often
+bottlenecked by single-threaded CPU-based position updates.  Fancy [GPU
+tricks][gpgpu] can beat that limitation, although such tricks are in their
+infancy as far as WebGL goes.
 
 The next step was to show that it's possible to overlay a 3D scene on top of a
 standard webpage.  three.js makes it easy to give your scene a transparent
@@ -64,11 +68,13 @@ transparent canvas soaked up all mouse clicks.  The simple CSS property
 `pointer-events: none` prevents the canvas from intercepting mouse and touch
 events.
 
+With that established, let's make some particles.
+
 ### It's Pixel Time
 
 When a network request is detected, the particle system activates a tiny dot
 which travels in an arc from point A to point B.  The arcs are defined by sine
-waves.  Here are the particle arcs as they appear normally, and another shot
+waves.  Here are the particle arcs as they appear on-screen, and another shot
 with sine wave guides showing.
 
 <div class="row">
@@ -82,7 +88,7 @@ with sine wave guides showing.
     </figure>
 </div>
 
-To prevent the paths from overlapping with each other, I increased each wave's
+To prevent the arcs from overlapping with each other, I increased each wave's
 amplitude based on vertical distance to be traveled.  That's why the purple arc
 is much smaller than the blue arc, which is smaller than the green arc, etc.
 
@@ -100,8 +106,9 @@ interest.
 ### Together at Last
 
 After months of collaborating from across the world, it was wonderful to meet
-the whole team in person.  A few days later, all our hard work come together as
-well.  Here's a shot of my particle visualization from the official recording.
+the whole team in person.  A few days later, all our hard work came together as
+well.  All the preparation paid off and the demo worked perfectly.  Here's a
+shot of my particle visualization from the official recording.
 
 <video style="margin: 0 auto" poster="/static/images/041/traffic-thumb.jpg" autoplay controls loop>
     <source src="/static/videos/041/traffic.webm" />
@@ -116,9 +123,9 @@ Watch the full keynote here:
 
 ### Glow Rope
 
-Early in the project, before real traffic data was available, I used mouse
+Early in the project, before traffic data was available, I used mouse
 coordinates to control the path of each particle.  It was pretty fun, so I spun
-it off into a simple WebGL demo called [Glow Rope][glow-rope].  Give it a try!
+it off into a simple demo called [Glow Rope][glow-rope].  Give it a try!
 
 <figure>
     <a href="/demos/glow-rope"><img src="/static/images/041/glow-rope.png" alt="glow rope screenshot" /></a>
@@ -153,3 +160,4 @@ next year.
 [summit]: https://www.redhat.com/summit
 [threejs]: http://threejs.org
 [video]: https://www.youtube.com/watch?v=ooA6FmTL4Dk
+[gpgpu]: https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units
