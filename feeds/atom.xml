@@ -31,7 +31,7 @@ charm.&lt;/p&gt;
 
 &lt;p&gt;WebGL particle systems can handle many thousands of particles without breaking
 a sweat.  It can even handle &lt;em&gt;drawing&lt;/em&gt; millions of particles, although &lt;em&gt;moving&lt;/em&gt;
-the particles are often CPU-bottlenecked.  Fancy &lt;a href="https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units"&gt;tricks&lt;/a&gt; can beat that
+the particles is often CPU-bottlenecked.  Fancy &lt;a href="https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units"&gt;tricks&lt;/a&gt; can beat that
 limitation, although such tricks are still tedious in WebGL.&lt;/p&gt;
 &lt;p&gt;Alright, let's make some particles.&lt;/p&gt;
 &lt;h3&gt;It's Pixel Time&lt;/h3&gt;
