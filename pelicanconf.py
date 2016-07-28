@@ -39,7 +39,12 @@ DATE_FORMATS = {
         'en': '%Y-%m-%d',
         }
 
-CACHE_CONTENT = False
+######################
+#  CACHING SETTINGS  #
+######################
+
+# CACHE_CONTENT = True
+# LOAD_CONTENT_CACHE = True
 
 #######################################
 #  pelican-bootstrap3 theme settings  #
