@@ -10,6 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#171717">
+    <link rel="icon" type="image/png" href="/static/images/favicon.png">
 
 
 
@@ -59,28 +60,25 @@
         </header>
         <div class="entry-content">
             <nav class="toc"></nav>
-            <p>"<em>Cool,</em>" I thought, "<em>an excuse to play with WebGL at work!</em>"</p>
-<p>This year, I had the good fortune to contribute to a keynote presentation at
-<a href="https://www.redhat.com/summit">Red Hat Summit</a>.  This keynote specifically is presented every year by
-Burr Sutter.  Burr is famous for giving complex live demos, and for being
-uncannily immune to Murphy's Law.</p>
-<p>Pipelined microservices were the subject of this year's demo.  To demonstrate
-it, an audience of about 5,000 people played a videogame we created.  The game
-was powered by five microservices: Achievement, Score, Mechanics, Gamebus, and
-PlayerID.  While the audience played, new versions of those microservices were
-deployed, either to a small number of users (canary) or by toggling between two
-environments (blue/green).</p>
-<p>My contribution was to give some extra visual punch to the active microservices
-by visualizing every network request they send and receive.  For instance, when
-a <em>blue</em> service toggles to <em>green</em>, it will be reflected in the patterns of
-network traffic.</p>
+            <p>"<em>Finally,</em>" I thought, "<em>an excuse to play with WebGL at work!</em>"</p>
+<p>This year, I had the good fortune of contributing to a keynote presentation at
+<a href="https://www.redhat.com/summit">Red Hat Summit</a>.  During the keynote, an audience of 5,000 played a
+mobile web game created by our team.  The game was backed by several
+<a href="https://en.wikipedia.org/wiki/Microservices">microservices</a> which we modified on stage while the audience
+played.</p>
+<p>My contribution was to display, in a visual and engaging way, the live network
+traffic flowing through our system.</p>
+<p>Being a web guy, I wanted to accomplish this on a webpage, but with such a
+large audience, the number of network requests would rocket past what could be
+efficiently rendered with HTML and CSS.</p>
 <h3>Tiny Particles of Sand</h3>
 <p>While developing <a href="/projects/dimo">DiMo</a> and <a href="http://kimotion.xyz">Kimotion</a>, I became
-fond of <a href="http://threejs.org">three.js</a> particle systems for their power and flexibility.</p>
+fond of <a href="http://threejs.org">three.js</a> particle systems for their performance and visual
+charm.</p>
 <div class="row">
     <figure class="col-sm-6">
         <a href="/projects/dimo">
-            <img src="/static/images/041/swath-colors.png" alt="DiMo picture" />
+            <img src="/static/images/041/swath-colors.jpg" alt="DiMo picture" />
         </a>
         <figcaption>Particle gravity simulation in <a href="/projects/dimo">DiMo: Particles</a> (50,000 particles)</figcaption>
     </figure>
@@ -92,52 +90,55 @@ fond of <a href="http://threejs.org">three.js</a> particle systems for their pow
     </figure>
 </div>
 
-<p>With an audience of 5,000 people generating network traffic, the number of
-requests would exceed what could be comfortably rendered with DOM elements, CSS
-transitions/animations, and JavaScript position updates.  WebGL particle
-systems can handle thousands of particles without breaking a sweat.  It can
-even handle millions of particles, although moving particles are often
-bottlenecked by single-threaded CPU-based position updates.  Fancy <a href="https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units">GPU
-tricks</a> can beat that limitation, although such tricks are in their
-infancy as far as WebGL goes.</p>
-<p>The next step was to show that it's possible to overlay a 3D scene on top of a
-standard webpage.  three.js makes it easy to give your scene a transparent
-background, allowing the page to show through.  Here's a torus knot floating
-over the pipeline.</p>
-<p><img alt="3d torus overlaid on standard webpage" src="/static/images/041/3d-overlay.png" /></p>
-<p>Interacting with the page below was still a problem though, because the
-transparent canvas soaked up all mouse clicks.  The simple CSS property
-<code>pointer-events: none</code> prevents the canvas from intercepting mouse and touch
-events.</p>
-<p>With that established, let's make some particles.</p>
+<p>WebGL particle systems can handle many thousands of particles without breaking
+a sweat.  It can even handle <em>drawing</em> millions of particles, although <em>moving</em>
+the particles are often CPU-bottlenecked.  Fancy <a href="https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units">tricks</a> can beat that
+limitation, although such tricks are still tedious in WebGL.</p>
+<p>Alright, let's make some particles.</p>
 <h3>It's Pixel Time</h3>
-<p>When a network request is detected, the particle system activates a tiny dot
-which travels in an arc from point A to point B.  The arcs are defined by sine
-waves.  Here are the particle arcs as they appear on-screen, and another shot
-with sine wave guides showing.</p>
+<p>When a network request is detected, the particle system moves a tiny dot in an
+arc to its destination.</p>
 <div class="row">
     <figure class="col-sm-6">
-        <img src="/static/images/041/pipeline-nosines.png" alt="pipeline with traffic particles" />
-        <figcaption>Pipeline with particle arcs</figcaption>
+        <video style="margin: 0 auto" poster="/static/images/041/traffic-viz-basic-thumb.jpg" autoplay controls loop>
+            <source src="/static/videos/041/traffic-viz-basic.mp4" />
+            <source src="/static/videos/041/traffic-viz-basic.webm" />
+        </video>
+        <figcaption>Particles arc from purple to blue</figcaption>
     </figure>
     <figure class="col-sm-6">
-        <img src="/static/images/041/pipeline-sines.png" alt="pipeline with sine wave guides" />
-        <figcaption>Pipeline with sine wave guides</figcaption>
+        <video style="margin: 0 auto" poster="/static/images/041/traffic-viz-bluegreen-thumb.jpg" autoplay controls loop>
+            <source src="/static/videos/041/traffic-viz-bluegreen.mp4" />
+            <source src="/static/videos/041/traffic-viz-bluegreen.webm" />
+        </video>
+        <figcaption>Particles alternate between blue and green</figcaption>
+    </figure>
+</div>
+
+<p>The arcs are defined by sine waves.  Here are the particle arcs as they appear
+on-screen, and another shot with sine wave guides showing.</p>
+<div class="row">
+    <figure class="col-sm-6">
+        <img src="/static/images/041/pipeline-nosines.jpg" alt="pipeline with particles arcing" />
+        <figcaption>Particle arcs</figcaption>
+    </figure>
+    <figure class="col-sm-6">
+        <img src="/static/images/041/pipeline-sines.jpg" alt="pipeline with sine wave guides for the particle arcs" />
+        <figcaption>Sine wave guides</figcaption>
     </figure>
 </div>
 
 <p>To prevent the arcs from overlapping with each other, I increased each wave's
-amplitude based on vertical distance to be traveled.  That's why the purple arc
-is much smaller than the blue arc, which is smaller than the green arc, etc.</p>
-<p>Initially, the particles traveled in a single-file line, which obscured the
-number of particles.  Because of overlapping, 100 particles was
-indistinguishable from 10,000.  To remedy that, I added a small random
-horizontal offset to each particle.  The offset has less effect at the ends of
-the arc, but causes the particles to fan out near the middle.</p>
+amplitude and wavelength based on vertical distance to be traveled.  That's why
+the purple arc is much smaller than the blue arc, which is smaller than the
+green arc, etc.</p>
+<p>Initially, the particles traveled in single-file, which obscured the quantity
+of particles.  To remedy that, I added a small random horizontal offset unique
+to each particle.  The offset diminishes at the ends of the arc, which causes
+the particles to fan out near the middle.</p>
 <p>The particles that enter from the right side of the screen represent network
-traffic from the audience.  As you can see in the video below, the origination
-point of those particles moves randomly up and down to add more visual
-interest.</p>
+traffic from the audience.  As you can see in the video below, the origin point
+of those particles moves randomly up and down to add more visual interest.</p>
 <h3>Together at Last</h3>
 <p>After months of collaborating from across the world, it was wonderful to meet
 the whole team in person.  A few days later, all our hard work came together as
@@ -152,12 +153,12 @@ shot of my particle visualization from the official recording.</p>
 <iframe style="display: block; margin: 0 auto;" width="100%" height="315" src="https://www.youtube.com/embed/ooA6FmTL4Dk" frameborder="0" allowfullscreen></iframe>
 
 <h3>Glow Rope</h3>
-<p>Early in the project, before traffic data was available, I used mouse
-coordinates to control the path of each particle.  It was pretty fun, so I spun
-it off into a simple demo called <a href="/demos/glow-rope">Glow Rope</a>.  Give it a try!</p>
+<p>Early on, before traffic data was available, I had the particles follow the
+mouse instead.  It was pretty fun, so I spun it off into a simple demo called
+<a href="/demos/glow-rope">Glow Rope</a>.  Give it a try (mouse required)!</p>
 <figure>
-    <a href="/demos/glow-rope"><img src="/static/images/041/glow-rope.png" alt="glow rope screenshot" /></a>
-    <figcaption> <a href="/demos/glow-rope">Glow Rope</a> (mouse required) </figcaption>
+    <a href="/demos/glow-rope"><img src="/static/images/041/glow-rope.jpg" alt="glow rope screenshot" /></a>
+    <figcaption><p><a class="btn btn-default btn-lg" href="/demos/glow-rope">Play Glow Rope</a></p></figcaption>
 </figure>
 
 <h3>Leaderboard</h3>
@@ -172,7 +173,7 @@ data.  Here's a shot of the winners from the live audience.</p>
 <p>The amount of work and preparation that goes into a presentation like this was
 eye-opening for me.  A week out and tired to the bone, I was thinking "No way
 am I doing this next year!"  But the thrill of everyone's hard work coming
-together drove away any exhaustion.  I can't wait to see what we can cook up
+together drove away the exhaustion.  I can't wait to see what we can cook up
 next year.</p>
         </div>
 
@@ -195,12 +196,49 @@ next year.</p>
 
     <script type="text/javascript">
       DiscourseEmbed = { discourseUrl: 'http://discourse.palebluepixel.org/',
-                         discourseEmbedUrl: 'http://palebluepixel.org/drafts/visualizing-network-traffic-with-webgl.html'};
+                         discourseEmbedUrl: 'http://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/'};
 
       (function() {
-        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
-        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+
+          var DE = window.DiscourseEmbed || {};
+
+          ['discourseUrl', 'discourseEmbedUrl', 'discourseUserName'].forEach(function(i) {
+              if (window[i]) { DE[i] = DE[i] || window[i]; }
+          });
+
+          var queryParams = {};
+
+          if (DE.discourseEmbedUrl) {
+              queryParams.embed_url = encodeURIComponent(DE.discourseEmbedUrl);
+          }
+
+          if (DE.discourseUserName) {
+              queryParams.discourse_username = DE.discourseUserName;
+          }
+
+          if (DE.topicId) {
+              queryParams.topic_id = DE.topicId;
+          }
+
+          var src = DE.discourseUrl + 'embed/comments';
+          var keys = Object.keys(queryParams);
+          if (keys.length > 0) {
+              src += "?";
+
+              for (var i=0; i<keys.length; i++) {
+                  if (i > 0) { src += "&"; }
+
+                  var k = keys[i];
+                  src += k + "=" + queryParams[k];
+              }
+          }
+
+          function normalizeUrl(url) {
+              return url.replace(/^https?(\:\/\/)?/, '');
+          }
+
+          $('#discourse-comments').load(src + ' body');
+
       })();
     </script>
     </article>
