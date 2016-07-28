@@ -45,7 +45,7 @@ charm.
 
 WebGL particle systems can handle many thousands of particles without breaking
 a sweat.  It can even handle *drawing* millions of particles, although *moving*
-the particles are often CPU-bottlenecked.  Fancy [tricks][gpgpu] can beat that
+the particles is often CPU-bottlenecked.  Fancy [tricks][gpgpu] can beat that
 limitation, although such tricks are still tedious in WebGL.
 
 Alright, let's make some particles.
