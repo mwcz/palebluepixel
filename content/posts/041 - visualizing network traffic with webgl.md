@@ -1,8 +1,8 @@
 Title: Visualizing Network Traffic with WebGL
 Date: 2016-07-13
 Tags: programming, javascript, threejs, webgl, 3d, web, redhat, redhat-summit
-Summary: Creating a WebGL particle system to convey network traffic patterns to Red Hat Summit's live audience of 5,000.
-Image: /static/images/gallery/400x/gallery/039/DSCF0634.JPG
+Summary: Creating a WebGL particle system to convey network traffic patterns to a live audience at <a href="https://www.redhat.com/summit">Red Hat Summit</a>.
+Image: /static/images/041/post-thumbnail.jpg
 Gallery: 041
 Mwc: 41
 
@@ -78,11 +78,11 @@ on-screen, and another shot with sine wave guides showing.
 
 <div class="row">
     <figure class="col-sm-6">
-        <img src="/static/images/041/pipeline-nosines.png" alt="pipeline with particles arcing" />
+        <img src="/static/images/041/pipeline-nosines.jpg" alt="pipeline with particles arcing" />
         <figcaption>Particle arcs</figcaption>
     </figure>
     <figure class="col-sm-6">
-        <img src="/static/images/041/pipeline-sines.png" alt="pipeline with sine wave guides for the particle arcs" />
+        <img src="/static/images/041/pipeline-sines.jpg" alt="pipeline with sine wave guides for the particle arcs" />
         <figcaption>Sine wave guides</figcaption>
     </figure>
 </div>
@@ -126,7 +126,7 @@ mouse instead.  It was pretty fun, so I spun it off into a simple demo called
 [Glow Rope][glow-rope].  Give it a try (mouse required)!
 
 <figure>
-    <a href="/demos/glow-rope"><img src="/static/images/041/glow-rope.png" alt="glow rope screenshot" /></a>
+    <a href="/demos/glow-rope"><img src="/static/images/041/glow-rope.jpg" alt="glow rope screenshot" /></a>
     <figcaption><p><a class="btn btn-default btn-lg" href="/demos/glow-rope">Play Glow Rope</a></p></figcaption>
 </figure>
 
@@ -148,7 +148,7 @@ data.  Here's a shot of the winners from the live audience.
 The amount of work and preparation that goes into a presentation like this was
 eye-opening for me.  A week out and tired to the bone, I was thinking "No way
 am I doing this next year!"  But the thrill of everyone's hard work coming
-together drove away any exhaustion.  I can't wait to see what we can cook up
+together drove away the exhaustion.  I can't wait to see what we can cook up
 next year.
 
 
