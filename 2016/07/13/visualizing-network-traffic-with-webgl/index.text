@@ -133,11 +133,11 @@ mouse instead.  It was pretty fun, so I spun it off into a simple demo called
 
 ### Leaderboard
 
-In addition to the network traffic visualization, I helped build the
-leaderboard view to display the scores and achievements of the top 10 players.
-[Andres][andres] created the beautiful design and handed me a static mockup
-which I converted into a dynamic template using [Ractive][ractive].  I then
-created a WebSocket connection to the *score microservice* to populate the
+In addition to the network traffic visualization, I helped build a leaderboard
+view to display the scores and achievements of the top 10 players in the
+audience.  [Andres][andres] created the beautiful design and handed me a static
+mockup which I converted into a dynamic template using [Ractive][ractive].  I
+then created a WebSocket connection to the *score microservice* to populate the
 data.  Here's a shot of the winners from the live audience.
 
 ![photo of final leaderboard](/static/images/041/leaderboard-final.jpg)

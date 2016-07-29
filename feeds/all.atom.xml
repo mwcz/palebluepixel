@@ -101,11 +101,11 @@ mouse instead.  It was pretty fun, so I spun it off into a simple demo called
 &lt;/figure&gt;
 
 &lt;h3&gt;Leaderboard&lt;/h3&gt;
-&lt;p&gt;In addition to the network traffic visualization, I helped build the
-leaderboard view to display the scores and achievements of the top 10 players.
-&lt;a href="https://twitter.com/andresgalante/"&gt;Andres&lt;/a&gt; created the beautiful design and handed me a static mockup
-which I converted into a dynamic template using &lt;a href="http://ractivejs.org/"&gt;Ractive&lt;/a&gt;.  I then
-created a WebSocket connection to the &lt;em&gt;score microservice&lt;/em&gt; to populate the
+&lt;p&gt;In addition to the network traffic visualization, I helped build a leaderboard
+view to display the scores and achievements of the top 10 players in the
+audience.  &lt;a href="https://twitter.com/andresgalante/"&gt;Andres&lt;/a&gt; created the beautiful design and handed me a static
+mockup which I converted into a dynamic template using &lt;a href="http://ractivejs.org/"&gt;Ractive&lt;/a&gt;.  I
+then created a WebSocket connection to the &lt;em&gt;score microservice&lt;/em&gt; to populate the
 data.  Here's a shot of the winners from the live audience.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="photo of final leaderboard" src="/static/images/041/leaderboard-final.jpg" /&gt;&lt;/p&gt;
 &lt;h3&gt;Next Year&lt;/h3&gt;
