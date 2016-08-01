@@ -28,6 +28,9 @@ to be an excellent book: [Game Programming Patterns][gpp] by [Bob
 Nystrom][bob].  Several of the patterns described in that book can be found
 inside Ping.
 
+![]({filename}/static/images/projects/ping/booth.jpg)
+
+
 Roughly 400 people played the game over the course of the event.  The top score
 was 597, which earned one dedicated player a pair of sweet headphones.  It was
 enriching to see so many people enjoying the game.  Each player experienced the
