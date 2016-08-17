@@ -87,10 +87,10 @@ on-screen, and another shot with sine wave guides showing.
     </figure>
 </div>
 
-To prevent the arcs from overlapping with each other, I increased each wave's
-amplitude and wavelength based on vertical distance to be traveled.  That's why
-the purple arc is much smaller than the blue arc, which is smaller than the
-green arc, etc.
+To prevent the arcs from overlapping with each other too much, I increased each
+wave's amplitude based on vertical distance to be traveled.  In essence,
+amplitude increases linearly with wavelength.  That's why the green arc is
+bigger than the blue arc, etc.
 
 Initially, the particles traveled in single-file, which obscured the quantity
 of particles.  To remedy that, I added a small random horizontal offset unique
