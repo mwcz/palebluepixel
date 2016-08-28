@@ -1,5 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Pale Blue Pixel</title><link href="http://palebluepixel.org/" rel="alternate"></link><link href="http://localhost:8001/feeds/all.atom.xml" rel="self"></link><id>http://palebluepixel.org/</id><updated>2016-07-13T00:00:00-04:00</updated><entry><title>Visualizing Network Traffic with WebGL</title><link href="http://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/" rel="alternate"></link><updated>2016-07-13T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2016-07-13:2016/07/13/visualizing-network-traffic-with-webgl/</id><summary type="html">&lt;p&gt;"&lt;em&gt;Finally,&lt;/em&gt;" I thought, "&lt;em&gt;an excuse to play with WebGL at work!&lt;/em&gt;"&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pale Blue Pixel</title><link href="http://palebluepixel.org/" rel="alternate"></link><link href="http://localhost:8001/feeds/all.atom.xml" rel="self"></link><id>http://palebluepixel.org/</id><updated>2016-08-28T00:00:00-04:00</updated><entry><title>Kimotion Modding 101</title><link href="http://palebluepixel.org/2016/08/28/kimotion-modding-101/" rel="alternate"></link><updated>2016-08-28T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2016-08-28:2016/08/28/kimotion-modding-101/</id><summary type="html">&lt;p&gt;Kimotion is a simple framework for creating interactive art exhibits in 2D or
+3D and supports both &lt;a href="http://www.xbox.com/en-US/xbox-360/accessories/kinect"&gt;Kinect&lt;/a&gt; and &lt;a href="https://www.leapmotion.com/"&gt;Leap Motion&lt;/a&gt; for viewer input.
+This tutorial will focus on the Leap, so to proceed with the tutorial you'll
+need to &lt;a href="https://www.leapmotion.com/setup"&gt;set up your Leap&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Once the leap service is running, you can set up Kimotion!&lt;/p&gt;
+&lt;h2&gt;Get the code&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git clone git@github.com:mwcz/Kimotion.git
+cd Kimotion
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If you don't know how to use &lt;code&gt;git&lt;/code&gt;, no problem, just download and extract the
+&lt;a href="https://github.com/mwcz/Kimotion/archive/master.zip"&gt;Kimotion zip file&lt;/a&gt;
+instead.&lt;/p&gt;
+&lt;h2&gt;Boot it up&lt;/h2&gt;
+&lt;p&gt;Start a simple web server:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;python -m SimpleHTTPServer 8080 src
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;(&lt;em&gt;If you're comfortable with &lt;a href="https://www.npmjs.com/"&gt;npm&lt;/a&gt; you can do a quick &lt;code&gt;npm install &amp;amp;&amp;amp; npm
+start&lt;/code&gt; instead.&lt;/em&gt;)&lt;/p&gt;
+&lt;p&gt;Then open &lt;a href="http://localhost:8080/#example2d"&gt;localhost:8080/#example2d&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Wave your hand around and you should see a trail of black-outlined squares,
+like this:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="example2d mod screenshot" src="/static/images/042/example2d.jpg" /&gt;&lt;/p&gt;
+&lt;h2&gt;Create your mod!&lt;/h2&gt;
+&lt;p&gt;The easiest way to start your own mod is to make a copy of the default mod.
+Come up with a name for the mod, let's say &lt;code&gt;mymod&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;cd src
+cp -r mods/example2d mods/mymod
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Open &lt;code&gt;index.html&lt;/code&gt;, find where it says &lt;code&gt;&amp;lt;!-- Kimotion mods--&amp;gt;&lt;/code&gt;, and right after
+it add a script tag to include your mod.&lt;/p&gt;
+&lt;p&gt;&lt;script src="mods/mymod/main.js"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;Open &lt;code&gt;mods/mymod/main.js&lt;/code&gt; and on the very first line, change &lt;code&gt;class example2d&lt;/code&gt;
+to &lt;code&gt;class mymod&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Open &lt;code&gt;mods.js&lt;/code&gt; and add your mod name (&lt;code&gt;mymod&lt;/code&gt;) to the list.&lt;/p&gt;
+&lt;p&gt;Whew, that process was pretty tedious, sorry about that.&lt;/p&gt;
+&lt;p&gt;You can now open &lt;a href="http://localhost:8080/#mymod"&gt;localhost:8080/#mymod&lt;/a&gt; and see
+your mod in action!  It's going to look just like the example mod, but now it's
+time to make it your own.&lt;/p&gt;
+&lt;h2&gt;Customize your mod&lt;/h2&gt;
+&lt;p&gt;Open &lt;code&gt;mods/mymod/main.js&lt;/code&gt; and look at the general layout.  There's a
+&lt;code&gt;constructor&lt;/code&gt; function for your initial setup, and an &lt;code&gt;update&lt;/code&gt; function which
+runs once per frame (at 60 frames per second, ideally).&lt;/p&gt;
+&lt;p&gt;Many of the function calls (like &lt;code&gt;background&lt;/code&gt; and &lt;code&gt;fill&lt;/code&gt;) come from &lt;a href="https://p5js.org/"&gt;p5&lt;/a&gt;,
+an &lt;strong&gt;awesome&lt;/strong&gt; 2D drawing library.  All of p5 is available to you, so take a
+look at p5's &lt;a href="https://p5js.org/reference/"&gt;function reference&lt;/a&gt; for all the possibilities.&lt;/p&gt;
+&lt;p&gt;For your first tweak,  replace &lt;code&gt;rect&lt;/code&gt; with &lt;code&gt;ellipse&lt;/code&gt;, and refresh your browser.
+Voila!&lt;/p&gt;
+&lt;p&gt;&lt;img alt="example2d mod screenshot with circles" src="/static/images/042/example2d-circle.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;There's an existing mod with a few more tweaks, Rainbow Squares.  It finds out
+the angle of hand motion and colors the square based on that angle.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="rainbow squares mod screenshot" src="/static/images/042/rainbow-squares.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Check out &lt;a href="https://github.com/mwcz/Kimotion/blob/master/src/mods/rainbow-square/main.js"&gt;Rainbow Squares&lt;/a&gt; if you're interesting in using an
+effect like that.&lt;/p&gt;
+&lt;h2&gt;Modding resources&lt;/h2&gt;
+&lt;p&gt;At this point, you're an experienced Kimotion modder.  If you have an idea but
+would like some feedback before getting started, I'm eager to assist.  Here are
+a few ways to get help:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tweet &lt;a href="https://twitter.com/mwcz"&gt;@mwcz&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Open a &lt;a href="https://github.com/mwcz/Kimotion/issues/new"&gt;Kimotion issue&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Explore the existing &lt;a href="https://github.com/mwcz/Kimotion/tree/master/src/mods"&gt;Kimotion mods&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="web"></category><category term="kimotion"></category><category term="art"></category><category term="demoscene"></category></entry><entry><title>Visualizing Network Traffic with WebGL</title><link href="http://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/" rel="alternate"></link><updated>2016-07-13T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2016-07-13:2016/07/13/visualizing-network-traffic-with-webgl/</id><summary type="html">&lt;p&gt;"&lt;em&gt;Finally,&lt;/em&gt;" I thought, "&lt;em&gt;an excuse to play with WebGL at work!&lt;/em&gt;"&lt;/p&gt;
 &lt;p&gt;This year, I had the good fortune of contributing to a keynote presentation at
 &lt;a href="https://www.redhat.com/summit"&gt;Red Hat Summit&lt;/a&gt;.  During the keynote, an audience of 5,000 played a
 mobile web game created by our team.  The game was backed by several

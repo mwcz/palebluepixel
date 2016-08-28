@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>    Kimotion Modding 101 - Pale Blue Pixel
+</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#171717">
+    <link rel="icon" type="image/png" href="/static/images/favicon.png">
+
+
+
+    <!--[if gte IE 9]
+    <style type="text/css">
+        .gradient {
+            filter: none;
+        }
+    </style>
+    <![endif]-->
+
+    <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
+            <link href="http://palebluepixel.org/theme/css/styles.min.css?8ba332f4" rel="stylesheet">
+
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://palebluepixel.org/theme/js/jquery.min.js"></script>
+    <script src="http://palebluepixel.org/theme/js/jquery.lightbox.min.js"></script>
+
+        <link href="http://palebluepixel.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Pale Blue Pixel ATOM Feed"/>
+        <link href="http://palebluepixel.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
+              title="Pale Blue Pixel RSS Feed"/>
+
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <nav class="pbp-navbar" role="navigation">
+                <a href="http://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
+                    PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+                </a>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- /.navbar -->
+<main role="main" class="container">
+    <article>
+
+
+        <header class="page-header">
+            <h1>
+                Kimotion Modding 101
+            </h1>
+        </header>
+        <div class="entry-content">
+            <nav class="toc"></nav>
+            <p>Kimotion is a simple framework for creating interactive art exhibits in 2D or
+3D and supports both <a href="http://www.xbox.com/en-US/xbox-360/accessories/kinect">Kinect</a> and <a href="https://www.leapmotion.com/">Leap Motion</a> for viewer input.
+This tutorial will focus on the Leap, so to proceed with the tutorial you'll
+need to <a href="https://www.leapmotion.com/setup">set up your Leap</a>.</p>
+<p>Once the leap service is running, you can set up Kimotion!</p>
+<h2>Get the code</h2>
+<div class="highlight"><pre>git clone git@github.com:mwcz/Kimotion.git
+cd Kimotion
+</pre></div>
+
+
+<p>If you don't know how to use <code>git</code>, no problem, just download and extract the
+<a href="https://github.com/mwcz/Kimotion/archive/master.zip">Kimotion zip file</a>
+instead.</p>
+<h2>Boot it up</h2>
+<p>Start a simple web server:</p>
+<div class="highlight"><pre>python -m SimpleHTTPServer 8080 src
+</pre></div>
+
+
+<p>(<em>If you're comfortable with <a href="https://www.npmjs.com/">npm</a> you can do a quick <code>npm install &amp;&amp; npm
+start</code> instead.</em>)</p>
+<p>Then open <a href="http://localhost:8080/#example2d">localhost:8080/#example2d</a>.</p>
+<p>Wave your hand around and you should see a trail of black-outlined squares,
+like this:</p>
+<p><img alt="example2d mod screenshot" src="/static/images/042/example2d.jpg" /></p>
+<h2>Create your mod!</h2>
+<p>The easiest way to start your own mod is to make a copy of the default mod.
+Come up with a name for the mod, let's say <code>mymod</code>:</p>
+<div class="highlight"><pre>cd src
+cp -r mods/example2d mods/mymod
+</pre></div>
+
+
+<p>Open <code>index.html</code>, find where it says <code>&lt;!-- Kimotion mods--&gt;</code>, and right after
+it add a script tag to include your mod.</p>
+<p><script src="mods/mymod/main.js"></script></p>
+<p>Open <code>mods/mymod/main.js</code> and on the very first line, change <code>class example2d</code>
+to <code>class mymod</code>.</p>
+<p>Open <code>mods.js</code> and add your mod name (<code>mymod</code>) to the list.</p>
+<p>Whew, that process was pretty tedious, sorry about that.</p>
+<p>You can now open <a href="http://localhost:8080/#mymod">localhost:8080/#mymod</a> and see
+your mod in action!  It's going to look just like the example mod, but now it's
+time to make it your own.</p>
+<h2>Customize your mod</h2>
+<p>Open <code>mods/mymod/main.js</code> and look at the general layout.  There's a
+<code>constructor</code> function for your initial setup, and an <code>update</code> function which
+runs once per frame (at 60 frames per second, ideally).</p>
+<p>Many of the function calls (like <code>background</code> and <code>fill</code>) come from <a href="https://p5js.org/">p5</a>,
+an <strong>awesome</strong> 2D drawing library.  All of p5 is available to you, so take a
+look at p5's <a href="https://p5js.org/reference/">function reference</a> for all the possibilities.</p>
+<p>For your first tweak,  replace <code>rect</code> with <code>ellipse</code>, and refresh your browser.
+Voila!</p>
+<p><img alt="example2d mod screenshot with circles" src="/static/images/042/example2d-circle.jpg" /></p>
+<p>There's an existing mod with a few more tweaks, Rainbow Squares.  It finds out
+the angle of hand motion and colors the square based on that angle.</p>
+<p><img alt="rainbow squares mod screenshot" src="/static/images/042/rainbow-squares.jpg" /></p>
+<p>Check out <a href="https://github.com/mwcz/Kimotion/blob/master/src/mods/rainbow-square/main.js">Rainbow Squares</a> if you're interesting in using an
+effect like that.</p>
+<h2>Modding resources</h2>
+<p>At this point, you're an experienced Kimotion modder.  If you have an idea but
+would like some feedback before getting started, I'm eager to assist.  Here are
+a few ways to get help:</p>
+<ul>
+<li>Tweet <a href="https://twitter.com/mwcz">@mwcz</a></li>
+<li>Open a <a href="https://github.com/mwcz/Kimotion/issues/new">Kimotion issue</a></li>
+<li>Explore the existing <a href="https://github.com/mwcz/Kimotion/tree/master/src/mods">Kimotion mods</a></li>
+</ul>
+        </div>
+
+        <!-- /.entry-content -->
+
+        <footer>
+            <small>
+                This article was published on
+                <time datetime="2016-08-28" pubdate="">2016-08-28</time>
+                by <a href="https://twitter.com/mwcz" title="mwcz twitter" rel="author">mwcz</a>
+                and tagged with
+                    <a href="http://palebluepixel.org/tag/programming" rel="category">programming</a>,                    <a href="http://palebluepixel.org/tag/javascript" rel="category">javascript</a>,                    <a href="http://palebluepixel.org/tag/threejs" rel="category">threejs</a>,                    <a href="http://palebluepixel.org/tag/webgl" rel="category">webgl</a>,                    <a href="http://palebluepixel.org/tag/3d" rel="category">3d</a>,                    <a href="http://palebluepixel.org/tag/web" rel="category">web</a>,                    <a href="http://palebluepixel.org/tag/kimotion" rel="category">kimotion</a>,                    <a href="http://palebluepixel.org/tag/art" rel="category">art</a>, and                    <a href="http://palebluepixel.org/tag/demoscene" rel="category">demoscene</a>.
+            </small>
+        </footer>
+
+
+
+
+    <div id='discourse-comments'></div>
+
+    <script type="text/javascript">
+      DiscourseEmbed = { discourseUrl: 'http://discourse.palebluepixel.org/',
+                         discourseEmbedUrl: 'http://palebluepixel.org/2016/08/28/kimotion-modding-101/'};
+
+      (function() {
+
+          var DE = window.DiscourseEmbed || {};
+
+          ['discourseUrl', 'discourseEmbedUrl', 'discourseUserName'].forEach(function(i) {
+              if (window[i]) { DE[i] = DE[i] || window[i]; }
+          });
+
+          var queryParams = {};
+
+          if (DE.discourseEmbedUrl) {
+              queryParams.embed_url = encodeURIComponent(DE.discourseEmbedUrl);
+          }
+
+          if (DE.discourseUserName) {
+              queryParams.discourse_username = DE.discourseUserName;
+          }
+
+          if (DE.topicId) {
+              queryParams.topic_id = DE.topicId;
+          }
+
+          var src = DE.discourseUrl + 'embed/comments';
+          var keys = Object.keys(queryParams);
+          if (keys.length > 0) {
+              src += "?";
+
+              for (var i=0; i<keys.length; i++) {
+                  if (i > 0) { src += "&"; }
+
+                  var k = keys[i];
+                  src += k + "=" + queryParams[k];
+              }
+          }
+
+          function normalizeUrl(url) {
+              return url.replace(/^https?(\:\/\/)?/, '');
+          }
+
+          $('#discourse-comments').load(src + ' body');
+
+      })();
+    </script>
+    </article>
+
+</main>
+
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<script src="http://palebluepixel.org/theme/lib/prism/prism.js"></script>
+
+</body>
+</html>
