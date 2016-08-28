@@ -1,6 +1,6 @@
 Title: Kimotion Modding 101
 Date: 2016-08-28
-Tags: programming, javascript, threejs, webgl, 3d, web, kimotion, art, demoscene
+Tags: programming, javascript, threejs, webgl, 3d, web, kimotion, art
 Summary: How to create an interactive art display with Kimotion.
 Image: /static/images/042/thumb.jpg
 Gallery: 042
