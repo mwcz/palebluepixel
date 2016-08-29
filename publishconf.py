@@ -23,4 +23,4 @@ PLUGINS.append('thumbnailer')
 
 #DISQUS_SITENAME = ""
 #GOOGLE_ANALYTICS = ""
-PIWIK_ANALYTICS = False
+PIWIK_ANALYTICS = True
