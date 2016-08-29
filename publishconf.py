@@ -10,7 +10,7 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-DEBUG = True
+DEBUG = False
 SITEURL = 'http://palebluepixel.org'
 RELATIVE_URLS = False
 
@@ -23,4 +23,4 @@ PLUGINS.append('thumbnailer')
 
 #DISQUS_SITENAME = ""
 #GOOGLE_ANALYTICS = ""
-
+PIWIK_ANALYTICS = False

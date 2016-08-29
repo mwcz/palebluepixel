@@ -222,3 +222,10 @@ JINJA_FILTERS = {
         sorted,
         key=lambda tags: len(tags[1]),
         reverse=True)} # reversed for descending order
+
+
+#######################################################################
+#                        ANALYTICS SETTINGS                           #
+#######################################################################
+
+PIWIK_ANALYTICS = False
