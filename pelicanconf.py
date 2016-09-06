@@ -205,7 +205,7 @@ SUMMARY_MAX_LENGTH = 20
 GITHUB_URL      = 'https://github.com/mwcz'
 DISQUS_SITENAME = False #'mwcz'
 TWITTER_COMMENTS = False # not working so great anymore
-DISCOURSE_COMMENTS = True
+DISCOURSE_COMMENTS = False
 SOCIAL          = (('GitHub',  'https://github.com/mwcz'),
                    ('Twitter', 'https://twitter.com/mwcz'),)
 
