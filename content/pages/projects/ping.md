@@ -28,7 +28,7 @@ to be an excellent book: [Game Programming Patterns][gpp] by [Bob
 Nystrom][bob].  Several of the patterns described in that book can be found
 inside Ping.
 
-![]({filename}/static/images/projects/ping/booth.jpg)
+![photo of game booth at Red Hat Summit]({filename}/static/images/projects/ping/booth.jpg)
 
 
 Roughly 400 people played the game over the course of the event.  The top score
