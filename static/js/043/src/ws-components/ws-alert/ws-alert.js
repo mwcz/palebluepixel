@@ -1,5 +1,5 @@
 Polymer({
-    is: 'bs-alert',
+    is: 'ws-alert',
     properties: {
         level: {
             type: String,
