@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>    Lazyloading Web Components - Pale Blue Pixel
+</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#171717">
+    <link rel="icon" type="image/png" href="/static/images/favicon.png">
+
+
+
+    <!--[if gte IE 9]
+    <style type="text/css">
+        .gradient {
+            filter: none;
+        }
+    </style>
+    <![endif]-->
+
+    <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
+            <link href="http://palebluepixel.org/theme/css/styles.min.css?20c36e5d" rel="stylesheet">
+
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://palebluepixel.org/theme/js/jquery.min.js"></script>
+    <script src="http://palebluepixel.org/theme/js/jquery.lightbox.min.js"></script>
+
+        <link href="http://palebluepixel.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Pale Blue Pixel ATOM Feed"/>
+        <link href="http://palebluepixel.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
+              title="Pale Blue Pixel RSS Feed"/>
+
+    <!-- Piwik -->
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="https://zipt.org/piwik/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript><p><img src="https://zipt.org/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+    <!-- End Piwik Code -->
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <nav class="pbp-navbar" role="navigation">
+                <a href="http://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
+                    PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+                </a>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- /.navbar -->
+<main role="main" class="container">
+    <article>
+
+
+        <header class="page-header">
+            <h1>
+                Lazyloading Web Components
+            </h1>
+        </header>
+        <div class="entry-content">
+            <nav class="toc"></nav>
+            <p>They say <a href="http://threevirtues.com/">good developers are lazy</a>.  A tedious process is no match for a
+lazy developer.  Below is an experiment in laziness.  It's a proof of concept
+for using Web Components without having to manually import each one.</p>
+<p>I'm not sure exactly what to call it.  It grazes the definitions of
+lazyloading, autoloading, and dependency injection, so I went with the laziest
+term.</p>
+<p>Let's set the scene, and find out if it's a worthwhile developer convenience,
+or ease-of-use gone mad...</p>
+<h2>Scene 1: Maximize Simplicity</h2>
+<p>You are the author of Booootstrap, a library of useful components like
+navigation, buttons, and alerts.  They're distributed as HTML snippets for
+users to copy, paste, and customize.</p>
+<video style="margin: 0 auto" poster="/static/videos/043/thumb.png" autoplay controls loop>
+    <source src="/static/videos/043/bootstrap-paste.webm" />
+    <source src="/static/videos/043/bootstrap-paste.mp4" />
+</video>
+
+<p>To improve ease of use, you encapsulate all that HTML into a custom element:</p>
+<pre><code class="language-markup">&lt;bs-panel heading="I am a bs-panel"&gt;Some words.&lt;/bs-panel&gt;
+</code></pre>
+
+<p>The essence of simplicity!  One more thing, browsers don't know what
+<code>&lt;bs-panel&gt;</code> is, so your users must import it:</p>
+<pre><code class="language-markup">&lt;link rel="import" href="../bower_components/bootstrap/components/bs-panel.html"&gt;
+</code></pre>
+
+<p>One line, no big deal.  But as your users add and remove components from their
+pages, managing imports becomes a finger-aching chore.</p>
+<h2>Scene 2: Minimize Finger-Ache</h2>
+<p>Wouldn't it be cushy if the components were imported when you use them,
+automatically?  Here's a working demo:</p>
+<div class="row">
+    <div class="col-sm-4">
+        <h3>The demo <small><a href="/static/js/043/index.html" target="_blank" rel="noopener noreferrer">open in tab</a></small></h3>
+        <iframe frameborder=0 height="200" width="100%" src="/static/js/043/index.html"></iframe>
+    </div>
+    <div class="col-sm-8">
+        <h3>The source</h3>
+<pre data-line="3-4,7-11" style="font-size: 1.2rem"><code class="language-markup">&lt;html&gt;
+    &lt;head&gt;
+        &lt;script defer src="src/webcomponents.min.js"&gt;&lt;/script&gt;
+        &lt;link rel="import" href="src/lazy-load/lazy-load.html"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;lazy-load&gt;
+            &lt;bs-panel heading="I am a bs-panel"&gt;Some words.&lt;/bs-panel&gt;
+            &lt;bs-btn&gt;I am bs-button&lt;/bs-btn&gt;
+            &lt;bs-alert&gt;I am a bs-alert&lt;/bs-alert&gt;
+        &lt;/lazy-load&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+
+<p>The page only imports <code>lazy-load</code> which in turn takes care of importing the
+rest.  Let's look at how it works.</p>
+<h2>Scene 3: Behind the Scenes</h2>
+<p>To lazyload, we need a list of all our component names and where to find them.
+I created a small "registry" object for the demo.  In the real-world, this
+object could be auto-generated by the component library's build system, or by
+the build system of the user's app, including all available components.</p>
+<pre><code class="language-javascript">var LazyComponents = {
+    names: 'bs-panel,bs-btn,bs-alert',
+    paths: {
+        'bs-panel' : './src/bs-components/bs-panel/bs-panel.html',
+        'bs-btn'   : './src/bs-components/bs-btn/bs-btn.html',
+        'bs-alert' : './src/bs-components/bs-alert/bs-alert.html',
+    },
+};
+</code></pre>
+
+<p>First we have <code>names</code>, a comma-separated list of component names which doubles
+as a selector.  It is passed into <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll">querySelectorAll()</a> to find any
+occurrences of our elements on the page.  Second is <code>paths</code>, a mapping from
+each component's name to its HTML template file.</p>
+<h3>The lazy-load element</h3>
+<p>Here's the Polymer definition for the <code>lazy-load</code> element:</p>
+<pre><code class="language-javascript">Polymer({
+
+    is: 'lazy-load',
+
+    attached: function lazyLoadAttached() {
+        this.lazyLoad();
+    },
+
+    lazyLoad: function lazyLoad() {
+        var els = this.querySelectorAll(LazyComponents.names);
+        for (var i = 0; i &lt; els.length; ++i) {
+            var name = els[i].nodeName.toLowerCase();
+            this.importHref(LazyComponents.paths[name]);
+        }
+    },
+
+});
+</code></pre>
+
+<p>When <code>lazy-load</code> is <a href="https://www.polymer-project.org/1.0/docs/devguide/registering-elements#lifecycle-callbacks">attached to the DOM</a>, it finds any children in
+the <code>names</code> list and imports their HTML templates (using Polymer's handy
+<a href="https://www.polymer-project.org/1.0/docs/devguide/instance-methods#imports-and-urls">importHref()</a> function).</p>
+<p>Now any element in the registry object can be used without an explicit import!</p>
+<h2>Tradeoffs</h2>
+<p>There are some things that may outweigh the convenience.</p>
+<ul>
+<li>
+<p><strong>Unvulcanized</strong> - Lazy loading is the opposite of <a href="https://www.polymer-project.org/1.0/docs/tools/optimize-for-production">Vulcanize</a>.
+   Vulcanize can still be used, but lazyloaded components won't be inlined.</p>
+</li>
+<li>
+<p><strong>Delayed loading</strong> - Explicit imports begin downloading before lazyloaded
+   imports, since they don't have to wait for <code>lazy-load</code> to be attached to the
+   DOM.</p>
+</li>
+<li>
+<p><strong>Paths must be absolute</strong> - Imports typically use relative paths, but
+   lazyloaded paths are defined in only one spot, not per-page, so they must be
+   absolute, <em>or</em> relative to <code>lazy-load.html</code>.</p>
+</li>
+<li>
+<p><strong>Late to the party?</strong> - Any custom elements added to the page after
+   <code>lazyLoad()</code> has run won't be imported.  That didn't seem necessary for a
+   proof of concept, but running <code>lazyLoad()</code> on each state change would be an
+   easy solution.</p>
+</li>
+<li>
+<p><strong>HTTP/2 Server Push?</strong> - I haven't tested this, but I suspect lazyloaded
+   components won't benefit from HTTP/2 Server Push.</p>
+</li>
+</ul>
+<p>I'm not sure yet which camp lazyloading will fall into: best practice, or
+antipattern.  My hope is that developer tooling will be written that injects
+imports as you code, rather than at runtime.</p>
+<p>Thanks to Kyle Buchanan for pointers and corrections!</p>
+        </div>
+
+        <!-- /.entry-content -->
+
+        <footer>
+            <small>
+                This article was published on
+                <time datetime="2016-09-06" pubdate="">2016-09-06</time>
+                by <a href="https://twitter.com/mwcz" title="mwcz twitter" rel="author">mwcz</a>
+                and tagged with
+                    <a href="http://palebluepixel.org/tag/programming" rel="category">programming</a>,                    <a href="http://palebluepixel.org/tag/javascript" rel="category">javascript</a>,                    <a href="http://palebluepixel.org/tag/html" rel="category">html</a>,                    <a href="http://palebluepixel.org/tag/web-components" rel="category">web-components</a>, and                    <a href="http://palebluepixel.org/tag/polymer" rel="category">polymer</a>.
+            </small>
+        </footer>
+
+
+
+
+    </article>
+
+</main>
+
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<script src="http://palebluepixel.org/theme/lib/prism/prism.js"></script>
+
+</body>
+</html>

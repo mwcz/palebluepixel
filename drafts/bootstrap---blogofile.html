@@ -23,7 +23,7 @@
     <![endif]-->
 
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
-            <link href="http://palebluepixel.org/theme/css/styles.min.css?8ba332f4" rel="stylesheet">
+            <link href="http://palebluepixel.org/theme/css/styles.min.css?20c36e5d" rel="stylesheet">
 
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="http://palebluepixel.org/theme/js/jquery.min.js"></script>
@@ -103,55 +103,6 @@ by without mention.  Customization of the default Bootstrap theme is coming.</p>
 
 
 
-    <div id='discourse-comments'></div>
-
-    <script type="text/javascript">
-      DiscourseEmbed = { discourseUrl: 'http://discourse.palebluepixel.org/',
-                         discourseEmbedUrl: 'http://palebluepixel.org/drafts/bootstrap---blogofile.html'};
-
-      (function() {
-
-          var DE = window.DiscourseEmbed || {};
-
-          ['discourseUrl', 'discourseEmbedUrl', 'discourseUserName'].forEach(function(i) {
-              if (window[i]) { DE[i] = DE[i] || window[i]; }
-          });
-
-          var queryParams = {};
-
-          if (DE.discourseEmbedUrl) {
-              queryParams.embed_url = encodeURIComponent(DE.discourseEmbedUrl);
-          }
-
-          if (DE.discourseUserName) {
-              queryParams.discourse_username = DE.discourseUserName;
-          }
-
-          if (DE.topicId) {
-              queryParams.topic_id = DE.topicId;
-          }
-
-          var src = DE.discourseUrl + 'embed/comments';
-          var keys = Object.keys(queryParams);
-          if (keys.length > 0) {
-              src += "?";
-
-              for (var i=0; i<keys.length; i++) {
-                  if (i > 0) { src += "&"; }
-
-                  var k = keys[i];
-                  src += k + "=" + queryParams[k];
-              }
-          }
-
-          function normalizeUrl(url) {
-              return url.replace(/^https?(\:\/\/)?/, '');
-          }
-
-          $('#discourse-comments').load(src + ' body');
-
-      })();
-    </script>
     </article>
 
 </main>

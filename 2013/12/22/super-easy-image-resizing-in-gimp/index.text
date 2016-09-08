@@ -1,13 +1,14 @@
 Title: Super easy image resizing in GIMP
 Date: 2013-12-22
 Tags: gimp
-Summary: ![GIMP math recording](/static/images/024/gimp_math.gif "GIMP math recording")
+Summary: By accident, I discovered that GIMP number fields evaluate math expressions.  So convenient!
+Image: /static/images/024/gimp_math.gif
 Mwc: 24
 
 Ever been here?
 
  > I want to double the size of this image
->
+ >
  > open calculator
  >
  > type in current width * 2
