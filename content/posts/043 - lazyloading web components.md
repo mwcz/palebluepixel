@@ -7,8 +7,6 @@ Gallery: 043
 Status: draft
 Mwc: 43
 
-
-
 They say [good developers are lazy][lazy].  A tedious process is no match for a
 lazy developer.  Below is an experiment in laziness.  It's a proof of concept
 for using Web Components without having to manually import each one.
@@ -33,13 +31,17 @@ users to copy, paste, and customize.
 
 To improve ease of use, you encapsulate all that HTML into a custom element:
 
-<pre><code class="language-markup">&lt;bs-panel heading="I am a bs-panel"&gt;Some words.&lt;/bs-panel&gt;
+<pre><code class="language-markup">{% filter escape %}
+<bs-panel heading="I am a bs-panel">Some words.</bs-panel>
+{% endfilter %}
 </code></pre>
 
 The essence of simplicity!  One more thing, browsers don't know what
 `<bs-panel>` is, so your users must import it:
 
-<pre><code class="language-markup">&lt;link rel="import" href="../bower_components/bootstrap/components/bs-panel.html"&gt;
+<pre><code class="language-markup">{% filter escape %}
+<link rel="import" href="../bower_components/bootstrap/components/bs-panel.html">
+{% endfilter %}
 </code></pre>
 
 One line, no big deal.  But as your users add and remove components from their
@@ -57,25 +59,27 @@ automatically?  Here's a working demo:
     </div>
     <div class="col-sm-8">
         <h3>The source</h3>
-<pre data-line="3-4,7-11" style="font-size: 1.2rem"><code class="language-markup">&lt;html&gt;
-    &lt;head&gt;
-        &lt;script defer src="src/webcomponents.min.js"&gt;&lt;/script&gt;
-        &lt;link rel="import" href="src/lazy-load/lazy-load.html"&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;lazy-load&gt;
-            &lt;bs-panel heading="I am a bs-panel"&gt;Some words.&lt;/bs-panel&gt;
-            &lt;bs-btn&gt;I am bs-button&lt;/bs-btn&gt;
-            &lt;bs-alert&gt;I am a bs-alert&lt;/bs-alert&gt;
-        &lt;/lazy-load&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
+<pre data-line="3-4,7-11" style="font-size: 1.2rem"><code class="language-markup">{% filter escape %}
+<html>
+    <head>
+        <script defer src="src/webcomponents.min.js"></script>
+        <link rel="import" href="src/lazy-load/lazy-load.html">
+    </head>
+    <body>
+        <lazy-load>
+            <bs-panel heading="I am a bs-panel">Some words.</bs-panel>
+            <bs-btn>I am bs-button</bs-btn>
+            <bs-alert>I am a bs-alert</bs-alert>
+        </lazy-load>
+    </body>
+</html>
+{% endfilter %}
 </code></pre>
     </div>
 </div>
 
-The page only imports `lazy-load` which in turn takes care of importing the
-rest.  Let's look at how it works.
+The demo only imports `lazy-load`, which in turn imports the
+three `bs-` elements.  Let's look at how it works.
 
 ## Scene 3: Behind the Scenes
 
