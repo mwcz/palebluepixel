@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/workspace/palebluepixel/content/static/js/043/index.html.html</title>
+<meta name="Generator" content="Vim/7.4">
+<meta name="plugin-version" content="vim7.4_v2">
+<meta name="syntax" content="html">
+<meta name="settings" content="number_lines,use_css,no_foldcolumn,expand_tabs,line_ids,prevent_copy=">
+<meta name="colorscheme" content="zenburn">
+<style type="text/css">
+<!--
+pre { font-family: monospace; color: #d7d7d7; background-color: #1c1c1c; }
+body { font-family: monospace; color: #d7d7d7; background-color: #1c1c1c; }
+* { font-size: 1em; }
+.Function { color: #ffff87; }
+.Exception { color: #b2b2b2; font-weight: bold; }
+.Statement { color: #d7d7af; }
+.Identifier { color: #ffd7af; }
+.LineNr { color: #585858; background-color: #1c1c1c; padding-bottom: 1px; }
+.Comment { color: #87af87; }
+.Type { color: #d7d7af; font-weight: bold; }
+.PreProc { color: #ffd7af; font-weight: bold; }
+.String { color: #d78787; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+/* function to open any folds containing a jumped-to line before jumping to it */
+function JumpToLine()
+{
+  var lineNum;
+  lineNum = window.location.hash;
+  lineNum = lineNum.substr(1); /* strip off '#' */
+
+  if (lineNum.indexOf('L') == -1) {
+    lineNum = 'L'+lineNum;
+  }
+  lineElem = document.getElementById(lineNum);
+  /* Always jump to new location even if the line was hidden inside a fold, or
+   * we corrected the raw number to a line ID.
+   */
+  if (lineElem) {
+    lineElem.scrollIntoView(true);
+  }
+  return true;
+}
+if ('onhashchange' in window) {
+  window.onhashchange = JumpToLine;
+}
+
+-->
+</script>
+</head>
+<body onload='JumpToLine();'>
+<pre id='vimCodeElement'>
+<span id="L1" class="LineNr"> 1 </span><span class="Comment">&lt;!DOCTYPE html&gt;</span>
+<span id="L2" class="LineNr"> 2 </span>
+<span id="L3" class="LineNr"> 3 </span><span class="Function">&lt;</span><span class="Statement">html</span><span class="Function">&gt;</span>
+<span id="L4" class="LineNr"> 4 </span>    <span class="Function">&lt;</span><span class="Statement">head</span><span class="Function">&gt;</span>
+<span id="L5" class="LineNr"> 5 </span><span class="PreProc">        </span><span class="Function">&lt;</span><span class="Exception">script</span><span class="Function"> </span><span class="Type">defer</span><span class="Function"> </span><span class="Type">src</span><span class="Function">=</span><span class="String">&quot;src/webcomponents.min.js&quot;</span><span class="Function">&gt;</span><span class="Identifier">&lt;/</span><span class="Exception">script</span><span class="Identifier">&gt;</span>
+<span id="L6" class="LineNr"> 6 </span><span class="PreProc">        </span><span class="Function">&lt;</span><span class="Statement">link</span><span class="Function"> </span><span class="Type">rel</span><span class="Function">=</span><span class="String">&quot;import&quot;</span><span class="Function"> </span><span class="Type">href</span><span class="Function">=</span><span class="String">&quot;src/lazy-load/lazy-load.html&quot;</span><span class="Function">&gt;</span>
+<span id="L7" class="LineNr"> 7 </span><span class="PreProc">    </span><span class="Identifier">&lt;/</span><span class="Statement">head</span><span class="Identifier">&gt;</span>
+<span id="L8" class="LineNr"> 8 </span>    <span class="Function">&lt;</span><span class="Statement">body</span><span class="Function">&gt;</span>
+<span id="L9" class="LineNr"> 9 </span>        <span class="Function">&lt;</span><span class="Statement">lazy-load</span><span class="Function">&gt;</span>
+<span id="L10" class="LineNr">10 </span>            <span class="Function">&lt;</span><span class="Statement">bs-panel</span><span class="Function"> heading=</span><span class="String">&quot;I am a bs-panel&quot;</span><span class="Function">&gt;</span>Some words.<span class="Identifier">&lt;/</span><span class="Statement">bs-panel</span><span class="Identifier">&gt;</span>
+<span id="L11" class="LineNr">11 </span>            <span class="Function">&lt;</span><span class="Statement">bs-btn</span><span class="Function">&gt;</span>I am bs-button<span class="Identifier">&lt;/</span><span class="Statement">bs-btn</span><span class="Identifier">&gt;</span>
+<span id="L12" class="LineNr">12 </span>            <span class="Function">&lt;</span><span class="Statement">bs-alert</span><span class="Function">&gt;</span>I am a bs-alert<span class="Identifier">&lt;/</span><span class="Statement">bs-alert</span><span class="Identifier">&gt;</span>
+<span id="L13" class="LineNr">13 </span>        <span class="Identifier">&lt;/</span><span class="Statement">lazy-load</span><span class="Identifier">&gt;</span>
+<span id="L14" class="LineNr">14 </span>    <span class="Identifier">&lt;/</span><span class="Statement">body</span><span class="Identifier">&gt;</span>
+<span id="L15" class="LineNr">15 </span><span class="Identifier">&lt;/</span><span class="Statement">html</span><span class="Identifier">&gt;</span>
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->
