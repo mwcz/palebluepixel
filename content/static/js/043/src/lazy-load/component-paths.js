@@ -1,8 +1,8 @@
 var LazyComponents = {
-    names: 'bs-panel,bs-btn,bs-alert',
+    names: 'ws-panel,ws-btn,ws-alert',
     paths: {
-        'bs-panel': './src/bs-components/bs-panel/bs-panel.html',
-        'bs-btn': './src/bs-components/bs-btn/bs-btn.html',
-        'bs-alert': './src/bs-components/bs-alert/bs-alert.html',
+        'ws-panel': './src/ws-components/ws-panel/ws-panel.html',
+        'ws-btn': './src/ws-components/ws-btn/ws-btn.html',
+        'ws-alert': './src/ws-components/ws-alert/ws-alert.html',
     },
 };
