@@ -21,8 +21,8 @@ or ease-of-use gone mad...
 ## Scene 1: Maximize Simplicity
 
 You are the author of Wootstrap, a Bootstrap-like library of useful components
-like navigation, buttons, and alerts.  They're distributed as HTML snippets for
-users to copy, paste, and customize.
+like navigation, buttons, and alerts.  Also like Bootstrap, your components are
+distributed as HTML snippets for users to copy, paste, and customize.
 
 <video style="margin: 0 auto" poster="/static/videos/043/thumb.png" autoplay controls loop>
     <source src="/static/videos/043/bootstrap-paste.webm" />
