@@ -15,13 +15,11 @@ cd Kimotion
 instead.&lt;/p&gt;
 &lt;h2&gt;Boot it up&lt;/h2&gt;
 &lt;p&gt;Start a simple web server:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;python -m SimpleHTTPServer 8080 src
+&lt;div class="highlight"&gt;&lt;pre&gt;./start.sh
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;(&lt;em&gt;If you're comfortable with &lt;a href="https://www.npmjs.com/"&gt;npm&lt;/a&gt; you can do a quick &lt;code&gt;npm install &amp;amp;&amp;amp; npm
-start&lt;/code&gt; instead.&lt;/em&gt;)&lt;/p&gt;
-&lt;p&gt;Then open &lt;a href="http://localhost:8080/#example2d"&gt;localhost:8080/#example2d&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Then open &lt;a href="http://localhost:8000/#example2d"&gt;localhost:8000/#example2d&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Wave your hand around and you should see a trail of black-outlined squares,
 like this:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="example2d mod screenshot" src="/static/images/042/example2d.jpg" /&gt;&lt;/p&gt;

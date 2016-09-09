@@ -28,12 +28,9 @@ instead.
 
 Start a simple web server:
 
-    python -m SimpleHTTPServer 8080 src
+    ./start.sh
 
-(*If you're comfortable with [npm][npm] you can do a quick `npm install && npm
-start` instead.*)
-
-Then open [localhost:8080/#example2d](http://localhost:8080/#example2d).
+Then open [localhost:8000/#example2d](http://localhost:8000/#example2d).
 
 Wave your hand around and you should see a trail of black-outlined squares,
 like this:
