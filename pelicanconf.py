@@ -209,7 +209,7 @@ DISCOURSE_COMMENTS = False
 SOCIAL          = (('GitHub',  'https://github.com/mwcz'),
                    ('Twitter', 'https://twitter.com/mwcz'),)
 
-USE_OPEN_GRAPH = False
+USE_OPEN_GRAPH = True
 
 #######################################################################
 #                           JINJA2 SETTINGS                           #
