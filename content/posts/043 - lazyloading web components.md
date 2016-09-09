@@ -4,7 +4,6 @@ Tags: programming, javascript, html, web-components, polymer
 Summary: Convenience hacking: Web Components without imports.
 Image: /static/images/043/lazyload.gif
 Gallery: 043
-Status: draft
 Mwc: 43
 
 They say [good developers are lazy][lazy].  A tedious process is no match for a
@@ -20,9 +19,10 @@ or ease-of-use gone mad...
 
 ## Scene 1: Maximize Simplicity
 
-You are the author of Wootstrap, a Bootstrap-like library of useful components
-like navigation, buttons, and alerts.  Also like Bootstrap, your components are
-distributed as HTML snippets for users to copy, paste, and customize.
+You are the author of "Wootstrap", a Bootstrap-like library of useful
+components like navigation, buttons, and alerts.  Also like Bootstrap, your
+components are distributed as HTML snippets for users to copy, paste, and
+customize.
 
 <video style="margin: 0 auto" poster="/static/videos/043/thumb.png" autoplay controls loop>
     <source src="/static/videos/043/bootstrap-paste.webm" />
