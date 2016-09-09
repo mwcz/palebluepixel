@@ -130,7 +130,7 @@ When `lazy-load` is [attached to the DOM][attached], it finds any children in
 the `names` list and imports their HTML templates (using Polymer's handy
 [importHref()][importhref] function).
 
-Now any element in the registry object can be used without an explicit import!
+Now any element in the registry object can be used without an explicit import.
 
 ## Tradeoffs
 
