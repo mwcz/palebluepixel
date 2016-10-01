@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Shader - Glow (Three.js)</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+
+<script src="three.min.js"></script>
+<script src="Detector.js"></script>
+<script src="OrbitControls.js"></script>
+
+<!-- ---------------- Custom Shader Code ------------------------ -->
+<script id="vertexShader" type="x-shader/x-vertex">
+uniform vec3 spherePosition;
+uniform float c;
+uniform float p;
+varying float intensity;
+varying vec2 vUv;
+void main() 
+{
+    vec3 viewVector = cameraPosition - spherePosition;
+    vec3 vNormal = normalize( normalMatrix * normal );
+    vec3 vNormel = normalize( normalMatrix * viewVector );
+    intensity = pow( c - dot(vNormal, vNormel), p );
+    vUv = uv;
+
+    gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+}
+</script>
+
+<!-- fragment shader a.k.a. pixel shader -->
+<script id="fragmentShader" type="x-shader/x-vertex"> 
+uniform sampler2D sphereTexture;
+// uniform vec3 glowColor;
+varying float intensity;
+varying vec2 vUv;
+void main() 
+{
+    // gl_FragColor = vec4(glowColor, 0.0) + texture2D(sphereTexture, vUv) + vec4(0.1, 0.1, 0.1, intensity);
+    vec4 fragColor = texture2D(sphereTexture, vUv);
+    fragColor.a = intensity;
+    gl_FragColor = fragColor;
+}
+</script>
+<!-- ----------------------------------------------------------- -->
+
+<div id="ThreeJS" style="position: absolute; left:0px; top:0px"></div>
+<script src="main.js"></script>
+
+</body>
+</html>
