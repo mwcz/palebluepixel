@@ -622,16 +622,12 @@ figure {
  *                             Gallery                               *
  *********************************************************************/
 
-ul.gallery {
-    padding    : 0;
-    margin     : 0;
-    list-style : none;
-    overflow   : auto;
-    li {
-        float: left;
-        margin: 4px;
-        img {
-            display: inline !important;
-        }
+.gallery {
+    .make-row(1px);
+    .gallery-image {
+        .make-xs-column(4, 0px);
+        .make-sm-column(3, 0px);
+        .make-md-column(2, 0px);
+        padding: 10px;
     }
 }

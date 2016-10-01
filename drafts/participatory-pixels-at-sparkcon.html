@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>    Participatory Pixels at SPARKcon - Pale Blue Pixel
+</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#171717">
+    <link rel="icon" type="image/png" href="/static/images/favicon.png">
+
+
+        <!-- Open Graph tags -->
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Participatory Pixels at SPARKcon"/>
+            <meta property="og:url" content="http://palebluepixel.org/drafts/participatory-pixels-at-sparkcon.html"/>
+            <meta property="og:description" content="Kimotion"/>
+            <meta property="og:image"
+                  content="http://palebluepixel.org/static/images/044/thumb.jpg"/>
+
+
+    <!--[if gte IE 9]
+    <style type="text/css">
+        .gradient {
+            filter: none;
+        }
+    </style>
+    <![endif]-->
+
+    <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
+            <link href="http://palebluepixel.org/theme/css/styles.min.css?12dcac4b" rel="stylesheet">
+            <link href="http://palebluepixel.org/theme/css/prism.min.css?5f3e3327" rel="stylesheet">
+
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://palebluepixel.org/theme/js/jquery.min.js"></script>
+    <script src="http://palebluepixel.org/theme/js/jquery.lightbox.min.js"></script>
+
+        <link href="http://palebluepixel.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Pale Blue Pixel ATOM Feed"/>
+        <link href="http://palebluepixel.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
+              title="Pale Blue Pixel RSS Feed"/>
+
+    <!-- Piwik -->
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="https://zipt.org/piwik/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript><p><img src="https://zipt.org/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+    <!-- End Piwik Code -->
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <nav class="pbp-navbar" role="navigation">
+                <a href="http://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
+                    PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+                </a>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- /.navbar -->
+<main role="main" class="container">
+    <article>
+
+
+        <header class="page-header">
+            <h1>
+                Participatory Pixels at SPARKcon
+            </h1>
+        </header>
+        <div class="entry-content">
+            <nav class="toc"></nav>
+            <!--
+    GOAL: Convey a sense of being at DiMo 2016.
+-->
+
+<video style="margin: 0 auto" controls autoplay>
+<source src="/static/videos/044/dimo-2016-draft.webm" />
+</video>
+
+<h2>Intro</h2>
+<p>Just a few short days ago, <a href="http://kimotion.xyz">Kimotion</a> was on display at SPARKcon.
+SPARKcon is a large art festival in Raleigh, and we occupy a small slice of it
+called geekSPARK.</p>
+<h2>Kimotion Levels Up</h2>
+<p>Last year's tech had a rudimentary and finicky <a href="https://vimeo.com/136950949">hand tracking</a> system.  It
+was workable, but a lot of visitors had trouble using it, especially kids.
+This year, I added Leap Motion support, which was a huge jump (or "leap")
+forward for hand tracking and worked very well.</p>
+<video style="margin: 0 auto" controls autoplay loop>
+<source src="/static/videos/044/arm.mp4" />
+<source src="/static/videos/044/arm.webm" />
+</video>
+
+<p>Several new mods were written as well, though Jared's Fish mod remained the
+most popular by a large margin!</p>
+<p>Another big change was simplifying the mod writing experience for beginners.
+By removing the project's build system entirely, the <em>get started</em> instructions
+are essentially "Extract .zip file, then run <code>start.sh</code>".  Browser support for
+<a href="https://en.wikipedia.org/wiki/ECMAScript#6th_Edition_-_ECMAScript_2015">ES6</a> has come a long way since last year, so I was able to remove Babel
+and run raw ES6 code in Firefox and Chrome.  I noticed that beginners were put
+off by the complex build system.  Plus, not having to wait while builds run is
+a nice bonus.</p>
+<h2>Maniacal Labs</h2>
+<p>We shared the room with Adam and Dan from <a href="http://maniacallabs.com/">Maniacal Labs</a>, who brought
+their <a href="http://maniacallabs.com/2016/06/28/jumbo1k-32x32-led-networked-display/">awesome</a> <a href="http://maniacallabs.com/WyoManiacalDisplay/">LED</a> <a href="http://maniacallabs.com/2015/09/22/building-the-colossus-led-display/">displays</a>.  They even adapted Kimotion to
+run on their biggest display, which you can see a clip of in the video at the
+top of this post.</p>
+<p><img alt="Maniacal Labs @ geekSPARK 2016" src="/static/images/gallery/400x/gallery/044/DSCF1840.jpg" /></p>
+<p>Adam also built the fantastic adjustable Leap Motion mounting arm shown above.
+It allowed visitors of any height to participate comfortably and worked like a
+dream.</p>
+<p>Our two exhibits fit so well together that we're considering uniting even
+further next year.</p>
+<h2></h2>
+<h2>Gallery</h2>
+<p><div class="gallery">
+</div>
+
+<script type="text/javascript" charset="utf-8">
+    $(function () {
+        $('.gallery .gallery-image a').lightbox();
+    });
+</script></p>
+<h2>Viva la geekSPARK!</h2>
+<p><img style="float: right" src="/static/images/044/geekspark.png" alt="geekSPARK logo" /></p>
+<p>Thanks to Truett and Noel for all their organization and support.  Thanks to
+Ian for pulling me into this project two years ago and for climbing into the
+ceiling to shut off the lights.  And thanks to all the <a href="http://kimotion.xyz/#contributors">Kimotion
+contributors</a> for building mods and adding color and fun to everyone's
+weekend.</p>
+<p><span class="clearfix"></span></p>
+        </div>
+
+        <!-- /.entry-content -->
+
+        <footer>
+            <small>
+                This article was published on
+                <time datetime="2016-09-25" pubdate="">2016-09-25</time>
+                by <a href="https://twitter.com/mwcz" title="mwcz twitter" rel="author">mwcz</a>
+                and tagged with
+                    <a href="http://palebluepixel.org/tag/programming" rel="category">programming</a>,                    <a href="http://palebluepixel.org/tag/javascript" rel="category">javascript</a>,                    <a href="http://palebluepixel.org/tag/threejs" rel="category">threejs</a>,                    <a href="http://palebluepixel.org/tag/webgl" rel="category">webgl</a>,                    <a href="http://palebluepixel.org/tag/3d" rel="category">3d</a>,                    <a href="http://palebluepixel.org/tag/art" rel="category">art</a>,                    <a href="http://palebluepixel.org/tag/sparkcon" rel="category">sparkcon</a>,                    <a href="http://palebluepixel.org/tag/geekspark" rel="category">geekspark</a>,                    <a href="http://palebluepixel.org/tag/dimo" rel="category">dimo</a>,                    <a href="http://palebluepixel.org/tag/physics" rel="category">physics</a>, and                    <a href="http://palebluepixel.org/tag/web" rel="category">web</a>.
+            </small>
+        </footer>
+
+
+
+
+    </article>
+
+</main>
+
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<script src="http://palebluepixel.org/theme/lib/prism/prism.js"></script>
+
+</body>
+</html>
