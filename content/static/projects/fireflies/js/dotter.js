@@ -16,6 +16,7 @@ var Dotter = function () {
 
         this.density = density;
         this.jitter = jitter;
+        this.filters = [];
     }
 
     _createClass(Dotter, [{
@@ -70,6 +71,13 @@ var Dotter = function () {
             el.width = img.width;
             el.height = img.height;
             ctx.drawImage(img, 0, 0);
+
+            // call any registered filters on this canvas
+
+            this.filters.forEach(function (filter) {
+                return filter({ el: el, ctx: ctx });
+            });
+
             return { el: el, ctx: ctx };
         }
     }, {
@@ -95,6 +103,7 @@ var Dotter = function () {
             var r = 0;
             var g = 0;
             var b = 0;
+            var a = 0;
 
             for (var x = 0; x < w; x += step) {
                 for (var y = 0; y < h; y += step) {
@@ -102,9 +111,10 @@ var Dotter = function () {
                     r = pixels.data[i];
                     g = pixels.data[i + 1];
                     b = pixels.data[i + 2];
+                    a = pixels.data[i + 3];
 
-                    // look for black pixels
-                    if (r + g + b === 0) {
+                    // look for black pixels or totally transparent pixels
+                    if (r + g + b === 0 && a !== 0) {
                         var xJitter = Math.floor(Math.random() * this.jitter * step);
                         var yJitter = Math.floor(Math.random() * this.jitter * step);
                         points.push((x + xJitter) / w);
@@ -115,6 +125,7 @@ var Dotter = function () {
 
             console.log(points.length / 2 + ' points found');
             this._drawPoints(canvas, points);
+            // document.body.appendChild(canvas.el);
 
             return points;
         }
@@ -131,6 +142,11 @@ var Dotter = function () {
                 var y = points[i + 1];
                 canvas.ctx.fillRect(x * canvas.el.width, y * canvas.el.height, 1, 1);
             }
+        }
+    }, {
+        key: 'addFilter',
+        value: function addFilter(filterFunc) {
+            this.filters.push(filterFunc);
         }
     }]);
 
