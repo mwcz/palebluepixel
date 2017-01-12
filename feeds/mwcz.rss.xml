@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pale Blue Pixel</title><link>http://palebluepixel.org/</link><description></description><atom:link href="http://localhost:8001/feeds/mwcz.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 12 Jan 2017 00:00:00 -0500</lastBuildDate><item><title>Kimotion at geekSPARK 2016</title><link>http://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/</link><description>&lt;p&gt;Just a few short days ago, &lt;a href="http://kimotion.xyz"&gt;Kimotion&lt;/a&gt; was on display at SPARKcon.
-SPARKcon is a large art festival in Raleigh, and we occupy a small slice of it
-called geekSPARK.&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pale Blue Pixel</title><link>http://palebluepixel.org/</link><description></description><atom:link href="http://localhost:8001/feeds/mwcz.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 12 Jan 2017 00:00:00 -0500</lastBuildDate><item><title>Kimotion at geekSPARK 2016</title><link>http://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/</link><description>&lt;p&gt;Just a few short &lt;del&gt;days&lt;/del&gt; months ago, &lt;a href="http://kimotion.xyz"&gt;Kimotion&lt;/a&gt; was on
+display at SPARKcon.  SPARKcon is a large art festival in Raleigh, and we
+occupy a small slice of it called geekSPARK.&lt;/p&gt;
 &lt;h2&gt;Kimotion Levels Up&lt;/h2&gt;
 &lt;p&gt;Last year's tech had a rudimentary and finicky &lt;a href="https://vimeo.com/136950949"&gt;hand tracking&lt;/a&gt; system.  It
 was workable, but a lot of visitors had trouble using it, especially kids.
