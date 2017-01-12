@@ -69,9 +69,9 @@ dz.ondrop = function (dropData) {
     dropData.files.forEach(function (f) {
         var reader = new FileReader();
         reader.addEventListener('load', function () {
-            ui.addImage(reader.result);
+            var imgIndex = ui.addImage(reader.result);
             ui.stopRotate();
-            ui.setImageByIndex(-1);
+            ui.setImageByIndex(imgIndex);
         });
         reader.readAsDataURL(f.file);
     });
