@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pale Blue Pixel</title><link>http://palebluepixel.org/</link><description></description><atom:link href="http://localhost:8001/feeds/mwcz.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 06 Sep 2016 00:00:00 -0400</lastBuildDate><item><title>Lazyloading Web Components</title><link>http://palebluepixel.org/2016/09/06/lazyloading-web-components/</link><description>&lt;p&gt;They say &lt;a href="http://threevirtues.com/"&gt;good developers are lazy&lt;/a&gt;.  A tedious process is no match for a
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pale Blue Pixel</title><link>http://palebluepixel.org/</link><description></description><atom:link href="http://localhost:8001/feeds/mwcz.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 12 Jan 2017 00:00:00 -0500</lastBuildDate><item><title>Kimotion at geekSPARK 2016</title><link>http://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/</link><description>&lt;p&gt;Just a few short days ago, &lt;a href="http://kimotion.xyz"&gt;Kimotion&lt;/a&gt; was on display at SPARKcon.
+SPARKcon is a large art festival in Raleigh, and we occupy a small slice of it
+called geekSPARK.&lt;/p&gt;
+&lt;h2&gt;Kimotion Levels Up&lt;/h2&gt;
+&lt;p&gt;Last year's tech had a rudimentary and finicky &lt;a href="https://vimeo.com/136950949"&gt;hand tracking&lt;/a&gt; system.  It
+was workable, but a lot of visitors had trouble using it, especially kids.
+This year, I added Leap Motion support, which was a huge... &lt;em&gt;jump&lt;/em&gt; forward for
+hand tracking.&lt;/p&gt;
+&lt;video style="margin: 0 auto" controls autoplay loop&gt;
+&lt;source src="/static/videos/044/arm.mp4" /&gt;
+&lt;source src="/static/videos/044/arm.webm" /&gt;
+&lt;/video&gt;
+
+&lt;p&gt;Adam, of Maniacal Labs, built the fantastic adjustable Leap Motion mounting arm
+shown above.  It allowed visitors of any height to participate comfortably and
+worked like a dream.&lt;/p&gt;
+&lt;p&gt;Several new mods were written as well, though Jared's Fish mod remained the
+most popular by a large margin!&lt;/p&gt;
+&lt;p&gt;Another big change was simplifying the mod writing experience for beginners.
+By removing the project's build system entirely, the &lt;em&gt;get started&lt;/em&gt; instructions
+are essentially "unzip file, run &lt;code&gt;start.sh&lt;/code&gt;".  Browser support for &lt;a href="https://en.wikipedia.org/wiki/ECMAScript#6th_Edition_-_ECMAScript_2015"&gt;ES6&lt;/a&gt;
+has come a long way since last year, so I was able to remove Babel and run raw
+ES6 code in Firefox and Chrome.  Beginners are no longer put off by the complex
+build system.  Plus, not having to wait while builds run is a nice bonus.&lt;/p&gt;
+&lt;h2&gt;Maniacal Labs&lt;/h2&gt;
+&lt;p&gt;We shared the room with Adam and Dan from &lt;a href="http://maniacallabs.com/"&gt;Maniacal Labs&lt;/a&gt;, who brought
+their &lt;a href="http://maniacallabs.com/2016/06/28/jumbo1k-32x32-led-networked-display/"&gt;awesome&lt;/a&gt; &lt;a href="http://maniacallabs.com/WyoManiacalDisplay/"&gt;LED&lt;/a&gt; &lt;a href="http://maniacallabs.com/2015/09/22/building-the-colossus-led-display/"&gt;displays&lt;/a&gt;.  Adam even wrote a brand new
+Kimotion client to run on their biggest display, which you can see a clip of in
+the video at the top of this post.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Maniacal Labs @ geekSPARK 2016" src="/static/images/044/maniacal.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Our two exhibits fit so well together that we're considering uniting even
+further next year.&lt;/p&gt;
+&lt;h2&gt;Pictures!&lt;/h2&gt;
+&lt;p&gt;$GALLERY&lt;/p&gt;
+&lt;h2&gt;Viva la geekSPARK!&lt;/h2&gt;
+&lt;p&gt;&lt;img style="float: right" src="/static/images/044/geekspark.png" alt="geekSPARK logo" /&gt;&lt;/p&gt;
+&lt;p&gt;Thanks to Truett and Noel for all their organization and support.  Thanks to
+Ian for pulling me into this project two years ago and for climbing into the
+ceiling to shut off the lights.  And thanks to all the &lt;a href="http://kimotion.xyz/#contributors"&gt;Kimotion
+contributors&lt;/a&gt; for building mods and adding color and fun to everyone's
+weekend.&lt;/p&gt;
+&lt;p&gt;&lt;span class="clearfix"&gt;&lt;/span&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mwcz</dc:creator><pubDate>Thu, 12 Jan 2017 00:00:00 -0500</pubDate><guid>tag:palebluepixel.org,2017-01-12:2017/01/12/kimotion-at-geekspark-2016/</guid><category>programming</category><category>javascript</category><category>threejs</category><category>webgl</category><category>3d</category><category>art</category><category>sparkcon</category><category>geekspark</category><category>dimo</category><category>physics</category><category>web</category></item><item><title>Lazyloading Web Components</title><link>http://palebluepixel.org/2016/09/06/lazyloading-web-components/</link><description>&lt;p&gt;They say &lt;a href="http://threevirtues.com/"&gt;good developers are lazy&lt;/a&gt;.  A tedious process is no match for a
 lazy developer.  Below is an experiment in laziness.  It's a proof of concept
 for using Web Components without having to manually import each one.&lt;/p&gt;
 &lt;p&gt;I'm not sure exactly what to call it.  It grazes the definitions of
