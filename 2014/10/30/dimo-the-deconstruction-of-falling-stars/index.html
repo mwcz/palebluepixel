@@ -16,10 +16,10 @@
         <!-- Open Graph tags -->
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="DiMo: The Deconstruction of Falling Stars"/>
-            <meta property="og:url" content="http://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/"/>
+            <meta property="og:url" content="https://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/"/>
             <meta property="og:description" content="The construction of a WebGL particle physics gravity simulation slash interactive art installation."/>
             <meta property="og:image"
-                  content="http://palebluepixel.org/static/images/034/ring-explosion.png"/>
+                  content="https://palebluepixel.org/static/images/034/ring-explosion.png"/>
 
 
     <!--[if gte IE 9]
@@ -31,16 +31,16 @@
     <![endif]-->
 
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
-            <link href="http://palebluepixel.org/theme/css/styles.min.css?12dcac4b" rel="stylesheet">
-            <link href="http://palebluepixel.org/theme/css/prism.min.css?5f3e3327" rel="stylesheet">
+            <link href="https://palebluepixel.org/theme/css/styles.min.css?12dcac4b" rel="stylesheet">
+            <link href="https://palebluepixel.org/theme/css/prism.min.css?5f3e3327" rel="stylesheet">
 
     <!-- JavaScript plugins (requires jQuery) -->
-    <script src="http://palebluepixel.org/theme/js/jquery.min.js"></script>
-    <script src="http://palebluepixel.org/theme/js/jquery.lightbox.min.js"></script>
+    <script src="https://palebluepixel.org/theme/js/jquery.min.js"></script>
+    <script src="https://palebluepixel.org/theme/js/jquery.lightbox.min.js"></script>
 
-        <link href="http://palebluepixel.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+        <link href="https://palebluepixel.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
               title="Pale Blue Pixel ATOM Feed"/>
-        <link href="http://palebluepixel.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
+        <link href="https://palebluepixel.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
               title="Pale Blue Pixel RSS Feed"/>
 
     <!-- Piwik -->
@@ -65,7 +65,7 @@
     <div class="row">
         <div class="col-xs-12">
             <nav class="pbp-navbar" role="navigation">
-                <a href="http://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
+                <a href="https://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
                     PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
                 </a>
             </nav>
@@ -85,10 +85,10 @@
         <div class="entry-content">
             <nav class="toc"></nav>
             <p>Imagine a solitary blue dot.</p>
-<p><img alt="small dot" src="http://palebluepixel.org/static/images/034/smalldot.png" /></p>
+<p><img alt="small dot" src="https://palebluepixel.org/static/images/034/smalldot.png" /></p>
 <p>Unless you let your imagination run away with itself, this is going to be a
 pretty boring dot.  Now, imagine a second, larger dot (you can pick the color).</p>
-<p><img alt="small dot and large dot" src="http://palebluepixel.org/static/images/034/smalldot-largedot.png" /></p>
+<p><img alt="small dot and large dot" src="https://palebluepixel.org/static/images/034/smalldot-largedot.png" /></p>
 <p>Red, nice choice!  The scene is now slightly more interesting, since now you've
 got two dots to think about.  You can ponder their positions, and relative
 sizes.  No motion though; still pretty boring!</p>
@@ -96,7 +96,7 @@ sizes.  No motion though; still pretty boring!</p>
 exerts a gravitational pull on the smaller one.  The small dot begins moving
 towards the large one.  It's speed increases exponentially the closer it gets.
 Now an orbit can form.  Thanks, Newton!</p>
-<p><img alt="orbit" src="http://palebluepixel.org/static/images/034/orbit.gif" title="When I recorded this gif, it lined up *completely* by chance.  So lucky.  It would have been a PITA to try to line up the dot so the orbit looped smoothly!  There is a slight jump, but it's subtle." /></p>
+<p><img alt="orbit" src="https://palebluepixel.org/static/images/034/orbit.gif" title="When I recorded this gif, it lined up *completely* by chance.  So lucky.  It would have been a PITA to try to line up the dot so the orbit looped smoothly!  There is a slight jump, but it's subtle." /></p>
 <p>The dot's orbit is reminiscent of a planet orbiting a star.  Neat.</p>
 <p>Wait, did you see that?  You just moved the big dot.  Look again!  Now there
 are thousands and thousands of tiny dots, each being accelerated toward the big
@@ -163,7 +163,7 @@ function call overhead that was hurting performance.</p>
 <h3>Coloring methods</h3>
 <p>Once the gravity function was implemented, some beautification was in order.</p>
 <p>Originally, each particle was randomly assigned either red, green, or blue.</p>
-<p><img alt="early dimo image, with randomly assigned colors" src="http://palebluepixel.org/static/images/034/random-colors.png" /></p>
+<p><img alt="early dimo image, with randomly assigned colors" src="https://palebluepixel.org/static/images/034/random-colors.png" /></p>
 <p>The gravitational swirls may look kinda cool, but the colors are hectic.  This
 <em>isn't</em> one of those rare cases where randomness is beautiful.  It occurred to
 me that seeing big swaths of color through all the particles might look
@@ -199,10 +199,10 @@ panel).</p>
 <code>0..1</code>.  The <code>+1</code> addition shifts the output into <code>0..2</code>, and the <code>/2</code> division
 scales it down to <code>0..1</code>.</p>
 <p>When graphed, they look like this.</p>
-<p><img alt="Roughly evenly-spaced sine waves" src="http://palebluepixel.org/static/images/034/sine_waves.png" /></p>
+<p><img alt="Roughly evenly-spaced sine waves" src="https://palebluepixel.org/static/images/034/sine_waves.png" /></p>
 <p>The cosine allows the colors to cycle repeatedly (R,G,B,R,G,B,...) as the
 input, <span role="math">n</span>, increases.  Here's the result.</p>
-<p><img alt="image of the swaths of color" src="http://palebluepixel.org/static/images/034/swath-colors.png" /></p>
+<p><img alt="image of the swaths of color" src="https://palebluepixel.org/static/images/034/swath-colors.png" /></p>
 <p><em>Yes!</em>  Swaths of color, cycling through the spectrum like a rainbow.</p>
 <h4>The Grand Programmers' Utopia (GPU)</h4>
 <p>After bumping up against my CPU's limits while implementing gravity, I was
@@ -255,8 +255,8 @@ to 50,000 (thanks Charan!).</p>
 </ul>
 <p>More likely, I'll use what I learned from DiMo on a super-secret future
 project.</p>
-<p><link rel="stylesheet" type="text/css" href="http://palebluepixel.org/static/js/033/katex/katex.min.css">
-<script src="http://palebluepixel.org/static/js/033/katex/katex.min.js"></script>
+<p><link rel="stylesheet" type="text/css" href="https://palebluepixel.org/static/js/033/katex/katex.min.css">
+<script src="https://palebluepixel.org/static/js/033/katex/katex.min.js"></script>
 <script>
     function set_vimeo_iframe_height() {
         var ifr = document.getElementById('dimo-demo');
@@ -279,7 +279,7 @@ project.</p>
                 <time datetime="2014-10-30" pubdate="">2014-10-30</time>
                 by <a href="https://twitter.com/mwcz" title="mwcz twitter" rel="author">mwcz</a>
                 and tagged with
-                    <a href="http://palebluepixel.org/tag/programming" rel="category">programming</a>,                    <a href="http://palebluepixel.org/tag/javascript" rel="category">javascript</a>,                    <a href="http://palebluepixel.org/tag/requirejs" rel="category">requirejs</a>,                    <a href="http://palebluepixel.org/tag/amd" rel="category">amd</a>,                    <a href="http://palebluepixel.org/tag/threejs" rel="category">threejs</a>,                    <a href="http://palebluepixel.org/tag/webgl" rel="category">webgl</a>,                    <a href="http://palebluepixel.org/tag/3d" rel="category">3d</a>,                    <a href="http://palebluepixel.org/tag/art" rel="category">art</a>,                    <a href="http://palebluepixel.org/tag/sparkcon" rel="category">sparkcon</a>,                    <a href="http://palebluepixel.org/tag/geekspark" rel="category">geekspark</a>,                    <a href="http://palebluepixel.org/tag/dimo" rel="category">dimo</a>,                    <a href="http://palebluepixel.org/tag/physics" rel="category">physics</a>, and                    <a href="http://palebluepixel.org/tag/web" rel="category">web</a>.
+                    <a href="https://palebluepixel.org/tag/programming" rel="category">programming</a>,                    <a href="https://palebluepixel.org/tag/javascript" rel="category">javascript</a>,                    <a href="https://palebluepixel.org/tag/requirejs" rel="category">requirejs</a>,                    <a href="https://palebluepixel.org/tag/amd" rel="category">amd</a>,                    <a href="https://palebluepixel.org/tag/threejs" rel="category">threejs</a>,                    <a href="https://palebluepixel.org/tag/webgl" rel="category">webgl</a>,                    <a href="https://palebluepixel.org/tag/3d" rel="category">3d</a>,                    <a href="https://palebluepixel.org/tag/art" rel="category">art</a>,                    <a href="https://palebluepixel.org/tag/sparkcon" rel="category">sparkcon</a>,                    <a href="https://palebluepixel.org/tag/geekspark" rel="category">geekspark</a>,                    <a href="https://palebluepixel.org/tag/dimo" rel="category">dimo</a>,                    <a href="https://palebluepixel.org/tag/physics" rel="category">physics</a>, and                    <a href="https://palebluepixel.org/tag/web" rel="category">web</a>.
             </small>
         </footer>
 
@@ -292,8 +292,8 @@ project.</p>
 
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="http://palebluepixel.org/theme/js/bootstrap.min.js"></script>
-<script src="http://palebluepixel.org/theme/lib/prism/prism.js"></script>
+<script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
 </body>
 </html>
