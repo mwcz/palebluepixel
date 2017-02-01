@@ -98,4 +98,4 @@ It's still beautiful today, but seeing it in the 90s was mind-blowing.
 [3]: https://github.com/mattfarina/farbtastic "Farbtastic color picker"
 [4]: http://knockoutjs.com/ "Knockout.js"
 [5]: http://ptspts.blogspot.com/2010/12/dramatic-colored-picture-of-tigers-head.html "GhostScript tiger author archeology"
-[6]: http://www.effectgames.com/effect/article.psp.html/joe/Old_School_Color_Cycling_with_HTML5 "Amazing color cycling demo"
+[6]: http://www.effectgames.com/effect/article-Old_School_Color_Cycling_with_HTML5.html "Amazing color cycling demo"

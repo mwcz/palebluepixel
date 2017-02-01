@@ -50,6 +50,6 @@ a true, usable, indexed-color API for canvas (someday, maybe!).
 The color picker is [Farbtastic](https://github.com/mattfarina/farbtastic
 "Farbtastic").  If you're interested in reading more about the history of
 indexed color, and a **mind-blowing** canvas demo, go
-[here](http://www.effectgames.com/effect/article.psp.html/joe/Old_School_Color_Cycling_with_HTML5
+[here](http://www.effectgames.com/effect/article-Old_School_Color_Cycling_with_HTML5.html
 "Color cycling in HTML5 canvas").
 
