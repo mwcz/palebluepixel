@@ -96,6 +96,11 @@ var UI = function () {
             });
         }
     }, {
+        key: 'onToggleFlee',
+        value: function onToggleFlee(f) {
+            this.engine.on('toggleFlee', f);
+        }
+    }, {
         key: 'setImageByIndex',
         value: function setImageByIndex(index) {
             var imageCount = this.engine.get('images').length;
