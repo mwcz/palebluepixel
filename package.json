@@ -16,7 +16,7 @@
     "url": "https://github.com/mwcz/palebluepixel/issues"
   },
   "devDependencies": {
-    "purify-css": "~1.0.17",
-    "diveSync": "~0.3.0"
+    "diveSync": "~0.3.0",
+    "purify-css": "^1.1.9"
   }
 }
