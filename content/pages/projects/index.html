@@ -16,9 +16,29 @@ $(function () {
 </script>
  #}
 
+<h2>Projects</h2>
+
+<p>Here's a reasonably complete list of my software projects.</p>
+
 <div class="pbp-project-list">
     {% import 'includes/panel.html' as project_thumbnail %}
 
+    {{ project_thumbnail.write(
+        body_title   = 'Fireflies',
+        body_text    = 'A flock of fireflies forms shapes for your enjoyment.',
+        header_image = '/static/images/projects/icon_fireflies.jpg',
+        link_url     = '/projects/fireflies',
+        demo_url     = '/static/projects/fireflies',
+        source_url   = 'https://github.com/mwcz/fireflies/',
+        ) }}
+    {{ project_thumbnail.write(
+        body_title   = 'Tracer',
+        body_text    = 'A connect the dots game in 3D.  Built in 72 hours.',
+        header_image = '/static/images/projects/icon_tracer.jpg',
+        link_url     = '/projects/tracer',
+        demo_url     = 'http://scripta.co/tracer/',
+        source_url   = 'https://github.com/ScriptaGames/Tracer',
+        ) }}
     {{ project_thumbnail.write(
         body_title   = 'Zorbio',
         body_text    = 'A free multiplayer world-eating game.',
