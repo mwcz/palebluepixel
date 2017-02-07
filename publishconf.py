@@ -19,6 +19,15 @@ DELETE_OUTPUT_DIRECTORY = True
 # only use the thumbnailer plugin for production builds because it's sloooooooow
 PLUGINS.append('thumbnailer')
 
+# Feed (syndication) settings (enabled for production only)
+FEED_ATOM             = 'feeds/atom.xml'
+FEED_ALL_ATOM         = 'feeds/all.atom.xml'
+FEED_RSS              = 'feeds/all.rss.xml'
+FEED_ALL_RSS          = 'feeds/rss.xml'
+CATEGORY_FEED_ATOM    = 'feeds/%s.atom.xml'
+
+DELETE_OUTPUT_DIRECTORY = True
+
 # Following items are often useful when publishing
 
 #DISQUS_SITENAME = ""

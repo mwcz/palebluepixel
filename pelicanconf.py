@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
+from __future__ import unicode_literals
 
 from os import environ
-import os
 
 #######################################################################
 #                            MISC SETTINGS                            #
@@ -77,15 +77,16 @@ ASSET_BUNDLES = [
     ('pbp-css',
      [
          'static/less/font-imports.less',
-         ('static/less/bootswatch/%s/bootstrap.less' % BOOTSTRAP_THEME) if BOOTSTRAP_THEME else 'static/less/bootstrap/bootstrap.less',
+         'static/less/bootswatch/flatly/bootstrap.less',
          'static/less/styles.less',
          'static/css/jquery.lightbox.css',
+         'static/lib/prism/prism.css',
      ],
      {
          'filters': 'less',
+         'output': 'css/styles.min.css',
      }
     ),
-    ('pbp-prism-css', [ 'static/lib/prism/prism.css' ], { 'filters': 'less', } ),
 ]
 
 ASSET_SOURCE_PATHS = [
@@ -100,8 +101,8 @@ RELATED_POSTS_MAX = 4
 #                            HOST SETTINGS                            #
 #######################################################################
 
-SITEURL     = 'http://localhost:8001'
-FEED_DOMAIN = 'http://localhost:8001'
+SITEURL     = 'http://localhost:8000'
+FEED_DOMAIN = 'http://localhost:8000'
 
 # Blogroll
 #LINKS =  (('Pelican', 'http://docs.notmyidea.org/alexis/pelican/'),
@@ -128,7 +129,7 @@ PATH                  = 'content'
 ARTICLE_PATHS         = ['posts']
 
 # thumbnailer settings
-IMAGE_PATH = 'images' #os.path.join(PATH, 'images')
+IMAGE_PATH = 'images'
 THUMBNAIL_DIR = 'static/images/gallery'
 THUMBNAIL_SIZES = {
     '900x': '900x?',
@@ -153,11 +154,12 @@ PAGE_PATHS            = ['pages']
 PAGE_URL              = '{slug}/'
 PAGE_SAVE_AS          = '{slug}/index.html'
 
-# Feed (syndication) settings
-FEED_ATOM             = 'feeds/atom.xml'
-FEED_ALL_ATOM         = 'feeds/all.atom.xml'
-FEED_RSS              = 'feeds/all.rss.xml'
-FEED_ALL_RSS          = 'feeds/rss.xml'
+# Feed generation is usually not desired when developing
+FEED_ALL_ATOM = None
+CATEGORY_FEED_ATOM = None
+TRANSLATION_FEED_ATOM = None
+AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None
 
 # tag paths
 TAG_URL               = 'tag/{slug}/'
