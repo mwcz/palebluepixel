@@ -31,17 +31,16 @@
     <![endif]-->
 
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
-            <link href="https://palebluepixel.org/theme/css/styles.min.css?12dcac4b" rel="stylesheet">
-            <link href="https://palebluepixel.org/theme/css/prism.min.css?5f3e3327" rel="stylesheet">
+    <link href="https://palebluepixel.org/theme/css/styles.min.css" rel="stylesheet">
 
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="https://palebluepixel.org/theme/js/jquery.min.js"></script>
     <script src="https://palebluepixel.org/theme/js/jquery.lightbox.min.js"></script>
 
-        <link href="https://palebluepixel.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="Pale Blue Pixel ATOM Feed"/>
-        <link href="https://palebluepixel.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
-              title="Pale Blue Pixel RSS Feed"/>
+    <link href="https://palebluepixel.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+          title="Pale Blue Pixel ATOM Feed"/>
+    <link href="https://palebluepixel.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
+          title="Pale Blue Pixel RSS Feed"/>
 
     <!-- Piwik -->
     <script type="text/javascript">
@@ -123,12 +122,12 @@ JavaScript's anonymous functions do pose a unique temptation.</p>
 <p>For those unfamiliar, an anonymous function is, unsurprisingly, a function
 declaration without a name.</p>
 <p>A named function:</p>
-<div class="highlight"><pre><span class="kd">function</span> <span class="nx">count_sheep</span><span class="p">()</span> <span class="p">{</span> <span class="cm">/* code */</span> <span class="p">}</span>
+<div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">count_sheep() {</span> <span class="cm">/* code */</span> <span class="p">}</span>
 </pre></div>
 
 
 <p>An anonymous function:</p>
-<div class="highlight"><pre><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="cm">/* code */</span> <span class="p">}</span>
+<div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="cm">/* code */</span> <span class="p">}</span>
 </pre></div>
 
 
@@ -143,36 +142,36 @@ functions are used so commonly in JavaScript programs.</p>
 name</strong>.</p>
 <p>As a practical example, here's some code from the <a href="http://datatables.net/examples/api/api_in_init.html">jQuery DataTables example
 page</a>, with three nested anonymous functions.</p>
-<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#example&#39;</span><span class="p">).</span><span class="nx">dataTable</span><span class="p">(</span> <span class="p">{</span>
-        <span class="s2">&quot;initComplete&quot;</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-            <span class="kd">var</span> <span class="nx">api</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">api</span><span class="p">();</span>
-            <span class="nx">api</span><span class="p">.</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;td&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-                <span class="nx">api</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="p">).</span><span class="nx">draw</span><span class="p">();</span>
-            <span class="p">}</span> <span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span> <span class="p">);</span>
-<span class="p">}</span> <span class="p">);</span>
+<div class="codehilite"><pre><span></span>$(document).ready(function() {
+    $(&#39;#example&#39;).dataTable( {
+        &quot;initComplete&quot;: function () {
+            var api = this.api();
+            api.$(&#39;td&#39;).click( function () {
+                api.search( this.innerHTML ).draw();
+            } );
+        }
+    } );
+} );
 </pre></div>
 
 
 <p>There are much (<strong>much</strong>!) more deeply nested examples of the Pyramid of Doom,
 but this one serves well as an example.  If it had been implemented with short,
 named functions, it would be something like the following.</p>
-<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span> <span class="nx">create_datatable</span> <span class="p">);</span>
+<div class="codehilite"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span> <span class="nx">create_datatable</span> <span class="p">);</span>
 
-<span class="kd">function</span> <span class="nx">create_datatable</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nx">create_datatable() {</span>
     <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#example&#39;</span><span class="p">).</span><span class="nx">dataTable</span><span class="p">(</span> <span class="p">{</span>
         <span class="s2">&quot;initComplete&quot;</span><span class="o">:</span> <span class="nx">init_datatable_api</span>
     <span class="p">}</span> <span class="p">);</span>
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">init_datatable_api</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nx">init_datatable_api() {</span>
     <span class="kd">var</span> <span class="nx">api</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">api</span><span class="p">();</span>
     <span class="nx">api</span><span class="p">.</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;td&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span> <span class="nx">filter_datatable</span> <span class="p">);</span>
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">filter_datatable</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nx">filter_datatable() {</span>
     <span class="nx">api</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="p">).</span><span class="nx">draw</span><span class="p">();</span>
 <span class="p">}</span>
 </pre></div>

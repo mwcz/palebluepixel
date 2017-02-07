@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="A RequireJS Architecture for ThreeJS Applications"/>
             <meta property="og:url" content="https://palebluepixel.org/drafts/a-requirejs-architecture-for-threejs-applications.html"/>
-            <meta property="og:description" content="While working on DiMo, I found myself at the ThreeJS examples page quite often, searching for working examples. <script id ..."/>
+            <meta property="og:description" content="While working on DiMo, I found myself at the ThreeJS examples page quite often, searching for working examples. <script id …"/>
 
 
     <!--[if gte IE 9]
@@ -29,17 +29,16 @@
     <![endif]-->
 
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
-            <link href="https://palebluepixel.org/theme/css/styles.min.css?12dcac4b" rel="stylesheet">
-            <link href="https://palebluepixel.org/theme/css/prism.min.css?5f3e3327" rel="stylesheet">
+    <link href="https://palebluepixel.org/theme/css/styles.min.css" rel="stylesheet">
 
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="https://palebluepixel.org/theme/js/jquery.min.js"></script>
     <script src="https://palebluepixel.org/theme/js/jquery.lightbox.min.js"></script>
 
-        <link href="https://palebluepixel.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="Pale Blue Pixel ATOM Feed"/>
-        <link href="https://palebluepixel.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
-              title="Pale Blue Pixel RSS Feed"/>
+    <link href="https://palebluepixel.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+          title="Pale Blue Pixel ATOM Feed"/>
+    <link href="https://palebluepixel.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
+          title="Pale Blue Pixel RSS Feed"/>
 
     <!-- Piwik -->
     <script type="text/javascript">
@@ -84,7 +83,7 @@
             <nav class="toc"></nav>
             <p>While working on <a href="/projects/dimo">DiMo</a>, I found myself at the <a href="http://threejs.org/examples/">ThreeJS
 examples</a> page quite often, searching for working examples.</p>
-<div class="highlight"><pre><span class="nt">&lt;script</span> <span class="na">id=</span><span class="s">&quot;vertexShader&quot;</span> <span class="na">type=</span><span class="s">&quot;x-shader/x-vertex&quot;</span><span class="nt">&gt;</span>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;script</span> <span class="na">id=</span><span class="s">&quot;vertexShader&quot;</span> <span class="na">type=</span><span class="s">&quot;x-shader/x-vertex&quot;</span><span class="nt">&gt;</span>
     <span class="c">&lt;!-- dozens of lines of vertex shader (GLSL) code --&gt;</span>
 <span class="nt">&lt;/script&gt;</span>
 
@@ -133,7 +132,7 @@ kindest possible way.  Hackiness begets hackers.</p>
 separations of concern are probably quite misguided!  However, even if
 misguided, it proved to be much easier to work with than a single monolithic
 script file.</p>
-<div class="highlight"><pre><span class="cp">&lt;!doctype html&gt;</span>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;!doctype html&gt;</span>
 <span class="nt">&lt;html&gt;</span>
 <span class="nt">&lt;head&gt;</span>
 <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;content-type&quot;</span> <span class="na">content=</span><span class="s">&quot;text/html; charset=UTF-8&quot;</span><span class="nt">&gt;</span>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Pale Blue Pixel</title><link href="https://palebluepixel.org/" rel="alternate"></link><link href="http://localhost:8001/feeds/posts.atom.xml" rel="self"></link><id>https://palebluepixel.org/</id><updated>2017-01-12T00:00:00-05:00</updated><entry><title>Kimotion at geekSPARK 2016</title><link href="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/" rel="alternate"></link><updated>2017-01-12T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-01-12:2017/01/12/kimotion-at-geekspark-2016/</id><summary type="html">&lt;p&gt;Just a few short &lt;del&gt;days&lt;/del&gt; months ago, &lt;a href="http://kimotion.xyz"&gt;Kimotion&lt;/a&gt; was on
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pale Blue Pixel - Posts</title><link href="https://palebluepixel.org/" rel="alternate"></link><link href="http://localhost:8000/feeds/posts.atom.xml" rel="self"></link><id>https://palebluepixel.org/</id><updated>2017-01-12T00:00:00-05:00</updated><entry><title>Kimotion at geekSPARK 2016</title><link href="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/" rel="alternate"></link><published>2017-01-12T00:00:00-05:00</published><updated>2017-01-12T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-01-12:/2017/01/12/kimotion-at-geekspark-2016/</id><summary type="html">&lt;p&gt;Kimotion-powered interactive art at SPARKcon 2016.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Just a few short &lt;del&gt;days&lt;/del&gt; months ago, &lt;a href="http://kimotion.xyz"&gt;Kimotion&lt;/a&gt; was on
 display at SPARKcon.  SPARKcon is a large art festival in Raleigh, and we
 occupy a small slice of it called geekSPARK.&lt;/p&gt;
 &lt;h2&gt;Kimotion Levels Up&lt;/h2&gt;
@@ -40,7 +40,7 @@ Ian for pulling me into this project two years ago and for climbing into the
 ceiling to shut off the lights.  And thanks to all the &lt;a href="http://kimotion.xyz/#contributors"&gt;Kimotion
 contributors&lt;/a&gt; for building mods and adding color and fun to everyone's
 weekend.&lt;/p&gt;
-&lt;p&gt;&lt;span class="clearfix"&gt;&lt;/span&gt;&lt;/p&gt;</summary><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category></entry><entry><title>Lazyloading Web Components</title><link href="https://palebluepixel.org/2016/09/06/lazyloading-web-components/" rel="alternate"></link><updated>2016-09-06T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2016-09-06:2016/09/06/lazyloading-web-components/</id><summary type="html">&lt;p&gt;They say &lt;a href="http://threevirtues.com/"&gt;good developers are lazy&lt;/a&gt;.  A tedious process is no match for a
+&lt;p&gt;&lt;span class="clearfix"&gt;&lt;/span&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category></entry><entry><title>Lazyloading Web Components</title><link href="https://palebluepixel.org/2016/09/06/lazyloading-web-components/" rel="alternate"></link><published>2016-09-06T00:00:00-04:00</published><updated>2016-09-06T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2016-09-06:/2016/09/06/lazyloading-web-components/</id><summary type="html">&lt;p&gt;Convenience hacking: Web Components without imports.&lt;/p&gt;</summary><content type="html">&lt;p&gt;They say &lt;a href="http://threevirtues.com/"&gt;good developers are lazy&lt;/a&gt;.  A tedious process is no match for a
 lazy developer.  Below is an experiment in laziness.  It's a proof of concept
 for using Web Components without having to manually import each one.&lt;/p&gt;
 &lt;p&gt;I'm not sure exactly what to call it.  It grazes the definitions of
@@ -173,13 +173,13 @@ the &lt;code&gt;names&lt;/code&gt; list and imports their HTML templates (using 
 &lt;p&gt;I'm not sure yet which camp lazyloading will fall into: best practice, or
 antipattern.  My hope is that developer tooling will be written that injects
 imports as you code, rather than at runtime.&lt;/p&gt;
-&lt;p&gt;Thanks to Kyle Buchanan for pointers and corrections!&lt;/p&gt;</summary><category term="programming"></category><category term="javascript"></category><category term="html"></category><category term="web-components"></category><category term="polymer"></category></entry><entry><title>Kimotion Modding 101</title><link href="https://palebluepixel.org/2016/08/28/kimotion-modding-101/" rel="alternate"></link><updated>2016-08-28T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2016-08-28:2016/08/28/kimotion-modding-101/</id><summary type="html">&lt;p&gt;Kimotion is a simple framework for creating interactive art exhibits in 2D or
+&lt;p&gt;Thanks to Kyle Buchanan for pointers and corrections!&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="html"></category><category term="web-components"></category><category term="polymer"></category></entry><entry><title>Kimotion Modding 101</title><link href="https://palebluepixel.org/2016/08/28/kimotion-modding-101/" rel="alternate"></link><published>2016-08-28T00:00:00-04:00</published><updated>2016-08-28T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2016-08-28:/2016/08/28/kimotion-modding-101/</id><summary type="html">&lt;p&gt;How to create an interactive art display with Kimotion.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Kimotion is a simple framework for creating interactive art exhibits in 2D or
 3D and supports both &lt;a href="http://www.xbox.com/en-US/xbox-360/accessories/kinect"&gt;Kinect&lt;/a&gt; and &lt;a href="https://www.leapmotion.com/"&gt;Leap Motion&lt;/a&gt; for viewer input.
 This tutorial will focus on the Leap, so to proceed with the tutorial you'll
 need to &lt;a href="https://www.leapmotion.com/setup"&gt;set up your Leap&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Once the leap service is running, you can set up Kimotion!&lt;/p&gt;
 &lt;h2&gt;Get the code&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;git clone git@github.com:mwcz/Kimotion.git
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone git@github.com:mwcz/Kimotion.git
 cd Kimotion
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -189,7 +189,7 @@ cd Kimotion
 instead.&lt;/p&gt;
 &lt;h2&gt;Boot it up&lt;/h2&gt;
 &lt;p&gt;Start a simple web server:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;./start.sh
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;./start.sh
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -200,7 +200,7 @@ like this:&lt;/p&gt;
 &lt;h2&gt;Create your mod!&lt;/h2&gt;
 &lt;p&gt;The easiest way to start your own mod is to make a copy of the default mod.
 Come up with a name for the mod, let's say &lt;code&gt;mymod&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;cd src
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd src
 cp -r mods/example2d mods/mymod
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -238,7 +238,7 @@ a few ways to get help:&lt;/p&gt;
 &lt;li&gt;Tweet &lt;a href="https://twitter.com/mwcz"&gt;@mwcz&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open a &lt;a href="https://github.com/mwcz/Kimotion/issues/new"&gt;Kimotion issue&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Explore the existing &lt;a href="https://github.com/mwcz/Kimotion/tree/master/src/mods"&gt;Kimotion mods&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="web"></category><category term="kimotion"></category><category term="art"></category></entry><entry><title>Visualizing Network Traffic with WebGL</title><link href="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/" rel="alternate"></link><updated>2016-07-13T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2016-07-13:2016/07/13/visualizing-network-traffic-with-webgl/</id><summary type="html">&lt;p&gt;"&lt;em&gt;Finally,&lt;/em&gt;" I thought, "&lt;em&gt;an excuse to play with WebGL at work!&lt;/em&gt;"&lt;/p&gt;
+&lt;/ul&gt;</content><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="web"></category><category term="kimotion"></category><category term="art"></category></entry><entry><title>Visualizing Network Traffic with WebGL</title><link href="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/" rel="alternate"></link><published>2016-07-13T00:00:00-04:00</published><updated>2016-07-13T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2016-07-13:/2016/07/13/visualizing-network-traffic-with-webgl/</id><summary type="html">&lt;p&gt;Creating a WebGL particle system to convey network traffic patterns to a live audience at &lt;a href="https://www.redhat.com/summit"&gt;Red Hat Summit&lt;/a&gt;.&lt;/p&gt;</summary><content type="html">&lt;p&gt;"&lt;em&gt;Finally,&lt;/em&gt;" I thought, "&lt;em&gt;an excuse to play with WebGL at work!&lt;/em&gt;"&lt;/p&gt;
 &lt;p&gt;This year, I had the good fortune of contributing to a keynote presentation at
 &lt;a href="https://www.redhat.com/summit"&gt;Red Hat Summit&lt;/a&gt;.  During the keynote, an audience of 5,000 played a
 mobile web game created by our team.  The game was backed by several
@@ -352,7 +352,7 @@ data.  Here's a shot of the winners from the live audience.&lt;/p&gt;
 eye-opening for me.  A week out and tired to the bone, I was thinking "No way
 am I doing this next year!"  But the thrill of everyone's hard work coming
 together drove away the exhaustion.  I can't wait to see what we can cook up
-next year.&lt;/p&gt;</summary><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="web"></category><category term="redhat"></category><category term="redhat-summit"></category></entry><entry><title>The Last Conceit</title><link href="https://palebluepixel.org/2015/12/13/the-last-conceit/" rel="alternate"></link><updated>2015-12-13T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-12-13:2015/12/13/the-last-conceit/</id><summary type="html">&lt;p&gt;Humans have had it rough for the past few centuries!  Emotionally, I mean.  It
+next year.&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="web"></category><category term="redhat"></category><category term="redhat-summit"></category></entry><entry><title>The Last Conceit</title><link href="https://palebluepixel.org/2015/12/13/the-last-conceit/" rel="alternate"></link><published>2015-12-13T00:00:00-05:00</published><updated>2015-12-13T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-12-13:/2015/12/13/the-last-conceit/</id><summary type="html">&lt;p&gt;Humans have had it rough for the past few centuries!  Repeated humbling by scientific discoveries has left our ego in shambles.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Humans have had it rough for the past few centuries!  Emotionally, I mean.  It
 used to be so clear that we were privileged and important, the favorite child
 of creation.  How could it not be so?  Our planet was the fulcrum around which
 every heavenly body in the universe orbited.  We were the dominant form of life
@@ -419,7 +419,7 @@ have fought to resist that insight to the bitter end.&lt;/p&gt;
 &lt;p&gt;My take is that our undistinguished position in the universe is freeing.
 Humans have a lot of traits, some admirable and some less so, but &lt;em&gt;we&lt;/em&gt; get to
 choose which to value.  In any case, we should probably stop looking to the
-universe for our sense of self-worth.&lt;/p&gt;</summary><category term="philosophy"></category><category term="technology"></category><category term="ai"></category></entry><entry><title>Make a Kimotion!</title><link href="https://palebluepixel.org/2015/09/26/make-a-kimotion/" rel="alternate"></link><updated>2015-09-26T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-09-26:2015/09/26/make-a-kimotion/</id><summary type="html">&lt;p&gt;A year ago, I had the joy of working on Digital Motion, an &lt;a href="https://en.wikipedia.org/wiki/Interactive_art"&gt;interactive
+universe for our sense of self-worth.&lt;/p&gt;</content><category term="philosophy"></category><category term="technology"></category><category term="ai"></category></entry><entry><title>Make a Kimotion!</title><link href="https://palebluepixel.org/2015/09/26/make-a-kimotion/" rel="alternate"></link><published>2015-09-26T00:00:00-04:00</published><updated>2015-09-26T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-09-26:/2015/09/26/make-a-kimotion/</id><summary type="html">&lt;p&gt;Kimotion is a new framework for building interactive art exhibits.  It will appeal mostly to the Programmer Artist types.  Think "Warrior Poet", but with keyboards.&lt;/p&gt;</summary><content type="html">&lt;p&gt;A year ago, I had the joy of working on Digital Motion, an &lt;a href="https://en.wikipedia.org/wiki/Interactive_art"&gt;interactive
 art&lt;/a&gt; exhibit for Raleigh's annual art festival, &lt;a href="https://en.wikipedia.org/wiki/Sparkcon"&gt;SPARKcon&lt;/a&gt;.
 The month leading up to SPARKcon 2014 was a mad dash of perfecting the graphics
 and physics equations of my &lt;a href="/projects/dimo"&gt;DiMo: Particles&lt;/a&gt; display.  After a
@@ -574,7 +574,8 @@ function set_vimeo_iframe_height() {
 
 document.addEventListener('DOMContentLoaded', set_vimeo_iframe_height);
 window.addEventListener('resize', set_vimeo_iframe_height);
-&lt;/script&gt;</summary><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="2d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category><category term="kimotion"></category></entry><entry><title>WebAssembly is the Keystone</title><link href="https://palebluepixel.org/2015/06/20/webassembly-is-the-keystone/" rel="alternate"></link><updated>2015-06-20T22:52:24-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-06-20:2015/06/20/webassembly-is-the-keystone/</id><summary type="html">&lt;p&gt;Within the last two days, WebAssembly (&lt;strong&gt;wasm&lt;/strong&gt;) has graced the eyeballs of
+&lt;/script&gt;</content><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="2d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category><category term="kimotion"></category></entry><entry><title>WebAssembly is the Keystone</title><link href="https://palebluepixel.org/2015/06/20/webassembly-is-the-keystone/" rel="alternate"></link><published>2015-06-20T22:52:24-04:00</published><updated>2015-06-20T22:52:24-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-06-20:/2015/06/20/webassembly-is-the-keystone/</id><summary type="html">&lt;p&gt;Within the last two days, WebAssembly (&lt;strong&gt;wasm&lt;/strong&gt;) has graced the eyeballs of
+every JavaScript developer.  If wasm is new to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Within the last two days, WebAssembly (&lt;strong&gt;wasm&lt;/strong&gt;) has graced the eyeballs of
 every JavaScript developer.  If wasm is new to you, the articles linked at the
 end of this post fully describe what wasm &lt;em&gt;is&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Since that's been covered, I'd like to talk about one impact wasm will
@@ -641,7 +642,8 @@ locally.
 &lt;li&gt;&lt;a href="https://brendaneich.com/2015/06/from-asm-js-to-webassembly/#buried-lede"&gt;Brendan Eich's practical and lighthearted appeal&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://medium.com/javascript-scene/what-is-webassembly-the-dawn-of-a-new-era-61256ec5a8f6"&gt;Eric Elliot makes a strong and diverse case&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arstechnica.com/information-technology/2015/06/the-web-is-getting-its-bytecode-webassembly/"&gt;ArsTechnica brings wasm to a wider audience&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="wasm"></category><category term="web"></category><category term="javascript"></category></entry><entry><title>The Lurking Horror</title><link href="https://palebluepixel.org/2015/06/20/the-lurking-horror/" rel="alternate"></link><updated>2015-06-20T21:13:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-06-20:2015/06/20/the-lurking-horror/</id><summary type="html">&lt;p&gt;In the midst of this beastly summer we've just entered, nothing seems farther
+&lt;/ul&gt;</content><category term="wasm"></category><category term="web"></category><category term="javascript"></category></entry><entry><title>The Lurking Horror</title><link href="https://palebluepixel.org/2015/06/20/the-lurking-horror/" rel="alternate"></link><published>2015-06-20T21:13:00-04:00</published><updated>2015-06-20T21:13:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-06-20:/2015/06/20/the-lurking-horror/</id><summary type="html">&lt;p&gt;In the midst of this beastly summer we've just entered, nothing seems farther
+away than the lung-clenching air of winter …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In the midst of this beastly summer we've just entered, nothing seems farther
 away than the lung-clenching air of winter.  When things are this hot, and
 pools and popsicles fail to cool, there's one foolproof way to get into the
 spirit of winter: The Lurking Horror.&lt;/p&gt;
@@ -655,18 +657,18 @@ terminal monitor simulator.  &lt;abbr title="Cool-Retro-Term"&gt;CRT&lt;/abbr&gt
 off your 2015 high-DPI display and beams you into a world of 1980s nostalgia.&lt;/p&gt;
 &lt;p&gt;First &lt;a href="https://github.com/Swordfish90/cool-retro-term#get-cool-retro-term"&gt;install cool-retro-term&lt;/a&gt;.  Then install &lt;a href="https://github.com/DavidGriffith/frotz"&gt;frotz&lt;/a&gt; (the
 Z-Machine engine which runs all the old Infocom text adventures).&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;sudo yum install frotz
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo yum install frotz
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Locate &lt;code&gt;LURKING.DAT&lt;/code&gt; in your copy of Lurking Horror, and...&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;frotz LURKING.DAT
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;frotz LURKING.DAT
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;&lt;img alt="The Lurking Horror running in Cool-Retro-Term" src="/static/images/037/lurking-horror-crt.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;Crank up the AC, grab your clicky keyboard, make CRT fullscreen, turn off the
-lights, and bathe in the cool cathode rays.&lt;/p&gt;</summary><category term="text adventure"></category><category term="terminal"></category><category term="cool-retro-term"></category><category term="gaming"></category><category term="nostalgia"></category></entry><entry><title>Naming Names - Anonymity is Dead</title><link href="https://palebluepixel.org/2015/01/01/naming-names-anonymity-is-dead/" rel="alternate"></link><updated>2015-01-01T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-01-01:2015/01/01/naming-names-anonymity-is-dead/</id><summary type="html">&lt;blockquote&gt;
+lights, and bathe in the cool cathode rays.&lt;/p&gt;</content><category term="text adventure"></category><category term="terminal"></category><category term="cool-retro-term"></category><category term="gaming"></category><category term="nostalgia"></category></entry><entry><title>Naming Names - Anonymity is Dead</title><link href="https://palebluepixel.org/2015/01/01/naming-names-anonymity-is-dead/" rel="alternate"></link><published>2015-01-01T00:00:00-05:00</published><updated>2015-01-01T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-01-01:/2015/01/01/naming-names-anonymity-is-dead/</id><summary type="html">&lt;p&gt;Naming things is hard enough, and JavaScript doesn't make it any easier.  Should anonymous functions be considered harmful?&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
 
     There are only two hard problems in computer science: cache invalidation,
     naming things, and off-by-one errors.
@@ -705,12 +707,12 @@ JavaScript's anonymous functions do pose a unique temptation.&lt;/p&gt;
 &lt;p&gt;For those unfamiliar, an anonymous function is, unsurprisingly, a function
 declaration without a name.&lt;/p&gt;
 &lt;p&gt;A named function:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;count_sheep&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="cm"&gt;/* code */&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;count_sheep() {&lt;/span&gt; &lt;span class="cm"&gt;/* code */&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;An anonymous function:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="cm"&gt;/* code */&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="cm"&gt;/* code */&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -725,36 +727,36 @@ functions are used so commonly in JavaScript programs.&lt;/p&gt;
 name&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;As a practical example, here's some code from the &lt;a href="http://datatables.net/examples/api/api_in_init.html"&gt;jQuery DataTables example
 page&lt;/a&gt;, with three nested anonymous functions.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;ready&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;#example&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;dataTable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="s2"&gt;&amp;quot;initComplete&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;api&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;api&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-            &lt;span class="nx"&gt;api&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;td&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;click&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                &lt;span class="nx"&gt;api&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;search&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;innerHTML&lt;/span&gt; &lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;draw&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-            &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$(document).ready(function() {
+    $(&amp;#39;#example&amp;#39;).dataTable( {
+        &amp;quot;initComplete&amp;quot;: function () {
+            var api = this.api();
+            api.$(&amp;#39;td&amp;#39;).click( function () {
+                api.search( this.innerHTML ).draw();
+            } );
+        }
+    } );
+} );
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;There are much (&lt;strong&gt;much&lt;/strong&gt;!) more deeply nested examples of the Pyramid of Doom,
 but this one serves well as an example.  If it had been implemented with short,
 named functions, it would be something like the following.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;ready&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;create_datatable&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;ready&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;create_datatable&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
 
-&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;create_datatable&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;create_datatable() {&lt;/span&gt;
     &lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;#example&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;dataTable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
         &lt;span class="s2"&gt;&amp;quot;initComplete&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;init_datatable_api&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 
-&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;init_datatable_api&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;init_datatable_api() {&lt;/span&gt;
     &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;api&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;api&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
     &lt;span class="nx"&gt;api&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;td&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;click&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;filter_datatable&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 
-&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;filter_datatable&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;filter_datatable() {&lt;/span&gt;
     &lt;span class="nx"&gt;api&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;search&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;innerHTML&lt;/span&gt; &lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;draw&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -774,7 +776,7 @@ $('pre code').each(add_prism_js);
 function add_prism_js(i, el) {
     $(el).addClass('language-javascript');
 }
-&lt;/script&gt;</summary><category term="programming"></category><category term="javascript"></category><category term="web"></category></entry><entry><title>DiMo: The Deconstruction of Falling Stars</title><link href="https://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/" rel="alternate"></link><updated>2014-10-30T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-10-30:2014/10/30/dimo-the-deconstruction-of-falling-stars/</id><summary type="html">&lt;p&gt;Imagine a solitary blue dot.&lt;/p&gt;
+&lt;/script&gt;</content><category term="programming"></category><category term="javascript"></category><category term="web"></category></entry><entry><title>DiMo: The Deconstruction of Falling Stars</title><link href="https://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/" rel="alternate"></link><published>2014-10-30T00:00:00-04:00</published><updated>2014-10-30T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-10-30:/2014/10/30/dimo-the-deconstruction-of-falling-stars/</id><summary type="html">&lt;p&gt;The construction of a WebGL particle physics gravity simulation &lt;em&gt;slash&lt;/em&gt; interactive art installation.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Imagine a solitary blue dot.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="small dot" src="https://palebluepixel.org/static/images/034/smalldot.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Unless you let your imagination run away with itself, this is going to be a
 pretty boring dot.  Now, imagine a second, larger dot (you can pick the color).&lt;/p&gt;
@@ -832,7 +834,7 @@ with it for a while.&lt;/p&gt;
 &lt;p&gt;ThreeJS's vector calculations, on the other hand, were awful.  Each function
 call created a new vector object.  Each acceleration calculation caused the
 creation of 12 vector objects.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt; 10,000 particles    *
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 10,000 particles    *
     60 fps           *
     12 objects       *
      3 player pieces
@@ -958,7 +960,7 @@ project.&lt;/p&gt;
         katex.render(this.innerHTML, this);
     }
     $('[role=math]').each(render_math);
-&lt;/script&gt;&lt;/p&gt;</summary><category term="programming"></category><category term="javascript"></category><category term="requirejs"></category><category term="amd"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category></entry><entry><title>Particles and π - DiMo Comes to Life</title><link href="https://palebluepixel.org/2014/08/25/particles-and-p-dimo-comes-to-life/" rel="alternate"></link><updated>2014-08-25T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-08-25:2014/08/25/particles-and-p-dimo-comes-to-life/</id><summary type="html">&lt;p&gt;A player walks up Fayetteville St in Raleigh, North Carolina.
+&lt;/script&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="requirejs"></category><category term="amd"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category></entry><entry><title>Particles and π - DiMo Comes to Life</title><link href="https://palebluepixel.org/2014/08/25/particles-and-p-dimo-comes-to-life/" rel="alternate"></link><published>2014-08-25T00:00:00-04:00</published><updated>2014-08-25T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-08-25:/2014/08/25/particles-and-p-dimo-comes-to-life/</id><summary type="html">&lt;p&gt;A player walks up Fayetteville St in Raleigh, North Carolina.  SparkCon has begun, and dozens of artists are ...&lt;/p&gt;</summary><content type="html">&lt;p&gt;A player walks up Fayetteville St in Raleigh, North Carolina.
 &lt;a href="http://www.sparkcon.com/"&gt;SparkCon&lt;/a&gt; has begun, and dozens of artists are strewn along the
 street, hard at work creating elaborate chalk art on the asphalt.  A light rain
 is falling, and some artists are holding umbrellas over their work, some have
@@ -1040,7 +1042,8 @@ repo.&lt;/p&gt;
     }
     document.addEventListener('DOMContentLoaded', set_vimeo_iframe_height);
     window.addEventListener('resize', set_vimeo_iframe_height);
-&lt;/script&gt;</summary><category term="programming"></category><category term="javascript"></category><category term="requirejs"></category><category term="amd"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category></entry><entry><title>RGB WebGL Color Cube</title><link href="https://palebluepixel.org/2014/03/23/rgb-webgl-color-cube/" rel="alternate"></link><updated>2014-03-23T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-03-23:2014/03/23/rgb-webgl-color-cube/</id><summary type="html">&lt;p&gt;I spent a bit of time this weekend building an RGB color cube for
+&lt;/script&gt;</content><category term="programming"></category><category term="javascript"></category><category term="requirejs"></category><category term="amd"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category></entry><entry><title>RGB WebGL Color Cube</title><link href="https://palebluepixel.org/2014/03/23/rgb-webgl-color-cube/" rel="alternate"></link><published>2014-03-23T00:00:00-04:00</published><updated>2014-03-23T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-03-23:/2014/03/23/rgb-webgl-color-cube/</id><summary type="html">&lt;p&gt;I spent a bit of time this weekend building an RGB color cube for
+&lt;a href="http://colorpal.org"&gt;ColorPal&lt;/a&gt;, using &lt;a href="http://threejs.org"&gt;Three.js&lt;/a&gt;.  Drag and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I spent a bit of time this weekend building an RGB color cube for
 &lt;a href="http://colorpal.org"&gt;ColorPal&lt;/a&gt;, using &lt;a href="http://threejs.org"&gt;Three.js&lt;/a&gt;.  Drag and drop any image, and you'll see a
 cube with all the pixels of your image mapped into 3D space.&lt;/p&gt;
 &lt;p&gt;&lt;a class="btn btn-default btn-lg"
@@ -1099,7 +1102,7 @@ startup time, though.&lt;/p&gt;
     }
     document.addEventListener('DOMContentLoaded', set_vimeo_iframe_height);
     window.addEventListener('resize', set_vimeo_iframe_height);
-&lt;/script&gt;</summary><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="webgl"></category><category term="web"></category></entry><entry><title>Introducing Drop64, ezpz data URI generator</title><link href="https://palebluepixel.org/2014/02/25/introducing-drop64-ezpz-data-uri-generator/" rel="alternate"></link><updated>2014-02-25T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-02-25:2014/02/25/introducing-drop64-ezpz-data-uri-generator/</id><summary type="html">&lt;p&gt;A few weeks ago, a &lt;a href="http://www.heyokadesign.com/"&gt;coworker&lt;/a&gt; of mine ran into some font issues.  Firefox
+&lt;/script&gt;</content><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="webgl"></category><category term="web"></category></entry><entry><title>Introducing Drop64, ezpz data URI generator</title><link href="https://palebluepixel.org/2014/02/25/introducing-drop64-ezpz-data-uri-generator/" rel="alternate"></link><published>2014-02-25T00:00:00-05:00</published><updated>2014-02-25T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-02-25:/2014/02/25/introducing-drop64-ezpz-data-uri-generator/</id><summary type="html">&lt;p&gt;Speed-hacking an old project for fun and... fun.&lt;/p&gt;</summary><content type="html">&lt;p&gt;A few weeks ago, a &lt;a href="http://www.heyokadesign.com/"&gt;coworker&lt;/a&gt; of mine ran into some font issues.  Firefox
 doesn't allow cross-origin requests for &lt;a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face"&gt;web fonts&lt;/a&gt;, and he was using a tool
 called &lt;a href="http://www.fontsquirrel.com/"&gt;Font Squirrel&lt;/a&gt; to generate fonts, including &lt;a href="https://developer.mozilla.org/en-US/docs/data_URIs"&gt;data URIs&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Embedding a data URI for a font (or image) inside a CSS file is a common
@@ -1127,7 +1130,7 @@ output box, created a github page for it, and registered &lt;a href="http://drop
 &lt;p&gt;It's not exactly a technical marvel, and the code is still rife with ColorPal
 stuff.  I only ripped out what was absolutely necessary to get the tool working
 as fast as possible.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://drop64.com/"&gt;Try it out&lt;/a&gt; or &lt;a href="https://github.com/mwcz/Drop64"&gt;check out the code&lt;/a&gt;.  Happy hacking.&lt;/p&gt;</summary><category term="html5"></category><category term="javascript"></category><category term="data uri"></category><category term="web"></category></entry><entry><title>Super easy image resizing in GIMP</title><link href="https://palebluepixel.org/2013/12/22/super-easy-image-resizing-in-gimp/" rel="alternate"></link><updated>2013-12-22T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2013-12-22:2013/12/22/super-easy-image-resizing-in-gimp/</id><summary type="html">&lt;p&gt;Ever been here?&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://drop64.com/"&gt;Try it out&lt;/a&gt; or &lt;a href="https://github.com/mwcz/Drop64"&gt;check out the code&lt;/a&gt;.  Happy hacking.&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category><category term="data uri"></category><category term="web"></category></entry><entry><title>Super easy image resizing in GIMP</title><link href="https://palebluepixel.org/2013/12/22/super-easy-image-resizing-in-gimp/" rel="alternate"></link><published>2013-12-22T00:00:00-05:00</published><updated>2013-12-22T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2013-12-22:/2013/12/22/super-easy-image-resizing-in-gimp/</id><summary type="html">&lt;p&gt;By accident, I discovered that GIMP number fields evaluate math expressions.  So convenient!&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ever been here?&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I want to double the size of this image&lt;/p&gt;
 &lt;p&gt;open calculator&lt;/p&gt;
@@ -1147,26 +1150,26 @@ scale dialog it is now possible to write “50%” in the Width field to scale
 the image to 50% of the width. Expressions such as “30in + 40px” and “4 *
 5.4in” work, too.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;From the &lt;a href="http://docs.gimp.org/2.8/en/gimp-introduction-whats-new.html" title="GIMP User Manual"&gt;GIMP User Manual&lt;/a&gt;.&lt;/p&gt;</summary><category term="gimp"></category></entry><entry><title>ColorPal CLI!</title><link href="https://palebluepixel.org/2013/11/07/colorpal-cli/" rel="alternate"></link><updated>2013-11-07T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2013-11-07:2013/11/07/colorpal-cli/</id><summary type="html">&lt;p&gt;Tired of creating color palettes with ColorPal's simple, intuitive
+&lt;p&gt;From the &lt;a href="http://docs.gimp.org/2.8/en/gimp-introduction-whats-new.html" title="GIMP User Manual"&gt;GIMP User Manual&lt;/a&gt;.&lt;/p&gt;</content><category term="gimp"></category></entry><entry><title>ColorPal CLI!</title><link href="https://palebluepixel.org/2013/11/07/colorpal-cli/" rel="alternate"></link><published>2013-11-07T00:00:00-05:00</published><updated>2013-11-07T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2013-11-07:/2013/11/07/colorpal-cli/</id><summary type="html">&lt;p&gt;Tired of creating color palettes with ColorPal's simple, intuitive drag-and-drop interface?  Me too!  Use this handy command instead.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Tired of creating color palettes with ColorPal's simple, intuitive
 drag-and-drop interface?  Me too!  Want to jam with the console cowboys in
 cyber-space?  Now you can.  Now &lt;em&gt;we&lt;/em&gt; can.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="ColorPal CLI logo" src="https://palebluepixel.org/static/images/023/colorpal_cli_logo.png" title="ColorPal CLI logo" /&gt;&lt;/p&gt;
 &lt;h2&gt;Demo!&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;node cpal.js -f hex -s &lt;span class="m"&gt;8&lt;/span&gt; MyImage.png
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ node cpal.js -f hex -s &lt;span class="m"&gt;8&lt;/span&gt; MyImage.png
 
-&lt;span class="c"&gt;#07070b&lt;/span&gt;
-&lt;span class="c"&gt;#bac0c4&lt;/span&gt;
-&lt;span class="c"&gt;#d1bd66&lt;/span&gt;
-&lt;span class="c"&gt;#7e8899&lt;/span&gt;
-&lt;span class="c"&gt;#696964&lt;/span&gt;
-&lt;span class="c"&gt;#c4b441&lt;/span&gt;
-&lt;span class="c"&gt;#65683e&lt;/span&gt;
-&lt;span class="c"&gt;#394434&lt;/span&gt;
+&lt;span class="c1"&gt;#07070b&lt;/span&gt;
+&lt;span class="c1"&gt;#bac0c4&lt;/span&gt;
+&lt;span class="c1"&gt;#d1bd66&lt;/span&gt;
+&lt;span class="c1"&gt;#7e8899&lt;/span&gt;
+&lt;span class="c1"&gt;#696964&lt;/span&gt;
+&lt;span class="c1"&gt;#c4b441&lt;/span&gt;
+&lt;span class="c1"&gt;#65683e&lt;/span&gt;
+&lt;span class="c1"&gt;#394434&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h2&gt;Get it!&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;npm install -g canvas requirejs # install dependencies
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;npm install -g canvas requirejs # install dependencies
 git clone git@github.com:mwcz/colorpal-cli.git
 cd colorpal-cli
 &lt;/pre&gt;&lt;/div&gt;
@@ -1175,7 +1178,7 @@ cd colorpal-cli
 &lt;h2&gt;Use it!&lt;/h2&gt;
 &lt;p&gt;Visit the &lt;a href="/projects/colorpal-cli" title="ColorPal CLI project page"&gt;projcet page&lt;/a&gt; for the full documentation, or simply run the
 command without any arguments to see the help text.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;Generate a color palette from an image! :)
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Generate a color palette from an image! :)
 USAGE: node cpal.js IMAGE
 
 Options:
@@ -1188,7 +1191,9 @@ Options:
 
 
 &lt;p&gt;The code is &lt;a href="https://github.com/mwcz/colorpal-cli" title="ColorPal CLI code repository"&gt;available on GitHub&lt;/a&gt; and I welcome any feedback, bug reports,
-pull requests, etc.&lt;/p&gt;</summary><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category></entry><entry><title>ColorPal Output Update</title><link href="https://palebluepixel.org/2012/07/30/colorpal-output-update/" rel="alternate"></link><updated>2012-07-30T22:30:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-07-30:2012/07/30/colorpal-output-update/</id><summary type="html">&lt;p&gt;Hi pals.&lt;/p&gt;
+pull requests, etc.&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category></entry><entry><title>ColorPal Output Update</title><link href="https://palebluepixel.org/2012/07/30/colorpal-output-update/" rel="alternate"></link><published>2012-07-30T22:30:00-04:00</published><updated>2012-07-30T22:30:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-07-30:/2012/07/30/colorpal-output-update/</id><summary type="html">&lt;p&gt;Hi pals.&lt;/p&gt;
+&lt;p&gt;This is a speedy post about a speedy update I made today to
+&lt;a href="/projects/colorpal/"&gt;ColorPal&lt;/a&gt;, an HTML5 tool I …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hi pals.&lt;/p&gt;
 &lt;p&gt;This is a speedy post about a speedy update I made today to
 &lt;a href="/projects/colorpal/"&gt;ColorPal&lt;/a&gt;, an HTML5 tool I wrote that automatically
 generates color palettes from a photograph.&lt;/p&gt;
@@ -1221,7 +1226,7 @@ but pretty soon it'll be ColorPal pumping out those swatches.  &lt;/p&gt;
 &lt;p&gt;That's not the only change.  If you're not excited, don't worry.  I am!&lt;/p&gt;
 &lt;p&gt;&lt;a href="/projects/colorpal"&gt;&lt;static/images src="/static/images/019/colorpal_logo.png" alt="ColorPal logo" title=""
 /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Happy coloring!&lt;/p&gt;</summary><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="web"></category></entry><entry><title>Introducing Canvas Indexed Color</title><link href="https://palebluepixel.org/2012/07/03/introducing-canvas-indexed-color/" rel="alternate"></link><updated>2012-07-03T23:44:50-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-07-03:2012/07/03/introducing-canvas-indexed-color/</id><summary type="html">&lt;p&gt;&lt;a href="/projects/canvas_indexed_color" title="Canvas Indexed Color demo"&gt;Canvas Indexed Color demo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Happy coloring!&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="web"></category></entry><entry><title>Introducing Canvas Indexed Color</title><link href="https://palebluepixel.org/2012/07/03/introducing-canvas-indexed-color/" rel="alternate"></link><published>2012-07-03T23:44:50-04:00</published><updated>2012-07-03T23:44:50-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-07-03:/2012/07/03/introducing-canvas-indexed-color/</id><summary type="html">&lt;p&gt;A basic implementation of indexed color palettes for HTML5 canvas.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="/projects/canvas_indexed_color" title="Canvas Indexed Color demo"&gt;Canvas Indexed Color demo&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="White SVG Tiger" src="/static/images/021/hahatiger.png" /&gt;&lt;/p&gt;
 &lt;p&gt;First, I converted the classic SVG tiger into a set of canvas drawing
 instructions using &lt;a href="http://professorcloud.com/svg-to-canvas/" title="Professor Cloud's conversion
@@ -1240,7 +1245,7 @@ with the new value.  Knockout calls this a "two-way data binding".  &lt;/p&gt;
 &lt;p&gt;I replaced the aforementioned color strings with calls to &lt;code&gt;cvm&lt;/code&gt;, which is a
 Knockout ViewModel (in this case, an object that holds all the color data).
 &lt;code&gt;cvm&lt;/code&gt; is populated with the SVG tiger's default colors.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;ko.observableArray( [
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ko.observableArray( [
     { hex: ko.observable(&amp;quot;#000000&amp;quot;) },
     { hex: ko.observable(&amp;quot;#323232&amp;quot;) },
     // .... many more ....
@@ -1256,7 +1261,10 @@ Knockout ViewModel (in this case, an object that holds all the color data).
 a true, usable, indexed-color API for canvas (someday, maybe!).&lt;/p&gt;
 &lt;p&gt;The color picker is &lt;a href="https://github.com/mattfarina/farbtastic" title="Farbtastic"&gt;Farbtastic&lt;/a&gt;.  If you're interested in reading more about the history of
 indexed color, and a &lt;strong&gt;mind-blowing&lt;/strong&gt; canvas demo, go
-&lt;a href="http://www.effectgames.com/effect/article.psp.html/joe/Old_School_Color_Cycling_with_HTML5" title="Color cycling in HTML5 canvas"&gt;here&lt;/a&gt;.&lt;/p&gt;</summary><category term="html5"></category><category term="canvas"></category><category term="color"></category><category term="web"></category></entry><entry><title>ColorPal palettes improved!</title><link href="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/" rel="alternate"></link><updated>2012-02-10T22:44:50-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-02-10:2012/02/10/colorpal-palettes-improved/</id><summary type="html">&lt;p&gt;&lt;a href="/projects/colorpal"&gt;&lt;static/images src="/static/images/019/colorpal_logo.png" alt="ColorPal logo" title=""
+&lt;a href="http://www.effectgames.com/effect/article-Old_School_Color_Cycling_with_HTML5.html" title="Color cycling in HTML5 canvas"&gt;here&lt;/a&gt;.&lt;/p&gt;</content><category term="html5"></category><category term="canvas"></category><category term="color"></category><category term="web"></category></entry><entry><title>ColorPal palettes improved!</title><link href="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/" rel="alternate"></link><published>2012-02-10T22:44:50-05:00</published><updated>2012-02-10T22:44:50-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-02-10:/2012/02/10/colorpal-palettes-improved/</id><summary type="html">&lt;p&gt;&lt;a href="/projects/colorpal"&gt;&lt;static/images src="/static/images/019/colorpal_logo.png" alt="ColorPal logo" title=""
+/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In my &lt;a href="/2012/01/16/colorpal-alpha/"&gt;last post&lt;/a&gt; on the subject, I introduced
+ColorPal, my HTML5 color palette generation tool.  It didn't perform well …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="/projects/colorpal"&gt;&lt;static/images src="/static/images/019/colorpal_logo.png" alt="ColorPal logo" title=""
 /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;In my &lt;a href="/2012/01/16/colorpal-alpha/"&gt;last post&lt;/a&gt; on the subject, I introduced
 ColorPal, my HTML5 color palette generation tool.  It didn't perform well with
@@ -1356,98 +1364,98 @@ feedback.  Code development help is welcomed too.&lt;/p&gt;
 &lt;p&gt;If you try out ColorPal, let me know your thoughts on
 &lt;a href="https://twitter.com/#!/mwcz"&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Here are github repos for &lt;a href="https://github.com/mwcz/ColorPal"&gt;ColorPal&lt;/a&gt; and
-&lt;a href="https://github.com/mwcz/median-cut-js"&gt;median-cut.js&lt;/a&gt;.&lt;/p&gt;</summary><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="web"></category></entry><entry><title>Toy javascript unit tester</title><link href="https://palebluepixel.org/2012/01/30/toy-javascript-unit-tester/" rel="alternate"></link><updated>2012-01-30T21:50:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-01-30:2012/01/30/toy-javascript-unit-tester/</id><summary type="html">&lt;p&gt;Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and had a minor epiphany.  In the back of my mind, there has always been a bit of uncertainty as to how unit testing frameworks work.  Deep in my brain I knew there was something I didn't understand, but I wasn't quite sure what.  I never gave it any conscious thought.&lt;/p&gt;
+&lt;a href="https://github.com/mwcz/median-cut-js"&gt;median-cut.js&lt;/a&gt;.&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="web"></category></entry><entry><title>Toy javascript unit tester</title><link href="https://palebluepixel.org/2012/01/30/toy-javascript-unit-tester/" rel="alternate"></link><published>2012-01-30T21:50:00-05:00</published><updated>2012-01-30T21:50:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-01-30:/2012/01/30/toy-javascript-unit-tester/</id><summary type="html">&lt;p&gt;Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and had a minor epiphany.  In the back of my mind, there has always been a bit of uncertainty as to how unit testing frameworks work.  Deep in my brain I knew there was something I didn't understand, but I wasn't quite sure what.  I never gave it any conscious thought.&lt;/p&gt;
 &lt;p&gt;As a developer, I'd use a framework, write a bunch of &lt;code&gt;testBlahFoo&lt;/code&gt; functions, and the framework would magically run them.  &lt;/p&gt;
 &lt;p&gt;Then I realized... "Oh, it's just introspection."&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c1"&gt;// Create an object with three properties, all functions&lt;/span&gt;
-&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;myfuncs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;func1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;func it up&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;},&lt;/span&gt;
-    &lt;span class="nx"&gt;func2&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;func&amp;#39;s old brother&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;},&lt;/span&gt;
-    &lt;span class="nx"&gt;func3&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;bring back da func&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;Create&lt;/span&gt; &lt;span class="nt"&gt;an&lt;/span&gt; &lt;span class="nt"&gt;object&lt;/span&gt; &lt;span class="nt"&gt;with&lt;/span&gt; &lt;span class="nt"&gt;three&lt;/span&gt; &lt;span class="nt"&gt;properties&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;all&lt;/span&gt; &lt;span class="nt"&gt;functions&lt;/span&gt;
+&lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;myfuncs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;func1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nf"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt; &lt;span class="n"&gt;console&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;func it up&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;
+    &lt;span class="nt"&gt;func2&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;function&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="err"&gt;console.log(&amp;quot;func&amp;#39;s&lt;/span&gt; &lt;span class="err"&gt;old&lt;/span&gt; &lt;span class="err"&gt;brother&amp;quot;)&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;
+    &lt;span class="nt"&gt;func3&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;function&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="err"&gt;console.log(&amp;quot;bring&lt;/span&gt; &lt;span class="err"&gt;back&lt;/span&gt; &lt;span class="err"&gt;da&lt;/span&gt; &lt;span class="err"&gt;func&amp;quot;)&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
-&lt;span class="c1"&gt;// Run all functions attached to myfuncs&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;func&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nx"&gt;myfuncs&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;myfuncs&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt; &lt;span class="nx"&gt;func&lt;/span&gt; &lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;Run&lt;/span&gt; &lt;span class="nt"&gt;all&lt;/span&gt; &lt;span class="nt"&gt;functions&lt;/span&gt; &lt;span class="nt"&gt;attached&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;myfuncs&lt;/span&gt;
+&lt;span class="nt"&gt;for&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt; &lt;span class="nt"&gt;func&lt;/span&gt; &lt;span class="nt"&gt;in&lt;/span&gt; &lt;span class="nt"&gt;myfuncs&lt;/span&gt; &lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="err"&gt;myfuncs&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt; &lt;span class="nx"&gt;func&lt;/span&gt; &lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="err"&gt;()&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 
-&lt;span class="c1"&gt;// Outputs:&lt;/span&gt;
-&lt;span class="c1"&gt;// &lt;/span&gt;
-&lt;span class="c1"&gt;// func it up&lt;/span&gt;
-&lt;span class="c1"&gt;// func&amp;#39;s old brother&lt;/span&gt;
-&lt;span class="c1"&gt;// bring back da func&lt;/span&gt;
+&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;Outputs&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;//&lt;/span&gt; 
+&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;func&lt;/span&gt; &lt;span class="nt"&gt;it&lt;/span&gt; &lt;span class="nt"&gt;up&lt;/span&gt;
+&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;func&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="nt"&gt;s&lt;/span&gt; &lt;span class="nt"&gt;old&lt;/span&gt; &lt;span class="nt"&gt;brother&lt;/span&gt;
+&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;bring&lt;/span&gt; &lt;span class="nt"&gt;back&lt;/span&gt; &lt;span class="nt"&gt;da&lt;/span&gt; &lt;span class="nt"&gt;func&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;So simple.  Later, I wrote a very basic unit testing framework, purely as an educational excercise.&lt;/p&gt;
 &lt;p&gt;The guts are almost simple as the example above.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;JTestSuite&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var JTestSuite = function () {
 
-    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;version&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="nx"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    var version = 0.1,
+        jt,
 
-    &lt;span class="nx"&gt;init&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;callback&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="nx"&gt;jt&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;JTests&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-        &lt;span class="nx"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;init&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;callback&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="p"&gt;},&lt;/span&gt;
+    init = function( callback ) {
+        jt = JTests();
+        jt.init( callback );
+    },
 
-    &lt;span class="nx"&gt;run&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;fn&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-            &lt;span class="nx"&gt;prop&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    run = function() {
+        var fn,
+            prop;
 
-        &lt;span class="c1"&gt;// Run all functions that begin with &amp;quot;test&amp;quot;&lt;/span&gt;
-        &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;prop&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="k"&gt;typeof&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;prop&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;function&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;prop&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;slice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;test&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                    &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;prop&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-                &lt;span class="p"&gt;}&lt;/span&gt;
-            &lt;span class="p"&gt;}&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-    &lt;span class="p"&gt;};&lt;/span&gt;
+        // Run all functions that begin with &amp;quot;test&amp;quot;
+        for( prop in this ) {
+            if( typeof this[prop] === &amp;quot;function&amp;quot; ) {
+                if( prop.slice(0,4) === &amp;quot;test&amp;quot; ) {
+                    console.log( this[prop](jt) );
+                }
+            }
+        }
+    };
 
-    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt; &lt;span class="k"&gt;instanceof&lt;/span&gt; &lt;span class="nx"&gt;JTestSuite&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;JTestSuite&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    if( !(this instanceof JTestSuite) ) return new JTestSuite();
 
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="nx"&gt;init&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;init&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="nx"&gt;run&lt;/span&gt;  &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;run&lt;/span&gt;
-    &lt;span class="p"&gt;};&lt;/span&gt;
+    return {
+        init : init,
+        run  : run
+    };
 
-&lt;span class="p"&gt;};&lt;/span&gt;
+};
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;In the &lt;code&gt;run&lt;/code&gt; function's loop, I first check that each property is a function before attemping to run it.  This avoids a &lt;code&gt;called_non_callable TypeError&lt;/code&gt;.  I then check that the name of the property begins with the string "test".  When dynamically calling functions, it's usually a good idea to call &lt;code&gt;obj.hasOwnProperty(propname)&lt;/code&gt; to ensure the property wasn't inherited from some unknown source (especially if the property you wanted to reference may have been &lt;code&gt;delete&lt;/code&gt;d, but a property with the same name is now surfacing from a parent object), but in this case I'd like to leave open the possibility for inherited Test Suites.&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;JTests&lt;/code&gt; object created in the &lt;code&gt;init&lt;/code&gt; function is a separate object that contains a bunch of assertions.  It looks something like this:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;JTests&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var JTests = function () {
 
-    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;version&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="nx"&gt;result_callback&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    var version = 0.1,
+        result_callback,
 
-    &lt;span class="nx"&gt;init&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;callback&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="nx"&gt;result_callback&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;callback&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
+    init = function( callback ) {
+        result_callback = callback;
+    }
 
-    &lt;span class="nx"&gt;assertTrue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="nx"&gt;result_callback&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;                                                                                                                                                                         
-            &lt;span class="nx"&gt;name&lt;/span&gt;   &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;assertTrue&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-            &lt;span class="nx"&gt;args&lt;/span&gt;   &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-            &lt;span class="nx"&gt;result&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;result&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="p"&gt;};&lt;/span&gt;
+    assertTrue = function( a ) {
+        var result = a === false;
+        result_callback( {                                                                                                                                                                         
+            name   : &amp;quot;assertTrue&amp;quot;,
+            args   : [ a ],
+            result : result
+        } );
+    };
 
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="nx"&gt;assertTrue&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;assertTrue&lt;/span&gt;
-    &lt;span class="p"&gt;};&lt;/span&gt;
+    return {
+        assertTrue : assertTrue
+    };
 
-&lt;span class="p"&gt;};&lt;/span&gt;
+};
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;...except with many more assertions. :)&lt;/p&gt;
 &lt;p&gt;Both &lt;code&gt;JTestSuite&lt;/code&gt; and &lt;code&gt;JTests&lt;/code&gt; use the &lt;a href="http://stackoverflow.com/a/5647397/215148"&gt;revealing module pattern&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;I have a lot of ideas for improvement, like &lt;a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself"&gt;DRY&lt;/a&gt;ing up the assertions, so the &lt;code&gt;{name,args,result}&lt;/code&gt; object doesn't have to be defined in each assertion.  But &lt;a href="http://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#JavaScript"&gt;many others&lt;/a&gt; have already done a great job, and I don't want to reinvent too many wheels.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c1"&gt;// Define a custom handler for the result&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;// Define a custom handler for the result&lt;/span&gt;
 &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;test_callback&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;result&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;result&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
@@ -1462,8 +1470,8 @@ feedback.  Code development help is welcomed too.&lt;/p&gt;
 &lt;span class="p"&gt;};&lt;/span&gt;
 
 &lt;span class="nx"&gt;TestSuite&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;testFalsy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="c1"&gt;// &lt;/span&gt;&lt;span class="cp"&gt;[]&lt;/span&gt;&lt;span class="c1"&gt;, &amp;quot;&amp;quot;, and &amp;quot;0&amp;quot; all == false in javascript&lt;/span&gt;
-    &lt;span class="nx"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;assertFalsy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="cp"&gt;[]&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="c1"&gt;// [], &amp;quot;&amp;quot;, and &amp;quot;0&amp;quot; all == false in javascript&lt;/span&gt;
+    &lt;span class="nx"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;assertFalsy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
     &lt;span class="nx"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;assertFalsy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
     &lt;span class="nx"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;assertFalsy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;0&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="p"&gt;};&lt;/span&gt;
@@ -1474,7 +1482,7 @@ feedback.  Code development help is welcomed too.&lt;/p&gt;
 
 
 &lt;p&gt;The callback allows a user to determine how the results from the unit test should be processed or displayed.  Results could be printed to console.log, displayed on a page by adding them to the DOM, sent to a Web service with AJAX, or any arbitrary service with Web Sockets.&lt;/p&gt;
-&lt;p&gt;After writing this toy framework, and explaining it to a colleague, I was told that the Rails unit tester uses almost the exact same approach.  I'd wager a few bucks that JUnit uses the Reflection API's &lt;code&gt;Class.getMethods()&lt;/code&gt; to find and run all the methods added to a TestCase class.  Only a few bucks, though.&lt;/p&gt;</summary><category term="javascript"></category><category term="testing"></category><category term="web"></category></entry><entry><title>ColorPal Alpha</title><link href="https://palebluepixel.org/2012/01/16/colorpal-alpha/" rel="alternate"></link><updated>2012-01-16T22:15:50-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-01-16:2012/01/16/colorpal-alpha/</id><summary type="html">&lt;p&gt;Introducing ColorPal!&lt;/p&gt;
+&lt;p&gt;After writing this toy framework, and explaining it to a colleague, I was told that the Rails unit tester uses almost the exact same approach.  I'd wager a few bucks that JUnit uses the Reflection API's &lt;code&gt;Class.getMethods()&lt;/code&gt; to find and run all the methods added to a TestCase class.  Only a few bucks, though.&lt;/p&gt;</content><category term="javascript"></category><category term="testing"></category><category term="web"></category></entry><entry><title>ColorPal Alpha</title><link href="https://palebluepixel.org/2012/01/16/colorpal-alpha/" rel="alternate"></link><published>2012-01-16T22:15:50-05:00</published><updated>2012-01-16T22:15:50-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-01-16:/2012/01/16/colorpal-alpha/</id><summary type="html">&lt;p&gt;Introducing ColorPal, a fast color palette creation tool.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Introducing ColorPal!&lt;/p&gt;
 &lt;p&gt;&lt;img alt="ColorPal screenshot" src="/static/images/015/ss.png" /&gt;&lt;/p&gt;
 &lt;p&gt;I've been toying with color palette generation for years.  My photography website has always had some form of dynamic palette, so the theme of each page matches the photo.  You can see the current iteration &lt;a href="http://clayto.com/"&gt;here&lt;/a&gt;:&lt;/p&gt;
 &lt;p&gt;&lt;static/images src="/static/images/015/tarsi.png" alt="clayto.com" title="My photo, 'Tarsi', at clayto.com" /&gt;&lt;/p&gt;
@@ -1486,7 +1494,9 @@ feedback.  Code development help is welcomed too.&lt;/p&gt;
 &lt;p&gt;It's powered by &lt;a href="http://en.wikipedia.org/wiki/Canvas_element"&gt;canvas&lt;/a&gt;, &lt;a href="https://developer.mozilla.org/en/data_URIs"&gt;data URIs&lt;/a&gt;, &lt;a href="http://dev.w3.org/2006/webapi/FileAPI/"&gt;File API&lt;/a&gt;, and my homespun &lt;a href="http://en.wikipedia.org/wiki/Median_cut"&gt;median-cut&lt;/a&gt; implementation, which I'm calling &lt;em&gt;median-cut.js&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Bear in mind that while I've kept median-cut.js nice and clean, I did hammer out ColorPal as quickly as possible, so it's a mess.  Why?  I expect median-cut.js to be useful to other programmers, but ColorPal is just a tool for designers.  Or it will be, anyway. :)&lt;/p&gt;
 &lt;p&gt;Here are github repos for &lt;a href="https://github.com/mwcz/ColorPal"&gt;ColorPal&lt;/a&gt; and &lt;a href="https://github.com/mwcz/median-cut-js"&gt;median-cut.js&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;And, as a reward for reading to the end, a &lt;a href="/projects/colorpal/"&gt;live demo&lt;/a&gt;!&lt;/p&gt;</summary><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="web"></category></entry><entry><title>The N9, QR-Codes, and KeePassX</title><link href="https://palebluepixel.org/2012/01/08/the-n9-qr-codes-and-keepassx/" rel="alternate"></link><updated>2012-01-08T22:27:50-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-01-08:2012/01/08/the-n9-qr-codes-and-keepassx/</id><summary type="html">&lt;p&gt;&lt;em&gt;Update: I happened across a &lt;a href="http://keepass.info/plugins.html#qrcodegen"&gt;KeePass
+&lt;p&gt;And, as a reward for reading to the end, a &lt;a href="/projects/colorpal/"&gt;live demo&lt;/a&gt;!&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="web"></category></entry><entry><title>The N9, QR-Codes, and KeePassX</title><link href="https://palebluepixel.org/2012/01/08/the-n9-qr-codes-and-keepassx/" rel="alternate"></link><published>2012-01-08T22:27:50-05:00</published><updated>2012-01-08T22:27:50-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-01-08:/2012/01/08/the-n9-qr-codes-and-keepassx/</id><summary type="html">&lt;p&gt;&lt;em&gt;Update: I happened across a &lt;a href="http://keepass.info/plugins.html#qrcodegen"&gt;KeePass
+plugin&lt;/a&gt; (not the same as KeePassX)
+that displays passwords as QR codes, just like …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;Update: I happened across a &lt;a href="http://keepass.info/plugins.html#qrcodegen"&gt;KeePass
 plugin&lt;/a&gt; (not the same as KeePassX)
 that displays passwords as QR codes, just like my hack below.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Poor, glorious N9.&lt;/p&gt;
@@ -1502,7 +1512,7 @@ image.  In the case of the N9, it's
 &lt;p&gt;&lt;img alt="meescan" src="/static/images/011/meescan.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://fukuchi.org/works/qrencode/index.html.en"&gt;qrencode&lt;/a&gt; is an extremely
 easy to use encoder.  Pass it a string, it produces an image.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;qrencode &amp;quot;mypassword&amp;quot; -o mypass.png
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;qrencode &amp;quot;mypassword&amp;quot; -o mypass.png
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1531,7 +1541,9 @@ src="/static/images/011/keepassx_demo.png" alt="KeePassX generating a QR code" t
 
 &lt;p&gt;I won't be distributing my mod unless someone &lt;em&gt;really&lt;/em&gt; wants it, but it would
 be cool to see this available as plugin to any password managers that support
-plugins.  It could be handy to have clipboard managers generate QR codes too.&lt;/p&gt;</summary><category term="general"></category><category term="keepass"></category><category term="n9"></category></entry><entry><title>Bouncey returns - more canvas physics</title><link href="https://palebluepixel.org/2011/11/17/bouncey-returns-more-canvas-physics/" rel="alternate"></link><updated>2011-11-17T22:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-17:2011/11/17/bouncey-returns-more-canvas-physics/</id><summary type="html">&lt;p&gt;This is a slightly upgraded version of the physics demo I showed in my &lt;a href="/2011/11/17/bouncey---canvas-physics/"&gt;last post&lt;/a&gt;.&lt;/p&gt;
+plugins.  It could be handy to have clipboard managers generate QR codes too.&lt;/p&gt;</content><category term="general"></category><category term="keepass"></category><category term="n9"></category></entry><entry><title>Bouncey returns - more canvas physics</title><link href="https://palebluepixel.org/2011/11/17/bouncey-returns-more-canvas-physics/" rel="alternate"></link><published>2011-11-17T22:25:00-05:00</published><updated>2011-11-17T22:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-17:/2011/11/17/bouncey-returns-more-canvas-physics/</id><summary type="html">&lt;p&gt;This is a slightly upgraded version of the physics demo I showed in my &lt;a href="/2011/11/17/bouncey---canvas-physics/"&gt;last post&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It is still...&lt;/p&gt;
+&lt;p&gt;&lt;quote&gt;"a …&lt;/quote&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is a slightly upgraded version of the physics demo I showed in my &lt;a href="/2011/11/17/bouncey---canvas-physics/"&gt;last post&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;It is still...&lt;/p&gt;
 &lt;p&gt;&lt;quote&gt;"a buggy, rudimentary, just-for-fun javascript physics simulator."&lt;/quote&gt;&lt;/p&gt;
 &lt;p&gt;This version has:&lt;/p&gt;
@@ -1571,10 +1583,10 @@ x velocity sum: &lt;span id="txt_velocity_sum_x"&gt;NONE&lt;/span&gt;
 y velocity sum: &lt;span id="txt_velocity_sum_y"&gt;NONE&lt;/span&gt;
 &lt;/pre&gt;
 
-&lt;p&gt;(The POOL initial state reproduces the clinging bug.)&lt;/p&gt;</summary><category term="html5"></category><category term="canvas"></category><category term="physics"></category><category term="javascript"></category><category term="bouncey"></category><category term="web"></category></entry><entry><title>HTML5 tool for creating color palettes from an image</title><link href="https://palebluepixel.org/2011/11/17/html5-tool-for-creating-color-palettes-from-an-image/" rel="alternate"></link><updated>2011-11-17T22:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-17:2011/11/17/html5-tool-for-creating-color-palettes-from-an-image/</id><summary type="html">&lt;p&gt;For an &lt;a href="http://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction"&gt;HCI&lt;/a&gt; class project in Fall 2009, I pulled together some of my previous demos to make this integrated tool.  It was just a prototype, and I haven't taken the time to get the code set up and working on this blog.  If anyone is interested, I can dig up the code and send it along.&lt;/p&gt;
+&lt;p&gt;(The POOL initial state reproduces the clinging bug.)&lt;/p&gt;</content><category term="html5"></category><category term="canvas"></category><category term="physics"></category><category term="javascript"></category><category term="bouncey"></category><category term="web"></category></entry><entry><title>HTML5 tool for creating color palettes from an image</title><link href="https://palebluepixel.org/2011/11/17/html5-tool-for-creating-color-palettes-from-an-image/" rel="alternate"></link><published>2011-11-17T22:25:00-05:00</published><updated>2011-11-17T22:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-17:/2011/11/17/html5-tool-for-creating-color-palettes-from-an-image/</id><summary type="html">&lt;p&gt;For an &lt;a href="http://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction"&gt;HCI&lt;/a&gt; class project in Fall 2009, I pulled together some of my previous demos to make this integrated …&lt;/p&gt;</summary><content type="html">&lt;p&gt;For an &lt;a href="http://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction"&gt;HCI&lt;/a&gt; class project in Fall 2009, I pulled together some of my previous demos to make this integrated tool.  It was just a prototype, and I haven't taken the time to get the code set up and working on this blog.  If anyone is interested, I can dig up the code and send it along.&lt;/p&gt;
 &lt;iframe width="580" height="550" src="http://www.youtube.com/embed/p9QiGPUiXdc" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;p&gt;In retrospect, it really could have used some narration...&lt;/p&gt;</summary><category term="html5"></category><category term="canvas"></category><category term="color"></category><category term="colorpal"></category><category term="web"></category></entry><entry><title>Bouncey - canvas physics</title><link href="https://palebluepixel.org/2011/11/17/bouncey-canvas-physics/" rel="alternate"></link><updated>2011-11-17T21:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-17:2011/11/17/bouncey-canvas-physics/</id><summary type="html">&lt;p&gt;This is Bouncey.  It's a simple physics demo I wrote in early/mid 2011, with some contributions and bugfixes from my good friend Greg Gardner.&lt;/p&gt;
+&lt;p&gt;In retrospect, it really could have used some narration...&lt;/p&gt;</content><category term="html5"></category><category term="canvas"></category><category term="color"></category><category term="colorpal"></category><category term="web"></category></entry><entry><title>Bouncey - canvas physics</title><link href="https://palebluepixel.org/2011/11/17/bouncey-canvas-physics/" rel="alternate"></link><published>2011-11-17T21:25:00-05:00</published><updated>2011-11-17T21:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-17:/2011/11/17/bouncey-canvas-physics/</id><summary type="html">&lt;p&gt;This is Bouncey.  It's a simple physics demo I wrote in early/mid 2011, with some contributions and bugfixes from …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is Bouncey.  It's a simple physics demo I wrote in early/mid 2011, with some contributions and bugfixes from my good friend Greg Gardner.&lt;/p&gt;
 &lt;p&gt;The description for &lt;a href="https://github.com/mwcz/bouncey"&gt;bouncey's github repo&lt;/a&gt; is:&lt;/p&gt;
 &lt;p&gt;&lt;quote&gt;"a buggy, rudimentary, just-for-fun javascript physics simulator."&lt;/quote&gt;&lt;/p&gt;
 &lt;p&gt;It covers &lt;a href="http://en.wikipedia.org/wiki/Newton's_laws_of_motion"&gt;Newton's laws of motion&lt;/a&gt;.&lt;/p&gt;
@@ -1647,7 +1659,17 @@ window.onload = function() {
     Sorry, your browser does not support HTML5 canvas.  Lame.
 &lt;/canvas&gt;
 
-&lt;p&gt;An updated (but less colorful) version of bouncey is available &lt;a href="{008 - bouncey returns.md}" title="newer bouncey"&gt;here&lt;/a&gt;.&lt;/p&gt;</summary><category term="html5"></category><category term="canvas"></category><category term="physics"></category><category term="javascript"></category><category term="bouncey"></category><category term="web"></category></entry><entry><title>How not to use CSS3</title><link href="https://palebluepixel.org/2011/11/17/how-not-to-use-css3/" rel="alternate"></link><updated>2011-11-17T20:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-17:2011/11/17/how-not-to-use-css3/</id><summary type="html">&lt;p&gt;How to ruin a good thing...&lt;/p&gt;
+&lt;p&gt;An updated (but less colorful) version of bouncey is available &lt;a href="{008 - bouncey returns.md}" title="newer bouncey"&gt;here&lt;/a&gt;.&lt;/p&gt;</content><category term="html5"></category><category term="canvas"></category><category term="physics"></category><category term="javascript"></category><category term="bouncey"></category><category term="web"></category></entry><entry><title>How not to use CSS3</title><link href="https://palebluepixel.org/2011/11/17/how-not-to-use-css3/" rel="alternate"></link><published>2011-11-17T20:25:00-05:00</published><updated>2011-11-17T20:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-17:/2011/11/17/how-not-to-use-css3/</id><summary type="html">&lt;p&gt;How to ruin a good thing...&lt;/p&gt;
+&lt;p&gt;Try refreshing.&lt;/p&gt;
+&lt;style type="text/css"&gt;
+
+.css3_demo {
+    font-family: FreeSansBold;
+    text-align: center;
+    color: #efefef;
+    position: relative;
+    top: 0;
+    left …&lt;/style&gt;</summary><content type="html">&lt;p&gt;How to ruin a good thing...&lt;/p&gt;
 &lt;p&gt;Try refreshing.&lt;/p&gt;
 &lt;style type="text/css"&gt;
 
@@ -1726,7 +1748,7 @@ $(document).ready( function() {
 });
 &lt;/script&gt;
 
-&lt;p&gt;&lt;span class="css3_demo"&gt;CSS3!&lt;/span&gt; &lt;/p&gt;</summary><category term="html5"></category><category term="css3"></category><category term="typography"></category><category term="web"></category></entry><entry><title>HTML5 canvas point operations</title><link href="https://palebluepixel.org/2011/11/17/html5-canvas-point-operations/" rel="alternate"></link><updated>2011-11-17T19:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-17:2011/11/17/html5-canvas-point-operations/</id><summary type="html">&lt;p&gt;This is the last demo I made using &lt;a href="https://github.com/mwcz/jsimage"&gt;JSImage&lt;/a&gt;.  I created it some time around 2009-2010.  At the time, I had checked out an &lt;a href="http://www.amazon.com/Digital-Image-Processing-Algorithmic-Introduction/dp/1846283795"&gt;imaging book&lt;/a&gt; from my university's library at least ten times.  Most of the exercises in that book I implemented in Python using &lt;a href="http://www.pythonware.com/products/pil/"&gt;PIL&lt;/a&gt;, but point operations were simple enough to port to JavaScript quickly.&lt;/p&gt;
+&lt;p&gt;&lt;span class="css3_demo"&gt;CSS3!&lt;/span&gt; &lt;/p&gt;</content><category term="html5"></category><category term="css3"></category><category term="typography"></category><category term="web"></category></entry><entry><title>HTML5 canvas point operations</title><link href="https://palebluepixel.org/2011/11/17/html5-canvas-point-operations/" rel="alternate"></link><published>2011-11-17T19:25:00-05:00</published><updated>2011-11-17T19:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-17:/2011/11/17/html5-canvas-point-operations/</id><summary type="html">&lt;p&gt;This is the last demo I made using &lt;a href="https://github.com/mwcz/jsimage"&gt;JSImage&lt;/a&gt;.  I created it some time around 2009-2010.  At the time, I …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is the last demo I made using &lt;a href="https://github.com/mwcz/jsimage"&gt;JSImage&lt;/a&gt;.  I created it some time around 2009-2010.  At the time, I had checked out an &lt;a href="http://www.amazon.com/Digital-Image-Processing-Algorithmic-Introduction/dp/1846283795"&gt;imaging book&lt;/a&gt; from my university's library at least ten times.  Most of the exercises in that book I implemented in Python using &lt;a href="http://www.pythonware.com/products/pil/"&gt;PIL&lt;/a&gt;, but point operations were simple enough to port to JavaScript quickly.&lt;/p&gt;
 &lt;p&gt;Point operations are image alterations that affect all pixels equally.  Other operations, like blurring for example, each result pixel depends on adjacent pixels.&lt;/p&gt;
 &lt;p&gt;This demonstrates changing contrast, value, saturation, hue, color inversion, and threshold point operations.  Note that there is a bug with increasing value and increasing saturation which I never got around to fixing.&lt;/p&gt;
 &lt;script type="text/javascript" src="/static/js/005/jsimage.js"&gt;&lt;/script&gt;
@@ -1812,7 +1834,8 @@ $(document).ready( function() {
 
 &lt;/div&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</summary><category term="html5"></category><category term="canvas"></category><category term="color"></category><category term="image processing"></category><category term="jsimage"></category><category term="web"></category><category term="javascript"></category></entry><entry><title>HTML5 canvas area selection averaging</title><link href="https://palebluepixel.org/2011/11/16/html5-canvas-area-selection-averaging/" rel="alternate"></link><updated>2011-11-16T18:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-16:2011/11/16/html5-canvas-area-selection-averaging/</id><summary type="html">&lt;p&gt;This is a demo from late 2009.  It's an extension of the single-pixel &lt;a href="/2011/11/16/html5-canvas-eyedropper/"&gt;eyedropper&lt;/a&gt; I wrote previously.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</content><category term="html5"></category><category term="canvas"></category><category term="color"></category><category term="image processing"></category><category term="jsimage"></category><category term="web"></category><category term="javascript"></category></entry><entry><title>HTML5 canvas area selection averaging</title><link href="https://palebluepixel.org/2011/11/16/html5-canvas-area-selection-averaging/" rel="alternate"></link><published>2011-11-16T18:25:00-05:00</published><updated>2011-11-16T18:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-16:/2011/11/16/html5-canvas-area-selection-averaging/</id><summary type="html">&lt;p&gt;This is a demo from late 2009.  It's an extension of the single-pixel &lt;a href="/2011/11/16/html5-canvas-eyedropper/"&gt;eyedropper&lt;/a&gt; I wrote previously.&lt;/p&gt;
+&lt;p&gt;It's powered by …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is a demo from late 2009.  It's an extension of the single-pixel &lt;a href="/2011/11/16/html5-canvas-eyedropper/"&gt;eyedropper&lt;/a&gt; I wrote previously.&lt;/p&gt;
 &lt;p&gt;It's powered by an early version of an old JS toolkit I wrote called JSImage.  The latest version is available at my &lt;a href="https://github.com/mwcz/jsimage"&gt;JSImage github repo&lt;/a&gt;.  Don't be fooled by the 2011 commits, those are just artifacts from svn-&amp;gt;git migration.  No guarantees that the histo's are actually correct. :)&lt;/p&gt;
 &lt;p&gt;I used an old version of a rectangular selection tool called marquee.  I believe it's still located &lt;a href="http://marqueetool.net/"&gt;here&lt;/a&gt; but I can't be totally sure that's the same project.&lt;/p&gt;
 &lt;p&gt;Click, drag, and taste the magic. :|&lt;/p&gt;
@@ -1847,7 +1870,8 @@ $(function() {
 
 });
 
-&lt;/script&gt;</summary><category term="html5"></category><category term="canvas"></category><category term="color"></category><category term="jsimage"></category><category term="colorpal"></category><category term="web"></category><category term="javascript"></category></entry><entry><title>HTML5 canvas RGB histogram</title><link href="https://palebluepixel.org/2011/11/16/html5-canvas-rgb-histogram/" rel="alternate"></link><updated>2011-11-16T17:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-16:2011/11/16/html5-canvas-rgb-histogram/</id><summary type="html">&lt;p&gt;This is yet another demo from around 2009.  It's simple enough.  Click a
+&lt;/script&gt;</content><category term="html5"></category><category term="canvas"></category><category term="color"></category><category term="jsimage"></category><category term="colorpal"></category><category term="web"></category><category term="javascript"></category></entry><entry><title>HTML5 canvas RGB histogram</title><link href="https://palebluepixel.org/2011/11/16/html5-canvas-rgb-histogram/" rel="alternate"></link><published>2011-11-16T17:25:00-05:00</published><updated>2011-11-16T17:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-16:/2011/11/16/html5-canvas-rgb-histogram/</id><summary type="html">&lt;p&gt;This is yet another demo from around 2009.  It's simple enough.  Click a
+button, draw an unbinned RGB histogram of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is yet another demo from around 2009.  It's simple enough.  Click a
 button, draw an unbinned RGB histogram of the source image.&lt;/p&gt;
 &lt;p&gt;It's powered by an early version of an old JS toolkit I wrote called JSImage.
 The latest version is available at my &lt;a href="https://github.com/mwcz/jsimage"&gt;JSImage github
@@ -1932,7 +1956,7 @@ $(function () {
 
 
 });
-&lt;/script&gt;</summary><category term="html5"></category><category term="canvas"></category><category term="color"></category><category term="jsimage"></category><category term="web"></category><category term="javascript"></category></entry><entry><title>HTML5 canvas 3D pixel array</title><link href="https://palebluepixel.org/2011/11/16/html5-canvas-3d-pixel-array/" rel="alternate"></link><updated>2011-11-16T16:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-16:2011/11/16/html5-canvas-3d-pixel-array/</id><summary type="html">&lt;p&gt;This is another demo from 2009-ish.  When I started experimenting with canvas, I felt uncomfortable with the 1-dimensionality of &lt;a href="https://developer.mozilla.org/en/DOM/CanvasPixelArray"&gt;CanvasPixelArray&lt;/a&gt;.  I wrote this script to convert it into a more logical format: X by Y by RGBA.  Let me rephrase that.  By "more logical", I mean "more logical, &lt;em&gt;to me&lt;/em&gt;, &lt;em&gt;at the time&lt;/em&gt;).  1D is fine, and I can't think of any use for this script.  But, nonetheless, here it is, including the original description.&lt;/p&gt;
+&lt;/script&gt;</content><category term="html5"></category><category term="canvas"></category><category term="color"></category><category term="jsimage"></category><category term="web"></category><category term="javascript"></category></entry><entry><title>HTML5 canvas 3D pixel array</title><link href="https://palebluepixel.org/2011/11/16/html5-canvas-3d-pixel-array/" rel="alternate"></link><published>2011-11-16T16:25:00-05:00</published><updated>2011-11-16T16:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-16:/2011/11/16/html5-canvas-3d-pixel-array/</id><summary type="html">&lt;p&gt;This is another demo from 2009-ish.  When I started experimenting with canvas, I felt uncomfortable with the 1-dimensionality of &lt;a href="https://developer.mozilla.org/en/DOM/CanvasPixelArray"&gt;CanvasPixelArray …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is another demo from 2009-ish.  When I started experimenting with canvas, I felt uncomfortable with the 1-dimensionality of &lt;a href="https://developer.mozilla.org/en/DOM/CanvasPixelArray"&gt;CanvasPixelArray&lt;/a&gt;.  I wrote this script to convert it into a more logical format: X by Y by RGBA.  Let me rephrase that.  By "more logical", I mean "more logical, &lt;em&gt;to me&lt;/em&gt;, &lt;em&gt;at the time&lt;/em&gt;).  1D is fine, and I can't think of any use for this script.  But, nonetheless, here it is, including the original description.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;
 
 $(function() {
@@ -2071,7 +2095,7 @@ logical 3D array (X by Y by RGBA)&lt;/p&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</summary><category term="html5"></category><category term="canvas"></category><category term="color"></category><category term="colorpal"></category><category term="web"></category></entry><entry><title>HTML5 Canvas eyedropper</title><link href="https://palebluepixel.org/2011/11/16/html5-canvas-eyedropper/" rel="alternate"></link><updated>2011-11-16T15:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-16:2011/11/16/html5-canvas-eyedropper/</id><summary type="html">&lt;style type="text/css"&gt;
+&lt;/div&gt;</content><category term="html5"></category><category term="canvas"></category><category term="color"></category><category term="colorpal"></category><category term="web"></category></entry><entry><title>HTML5 Canvas eyedropper</title><link href="https://palebluepixel.org/2011/11/16/html5-canvas-eyedropper/" rel="alternate"></link><published>2011-11-16T15:25:00-05:00</published><updated>2011-11-16T15:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-16:/2011/11/16/html5-canvas-eyedropper/</id><summary type="html">&lt;p&gt;An HTML5 Canvas eyedropper.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;
     canvas {
         margin        : 0 auto;
         border-width  : 36px;
@@ -2143,25 +2167,25 @@ if( cnvs.getContext) { // Check for canvas support
 &lt;canvas id="c"&gt;Sorry, in order to view this demo you need a Web browser that supports HTML5 canvas.&lt;/canvas&gt;
 
 &lt;p&gt;It's a pretty simple script, and works by declaring this function which handles onclick and ondrag events from the canvas.  cnvs is the canvas element, and c is the canvas's 2D rendering context object.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;pixel&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="c1"&gt;// calculate the x and y coordinates of the cursor&lt;/span&gt;
-    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;imagesdata&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;c&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getImageData&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;new_color&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt; &lt;span class="nx"&gt;imagesdata.data&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                      &lt;span class="nx"&gt;imagesdata&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                      &lt;span class="nx"&gt;imagesdata&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="p"&gt;];&lt;/span&gt;
-    &lt;span class="nx"&gt;color&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;style&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;background&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;rgb(&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nx"&gt;new_color&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pixel = function(e) {
+    // calculate the x and y coordinates of the cursor
+    var imagesdata = c.getImageData( x, y, 1, 1 );
+    var new_color = [ imagesdata.data[0],
+                      imagesdata.data[1],
+                      imagesdata.data[2] ];
+    color.style.background = &amp;quot;rgb(&amp;quot;+new_color+&amp;quot;)&amp;quot;;
+}
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;That's just a summary; the function actually does a little more than that.  Take a look at the source for this page if you're interested.&lt;/p&gt;</summary><category term="html5"></category><category term="canvas"></category><category term="color"></category><category term="colorpal"></category><category term="web"></category></entry><entry><title>Opcode patterns 70% finished</title><link href="https://palebluepixel.org/2011/10/13/opcode-patterns-70-finished/" rel="alternate"></link><updated>2011-10-13T22:27:50-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-10-13:2011/10/13/opcode-patterns-70-finished/</id><summary type="html">&lt;p&gt;genlut.py is really filling out.  It generates the LUT for all 68k opcodes (68000 only), and I'm about 70% done.  77 down, 34 to go.&lt;/p&gt;
+&lt;p&gt;That's just a summary; the function actually does a little more than that.  Take a look at the source for this page if you're interested.&lt;/p&gt;</content><category term="html5"></category><category term="canvas"></category><category term="color"></category><category term="colorpal"></category><category term="web"></category></entry><entry><title>Opcode patterns 70% finished</title><link href="https://palebluepixel.org/2011/10/13/opcode-patterns-70-finished/" rel="alternate"></link><published>2011-10-13T22:27:50-04:00</published><updated>2011-10-13T22:27:50-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-10-13:/2011/10/13/opcode-patterns-70-finished/</id><summary type="html">&lt;p&gt;genlut.py is really filling out.  It generates the LUT for all 68k opcodes (68000 only), and I'm about 70 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;genlut.py is really filling out.  It generates the LUT for all 68k opcodes (68000 only), and I'm about 70% done.  77 down, 34 to go.&lt;/p&gt;
 &lt;p&gt;The OPCODES dict defines the first two bytes of each opcode, both static bits and operands.  The operand strings act as keys into the PATTERNS struct, which contains all possible values for each operand.&lt;/p&gt;
 &lt;p&gt;The recursive function gen() is fed an opcode pattern which may contain operand strings as well as static bits.  Some operand patterns contain other operand patterns, so gen() keeps recursing until all operand patterns are gone.  Once a set of totally static bits has been created, those bits are added to INSTRUCTIONS, along with the name of the opcode.&lt;/p&gt;
 &lt;p&gt;The PATTERNS, OPCODES, and INSTRUCTIONS dicts are all named poorly, and the whole solution  isn't ultra-elegant, but it does follow the structure of the 68k PRM pretty intuitively and is easy to edit.  Once it's complete, I should never need to run it again.&lt;/p&gt;
-&lt;p&gt;(This post was copied from my old &lt;a href="http://aejs.blogspot.com/"&gt;AEJS blog&lt;/a&gt;)&lt;/p&gt;</summary><category term="aejs"></category><category term="html5"></category><category term="javascript"></category><category term="amiga"></category><category term="web"></category></entry><entry><title>LUT</title><link href="https://palebluepixel.org/2011/09/22/lut/" rel="alternate"></link><updated>2011-09-22T22:27:50-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-09-22:2011/09/22/lut/</id><summary type="html">&lt;p&gt;Decoding is easy. Decoding requires a lot of typing. (I am starting to believe this is true of ever aspect of interpreted emulation...)&lt;/p&gt;
+&lt;p&gt;(This post was copied from my old &lt;a href="http://aejs.blogspot.com/"&gt;AEJS blog&lt;/a&gt;)&lt;/p&gt;</content><category term="aejs"></category><category term="html5"></category><category term="javascript"></category><category term="amiga"></category><category term="web"></category></entry><entry><title>LUT</title><link href="https://palebluepixel.org/2011/09/22/lut/" rel="alternate"></link><published>2011-09-22T22:27:50-04:00</published><updated>2011-09-22T22:27:50-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-09-22:/2011/09/22/lut/</id><summary type="html">&lt;p&gt;Decoding is easy. Decoding requires a lot of typing. (I am starting to believe this is true of ever aspect …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Decoding is easy. Decoding requires a lot of typing. (I am starting to believe this is true of ever aspect of interpreted emulation...)&lt;/p&gt;
 &lt;p&gt;For the AEJS decoder, I am creating a &lt;a href="http://en.wikipedia.org/wiki/Lookup_table"&gt;look-up table&lt;/a&gt; with every possible pattern for each instruction. It was my first idea, but I initially discarded it as "wasteful and inelegant". Later, I accepted it as "really fast".&lt;/p&gt;
 &lt;p&gt;I'm generating a large set of bit patterns that map to 68k opcodes, like so:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;0100101011111010 -&amp;gt; BGND
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;0100101011111010 -&amp;gt; BGND
 0100101011111100 -&amp;gt; ILLEGAL
 0100111001110000 -&amp;gt; RESET
 0100111001110001 -&amp;gt; NOP
@@ -2184,10 +2208,10 @@ if( cnvs.getContext) { // Check for canvas support
 &lt;p&gt;Back to work:&lt;/p&gt;
 &lt;p&gt;&lt;a href="/static/images/013/workarea.png"&gt;&lt;static/images class="grid_7" src="/static/images/013/workarea.png" alt=":)" title="" /&gt;&lt;/a&gt;
 &lt;div class="clear"&gt;&lt;/div&gt;&lt;/p&gt;
-&lt;p&gt;(This post was copied from my old &lt;a href="http://aejs.blogspot.com/"&gt;AEJS blog&lt;/a&gt;)&lt;/p&gt;</summary><category term="aejs"></category><category term="html5"></category><category term="javascript"></category><category term="amiga"></category><category term="web"></category></entry><entry><title>Introducing AEJS</title><link href="https://palebluepixel.org/2011/09/20/introducing-aejs/" rel="alternate"></link><updated>2011-09-20T22:27:50-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-09-20:2011/09/20/introducing-aejs/</id><summary type="html">&lt;p&gt;Introducing AEJS, an Amiga emulator written in JavaScript.  Wait, wording it like that makes it sound like it's finished.  It isn't.  It won't be for a long time.  AEJS is just a hobby, and will never hold a candle to UAE.&lt;/p&gt;
+&lt;p&gt;(This post was copied from my old &lt;a href="http://aejs.blogspot.com/"&gt;AEJS blog&lt;/a&gt;)&lt;/p&gt;</content><category term="aejs"></category><category term="html5"></category><category term="javascript"></category><category term="amiga"></category><category term="web"></category></entry><entry><title>Introducing AEJS</title><link href="https://palebluepixel.org/2011/09/20/introducing-aejs/" rel="alternate"></link><published>2011-09-20T22:27:50-04:00</published><updated>2011-09-20T22:27:50-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-09-20:/2011/09/20/introducing-aejs/</id><summary type="html">&lt;p&gt;Introducing AEJS, an Amiga emulator written in JavaScript.  Wait, wording it like that makes it sound like it's finished.  It …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Introducing AEJS, an Amiga emulator written in JavaScript.  Wait, wording it like that makes it sound like it's finished.  It isn't.  It won't be for a long time.  AEJS is just a hobby, and will never hold a candle to UAE.&lt;/p&gt;
 &lt;p&gt;Why the Amiga?  Given that this is my first emulator, it would have been much easier to go with a 6502 or 8080 instead, but I didn't grow up with those; I grew up with a 68k powering an Amiga 500.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://starringthecomputer.com/feature.php?f=122"&gt;&lt;static/images src="/static/images/012/stepfather_iii_amiga_500_2.jpg" alt="Amiga 500 in Stepfather III" title="" /&gt;&lt;/p&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Why JavaScript?  Fabrice Bellard didn't make any excuses for writing an x86 emulator in JavaScript, so I won't either.&lt;/p&gt;
 &lt;p&gt;I'll be using this blog to share updates on the project.  Progress, problems, etc.  Anyone with interest or knowledge of 68k arch or Amiga chipsets is welcome to get involved.&lt;/p&gt;
 &lt;p&gt;Next up: completing the code to generate an opcode lookup table.&lt;/p&gt;
-&lt;p&gt;(This post was copied from my old &lt;a href="http://aejs.blogspot.com/"&gt;AEJS blog&lt;/a&gt;)&lt;/p&gt;</summary><category term="aejs"></category><category term="html5"></category><category term="javascript"></category><category term="amiga"></category><category term="web"></category></entry></feed>
+&lt;p&gt;(This post was copied from my old &lt;a href="http://aejs.blogspot.com/"&gt;AEJS blog&lt;/a&gt;)&lt;/p&gt;</content><category term="aejs"></category><category term="html5"></category><category term="javascript"></category><category term="amiga"></category><category term="web"></category></entry></feed>

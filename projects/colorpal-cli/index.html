@@ -27,17 +27,16 @@
     <![endif]-->
 
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
-            <link href="https://palebluepixel.org/theme/css/styles.min.css?12dcac4b" rel="stylesheet">
-            <link href="https://palebluepixel.org/theme/css/prism.min.css?5f3e3327" rel="stylesheet">
+    <link href="https://palebluepixel.org/theme/css/styles.min.css" rel="stylesheet">
 
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="https://palebluepixel.org/theme/js/jquery.min.js"></script>
     <script src="https://palebluepixel.org/theme/js/jquery.lightbox.min.js"></script>
 
-        <link href="https://palebluepixel.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="Pale Blue Pixel ATOM Feed"/>
-        <link href="https://palebluepixel.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
-              title="Pale Blue Pixel RSS Feed"/>
+    <link href="https://palebluepixel.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+          title="Pale Blue Pixel ATOM Feed"/>
+    <link href="https://palebluepixel.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
+          title="Pale Blue Pixel RSS Feed"/>
 
     <!-- Piwik -->
     <script type="text/javascript">
@@ -78,21 +77,21 @@
             <p>ColorPal CLI is a command-line version of <a href="/projects/colorpal" title="ColorPal project page">ColorPal</a>, my HTML5 color palette
 generator.</p>
 <h2>Demo!</h2>
-<div class="highlight"><pre><span class="nv">$ </span>node cpal.js -f hex -s <span class="m">8</span> MyImage.png
+<div class="codehilite"><pre><span></span>$ node cpal.js -f hex -s <span class="m">8</span> MyImage.png
 
-<span class="c">#07070b</span>
-<span class="c">#bac0c4</span>
-<span class="c">#d1bd66</span>
-<span class="c">#7e8899</span>
-<span class="c">#696964</span>
-<span class="c">#c4b441</span>
-<span class="c">#65683e</span>
-<span class="c">#394434</span>
+<span class="c1">#07070b</span>
+<span class="c1">#bac0c4</span>
+<span class="c1">#d1bd66</span>
+<span class="c1">#7e8899</span>
+<span class="c1">#696964</span>
+<span class="c1">#c4b441</span>
+<span class="c1">#65683e</span>
+<span class="c1">#394434</span>
 </pre></div>
 
 
 <h2>Get it!</h2>
-<div class="highlight"><pre>npm install -g canvas requirejs # install dependencies
+<div class="codehilite"><pre><span></span>npm install -g canvas requirejs # install dependencies
 git clone git@github.com:mwcz/colorpal-cli.git
 cd colorpal-cli
 </pre></div>
@@ -100,7 +99,7 @@ cd colorpal-cli
 
 <h2>Use it!</h2>
 <p>To display the help text, simply run the command without any arguments.</p>
-<div class="highlight"><pre>node cpal.js
+<div class="codehilite"><pre><span></span>node cpal.js
 
 Generate a color palette from an image! :)
 USAGE: node cpal.js IMAGE
@@ -116,7 +115,7 @@ Options:
 
 <p>Let's dive right in by generating palettes from the sample images included with the
 project.</p>
-<div class="highlight"><pre>node cpal.js images/hugepic.png
+<div class="codehilite"><pre><span></span>node cpal.js images/hugepic.png
 
 [ [ 144, 43, 178 ],
   [ 37, 10, 146 ],
@@ -132,7 +131,7 @@ project.</p>
 <p>Into this:</p>
 <p><img alt="hugepic.png colors" src="https://palebluepixel.org/static/images/projects/colorpal-cli/hugepic_colors.png" title="hugepic.png colors" /></p>
 <p>Let's try again with a different image.</p>
-<div class="highlight"><pre>node cpal.js images/issue3.png
+<div class="codehilite"><pre><span></span>node cpal.js images/issue3.png
 
 [ [ 165, 219, 144 ], [ 58, 181, 75 ], [ 254, 250, 203 ] ]
 </pre></div>
@@ -143,14 +142,14 @@ decided to create a smaller palette.</p>
 <p><img alt="issue3.png" src="https://palebluepixel.org/static/images/projects/colorpal-cli/issue3_small.png" title="issue3.png" />
 <img alt="issue3.png colors" src="https://palebluepixel.org/static/images/projects/colorpal-cli/issue3_colors.png" title="issue3.png colors" /></p>
 <p>To generate a specific number of colors, use the <code>-s</code> option.</p>
-<div class="highlight"><pre># generate 8 colors from the same image
+<div class="codehilite"><pre><span></span># generate 8 colors from the same image
 node cpal.js -s 8 images/issue3.png
 </pre></div>
 
 
 <p>You can also specify the output format.  <code>json</code> is the default, but several others are available.</p>
 <h4>Hex output:</h4>
-<div class="highlight"><pre>node cpal.js images/issue3.png -f hex
+<div class="codehilite"><pre><span></span>node cpal.js images/issue3.png -f hex
 #a5db90
 #3ab54b
 #fefacb
@@ -158,15 +157,15 @@ node cpal.js -s 8 images/issue3.png
 
 
 <h4>LESS output:</h4>
-<div class="highlight"><pre><span class="nt">node</span> <span class="nt">cpal</span><span class="nc">.js</span> <span class="nt">images</span><span class="o">/</span><span class="nt">issue3</span><span class="nc">.png</span> <span class="nt">-f</span> <span class="nt">less</span>
-<span class="k">@color0</span><span class="o">:</span> <span class="nt">rgb</span><span class="o">(</span><span class="nt">165</span><span class="o">,</span><span class="nt">219</span><span class="o">,</span><span class="nt">144</span><span class="o">)</span><span class="p">;</span>
-<span class="k">@color1</span><span class="o">:</span> <span class="nt">rgb</span><span class="o">(</span><span class="nt">58</span><span class="o">,</span><span class="nt">181</span><span class="o">,</span><span class="nt">75</span><span class="o">)</span><span class="p">;</span>
-<span class="k">@color2</span><span class="o">:</span> <span class="nt">rgb</span><span class="o">(</span><span class="nt">254</span><span class="o">,</span><span class="nt">250</span><span class="o">,</span><span class="nt">203</span><span class="o">)</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><span class="nt">node</span> <span class="nt">cpal</span><span class="p">.</span><span class="nc">js</span> <span class="nt">images</span><span class="o">/</span><span class="nt">issue3</span><span class="p">.</span><span class="nc">png</span> <span class="nt">-f</span> <span class="nt">less</span>
+<span class="p">@</span><span class="k">color0</span><span class="o">:</span> <span class="nt">rgb</span><span class="o">(</span><span class="nt">165</span><span class="o">,</span><span class="nt">219</span><span class="o">,</span><span class="nt">144</span><span class="o">)</span><span class="p">;</span>
+<span class="p">@</span><span class="k">color1</span><span class="o">:</span> <span class="nt">rgb</span><span class="o">(</span><span class="nt">58</span><span class="o">,</span><span class="nt">181</span><span class="o">,</span><span class="nt">75</span><span class="o">)</span><span class="p">;</span>
+<span class="p">@</span><span class="k">color2</span><span class="o">:</span> <span class="nt">rgb</span><span class="o">(</span><span class="nt">254</span><span class="o">,</span><span class="nt">250</span><span class="o">,</span><span class="nt">203</span><span class="o">)</span><span class="p">;</span>
 </pre></div>
 
 
 <h4>SCSS/SASS output:</h4>
-<div class="highlight"><pre><span class="nt">node</span> <span class="nt">cpal</span><span class="nc">.js</span> <span class="nt">images</span><span class="o">/</span><span class="nt">issue3</span><span class="nc">.png</span> <span class="nt">-f</span> <span class="nt">scss</span>
+<div class="codehilite"><pre><span></span><span class="nt">node</span> <span class="nt">cpal</span><span class="p">.</span><span class="nc">js</span> <span class="nt">images</span><span class="o">/</span><span class="nt">issue3</span><span class="p">.</span><span class="nc">png</span> <span class="nt">-f</span> <span class="nt">scss</span>
 <span class="o">$</span><span class="nt">color0</span><span class="o">:</span> <span class="nt">rgb</span><span class="o">(</span><span class="nt">165</span><span class="o">,</span><span class="nt">219</span><span class="o">,</span><span class="nt">144</span><span class="o">);</span>
 <span class="o">$</span><span class="nt">color1</span><span class="o">:</span> <span class="nt">rgb</span><span class="o">(</span><span class="nt">58</span><span class="o">,</span><span class="nt">181</span><span class="o">,</span><span class="nt">75</span><span class="o">);</span>
 <span class="o">$</span><span class="nt">color2</span><span class="o">:</span> <span class="nt">rgb</span><span class="o">(</span><span class="nt">254</span><span class="o">,</span><span class="nt">250</span><span class="o">,</span><span class="nt">203</span><span class="o">);</span>

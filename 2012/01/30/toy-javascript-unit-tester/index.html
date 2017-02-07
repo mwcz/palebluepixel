@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="Toy javascript unit tester"/>
             <meta property="og:url" content="https://palebluepixel.org/2012/01/30/toy-javascript-unit-tester/"/>
-            <meta property="og:description" content="Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and ..."/>
+            <meta property="og:description" content="Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and …"/>
 
 
     <!--[if gte IE 9]
@@ -29,17 +29,16 @@
     <![endif]-->
 
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
-            <link href="https://palebluepixel.org/theme/css/styles.min.css?12dcac4b" rel="stylesheet">
-            <link href="https://palebluepixel.org/theme/css/prism.min.css?5f3e3327" rel="stylesheet">
+    <link href="https://palebluepixel.org/theme/css/styles.min.css" rel="stylesheet">
 
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="https://palebluepixel.org/theme/js/jquery.min.js"></script>
     <script src="https://palebluepixel.org/theme/js/jquery.lightbox.min.js"></script>
 
-        <link href="https://palebluepixel.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="Pale Blue Pixel ATOM Feed"/>
-        <link href="https://palebluepixel.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
-              title="Pale Blue Pixel RSS Feed"/>
+    <link href="https://palebluepixel.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+          title="Pale Blue Pixel ATOM Feed"/>
+    <link href="https://palebluepixel.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
+          title="Pale Blue Pixel RSS Feed"/>
 
     <!-- Piwik -->
     <script type="text/javascript">
@@ -85,95 +84,95 @@
             <p>Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and had a minor epiphany.  In the back of my mind, there has always been a bit of uncertainty as to how unit testing frameworks work.  Deep in my brain I knew there was something I didn't understand, but I wasn't quite sure what.  I never gave it any conscious thought.</p>
 <p>As a developer, I'd use a framework, write a bunch of <code>testBlahFoo</code> functions, and the framework would magically run them.  </p>
 <p>Then I realized... "Oh, it's just introspection."</p>
-<div class="highlight"><pre><span class="c1">// Create an object with three properties, all functions</span>
-<span class="kd">var</span> <span class="nx">myfuncs</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">func1</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;func it up&quot;</span><span class="p">);</span> <span class="p">},</span>
-    <span class="nx">func2</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;func&#39;s old brother&quot;</span><span class="p">);</span> <span class="p">},</span>
-    <span class="nx">func3</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;bring back da func&quot;</span><span class="p">);</span> <span class="p">}</span>
-<span class="p">};</span>
+<div class="codehilite"><pre><span></span><span class="o">//</span> <span class="nt">Create</span> <span class="nt">an</span> <span class="nt">object</span> <span class="nt">with</span> <span class="nt">three</span> <span class="nt">properties</span><span class="o">,</span> <span class="nt">all</span> <span class="nt">functions</span>
+<span class="nt">var</span> <span class="nt">myfuncs</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">func1</span><span class="p">:</span> <span class="nf">function</span><span class="p">()</span> <span class="err">{</span> <span class="n">console</span><span class="o">.</span><span class="nf">log</span><span class="p">(</span><span class="s2">&quot;func it up&quot;</span><span class="p">);</span> <span class="p">}</span><span class="o">,</span>
+    <span class="nt">func2</span><span class="o">:</span> <span class="nt">function</span><span class="o">()</span> <span class="p">{</span> <span class="err">console.log(&quot;func&#39;s</span> <span class="err">old</span> <span class="err">brother&quot;)</span><span class="p">;</span> <span class="p">}</span><span class="o">,</span>
+    <span class="nt">func3</span><span class="o">:</span> <span class="nt">function</span><span class="o">()</span> <span class="p">{</span> <span class="err">console.log(&quot;bring</span> <span class="err">back</span> <span class="err">da</span> <span class="err">func&quot;)</span><span class="p">;</span> <span class="p">}</span>
+<span class="err">}</span><span class="o">;</span>
 
-<span class="c1">// Run all functions attached to myfuncs</span>
-<span class="k">for</span><span class="p">(</span> <span class="nx">func</span> <span class="k">in</span> <span class="nx">myfuncs</span> <span class="p">)</span> <span class="p">{</span>
-    <span class="nx">myfuncs</span><span class="cp">[</span> <span class="nx">func</span> <span class="cp">]</span><span class="p">();</span>
+<span class="o">//</span> <span class="nt">Run</span> <span class="nt">all</span> <span class="nt">functions</span> <span class="nt">attached</span> <span class="nt">to</span> <span class="nt">myfuncs</span>
+<span class="nt">for</span><span class="o">(</span> <span class="nt">func</span> <span class="nt">in</span> <span class="nt">myfuncs</span> <span class="o">)</span> <span class="p">{</span>
+    <span class="err">myfuncs</span><span class="cp">[</span> <span class="nx">func</span> <span class="cp">]</span><span class="err">()</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="c1">// Outputs:</span>
-<span class="c1">// </span>
-<span class="c1">// func it up</span>
-<span class="c1">// func&#39;s old brother</span>
-<span class="c1">// bring back da func</span>
+<span class="o">//</span> <span class="nt">Outputs</span><span class="o">:</span>
+<span class="o">//</span> 
+<span class="o">//</span> <span class="nt">func</span> <span class="nt">it</span> <span class="nt">up</span>
+<span class="o">//</span> <span class="nt">func</span><span class="err">&#39;</span><span class="nt">s</span> <span class="nt">old</span> <span class="nt">brother</span>
+<span class="o">//</span> <span class="nt">bring</span> <span class="nt">back</span> <span class="nt">da</span> <span class="nt">func</span>
 </pre></div>
 
 
 <p>So simple.  Later, I wrote a very basic unit testing framework, purely as an educational excercise.</p>
 <p>The guts are almost simple as the example above.</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">JTestSuite</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<div class="codehilite"><pre><span></span>var JTestSuite = function () {
 
-    <span class="kd">var</span> <span class="nx">version</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
-        <span class="nx">jt</span><span class="p">,</span>
+    var version = 0.1,
+        jt,
 
-    <span class="nx">init</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">callback</span> <span class="p">)</span> <span class="p">{</span>
-        <span class="nx">jt</span> <span class="o">=</span> <span class="nx">JTests</span><span class="p">();</span>
-        <span class="nx">jt</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span> <span class="nx">callback</span> <span class="p">);</span>
-    <span class="p">},</span>
+    init = function( callback ) {
+        jt = JTests();
+        jt.init( callback );
+    },
 
-    <span class="nx">run</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">fn</span><span class="p">,</span>
-            <span class="nx">prop</span><span class="p">;</span>
+    run = function() {
+        var fn,
+            prop;
 
-        <span class="c1">// Run all functions that begin with &quot;test&quot;</span>
-        <span class="k">for</span><span class="p">(</span> <span class="nx">prop</span> <span class="k">in</span> <span class="k">this</span> <span class="p">)</span> <span class="p">{</span>
-            <span class="k">if</span><span class="p">(</span> <span class="k">typeof</span> <span class="k">this</span><span class="cp">[</span><span class="nx">prop</span><span class="cp">]</span> <span class="o">===</span> <span class="s2">&quot;function&quot;</span> <span class="p">)</span> <span class="p">{</span>
-                <span class="k">if</span><span class="p">(</span> <span class="nx">prop</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="o">===</span> <span class="s2">&quot;test&quot;</span> <span class="p">)</span> <span class="p">{</span>
-                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="k">this</span><span class="cp">[</span><span class="nx">prop</span><span class="cp">]</span><span class="p">(</span><span class="nx">jt</span><span class="p">)</span> <span class="p">);</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">};</span>
+        // Run all functions that begin with &quot;test&quot;
+        for( prop in this ) {
+            if( typeof this[prop] === &quot;function&quot; ) {
+                if( prop.slice(0,4) === &quot;test&quot; ) {
+                    console.log( this[prop](jt) );
+                }
+            }
+        }
+    };
 
-    <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="p">(</span><span class="k">this</span> <span class="k">instanceof</span> <span class="nx">JTestSuite</span><span class="p">)</span> <span class="p">)</span> <span class="k">return</span> <span class="k">new</span> <span class="nx">JTestSuite</span><span class="p">();</span>
+    if( !(this instanceof JTestSuite) ) return new JTestSuite();
 
-    <span class="k">return</span> <span class="p">{</span>
-        <span class="nx">init</span> <span class="o">:</span> <span class="nx">init</span><span class="p">,</span>
-        <span class="nx">run</span>  <span class="o">:</span> <span class="nx">run</span>
-    <span class="p">};</span>
+    return {
+        init : init,
+        run  : run
+    };
 
-<span class="p">};</span>
+};
 </pre></div>
 
 
 <p>In the <code>run</code> function's loop, I first check that each property is a function before attemping to run it.  This avoids a <code>called_non_callable TypeError</code>.  I then check that the name of the property begins with the string "test".  When dynamically calling functions, it's usually a good idea to call <code>obj.hasOwnProperty(propname)</code> to ensure the property wasn't inherited from some unknown source (especially if the property you wanted to reference may have been <code>delete</code>d, but a property with the same name is now surfacing from a parent object), but in this case I'd like to leave open the possibility for inherited Test Suites.</p>
 <p>The <code>JTests</code> object created in the <code>init</code> function is a separate object that contains a bunch of assertions.  It looks something like this:</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">JTests</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<div class="codehilite"><pre><span></span>var JTests = function () {
 
-    <span class="kd">var</span> <span class="nx">version</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
-        <span class="nx">result_callback</span><span class="p">,</span>
+    var version = 0.1,
+        result_callback,
 
-    <span class="nx">init</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">callback</span> <span class="p">)</span> <span class="p">{</span>
-        <span class="nx">result_callback</span> <span class="o">=</span> <span class="nx">callback</span><span class="p">;</span>
-    <span class="p">}</span>
+    init = function( callback ) {
+        result_callback = callback;
+    }
 
-    <span class="nx">assertTrue</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">a</span> <span class="p">)</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">a</span> <span class="o">===</span> <span class="kc">false</span><span class="p">;</span>
-        <span class="nx">result_callback</span><span class="p">(</span> <span class="p">{</span>                                                                                                                                                                         
-            <span class="nx">name</span>   <span class="o">:</span> <span class="s2">&quot;assertTrue&quot;</span><span class="p">,</span>
-            <span class="nx">args</span>   <span class="o">:</span> <span class="cp">[</span> <span class="nx">a</span> <span class="cp">]</span><span class="p">,</span>
-            <span class="nx">result</span> <span class="o">:</span> <span class="nx">result</span>
-        <span class="p">}</span> <span class="p">);</span>
-    <span class="p">};</span>
+    assertTrue = function( a ) {
+        var result = a === false;
+        result_callback( {                                                                                                                                                                         
+            name   : &quot;assertTrue&quot;,
+            args   : [ a ],
+            result : result
+        } );
+    };
 
-    <span class="k">return</span> <span class="p">{</span>
-        <span class="nx">assertTrue</span> <span class="o">:</span> <span class="nx">assertTrue</span>
-    <span class="p">};</span>
+    return {
+        assertTrue : assertTrue
+    };
 
-<span class="p">};</span>
+};
 </pre></div>
 
 
 <p>...except with many more assertions. :)</p>
 <p>Both <code>JTestSuite</code> and <code>JTests</code> use the <a href="http://stackoverflow.com/a/5647397/215148">revealing module pattern</a>. </p>
 <p>I have a lot of ideas for improvement, like <a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself">DRY</a>ing up the assertions, so the <code>{name,args,result}</code> object doesn't have to be defined in each assertion.  But <a href="http://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#JavaScript">many others</a> have already done a great job, and I don't want to reinvent too many wheels.</p>
-<div class="highlight"><pre><span class="c1">// Define a custom handler for the result</span>
+<div class="codehilite"><pre><span></span><span class="c1">// Define a custom handler for the result</span>
 <span class="kd">function</span> <span class="nx">test_callback</span><span class="p">(</span> <span class="nx">result</span> <span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
 <span class="p">}</span>
@@ -188,8 +187,8 @@
 <span class="p">};</span>
 
 <span class="nx">TestSuite</span><span class="p">.</span><span class="nx">testFalsy</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">jt</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// </span><span class="cp">[]</span><span class="c1">, &quot;&quot;, and &quot;0&quot; all == false in javascript</span>
-    <span class="nx">jt</span><span class="p">.</span><span class="nx">assertFalsy</span><span class="p">(</span> <span class="cp">[]</span> <span class="p">);</span>
+    <span class="c1">// [], &quot;&quot;, and &quot;0&quot; all == false in javascript</span>
+    <span class="nx">jt</span><span class="p">.</span><span class="nx">assertFalsy</span><span class="p">(</span> <span class="p">[]</span> <span class="p">);</span>
     <span class="nx">jt</span><span class="p">.</span><span class="nx">assertFalsy</span><span class="p">(</span> <span class="s2">&quot;&quot;</span> <span class="p">);</span>
     <span class="nx">jt</span><span class="p">.</span><span class="nx">assertFalsy</span><span class="p">(</span> <span class="s2">&quot;0&quot;</span> <span class="p">);</span>
 <span class="p">};</span>

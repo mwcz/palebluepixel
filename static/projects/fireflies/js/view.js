@@ -16,7 +16,9 @@ var ParticleView = function () {
             _ref$color = _ref.color,
             color = _ref$color === undefined ? {} : _ref$color,
             _ref$tween = _ref.tween,
-            tween = _ref$tween === undefined ? {} : _ref$tween;
+            tween = _ref$tween === undefined ? {} : _ref$tween,
+            _ref$flee = _ref.flee,
+            flee = _ref$flee === undefined ? {} : _ref$flee;
 
         _classCallCheck(this, ParticleView);
 
@@ -25,6 +27,11 @@ var ParticleView = function () {
         this.tween = tween;
         this.size = size;
         this.color = color;
+        this.flee = flee;
+
+        flee.distance = flee.distance || 0;
+        flee.proximity = flee.proximity || 0;
+        flee.reflex = flee.reflex || 0;
 
         fidget.speed = fidget.speed || 0.1;
         fidget.distance = fidget.distance || 0.1;
@@ -79,13 +86,15 @@ var ParticleView = function () {
             this.destinations = new Float32Array(this.count * 3);
             this.fidgetSpeed = new Float32Array(this.count * 3);
             this.fidgetDistance = new Float32Array(this.count * 3);
+            this.fleeOffset = new Float32Array(this.count * 3);
+            this.fleeOffsetTarget = new Float32Array(this.count * 3);
             this.colors = new Float32Array(this.count * 3);
             this.colorTargets = new Float32Array(this.count * 3);
             this.opacity = new Float32Array(this.count);
             this.opacityDest = new Float32Array(this.count);
             this.tweenTimer = new Float32Array(this.count);
             this.sizes = new Float32Array(this.count);
-            for (var i = 0, i3 = 0; i < this.count; i++, i3 += 3) {
+            for (var i = 0, i3 = 0; i < this.count; i++, i3 = i3 + 3) {
                 this.positions[i3 + 0] = (Math.random() * 2 - 1) * 40;
                 this.positions[i3 + 1] = (Math.random() * 2 - 1) * 40;
                 this.opacity[i] = 1;
@@ -120,14 +129,56 @@ var ParticleView = function () {
             this.uniforms = uniforms;
             this.geometry = geometry;
             this.setViewportRelativeFields();
+            this.initRaycaster();
+            this.initMouse();
+        }
+    }, {
+        key: 'initMouse',
+        value: function initMouse() {
+            this.mouseNDC = new THREE.Vector2(9999, 9999); // Normalized Device Coordinates
+            this.mouse = new THREE.Vector2(9999, 9999);
+            this.fleeVector = new THREE.Vector2();
+            this.flyVector = new THREE.Vector2();
+            document.addEventListener('mousemove', this.onMouseMove.bind(this), false);
+        }
+    }, {
+        key: 'onMouseMove',
+        value: function onMouseMove(evt) {
+            this.mouseDetected = true;
+            evt.preventDefault();
+            this.mouseNDC.x = event.clientX / window.innerWidth * 2 - 1;
+            this.mouseNDC.y = -(event.clientY / window.innerHeight) * 2 + 1;
+        }
+    }, {
+        key: 'updateRaycaster',
+        value: function updateRaycaster() {
+            if (this.mouseDetected) {
+                this.raycaster.setFromCamera(this.mouseNDC, this.camera);
+                var int = this.raycaster.intersectObject(this.mousePlane);
+                if (int && int[0] && int[0].point) {
+                    this.mouse.copy(int[0].point);
+                }
+            }
+        }
+    }, {
+        key: 'initRaycaster',
+        value: function initRaycaster() {
+            // make an invisible plane to shoot rays at
+            this.raycaster = new THREE.Raycaster();
+            var geo = new THREE.PlaneGeometry(1000, 1000);
+            var mat = new THREE.MeshBasicMaterial({ visible: false });
+            this.mousePlane = new THREE.Mesh(geo, mat);
+            this.scene.add(this.mousePlane);
         }
     }, {
         key: 'render',
         value: function render() {
+            this.updateRaycaster();
             this.updateTweenTimers();
             this.updatePositionsTween();
             this.updateOpacityTween();
             this.updateColorTween();
+            this.updateFleeOffsets();
             this.renderer.render(this.scene, this.camera);
         }
     }, {
@@ -143,7 +194,7 @@ var ParticleView = function () {
     }, {
         key: 'setViewportRelativeFields',
         value: function setViewportRelativeFields() {
-            for (var i = 0, i3 = 0; i < this.count; i++, i3 += 3) {
+            for (var i = 0, i3 = 0; i < this.count; i++, i3 = i3 + 3) {
                 this.fidgetDistance[i3 + 0] = this.fidget.distance * (Math.random() - 0.5);
                 this.fidgetDistance[i3 + 1] = this.fidgetDistance[i3 + 0];
                 this.sizes[i] = this.heightScale * this.size + Math.random() * this.size / 2;
@@ -159,7 +210,7 @@ var ParticleView = function () {
     }, {
         key: 'updateColorTween',
         value: function updateColorTween() {
-            for (var i = 0, i3 = 0; i < this.count; i++, i3 += 3) {
+            for (var i = 0, i3 = 0; i < this.count; i++, i3 = i3 + 3) {
                 var c = this.colors[i];
                 var cTarget = this.colorTargets[i];
                 var time = this.tweenTimer[i];
@@ -173,7 +224,7 @@ var ParticleView = function () {
     }, {
         key: 'updateOpacityTween',
         value: function updateOpacityTween() {
-            for (var i = 0, i3 = 0; i < this.count; i++, i3 += 3) {
+            for (var i = 0, i3 = 0; i < this.count; i++, i3 = i3 + 3) {
                 var o = this.opacity[i];
                 var oDest = this.opacityDest[i];
                 var time = this.tweenTimer[i];
@@ -181,6 +232,31 @@ var ParticleView = function () {
                 this.opacity[i] = onew;
             }
             this.geometry.attributes.opacity.needsUpdate = true;
+        }
+    }, {
+        key: 'updateFleeOffsets',
+        value: function updateFleeOffsets() {
+            var F = this.flee.reflex;
+            for (var i = 0, i3 = 0; i < this.count; i++, i3 = i3 + 3) {
+                this.flyVector.set(this.positions[i3], this.positions[i3 + 1]);
+                this.fleeVector.copy(this.mouse);
+
+                this.fleeVector.sub(this.flyVector);
+
+                var mouseDist = this.fleeVector.length();
+                var distN = (this.flee.proximity - Math.max(0, Math.min(this.flee.proximity, mouseDist))) / this.flee.proximity; // normalized distance
+
+                var I = this.tween.xfunc(distN, 0, 1, 1);
+
+                this.fleeVector.normalize().multiplyScalar(-I * this.flee.distance);
+                // this.fleeVector.normalize().multiplyScalar(-I * this.flee.distance * this.fidgetSpeed[i3]);
+
+                this.fleeOffsetTarget[i3] = this.fleeVector.x;
+                this.fleeOffsetTarget[i3 + 1] = this.fleeVector.y;
+
+                this.fleeOffset[i3 + 0] = (1 - F) * this.fleeOffset[i3 + 0] + F * this.fleeOffsetTarget[i3 + 0];
+                this.fleeOffset[i3 + 1] = (1 - F) * this.fleeOffset[i3 + 1] + F * this.fleeOffsetTarget[i3 + 1];
+            }
         }
     }, {
         key: 'updateTweenTimers',
@@ -193,25 +269,40 @@ var ParticleView = function () {
         key: 'updatePositionsTween',
         value: function updatePositionsTween() {
             var t = this.clock.getElapsedTime();
-            for (var i = 0, i3 = 0; i < this.count; i++, i3 += 3) {
+            var fleeDistance = this.flee.distance === 0 ? 0 : 1 / this.flee.distance;
+            for (var i = 0, i3 = 0; i < this.count; i++, i3 = i3 + 3) {
                 if (this.opacity[i] === 0) break;
                 var x = this.positions[i3 + 0];
                 var y = this.positions[i3 + 1];
                 var xdest = this.destinations[i3 + 0];
                 var ydest = this.destinations[i3 + 1];
+                var fleex = this.fleeOffset[i3 + 0];
+                var fleey = this.fleeOffset[i3 + 1];
                 var fsx = this.fidgetSpeed[i3 + 0];
                 var fsy = this.fidgetSpeed[i3 + 1];
-                var fdx = this.fidgetDistance[i3 + 0];
-                var fdy = this.fidgetDistance[i3 + 1];
+                var fdx = this.fidgetDistance[i3 + 0] * (1 + fleex * fleeDistance);
+                var fdy = this.fidgetDistance[i3 + 1] * (1 + fleey * fleeDistance);
                 var time = this.tweenTimer[i];
-                var xnew = this.tween.xfunc(time, x, xdest - x, this.tween.duration) + Math.sin(t * fsx) * fdx;
-                var ynew = this.tween.yfunc(time, y, ydest - y, this.tween.duration) - Math.cos(t * fsy) * fdy;
-                //                         current position + destination position + fidget
+                var travelx = this.tween.xfunc(time, x, xdest - x, this.tween.duration);
+                var travely = this.tween.yfunc(time, y, ydest - y, this.tween.duration);
+                var fidgetx = Math.sin(t * fsx) * fdx;
+                var fidgety = Math.cos(t * fsy) * fdy;
+                var xnew = travelx + fidgetx + fleex;
+                var ynew = travely - fidgety + fleey;
                 this.positions[i3 + 0] = xnew;
                 this.positions[i3 + 1] = ynew;
-                // this.positions[ i3 + 2 ] = RATIO * this.positions[ i3 + 2 ] + (1 - RATIO) * this.destinations[ i3 + 2 ] + Math.sin(t) * this.fidgetArray[ i3 + 2 ];
             }
             this.geometry.attributes.position.needsUpdate = true;
+        }
+    }, {
+        key: 'mouseFlee',
+        value: function mouseFlee() {
+            var x = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+            var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+
+            var m = new THREE.Vector2(x, y);
+
+            return m;
         }
     }, {
         key: 'shape',
@@ -228,7 +319,7 @@ var ParticleView = function () {
             //     this.destinations[i3]   = x * w;
             //     this.destinations[i3+1] = y * h;
             // }
-            for (var i = 0, i2 = 0, i3 = 0; i < this.count; i++, i2 += 2, i3 += 3) {
+            for (var i = 0, i2 = 0, i3 = 0; i < this.count; i++, i2 = i2 + 2, i3 = i3 + 3) {
                 if (i2 < dotterResult.dots.length) {
                     // update destinations for each particle which has a corresponding destination
                     var x = dotterResult.dots[i2] - 0.5;

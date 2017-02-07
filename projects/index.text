@@ -16,20 +16,40 @@ $(function () {
 </script>
  #}
 
+<h2>Projects</h2>
+
+<p>Here's a reasonably complete list of my software projects.</p>
+
 <div class="pbp-project-list">
     {% import 'includes/panel.html' as project_thumbnail %}
 
     {{ project_thumbnail.write(
+        body_title   = 'Fireflies',
+        body_text    = 'A flock of fireflies forms shapes for your enjoyment.',
+        header_image = '/static/images/projects/icon_fireflies.jpg',
+        link_url     = '/projects/fireflies',
+        demo_url     = '/static/projects/fireflies',
+        source_url   = 'https://github.com/mwcz/fireflies/',
+        ) }}
+    {{ project_thumbnail.write(
+        body_title   = 'Tracer',
+        body_text    = 'A connect the dots game in 3D.  Built in 72 hours.',
+        header_image = '/static/images/projects/icon_tracer.jpg',
+        link_url     = '/projects/tracer',
+        demo_url     = 'http://scripta.co/tracer/',
+        source_url   = 'https://github.com/ScriptaGames/Tracer',
+        ) }}
+    {{ project_thumbnail.write(
         body_title   = 'Zorbio',
-        body_text    = 'Zorbio is a free multiplayer eat-em-up game, currently closed beta, but we will totally give you a beta key.',
-        header_image = '/static/images/projects/icon_zorbio.png',
+        body_text    = 'A free multiplayer world-eating game.',
+        header_image = '/static/images/projects/icon_zorbio.jpg',
         link_url     = '/projects/zorbio',
         demo_url     = 'http://zor.bio/',
         ) }}
     {{ project_thumbnail.write(
         body_title   = 'Square Off',
         body_text    = 'Square Off is a 1v1 airhockey-style game.  Place squares to deflect the disc.  We built Square Off in 72 hours for <a href="http://ludumdare.com/compo/2016/04/13/welcome-to-ludum-dare-35/">LD35</a>.',
-        header_image = '/static/images/projects/icon_sqoff.png',
+        header_image = '/static/images/projects/icon_sqoff.jpg',
         link_url     = '/projects/squareoff',
         demo_url     = 'http://sqoff.com/',
         source_url   = 'https://github.com/ScriptaGames/SquareOff/',
@@ -37,7 +57,7 @@ $(function () {
     {{ project_thumbnail.write(
         body_title   = 'Kimotion',
         body_text    = 'Kimotion is a framework for building interactive art installations.',
-        header_image = '/static/images/projects/icon_kimotion.png',
+        header_image = '/static/images/projects/icon_kimotion.jpg',
         link_url     = '/projects/kimotion',
         demo_url     = 'http://kimotion.xyz/live/#sandstorm',
         source_url   = 'https://github.com/mwcz/Kimotion',
@@ -45,7 +65,7 @@ $(function () {
     {{ project_thumbnail.write(
         body_title   = 'Ping',
         body_text    = 'A four-player pong clone created for Red Hat\'s annual customer conference.',
-        header_image = '/static/images/projects/icon_ping.png',
+        header_image = '/static/images/projects/icon_ping.jpg',
         link_url     = '/projects/ping',
         demo_url     = 'https://access.redhat.com/access-labs-challenge/',
         source_url   = 'https://github.com/redhataccess/pinglabs/',
@@ -84,14 +104,14 @@ $(function () {
     {{ project_thumbnail.write(
         body_title   = 'median-cut.js',
         body_text    = 'An implementation of the median-cut algorithm in JavaScript. Powers ColorPal\'s palette extraction.',
-        header_image = '/static/images/projects/icon_mediancut.png',
+        header_image = '/static/images/projects/icon_mediancut.jpg',
         link_url     = '/projects/mediancut',
         source_url   = 'https://github.com/mwcz/median-cut-js',
         ) }}
     {{ project_thumbnail.write(
         body_title   = 'Pale Blue Pixel',
         body_text    = 'My tech &amp; programming blog (you\'re looking at it!)',
-        header_image = '/static/images/projects/icon_palebluepixel.png',
+        header_image = '/static/images/projects/icon_palebluepixel.jpg',
         link_url     = '/projects/palebluepixel',
         source_url   = 'https://github.com/mwcz/palebluepixel',
         demo_url     = 'javascript:alert(\'You are already here!\');',
@@ -99,7 +119,7 @@ $(function () {
     {{ project_thumbnail.write(
         body_title   = 'clayto.com',
         body_text    =  'My photography website.',
-        header_image = '/static/images/projects/icon_clayto.png',
+        header_image = '/static/images/projects/icon_clayto.jpg',
         link_url     = '/projects/clayto.com',
         source_url   = 'https://github.com/mwcz/clayto.com',
         demo_url     = 'http://clayto.com/',
@@ -107,14 +127,14 @@ $(function () {
     {{ project_thumbnail.write(
         body_title   = 'AEJS',
         body_text    = 'An early-stages Amiga 500 emulator in JavaScript and HTML5.',
-        header_image = '/static/images/projects/icon_aejs.png',
+        header_image = '/static/images/projects/icon_aejs.jpg',
         link_url     = '/projects/aejs',
         source_url   = 'https://github.com/mwcz/AEJS',
         ) }}
     {{ project_thumbnail.write(
         body_title   = 'Bouncey',
         body_text    = 'A relaxing JavaScript + HTML5 canvas physics simulator. Watch and be soothed.',
-        header_image = '/static/images/projects/icon_bouncey.png',
+        header_image = '/static/images/projects/icon_bouncey.jpg',
         link_url     = '/projects/bouncey',
         source_url   = 'https://github.com/mwcz/bouncey',
         demo_url     = '/projects/bouncey',
@@ -122,7 +142,7 @@ $(function () {
     {{ project_thumbnail.write(
         body_title   = 'Canvas Indexed Color',
         body_text    = 'A tech demo in HTML5 canvas demonstrating an indexed-color-like effect.',
-        header_image = '/static/images/projects/icon_cic.png',
+        header_image = '/static/images/projects/icon_cic.jpg',
         link_url     = '/projects/canvas_indexed_color',
         demo_url     = '/projects/canvas_indexed_color',
         source_url   = 'https://github.com/mwcz/palebluepixel/tree/master/content/static/projects/canvas_indexed_color',
@@ -130,7 +150,7 @@ $(function () {
     {{ project_thumbnail.write(
         body_title   = 'JSImage',
         body_text    = 'A JavaScript library for basic image operations.',
-        header_image = '/static/images/projects/icon_jsimage.png',
+        header_image = '/static/images/projects/icon_jsimage.jpg',
         link_url     = '/projects/jsimage',
         source_url   = 'https://github.com/mwcz/jsimage',
         demo_url     = '/2011/11/17/html5-canvas-point-operations/',
