@@ -1,6 +1,6 @@
-Makefile
 srv.pid
 pelican.pid
 *.pyc
 output/*
 cache
+node_modules
