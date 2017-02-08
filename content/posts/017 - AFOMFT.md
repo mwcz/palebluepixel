@@ -1,9 +1,0 @@
-Title: AFOMFT
-Date: 2012-05-10 21:47:00
-Tags: html5, javascript, linux, python, django, vim, stackoverflow, git, bash, amiga, nostalgia
-Image: ![A few of my favorite things](/static/images/017/afomft.png)
-Summary: Just a few of my favorite things.
-Status: draft
-Mwc: 17
-
-![A few of my favorite things](/static/images/017/afomft.png)
