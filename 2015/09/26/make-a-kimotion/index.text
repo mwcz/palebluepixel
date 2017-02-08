@@ -121,8 +121,8 @@ success this year.
  - [Kimotion source code][kimotion-code]
  - [More about last year's exhibit][dimo-particles]
  - [Opensource.com article about DiMo 2014][osdc]
- - [The Deconstruction of Falling Stars]({filename}/posts/034 - the deconstruction of falling particles.md) - technical info about how it was built
- - [Particles and π - DiMo Comes to Life]({filename}/posts/033 - particles and pi - dimo comes to life.md) - more about the exhibit at SparkCon!
+ - [The Deconstruction of Falling Stars](/posts/034 - the deconstruction of falling particles.md) - technical info about how it was built
+ - [Particles and π - DiMo Comes to Life](/posts/033 - particles and pi - dimo comes to life.md) - more about the exhibit at SparkCon!
 
 <style type="text/css">
 .vimeo-thumbnail {
@@ -181,7 +181,7 @@ window.addEventListener('resize', set_vimeo_iframe_height);
 [kimotion-web]: http://kimotion.xyz
 [kimotion-code]: https://github.com/mwcz/Kimotion
 [kimotion-videos]: http://kimotion.xyz/#videos
-[thumbnails]: {filename}/static/images/039/thumbnails.png
+[thumbnails]: {attach}thumbnails.png
 [p5js]: http://p5js.org
 [threejs]: http://threejs.org
 [dimo-particles]: /projects/dimo

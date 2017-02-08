@@ -70,10 +70,10 @@
 <p>It's powered by an early version of an old JS toolkit I wrote called JSImage.  The latest version is available at my <a href="https://github.com/mwcz/jsimage">JSImage github repo</a>.  Don't be fooled by the 2011 commits, those are just artifacts from svn-&gt;git migration.  No guarantees that the histo's are actually correct. :)</p>
 <p>I used an old version of a rectangular selection tool called marquee.  I believe it's still located <a href="http://marqueetool.net/">here</a> but I can't be totally sure that's the same project.</p>
 <p>Click, drag, and taste the magic. :|</p>
+<p><img style="display: none !important;" src="https://palebluepixel.org/2011/11/16/html5-canvas-area-selection-averaging/kazoo.png">
 <canvas id="c0">
     Your browser does not support the &lt;canvas&gt; element. Lame.
-</canvas>
-
+</canvas></p>
 <style type="text/css">
     canvas {
         margin     : 0 auto;
@@ -85,18 +85,18 @@
     }
 </style>
 
-<p><link rel="stylesheet" type="text/css" href="/static/css/004/marker.css" /></p>
-<script type="text/javascript" src="/static/js/004/marquee/prototype_reduced.js"></script>
+<p><link rel="stylesheet" type="text/css" href="https://palebluepixel.org/2011/11/16/html5-canvas-area-selection-averaging/marker.css" /></p>
+<script type="text/javascript" src="https://palebluepixel.org/2011/11/16/html5-canvas-area-selection-averaging/marquee/prototype_reduced.js"></script>
 
-<script type="text/javascript" src="/static/js/004/marquee/rectmarquee.js"></script>
+<script type="text/javascript" src="https://palebluepixel.org/2011/11/16/html5-canvas-area-selection-averaging/marquee/rectmarquee.js"></script>
 
-<script type="text/javascript" src="/static/js/004/JSImage.js"></script>
+<script type="text/javascript" src="https://palebluepixel.org/2011/11/16/html5-canvas-area-selection-averaging/JSImage.js"></script>
 
 <script type="text/javascript">
 
 $(function() {
 
-    images0 = new JSImage( "c0", "/static/images/004/kazoo.png" );
+    images0 = new JSImage( "c0", "kazoo.png" );
     setTimeout(function(){images0.draggable();},100); // enable the selection
 
 });

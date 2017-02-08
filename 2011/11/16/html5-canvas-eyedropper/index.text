@@ -17,6 +17,8 @@ Mwc: 1
     }
 </style>
 
+<img style="display: none !important;" src="{attach}kazoo.png">
+
 <script type="text/javascript">
 
 $(function() {
@@ -36,7 +38,7 @@ if( cnvs.getContext) { // Check for canvas support
         cnvs.width = images.width;cnvs.height = images.height; // resize to fit image
         c.drawImage( images, 0, 0 );
     }
-    images.src = "/static/images/001/kazoo.png";
+    images.src = "kazoo.png";
 
     pixel = function(e) {
 

@@ -1,7 +1,7 @@
 Title: WebAssembly is the Keystone
 Date: 2015-06-20 22:52:24
 Tags: wasm, web, javascript
-Image: /static/images/038/asm.png
+Image: /2015/06/20/webassembly-is-the-keystone/asm.png
 TwitterWidgetID: 612458413184942080
 Mwc: 38
 
@@ -83,6 +83,8 @@ For further reading, here are some of the best articles I've found:
  - [Brendan Eich's practical and lighthearted appeal][eich_article]
  - [Eric Elliot makes a strong and diverse case][elliot_article]
  - [ArsTechnica brings wasm to a wider audience][ars_article]
+
+<img style="display: none !important;" src="{attach}asm.png">
 
 [luke_article]: https://blog.mozilla.org/luke/2015/06/17/webassembly/
 [eich_article]: https://brendaneich.com/2015/06/from-asm-js-to-webassembly/#buried-lede

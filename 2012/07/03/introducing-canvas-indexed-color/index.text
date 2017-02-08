@@ -2,19 +2,18 @@ Title: Introducing Canvas Indexed Color
 Date: 2012-07-03 23:44:50
 Tags: html5, canvas, color, web
 Summary: A basic implementation of indexed color palettes for HTML5 canvas.
-Image: /static/images/021/hahatiger.png
+Image: /2012/07/03/introducing-canvas-indexed-color/hahatiger.png
 Mwc: 21
 
 [Canvas Indexed Color demo](/projects/canvas_indexed_color "Canvas Indexed Color demo")
 
-![White SVG Tiger](/static/images/021/hahatiger.png)
+![White SVG Tiger]({attach}hahatiger.png)
 
 First, I converted the classic SVG tiger into a set of canvas drawing
 instructions using [Professor Cloud's conversion
 tool](http://professorcloud.com/svg-to-canvas/ "Professor Cloud's conversion
 tool").  The output looks like
-[this](https://github.com/mwcz/mwcz/blob/master/blog/projects/canvas_indexed_color/vector_images.js
-"Tiger image").  Each call to `cvm.getColor()` used to be a string literal.  
+[this](https://github.com/mwcz/palebluepixel/blob/master/content/static/projects/canvas_indexed_color/demo/vector_images.js).  Each call to `cvm.getColor()` used to be a string literal.  
 
 Vim's regex saved me from having to edit *100,000* lines of canvas instructions
 by hand to replace the color strings.

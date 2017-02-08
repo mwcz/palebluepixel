@@ -73,6 +73,7 @@ The latest version is available at my <a href="https://github.com/mwcz/jsimage">
 repo</a>.  Don't be fooled by the 2011 commits,
 those are just artifacts from svn-&gt;git migration.  No guarantees that the
 histo's are actually correct. :)</p>
+<p><img style="display: none !important;" src="https://palebluepixel.org/2011/11/16/html5-canvas-rgb-histogram/kazoo.png">
 <div class="panel panel-default">
     <div class="panel-heading">
         <b>Original image</b>
@@ -82,8 +83,7 @@ histo's are actually correct. :)</p>
             Your browser does not support the &lt;canvas&gt; element. Lame.
         </canvas>
     </div>
-</div>
-
+</div></p>
 <p><input type="button" onclick="draw_histo()" value="Draw histograms" /></p>
 <div class="row">
     <div class="col-xs-12 col-sm-4">
@@ -126,17 +126,17 @@ histo's are actually correct. :)</p>
 
 <p class="alert alert-info">I'm pretty sure the results are wrong, but here, years later, I can't be bothered to fix it. ;)</p>
 
-<script type="text/javascript" src="/static/js/003/JSImage.js"></script>
+<script type="text/javascript" src="https://palebluepixel.org/2011/11/16/html5-canvas-rgb-histogram/JSImage.js"></script>
 
 <script type="text/javascript">
 
 var draw_histo;
 $(function () {
 
-    var images0 = new JSImage( "c0", "/static/images/003/kazoo.png" );
-    var imagesr = new JSImage( "cr", "/static/images/003/kazoo.png" );
-    var imagesg = new JSImage( "cg", "/static/images/003/kazoo.png" );
-    var imagesb = new JSImage( "cb", "/static/images/003/kazoo.png" );
+    var images0 = new JSImage( "c0", "kazoo.png" );
+    var imagesr = new JSImage( "cr", "kazoo.png" );
+    var imagesg = new JSImage( "cg", "kazoo.png" );
+    var imagesb = new JSImage( "cb", "kazoo.png" );
 
     draw_histo = function () {
 

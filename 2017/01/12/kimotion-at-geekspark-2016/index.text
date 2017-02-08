@@ -2,7 +2,7 @@ Title: Kimotion at geekSPARK 2016
 Date: 2017-01-12
 Tags: programming, javascript, threejs, webgl, 3d, art, sparkcon, geekspark, dimo, physics, web
 Summary: Kimotion-powered interactive art at SPARKcon 2016.
-Image: /static/images/044/thumb.jpg
+Image: /2017/01/12/kimotion-at-geekspark-2016/thumb.jpg
 Gallery: 044
 Mwc: 44
 
@@ -18,8 +18,8 @@ This year, I added Leap Motion support, which was a huge... *jump* forward for
 hand tracking.
 
 <video style="margin: 0 auto" controls autoplay loop>
-<source src="/static/videos/044/arm.mp4" />
-<source src="/static/videos/044/arm.webm" />
+<source src="{attach}arm.mp4" />
+<source src="{attach}arm.webm" />
 </video>
 
 Adam, of Maniacal Labs, built the fantastic adjustable Leap Motion mounting arm
@@ -43,7 +43,7 @@ their [awesome][ml1] [LED][ml2] [displays][ml3].  Adam even wrote a brand new
 Kimotion client to run on their biggest display, which you can see a clip of in
 the video at the top of this post.
 
-![Maniacal Labs @ geekSPARK 2016](/static/images/044/maniacal.jpg)
+![Maniacal Labs @ geekSPARK 2016]({attach}maniacal.jpg)
 
 Our two exhibits fit so well together that we're considering uniting even
 further next year.
@@ -55,7 +55,7 @@ $GALLERY
 
 ## Viva la geekSPARK!
 
-<img style="float: right" src="/static/images/044/geekspark.png" alt="geekSPARK logo" />
+<img style="float: right" src="{attach}geekspark.png" alt="geekSPARK logo" />
 
 Thanks to Truett and Noel for all their organization and support.  Thanks to
 Ian for pulling me into this project two years ago and for climbing into the
@@ -64,6 +64,8 @@ contributors][kc] for building mods and adding color and fun to everyone's
 weekend.
 
 <span class="clearfix"></span>
+
+<img style="display: none !important;" src="{attach}thumb.jpg">
 
 [kimotion]: http://kimotion.xyz
 [ml]: http://maniacallabs.com/

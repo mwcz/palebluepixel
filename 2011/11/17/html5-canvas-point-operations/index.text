@@ -9,14 +9,15 @@ Point operations are image alterations that affect all pixels equally.  Other op
 
 This demonstrates changing contrast, value, saturation, hue, color inversion, and threshold point operations.  Note that there is a bug with increasing value and increasing saturation which I never got around to fixing.
 
-<script type="text/javascript" src="/static/js/005/jsimage.js"></script>
-<script type="text/javascript" src="/static/js/005/colorspace.js"></script>
+<script type="text/javascript" src="{attach}jsimage.js"></script>
+<script type="text/javascript" src="{attach}colorspace.js"></script>
+<img style="display: none !important;" src="{attach}bee.jpg">
 
 <script type="text/javascript">
 
     var IJS_PointOps;
     $(document).ready( function() {
-        IJS_PointOps = new JSImage( "IJS_PointOps", "/static/images/005/bee.jpg" );
+        IJS_PointOps = new JSImage( "IJS_PointOps", "bee.jpg" );
     });
 
 </script>
@@ -85,7 +86,7 @@ This demonstrates changing contrast, value, saturation, hue, color inversion, an
 
     <div class="col-xs-6">
         <br />
-        <button class="btn btn-default" onclick="IJS_PointOps = new JSImage( 'IJS_PointOps', '/static/images/005/bee.jpg' );">Reset</button>
+        <button class="btn btn-default" onclick="IJS_PointOps = new JSImage( 'IJS_PointOps', 'bee.jpg' );">Reset</button>
     </div>
 
 </div>

@@ -51,7 +51,7 @@ I'll continue on with the static method for now, and odds are I'll stick with it
 
 Back to work:
 
-[<static/images class="grid_7" src="/static/images/013/workarea.png" alt=":)" title="" />](/static/images/013/workarea.png)
+[<img class="grid_7" src="{attach}workarea.png" alt=":)" title="" />]({attach}workarea.png)
 <div class="clear"></div>
 
 (This post was copied from my old [AEJS blog](http://aejs.blogspot.com/))

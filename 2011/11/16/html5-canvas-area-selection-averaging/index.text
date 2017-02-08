@@ -11,6 +11,7 @@ I used an old version of a rectangular selection tool called marquee.  I believe
 
 Click, drag, and taste the magic. :|
 
+<img style="display: none !important;" src="{attach}kazoo.png">
 <canvas id="c0">
     Your browser does not support the &lt;canvas&gt; element. Lame.
 </canvas>
@@ -26,17 +27,17 @@ Click, drag, and taste the magic. :|
     }
 </style>
 
-<link rel="stylesheet" type="text/css" href="/static/css/004/marker.css" />
+<link rel="stylesheet" type="text/css" href="{attach}marker.css" />
 
-<script type="text/javascript" src="/static/js/004/marquee/prototype_reduced.js"></script>
-<script type="text/javascript" src="/static/js/004/marquee/rectmarquee.js"></script>
-<script type="text/javascript" src="/static/js/004/JSImage.js"></script>
+<script type="text/javascript" src="{attach}marquee/prototype_reduced.js"></script>
+<script type="text/javascript" src="{attach}marquee/rectmarquee.js"></script>
+<script type="text/javascript" src="{attach}JSImage.js"></script>
 
 <script type="text/javascript">
 
 $(function() {
 
-    images0 = new JSImage( "c0", "/static/images/004/kazoo.png" );
+    images0 = new JSImage( "c0", "kazoo.png" );
     setTimeout(function(){images0.draggable();},100); // enable the selection
 
 });

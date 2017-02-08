@@ -19,7 +19,7 @@
             <meta property="og:url" content="https://palebluepixel.org/2016/09/06/lazyloading-web-components/"/>
             <meta property="og:description" content="Convenience hacking: Web Components without imports."/>
             <meta property="og:image"
-                  content="https://palebluepixel.org/static/images/043/lazyload.gif"/>
+                  content="https://palebluepixel.org/2016/09/06/lazyloading-web-components/lazyload.gif"/>
 
 
     <!--[if gte IE 9]
@@ -81,9 +81,9 @@ or ease-of-use gone mad...</p>
 components like navigation, buttons, and alerts.  Also like Bootstrap, your
 components are distributed as HTML snippets for users to copy, paste, and
 customize.</p>
-<video style="margin: 0 auto" poster="/static/videos/043/thumb.png" autoplay controls loop>
-    <source src="/static/videos/043/bootstrap-paste.webm" />
-    <source src="/static/videos/043/bootstrap-paste.mp4" />
+<video style="margin: 0 auto" poster="https://palebluepixel.org/2016/09/06/lazyloading-web-components/thumb.png" autoplay controls loop>
+    <source src="https://palebluepixel.org/2016/09/06/lazyloading-web-components/bootstrap-paste.webm" />
+    <source src="https://palebluepixel.org/2016/09/06/lazyloading-web-components/bootstrap-paste.mp4" />
 </video>
 
 <p>To improve ease of use, you encapsulate all that HTML into a custom element:</p>
@@ -102,15 +102,15 @@ pages, managing imports becomes a finger-aching chore.</p>
 automatically?  Here's a working demo:</p>
 <div class="row">
     <div class="col-sm-4">
-        <h3>The demo <small><a href="/static/js/043/index.html" target="_blank" rel="noopener noreferrer">open in tab</a></small></h3>
-        <iframe frameborder=0 height="200" width="100%" src="/static/js/043/index.html"></iframe>
+        <h3>The demo <small><a href="/static/043/index.html" target="_blank" rel="noopener noreferrer">open in tab</a></small></h3>
+        <iframe frameborder=0 height="200" width="100%" src="/static/043/index.html"></iframe>
     </div>
     <div class="col-sm-8">
         <h3>The source</h3>
 <pre data-line="3-4,7-11" style="font-size: 1.2rem"><code class="language-markup">&lt;html&gt;
     &lt;head&gt;
         &lt;script defer src=&#34;src/webcomponents.min.js&#34;&gt;&lt;/script&gt;
-        &lt;link rel=&#34;import&#34; href=&#34;src/lazy-load/lazy-load.html&#34;&gt;
+        &lt;link rel=&#34;import&#34; href=&#34;{attach}src/lazy-load/lazy-load.html&#34;&gt;
     &lt;/head&gt;
     &lt;body&gt;
         &lt;lazy-load&gt;
@@ -202,6 +202,7 @@ the <code>names</code> list and imports their HTML templates (using Polymer's ha
 antipattern.  My hope is that developer tooling will be written that injects
 imports as you code, rather than at runtime.</p>
 <p>Thanks to Kyle Buchanan for pointers and corrections!</p>
+<p><img style="display: none !important;" src="https://palebluepixel.org/2016/09/06/lazyloading-web-components/lazyload.gif"></p>
         </div>
 
         <!-- /.entry-content -->

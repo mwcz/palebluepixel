@@ -2,6 +2,7 @@ Title: Introducing Drop64, ezpz data URI generator
 Date: 2014-02-25
 Tags: html5, javascript, data uri, web
 Summary: Speed-hacking an old project for fun and... fun.
+Image: /static/images/projects/drop64/recording.gif
 Mwc: 25
 
 A few weeks ago, a [coworker][1] of mine ran into some font issues.  Firefox
@@ -38,7 +39,7 @@ output box, created a github page for it, and registered [drop64.com][7].
 
 Voila:
 
-![Drop64 recording]({filename}/static/images/projects/drop64/recording.gif Drop64 recording)
+![Drop64 recording](/static/images/projects/drop64/recording.gif Drop64 recording)
 
 It's not exactly a technical marvel, and the code is still rife with ColorPal
 stuff.  I only ripped out what was absolutely necessary to get the tool working

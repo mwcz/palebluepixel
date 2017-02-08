@@ -1,7 +1,7 @@
 Title: DiMo: The Deconstruction of Falling Stars
 Date: 2014-10-30
 Tags: programming, javascript, requirejs, amd, threejs, webgl, 3d, art, sparkcon, geekspark, dimo, physics, web
-Image: /static/images/034/ring-explosion.png
+Image: /2014/10/30/dimo-the-deconstruction-of-falling-stars/swath-colors.png
 Summary: The construction of a WebGL particle physics gravity simulation *slash* interactive art installation.
 Mwc: 34
 TwitterWidgetID: 552583725046054912
@@ -147,7 +147,8 @@ assigned each frame.
 role="math">\vec{v}</span> is the velocity vector.  <span
 role="math">a_{max}</span> is the maximum magnitude an acceleration vector is
 allowed to have (configurable via the "max accel" parameter in the UI config
-panel).
+panel).  The decimal constants are there to evenly distribute the waves, and
+because I was too lazy to figure out the correct fraction to use.
 
 The range of `cos` and `sin` are `-1..1`, but the color values I needed are
 `0..1`.  The `+1` addition shifts the output into `0..2`, and the `/2` division
@@ -226,8 +227,8 @@ Here's my wishlist for further improvements to the visualization.
 More likely, I'll use what I learned from DiMo on a super-secret future
 project.
 
-<link rel="stylesheet" type="text/css" href="{filename}/static/js/033/katex/katex.min.css">
-<script src="{filename}/static/js/033/katex/katex.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/js/katex/katex.min.css">
+<script src="/static/js/katex/katex.min.js"></script>
 <script>
     function set_vimeo_iframe_height() {
         var ifr = document.getElementById('dimo-demo');
@@ -242,7 +243,7 @@ project.
 </script>
 
 [prevpost]: /2014/08/25/particles-and-p-dimo-comes-to-life/
-[sinewaves]: {filename}/static/images/034/sine_waves.png
+[sinewaves]: {attach}sine_waves.png
 [sparkcon]: http://www.sparkcon.com/
 [geeksparkrh]: https://github.com/geekspark-rh/
 [renderer]: https://github.com/geekspark-rh/dimo-renderer
@@ -251,12 +252,12 @@ project.
 [gpucalc]: http://vimeo.com/97329154
 [ws]: https://en.wikipedia.org/wiki/WebSocket
 [opencv]: http://opencv.org/
-[random-colors]: {filename}/static/images/034/random-colors.png
-[swath-colors]: {filename}/static/images/034/swath-colors.png
+[random-colors]: {attach}random-colors.png
+[swath-colors]: {attach}swath-colors.png
 [glm]: http://glmatrix.net/
-[smalldot]: {filename}/static/images/034/smalldot.png
-[smalldotlargedot]: {filename}/static/images/034/smalldot-largedot.png
-[orbit]: {filename}/static/images/034/orbit.gif "When I recorded this gif, it lined up *completely* by chance.  So lucky.  It would have been a PITA to try to line up the dot so the orbit looped smoothly!  There is a slight jump, but it's subtle."
+[smalldot]: {attach}smalldot.png
+[smalldotlargedot]: {attach}smalldot-largedot.png
+[orbit]: {attach}orbit.gif "When I recorded this gif, it lined up *completely* by chance.  So lucky.  It would have been a PITA to try to line up the dot so the orbit looped smoothly!  There is a slight jump, but it's subtle."
 [caniusewebgl]: https://en.wikipedia.org/wiki/WebGL#Desktop_browsers
 [input]: https://github.com/geekspark-rh/dimo-input
 [glsl]: https://en.wikipedia.org/wiki/OpenGL_Shading_Language

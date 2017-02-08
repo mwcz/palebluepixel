@@ -1,7 +1,7 @@
 Title: Particles and π - DiMo Comes to Life
 Date: 2014-08-25
 Tags: programming, javascript, requirejs, amd, threejs, webgl, 3d, art, sparkcon, geekspark, dimo, physics, web
-Image: /static/images/033/ring-anim.gif
+Image: /2014/08/25/particles-and-p-dimo-comes-to-life/dimo-kids.jpg
 Summary: A player walks up Fayetteville St in Raleigh, North Carolina.  SparkCon has begun, and dozens of artists are ...
 TwitterWidgetID: 552863179194511360
 Gallery: 033
@@ -26,7 +26,7 @@ around three circles.  The silhouettes of three children stand on pedistals
 near the wall, each one waving an illuminated baton.
 
 <figure>
-    <img src="{filename}/static/images/033/dimo-kids.jpg" alt="children playing DiMo">
+    <img src="{attach}dimo-kids.jpg" alt="children playing DiMo">
     <figcaption>photo by Yujin Kim</figcaption>
 </figure>
 
@@ -66,13 +66,13 @@ Enjoy these photos from Digital Motion at SPARKcon 2014.
 
 I'm working on a follow-up post, with technical information about the
 implementation.  *Update* it's 
-[here]({filename}/posts/034 - the deconstruction of falling particles.md)!
+[here](/posts/034 - the deconstruction of falling particles.md)!
 
 
 
 This (2014) was my first year as a volunteer, but it was a tremendously
 educational and *fun* experience, so I'll definitely be back next year.
-*Update* [2015's exhibit info and pictures!]({filename}/posts/039 - make a kimotion.md)!
+*Update* [2015's exhibit info and pictures!](/posts/039 - make a kimotion.md)!
 
 
 
@@ -103,7 +103,7 @@ see our exhibits!  Seeing their smiles as they waved the batons was incredibly
 rewarding.  Everyone seemed to have fun.  One kid liked it so much he cried
 when it was time to leave.
 
-![ring animation in dimo]({filename}/static/images/033/ring-anim.gif)
+![ring animation in dimo]({attach}ring-anim.gif)
 
 You can find all the code at our [GitHub group][geeksparkrh].  The
 visualization code described in this post is in the [dimo-renderer][renderer]

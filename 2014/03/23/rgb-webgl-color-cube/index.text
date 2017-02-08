@@ -1,12 +1,14 @@
 Title: RGB WebGL Color Cube
 Date: 2014-03-23
 Tags: html5, javascript, color, colorpal, webgl, web
-Image: /static/images/026/colorcube.jpg
+Image: /2014/03/23/rgb-webgl-color-cube/colorcube.jpg
 Mwc: 26
 
 I spent a bit of time this weekend building an RGB color cube for
 [ColorPal][4], using [Three.js][1].  Drag and drop any image, and you'll see a
 cube with all the pixels of your image mapped into 3D space.
+
+<img style="display: none !important;" src="{attach}colorcube.jpg">
 
 <a class="btn btn-default btn-lg"
 href="/static/projects/colorpal_colorcube">Launch live demo!</a> and [view the
@@ -53,7 +55,7 @@ By setting `vertexColors: true` on the `ParticleSystemMaterial`, Three.js will
 match each vertex in the `vertices` array with a color in the `colors` array.
 `vertices[1726]` will use `colors[1726]`, for example.
 
-![Screenshot of ColorCube](/static/images/025/screenshot.png "Screenshot of ColorCube")
+![Screenshot of ColorCube]({attach}screenshot.png "Screenshot of ColorCube")
 
 A vertex and a color are created for each pixel in the source image.  For the
 vertex, <span style="color: red;">red</span> values are mapped to the `X` axis,

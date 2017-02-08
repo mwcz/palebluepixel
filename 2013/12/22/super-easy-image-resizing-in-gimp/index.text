@@ -2,7 +2,7 @@ Title: Super easy image resizing in GIMP
 Date: 2013-12-22
 Tags: gimp
 Summary: By accident, I discovered that GIMP number fields evaluate math expressions.  So convenient!
-Image: /static/images/024/gimp_math.gif
+Image: /2013/12/22/super-easy-image-resizing-in-gimp/gimp_math.gif
 Mwc: 24
 
 Ever been here?
@@ -21,7 +21,7 @@ I've done that countless times.  As I was about to do the same thing once more,
 I thought "Hmm, wouldn't it be nice if we could do simple math inside the New
 Image dialog?  Well, I tried it and it worked.
 
-![GIMP math recording]({filename}/static/images/024/gimp_math.gif "GIMP math recording")
+![GIMP math recording]({attach}gimp_math.gif "GIMP math recording")
 
 The feature was added in GIMP 2.8, so it's fairly recent.
 

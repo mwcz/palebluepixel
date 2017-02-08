@@ -1,9 +1,10 @@
 Title: The Lurking Horror
 Date: 2015-06-20 21:13:00
 Tags: text adventure, terminal, cool-retro-term, gaming, nostalgia
-Image: /static/images/037/lurking-horror-crt-thumb.jpg
+Image: /2015/06/20/the-lurking-horror/lurking-horror-crt-thumb.jpg
 TwitterWidgetID: 612457940897894401
 Mwc: 37
+
 
 In the midst of this beastly summer we've just entered, nothing seems farther
 away than the lung-clenching air of winter.  When things are this hot, and
@@ -27,10 +28,12 @@ Locate `LURKING.DAT` in your copy of Lurking Horror, and...
 
     frotz LURKING.DAT
 
-![The Lurking Horror running in Cool-Retro-Term](/static/images/037/lurking-horror-crt.jpg)
+![The Lurking Horror running in Cool-Retro-Term]({attach}lurking-horror-crt.jpg)
 
 Crank up the AC, grab your clicky keyboard, make CRT fullscreen, turn off the
 lights, and bathe in the cool cathode rays.
+
+<img style="display: none !important;" src="{attach}lurking-horror-crt-thumb.jpg">
 
 [gh-issue]: https://github.com/Swordfish90/cool-retro-term/issues/208
 [install]: https://github.com/Swordfish90/cool-retro-term#get-cool-retro-term

@@ -1,6 +1,7 @@
 Title: ColorPal Output Update
 Date: 2012-07-30 22:30:00
 Tags: html5, javascript, color, colorpal, web
+Image: /2012/07/30/colorpal-output-update/after.png
 Mwc: 22
 
 Hi pals.
@@ -19,11 +20,11 @@ freaking inputs.
 
 Blah:
 
-![Before](/static/images/022/before.png)
+![Before]({attach}before.png)
 
 Huzzah:
 
-![After](/static/images/022/after.png)
+![After]({attach}after.png)
 
 All eight colors can be pasted out in one fell swoop of the mouse.
 
@@ -50,7 +51,6 @@ but pretty soon it'll be ColorPal pumping out those swatches.
 
 That's not the only change.  If you're not excited, don't worry.  I am!
 
-[<static/images src="/static/images/019/colorpal_logo.png" alt="ColorPal logo" title=""
-/>](/projects/colorpal)
+[<img src="{attach}colorpal_logo.png" alt="ColorPal logo" title="" />](/projects/colorpal)
 
 Happy coloring!

@@ -2,7 +2,7 @@ Title: Kimotion Modding 101
 Date: 2016-08-28
 Tags: programming, javascript, threejs, webgl, 3d, web, kimotion, art
 Summary: How to create an interactive art display with Kimotion.
-Image: /static/images/042/thumb.jpg
+Image: /2016/08/28/kimotion-modding-101/thumb.jpg
 Gallery: 042
 Mwc: 42
 
@@ -35,7 +35,7 @@ Then open [localhost:8000/#example2d](http://localhost:8000/#example2d).
 Wave your hand around and you should see a trail of black-outlined squares,
 like this:
 
-![example2d mod screenshot](/static/images/042/example2d.jpg)
+![example2d mod screenshot]({attach}example2d.jpg)
 
 
 ## Create your mod!
@@ -76,12 +76,12 @@ look at p5's [function reference][p5-ref] for all the possibilities.
 For your first tweak,  replace `rect` with `ellipse`, and refresh your browser.
 Voila!
 
-![example2d mod screenshot with circles](/static/images/042/example2d-circle.jpg)
+![example2d mod screenshot with circles]({attach}example2d-circle.jpg)
 
 There's an existing mod with a few more tweaks, Rainbow Squares.  It finds out
 the angle of hand motion and colors the square based on that angle.
 
-![rainbow squares mod screenshot](/static/images/042/rainbow-squares.jpg)
+![rainbow squares mod screenshot]({attach}rainbow-squares.jpg)
 
 Check out [Rainbow Squares][rainbow-square] if you're interesting in using an
 effect like that.
@@ -96,6 +96,8 @@ a few ways to get help:
  - Tweet [@mwcz][twitter]
  - Open a [Kimotion issue][kimotion-issue]
  - Explore the existing [Kimotion mods][mods]
+
+<img style="display: none !important;" src="{attach}thumb.jpg">
 
 [kimotion-web]: http://kimotion.xyz
 [kinect]: http://www.xbox.com/en-US/xbox-360/accessories/kinect

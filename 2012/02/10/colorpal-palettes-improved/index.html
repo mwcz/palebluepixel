@@ -18,6 +18,8 @@
             <meta property="og:title" content="ColorPal palettes improved!"/>
             <meta property="og:url" content="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/"/>
             <meta property="og:description" content="In my last post on the subject, I introduced ColorPal, my HTML5 color palette generation tool. It didn't perform well …"/>
+            <meta property="og:image"
+                  content="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/median-mean-comparison.png"/>
 
 
     <!--[if gte IE 9]
@@ -66,16 +68,17 @@
         </header>
         <div class="entry-content">
             <nav class="toc"></nav>
-            <p><a href="/projects/colorpal"><static/images src="/static/images/019/colorpal_logo.png" alt="ColorPal logo" title=""
-/></a></p>
-<p>In my <a href="/2012/01/16/colorpal-alpha/">last post</a> on the subject, I introduced
+            <p>In my <a href="/2012/01/16/colorpal-alpha/">last post</a> on the subject, I introduced
 ColorPal, my HTML5 color palette generation tool.  It didn't perform well with
 certain types of images, so I fixed it. :)</p>
+<hr />
+<p><a href="/projects/colorpal"><img src="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/colorpal_logo.png" alt="ColorPal logo" title=""
+/></a></p>
 <p>Color palettes will now match the image even better.  Especially for images
 with infrequent but <em>important</em> colors.  Here's a comparison of the old and new
 methods, on an image that is mostly black:</p>
 <p><img alt="comparison of palettes generated with median and
-mean" src="/static/images/019/median-mean-comparison.png" /></p>
+mean" src="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/median-mean-comparison.png" /></p>
 <p>You can see that with the old method, the black pixels definitely took over the
 palette.</p>
 <p><a href="/projects/colorpal">Try it with your own images!</a></p>
@@ -86,7 +89,7 @@ low-population, high-importance colors, like the one above, palettes will look
 <h1>Why the 'median' in median-cut?</h1>
 <p>Median Cut is an algorithm typically used to reduce the number of colors in an
 image.</p>
-<p><img alt="16 million colors versus 16 colors" src="/static/images/019/median-cut-example.png" /></p>
+<p><img alt="16 million colors versus 16 colors" src="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/median-cut-example.png" /></p>
 <p>The steps to perform median cut are fairly straightforward:</p>
 <ol>
 <li>
@@ -108,7 +111,7 @@ image.</p>
 <a href="http://en.wikipedia.org/wiki/Location_parameter">location</a> of a probability
 distribution.  Worded more intuitively... they try to find the center of a set
 of numbers.  They just employ different definitions of "center".</p>
-<p><img alt="mean, median, and mode graphed" src="/static/images/019/mean_median_mode.png" />
+<p><img alt="mean, median, and mode graphed" src="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/mean_median_mode.png" />
 (Thanks <a href="http://en.wikipedia.org/wiki/Median">Wikipedia</a>)</p>
 <p>As you can see clearly in the dashed data set, the mean tends to follow the
 tail.  In other words, mean is useful when outliers are important.  When
@@ -131,13 +134,13 @@ high-population colors.</p>
 <p>Interestingly, photographs of nature tend to have nice, close-to-normal color
 distributions.  A "normal distribution" is a formal term for a "bell curve".</p>
 <p>Check out the red, green, and blue distributions for a photograph of a forest.</p>
-<p><img alt="Forest red   pixel distribution" src="/static/images/019/forest_r.png" />
-<img alt="Forest green pixel distribution" src="/static/images/019/forest_g.png" />
-<img alt="Forest blue  pixel distribution" src="/static/images/019/forest_b.png" /></p>
+<p><img alt="Forest red   pixel distribution" src="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/forest_r.png" />
+<img alt="Forest green pixel distribution" src="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/forest_g.png" />
+<img alt="Forest blue  pixel distribution" src="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/forest_b.png" /></p>
 <p>For comparison, here are the distributions for a shot of NYC.</p>
-<p><img alt="City   red   pixel distribution" src="/static/images/019/city_r.png" />
-<img alt="City   green pixel distribution" src="/static/images/019/city_g.png" />
-<img alt="City   blue  pixel distribution" src="/static/images/019/city_b.png" /></p>
+<p><img alt="City   red   pixel distribution" src="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/city_r.png" />
+<img alt="City   green pixel distribution" src="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/city_g.png" />
+<img alt="City   blue  pixel distribution" src="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/city_b.png" /></p>
 <h2>What's next for ColorPal?  Color spaces.</h2>
 <p>Mean-cut improves ColorPal dramatically for some images, but it's still not
 perfect.  Perfection probably won't be attainable, but there are still many

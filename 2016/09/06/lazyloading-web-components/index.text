@@ -2,7 +2,7 @@ Title: Lazyloading Web Components
 Date: 2016-09-06
 Tags: programming, javascript, html, web-components, polymer
 Summary: Convenience hacking: Web Components without imports.
-Image: /static/images/043/lazyload.gif
+Image: /2016/09/06/lazyloading-web-components/lazyload.gif
 Gallery: 043
 Mwc: 43
 
@@ -24,9 +24,9 @@ components like navigation, buttons, and alerts.  Also like Bootstrap, your
 components are distributed as HTML snippets for users to copy, paste, and
 customize.
 
-<video style="margin: 0 auto" poster="/static/videos/043/thumb.png" autoplay controls loop>
-    <source src="/static/videos/043/bootstrap-paste.webm" />
-    <source src="/static/videos/043/bootstrap-paste.mp4" />
+<video style="margin: 0 auto" poster="{attach}thumb.png" autoplay controls loop>
+    <source src="{attach}bootstrap-paste.webm" />
+    <source src="{attach}bootstrap-paste.mp4" />
 </video>
 
 To improve ease of use, you encapsulate all that HTML into a custom element:
@@ -54,8 +54,8 @@ automatically?  Here's a working demo:
 
 <div class="row">
     <div class="col-sm-4">
-        <h3>The demo <small><a href="/static/js/043/index.html" target="_blank" rel="noopener noreferrer">open in tab</a></small></h3>
-        <iframe frameborder=0 height="200" width="100%" src="/static/js/043/index.html"></iframe>
+        <h3>The demo <small><a href="/static/043/index.html" target="_blank" rel="noopener noreferrer">open in tab</a></small></h3>
+        <iframe frameborder=0 height="200" width="100%" src="/static/043/index.html"></iframe>
     </div>
     <div class="col-sm-8">
         <h3>The source</h3>
@@ -63,7 +63,7 @@ automatically?  Here's a working demo:
 <html>
     <head>
         <script defer src="src/webcomponents.min.js"></script>
-        <link rel="import" href="src/lazy-load/lazy-load.html">
+        <link rel="import" href="{attach}src/lazy-load/lazy-load.html">
     </head>
     <body>
         <lazy-load>
@@ -160,6 +160,8 @@ antipattern.  My hope is that developer tooling will be written that injects
 imports as you code, rather than at runtime.
 
 Thanks to Kyle Buchanan for pointers and corrections!
+
+<img style="display: none !important;" src="{attach}lazyload.gif">
 
 [vulcanize]: https://www.polymer-project.org/1.0/docs/tools/optimize-for-production
 [qsa]: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll

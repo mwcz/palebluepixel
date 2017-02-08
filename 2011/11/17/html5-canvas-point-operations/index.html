@@ -69,15 +69,16 @@
             <p>This is the last demo I made using <a href="https://github.com/mwcz/jsimage">JSImage</a>.  I created it some time around 2009-2010.  At the time, I had checked out an <a href="http://www.amazon.com/Digital-Image-Processing-Algorithmic-Introduction/dp/1846283795">imaging book</a> from my university's library at least ten times.  Most of the exercises in that book I implemented in Python using <a href="http://www.pythonware.com/products/pil/">PIL</a>, but point operations were simple enough to port to JavaScript quickly.</p>
 <p>Point operations are image alterations that affect all pixels equally.  Other operations, like blurring for example, each result pixel depends on adjacent pixels.</p>
 <p>This demonstrates changing contrast, value, saturation, hue, color inversion, and threshold point operations.  Note that there is a bug with increasing value and increasing saturation which I never got around to fixing.</p>
-<script type="text/javascript" src="/static/js/005/jsimage.js"></script>
+<script type="text/javascript" src="https://palebluepixel.org/2011/11/17/html5-canvas-point-operations/jsimage.js"></script>
 
-<script type="text/javascript" src="/static/js/005/colorspace.js"></script>
+<script type="text/javascript" src="https://palebluepixel.org/2011/11/17/html5-canvas-point-operations/colorspace.js"></script>
 
+<p><img style="display: none !important;" src="https://palebluepixel.org/2011/11/17/html5-canvas-point-operations/bee.jpg"></p>
 <script type="text/javascript">
 
     var IJS_PointOps;
     $(document).ready( function() {
-        IJS_PointOps = new JSImage( "IJS_PointOps", "/static/images/005/bee.jpg" );
+        IJS_PointOps = new JSImage( "IJS_PointOps", "bee.jpg" );
     });
 
 </script>
@@ -147,7 +148,7 @@
 
     <div class="col-xs-6">
         <br />
-        <button class="btn btn-default" onclick="IJS_PointOps = new JSImage( 'IJS_PointOps', '/static/images/005/bee.jpg' );">Reset</button>
+        <button class="btn btn-default" onclick="IJS_PointOps = new JSImage( 'IJS_PointOps', 'bee.jpg' );">Reset</button>
     </div>
 
 </div>
