@@ -1,6 +1,6 @@
 Title: ColorPal Output Update
 Date: 2012-07-30 22:30:00
-Tags: html5, javascript, color, colorpal, web
+Tags: html5, javascript, color, colorpal, web, mediancut
 Image: /2012/07/30/colorpal-output-update/after.png
 Mwc: 22
 

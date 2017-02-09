@@ -1,6 +1,6 @@
 Title: ColorPal CLI!
 Date: 2013-11-07
-Tags: html5, javascript, color, colorpal
+Tags: html5, javascript, color, colorpal, mediancut
 Summary: Tired of creating color palettes with ColorPal's simple, intuitive drag-and-drop interface?  Me too!  Use this handy command instead.
 Image: /2013/11/07/colorpal-cli/colorpal_cli_logo.png
 Mwc: 23

@@ -1,6 +1,6 @@
 Title: ColorPal palettes improved!
 Date: 2012-02-10 22:44:50
-Tags: html5, javascript, color, colorpal, web
+Tags: html5, javascript, color, colorpal, web, mediancut
 Image: /2012/02/10/colorpal-palettes-improved/median-mean-comparison.png
 Mwc: 19
 

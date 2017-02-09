@@ -41,7 +41,7 @@ ceiling to shut off the lights.  And thanks to all the &lt;a href="http://kimoti
 contributors&lt;/a&gt; for building mods and adding color and fun to everyone's
 weekend.&lt;/p&gt;
 &lt;p&gt;&lt;span class="clearfix"&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img style="display: none !important;" src="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/thumb.jpg"&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category></entry><entry><title>Lazyloading Web Components</title><link href="https://palebluepixel.org/2016/09/06/lazyloading-web-components/" rel="alternate"></link><published>2016-09-06T00:00:00-04:00</published><updated>2016-09-06T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2016-09-06:/2016/09/06/lazyloading-web-components/</id><summary type="html">&lt;p&gt;Convenience hacking: Web Components without imports.&lt;/p&gt;</summary><content type="html">&lt;p&gt;They say &lt;a href="http://threevirtues.com/"&gt;good developers are lazy&lt;/a&gt;.  A tedious process is no match for a
+&lt;p&gt;&lt;img style="display: none !important;" src="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/thumb.jpg"&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category><category term="kimotion"></category></entry><entry><title>Lazyloading Web Components</title><link href="https://palebluepixel.org/2016/09/06/lazyloading-web-components/" rel="alternate"></link><published>2016-09-06T00:00:00-04:00</published><updated>2016-09-06T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2016-09-06:/2016/09/06/lazyloading-web-components/</id><summary type="html">&lt;p&gt;Convenience hacking: Web Components without imports.&lt;/p&gt;</summary><content type="html">&lt;p&gt;They say &lt;a href="http://threevirtues.com/"&gt;good developers are lazy&lt;/a&gt;.  A tedious process is no match for a
 lazy developer.  Below is an experiment in laziness.  It's a proof of concept
 for using Web Components without having to manually import each one.&lt;/p&gt;
 &lt;p&gt;I'm not sure exactly what to call it.  It grazes the definitions of
@@ -1013,6 +1013,7 @@ exhibit is a particle gravity simulation, created with WebGL (&lt;a href="http:/
 specifically), &lt;a href="https://en.wikipedia.org/wiki/OpenGL_Shading_Language"&gt;GLSL&lt;/a&gt;, and many other tools.&lt;/p&gt;
 &lt;h2&gt;Event photos&lt;/h2&gt;
 &lt;p&gt;Enjoy these photos from Digital Motion at SPARKcon 2014.&lt;/p&gt;
+&lt;p&gt;$GALLERY&lt;/p&gt;
 &lt;p&gt;I'm working on a follow-up post, with technical information about the
 implementation.  &lt;em&gt;Update&lt;/em&gt; it's 
 &lt;a href="/posts/034 - the deconstruction of falling particles.md"&gt;here&lt;/a&gt;!&lt;/p&gt;
@@ -1050,7 +1051,7 @@ repo.&lt;/p&gt;
     }
     document.addEventListener('DOMContentLoaded', set_vimeo_iframe_height);
     window.addEventListener('resize', set_vimeo_iframe_height);
-&lt;/script&gt;</content><category term="programming"></category><category term="javascript"></category><category term="requirejs"></category><category term="amd"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category></entry><entry><title>RGB WebGL Color Cube</title><link href="https://palebluepixel.org/2014/03/23/rgb-webgl-color-cube/" rel="alternate"></link><published>2014-03-23T00:00:00-04:00</published><updated>2014-03-23T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-03-23:/2014/03/23/rgb-webgl-color-cube/</id><summary type="html">&lt;p&gt;I spent a bit of time this weekend building an RGB color cube for
+&lt;/script&gt;</content><category term="programming"></category><category term="javascript"></category><category term="requirejs"></category><category term="amd"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category><category term="kimotion"></category></entry><entry><title>RGB WebGL Color Cube</title><link href="https://palebluepixel.org/2014/03/23/rgb-webgl-color-cube/" rel="alternate"></link><published>2014-03-23T00:00:00-04:00</published><updated>2014-03-23T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-03-23:/2014/03/23/rgb-webgl-color-cube/</id><summary type="html">&lt;p&gt;I spent a bit of time this weekend building an RGB color cube for
 &lt;a href="http://colorpal.org"&gt;ColorPal&lt;/a&gt;, using &lt;a href="http://threejs.org"&gt;Three.js&lt;/a&gt;.  Drag and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I spent a bit of time this weekend building an RGB color cube for
 &lt;a href="http://colorpal.org"&gt;ColorPal&lt;/a&gt;, using &lt;a href="http://threejs.org"&gt;Three.js&lt;/a&gt;.  Drag and drop any image, and you'll see a
 cube with all the pixels of your image mapped into 3D space.&lt;/p&gt;
@@ -1200,7 +1201,7 @@ Options:
 
 
 &lt;p&gt;The code is &lt;a href="https://github.com/mwcz/colorpal-cli" title="ColorPal CLI code repository"&gt;available on GitHub&lt;/a&gt; and I welcome any feedback, bug reports,
-pull requests, etc.&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category></entry><entry><title>ColorPal Output Update</title><link href="https://palebluepixel.org/2012/07/30/colorpal-output-update/" rel="alternate"></link><published>2012-07-30T22:30:00-04:00</published><updated>2012-07-30T22:30:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-07-30:/2012/07/30/colorpal-output-update/</id><summary type="html">&lt;p&gt;Hi pals.&lt;/p&gt;
+pull requests, etc.&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="mediancut"></category></entry><entry><title>ColorPal Output Update</title><link href="https://palebluepixel.org/2012/07/30/colorpal-output-update/" rel="alternate"></link><published>2012-07-30T22:30:00-04:00</published><updated>2012-07-30T22:30:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-07-30:/2012/07/30/colorpal-output-update/</id><summary type="html">&lt;p&gt;Hi pals.&lt;/p&gt;
 &lt;p&gt;This is a speedy post about a speedy update I made today to
 &lt;a href="/projects/colorpal/"&gt;ColorPal&lt;/a&gt;, an HTML5 tool I …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hi pals.&lt;/p&gt;
 &lt;p&gt;This is a speedy post about a speedy update I made today to
@@ -1234,7 +1235,7 @@ older palette generation implementation (which I should write about someday),
 but pretty soon it'll be ColorPal pumping out those swatches.  &lt;/p&gt;
 &lt;p&gt;That's not the only change.  If you're not excited, don't worry.  I am!&lt;/p&gt;
 &lt;p&gt;&lt;a href="/projects/colorpal"&gt;&lt;img src="https://palebluepixel.org/2012/07/30/colorpal-output-update/colorpal_logo.png" alt="ColorPal logo" title="" /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Happy coloring!&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="web"></category></entry><entry><title>Introducing Canvas Indexed Color</title><link href="https://palebluepixel.org/2012/07/03/introducing-canvas-indexed-color/" rel="alternate"></link><published>2012-07-03T23:44:50-04:00</published><updated>2012-07-03T23:44:50-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-07-03:/2012/07/03/introducing-canvas-indexed-color/</id><summary type="html">&lt;p&gt;A basic implementation of indexed color palettes for HTML5 canvas.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="/projects/canvas_indexed_color" title="Canvas Indexed Color demo"&gt;Canvas Indexed Color demo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Happy coloring!&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="web"></category><category term="mediancut"></category></entry><entry><title>Introducing Canvas Indexed Color</title><link href="https://palebluepixel.org/2012/07/03/introducing-canvas-indexed-color/" rel="alternate"></link><published>2012-07-03T23:44:50-04:00</published><updated>2012-07-03T23:44:50-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-07-03:/2012/07/03/introducing-canvas-indexed-color/</id><summary type="html">&lt;p&gt;A basic implementation of indexed color palettes for HTML5 canvas.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="/projects/canvas_indexed_color" title="Canvas Indexed Color demo"&gt;Canvas Indexed Color demo&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="White SVG Tiger" src="https://palebluepixel.org/2012/07/03/introducing-canvas-indexed-color/hahatiger.png" /&gt;&lt;/p&gt;
 &lt;p&gt;First, I converted the classic SVG tiger into a set of canvas drawing
 instructions using &lt;a href="http://professorcloud.com/svg-to-canvas/" title="Professor Cloud's conversion
@@ -1269,7 +1270,7 @@ Knockout ViewModel (in this case, an object that holds all the color data).
 a true, usable, indexed-color API for canvas (someday, maybe!).&lt;/p&gt;
 &lt;p&gt;The color picker is &lt;a href="https://github.com/mattfarina/farbtastic" title="Farbtastic"&gt;Farbtastic&lt;/a&gt;.  If you're interested in reading more about the history of
 indexed color, and a &lt;strong&gt;mind-blowing&lt;/strong&gt; canvas demo, go
-&lt;a href="http://www.effectgames.com/effect/article-Old_School_Color_Cycling_with_HTML5.html" title="Color cycling in HTML5 canvas"&gt;here&lt;/a&gt;.&lt;/p&gt;</content><category term="html5"></category><category term="canvas"></category><category term="color"></category><category term="web"></category></entry><entry><title>ColorPal palettes improved!</title><link href="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/" rel="alternate"></link><published>2012-02-10T22:44:50-05:00</published><updated>2012-02-10T22:44:50-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-02-10:/2012/02/10/colorpal-palettes-improved/</id><summary type="html">&lt;p&gt;In my &lt;a href="/2012/01/16/colorpal-alpha/"&gt;last post&lt;/a&gt; on the subject, I introduced
+&lt;a href="http://www.effectgames.com/effect/article-Old_School_Color_Cycling_with_HTML5.html" title="Color cycling in HTML5 canvas"&gt;here&lt;/a&gt;.&lt;/p&gt;</content><category term="html5"></category><category term="canvas"></category><category term="color"></category><category term="web"></category><category term="canvas_indexed_color"></category></entry><entry><title>ColorPal palettes improved!</title><link href="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/" rel="alternate"></link><published>2012-02-10T22:44:50-05:00</published><updated>2012-02-10T22:44:50-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-02-10:/2012/02/10/colorpal-palettes-improved/</id><summary type="html">&lt;p&gt;In my &lt;a href="/2012/01/16/colorpal-alpha/"&gt;last post&lt;/a&gt; on the subject, I introduced
 ColorPal, my HTML5 color palette generation tool.  It didn't perform well …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In my &lt;a href="/2012/01/16/colorpal-alpha/"&gt;last post&lt;/a&gt; on the subject, I introduced
 ColorPal, my HTML5 color palette generation tool.  It didn't perform well with
 certain types of images, so I fixed it. :)&lt;/p&gt;
@@ -1371,7 +1372,7 @@ feedback.  Code development help is welcomed too.&lt;/p&gt;
 &lt;p&gt;If you try out ColorPal, let me know your thoughts on
 &lt;a href="https://twitter.com/#!/mwcz"&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Here are github repos for &lt;a href="https://github.com/mwcz/ColorPal"&gt;ColorPal&lt;/a&gt; and
-&lt;a href="https://github.com/mwcz/median-cut-js"&gt;median-cut.js&lt;/a&gt;.&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="web"></category></entry><entry><title>Toy javascript unit tester</title><link href="https://palebluepixel.org/2012/01/30/toy-javascript-unit-tester/" rel="alternate"></link><published>2012-01-30T21:50:00-05:00</published><updated>2012-01-30T21:50:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-01-30:/2012/01/30/toy-javascript-unit-tester/</id><summary type="html">&lt;p&gt;Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and had a minor epiphany.  In the back of my mind, there has always been a bit of uncertainty as to how unit testing frameworks work.  Deep in my brain I knew there was something I didn't understand, but I wasn't quite sure what.  I never gave it any conscious thought.&lt;/p&gt;
+&lt;a href="https://github.com/mwcz/median-cut-js"&gt;median-cut.js&lt;/a&gt;.&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="web"></category><category term="mediancut"></category></entry><entry><title>Toy javascript unit tester</title><link href="https://palebluepixel.org/2012/01/30/toy-javascript-unit-tester/" rel="alternate"></link><published>2012-01-30T21:50:00-05:00</published><updated>2012-01-30T21:50:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-01-30:/2012/01/30/toy-javascript-unit-tester/</id><summary type="html">&lt;p&gt;Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and had a minor epiphany.  In the back of my mind, there has always been a bit of uncertainty as to how unit testing frameworks work.  Deep in my brain I knew there was something I didn't understand, but I wasn't quite sure what.  I never gave it any conscious thought.&lt;/p&gt;
 &lt;p&gt;As a developer, I'd use a framework, write a bunch of &lt;code&gt;testBlahFoo&lt;/code&gt; functions, and the framework would magically run them.  &lt;/p&gt;
 &lt;p&gt;Then I realized... "Oh, it's just introspection."&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;Create&lt;/span&gt; &lt;span class="nt"&gt;an&lt;/span&gt; &lt;span class="nt"&gt;object&lt;/span&gt; &lt;span class="nt"&gt;with&lt;/span&gt; &lt;span class="nt"&gt;three&lt;/span&gt; &lt;span class="nt"&gt;properties&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;all&lt;/span&gt; &lt;span class="nt"&gt;functions&lt;/span&gt;
@@ -1501,7 +1502,7 @@ feedback.  Code development help is welcomed too.&lt;/p&gt;
 &lt;p&gt;It's powered by &lt;a href="http://en.wikipedia.org/wiki/Canvas_element"&gt;canvas&lt;/a&gt;, &lt;a href="https://developer.mozilla.org/en/data_URIs"&gt;data URIs&lt;/a&gt;, &lt;a href="http://dev.w3.org/2006/webapi/FileAPI/"&gt;File API&lt;/a&gt;, and my homespun &lt;a href="http://en.wikipedia.org/wiki/Median_cut"&gt;median-cut&lt;/a&gt; implementation, which I'm calling &lt;em&gt;median-cut.js&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Bear in mind that while I've kept median-cut.js nice and clean, I did hammer out ColorPal as quickly as possible, so it's a mess.  Why?  I expect median-cut.js to be useful to other programmers, but ColorPal is just a tool for designers.  Or it will be, anyway. :)&lt;/p&gt;
 &lt;p&gt;Here are github repos for &lt;a href="https://github.com/mwcz/ColorPal"&gt;ColorPal&lt;/a&gt; and &lt;a href="https://github.com/mwcz/median-cut-js"&gt;median-cut.js&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;And, as a reward for reading to the end, a &lt;a href="/projects/colorpal/"&gt;live demo&lt;/a&gt;!&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="web"></category></entry><entry><title>The N9, QR-Codes, and KeePassX</title><link href="https://palebluepixel.org/2012/01/08/the-n9-qr-codes-and-keepassx/" rel="alternate"></link><published>2012-01-08T22:27:50-05:00</published><updated>2012-01-08T22:27:50-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-01-08:/2012/01/08/the-n9-qr-codes-and-keepassx/</id><summary type="html">&lt;p&gt;&lt;em&gt;Update: I happened across a &lt;a href="http://keepass.info/plugins.html#qrcodegen"&gt;KeePass
+&lt;p&gt;And, as a reward for reading to the end, a &lt;a href="/projects/colorpal/"&gt;live demo&lt;/a&gt;!&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="web"></category><category term="mediancut"></category></entry><entry><title>The N9, QR-Codes, and KeePassX</title><link href="https://palebluepixel.org/2012/01/08/the-n9-qr-codes-and-keepassx/" rel="alternate"></link><published>2012-01-08T22:27:50-05:00</published><updated>2012-01-08T22:27:50-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-01-08:/2012/01/08/the-n9-qr-codes-and-keepassx/</id><summary type="html">&lt;p&gt;&lt;em&gt;Update: I happened across a &lt;a href="http://keepass.info/plugins.html#qrcodegen"&gt;KeePass
 plugin&lt;/a&gt; (not the same as KeePassX)
 that displays passwords as QR codes, just like …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;Update: I happened across a &lt;a href="http://keepass.info/plugins.html#qrcodegen"&gt;KeePass
 plugin&lt;/a&gt; (not the same as KeePassX)
@@ -1612,6 +1613,7 @@ window.addEventListener('resize', set_iframe_height);
 &lt;style type="text/css"&gt;
 #cnvs {
     margin: 0 auto;
+    display: block;
     border: 1px solid black;
     -webkit-box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
        -moz-box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
@@ -1667,18 +1669,19 @@ window.onload = function() {
         objs.push( new_obj );
     }
 
-    setInterval( make_frame, PERIOD );
+    make_frame();
 
 }
 
 &lt;/script&gt;
 
-&lt;p&gt;&lt;button onclick="paused++;paused%=2;"&gt;Pause&lt;/button&gt; &lt;/p&gt;
 &lt;canvas id="cnvs" width="500" height="375"&gt; 
     Sorry, your browser does not support HTML5 canvas.  Lame.
 &lt;/canvas&gt;
 
-&lt;p&gt;An updated (but less colorful) version of bouncey is available &lt;a href="{008 - bouncey returns.md}" title="newer bouncey"&gt;here&lt;/a&gt;.&lt;/p&gt;</content><category term="html5"></category><category term="canvas"></category><category term="physics"></category><category term="javascript"></category><category term="bouncey"></category><category term="web"></category></entry><entry><title>How not to use CSS3</title><link href="https://palebluepixel.org/2011/11/17/how-not-to-use-css3/" rel="alternate"></link><published>2011-11-17T20:25:00-05:00</published><updated>2011-11-17T20:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-17:/2011/11/17/how-not-to-use-css3/</id><summary type="html">&lt;p&gt;How to ruin a good thing...&lt;/p&gt;
+&lt;p&gt;&lt;button onclick="paused++;paused%=2;"&gt;Pause&lt;/button&gt; &lt;/p&gt;
+&lt;p&gt;An updated (but less colorful) version of bouncey is available 
+&lt;a href="https://palebluepixel.org/2011/11/17/bouncey-returns-more-canvas-physics/"&gt;here&lt;/a&gt;.&lt;/p&gt;</content><category term="html5"></category><category term="canvas"></category><category term="physics"></category><category term="javascript"></category><category term="bouncey"></category><category term="web"></category></entry><entry><title>How not to use CSS3</title><link href="https://palebluepixel.org/2011/11/17/how-not-to-use-css3/" rel="alternate"></link><published>2011-11-17T20:25:00-05:00</published><updated>2011-11-17T20:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-17:/2011/11/17/how-not-to-use-css3/</id><summary type="html">&lt;p&gt;How to ruin a good thing...&lt;/p&gt;
 &lt;p&gt;Try refreshing.&lt;/p&gt;
 &lt;style type="text/css"&gt;
 
@@ -1945,8 +1948,7 @@ histo's are actually correct. :)&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p class="alert alert-info"&gt;I'm pretty sure the results are wrong, but here, years later, I can't be bothered to fix it. ;)&lt;/p&gt;
-
+&lt;p&gt;I'm pretty sure the results are wrong, but here, years later, I can't be bothered to fix it. ;)&lt;/p&gt;
 &lt;script type="text/javascript" src="https://palebluepixel.org/2011/11/16/html5-canvas-rgb-histogram/JSImage.js"&gt;&lt;/script&gt;
 
 &lt;script type="text/javascript"&gt;

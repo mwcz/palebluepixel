@@ -73,6 +73,7 @@
 <style type="text/css">
 #cnvs {
     margin: 0 auto;
+    display: block;
     border: 1px solid black;
     -webkit-box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
        -moz-box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
@@ -128,18 +129,19 @@ window.onload = function() {
         objs.push( new_obj );
     }
 
-    setInterval( make_frame, PERIOD );
+    make_frame();
 
 }
 
 </script>
 
-<p><button onclick="paused++;paused%=2;">Pause</button> </p>
 <canvas id="cnvs" width="500" height="375"> 
     Sorry, your browser does not support HTML5 canvas.  Lame.
 </canvas>
 
-<p>An updated (but less colorful) version of bouncey is available <a href="{008 - bouncey returns.md}" title="newer bouncey">here</a>.</p>
+<p><button onclick="paused++;paused%=2;">Pause</button> </p>
+<p>An updated (but less colorful) version of bouncey is available 
+<a href="https://palebluepixel.org/2011/11/17/bouncey-returns-more-canvas-physics/">here</a>.</p>
         </div>
 
         <!-- /.entry-content -->
