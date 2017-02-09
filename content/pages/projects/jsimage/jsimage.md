@@ -1,6 +1,7 @@
 Title: JSImage
 Slug: projects/jsimage
 Tags: html5, javascript, color
+Category: jsimage
 Status: hidden
 
 JSImage was a basic, buggy, just-for-fun image processing library that I wrote

@@ -1,5 +1,6 @@
 Title: Zorbio
 Slug: projects/zorbio
+Category: zorbio
 Tags: programming, javascript, threejs, webgl, 3d, web, scripta, games, gamedev, zorbio
 Status: hidden
 

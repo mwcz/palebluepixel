@@ -1,6 +1,6 @@
 Title: Introducing Canvas Indexed Color
 Date: 2012-07-03 23:44:50
-Tags: html5, canvas, color, web
+Tags: html5, canvas, color, web, canvas_indexed_color
 Summary: A basic implementation of indexed color palettes for HTML5 canvas.
 Image: /2012/07/03/introducing-canvas-indexed-color/hahatiger.png
 Mwc: 21

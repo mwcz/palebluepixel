@@ -1,4 +1,5 @@
 Title: Pale Blue Pixel
+Category: palebluepixel
 Slug: projects/palebluepixel
 Status: hidden
 
@@ -12,7 +13,7 @@ Carl Sagan's [Pale Blue Dot][pbd].
 It's currently powered by:
 
  - **[Python][2]** - a large and powerful snake
- - **[Pelican][3]** - Python-powered static website generator
+ - **[Pelican][3]** - an awkwardly-shaped sea bird
  - **[Bootstrap 3][4]** - front-end library
  - **[LESS][5]** - CSS preprocessor
  - **[Prism][6]** - syntax highlighting for code examples, [twilight][8] theme

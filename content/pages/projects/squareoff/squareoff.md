@@ -1,5 +1,6 @@
 Title: Square Off
 Slug: projects/squareoff
+Category: squareoff
 Tags: programming, javascript, threejs, webgl, phaser, gamedev, 2d, web, squareoff
 Status: hidden
 

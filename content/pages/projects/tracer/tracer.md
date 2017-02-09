@@ -1,5 +1,6 @@
 Title: Tracer
 Slug: projects/tracer
+Category: tracer
 Tags: programming, javascript, threejs, webgl, 3d, web, scripta, games, gamedev, tracer
 Status: hidden
 

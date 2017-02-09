@@ -1,5 +1,6 @@
 Title: ColorPal
 Slug: projects/colorpal
+Category: colorpal
 Tags: html5, javascript, color, colorpal
 Status: hidden
 
@@ -14,6 +15,8 @@ Try it out at [colorpal.org][cpal].
 ColorPal also has a [command-line interface][3], powered by [Node.js][2].
 
 I've written some [posts about ColorPal][1].
+
+<div class="clearfix"></div>
 
 [1]: /tag/colorpal "Posts about ColorPal"
 [2]: http://nodejs.org/ "Node.js official site"

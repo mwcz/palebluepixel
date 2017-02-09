@@ -1,6 +1,8 @@
 Title: Kimotion
 Slug: projects/kimotion
+Category: kimotion
 Tags: programming, javascript, threejs, webgl, 3d, 2d, art, sparkcon, geekspark, dimo, physics, web, kimotion
+Category: kimotion
 Status: hidden
 
 <img class="col-md-7" src="/static/images/gallery/900x/gallery/039/600_5782.JPG" alt="kids playing with kimotion" style="padding-left: 0; padding-right: 30px" />
@@ -84,11 +86,8 @@ window.addEventListener('resize', set_vimeo_iframe_height);
 </script>
 <hr>
 
-## More information
-
- - [Kimotion at SPARKcon 2015]({filename}/posts/039 - make a kimotion.md) - all about the Kimotion setup at the SPARKcon festival
- - [View source][repo] - Kimotion's GitHub repository
- - [DiMo: Particles][dimo] - the predecessor of Kimotion
+[View source][repo], if you like code.  Also check out [DiMo: Particles][dimo],
+the predecessor to Kimotion.
 
 [dimo]: /projects/dimo
 [repo]: https://github.com/mwcz/Kimotion

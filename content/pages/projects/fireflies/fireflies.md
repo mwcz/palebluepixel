@@ -1,5 +1,6 @@
 Title: Fireflies
 Slug: projects/fireflies
+Category: fireflies
 Tags: programming, javascript, threejs, webgl, 3d, art, particles
 Status: hidden
 

@@ -1,5 +1,6 @@
 Title: Ping
 Slug: projects/ping
+Category: ping
 Tags: programming, javascript, phaserjs, games, red hat, red hat summit, gamedev, ping
 Status: hidden
 

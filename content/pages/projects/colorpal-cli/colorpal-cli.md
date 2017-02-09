@@ -1,5 +1,6 @@
 Title: ColorPal CLI
 Slug: projects/colorpal-cli
+Category: colorpal
 Tags: html5, javascript, color, colorpal, node, command-line
 Status: hidden
 

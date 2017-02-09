@@ -15,7 +15,7 @@ Here's a demo recording of how easy it is.
 Some benefits of Data URIs are:
 
  - Fewer HTTP requests means faster page loads
- - avoid cross-origin resource loading issues (fonts in Firefox, for exapmle)
+ - avoid cross-origin resource loading issues (fonts in Firefox, for example)
  - you can paste the Data URI directly into your web browser URL bar to view the file (occasionally convenient)
 
 If you noticed the similarity to [ColorPal][3], well done!  I reused a lot of

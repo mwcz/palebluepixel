@@ -1,5 +1,6 @@
 Title: AEJS
 Slug: projects/aejs
+Category: aejs
 Tags: html5, javascript
 Status: hidden
 
@@ -23,13 +24,12 @@ stands for Amiga Emulator JavaScript and is pronounced "aegis".
 
 -------------------------------------------------------------------------------
 
-I made a handful of [posts about AEJS][12] while it was still being developed.
-
-My motivation came from these sources:
+My motivation to build AEJS came from these sources:
 
  - The HTML5 era introduced new APIs which finally made it possible: 
    [Typed arrays][13], [Web Audio][1], [File][2], [Canvas][3], [Fullscreen][4],
    [Gamepad][5]
+ - Fabrice Bellard's [JavaScript PC emulator][jsemu]
  - JavaScript performance was finally good enough to make it feasible
  - It bridged front-end web development with low-level machine code, both of
    which are super awesome
@@ -38,8 +38,10 @@ My motivation came from these sources:
 
 I stopped development for some equally good reasons:
 
- - I became busy with other projects which could be finished in a reasonable
-   timeframe (I'm looking at you, [ColorPal][7])
+ - This was my first emulator, and the Amiga 500 is a fairly complex set of
+   chips, and I quickly realized it would take a very long time to complete.  I
+   decided to focus on other projects which could be finished in a more
+   reasonable timeframe (I'm looking at you, [ColorPal][7])
  - The final nail in the coffin was realizing that while JavaScript was
    definitely up to the task, there was pretty much no reason to write it
    entirely in JavaScript when it could be written in C and compiled to JS with
@@ -88,3 +90,4 @@ inside any Chrome browser.  [Check it out][14] or [fork it][15].
     "JavaScript typed arrays"
 [14]: http://pnacl-amiga-emulator.appspot.com/ "PNaCl port of PUAE"
 [15]: https://github.com/cstefansen/PUAE "PNaCl PUAE port's source code"
+[jsemu]: http://bellard.org/jslinux/tech.html

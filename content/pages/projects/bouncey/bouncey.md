@@ -1,5 +1,6 @@
 Title: Bouncey
 Slug: projects/bouncey
+Category: bouncey
 Tags: html5, javascript
 Status: hidden
 

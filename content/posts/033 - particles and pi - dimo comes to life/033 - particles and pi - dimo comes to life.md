@@ -1,6 +1,6 @@
 Title: Particles and π - DiMo Comes to Life
 Date: 2014-08-25
-Tags: programming, javascript, requirejs, amd, threejs, webgl, 3d, art, sparkcon, geekspark, dimo, physics, web
+Tags: programming, javascript, requirejs, amd, threejs, webgl, 3d, art, sparkcon, geekspark, dimo, physics, web, kimotion
 Image: /2014/08/25/particles-and-p-dimo-comes-to-life/dimo-kids.jpg
 Summary: A player walks up Fayetteville St in Raleigh, North Carolina.  SparkCon has begun, and dozens of artists are ...
 TwitterWidgetID: 552863179194511360
@@ -62,7 +62,7 @@ specifically), [GLSL][glsl], and many other tools.
 
 Enjoy these photos from Digital Motion at SPARKcon 2014.
 
-{{ gallery }}
+$GALLERY
 
 I'm working on a follow-up post, with technical information about the
 implementation.  *Update* it's 

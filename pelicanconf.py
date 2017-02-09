@@ -70,6 +70,7 @@ PLUGINS = [
     'gallery',
     'jinja2content',
     'representative_image',
+    'thumbnailer',
 ]
 
 # assets plugin settings
@@ -116,7 +117,7 @@ FEED_DOMAIN = 'http://localhost:8000'
 #DEFAULT_METADATA = (('yeah', 'it is'),)
 
 # static paths will be copied under the same name
-STATIC_PATHS = ["static", "projects", "demos", "posts"]
+STATIC_PATHS = ["static", "pages", "projects", "demos", "posts"]
 
 STATIC_SAVE_AS = "{path}"
 
@@ -135,6 +136,7 @@ ARTICLE_PATHS         = ['posts']
 IMAGE_PATH = 'images'
 THUMBNAIL_DIR = 'static/images/gallery'
 THUMBNAIL_SIZES = {
+    '1200x': '1200x?',
     '900x': '900x?',
     '400x': '400x?',
     '150x': '150x?'

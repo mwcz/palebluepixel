@@ -1,6 +1,6 @@
 Title: ColorPal Alpha
 Date: 2012-01-16 22:15:50
-Tags: html5, javascript, color, colorpal, web
+Tags: html5, javascript, color, colorpal, web, mediancut
 Summary: Introducing ColorPal, a fast color palette creation tool.
 Image: /2012/01/16/colorpal-alpha/ss.png
 Mwc: 15
