@@ -1,6 +1,5 @@
 Title: Kimotion
 Slug: projects/kimotion
-Category: kimotion
 Tags: programming, javascript, threejs, webgl, 3d, 2d, art, sparkcon, geekspark, dimo, physics, web, kimotion
 Category: kimotion
 Status: hidden
