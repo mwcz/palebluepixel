@@ -14,6 +14,7 @@ It covers [Newton's laws of motion](http://en.wikipedia.org/wiki/Newton's_laws_o
 <style type="text/css">
 #cnvs {
     margin: 0 auto;
+    display: block;
     border: 1px solid black;
     -webkit-box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
        -moz-box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.7 );
@@ -70,17 +71,18 @@ window.onload = function() {
         objs.push( new_obj );
     }
  
-    setInterval( make_frame, PERIOD );
+    make_frame();
  
 }
 
 </script>
 
  
-<button onclick="paused++;paused%=2;">Pause</button> 
- 
 <canvas id="cnvs" width="500" height="375"> 
     Sorry, your browser does not support HTML5 canvas.  Lame.
 </canvas> 
 
-An updated (but less colorful) version of bouncey is available [here]({008 - bouncey returns.md} "newer bouncey").
+<button onclick="paused++;paused%=2;">Pause</button> 
+ 
+An updated (but less colorful) version of bouncey is available 
+[here]({filename}/posts/008 - bouncey returns/008 - bouncey returns.md).

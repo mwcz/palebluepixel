@@ -21,7 +21,7 @@ Fun, simple, and oddly relaxing.
             box-shadow: 0px 2px 18px rgba( 0, 0, 0, 0.7 );
 }
 </style>
-<script type="text/javascript" src="/static/js/007/bouncey.js"></script>
+<script type="text/javascript" src="{attach}bouncey.js"></script>
 <script type="text/javascript">
 
 $(function() {

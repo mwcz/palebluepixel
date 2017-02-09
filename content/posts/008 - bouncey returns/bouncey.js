@@ -117,6 +117,7 @@ function Circle( _x, _y, _r, _vx, _vy, _c ) {
 objs = [];
 
 function make_frame() {     // stuff to do for each frame
+    requestAnimationFrame(make_frame);
     update_wall_collisions();
     update_obj_collisions();
     update_locations();
@@ -226,11 +227,6 @@ function update_obj_collisions() {
             // velocity component perpendicular to the tangent
             vcpt = { x : r.x - v.x,
                      y : r.y - v.y };
-
-            console.log( "%0.4f\t%0.4f",
-                vcpt.x,
-                vcpt.y
-                );
 
             o1.vx -= vcpt.x;
             o1.vy -= vcpt.y;
@@ -428,7 +424,7 @@ window.onload = function() {
 
     canvas = canvas_element.getContext('2d');
 
-    setInterval( make_frame, PERIOD );
+    make_frame();
 
 }
 

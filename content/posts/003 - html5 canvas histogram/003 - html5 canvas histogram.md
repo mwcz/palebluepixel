@@ -65,7 +65,7 @@ histo's are actually correct. :)
     </div>
 </div>
 
-<p class="alert alert-info">I'm pretty sure the results are wrong, but here, years later, I can't be bothered to fix it. ;)</p>
+I'm pretty sure the results are wrong, but here, years later, I can't be bothered to fix it. ;)
 
 <script type="text/javascript" src="{attach}JSImage.js"></script>
 <script type="text/javascript">

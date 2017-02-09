@@ -113,7 +113,6 @@ function Circle( _x, _y, _r, _vx, _vy, _c ) {
 objs = [];
  
 function make_frame() {     // stuff to do for each frame
-    requestAnimationFrame(make_frame);
     update_wall_collisions();
     update_obj_collisions();
     update_locations();
