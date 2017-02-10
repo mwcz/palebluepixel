@@ -19,7 +19,7 @@ onto a smartphone securely.  I've come to like the approach of using QR codes.
 Most (all?) smartphones have a barcode scanner, and QR codes are one of [many
 convenient ways](http://en.wikipedia.org/wiki/Barcode) to encode text into an
 image.  In the case of the N9, it's
-[MeeScan](http://store.ovi.com/content/231518).
+[MeeScan](http://n9-apps.com/meescan).
 
 ![meescan]({attach}meescan.png)
 

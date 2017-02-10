@@ -20,8 +20,8 @@ by hand to replace the color strings.
 
 The demo uses [Knockout](http://knockoutjs.com/ "Knockout JS") for handling all
 the update/draw events as well as updating the URL hash.  Check the [source
-code](https://github.com/mwcz/mwcz/blob/master/blog/projects/canvas_indexed_color/cic.js
-"source code") and you'll see that there *isn't* a vast tangled nest of event
+code](https://github.com/mwcz/palebluepixel/blob/master/content/static/projects/canvas_indexed_color/demo/cic.js)
+and you'll see that there *isn't* a vast tangled nest of event
 wirings.  Each time one of the colors in this ViewModel is changed, Knockout
 automatically triggers the canvas redraw and the updates the URL with the new
 palette.  Conversely, if the URL is changed, the ViewModel will update itself

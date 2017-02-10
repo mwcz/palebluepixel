@@ -10,7 +10,7 @@ Mwc: 20
 Surprise.
 
 I've converted the site layout to
-[Bootstrap](http://twitter.github.com/bootstrap "Twitter Bootstrap").
+[Bootstrap](http://getbootstrap.com "Twitter Bootstrap").
 
 Massive appreciation to [Doug Latornell](http://douglatornell.ca "Doug
 Latornell") for continuing development of Blogofile, the static blog compiler

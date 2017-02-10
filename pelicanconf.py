@@ -17,7 +17,7 @@ PDF_GENERATOR         = False
 DEFAULT_PAGINATION    = 6
 OUTPUT_SOURCES        = True
 DISPLAY_PAGES_ON_MENU = True
-THEME                 = "../palebluepixel-theme"
+THEME                 = '../palebluepixel-theme'
 
 DISPLAY_CATEGORIES_ON_MENU = True
 
@@ -62,7 +62,7 @@ BOOTSTRAP_THEME = 'flatly'
 #                           PLUGIN SETTINGS                           #
 #######################################################################
 
-PLUGIN_PATHS = [environ["HOME"] + '/workspace/pelican-plugins',]
+PLUGIN_PATHS = [environ['HOME'] + '/workspace/pelican-plugins',]
 PLUGINS = [
     'neighbors',
     'assets',
@@ -117,9 +117,9 @@ FEED_DOMAIN = 'http://localhost:8000'
 #DEFAULT_METADATA = (('yeah', 'it is'),)
 
 # static paths will be copied under the same name
-STATIC_PATHS = ["static", "pages", "projects", "demos", "posts"]
+STATIC_PATHS = ['static', 'pages', 'projects', 'demos', 'posts']
 
-STATIC_SAVE_AS = "{path}"
+STATIC_SAVE_AS = '{path}'
 
 # A list of files to copy from the source to the destination
 #FILES_TO_COPY = (('extra/robots.txt', 'robots.txt'),)

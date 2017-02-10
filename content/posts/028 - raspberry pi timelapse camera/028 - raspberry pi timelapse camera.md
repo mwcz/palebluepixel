@@ -103,7 +103,7 @@ throwing the ending framerate off completely.
 </script>
 
 [1]: http://amzn.com/B008YE0HAW
-[2]: http://www.raspberrypi.org/product/camera-module/
+[2]: http://www.raspberrypi.org/products/camera-module/
 [3]: http://public.hronopik.de/vid.stab/features.php?lang=en "video stabilization in linux"
 [epoch]: https://en.wikipedia.org/wiki/Epoch_time
 [rpib]: https://en.wikipedia.org/wiki/Raspberry_Pi
