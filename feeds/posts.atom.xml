@@ -1091,7 +1091,7 @@ cube.&lt;/p&gt;
 &lt;p&gt;By setting &lt;code&gt;vertexColors: true&lt;/code&gt; on the &lt;code&gt;ParticleSystemMaterial&lt;/code&gt;, Three.js will
 match each vertex in the &lt;code&gt;vertices&lt;/code&gt; array with a color in the &lt;code&gt;colors&lt;/code&gt; array.
 &lt;code&gt;vertices[1726]&lt;/code&gt; will use &lt;code&gt;colors[1726]&lt;/code&gt;, for example.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Screenshot of ColorCube" src="{attach}screenshot.png" title="Screenshot of ColorCube" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Screenshot of ColorCube" src="https://palebluepixel.org/2014/03/23/rgb-webgl-color-cube/screenshot.png" title="Screenshot of ColorCube" /&gt;&lt;/p&gt;
 &lt;p&gt;A vertex and a color are created for each pixel in the source image.  For the
 vertex, &lt;span style="color: red;"&gt;red&lt;/span&gt; values are mapped to the &lt;code&gt;X&lt;/code&gt; axis,
 and similarly &lt;span style="color: green"&gt;green&lt;/span&gt; to &lt;code&gt;Y&lt;/code&gt; and &lt;span
@@ -1245,8 +1245,9 @@ tool&lt;/a&gt;.  The output looks like
 &lt;p&gt;Vim's regex saved me from having to edit &lt;em&gt;100,000&lt;/em&gt; lines of canvas instructions
 by hand to replace the color strings.&lt;/p&gt;
 &lt;p&gt;The demo uses &lt;a href="http://knockoutjs.com/" title="Knockout JS"&gt;Knockout&lt;/a&gt; for handling all
-the update/draw events as well as updating the URL hash.  Check the &lt;a href="https://github.com/mwcz/mwcz/blob/master/blog/projects/canvas_indexed_color/cic.js" title="source code"&gt;source
-code&lt;/a&gt; and you'll see that there &lt;em&gt;isn't&lt;/em&gt; a vast tangled nest of event
+the update/draw events as well as updating the URL hash.  Check the &lt;a href="https://github.com/mwcz/palebluepixel/blob/master/content/static/projects/canvas_indexed_color/demo/cic.js"&gt;source
+code&lt;/a&gt;
+and you'll see that there &lt;em&gt;isn't&lt;/em&gt; a vast tangled nest of event
 wirings.  Each time one of the colors in this ViewModel is changed, Knockout
 automatically triggers the canvas redraw and the updates the URL with the new
 palette.  Conversely, if the URL is changed, the ViewModel will update itself
@@ -1516,7 +1517,7 @@ onto a smartphone securely.  I've come to like the approach of using QR codes.
 Most (all?) smartphones have a barcode scanner, and QR codes are one of &lt;a href="http://en.wikipedia.org/wiki/Barcode"&gt;many
 convenient ways&lt;/a&gt; to encode text into an
 image.  In the case of the N9, it's
-&lt;a href="http://store.ovi.com/content/231518"&gt;MeeScan&lt;/a&gt;.&lt;/p&gt;
+&lt;a href="http://n9-apps.com/meescan"&gt;MeeScan&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="meescan" src="https://palebluepixel.org/2012/01/08/the-n9-qr-codes-and-keepassx/meescan.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://fukuchi.org/works/qrencode/index.html.en"&gt;qrencode&lt;/a&gt; is an extremely
 easy to use encoder.  Pass it a string, it produces an image.&lt;/p&gt;
