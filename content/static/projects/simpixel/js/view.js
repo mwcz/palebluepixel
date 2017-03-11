@@ -83,13 +83,14 @@ var View = function () {
 
             this.renderer = new THREE.WebGLRenderer();
             this.renderer.setPixelRatio(window.devicePixelRatio);
+            this.renderer.setClearColor(new THREE.Color('#171717'));
             this.renderer.setSize(this.WIDTH, this.HEIGHT);
             this.parent.appendChild(this.renderer.domElement);
             //
             window.addEventListener('resize', this.onWindowResize.bind(this), false);
 
             this.controls = new THREE.OrbitControls(this.camera, this.renderer.domElement);
-            this.controls.enableZoom = true;
+            this.controls.enableZoom = false;
 
             // start animation loop
             this.animate();
