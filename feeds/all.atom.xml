@@ -1,5 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Pale Blue Pixel</title><link href="https://palebluepixel.org/" rel="alternate"></link><link href="http://localhost:8000/feeds/all.atom.xml" rel="self"></link><id>https://palebluepixel.org/</id><updated>2017-01-12T00:00:00-05:00</updated><entry><title>Kimotion at geekSPARK 2016</title><link href="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/" rel="alternate"></link><published>2017-01-12T00:00:00-05:00</published><updated>2017-01-12T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-01-12:/2017/01/12/kimotion-at-geekspark-2016/</id><summary type="html">&lt;p&gt;Kimotion-powered interactive art at SPARKcon 2016.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Just a few short &lt;del&gt;days&lt;/del&gt; months ago, &lt;a href="http://kimotion.xyz"&gt;Kimotion&lt;/a&gt; was on
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pale Blue Pixel</title><link href="https://palebluepixel.org/" rel="alternate"></link><link href="http://localhost:8000/feeds/all.atom.xml" rel="self"></link><id>https://palebluepixel.org/</id><updated>2017-03-10T00:00:00-05:00</updated><entry><title>Meet SimPixel</title><link href="https://palebluepixel.org/2017/03/10/meet-simpixel/" rel="alternate"></link><published>2017-03-10T00:00:00-05:00</published><updated>2017-03-10T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-03-10:/2017/03/10/meet-simpixel/</id><summary type="html">&lt;p&gt;A WebGL-based visualizer for LED displays.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have someone I'd like you to meet.  SimPixel, meet everyone.  Everyone,
+SimPixel.&lt;/p&gt;
+&lt;div id="simpixel-container"&gt;&lt;/div&gt;
+
+&lt;h2&gt;SimPixel introduces itself&lt;/h2&gt;
+&lt;p&gt;SimPixel is a WebGL visualizer for LED displays, &lt;em&gt;very&lt;/em&gt; much like the ones Adam
+and Dan build over at &lt;a href="http://maniacallabs.com/"&gt;Maniacal Labs&lt;/a&gt;.&lt;/p&gt;
+&lt;style type="text/css"&gt;
+#mlabs {
+    height: 50vh !important;
+}
+@media screen and (min-width: 660px) {
+    #mlabs {
+        float: right;
+        margin-left: 20px;
+    }
+}
+&lt;/style&gt;
+
+&lt;p&gt;&lt;img id="mlabs" src="https://palebluepixel.org/2017/03/10/meet-simpixel/maniacal.jpg" alt="some Maniacal Labs LED projects" /&gt;&lt;/p&gt;
+&lt;p&gt;My working theory about why it's &lt;em&gt;so&lt;/em&gt; much like their displays is that I built
+most of SimPixel while sitting at Adam's workbench.  I don't know, there could
+be a connection.  If you too would like to take a seat at Adam's illustrious
+workbench someday, &lt;a href="https://github.com/ManiacalLabs/SimPixel"&gt;hack away&lt;/a&gt;.  You can also try the &lt;a href="/static/projects/simpixel"&gt;fullscreen
+demo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/ManiacalLabs/BiblioPixel/wiki"&gt;BiblioPixel&lt;/a&gt;, &lt;abbr title="Maniacal Labs"&gt;ML's&lt;/abbr&gt; light animation
+library, sends layouts and colors to SimPixel using a simple &lt;a href="https://en.wikipedia.org/wiki/WebSocket"&gt;WebSocket&lt;/a&gt;
+protocol.&lt;/p&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+
+&lt;h2&gt;The Protocol&lt;/h2&gt;
+&lt;p&gt;By itself, SimPixel is useless.  To turn on the lights, it connects to a
+WebSocket service.  That service is expected to send certain messages, namely a
+configuration message followed by a series of color messages.&lt;/p&gt;
+&lt;h3&gt;Configuration message&lt;/h3&gt;
+&lt;p&gt;The configuration message conveys the spatial layout of the LEDs.&lt;/p&gt;
+&lt;p&gt;For example, a configuration message of &lt;code&gt;0x0000009A02FE000C&lt;/code&gt; is interpreted as
+follows.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;+--------+------+------+------+
+| opcode |    X |    Y |    Z |
++--------+------+------+------+
+| 0x0000 | 009A | 02FE | 000C |
++--------+------+------+------+
+| config |  154 |  766 |   12 |
++--------+------+------+------+
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The leading &lt;code&gt;0x0000&lt;/code&gt; opcode identifies this as a configuration message,
+followed by a series of 16-bit signed integers which indicate the 3D
+coordinates of each LED, of the form: &lt;code&gt;X&lt;sub&gt;1&lt;/sub&gt;,Y&lt;sub&gt;1&lt;/sub&gt;,Z&lt;sub&gt;1&lt;/sub&gt;,X&lt;sub&gt;2&lt;/sub&gt;,Y&lt;sub&gt;2&lt;/sub&gt;,Z&lt;sub&gt;2&lt;/sub&gt;,
+    ..., X&lt;sub&gt;n&lt;/sub&gt;,Y&lt;sub&gt;n&lt;/sub&gt;,Z&lt;sub&gt;n&lt;/sub&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;Color message&lt;/h3&gt;
+&lt;p&gt;The color message(s) specify what color each LED should be at the current
+moment in time.&lt;/p&gt;
+&lt;p&gt;An example color message, &lt;code&gt;0x0001 40 D6 7F&lt;/code&gt;, breaks down to:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;+--------+-----+-----+-----+
+| opcode |   R |   G |   B |
++--------+-----+-----+-----+
+| 0x0001 |  40 |  D6 |  7F |
++--------+-----+-----+-----+
+| color  |  64 | 214 | 127 |
++--------+-----+-----+-----+
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The leading &lt;code&gt;0x0001&lt;/code&gt; opcode identifies this as a color message, followed by a
+series of 8-bit unsigned integers which indicate the RGB colors of each LED,
+of the form:
+&lt;code&gt;R&lt;sub&gt;1&lt;/sub&gt;,G&lt;sub&gt;1&lt;/sub&gt;,B&lt;sub&gt;1&lt;/sub&gt;,R&lt;sub&gt;2&lt;/sub&gt;,G&lt;sub&gt;2&lt;/sub&gt;,B&lt;sub&gt;2&lt;/sub&gt;,
+..., R&lt;sub&gt;n&lt;/sub&gt;,G&lt;sub&gt;n&lt;/sub&gt;,B&lt;sub&gt;n&lt;/sub&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;For a concise reference, see &lt;a href="https://github.com/ManiacalLabs/SimPixel/blob/master/PROTOCOL.md"&gt;PROTOCOL.md&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;The Ghost in the Recording&lt;/h2&gt;
+&lt;p&gt;The live demo at the top of this post the protocol, but it isn't connected to
+any WebSocket service.  Instead, it's using a recording apparatus that I
+cobbled together.  I pushed a configuration frame and a bunch of color frames
+into an array, converted their ArrayBuffers into base64 strings, and saved
+those into &lt;a href="https://github.com/ManiacalLabs/SimPixel/blob/recording-draft/src/recordings/vis.json"&gt;a quite large JSON recording file&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I only mention it to lead up to the following.  While editing the recording
+JSON file, I zoomed out a little and something caught my eye.  I zoomed out
+more and a pattern took shape.&lt;/p&gt;
+&lt;p&gt;Here's a screenshot of the JSON file in my terminal, zoomed out as far as it'll
+go.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image of base64-encoded recording" src="https://palebluepixel.org/2017/03/10/meet-simpixel/recording-base64.png" /&gt;&lt;/p&gt;
+&lt;p&gt;The waves of red, green, and blue is evident even in this doubly-encoded
+format.  Pretty cool.&lt;/p&gt;
+&lt;!-- SimPixel embedded --&gt;
+
+&lt;div id="connection"&gt;&lt;/div&gt;
+
+&lt;style type="text/css"&gt;
+    #simpixel-container {
+        width: 100%;
+        height: 80vh;
+        cursor: move;
+    }
+    #connection { display: none; }
+&lt;/style&gt;
+
+&lt;script type="x-shader/x-vertex" id="vertexshader"&gt;
+    uniform float size;
+    attribute vec3 customColor;
+    varying vec3 vColor;
+    void main() {
+        vColor = customColor;
+        vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+        gl_PointSize = size * ( 300.0 / -mvPosition.z );
+        gl_Position = projectionMatrix * mvPosition;
+    }
+&lt;/script&gt;
+
+&lt;script type="x-shader/x-fragment" id="fragmentshader"&gt;
+    uniform vec3 color;
+    uniform sampler2D textureOn;
+    uniform sampler2D textureOff;
+    varying vec3 vColor;
+    void main() {
+        /* if color attribute is not black, use 'on' texture with color*/
+        if (length(vColor) &gt; 0.0) {
+            gl_FragColor = vec4( (color/255.0) * vColor, 1.0 );
+            gl_FragColor = gl_FragColor * texture2D( textureOn, gl_PointCoord );
+        }
+        /* if color attribute is black, use 'off' texture and dark grey */
+        else {
+            gl_FragColor = vec4(0.4);
+            gl_FragColor = gl_FragColor * texture2D( textureOff, gl_PointCoord );
+        }
+    }
+&lt;/script&gt;
+
+&lt;!-- third party --&gt;
+
+&lt;script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"&gt;&lt;/script&gt;
+
+&lt;script defer src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js"&gt;&lt;/script&gt;
+
+&lt;script defer src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js"&gt;&lt;/script&gt;
+
+&lt;script defer src="/static/projects/simpixel/js/Detector.js"&gt;&lt;/script&gt;
+
+&lt;script defer src="/static/projects/simpixel/js/OrbitControls.js"&gt;&lt;/script&gt;
+
+&lt;script defer src="/static/projects/simpixel/js/reconnecting-websocket.js"&gt;&lt;/script&gt;
+
+&lt;!-- first party --&gt;
+
+&lt;script defer src="/static/projects/simpixel/js/bp_host.js"&gt;&lt;/script&gt;
+
+&lt;script defer src="/static/projects/simpixel/js/conf.js"&gt;&lt;/script&gt;
+
+&lt;script defer src="/static/projects/simpixel/js/recording.js"&gt;&lt;/script&gt;
+
+&lt;script defer src="/static/projects/simpixel/js/view.js"&gt;&lt;/script&gt;
+
+&lt;script defer src="/static/projects/simpixel/js/main.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;img alt="screenshot" src="https://palebluepixel.org/2017/03/10/meet-simpixel/thumb.jpg" /&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="web"></category><category term="led"></category><category term="maniacal-labs"></category></entry><entry><title>Kimotion at geekSPARK 2016</title><link href="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/" rel="alternate"></link><published>2017-01-12T00:00:00-05:00</published><updated>2017-01-12T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-01-12:/2017/01/12/kimotion-at-geekspark-2016/</id><summary type="html">&lt;p&gt;Kimotion-powered interactive art at SPARKcon 2016.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Just a few short &lt;del&gt;days&lt;/del&gt; months ago, &lt;a href="http://kimotion.xyz"&gt;Kimotion&lt;/a&gt; was on
 display at SPARKcon.  SPARKcon is a large art festival in Raleigh, and we
 occupy a small slice of it called geekSPARK.&lt;/p&gt;
 &lt;h2&gt;Kimotion Levels Up&lt;/h2&gt;
