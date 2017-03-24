@@ -26,9 +26,6 @@ var Bitter = function () {
             // ctx.scale(NEW_WIDTH / el.width, NEW_HEIGHT / el.height); // not sure if this works
             console.log('[bitter] resized image to ' + NEW_WIDTH + ' x ' + NEW_HEIGHT);
             ctx.drawImage(img, 0, 0, NEW_WIDTH, NEW_HEIGHT);
-            el.style.border = '2px solid red';
-            document.body.appendChild(el);
-            debugger;
         }
     }, {
         key: 'threshold',
