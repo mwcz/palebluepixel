@@ -84,6 +84,7 @@ var UI = function () {
             } else {
                 path = img;
             }
+            console.log('[ui] ' + path.replace(location.href, ''));
             return path.replace(location.href, '');
         }
     }, {
