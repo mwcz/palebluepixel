@@ -146,8 +146,8 @@ var ParticleView = function () {
         value: function onMouseMove(evt) {
             this.mouseDetected = true;
             evt.preventDefault();
-            this.mouseNDC.x = event.clientX / window.innerWidth * 2 - 1;
-            this.mouseNDC.y = -(event.clientY / window.innerHeight) * 2 + 1;
+            this.mouseNDC.x = evt.clientX / window.innerWidth * 2 - 1;
+            this.mouseNDC.y = -(evt.clientY / window.innerHeight) * 2 + 1;
         }
     }, {
         key: 'updateRaycaster',
@@ -301,12 +301,15 @@ var ParticleView = function () {
             var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
 
             var m = new THREE.Vector2(x, y);
-
             return m;
         }
     }, {
         key: 'shape',
         value: function shape(dotterResult) {
+            if (dotterResult.dots.length === 0) {
+                console.log('[view] refusing to render empty dotterResult');
+                return;
+            }
             var w = dotterResult.original.canvas.el.width / 6;
             var h = dotterResult.original.canvas.el.height / 6;
             var color = new THREE.Color();

@@ -9,7 +9,8 @@ var dotter = new Dotter({
     density: 0.095
 });
 
-dotter.addFilter(Bitter.scale);
+// scale is broken in firefox/safari, disabling for now
+// dotter.addFilter(Bitter.scale);
 dotter.addFilter(Bitter.threshold);
 
 // create a particle view
@@ -74,10 +75,10 @@ var dz = new Drop({
 });
 
 dz.ondragenter = function () {
-    return console.log('drag enter');
+    return console.log('[main] drag enter');
 };
 dz.ondragleave = function () {
-    return console.log('drag leave');
+    return console.log('[main] drag leave');
 };
 dz.ondrop = function (dropData) {
     dropData.files.forEach(function (f) {
