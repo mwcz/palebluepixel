@@ -66,13 +66,13 @@ $GALLERY
 
 I'm working on a follow-up post, with technical information about the
 implementation.  *Update* it's 
-[here](/posts/034 - the deconstruction of falling particles.md)!
+[here]({filename}../034 - the deconstruction of falling particles/034 - the deconstruction of falling particles.md)!
 
 
 
 This (2014) was my first year as a volunteer, but it was a tremendously
 educational and *fun* experience, so I'll definitely be back next year.
-*Update* [2015's exhibit info and pictures!](/posts/039 - make a kimotion.md)!
+*Update* [2015's exhibit info and pictures!]({filename}../039 - make a kimotion/039 - make a kimotion.md)!
 
 
 
