@@ -16,9 +16,10 @@ $(function () {
 </script>
  #}
 
-<h2>Projects</h2>
-
-<p>Here's a reasonably complete list of my software projects.</p>
+<section>
+    <h2>Projects</h2>
+    <p>Games, WebGL demos, and colorful toys.</p>
+</section>
 
 <div class="pbp-project-list">
     {% import 'includes/panel.html' as project_thumbnail %}
@@ -73,7 +74,7 @@ $(function () {
     {{ project_thumbnail.write(
         body_title   = 'DiMo: Particles',
         body_text    = 'An interactive art installation and particle simulation created for SPARKcon and powered by ThreeJS/WebGL.',
-        header_image = '/static/images/projects/icon_dimo.png',
+        header_image = '/static/images/projects/icon_dimo.jpg',
         link_url     = '/projects/dimo',
         demo_url     = 'http://palebluepixel.org/static/projects/dimo/',
         source_url   = 'https://github.com/geekspark-rh/dimo-renderer',
@@ -81,7 +82,7 @@ $(function () {
     {{ project_thumbnail.write(
         body_title   = 'ColorPal',
         body_text    = 'Drag an image. Get a color palette instantly. A friendly HTML5 app.',
-        header_image = '/static/images/projects/icon_colorpal.png',
+        header_image = '/static/images/projects/icon_colorpal.jpg',
         link_url     = '/projects/colorpal',
         demo_url     = 'http://colorpal.org/',
         source_url   = 'https://github.com/mwcz/ColorPal/',
@@ -89,14 +90,14 @@ $(function () {
     {{ project_thumbnail.write(
         body_title   = 'ColorPal CLI',
         body_text    = 'A command-line utility for generating color palettes from images.',
-        header_image = '/static/images/projects/icon_colorpal_cli.png',
+        header_image = '/static/images/projects/icon_colorpal_cli.jpg',
         link_url     = '/projects/colorpal-cli',
         source_url   = 'https://github.com/mwcz/colorpal-cli,'
         ) }}
     {{ project_thumbnail.write(
         body_title   = 'Drop64',
         body_text    = 'Drag and drop tool for generating Data URIs.',
-        header_image = '/static/images/projects/icon_drop64.png',
+        header_image = '/static/images/projects/icon_drop64.jpg',
         link_url     = '/projects/drop64',
         source_url   = 'https://github.com/mwcz/Drop64',
         demo_url     = 'http://drop64.com/',
@@ -139,6 +140,7 @@ $(function () {
         source_url   = 'https://github.com/mwcz/bouncey',
         demo_url     = '/projects/bouncey',
         ) }}
+        {#  Until it's fixed.
     {{ project_thumbnail.write(
         body_title   = 'Canvas Indexed Color',
         body_text    = 'A tech demo in HTML5 canvas demonstrating an indexed-color-like effect.',
@@ -147,9 +149,10 @@ $(function () {
         demo_url     = '/projects/canvas_indexed_color',
         source_url   = 'https://github.com/mwcz/palebluepixel/tree/master/content/static/projects/canvas_indexed_color',
         ) }}
+        #}
     {{ project_thumbnail.write(
         body_title   = 'JSImage',
-        body_text    = 'A JavaScript library for basic image operations.',
+        body_text    = 'A simple image processing library.',
         header_image = '/static/images/projects/icon_jsimage.jpg',
         link_url     = '/projects/jsimage',
         source_url   = 'https://github.com/mwcz/jsimage',
