@@ -17,7 +17,7 @@ PDF_GENERATOR         = False
 DEFAULT_PAGINATION    = 6
 OUTPUT_SOURCES        = True
 DISPLAY_PAGES_ON_MENU = True
-THEME                 = '../palebluepixel-theme'
+THEME                 = '../pbpt'
 
 DISPLAY_CATEGORIES_ON_MENU = True
 
