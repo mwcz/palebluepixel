@@ -67,9 +67,11 @@ PLUGINS = [
     'neighbors',
     'assets',
     'series',
+    'summary',
     'gallery',
     'jinja2content',
-    'representative_image',
+    # 'googleplus_comments',
+    # 'representative_image',
     'thumbnailer',
 ]
 
