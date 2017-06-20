@@ -34,8 +34,7 @@
     <link href="https://palebluepixel.org/theme/css/styles.min.css" rel="stylesheet">
 
     <!-- JavaScript plugins (requires jQuery) -->
-    <script src="https://palebluepixel.org/theme/js/jquery.min.js"></script>
-    <script src="https://palebluepixel.org/theme/js/jquery.lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
 
     <link href="https://palebluepixel.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
           title="Pale Blue Pixel ATOM Feed"/>
@@ -216,9 +215,19 @@ of our planning, hard work, and creativity.</p>
     </div>
 </div>
 
+<!-- photoswipe lightbox -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
 <script type="text/javascript" charset="utf-8">
     $(function () {
-        $('.gallery .gallery-image a').lightbox();
+        $('.gallery').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            gallery: {
+                enabled: true,
+            },
+        });
     });
 </script></p>
 <h3>The future</h3>
@@ -346,6 +355,15 @@ window.addEventListener('resize', set_vimeo_iframe_height);
         </footer>
 
 
+
+    <script src="https://apis.google.com/js/plusone.js">
+    </script>
+    <div class="g-comments"
+        data-href="https://palebluepixel.org/2015/09/26/make-a-kimotion/"
+        data-width="642"
+        data-first_party_property="BLOGGER"
+        data-view_type="FILTERED_POSTMOD">
+    </div>
 
 
     </article>
