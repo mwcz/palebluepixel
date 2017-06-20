@@ -216,6 +216,7 @@ GITHUB_URL      = 'https://github.com/mwcz'
 DISQUS_SITENAME = False #'mwcz'
 TWITTER_COMMENTS = False # not working so great anymore
 DISCOURSE_COMMENTS = False
+GOOGLEPLUS_COMMENTS = True
 SOCIAL          = (('GitHub',  'https://github.com/mwcz'),
                    ('Twitter', 'https://twitter.com/mwcz'),)
 
