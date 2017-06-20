@@ -17,7 +17,7 @@ PDF_GENERATOR         = False
 DEFAULT_PAGINATION    = 6
 OUTPUT_SOURCES        = True
 DISPLAY_PAGES_ON_MENU = True
-THEME                 = '../pbpt'
+THEME                 = environ['HOME'] + '/projects/pbpt'
 
 DISPLAY_CATEGORIES_ON_MENU = True
 
@@ -62,7 +62,7 @@ BOOTSTRAP_THEME = 'flatly'
 #                           PLUGIN SETTINGS                           #
 #######################################################################
 
-PLUGIN_PATHS = [environ['HOME'] + '/workspace/pelican-plugins',]
+PLUGIN_PATHS = [environ['HOME'] + '/projects/pelican-plugins']
 PLUGINS = [
     'neighbors',
     'assets',
@@ -92,12 +92,13 @@ ASSET_BUNDLES = [
 ]
 
 ASSET_SOURCE_PATHS = [
-    environ["HOME"] + '/workspace/palebluepixel-theme',
+    environ['HOME'] + '/projects/pbpt',
 ]
 
 # related posts settings
 
 RELATED_POSTS_MAX = 4
+
 
 #######################################################################
 #                            HOST SETTINGS                            #
