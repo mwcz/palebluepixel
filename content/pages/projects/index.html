@@ -25,6 +25,14 @@ $(function () {
     {% import 'includes/panel.html' as project_thumbnail %}
 
     {{ project_thumbnail.write(
+        body_title   = 'Pity About Earth...',
+        body_text    = 'Humanity, I am sick of you.  Yours truly, the Universe.  Made for Ludum Dare 38.',
+        header_image = '/static/images/projects/icon_pae.jpg',
+        link_url     = '/projects/pity-about-earth',
+        demo_url     = 'http://pae.fun',
+        source_url   = 'https://github.com/ScriptaGames/pityaboutearth/',
+        ) }}
+    {{ project_thumbnail.write(
         body_title   = 'Fireflies',
         body_text    = 'A flock of fireflies forms shapes for your enjoyment.',
         header_image = '/static/images/projects/icon_fireflies.jpg',
@@ -73,7 +81,7 @@ $(function () {
         ) }}
     {{ project_thumbnail.write(
         body_title   = 'DiMo: Particles',
-        body_text    = 'An interactive art installation and particle simulation created for SPARKcon and powered by ThreeJS/WebGL.',
+        body_text    = 'An interactive art installation and particle simulation created for SPARKcon.',
         header_image = '/static/images/projects/icon_dimo.jpg',
         link_url     = '/projects/dimo',
         demo_url     = 'http://palebluepixel.org/static/projects/dimo/',

@@ -14,10 +14,12 @@ SITENAME              = u'Pale Blue Pixel'
 TIMEZONE              = 'America/New_York'
 DEFAULT_LANG          = u'en'
 PDF_GENERATOR         = False
-DEFAULT_PAGINATION    = 6
+DEFAULT_PAGINATION    = 10
 OUTPUT_SOURCES        = True
 DISPLAY_PAGES_ON_MENU = True
 THEME                 = '../pbpt'
+THEME_STATIC_PATHS    = ['static', 'templates']
+
 
 DISPLAY_CATEGORIES_ON_MENU = True
 

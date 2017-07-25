@@ -1,7 +1,7 @@
 Title: Square Off
 Slug: projects/squareoff
 Category: squareoff
-Tags: programming, javascript, threejs, webgl, phaser, gamedev, 2d, web, squareoff
+Tags: programming, ludum-dare, ld35, javascript, phaser, webgl, gamedev, 2d, web, squareoff
 Status: hidden
 
 Square Off is a 1v1 airhockey-style game that [Jared][jared] and [I][mwcz]

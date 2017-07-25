@@ -19,43 +19,55 @@
         <p>
             I maintain a few colorful <a href="/projects" title="my programming projects">projects</a>,
             and occasionally write <a href="/posts" title="my blog posts">blog posts</a>
-            about javascript and the web.  You can find me on Twitter
+            about javascript and the web.  I used to <a href="http://clayto.com">take pictures</a>.  You can find me on Twitter
             <a href="https://twitter.com/mwcz">@mwcz</a>.
         </p>
 
         <p>
-            Here are a few of my recent projects:
+            Here are a few of my recent projects.
         </p>
     </div>
+
+    <h2>
+        Recent projects
+    </h2>
 
     <div class="pbp-project-list">
         {% import 'includes/panel.html' as project_thumbnail %}
 
         {{ project_thumbnail.write(
-            body_title   = 'Zorbio',
-            body_text    = 'Zorbio is a multiplayer eat-em-up game, get abzorbed at <a href="http://zor.bio" target="_blank" rel="noreferrer noopener">http://zor.bio</a>.',
+            header_image = '/static/images/projects/icon_pae.jpg',
+            link_url     = '/projects/pity-about-earth',
+            demo_url     = 'http://pae.fun',
+            source_url   = 'https://github.com/ScriptaGames/pityaboutearth/',
+            ) }}
+        {{ project_thumbnail.write(
             header_image = '/static/images/projects/icon_zorbio.jpg',
             link_url     = '/projects/zorbio',
             demo_url     = 'http://zor.bio/',
             ) }}
         {{ project_thumbnail.write(
-            body_title   = 'Square Off',
-            body_text    = 'Square Off is a 1v1 airhockey-style game.  Place squares to deflect the disc.  We built Square Off in 72 hours for <a href="http://ludumdare.com/compo/2016/04/13/welcome-to-ludum-dare-35/">LD35</a>.',
-            header_image = '/static/images/projects/icon_sqoff.jpg',
-            link_url     = '/projects/squareoff',
-            demo_url     = 'http://sqoff.com/',
-            source_url   = 'https://github.com/ScriptaGames/SquareOff/',
-            ) }}
-        {{ project_thumbnail.write(
-            body_title   = 'Kimotion',
-            body_text    = 'Kimotion is a framework for building interactive art installations.',
             header_image = '/static/images/projects/icon_kimotion.jpg',
             link_url     = '/projects/kimotion',
             demo_url     = 'http://kimotion.xyz/live/#sandstorm',
             source_url   = 'https://github.com/mwcz/Kimotion',
             ) }}
+
     </div>
 
+    <a href="/projects">More projects &rarr;</a>
+    <br>
+    <a href="/posts">Blog posts &rarr;</a>
+
 </section>
+
+{#
+<section class="pbp-homepage">
+    <h2>
+        Recent posts
+    </h2>
+{% include "articles.html" ignore missing with context %}
+</section>
+#}
 
 {% endblock content %}
