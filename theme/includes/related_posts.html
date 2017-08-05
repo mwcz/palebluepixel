@@ -1,0 +1,18 @@
+{% if 'related_posts' in PLUGINS %}
+<section class="pbp-related-posts" id="pbp-related-posts">
+    {% if article.related_posts %}
+        <h2>Might these be of interest?</h2>
+
+        {% for post in article.related_posts %}
+            <article>
+                <h2><a href="{{ SITEURL }}/{{ post.url }}">{{ post.title }}</a></h2>
+                <div class="summary">{{ post.summary }}
+                    {# Uncomment if you want to show comment counts #}
+                    {#{% include 'includes/comment_count.html' %}#}
+                    <a class="btn btn-default btn-xs" href="{{ SITEURL }}/{{ post.url }}">more ...</a>
+                </div>
+            </article>
+        {% endfor %}
+    {% endif %}
+</section>
+{% endif %}

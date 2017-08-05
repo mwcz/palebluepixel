@@ -1,0 +1,10 @@
+{% extends "index.html" %}
+{% block title %}{{ tag }} posts - {{ SITENAME }}{% endblock %}
+
+{% block pre_articles %}
+<div class="col-xs-12">
+    <h2>
+        Posts about <i>{{ tag }}</i>
+    </h2>
+</div>
+{% endblock pre_articles %}

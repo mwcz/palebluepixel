@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }} - {{SITENAME}}{% endblock %}
+{% block content %}
+    <article id="content" class="body">
+        <header class="page-header">
+            <h1 class="entry-title">{{ page.title }}</h1>
+        </header>
+        {% if PDF_PROCESSOR %}
+            <a href="{{ SITEURL }}/pdf/{{ page.slug }}.pdf">
+                get the pdf
+            </a>
+        {% endif %}
+        <div class="entry-content">
+            {{ page.content }}
+        </div>
+        {# if page has a category, look for articles that have a tag matching
+        the page's category and display them #}
+        {% set related_articles = [] %}
+        {% if page.category %}
+            {%- for article in articles %}
+                {% for tag in article.tags %}
+                    {% if tag|string() == page.category|string() %}
+                        {# append matching article to related_articles list #}
+                        {% if related_articles.append(article) %}{% endif %}
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        {% endif %}
+        {% if related_articles %}
+            <h2>Related posts:</h2>
+            <ul>
+            {% for article in related_articles %}
+            <li>
+                <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+            </li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    </article>
+{% include 'includes/comments.html' %}
+{% endblock %}

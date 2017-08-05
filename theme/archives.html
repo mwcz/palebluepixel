@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+    <section id="content">
+        <h1>Archives for {{ SITENAME }}</h1>
+
+        {% for group in dates | groupby('category') %}
+        <div class="col-xs-12">
+            <h2>
+                {{ group.grouper | capitalize }}
+            </h2>
+            <div class="row">
+                {% for article in group.list %}
+                <div class="col-xs-7"><a href='{{ SITEURL }}/{{ article.url }}'>{{ article.title }}</a></div>
+                <div class="col-xs-5">{{ article.locale_date }}</div>
+                <div class="clearfix"></div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+{% endblock %}

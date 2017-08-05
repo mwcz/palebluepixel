@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#171717">
+    <link rel="icon" type="image/png" href="/static/images/favicon.png">
+
+    {% if USE_OPEN_GRAPH is not defined %}
+        {% set USE_OPEN_GRAPH = True %}
+    {% endif %}
+
+    {% if USE_OPEN_GRAPH %}
+        <!-- Open Graph tags -->
+        {% if OPEN_GRAPH_FB_APP_ID %}
+            <meta property="fb:app_id" content="{{ OPEN_GRAPH_FB_APP_ID }}"/>
+        {% endif %}
+        {% if article %}
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="{{ article.title|striptags }}"/>
+            <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}"/>
+            <meta property="og:description" content="{{ article.summary|striptags }}"/>
+            {% if article.image %}
+            <meta property="og:image"
+                  content="{{ SITEURL }}{{ article.image }}"/>
+            {% endif %}
+        {% elif page %}
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="{{ page.title }}"/>
+            <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}"/>
+        {% else %}
+            <meta property="og:type" content="website"/>
+            <meta property="og:title" content="{{ SITENAME }}"/>
+            <meta property="og:url" content="{{ SITEURL }}"/>
+            <meta property="og:description" content="{{ SITENAME }}"/>
+            {% if OPEN_GRAPH_IMAGE %}
+            <meta property="og:image"
+                  content="{{ SITEURL }}/static/{{ OPEN_GRAPH_IMAGE }}"/>
+            {% endif %}
+        {% endif %}
+
+    {% endif %}
+
+    <!--[if gte IE 9]
+    <style type="text/css">
+        .gradient {
+            filter: none;
+        }
+    </style>
+    <![endif]-->
+
+    <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
+    {% assets "pbp-css" %}
+    <link href="{{ SITEURL }}/theme/css/styles.min.css" rel="stylesheet">
+    {% endassets %}
+
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+    <script>window.jQuery = $;</script>
+
+    {% if FEED_ALL_ATOM %}
+    <link href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate"
+          title="{{ SITENAME }} ATOM Feed"/>
+    {% endif %}
+    {% if FEED_ALL_RSS %}
+    <link href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" type="application/atom+xml" rel="alternate"
+          title="{{ SITENAME }} RSS Feed"/>
+    {% endif %}
+
+    {% include 'includes/ga.html' %}
+    {% include 'includes/piwik.html' %}
+
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+{% block header %}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <nav class="pbp-navbar" role="navigation">
+                <a href="{{ SITEURL }}" title="{{ SITENAME }} homepage" id="pbp-logo">
+                    PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+                </a>
+            </nav>
+        </div>
+    </div>
+</div>
+{% endblock header %}
+<!-- /.navbar -->
+<main role="main" class="container">
+    {% block content %}
+    {% endblock %}
+</main>
+
+{% block footer %}
+{% endblock %}
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
+<script src="{{ SITEURL }}/theme/lib/prism/prism.js"></script>
+
+{% include 'includes/disqus_script.html' %}
+</body>
+</html>

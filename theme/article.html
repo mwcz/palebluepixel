@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}
+    {{ article.title | striptags }} - {{SITENAME}}
+{% endblock %}
+{% block content %}
+    <article>
+
+        {% import 'includes/gallery.html' as gallery %}
+
+        <header class="page-header">
+            <h1>
+                {{ article.title }}
+            </h1>
+        </header>
+        <div class="entry-content">
+            <nav class="toc">{{ article.toc }}</nav>
+            {# add article content, but swap out the string {{ gallery }} for
+            the gallery html for this article #}
+            {{ article.content | replace( '$GALLERY', gallery.write( article ) ) }}
+        </div>
+
+        <!-- /.entry-content -->
+    {# prev/next links
+        {% include "includes/neighbors.html" %}
+    #}
+        {# {% include "includes/article_info.html" %} #}
+
+        <footer>
+            <small>
+                This article was published on
+                <time datetime="{{ article.locale_date }}" pubdate="">{{ article.locale_date }}</time>
+                by <a href="https://twitter.com/mwcz" title="mwcz twitter" rel="author">{{ article.author }}</a>
+                and tagged with
+                {% for tag in article.tags %}
+                    {% if loop.last %} and{% endif %}
+                    <a href="{{ SITEURL }}/tag/{{ tag }}" rel="category">{{ tag }}</a>{#
+                    #}{% if not loop.last and loop.length > 2 %},{% endif %}
+                {% endfor %}.
+            </small>
+        </footer>
+
+        {#  {% include "includes/addthis.html" %}        #}
+        {#  {% include "includes/related_posts.html" %}  #}
+        {% include "includes/comments.html" %}
+    </article>
+
+{% endblock %}

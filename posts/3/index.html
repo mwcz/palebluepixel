@@ -32,6 +32,7 @@
 
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+    <script>window.jQuery = $;</script>
 
     <link href="https://palebluepixel.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
           title="Pale Blue Pixel ATOM Feed"/>
@@ -56,173 +57,232 @@
 <main role="main" class="container">
 
 <section>
-
-    <div class="row">
-
-
-            <article class="col-xs-12">
-                    <a href="https://palebluepixel.org/2014/03/23/rgb-webgl-color-cube/">
-                        <img class="pbp-post-thumbnail" src="/2014/03/23/rgb-webgl-color-cube/colorcube.jpg" />
-                    </a>
-                <header>
-                    <h2>
-                        <a href="https://palebluepixel.org/2014/03/23/rgb-webgl-color-cube/">
-                            RGB WebGL Color Cube
-                        </a>
-                    </h2>
-                </header>
-                <div class="meta">
-                    PBP26
-                    <time datetime="2014-03-23" pubdate="">2014-03-23</time>
-                </div>
-                <div class="summary">
-                    <p>I spent a bit of time this weekend building an RGB color cube for
-<a href="http://colorpal.org">ColorPal</a>, using <a href="http://threejs.org">Three.js</a>.  Drag and …</p>
-                </div>
-            </article>
-            <article class="col-xs-12">
-                    <a href="https://palebluepixel.org/2014/02/25/introducing-drop64-ezpz-data-uri-generator/">
-                        <img class="pbp-post-thumbnail" src="/static/images/projects/drop64/recording.gif" />
-                    </a>
-                <header>
-                    <h2>
-                        <a href="https://palebluepixel.org/2014/02/25/introducing-drop64-ezpz-data-uri-generator/">
-                            Introducing Drop64, ezpz data URI generator
-                        </a>
-                    </h2>
-                </header>
-                <div class="meta">
-                    PBP25
-                    <time datetime="2014-02-25" pubdate="">2014-02-25</time>
-                </div>
-                <div class="summary">
-                    <p>Speed-hacking an old project for fun and... fun.</p>
-                </div>
-            </article>
-            <article class="col-xs-12">
-                    <a href="https://palebluepixel.org/2013/12/22/super-easy-image-resizing-in-gimp/">
-                        <img class="pbp-post-thumbnail" src="/2013/12/22/super-easy-image-resizing-in-gimp/gimp_math.gif" />
-                    </a>
-                <header>
-                    <h2>
-                        <a href="https://palebluepixel.org/2013/12/22/super-easy-image-resizing-in-gimp/">
-                            Super easy image resizing in GIMP
-                        </a>
-                    </h2>
-                </header>
-                <div class="meta">
-                    PBP24
-                    <time datetime="2013-12-22" pubdate="">2013-12-22</time>
-                </div>
-                <div class="summary">
-                    <p>By accident, I discovered that GIMP number fields evaluate math expressions.  So convenient!</p>
-                </div>
-            </article>
-            <article class="col-xs-12">
-                    <a href="https://palebluepixel.org/2013/11/07/colorpal-cli/">
-                        <img class="pbp-post-thumbnail" src="/2013/11/07/colorpal-cli/colorpal_cli_logo.png" />
-                    </a>
-                <header>
-                    <h2>
-                        <a href="https://palebluepixel.org/2013/11/07/colorpal-cli/">
-                            ColorPal CLI!
-                        </a>
-                    </h2>
-                </header>
-                <div class="meta">
-                    PBP23
-                    <time datetime="2013-11-07" pubdate="">2013-11-07</time>
-                </div>
-                <div class="summary">
-                    <p>Tired of creating color palettes with ColorPal's simple, intuitive drag-and-drop interface?  Me too!  Use this handy command instead.</p>
-                </div>
-            </article>
-            <article class="col-xs-12">
-                    <a href="https://palebluepixel.org/2012/07/30/colorpal-output-update/">
-                        <img class="pbp-post-thumbnail" src="/2012/07/30/colorpal-output-update/after.png" />
-                    </a>
-                <header>
-                    <h2>
-                        <a href="https://palebluepixel.org/2012/07/30/colorpal-output-update/">
-                            ColorPal Output Update
-                        </a>
-                    </h2>
-                </header>
-                <div class="meta">
-                    PBP22
-                    <time datetime="2012-07-30" pubdate="">2012-07-30</time>
-                </div>
-                <div class="summary">
-                    <p>Hi pals.</p>
-<p>This is a speedy post about a speedy update I made today to
-<a href="/projects/colorpal/">ColorPal</a>, an HTML5 tool I …</p>
-                </div>
-            </article>
-            <article class="col-xs-12">
-                    <a href="https://palebluepixel.org/2012/07/03/introducing-canvas-indexed-color/">
-                        <img class="pbp-post-thumbnail" src="/2012/07/03/introducing-canvas-indexed-color/hahatiger.png" />
-                    </a>
-                <header>
-                    <h2>
-                        <a href="https://palebluepixel.org/2012/07/03/introducing-canvas-indexed-color/">
-                            Introducing Canvas Indexed Color
-                        </a>
-                    </h2>
-                </header>
-                <div class="meta">
-                    PBP21
-                    <time datetime="2012-07-03" pubdate="">2012-07-03</time>
-                </div>
-                <div class="summary">
-                    <p>A basic implementation of indexed color palettes for HTML5 canvas.</p>
-                </div>
-            </article>
-        </div> <!-- /.row -->
+<div class="row">
 
 
-        <ul class="pagination">
-                <li class="prev">
-                    <a href="https://palebluepixel.org/posts/2">
-                        &laquo;
+        <article class="col-xs-12">
+            <header>
+                <h2>
+                    <a href="https://palebluepixel.org/2012/01/30/toy-javascript-unit-tester/">
+                        Toy javascript unit tester
                     </a>
-                </li>
-                <li class="">
-                    <a href="https://palebluepixel.org/posts/">
-                        1
+                </h2>
+            </header>
+            <div class="meta">
+                PBP18
+                <time datetime="2012-01-30" pubdate="">2012-01-30</time>
+            </div>
+            <div class="summary">
+                <p>Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and …</p>
+            </div>
+        </article>
+        <article class="col-xs-12">
+                <div class="pbp-post-thumbnail">
+                    <a href="https://palebluepixel.org/2012/01/16/colorpal-alpha/">
+                        <img src="/2012/01/16/colorpal-alpha/ss.png" />
                     </a>
-                </li>
-                <li class="">
-                    <a href="https://palebluepixel.org/posts/2">
-                        2
+                </div>
+            <header>
+                <h2>
+                    <a href="https://palebluepixel.org/2012/01/16/colorpal-alpha/">
+                        ColorPal Alpha
                     </a>
-                </li>
-                <li class="active">
-                    <a href="https://palebluepixel.org/posts/3">
-                        3
+                </h2>
+            </header>
+            <div class="meta">
+                PBP15
+                <time datetime="2012-01-16" pubdate="">2012-01-16</time>
+            </div>
+            <div class="summary">
+                <p>Introducing ColorPal, a fast color palette creation tool.</p>
+            </div>
+        </article>
+        <article class="col-xs-12">
+                <div class="pbp-post-thumbnail">
+                    <a href="https://palebluepixel.org/2012/01/08/the-n9-qr-codes-and-keepassx/">
+                        <img src="/2012/01/08/the-n9-qr-codes-and-keepassx/keepass_not_in_n9.png" />
                     </a>
-                </li>
-                <li class="">
-                    <a href="https://palebluepixel.org/posts/4">
-                        4
+                </div>
+            <header>
+                <h2>
+                    <a href="https://palebluepixel.org/2012/01/08/the-n9-qr-codes-and-keepassx/">
+                        The N9, QR-Codes, and KeePassX
                     </a>
-                </li>
-                <li class="">
-                    <a href="https://palebluepixel.org/posts/5">
-                        5
+                </h2>
+            </header>
+            <div class="meta">
+                PBP11
+                <time datetime="2012-01-08" pubdate="">2012-01-08</time>
+            </div>
+            <div class="summary">
+                <p><em>Update: I happened across a <a href="http://keepass.info/plugins.html#qrcodegen">KeePass
+plugin</a> (not the same as KeePassX)
+that displays passwords as QR codes, just like …</em></p>
+            </div>
+        </article>
+        <article class="col-xs-12">
+            <header>
+                <h2>
+                    <a href="https://palebluepixel.org/2011/11/17/bouncey-returns-more-canvas-physics/">
+                        Bouncey returns - more canvas physics
                     </a>
-                </li>
-                <li class="">
-                    <a href="https://palebluepixel.org/posts/6">
-                        6
+                </h2>
+            </header>
+            <div class="meta">
+                PBP8
+                <time datetime="2011-11-17" pubdate="">2011-11-17</time>
+            </div>
+            <div class="summary">
+                <p>This is a slightly upgraded version of the physics demo I showed in my <a href="/2011/11/17/bouncey---canvas-physics/">last post</a>.</p>
+<p>It is still...</p>
+<p><quote>"a …</quote></p>
+            </div>
+        </article>
+        <article class="col-xs-12">
+            <header>
+                <h2>
+                    <a href="https://palebluepixel.org/2011/11/17/html5-tool-for-creating-color-palettes-from-an-image/">
+                        HTML5 tool for creating color palettes from an image
                     </a>
-                </li>
-                <li class="next">
-                    <a href="https://palebluepixel.org/posts/4">
-                        &raquo;
+                </h2>
+            </header>
+            <div class="meta">
+                PBP9
+                <time datetime="2011-11-17" pubdate="">2011-11-17</time>
+            </div>
+            <div class="summary">
+                <p>For an <a href="http://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction">HCI</a> class project in Fall 2009, I pulled together some of my previous demos to make this integrated …</p>
+            </div>
+        </article>
+        <article class="col-xs-12">
+            <header>
+                <h2>
+                    <a href="https://palebluepixel.org/2011/11/17/bouncey-canvas-physics/">
+                        Bouncey - canvas physics
                     </a>
-                </li>
-        </ul>
-<section>
+                </h2>
+            </header>
+            <div class="meta">
+                PBP7
+                <time datetime="2011-11-17" pubdate="">2011-11-17</time>
+            </div>
+            <div class="summary">
+                <p>This is Bouncey.  It's a simple physics demo I wrote in early/mid 2011, with some contributions and bugfixes from …</p>
+            </div>
+        </article>
+        <article class="col-xs-12">
+            <header>
+                <h2>
+                    <a href="https://palebluepixel.org/2011/11/17/how-not-to-use-css3/">
+                        How not to use CSS3
+                    </a>
+                </h2>
+            </header>
+            <div class="meta">
+                PBP6
+                <time datetime="2011-11-17" pubdate="">2011-11-17</time>
+            </div>
+            <div class="summary">
+                <p>How to ruin a good thing...</p>
+<p>Try refreshing.</p>
+<style type="text/css">
+
+.css3_demo {
+    font-family: FreeSansBold;
+    text-align: center;
+    color: #efefef;
+    position: relative;
+    top: 0;
+    left …</style>
+            </div>
+        </article>
+        <article class="col-xs-12">
+            <header>
+                <h2>
+                    <a href="https://palebluepixel.org/2011/11/17/html5-canvas-point-operations/">
+                        HTML5 canvas point operations
+                    </a>
+                </h2>
+            </header>
+            <div class="meta">
+                PBP5
+                <time datetime="2011-11-17" pubdate="">2011-11-17</time>
+            </div>
+            <div class="summary">
+                <p>This is the last demo I made using <a href="https://github.com/mwcz/jsimage">JSImage</a>.  I created it some time around 2009-2010.  At the time, I …</p>
+            </div>
+        </article>
+        <article class="col-xs-12">
+            <header>
+                <h2>
+                    <a href="https://palebluepixel.org/2011/11/16/html5-canvas-area-selection-averaging/">
+                        HTML5 canvas area selection averaging
+                    </a>
+                </h2>
+            </header>
+            <div class="meta">
+                PBP4
+                <time datetime="2011-11-16" pubdate="">2011-11-16</time>
+            </div>
+            <div class="summary">
+                <p>This is a demo from late 2009.  It's an extension of the single-pixel <a href="/2011/11/16/html5-canvas-eyedropper/">eyedropper</a> I wrote previously.</p>
+<p>It's powered by …</p>
+            </div>
+        </article>
+        <article class="col-xs-12">
+            <header>
+                <h2>
+                    <a href="https://palebluepixel.org/2011/11/16/html5-canvas-rgb-histogram/">
+                        HTML5 canvas RGB histogram
+                    </a>
+                </h2>
+            </header>
+            <div class="meta">
+                PBP3
+                <time datetime="2011-11-16" pubdate="">2011-11-16</time>
+            </div>
+            <div class="summary">
+                <p>This is yet another demo from around 2009.  It's simple enough.  Click a
+button, draw an unbinned RGB histogram of …</p>
+            </div>
+        </article>
+    </div> <!-- /.row -->
+
+
+    <ul class="pagination">
+            <li class="prev">
+                <a href="https://palebluepixel.org/posts/2">
+                    &laquo;
+                </a>
+            </li>
+            <li class="">
+                <a href="https://palebluepixel.org/posts/">
+                    1
+                </a>
+            </li>
+            <li class="">
+                <a href="https://palebluepixel.org/posts/2">
+                    2
+                </a>
+            </li>
+            <li class="active">
+                <a href="https://palebluepixel.org/posts/3">
+                    3
+                </a>
+            </li>
+            <li class="">
+                <a href="https://palebluepixel.org/posts/4">
+                    4
+                </a>
+            </li>
+            <li class="next">
+                <a href="https://palebluepixel.org/posts/4">
+                    &raquo;
+                </a>
+            </li>
+    </ul>
+</section>
+
 </main>
 
 

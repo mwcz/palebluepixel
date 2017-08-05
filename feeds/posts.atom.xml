@@ -1,5 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Pale Blue Pixel - Posts</title><link href="https://palebluepixel.org/" rel="alternate"></link><link href="http://localhost:8000/feeds/posts.atom.xml" rel="self"></link><id>https://palebluepixel.org/</id><updated>2017-03-10T00:00:00-05:00</updated><entry><title>Meet SimPixel</title><link href="https://palebluepixel.org/2017/03/10/meet-simpixel/" rel="alternate"></link><published>2017-03-10T00:00:00-05:00</published><updated>2017-03-10T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-03-10:/2017/03/10/meet-simpixel/</id><summary type="html">&lt;p&gt;A WebGL-based visualizer for LED displays.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have someone I'd like you to meet.  SimPixel, meet everyone.  Everyone,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pale Blue Pixel - Posts</title><link href="https://palebluepixel.org/" rel="alternate"></link><link href="http://localhost:8000/feeds/posts.atom.xml" rel="self"></link><id>https://palebluepixel.org/</id><updated>2017-08-04T00:00:00-04:00</updated><entry><title>In Orange Light</title><link href="https://palebluepixel.org/2017/08/04/in-orange-light/" rel="alternate"></link><published>2017-08-04T00:00:00-04:00</published><updated>2017-08-04T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-08-04:/2017/08/04/in-orange-light/</id><summary type="html">&lt;p&gt;A WebGL-based visualizer for LED displays.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Three years ago, surrounded by monitors in a dark, blue-hued room, a particular screen caught my eye.  My girlfriend's (now wife's) eye was caught by the same screen, and we crossed the room to investigate.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://palebluepixel.org/2017/08/04/in-orange-light/kr0-emp.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;We were visiting the &lt;em&gt;Indie Game Revolution&lt;/em&gt; exhibit at EMP in Seattle, and what we found on that screen was Scene I, Act I of &lt;a href="http://kentuckyroutezero.com/"&gt;Kentucky Route Zero&lt;/a&gt;.  It took me three years, but I finally rediscovered KR0 a few weeks ago.  Now, having (well, nearly) finished it, I'm convinced it's a masterpiece.  The game's atmosphere is so rich, so effortlessly gripping, that &lt;em&gt;actually being there&lt;/em&gt; would be less compelling.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://palebluepixel.org/2017/08/04/in-orange-light/kr0.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;And they accomplished all that with 3D models my Amiga 500 could have rendered (sans lighting).  Strategic omission of detail really has a way of setting fire to an imagination.&lt;/p&gt;
+&lt;p&gt;The atmosphere and storytelling from that game have been rolling around in my mind since then.  With Ludum Dare 39 approaching, I'd decided to try my novice hand at recreating some of its techniques.&lt;/p&gt;
+&lt;h2&gt;Ludum Dare 39&lt;/h2&gt;
+&lt;p&gt;Jared and I have participated in the Ludum Dare &lt;em&gt;Jam&lt;/em&gt; &lt;a href="http://ludumdare.com/compo/ludum-dare-35/?action=preview&amp;amp;uid=91554"&gt;three&lt;/a&gt; &lt;a href="http://ludumdare.com/compo/ludum-dare-37/?action=preview&amp;amp;uid=91554"&gt;whole&lt;/a&gt; &lt;a href="https://ldjam.com/events/ludum-dare/38/pity-about-earth"&gt;times&lt;/a&gt;, and we've been growing curious about the &lt;em&gt;Compo&lt;/em&gt; (aka, Hard Mode).  Jared decided to sit this one out, so I took the opportunity to enter my first Compo, which is an exclusively solo endeavor.  The theme was "Running out of power".  Without any further ado, here is my game, &lt;a href="http://scripta.co/in-orange-light/"&gt;In Orange Light&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://palebluepixel.org/2017/08/04/in-orange-light/in-orange-light-scenery.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://ldjam.com/events/ludum-dare/39/in-orange-light"&gt;View the Ludum Dare entry&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Day 1 of 2, the foundation&lt;/h2&gt;
+&lt;p&gt;With Kentucky Route Zero fresh in my mind, I wanted to branch out from my usual arcade-style game and try to make something a little more moody and atmospheric.  Based on the "running out of power" theme, my idea was a survival game where you try to balance scant resources to survive winter in a frigid mountain cabin.&lt;/p&gt;
+&lt;p&gt;To get the math out of the way, I spent the first day implementing a basic simulation of warmth, food, fuel, a generator, heater, and all their interactions.  I also created some placeholder art, so I'd have something to click on and cringe at.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://palebluepixel.org/2017/08/04/in-orange-light/placeholder-art.png"&gt;&lt;/p&gt;
+&lt;h2&gt;Day 2 of 2, some polish&lt;/h2&gt;
+&lt;p&gt;I spent about half of Sunday improving the visuals, and the other half fixing bugs in the simulation I'd created on Saturday.&lt;/p&gt;
+&lt;h3&gt;Making it mountainous&lt;/h3&gt;
+&lt;p&gt;Starting with a set of rectangles, and using a photo of the Blue Ridge Mountains as a reference, I tweaked vector paths into something resembling mountains.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://palebluepixel.org/2017/08/04/in-orange-light/making-mountains.gif"&gt;&lt;/p&gt;
+&lt;h3&gt;Sunrise, day, sunset, night, repeat&lt;/h3&gt;
+&lt;style type="text/css" rel="stylesheet"&gt;
+#iol-sky-demo {
+    float: right;
+    padding-left: 20px;
+    pointer-events: none;
+}
+@media (max-width: 600px) {
+    #iol-sky-demo {
+        float: none;
+    }
+    #iol-sky-demo canvas {
+        margin: 0 auto;
+    }
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+&lt;/style&gt;
+
+&lt;p&gt;The plain blue mountains lacked luster, and a day/night cycle seemed like a fitting way to bring them some life.&lt;/p&gt;
+&lt;div id="iol-sky-demo"&gt;&lt;/div&gt;
+
+&lt;p&gt;I made the mountain sprites greyscale and multiplied them against two very tall, sliding sky gradients.  Here's a visual of the technique, zoomed way out so you can see the two sky images playing leap frog as they slide up the screen. (This is a live demo, not a video.)&lt;/p&gt;
+&lt;p&gt;To see the full sky sunrise and sunset, give &lt;a href="http://scripta.co/in-orange-light/"&gt;In Orange Light&lt;/a&gt; a play, but don't dismiss the text.  That way, time will be paused and you won't starve of freeze.&lt;/p&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+
+&lt;h3&gt;Sound effects&lt;/h3&gt;
+&lt;p&gt;The game has a few sound effects.  The heater's electric hum, the generator's rumble, and the growing, clawing sound of hunger.  To create these, I used &lt;a href="http://beepbox.co"&gt;BeepBox&lt;/a&gt;, a chiptune music sequencer.  It's meant for music, but I was able to coax some sound effects out of it.  Here are two of the sound effects, hit &lt;code&gt;Play&lt;/code&gt; to hear them through the BeepBox synthesizer live on this page.&lt;/p&gt;
+&lt;div id="sfx"&gt;
+    &lt;p&gt;
+        &lt;button id="generator"&gt;Play&lt;/button&gt; Generator  &lt;small&gt;&lt;a href="http://beepbox.co/#5s7k0l00e00t7m1a7g00j0i1r1w81445111f30222000d11000101c00023000h40000000v20214050o3000b8p1xkNVAWE6CCIdttddsB1xkn3qmrx-GabxL0"&gt;(view in BeepBox)&lt;/a&gt;&lt;/small&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+        &lt;button id="heater"&gt;Play&lt;/button&gt; Heater  &lt;small&gt;&lt;a href="http://beepbox.co/#5s7k0l00e00t7m1a7g00j0i1r1w81445111f30222000d11000101c00023000h40000000v20214050o3000bgp1xkNVAWE6CCIdttddsB1xkn3qmrx-GabxL0"&gt;(view in BeepBox)&lt;/a&gt;&lt;/small&gt;
+    &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;BeepBox is a very approachable sequencer.  Here's what the "generator ran out of fuel" sound effect looks like inside the tool.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://palebluepixel.org/2017/08/04/in-orange-light/generator-off.png" alt="A screenshot of the 'generator fuel empty' sound in BeepBox"&gt;&lt;/p&gt;
+&lt;style&gt;
+    #sfx button {
+        padding: 10px;
+        text-align: center;
+        font-family: monospace;
+    }
+&lt;/style&gt;
+
+&lt;script src="https://palebluepixel.org/2017/08/04/in-orange-light/beepbox_synth.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+    var generator = new beepbox.Synth("5s7k0l00e00t7m1a7g00j0i1r1w81445111f30222000d11000101c00023000h40000000v20214050o3000b8p1xkNVAWE6CCIdttddsB1xkn3qmrx-GabxL0");
+    var heater = new beepbox.Synth("5s7k0l00e00t7m1a7g00j0i1r1w81445111f30222000d11000101c00023000h40000000v20214050o3000bgp1xkNVAWE6CCIdttddsB1xkn3qmrx-GabxL0");
+
+    var genEl = document.querySelector('#generator');
+    var heatEl = document.querySelector('#heater');
+
+    genEl.addEventListener('click', function () {
+        if (generator.playing) {
+            genEl.classList.remove('on');
+            genEl.textContent = 'Play ';
+            generator.pause();
+        }
+        else {
+            genEl.classList.add('on');
+            genEl.textContent = 'Pause';
+            generator.play();
+        }
+    });
+    heatEl.addEventListener('click', function () {
+        if (heater.playing) {
+            heatEl.classList.remove('on');
+            heatEl.textContent = 'Play ';
+            heater.pause();
+        }
+        else {
+            heatEl.classList.add('on');
+            heatEl.textContent = 'Pause';
+            heater.play();
+        }
+    });
+&lt;/script&gt;
+
+&lt;h2&gt;Lessons learned&lt;/h2&gt;
+&lt;p&gt;First, working solo is much harder than working on a team, but not only because a team can get more work done.  Maintaining the sense of urgency, productivity, and focus was nearly impossible without a co-conspirator.&lt;/p&gt;
+&lt;p&gt;Second, system-of-numbers games need careful design and planning.  In Orange Light is essentially a small spreadsheet where you click buttons in order to keep some numbers within a desired range.  It seemed very simple at first, but a slew of problems arose after I &lt;em&gt;thought&lt;/em&gt; I had finished the simulation.&lt;/p&gt;
+&lt;p&gt;Third, and unsurprisingly, immersion and atmosphere are very difficult to execute on.  As a first experiment, I'm pretty happy with how things turned out.&lt;/p&gt;
+&lt;p&gt;Fourth, and last, if a game has &lt;em&gt;meters&lt;/em&gt;, and those meters indicate how Good/Bad something is, make sure they all go in the same direction.  In my game, the Warmth meter wants to be high, and the Hunger meter wants to be low.  That's been the single biggest point of absolutely understandable confusion.&lt;/p&gt;
+&lt;p&gt;Lessons learned!&lt;/p&gt;
+&lt;!-- IOL sky demo --&gt;
+
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"&gt;&lt;/script&gt;
+
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/phaser-ce/2.8.2/phaser.min.js"&gt;&lt;/script&gt;
+
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.min.js"&gt;&lt;/script&gt;
+
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"&gt;&lt;/script&gt;
+
+&lt;script src="https://palebluepixel.org/2017/08/04/in-orange-light/lib/phaser-state-transition-plugin.min.js"&gt;&lt;/script&gt;
+
+&lt;script src="https://palebluepixel.org/2017/08/04/in-orange-light/js/config.js"&gt;&lt;/script&gt;
+
+&lt;script src="https://palebluepixel.org/2017/08/04/in-orange-light/js/sim.js"&gt;&lt;/script&gt;
+
+&lt;script src="https://palebluepixel.org/2017/08/04/in-orange-light/js/states/boot.js"&gt;&lt;/script&gt;
+
+&lt;script src="https://palebluepixel.org/2017/08/04/in-orange-light/js/states/preload.js"&gt;&lt;/script&gt;
+
+&lt;script src="https://palebluepixel.org/2017/08/04/in-orange-light/js/states/menu.js"&gt;&lt;/script&gt;
+
+&lt;script src="https://palebluepixel.org/2017/08/04/in-orange-light/js/states/play.js"&gt;&lt;/script&gt;
+
+&lt;script src="https://palebluepixel.org/2017/08/04/in-orange-light/js/game.js"&gt;&lt;/script&gt;
+
+&lt;script src="https://palebluepixel.org/2017/08/04/in-orange-light/js/main.js"&gt;&lt;/script&gt;
+
+&lt;!-- /IOL sky demo --&gt;
+
+&lt;p&gt;&lt;img hidden src="https://palebluepixel.org/2017/08/04/in-orange-light/images/big/loading-bar.png"&gt;
+&lt;img hidden src="https://palebluepixel.org/2017/08/04/in-orange-light/images/sky.png"&gt;
+&lt;img hidden src="https://palebluepixel.org/2017/08/04/in-orange-light/images/mountain1.png"&gt;
+&lt;img hidden src="https://palebluepixel.org/2017/08/04/in-orange-light/images/mountain2.png"&gt;
+&lt;img hidden src="https://palebluepixel.org/2017/08/04/in-orange-light/images/mountain3.png"&gt;
+&lt;img hidden src="https://palebluepixel.org/2017/08/04/in-orange-light/images/mountain4.png"&gt;
+&lt;img hidden src="https://palebluepixel.org/2017/08/04/in-orange-light/iol-square-logo.jpg"&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="web"></category><category term="gamedev"></category><category term="ludum-dare"></category><category term="ld39"></category><category term="in-orange-light"></category></entry><entry><title>Meet SimPixel</title><link href="https://palebluepixel.org/2017/03/10/meet-simpixel/" rel="alternate"></link><published>2017-03-10T00:00:00-05:00</published><updated>2017-03-10T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-03-10:/2017/03/10/meet-simpixel/</id><summary type="html">&lt;p&gt;A WebGL-based visualizer for LED displays.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have someone I'd like you to meet.  SimPixel, meet everyone.  Everyone,
 SimPixel.&lt;/p&gt;
 &lt;div id="simpixel-container"&gt;&lt;/div&gt;
 

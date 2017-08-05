@@ -32,6 +32,7 @@
 
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+    <script>window.jQuery = $;</script>
 
     <link href="https://palebluepixel.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
           title="Pale Blue Pixel ATOM Feed"/>
@@ -56,39 +57,36 @@
 <main role="main" class="container">
 
 <section>
+<div class="row">
 
-    <div class="row">
 
-<div class="col-xs-12">
-    <h2>
-        Posts about <i>wasm</i>
-    </h2>
-</div>
-
-            <article class="col-xs-12">
+        <article class="col-xs-12">
+                <div class="pbp-post-thumbnail">
                     <a href="https://palebluepixel.org/2015/06/20/webassembly-is-the-keystone/">
-                        <img class="pbp-post-thumbnail" src="/2015/06/20/webassembly-is-the-keystone/asm.png" />
+                        <img src="/2015/06/20/webassembly-is-the-keystone/asm.png" />
                     </a>
-                <header>
-                    <h2>
-                        <a href="https://palebluepixel.org/2015/06/20/webassembly-is-the-keystone/">
-                            WebAssembly is the Keystone
-                        </a>
-                    </h2>
-                </header>
-                <div class="meta">
-                    PBP38
-                    <time datetime="2015-06-20" pubdate="">2015-06-20</time>
                 </div>
-                <div class="summary">
-                    <p>Within the last two days, WebAssembly (<strong>wasm</strong>) has graced the eyeballs of
+            <header>
+                <h2>
+                    <a href="https://palebluepixel.org/2015/06/20/webassembly-is-the-keystone/">
+                        WebAssembly is the Keystone
+                    </a>
+                </h2>
+            </header>
+            <div class="meta">
+                PBP38
+                <time datetime="2015-06-20" pubdate="">2015-06-20</time>
+            </div>
+            <div class="summary">
+                <p>Within the last two days, WebAssembly (<strong>wasm</strong>) has graced the eyeballs of
 every JavaScript developer.  If wasm is new to …</p>
-                </div>
-            </article>
-        </div> <!-- /.row -->
+            </div>
+        </article>
+    </div> <!-- /.row -->
 
 
-<section>
+</section>
+
 </main>
 
 

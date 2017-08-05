@@ -32,6 +32,7 @@
 
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+    <script>window.jQuery = $;</script>
 
     <link href="https://palebluepixel.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
           title="Pale Blue Pixel ATOM Feed"/>
@@ -56,38 +57,35 @@
 <main role="main" class="container">
 
 <section>
+<div class="row">
 
-    <div class="row">
 
-<div class="col-xs-12">
-    <h2>
-        Posts about <i>polymer</i>
-    </h2>
-</div>
-
-            <article class="col-xs-12">
+        <article class="col-xs-12">
+                <div class="pbp-post-thumbnail">
                     <a href="https://palebluepixel.org/2016/09/06/lazyloading-web-components/">
-                        <img class="pbp-post-thumbnail" src="/2016/09/06/lazyloading-web-components/lazyload.gif" />
+                        <img src="/2016/09/06/lazyloading-web-components/lazyload.gif" />
                     </a>
-                <header>
-                    <h2>
-                        <a href="https://palebluepixel.org/2016/09/06/lazyloading-web-components/">
-                            Lazyloading Web Components
-                        </a>
-                    </h2>
-                </header>
-                <div class="meta">
-                    PBP43
-                    <time datetime="2016-09-06" pubdate="">2016-09-06</time>
                 </div>
-                <div class="summary">
-                    <p>Convenience hacking: Web Components without imports.</p>
-                </div>
-            </article>
-        </div> <!-- /.row -->
+            <header>
+                <h2>
+                    <a href="https://palebluepixel.org/2016/09/06/lazyloading-web-components/">
+                        Lazyloading Web Components
+                    </a>
+                </h2>
+            </header>
+            <div class="meta">
+                PBP43
+                <time datetime="2016-09-06" pubdate="">2016-09-06</time>
+            </div>
+            <div class="summary">
+                <p>Convenience hacking: Web Components without imports.</p>
+            </div>
+        </article>
+    </div> <!-- /.row -->
 
 
-<section>
+</section>
+
 </main>
 
 

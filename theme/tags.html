@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Tags - {{ SITENAME }}{% endblock %}
+
+{% block content %}
+<section id="tags">
+
+    {% set sorted_tags = tags|sort_by_article_count %}
+    {% set most_tag_count = sorted_tags[0][1]|count %}
+
+    <h1>Topic tags for blog posts</h1>
+
+    <div class="pbp-barchart">
+
+        <div class="pbp-barchart-labels">
+            {%- for tag, articles in tags|sort %}
+            <a href="/{{ tag.url }}">
+                <span class="pbp-barchart-bar">{{ tag }}</span>
+            </a>
+            {% endfor %}
+        </div>
+
+        <div class="pbp-barchart-values">
+            {%- for tag, articles in tags|sort %}
+            <a href="/{{ tag.url }}">
+                <span class="pbp-barchart-bar" style="width:{{ 100 * articles|count / most_tag_count }}%">{{ articles|count }}</span>
+            </a>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+{% endblock %}
