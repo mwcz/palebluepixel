@@ -224,6 +224,10 @@ article, section {
     }
 }
 
+.pbp-article-footer {
+    margin-bottom: @padding-large-vertical;
+}
+
 .entry-content img {
     max-width : 100%;
     height    : auto;
@@ -358,15 +362,49 @@ article, section {
 
 .pbp-navbar {
     padding    : 32px 0 20px;
-    text-align : center;
+    .make-xs-column(12);
+
+    text-align: center;
+
+    @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 2em;
+        text-align: left;
+    }
+
+    .pbp-navitems {
+        grid-column-start: 3;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        list-style: none;
+        margin: 0;
+        padding: 0 0 0 6px;
+
+        .pbp-navitem {
+            margin: 0;
+            padding: 0 30px 0 0;
+            &:last-child {
+                padding: 0;
+            }
+            @media (max-width: 768px) {
+                padding: 0;
+                margin-top: 12px;
+                text-align: center;
+            }
+            .pbp-navlink {
+                #pbp-logo();
+                letter-spacing: 0;
+            }
+        }
+    }
 }
 
 #pbp-logo {
 
-    width           : 100%;
-    height          : 100%;
-
-    padding         : 8px 12px;
+    padding         : 0px 2px;
     position        : relative;
 
     letter-spacing  : 0.2em;
@@ -399,13 +437,13 @@ article, section {
         .pbp-dot-idle();
 
         -webkit-transition: max-width 1.0*@pbp-logo-transition-timer linear,
-                            left      1.5*@pbp-logo-transition-timer linear,
-                            top       1.5*@pbp-logo-transition-timer linear,
-                            opacity   1.5*@pbp-logo-transition-timer linear;
-                transition: max-width 1.0*@pbp-logo-transition-timer linear,
-                            left      1.5*@pbp-logo-transition-timer linear,
-                            top       1.5*@pbp-logo-transition-timer linear,
-                            opacity   1.5*@pbp-logo-transition-timer linear;
+        left      1.5*@pbp-logo-transition-timer linear,
+        top       1.5*@pbp-logo-transition-timer linear,
+        opacity   1.5*@pbp-logo-transition-timer linear;
+        transition: max-width 1.0*@pbp-logo-transition-timer linear,
+        left      1.5*@pbp-logo-transition-timer linear,
+        top       1.5*@pbp-logo-transition-timer linear,
+        opacity   1.5*@pbp-logo-transition-timer linear;
     }
 
     &::after {
@@ -415,7 +453,7 @@ article, section {
         top        : 0;
         left       : 0;
         width      : 100%;
-        height     : 100%;
+        height     : 110%;
         background : -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, @pbp-bg-color 100%); /* FF3.6+ */
         background : -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,@pbp-bg-color)); /* Chrome,Safari4+ */
         background : -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,@pbp-bg-color 100%); /* Chrome10+,Safari5.1+ */
@@ -433,51 +471,51 @@ article, section {
     // display: block;
 
     // .smaller {
-    //     width        : 2px;
-    //     height       : 2px;
-    //     background   : @pbp-pale-blue;
-    //     border-color : @pbp-bg-color;
-    //     border       : none;
-    //     z-index      : 2;
+        //     width        : 2px;
+        //     height       : 2px;
+        //     background   : @pbp-pale-blue;
+        //     border-color : @pbp-bg-color;
+        //     border       : none;
+        //     z-index      : 2;
     // }
     // .larger {
-    //     width      : 100%;
-    //     height     : 100%;
-    //     border     : 6px solid lighten(@pbp-bg-color, 16%);
-    //     background : transparent;
-    //     z-index    : 1;
+        //     width      : 100%;
+        //     height     : 100%;
+        //     border     : 6px solid lighten(@pbp-bg-color, 16%);
+        //     background : transparent;
+        //     z-index    : 1;
     // }
 
     // .circle,
     // .square {
-    //     position      : absolute;
-    //     left          : 50%;
-    //     top           : 50%;
-    //     .translate(-50%, -50%);
-    //     .transition(0.309s);
+        //     position      : absolute;
+        //     left          : 50%;
+        //     top           : 50%;
+        //     .translate(-50%, -50%);
+        //     .transition(0.309s);
     // }
 
     // .circle {
-    //     .smaller;
-    //     border-radius: 50%;
+        //     .smaller;
+        //     border-radius: 50%;
     // }
     // .square {
-    //     .larger;
+        //     .larger;
     // }
 
     // &:hover {
-    //     .circle {
-    //         .larger;
-    //     }
-    //     .square {
-    //         .smaller;
-    //     }
+        //     .circle {
+            //         .larger;
+        //     }
+        //     .square {
+            //         .smaller;
+        //     }
     // }
 
 }
 
 /*********************************************************************
- *                              Header                               *
+*                              Header                               *
  *********************************************************************/
 
 .page-header {
@@ -521,7 +559,7 @@ article {
 }
 
 /*********************************************************************
- *                               Math                                *
+*                               Math                                *
  *********************************************************************/
 
 figure {
@@ -541,7 +579,7 @@ figure {
 }
 
 /*********************************************************************
- *                             Post info                             *
+*                             Post info                             *
  *********************************************************************/
 
 .pbp-post-info {
@@ -553,7 +591,7 @@ figure {
 }
 
 /*********************************************************************
- *                          Post summaries                           *
+*                          Post summaries                           *
  *********************************************************************/
 
 // Don't let summary images get too big
@@ -564,15 +602,7 @@ figure {
 }
 
 /*********************************************************************
- *                           Post comments                           *
- *********************************************************************/
-
-#comments {
-    h2 { margin-top: 0; }
-}
-
-/*********************************************************************
- *                             Homepage                              *
+*                             Homepage                              *
  *********************************************************************/
 
 .pbp-homepage {
@@ -582,7 +612,7 @@ figure {
 }
 
 /*********************************************************************
- *                             Bar chart                             *
+*                             Bar chart                             *
  *********************************************************************/
 
 .pbp-barchart {
@@ -627,13 +657,13 @@ figure {
 }
 
 /*********************************************************************
- *                          Twitter widget                           *
+*                          Twitter widget                           *
  *********************************************************************/
 
 .twitter-timeline { width: 100% !important; }
 
 /*********************************************************************
- *                             Gallery                               *
+*                             Gallery                               *
  *********************************************************************/
 
 .gallery {
@@ -644,4 +674,8 @@ figure {
         .make-md-column(2, 0px);
         padding: 10px;
     }
+}
+
+[hidden] {
+    display: none !important;
 }

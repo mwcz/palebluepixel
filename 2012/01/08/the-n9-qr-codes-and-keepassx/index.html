@@ -46,15 +46,19 @@
 </head>
 <body>
 <div class="container">
-    <div class="row">
-        <div class="col-xs-12">
-            <nav class="pbp-navbar" role="navigation">
-                <a href="https://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
-                    PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
-                </a>
-            </nav>
-        </div>
-    </div>
+    <nav class="pbp-navbar" role="navigation">
+        <a href="https://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
+            PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+        </a>
+        <ul class="pbp-navitems">
+            <li class="pbp-navitem">
+                <a href="/projects" class="pbp-navlink">Projects</a>
+            </li>
+            <li class="pbp-navitem">
+                <a href="/posts" class="pbp-navlink">Blog</a>
+            </li>
+        </ul>
+    </nav>
 </div>
 <!-- /.navbar -->
 <main role="main" class="container">
@@ -119,7 +123,7 @@ plugins.  It could be handy to have clipboard managers generate QR codes too.</p
 
         <!-- /.entry-content -->
 
-        <footer>
+        <footer class="pbp-article-footer">
             <small>
                 This article was published on
                 <time datetime="2012-01-08" pubdate="">2012-01-08</time>
