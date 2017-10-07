@@ -48,12 +48,26 @@ function main() {
 }
 
 function setup() {
+    handlePopupsDisabled();
     handleResize();
     window.addEventListener('resize', handleResize);
     window.addEventListener('beforeunload', handleUnload);
 }
 
+function handlePopupsDisabled() {
+    const disabled = !popupsEnabled();
+    if (disabled) {
+        document.body.setAttribute('data-popups', 'disabled');
+    }
+    else {
+        document.body.removeAttribute('data-popups');
+    }
+    return disabled;
+}
+
 function start() {
+    if(handlePopupsDisabled()) return;
+
     start_time = performance.now();
     update();
 
@@ -215,9 +229,8 @@ function showEndScreen(win) {
 
 function popupsEnabled() {
     const pop = window.open('./popup.html');
-    let opened = false;
+    let opened = !!pop;
     if (pop) {
-        opened = pop.opened;
         pop.close();
     }
     return opened;
@@ -235,8 +248,6 @@ function handleUnload(e) {
 function clearTimeouts() {
     timeout_ids.forEach(clearTimeout);
 }
-
-popupsEnabled();
 
 document.querySelector('#start').addEventListener('click', main);
 document.querySelector('#stop').addEventListener('click', stop);

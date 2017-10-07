@@ -6,6 +6,14 @@
     font-style: normal;
 }
 
+a {
+    color: #FC8724;
+}
+
+a:visited {
+    color: #fff;
+}
+
 html { height: 100%; }
 body {
     font-family: 'early57', serif;
@@ -78,6 +86,8 @@ button:active {
     outline: 5px solid #1B53A6;
     border: 5px solid #fff;
 }
+
+body:not([data-popups=disabled]) .popups-disabled { display: none; }
 
 body:not([data-state=playing]) .while-playing { display: none; }
 body:not([data-state=menu]) .before-playing { display: none; }
