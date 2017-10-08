@@ -115,3 +115,9 @@ body.popup * {
 .stat {
     color: #FC8724;
 }
+
+.credits {
+    margin-top: 7vh;
+    margin-bottom: 2vh;
+    font-size: 3vh;
+}
