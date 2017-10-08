@@ -12,7 +12,7 @@ const POP_INTERVAL_MIN = 500; // ms. what's the fastest interval between pops
 const DIFFICULTY_SCALE_TIME = 48000; // ms.  how long it takes to get to max difficulty
 const GAME_DURATION = 58000; // ms.  how long the total game lasts
 
-const WIN_COUNT = 55; // how many pops closed to win
+const WIN_COUNT = 45; // how many pops closed to win
 
 let start_time; // the timestamp when the user clicked play
 let time = 0;
@@ -87,10 +87,10 @@ function start() {
 function stop(early) {
     document.body.setAttribute('data-state', 'gameover');
     playing = false;
+    showWinScreen(early ? false : won());
     clearTimeouts();
     closePopups();
     sfx.play_music.fade(sfx.play_music.volume(), 0, 200);
-    showEndScreen(early ? false : won());
 }
 
 function won() {
@@ -218,7 +218,7 @@ function closePopups() {
     _.each(pops, function (pop) { pop.close() });
 }
 
-function showEndScreen(win) {
+function showWinScreen(win) {
     if (win) {
         document.body.setAttribute('data-won', '');
     }
