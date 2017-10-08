@@ -235,7 +235,27 @@ function showWinScreen(win, early) {
 }
 
 function popupsEnabled() {
-    const pop = window.open('./popup.html');
+    const pop = window.open(
+        `./popup.html`,
+        'test-popup',
+        [
+            'scrollbars=no',
+            `width=${pop_width}`,
+            `height=${pop_height}`,
+            'resizable=no',
+            'location=no',
+            'locationbar=no',
+            'personalbar=no',
+            'dependent=yes',
+            'alwaysRaised=yes',
+            'modal=yes',
+            'chrome=yes',
+            'menubar=no',
+            'toolbar=no',
+            `left=0`,
+            `top=0`,
+        ].join(),
+    );
     let opened = !!pop;
     if (pop) {
         pop.close();
