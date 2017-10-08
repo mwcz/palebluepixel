@@ -112,7 +112,7 @@ body.popup * {
     margin: 0;
 }
 
-.stat {
+.stat, #final-close-count {
     color: #FC8724;
 }
 
