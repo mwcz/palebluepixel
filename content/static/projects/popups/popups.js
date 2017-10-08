@@ -87,7 +87,7 @@ function start() {
 function stop(early) {
     document.body.setAttribute('data-state', 'gameover');
     playing = false;
-    showWinScreen(early ? false : won());
+    showWinScreen(won(), early);
     clearTimeouts();
     closePopups();
     sfx.play_music.fade(sfx.play_music.volume(), 0, 200);
@@ -218,12 +218,19 @@ function closePopups() {
     _.each(pops, function (pop) { pop.close() });
 }
 
-function showWinScreen(win) {
-    if (win) {
+function showWinScreen(win, early) {
+    if (win && !early) {
         document.body.setAttribute('data-won', '');
     }
     else {
         document.body.setAttribute('data-lost', '');
+    }
+    if (early) {
+        // show crazy number if the player quit early
+        document.querySelector('#final-close-count').textContent = -Math.floor(Math.random() * 1e6);
+    }
+    else {
+        document.querySelector('#final-close-count').textContent = popups_closed;
     }
 }
 
