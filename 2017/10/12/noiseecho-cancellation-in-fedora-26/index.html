@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>    Noise/Echo Cancellation in Fedora 26 - Pale Blue Pixel
+</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#171717">
+    <link rel="icon" type="image/png" href="/static/images/favicon.png">
+
+
+        <!-- Open Graph tags -->
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Noise/Echo Cancellation in Fedora 26"/>
+            <meta property="og:url" content="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/"/>
+            <meta property="og:description" content="How to enable PulseAudio noise and echo cancellation in Fedora 26."/>
+            <meta property="og:image"
+                  content="https://palebluepixel.org/2017/08/04/in-orange-light/iol-square-logo.jpg"/>
+
+
+    <!--[if gte IE 9]
+    <style type="text/css">
+        .gradient {
+            filter: none;
+        }
+    </style>
+    <![endif]-->
+
+    <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
+    <link href="https://palebluepixel.org/theme/css/styles.min.css" rel="stylesheet">
+
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+    <script>window.jQuery = $;</script>
+
+    <link href="https://palebluepixel.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+          title="Pale Blue Pixel ATOM Feed"/>
+    <link href="https://palebluepixel.org/feeds/rss.xml" type="application/atom+xml" rel="alternate"
+          title="Pale Blue Pixel RSS Feed"/>
+
+
+</head>
+<body>
+<div class="container">
+    <nav class="pbp-navbar" role="navigation">
+        <a href="https://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
+            PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+        </a>
+        <ul class="pbp-navitems">
+            <li class="pbp-navitem">
+                <a href="/projects" class="pbp-navlink">Projects</a>
+            </li>
+            <li class="pbp-navitem">
+                <a href="/posts" class="pbp-navlink">Blog</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<!-- /.navbar -->
+<main role="main" class="container">
+    <article>
+
+
+        <header class="page-header">
+            <h1>
+                Noise/Echo Cancellation in Fedora 26
+            </h1>
+        </header>
+        <div class="entry-content">
+            <nav class="toc"></nav>
+            <p>The Minimic is great.  I just received mine last week, and I'm loving the ability to join video calls with <a href="http://gradolabs.com/">nice, comfy headphones</a>.  It's much better than switching back and forth between headphones and a headset.</p>
+<p><img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/minimic.jpg"></p>
+<p>The only problem is that, since the minimic is just <em>a wire</em>, it doesn't have any noise or echo cancellation.  And since Fedora doesn't come with that feature enabled by default, the mic was picking up a lot of ambient noise.  <a href="https://chrisbredesen.com/">Breddy</a> told me that steps just like the following didn't work in Fedora a few versions ago, so I wanted to document them now that the issues seem to be fixed.  I originally found these instructions on <a href="https://www.reddit.com/r/linux/comments/2yqfqp/just_found_that_pulseaudio_have_noise/">this r/linux post</a> and am reposting them here with Fedora-specific flourishes.</p>
+<p>Without further ado, here's how to turn on noise and echo cancellation in Fedora 26.</p>
+<h2>If you just want it to work</h2>
+<p>If you're in a rush, here's a script that will set everything up for you.</p>
+<div class="codehilite"><pre><span></span>sudo dnf install -y webrtc-audio-processing
+echo &#39;.nofail&#39; | sudo tee -a /etc/pulse/default.pa
+echo &#39;load-module module-echo-cancel aec_method=webrtc&#39; | sudo tee -a /etc/pulse/default.pa
+pulseaudio -k
+</pre></div>
+
+
+<h2>Again, but with explanation</h2>
+<p>The first step is to install the WebRTC audio processing package.  It <em>may</em> come by default with Fedora.  My machine had it installed already, but I'm including it here in case it was simply a dependency of some other package I've installed.</p>
+<div class="codehilite"><pre><span></span>sudo dnf install webrtc-audio-processing
+</pre></div>
+
+
+<p>Then add these two lines to the end of <code>/etc/pulse/default.pa</code>.</p>
+<div class="codehilite"><pre><span></span><span class="na">.nofail</span>
+<span class="nf">load-module</span> <span class="no">module-echo-cancel</span> <span class="no">aec_method</span><span class="err">=</span><span class="no">webrtc</span>
+</pre></div>
+
+
+<p>Then restart PulseAudio.</p>
+<div class="codehilite"><pre><span></span>pulseaudio -k
+</pre></div>
+
+
+<p>Now, if you open Sound settings, you should see a new entry under the <em>Input</em> tab.  Mine is called "<strong>Built-in Audio Analog Stereo (echo cancelled with SA9027 USB Audio Analog Stereo)</strong>".  Not sure what's up with that name; my mic is connected with a 3.5mm audio jack.  Whatever, it works!</p>
+<p><img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/devices.png"></p>
+<p>Select the device that says "echo cancelled" and your audio should go from this:</p>
+<figure>
+    <img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/before.jpg" alt="Audio spectrum analysis of microphone input without noise cancellation." />
+    <figcaption>Spectrum analysis without noise cancellation.</figcaption>
+</figure>
+
+<p>To this:</p>
+<figure>
+    <img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/after.jpg" alt="Audio spectrum analysis of microphone input with noise cancellation." />
+    <figcaption>Spectrum analysis with noise cancellation.</figcaption>
+</figure>
+
+<p>Hope this works!  Let me know in the comments below.</p>
+        </div>
+
+        <!-- /.entry-content -->
+
+        <footer class="pbp-article-footer">
+            <small>
+                This article was published on
+                <time datetime="2017-10-12" pubdate="">2017-10-12</time>
+                by <a href="https://twitter.com/mwcz" title="mwcz twitter" rel="author">mwcz</a>
+                and tagged with
+                    <a href="https://palebluepixel.org/tag/linux" rel="category">linux</a>,                    <a href="https://palebluepixel.org/tag/fedora" rel="category">fedora</a>, and                    <a href="https://palebluepixel.org/tag/audio" rel="category">audio</a>.
+            </small>
+        </footer>
+
+
+
+    <script src="https://apis.google.com/js/plusone.js">
+    </script>
+    <div class="g-comments"
+        data-href="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/"
+        data-width="642"
+        data-first_party_property="BLOGGER"
+        data-view_type="FILTERED_POSTMOD">
+    </div>
+
+
+    </article>
+
+</main>
+
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
+
+</body>
+</html>

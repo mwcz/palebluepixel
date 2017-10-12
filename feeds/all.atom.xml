@@ -1,5 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Pale Blue Pixel</title><link href="https://palebluepixel.org/" rel="alternate"></link><link href="http://localhost:8000/feeds/all.atom.xml" rel="self"></link><id>https://palebluepixel.org/</id><updated>2017-08-04T00:00:00-04:00</updated><entry><title>In Orange Light</title><link href="https://palebluepixel.org/2017/08/04/in-orange-light/" rel="alternate"></link><published>2017-08-04T00:00:00-04:00</published><updated>2017-08-04T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-08-04:/2017/08/04/in-orange-light/</id><summary type="html">&lt;p&gt;A WebGL-based visualizer for LED displays.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Three years ago, surrounded by monitors in a dark, blue-hued room, a particular screen caught my eye.  My girlfriend's (now wife's) eye was caught by the same screen, and we crossed the room to investigate.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pale Blue Pixel</title><link href="https://palebluepixel.org/" rel="alternate"></link><link href="http://localhost:8000/feeds/all.atom.xml" rel="self"></link><id>https://palebluepixel.org/</id><updated>2017-10-12T00:00:00-04:00</updated><entry><title>Noise/Echo Cancellation in Fedora 26</title><link href="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/" rel="alternate"></link><published>2017-10-12T00:00:00-04:00</published><updated>2017-10-12T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-10-12:/2017/10/12/noiseecho-cancellation-in-fedora-26/</id><summary type="html">&lt;p&gt;How to enable PulseAudio noise and echo cancellation in Fedora 26.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Minimic is great.  I just received mine last week, and I'm loving the ability to join video calls with &lt;a href="http://gradolabs.com/"&gt;nice, comfy headphones&lt;/a&gt;.  It's much better than switching back and forth between headphones and a headset.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/minimic.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;The only problem is that, since the minimic is just &lt;em&gt;a wire&lt;/em&gt;, it doesn't have any noise or echo cancellation.  And since Fedora doesn't come with that feature enabled by default, the mic was picking up a lot of ambient noise.  &lt;a href="https://chrisbredesen.com/"&gt;Breddy&lt;/a&gt; told me that steps just like the following didn't work in Fedora a few versions ago, so I wanted to document them now that the issues seem to be fixed.  I originally found these instructions on &lt;a href="https://www.reddit.com/r/linux/comments/2yqfqp/just_found_that_pulseaudio_have_noise/"&gt;this r/linux post&lt;/a&gt; and am reposting them here with Fedora-specific flourishes.&lt;/p&gt;
+&lt;p&gt;Without further ado, here's how to turn on noise and echo cancellation in Fedora 26.&lt;/p&gt;
+&lt;h2&gt;If you just want it to work&lt;/h2&gt;
+&lt;p&gt;If you're in a rush, here's a script that will set everything up for you.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo dnf install -y webrtc-audio-processing
+echo &amp;#39;.nofail&amp;#39; | sudo tee -a /etc/pulse/default.pa
+echo &amp;#39;load-module module-echo-cancel aec_method=webrtc&amp;#39; | sudo tee -a /etc/pulse/default.pa
+pulseaudio -k
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Again, but with explanation&lt;/h2&gt;
+&lt;p&gt;The first step is to install the WebRTC audio processing package.  It &lt;em&gt;may&lt;/em&gt; come by default with Fedora.  My machine had it installed already, but I'm including it here in case it was simply a dependency of some other package I've installed.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo dnf install webrtc-audio-processing
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then add these two lines to the end of &lt;code&gt;/etc/pulse/default.pa&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="na"&gt;.nofail&lt;/span&gt;
+&lt;span class="nf"&gt;load-module&lt;/span&gt; &lt;span class="no"&gt;module-echo-cancel&lt;/span&gt; &lt;span class="no"&gt;aec_method&lt;/span&gt;&lt;span class="err"&gt;=&lt;/span&gt;&lt;span class="no"&gt;webrtc&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then restart PulseAudio.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pulseaudio -k
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now, if you open Sound settings, you should see a new entry under the &lt;em&gt;Input&lt;/em&gt; tab.  Mine is called "&lt;strong&gt;Built-in Audio Analog Stereo (echo cancelled with SA9027 USB Audio Analog Stereo)&lt;/strong&gt;".  Not sure what's up with that name; my mic is connected with a 3.5mm audio jack.  Whatever, it works!&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/devices.png"&gt;&lt;/p&gt;
+&lt;p&gt;Select the device that says "echo cancelled" and your audio should go from this:&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/before.jpg" alt="Audio spectrum analysis of microphone input without noise cancellation." /&gt;
+    &lt;figcaption&gt;Spectrum analysis without noise cancellation.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;To this:&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/after.jpg" alt="Audio spectrum analysis of microphone input with noise cancellation." /&gt;
+    &lt;figcaption&gt;Spectrum analysis with noise cancellation.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Hope this works!  Let me know in the comments below.&lt;/p&gt;</content><category term="linux"></category><category term="fedora"></category><category term="audio"></category></entry><entry><title>In Orange Light</title><link href="https://palebluepixel.org/2017/08/04/in-orange-light/" rel="alternate"></link><published>2017-08-04T00:00:00-04:00</published><updated>2017-08-04T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-08-04:/2017/08/04/in-orange-light/</id><summary type="html">&lt;p&gt;A WebGL-based visualizer for LED displays.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Three years ago, surrounded by monitors in a dark, blue-hued room, a particular screen caught my eye.  My girlfriend's (now wife's) eye was caught by the same screen, and we crossed the room to investigate.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://palebluepixel.org/2017/08/04/in-orange-light/kr0-emp.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;We were visiting the &lt;em&gt;Indie Game Revolution&lt;/em&gt; exhibit at EMP in Seattle, and what we found on that screen was Scene I, Act I of &lt;a href="http://kentuckyroutezero.com/"&gt;Kentucky Route Zero&lt;/a&gt;.  It took me three years, but I finally rediscovered KR0 a few weeks ago.  Now, having (well, nearly) finished it, I'm convinced it's a masterpiece.  The game's atmosphere is so rich, so effortlessly gripping, that &lt;em&gt;actually being there&lt;/em&gt; would be less compelling.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://palebluepixel.org/2017/08/04/in-orange-light/kr0.jpg"&gt;&lt;/p&gt;
