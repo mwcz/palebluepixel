@@ -86,7 +86,8 @@ ASSET_BUNDLES = [
          'static/less/bootswatch/flatly/bootstrap.less',
          'static/less/styles.less',
          'static/css/jquery.lightbox.css',
-         'static/lib/prism/prism.css',
+         'static/css/pygments-zenburn-2.css',
+         # 'static/lib/prism/prism.css',
      ],
      {
          'filters': 'less',
