@@ -74,6 +74,7 @@ name**.
 As a practical example, here's some code from the [jQuery DataTables example
 page][datatables], with three nested anonymous functions.
 
+    :::javascript
     $(document).ready(function() {
         $('#example').dataTable( {
             "initComplete": function () {

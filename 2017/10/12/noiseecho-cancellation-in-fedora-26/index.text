@@ -19,6 +19,7 @@ Without further ado, here's how to turn on noise and echo cancellation in Fedora
 
 If you're in a rush, here's a script that will set everything up for you.
 
+    :::bash
     sudo dnf install -y webrtc-audio-processing
     echo '.nofail' | sudo tee -a /etc/pulse/default.pa
     echo 'load-module module-echo-cancel aec_method=webrtc' | sudo tee -a /etc/pulse/default.pa
@@ -28,15 +29,18 @@ If you're in a rush, here's a script that will set everything up for you.
 
 The first step is to install the WebRTC audio processing package.  It *may* come by default with Fedora.  My machine had it installed already, but I'm including it here in case it was simply a dependency of some other package I've installed.
 
+    :::bash
     sudo dnf install webrtc-audio-processing
 
 Then add these two lines to the end of `/etc/pulse/default.pa`.
 
+    :::bash
     .nofail
     load-module module-echo-cancel aec_method=webrtc
 
 Then restart PulseAudio.
 
+    :::bash
     pulseaudio -k
 
 Now, if you open Sound settings, you should see a new entry under the *Input* tab.  Mine is called "**Built-in Audio Analog Stereo (echo cancelled with SA9027 USB Audio Analog Stereo)**".  Not sure what's up with that name; my mic is connected with a 3.5mm audio jack.  Whatever, it works!

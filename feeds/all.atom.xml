@@ -6,8 +6,8 @@
 &lt;h2&gt;If you just want it to work&lt;/h2&gt;
 &lt;p&gt;If you're in a rush, here's a script that will set everything up for you.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo dnf install -y webrtc-audio-processing
-echo &amp;#39;.nofail&amp;#39; | sudo tee -a /etc/pulse/default.pa
-echo &amp;#39;load-module module-echo-cancel aec_method=webrtc&amp;#39; | sudo tee -a /etc/pulse/default.pa
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;.nofail&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; sudo tee -a /etc/pulse/default.pa
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;load-module module-echo-cancel aec_method=webrtc&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; sudo tee -a /etc/pulse/default.pa
 pulseaudio -k
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -19,8 +19,8 @@ pulseaudio -k
 
 
 &lt;p&gt;Then add these two lines to the end of &lt;code&gt;/etc/pulse/default.pa&lt;/code&gt;.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="na"&gt;.nofail&lt;/span&gt;
-&lt;span class="nf"&gt;load-module&lt;/span&gt; &lt;span class="no"&gt;module-echo-cancel&lt;/span&gt; &lt;span class="no"&gt;aec_method&lt;/span&gt;&lt;span class="err"&gt;=&lt;/span&gt;&lt;span class="no"&gt;webrtc&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;.nofail
+load-module module-echo-cancel &lt;span class="nv"&gt;aec_method&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;webrtc
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1081,16 +1081,16 @@ functions are used so commonly in JavaScript programs.&lt;/p&gt;
 name&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;As a practical example, here's some code from the &lt;a href="http://datatables.net/examples/api/api_in_init.html"&gt;jQuery DataTables example
 page&lt;/a&gt;, with three nested anonymous functions.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$(document).ready(function() {
-    $(&amp;#39;#example&amp;#39;).dataTable( {
-        &amp;quot;initComplete&amp;quot;: function () {
-            var api = this.api();
-            api.$(&amp;#39;td&amp;#39;).click( function () {
-                api.search( this.innerHTML ).draw();
-            } );
-        }
-    } );
-} );
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;ready&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;#example&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;dataTable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="s2"&gt;&amp;quot;initComplete&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;api&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;api&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+            &lt;span class="nx"&gt;api&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;td&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;click&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="nx"&gt;api&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;search&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;innerHTML&lt;/span&gt; &lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;draw&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1723,88 +1723,88 @@ feedback.  Code development help is welcomed too.&lt;/p&gt;
 &lt;a href="https://github.com/mwcz/median-cut-js"&gt;median-cut.js&lt;/a&gt;.&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="web"></category><category term="mediancut"></category></entry><entry><title>Toy javascript unit tester</title><link href="https://palebluepixel.org/2012/01/30/toy-javascript-unit-tester/" rel="alternate"></link><published>2012-01-30T21:50:00-05:00</published><updated>2012-01-30T21:50:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-01-30:/2012/01/30/toy-javascript-unit-tester/</id><summary type="html">&lt;p&gt;Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and had a minor epiphany.  In the back of my mind, there has always been a bit of uncertainty as to how unit testing frameworks work.  Deep in my brain I knew there was something I didn't understand, but I wasn't quite sure what.  I never gave it any conscious thought.&lt;/p&gt;
 &lt;p&gt;As a developer, I'd use a framework, write a bunch of &lt;code&gt;testBlahFoo&lt;/code&gt; functions, and the framework would magically run them.  &lt;/p&gt;
 &lt;p&gt;Then I realized... "Oh, it's just introspection."&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;Create&lt;/span&gt; &lt;span class="nt"&gt;an&lt;/span&gt; &lt;span class="nt"&gt;object&lt;/span&gt; &lt;span class="nt"&gt;with&lt;/span&gt; &lt;span class="nt"&gt;three&lt;/span&gt; &lt;span class="nt"&gt;properties&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;all&lt;/span&gt; &lt;span class="nt"&gt;functions&lt;/span&gt;
-&lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;myfuncs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="n"&gt;func1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nf"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt; &lt;span class="n"&gt;console&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;func it up&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;
-    &lt;span class="nt"&gt;func2&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;function&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="err"&gt;console.log(&amp;quot;func&amp;#39;s&lt;/span&gt; &lt;span class="err"&gt;old&lt;/span&gt; &lt;span class="err"&gt;brother&amp;quot;)&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;
-    &lt;span class="nt"&gt;func3&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;function&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="err"&gt;console.log(&amp;quot;bring&lt;/span&gt; &lt;span class="err"&gt;back&lt;/span&gt; &lt;span class="err"&gt;da&lt;/span&gt; &lt;span class="err"&gt;func&amp;quot;)&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;// Create an object with three properties, all functions&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;myfuncs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;func1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;func it up&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="nx"&gt;func2&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;func&amp;#39;s old brother&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="nx"&gt;func3&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;bring back da func&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;
 
-&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;Run&lt;/span&gt; &lt;span class="nt"&gt;all&lt;/span&gt; &lt;span class="nt"&gt;functions&lt;/span&gt; &lt;span class="nt"&gt;attached&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;myfuncs&lt;/span&gt;
-&lt;span class="nt"&gt;for&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt; &lt;span class="nt"&gt;func&lt;/span&gt; &lt;span class="nt"&gt;in&lt;/span&gt; &lt;span class="nt"&gt;myfuncs&lt;/span&gt; &lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="err"&gt;myfuncs&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt; &lt;span class="nx"&gt;func&lt;/span&gt; &lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="err"&gt;()&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="c1"&gt;// Run all functions attached to myfuncs&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;func&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nx"&gt;myfuncs&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;myfuncs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="nx"&gt;func&lt;/span&gt; &lt;span class="p"&gt;]();&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 
-&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;Outputs&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;span class="o"&gt;//&lt;/span&gt; 
-&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;func&lt;/span&gt; &lt;span class="nt"&gt;it&lt;/span&gt; &lt;span class="nt"&gt;up&lt;/span&gt;
-&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;func&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="nt"&gt;s&lt;/span&gt; &lt;span class="nt"&gt;old&lt;/span&gt; &lt;span class="nt"&gt;brother&lt;/span&gt;
-&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;bring&lt;/span&gt; &lt;span class="nt"&gt;back&lt;/span&gt; &lt;span class="nt"&gt;da&lt;/span&gt; &lt;span class="nt"&gt;func&lt;/span&gt;
+&lt;span class="c1"&gt;// Outputs:&lt;/span&gt;
+&lt;span class="c1"&gt;// &lt;/span&gt;
+&lt;span class="c1"&gt;// func it up&lt;/span&gt;
+&lt;span class="c1"&gt;// func&amp;#39;s old brother&lt;/span&gt;
+&lt;span class="c1"&gt;// bring back da func&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;So simple.  Later, I wrote a very basic unit testing framework, purely as an educational excercise.&lt;/p&gt;
 &lt;p&gt;The guts are almost simple as the example above.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var JTestSuite = function () {
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;JTestSuite&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
 
-    var version = 0.1,
-        jt,
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;version&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="nx"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 
-    init = function( callback ) {
-        jt = JTests();
-        jt.init( callback );
-    },
+    &lt;span class="nx"&gt;init&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;callback&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="nx"&gt;jt&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;JTests&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+        &lt;span class="nx"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;init&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;callback&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;},&lt;/span&gt;
 
-    run = function() {
-        var fn,
-            prop;
+    &lt;span class="nx"&gt;run&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;fn&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="nx"&gt;prop&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-        // Run all functions that begin with &amp;quot;test&amp;quot;
-        for( prop in this ) {
-            if( typeof this[prop] === &amp;quot;function&amp;quot; ) {
-                if( prop.slice(0,4) === &amp;quot;test&amp;quot; ) {
-                    console.log( this[prop](jt) );
-                }
-            }
-        }
-    };
+        &lt;span class="c1"&gt;// Run all functions that begin with &amp;quot;test&amp;quot;&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;prop&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="k"&gt;typeof&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;prop&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;function&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;prop&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;slice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;test&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                    &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;prop&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="nx"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+                &lt;span class="p"&gt;}&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;};&lt;/span&gt;
 
-    if( !(this instanceof JTestSuite) ) return new JTestSuite();
+    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt; &lt;span class="k"&gt;instanceof&lt;/span&gt; &lt;span class="nx"&gt;JTestSuite&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;JTestSuite&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 
-    return {
-        init : init,
-        run  : run
-    };
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="nx"&gt;init&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;init&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="nx"&gt;run&lt;/span&gt;  &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;run&lt;/span&gt;
+    &lt;span class="p"&gt;};&lt;/span&gt;
 
-};
+&lt;span class="p"&gt;};&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;In the &lt;code&gt;run&lt;/code&gt; function's loop, I first check that each property is a function before attemping to run it.  This avoids a &lt;code&gt;called_non_callable TypeError&lt;/code&gt;.  I then check that the name of the property begins with the string "test".  When dynamically calling functions, it's usually a good idea to call &lt;code&gt;obj.hasOwnProperty(propname)&lt;/code&gt; to ensure the property wasn't inherited from some unknown source (especially if the property you wanted to reference may have been &lt;code&gt;delete&lt;/code&gt;d, but a property with the same name is now surfacing from a parent object), but in this case I'd like to leave open the possibility for inherited Test Suites.&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;JTests&lt;/code&gt; object created in the &lt;code&gt;init&lt;/code&gt; function is a separate object that contains a bunch of assertions.  It looks something like this:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var JTests = function () {
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;JTests&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
 
-    var version = 0.1,
-        result_callback,
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;version&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="nx"&gt;result_callback&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 
-    init = function( callback ) {
-        result_callback = callback;
-    }
+    &lt;span class="nx"&gt;init&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;callback&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="nx"&gt;result_callback&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;callback&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
 
-    assertTrue = function( a ) {
-        var result = a === false;
-        result_callback( {                                                                                                                                                                         
-            name   : &amp;quot;assertTrue&amp;quot;,
-            args   : [ a ],
-            result : result
-        } );
-    };
+    &lt;span class="nx"&gt;assertTrue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="nx"&gt;result_callback&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;                                                                                                                                                                         
+            &lt;span class="nx"&gt;name&lt;/span&gt;   &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;assertTrue&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="nx"&gt;args&lt;/span&gt;   &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="p"&gt;],&lt;/span&gt;
+            &lt;span class="nx"&gt;result&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;result&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;};&lt;/span&gt;
 
-    return {
-        assertTrue : assertTrue
-    };
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="nx"&gt;assertTrue&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;assertTrue&lt;/span&gt;
+    &lt;span class="p"&gt;};&lt;/span&gt;
 
-};
+&lt;span class="p"&gt;};&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 

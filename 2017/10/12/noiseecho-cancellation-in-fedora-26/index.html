@@ -79,8 +79,8 @@
 <h2>If you just want it to work</h2>
 <p>If you're in a rush, here's a script that will set everything up for you.</p>
 <div class="codehilite"><pre><span></span>sudo dnf install -y webrtc-audio-processing
-echo &#39;.nofail&#39; | sudo tee -a /etc/pulse/default.pa
-echo &#39;load-module module-echo-cancel aec_method=webrtc&#39; | sudo tee -a /etc/pulse/default.pa
+<span class="nb">echo</span> <span class="s1">&#39;.nofail&#39;</span> <span class="p">|</span> sudo tee -a /etc/pulse/default.pa
+<span class="nb">echo</span> <span class="s1">&#39;load-module module-echo-cancel aec_method=webrtc&#39;</span> <span class="p">|</span> sudo tee -a /etc/pulse/default.pa
 pulseaudio -k
 </pre></div>
 
@@ -92,8 +92,8 @@ pulseaudio -k
 
 
 <p>Then add these two lines to the end of <code>/etc/pulse/default.pa</code>.</p>
-<div class="codehilite"><pre><span></span><span class="na">.nofail</span>
-<span class="nf">load-module</span> <span class="no">module-echo-cancel</span> <span class="no">aec_method</span><span class="err">=</span><span class="no">webrtc</span>
+<div class="codehilite"><pre><span></span>.nofail
+load-module module-echo-cancel <span class="nv">aec_method</span><span class="o">=</span>webrtc
 </pre></div>
 
 

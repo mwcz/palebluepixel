@@ -131,16 +131,16 @@ functions are used so commonly in JavaScript programs.</p>
 name</strong>.</p>
 <p>As a practical example, here's some code from the <a href="http://datatables.net/examples/api/api_in_init.html">jQuery DataTables example
 page</a>, with three nested anonymous functions.</p>
-<div class="codehilite"><pre><span></span>$(document).ready(function() {
-    $(&#39;#example&#39;).dataTable( {
-        &quot;initComplete&quot;: function () {
-            var api = this.api();
-            api.$(&#39;td&#39;).click( function () {
-                api.search( this.innerHTML ).draw();
-            } );
-        }
-    } );
-} );
+<div class="codehilite"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#example&#39;</span><span class="p">).</span><span class="nx">dataTable</span><span class="p">(</span> <span class="p">{</span>
+        <span class="s2">&quot;initComplete&quot;</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">api</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">api</span><span class="p">();</span>
+            <span class="nx">api</span><span class="p">.</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;td&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+                <span class="nx">api</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="p">).</span><span class="nx">draw</span><span class="p">();</span>
+            <span class="p">}</span> <span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span> <span class="p">);</span>
+<span class="p">}</span> <span class="p">);</span>
 </pre></div>
 
 

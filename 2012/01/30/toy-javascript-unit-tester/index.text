@@ -9,6 +9,7 @@ As a developer, I'd use a framework, write a bunch of `testBlahFoo` functions, a
 
 Then I realized... "Oh, it's just introspection."
 
+    :::javascript
     // Create an object with three properties, all functions
     var myfuncs = {
         func1: function() { console.log("func it up"); },
@@ -31,6 +32,7 @@ So simple.  Later, I wrote a very basic unit testing framework, purely as an edu
 
 The guts are almost simple as the example above.
 
+    :::javascript
     var JTestSuite = function () {
 
         var version = 0.1,
@@ -68,6 +70,7 @@ In the `run` function's loop, I first check that each property is a function bef
 
 The `JTests` object created in the `init` function is a separate object that contains a bunch of assertions.  It looks something like this:
 
+    :::javascript
     var JTests = function () {
 
         var version = 0.1,
@@ -98,6 +101,7 @@ Both `JTestSuite` and `JTests` use the [revealing module pattern](http://stackov
 
 I have a lot of ideas for improvement, like [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself)ing up the assertions, so the `{name,args,result}` object doesn't have to be defined in each assertion.  But [many others](http://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#JavaScript) have already done a great job, and I don't want to reinvent too many wheels.
 
+    :::javascript
     // Define a custom handler for the result
     function test_callback( result ) {
         console.log(result);
