@@ -61,8 +61,8 @@ Firefox 4+ or Chrome 9+.
 See [DiMo Comes to Life][prevpost] for a , not-at-all dramatized
 summary of DiMo.
 
-"DiMo" is a recurring interactive art exhibit at GeekSpark, which is held
-during SparkCon each year in Raleigh, NC.  This year, I created the particle
+"DiMo" is a recurring interactive art exhibit at geekSPARK, which is held
+during SPARKcon each year in Raleigh, NC.  This year, I created the particle
 gravity simulation visualization for DiMo.  There was also a visualization of
 Conway's Game of Life, and an original game where players eat doritos and spray
 soda at people who eat doritos.

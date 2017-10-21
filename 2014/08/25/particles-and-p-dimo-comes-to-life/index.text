@@ -2,13 +2,13 @@ Title: Particles and π - DiMo Comes to Life
 Date: 2014-08-25
 Tags: programming, javascript, requirejs, amd, threejs, webgl, 3d, art, sparkcon, geekspark, dimo, physics, web, kimotion
 Image: /2014/08/25/particles-and-p-dimo-comes-to-life/dimo-kids.jpg
-Summary: A player walks up Fayetteville St in Raleigh, North Carolina.  SparkCon has begun, and dozens of artists are ...
+Summary: A player walks up Fayetteville St in Raleigh, North Carolina.  SPARKcon has begun, and dozens of artists are ...
 TwitterWidgetID: 552863179194511360
 Gallery: 033
 Mwc: 33
 
 A player walks up Fayetteville St in Raleigh, North Carolina.
-[SparkCon][sparkcon] has begun, and dozens of artists are strewn along the
+[SPARKcon][sparkcon] has begun, and dozens of artists are strewn along the
 street, hard at work creating elaborate chalk art on the asphalt.  A light rain
 is falling, and some artists are holding umbrellas over their work, some have
 draped tarps over themselves and their sketches, but most don't seem to care,
@@ -49,7 +49,7 @@ the particles.  Orbits are formed, and tiny solar systems glow brilliantly.
 </figure>
 
 DiMo (short for Digital Motion) is an annual exhibit at GeekSPARK, which itself
-is a branch of SparkCon.  I haven't been to any previous years' installations,
+is a branch of SPARKcon.  I haven't been to any previous years' installations,
 but this year included digital visualizations projected onto a large wall, with
 three LED batons that visitors could use to control the visualizations.
 

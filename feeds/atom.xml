@@ -872,7 +872,7 @@ success this year.&lt;/p&gt;
 &lt;li&gt;&lt;a href="/projects/dimo"&gt;More about last year's exhibit&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://opensource.com/life/15/2/sparkcon-geekspark-digital-motion-exhibit"&gt;Opensource.com article about DiMo 2014&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/"&gt;The Deconstruction of Falling Stars&lt;/a&gt; - technical info about how it was built&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://palebluepixel.org/2014/08/25/particles-and-p-dimo-comes-to-life/"&gt;Particles and π - DiMo Comes to Life&lt;/a&gt; - more about the exhibit at SparkCon!&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://palebluepixel.org/2014/08/25/particles-and-p-dimo-comes-to-life/"&gt;Particles and π - DiMo Comes to Life&lt;/a&gt; - more about the exhibit at SPARKcon!&lt;/li&gt;
 &lt;/ul&gt;
 &lt;style type="text/css"&gt;
 .vimeo-thumbnail {
@@ -1170,8 +1170,8 @@ Firefox 4+ or Chrome 9+.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Players wave illuminated batons around and cool stuff happens!&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;See &lt;a href="/2014/08/25/particles-and-p-dimo-comes-to-life/"&gt;DiMo Comes to Life&lt;/a&gt; for a , not-at-all dramatized
 summary of DiMo.&lt;/p&gt;
-&lt;p&gt;"DiMo" is a recurring interactive art exhibit at GeekSpark, which is held
-during SparkCon each year in Raleigh, NC.  This year, I created the particle
+&lt;p&gt;"DiMo" is a recurring interactive art exhibit at geekSPARK, which is held
+during SPARKcon each year in Raleigh, NC.  This year, I created the particle
 gravity simulation visualization for DiMo.  There was also a visualization of
 Conway's Game of Life, and an original game where players eat doritos and spray
 soda at people who eat doritos.&lt;/p&gt;
@@ -1315,8 +1315,8 @@ project.&lt;/p&gt;
         katex.render(this.innerHTML, this);
     }
     $('[role=math]').each(render_math);
-&lt;/script&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="requirejs"></category><category term="amd"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category></entry><entry><title>Particles and π - DiMo Comes to Life</title><link href="https://palebluepixel.org/2014/08/25/particles-and-p-dimo-comes-to-life/" rel="alternate"></link><published>2014-08-25T00:00:00-04:00</published><updated>2014-08-25T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-08-25:/2014/08/25/particles-and-p-dimo-comes-to-life/</id><summary type="html">&lt;p&gt;A player walks up Fayetteville St in Raleigh, North Carolina.  SparkCon has begun, and dozens of artists are ...&lt;/p&gt;</summary><content type="html">&lt;p&gt;A player walks up Fayetteville St in Raleigh, North Carolina.
-&lt;a href="http://www.sparkcon.com/"&gt;SparkCon&lt;/a&gt; has begun, and dozens of artists are strewn along the
+&lt;/script&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="requirejs"></category><category term="amd"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category></entry><entry><title>Particles and π - DiMo Comes to Life</title><link href="https://palebluepixel.org/2014/08/25/particles-and-p-dimo-comes-to-life/" rel="alternate"></link><published>2014-08-25T00:00:00-04:00</published><updated>2014-08-25T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-08-25:/2014/08/25/particles-and-p-dimo-comes-to-life/</id><summary type="html">&lt;p&gt;A player walks up Fayetteville St in Raleigh, North Carolina.  SPARKcon has begun, and dozens of artists are ...&lt;/p&gt;</summary><content type="html">&lt;p&gt;A player walks up Fayetteville St in Raleigh, North Carolina.
+&lt;a href="http://www.sparkcon.com/"&gt;SPARKcon&lt;/a&gt; has begun, and dozens of artists are strewn along the
 street, hard at work creating elaborate chalk art on the asphalt.  A light rain
 is falling, and some artists are holding umbrellas over their work, some have
 draped tarps over themselves and their sketches, but most don't seem to care,
@@ -1351,7 +1351,7 @@ the particles.  Orbits are formed, and tiny solar systems glow brilliantly.&lt;/
 &lt;/figure&gt;
 
 &lt;p&gt;DiMo (short for Digital Motion) is an annual exhibit at GeekSPARK, which itself
-is a branch of SparkCon.  I haven't been to any previous years' installations,
+is a branch of SPARKcon.  I haven't been to any previous years' installations,
 but this year included digital visualizations projected onto a large wall, with
 three LED batons that visitors could use to control the visualizations.&lt;/p&gt;
 &lt;p&gt;I created one of the three "exhibits", the one you see in the video.  Each
