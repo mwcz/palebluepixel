@@ -33,7 +33,6 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
     <link href="https://palebluepixel.org/theme/css/styles.min.css" rel="stylesheet">
 
-    <!-- JavaScript plugins (requires jQuery) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     <script>window.jQuery = $;</script>
 
@@ -71,12 +70,12 @@
             </h1>
         </header>
         <div class="entry-content">
-            <nav class="toc"></nav>
+
             <p>I have someone I'd like you to meet.  SimPixel, meet everyone.  Everyone,
 SimPixel.</p>
 <div id="simpixel-container"></div>
 
-<h2>SimPixel introduces itself</h2>
+<h2 id="simpixel-introduces-itself">SimPixel introduces itself</h2>
 <p>SimPixel is a WebGL visualizer for LED displays, <em>very</em> much like the ones Adam
 and Dan build over at <a href="http://maniacallabs.com/">Maniacal Labs</a>.</p>
 <style type="text/css">
@@ -102,49 +101,45 @@ library, sends layouts and colors to SimPixel using a simple <a href="https://en
 protocol.</p>
 <div class="clearfix"></div>
 
-<h2>The Protocol</h2>
+<h2 id="the-protocol">The Protocol</h2>
 <p>By itself, SimPixel is useless.  To turn on the lights, it connects to a
 WebSocket service.  That service is expected to send certain messages, namely a
 configuration message followed by a series of color messages.</p>
-<h3>Configuration message</h3>
+<h3 id="configuration-message">Configuration message</h3>
 <p>The configuration message conveys the spatial layout of the LEDs.</p>
 <p>For example, a configuration message of <code>0x0000009A02FE000C</code> is interpreted as
 follows.</p>
-<div class="codehilite"><pre><span></span>+--------+------+------+------+
+<pre><code>+--------+------+------+------+
 | opcode |    X |    Y |    Z |
 +--------+------+------+------+
 | 0x0000 | 009A | 02FE | 000C |
 +--------+------+------+------+
 | config |  154 |  766 |   12 |
 +--------+------+------+------+
-</pre></div>
-
-
+</code></pre>
 <p>The leading <code>0x0000</code> opcode identifies this as a configuration message,
 followed by a series of 16-bit signed integers which indicate the 3D
 coordinates of each LED, of the form: <code>X<sub>1</sub>,Y<sub>1</sub>,Z<sub>1</sub>,X<sub>2</sub>,Y<sub>2</sub>,Z<sub>2</sub>,
     ..., X<sub>n</sub>,Y<sub>n</sub>,Z<sub>n</sub></code></p>
-<h3>Color message</h3>
+<h3 id="color-message">Color message</h3>
 <p>The color message(s) specify what color each LED should be at the current
 moment in time.</p>
 <p>An example color message, <code>0x0001 40 D6 7F</code>, breaks down to:</p>
-<div class="codehilite"><pre><span></span>+--------+-----+-----+-----+
+<pre><code>+--------+-----+-----+-----+
 | opcode |   R |   G |   B |
 +--------+-----+-----+-----+
 | 0x0001 |  40 |  D6 |  7F |
 +--------+-----+-----+-----+
 | color  |  64 | 214 | 127 |
 +--------+-----+-----+-----+
-</pre></div>
-
-
+</code></pre>
 <p>The leading <code>0x0001</code> opcode identifies this as a color message, followed by a
 series of 8-bit unsigned integers which indicate the RGB colors of each LED,
 of the form:
 <code>R<sub>1</sub>,G<sub>1</sub>,B<sub>1</sub>,R<sub>2</sub>,G<sub>2</sub>,B<sub>2</sub>,
 ..., R<sub>n</sub>,G<sub>n</sub>,B<sub>n</sub></code></p>
 <p>For a concise reference, see <a href="https://github.com/ManiacalLabs/SimPixel/blob/master/PROTOCOL.md">PROTOCOL.md</a>.</p>
-<h2>The Ghost in the Recording</h2>
+<h2 id="the-ghost-in-the-recording">The Ghost in the Recording</h2>
 <p>The live demo at the top of this post the protocol, but it isn't connected to
 any WebSocket service.  Instead, it's using a recording apparatus that I
 cobbled together.  I pushed a configuration frame and a bunch of color frames
@@ -264,5 +259,11 @@ format.  Pretty cool.</p>
 <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
-</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'touch';
+    anchors.options.placement = 'left';
+    anchors.options.class = 'heading-anchor';
+    anchors.add();
+</script></body>
 </html>

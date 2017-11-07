@@ -31,7 +31,6 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
     <link href="https://palebluepixel.org/theme/css/styles.min.css" rel="stylesheet">
 
-    <!-- JavaScript plugins (requires jQuery) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     <script>window.jQuery = $;</script>
 
@@ -69,7 +68,7 @@
             </h1>
         </header>
         <div class="entry-content">
-            <nav class="toc"></nav>
+
             <p>This is the last demo I made using <a href="https://github.com/mwcz/jsimage">JSImage</a>.  I created it some time around 2009-2010.  At the time, I had checked out an <a href="http://www.amazon.com/Digital-Image-Processing-Algorithmic-Introduction/dp/1846283795">imaging book</a> from my university's library at least ten times.  Most of the exercises in that book I implemented in Python using <a href="http://www.pythonware.com/products/pil/">PIL</a>, but point operations were simple enough to port to JavaScript quickly.</p>
 <p>Point operations are image alterations that affect all pixels equally.  Other operations, like blurring for example, each result pixel depends on adjacent pixels.</p>
 <p>This demonstrates changing contrast, value, saturation, hue, color inversion, and threshold point operations.  Note that there is a bug with increasing value and increasing saturation which I never got around to fixing.</p>
@@ -193,5 +192,11 @@
 <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
-</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'touch';
+    anchors.options.placement = 'left';
+    anchors.options.class = 'heading-anchor';
+    anchors.add();
+</script></body>
 </html>

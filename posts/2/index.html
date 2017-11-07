@@ -30,7 +30,6 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
     <link href="https://palebluepixel.org/theme/css/styles.min.css" rel="stylesheet">
 
-    <!-- JavaScript plugins (requires jQuery) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     <script>window.jQuery = $;</script>
 
@@ -64,6 +63,28 @@
 <div class="row">
 
 
+        <article class="col-xs-12">
+                <div class="pbp-post-thumbnail">
+                    <a href="https://palebluepixel.org/2015/06/20/webassembly-is-the-keystone/">
+                        <img src="/2015/06/20/webassembly-is-the-keystone/asm.png" />
+                    </a>
+                </div>
+            <header>
+                <h2>
+                    <a href="https://palebluepixel.org/2015/06/20/webassembly-is-the-keystone/">
+                        WebAssembly is the Keystone
+                    </a>
+                </h2>
+            </header>
+            <div class="meta">
+                PBP38
+                <time datetime="2015-06-20" pubdate="">2015-06-20</time>
+            </div>
+            <div class="summary">
+                <p>Within the last two days, WebAssembly (<strong>wasm</strong>) has graced the eyeballs of
+every JavaScript developer.  If wasm is new to …</p>
+            </div>
+        </article>
         <article class="col-xs-12">
                 <div class="pbp-post-thumbnail">
                     <a href="https://palebluepixel.org/2015/06/20/the-lurking-horror/">
@@ -257,27 +278,6 @@ away than the lung-clenching air of winter …</p>
 <a href="/projects/colorpal/">ColorPal</a>, an HTML5 tool I …</p>
             </div>
         </article>
-        <article class="col-xs-12">
-                <div class="pbp-post-thumbnail">
-                    <a href="https://palebluepixel.org/2012/07/03/introducing-canvas-indexed-color/">
-                        <img src="/2012/07/03/introducing-canvas-indexed-color/hahatiger.png" />
-                    </a>
-                </div>
-            <header>
-                <h2>
-                    <a href="https://palebluepixel.org/2012/07/03/introducing-canvas-indexed-color/">
-                        Introducing Canvas Indexed Color
-                    </a>
-                </h2>
-            </header>
-            <div class="meta">
-                PBP21
-                <time datetime="2012-07-03" pubdate="">2012-07-03</time>
-            </div>
-            <div class="summary">
-                <p>A basic implementation of indexed color palettes for HTML5 canvas.</p>
-            </div>
-        </article>
     </div> <!-- /.row -->
 
 
@@ -322,5 +322,11 @@ away than the lung-clenching air of winter …</p>
 <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
-</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'touch';
+    anchors.options.placement = 'left';
+    anchors.options.class = 'heading-anchor';
+    anchors.add();
+</script></body>
 </html>

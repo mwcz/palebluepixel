@@ -33,7 +33,6 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
     <link href="https://palebluepixel.org/theme/css/styles.min.css" rel="stylesheet">
 
-    <!-- JavaScript plugins (requires jQuery) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     <script>window.jQuery = $;</script>
 
@@ -71,36 +70,32 @@
             </h1>
         </header>
         <div class="entry-content">
-            <nav class="toc"></nav>
+
             <p>Tired of creating color palettes with ColorPal's simple, intuitive
 drag-and-drop interface?  Me too!  Want to jam with the console cowboys in
 cyber-space?  Now you can.  Now <em>we</em> can.</p>
 <p><img alt="ColorPal CLI logo" src="https://palebluepixel.org/2013/11/07/colorpal-cli/colorpal_cli_logo.png" title="ColorPal CLI logo" /></p>
-<h2>Demo!</h2>
-<div class="codehilite"><pre><span></span>$ node cpal.js -f hex -s <span class="m">8</span> MyImage.png
+<h2 id="demo">Demo!</h2>
+<pre><code>$ node cpal.js -f hex -s 8 MyImage.png
 
-<span class="c1">#07070b</span>
-<span class="c1">#bac0c4</span>
-<span class="c1">#d1bd66</span>
-<span class="c1">#7e8899</span>
-<span class="c1">#696964</span>
-<span class="c1">#c4b441</span>
-<span class="c1">#65683e</span>
-<span class="c1">#394434</span>
-</pre></div>
-
-
-<h2>Get it!</h2>
-<div class="codehilite"><pre><span></span>npm install -g canvas requirejs # install dependencies
+#07070b
+#bac0c4
+#d1bd66
+#7e8899
+#696964
+#c4b441
+#65683e
+#394434
+</code></pre>
+<h2 id="get-it">Get it!</h2>
+<pre><code>npm install -g canvas requirejs # install dependencies
 git clone git@github.com:mwcz/colorpal-cli.git
 cd colorpal-cli
-</pre></div>
-
-
-<h2>Use it!</h2>
+</code></pre>
+<h2 id="use-it">Use it!</h2>
 <p>Visit the <a href="/projects/colorpal-cli" title="ColorPal CLI project page">projcet page</a> for the full documentation, or simply run the
 command without any arguments to see the help text.</p>
-<div class="codehilite"><pre><span></span>Generate a color palette from an image! :)
+<pre><code>Generate a color palette from an image! :)
 USAGE: node cpal.js IMAGE
 
 Options:
@@ -109,9 +104,7 @@ Options:
   -d, --dynamic  Generate a palette, sized dynamically based on the color diversity of the image; you can optionally specify a number from 0.0 to 1.0, where larger numbers increase the number of colors.
 
   -f, --format   Specify the output format.  Available formats are: scss, sass, json, less, rgb, hex
-</pre></div>
-
-
+</code></pre>
 <p>The code is <a href="https://github.com/mwcz/colorpal-cli" title="ColorPal CLI code repository">available on GitHub</a> and I welcome any feedback, bug reports,
 pull requests, etc.</p>
         </div>
@@ -149,5 +142,11 @@ pull requests, etc.</p>
 <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
-</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'touch';
+    anchors.options.placement = 'left';
+    anchors.options.class = 'heading-anchor';
+    anchors.add();
+</script></body>
 </html>

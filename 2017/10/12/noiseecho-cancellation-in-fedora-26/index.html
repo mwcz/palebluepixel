@@ -33,7 +33,6 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
     <link href="https://palebluepixel.org/theme/css/styles.min.css" rel="stylesheet">
 
-    <!-- JavaScript plugins (requires jQuery) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     <script>window.jQuery = $;</script>
 
@@ -71,37 +70,33 @@
             </h1>
         </header>
         <div class="entry-content">
-            <nav class="toc"></nav>
+
             <p>The Minimic is great.  I just received mine last week, and I'm loving the ability to join video calls with <a href="http://gradolabs.com/">nice, comfy headphones</a>.  It's much better than switching back and forth between headphones and a headset.</p>
 <p><img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/minimic.jpg"></p>
 <p>The only problem is that, since the minimic is just <em>a wire</em>, it doesn't have any noise or echo cancellation.  And since Fedora doesn't come with that feature enabled by default, the mic was picking up a lot of ambient noise.  <a href="https://chrisbredesen.com/">Breddy</a> told me that steps just like the following didn't work in Fedora a few versions ago, so I wanted to document them now that the issues seem to be fixed.  I originally found these instructions on <a href="https://www.reddit.com/r/linux/comments/2yqfqp/just_found_that_pulseaudio_have_noise/">this r/linux post</a> and am reposting them here with Fedora-specific flourishes.</p>
 <p>Without further ado, here's how to turn on noise and echo cancellation in Fedora 26.</p>
-<h2>If you just want it to work</h2>
+<h2 id="if-you-just-want-it-to-work">If you just want it to work</h2>
 <p>If you're in a rush, here's a script that will set everything up for you.</p>
-<div class="codehilite"><pre><span></span>sudo dnf install -y webrtc-audio-processing
-<span class="nb">echo</span> <span class="s1">&#39;.nofail&#39;</span> <span class="p">|</span> sudo tee -a /etc/pulse/default.pa
-<span class="nb">echo</span> <span class="s1">&#39;load-module module-echo-cancel aec_method=webrtc&#39;</span> <span class="p">|</span> sudo tee -a /etc/pulse/default.pa
+<pre><code>:::bash
+sudo dnf install -y webrtc-audio-processing
+echo '.nofail' | sudo tee -a /etc/pulse/default.pa
+echo 'load-module module-echo-cancel aec_method=webrtc' | sudo tee -a /etc/pulse/default.pa
 pulseaudio -k
-</pre></div>
-
-
-<h2>Again, but with explanation</h2>
+</code></pre>
+<h2 id="again-but-with-explanation">Again, but with explanation</h2>
 <p>The first step is to install the WebRTC audio processing package.  It <em>may</em> come by default with Fedora.  My machine had it installed already, but I'm including it here in case it was simply a dependency of some other package I've installed.</p>
-<div class="codehilite"><pre><span></span>sudo dnf install webrtc-audio-processing
-</pre></div>
-
-
+<pre><code>:::bash
+sudo dnf install webrtc-audio-processing
+</code></pre>
 <p>Then add these two lines to the end of <code>/etc/pulse/default.pa</code>.</p>
-<div class="codehilite"><pre><span></span>.nofail
-load-module module-echo-cancel <span class="nv">aec_method</span><span class="o">=</span>webrtc
-</pre></div>
-
-
+<pre><code>:::bash
+.nofail
+load-module module-echo-cancel aec_method=webrtc
+</code></pre>
 <p>Then restart PulseAudio.</p>
-<div class="codehilite"><pre><span></span>pulseaudio -k
-</pre></div>
-
-
+<pre><code>:::bash
+pulseaudio -k
+</code></pre>
 <p>Now, if you open Sound settings, you should see a new entry under the <em>Input</em> tab.  Mine is called "<strong>Built-in Audio Analog Stereo (echo cancelled with SA9027 USB Audio Analog Stereo)</strong>".  Not sure what's up with that name; my mic is connected with a 3.5mm audio jack.  Whatever, it works!</p>
 <p><img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/devices.png"></p>
 <p>Select the device that says "echo cancelled" and your audio should go from this:</p>
@@ -152,5 +147,11 @@ load-module module-echo-cancel <span class="nv">aec_method</span><span class="o"
 <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
-</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'touch';
+    anchors.options.placement = 'left';
+    anchors.options.class = 'heading-anchor';
+    anchors.add();
+</script></body>
 </html>

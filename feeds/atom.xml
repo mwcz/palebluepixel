@@ -3,32 +3,28 @@
 &lt;p&gt;&lt;img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/minimic.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;The only problem is that, since the minimic is just &lt;em&gt;a wire&lt;/em&gt;, it doesn't have any noise or echo cancellation.  And since Fedora doesn't come with that feature enabled by default, the mic was picking up a lot of ambient noise.  &lt;a href="https://chrisbredesen.com/"&gt;Breddy&lt;/a&gt; told me that steps just like the following didn't work in Fedora a few versions ago, so I wanted to document them now that the issues seem to be fixed.  I originally found these instructions on &lt;a href="https://www.reddit.com/r/linux/comments/2yqfqp/just_found_that_pulseaudio_have_noise/"&gt;this r/linux post&lt;/a&gt; and am reposting them here with Fedora-specific flourishes.&lt;/p&gt;
 &lt;p&gt;Without further ado, here's how to turn on noise and echo cancellation in Fedora 26.&lt;/p&gt;
-&lt;h2&gt;If you just want it to work&lt;/h2&gt;
+&lt;h2 id="if-you-just-want-it-to-work"&gt;If you just want it to work&lt;/h2&gt;
 &lt;p&gt;If you're in a rush, here's a script that will set everything up for you.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo dnf install -y webrtc-audio-processing
-&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;.nofail&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; sudo tee -a /etc/pulse/default.pa
-&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;load-module module-echo-cancel aec_method=webrtc&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; sudo tee -a /etc/pulse/default.pa
+&lt;pre&gt;&lt;code&gt;:::bash
+sudo dnf install -y webrtc-audio-processing
+echo '.nofail' | sudo tee -a /etc/pulse/default.pa
+echo 'load-module module-echo-cancel aec_method=webrtc' | sudo tee -a /etc/pulse/default.pa
 pulseaudio -k
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h2&gt;Again, but with explanation&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id="again-but-with-explanation"&gt;Again, but with explanation&lt;/h2&gt;
 &lt;p&gt;The first step is to install the WebRTC audio processing package.  It &lt;em&gt;may&lt;/em&gt; come by default with Fedora.  My machine had it installed already, but I'm including it here in case it was simply a dependency of some other package I've installed.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo dnf install webrtc-audio-processing
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;pre&gt;&lt;code&gt;:::bash
+sudo dnf install webrtc-audio-processing
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Then add these two lines to the end of &lt;code&gt;/etc/pulse/default.pa&lt;/code&gt;.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;.nofail
-load-module module-echo-cancel &lt;span class="nv"&gt;aec_method&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;webrtc
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;pre&gt;&lt;code&gt;:::bash
+.nofail
+load-module module-echo-cancel aec_method=webrtc
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Then restart PulseAudio.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pulseaudio -k
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;pre&gt;&lt;code&gt;:::bash
+pulseaudio -k
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now, if you open Sound settings, you should see a new entry under the &lt;em&gt;Input&lt;/em&gt; tab.  Mine is called "&lt;strong&gt;Built-in Audio Analog Stereo (echo cancelled with SA9027 USB Audio Analog Stereo)&lt;/strong&gt;".  Not sure what's up with that name; my mic is connected with a 3.5mm audio jack.  Whatever, it works!&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/devices.png"&gt;&lt;/p&gt;
 &lt;p&gt;Select the device that says "echo cancelled" and your audio should go from this:&lt;/p&gt;
@@ -43,26 +39,123 @@ load-module module-echo-cancel &lt;span class="nv"&gt;aec_method&lt;/span&gt;&lt
     &lt;figcaption&gt;Spectrum analysis with noise cancellation.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Hope this works!  Let me know in the comments below.&lt;/p&gt;</content><category term="linux"></category><category term="fedora"></category><category term="audio"></category></entry><entry><title>In Orange Light</title><link href="https://palebluepixel.org/2017/08/04/in-orange-light/" rel="alternate"></link><published>2017-08-04T00:00:00-04:00</published><updated>2017-08-04T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-08-04:/2017/08/04/in-orange-light/</id><summary type="html">&lt;p&gt;A WebGL-based visualizer for LED displays.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Three years ago, surrounded by monitors in a dark, blue-hued room, a particular screen caught my eye.  My girlfriend's (now wife's) eye was caught by the same screen, and we crossed the room to investigate.&lt;/p&gt;
+&lt;p&gt;Hope this works!  Let me know in the comments below.&lt;/p&gt;</content><category term="linux"></category><category term="fedora"></category><category term="audio"></category></entry><entry><title>geekSPARK 2017</title><link href="https://palebluepixel.org/2017/09/17/geekspark-2017/" rel="alternate"></link><published>2017-09-17T00:00:00-04:00</published><updated>2017-09-17T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-09-17:/2017/09/17/geekspark-2017/</id><summary type="html">&lt;p&gt;The SPARKcon creativity festival: on the geeky side.&lt;/p&gt;</summary><content type="html">&lt;p&gt;geekSPARK is a showcase of creative use of technology, taking place each year during the &lt;a href="https://sparkcon.com"&gt;SPARKcon&lt;/a&gt; art festival.  What lies below is a summary of the festivities at geekSPARK 2017.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="geekSPARK logo" src="https://palebluepixel.org/2017/09/17/geekspark-2017/geekSPARK-icon.png" /&gt;&lt;/p&gt;
+&lt;h2 id="rc-speedway"&gt;RC Speedway&lt;/h2&gt;
+&lt;p&gt;The RC Speedway was an incredibly fun creation by maker extraordinaire Bill Culverhouse from &lt;a href="https://splatspace.org/"&gt;SplatSpace&lt;/a&gt;.  Bill mounted cameras on the RC cars which fed wirelessly into first-person displays.  The cars were &lt;em&gt;fast&lt;/em&gt;, and the sensation of speed from the first-person view was exhilirating.  I'm kicking myself for not taking any video.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/rc-vid.jpg" alt="photo of RC controller and screen" /&gt;
+    &lt;figcaption&gt;The first-person racing screen&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+    &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/rc1.jpg" alt="photo of RC speeday" /&gt;
+    &lt;figcaption&gt;Yes, there was a &lt;i&gt;ramp&lt;/i&gt;!&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id="virtual-reality"&gt;Virtual Reality&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://memorymachinecreative.com/"&gt;Tyler Jackson&lt;/a&gt; brought his immersive art piece, &lt;em&gt;Before the War&lt;/em&gt;.  In it, you explore a series of thoughtful, atmospheric vignettes.  This is the first time VR has made an appearance at geekSPARK and I think it's here to stay.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Tyler Jackson's &amp;quot;Before the War&amp;quot; VR exhibit" src="https://palebluepixel.org/2017/09/17/geekspark-2017/tyler-vr.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;I recommend reading the INDY's &lt;a href="https://www.indyweek.com/indyweek/tyler-jacksons-exhibit-at-lump-scouts-the-next-frontier-for-artists-virtual-reality/"&gt;review of Before the War&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="all-things-led"&gt;All Things LED&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://maniacallabs.com/"&gt;Maniacal Labs&lt;/a&gt; returned again, with a bank of dazzling LED displays.  Some were old favorites, but among their new creations were an infinity mirror, a light saber, and an LED Pole (the &lt;em&gt;LPD8806Pole&lt;/em&gt;).&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/ml.jpg" alt="photo of Maniacal Labs' LED creations" /&gt;
+    &lt;figcaption&gt;Maniacal Labs' LED displays.  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+    &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/1dpong.jpg" alt="photo of Maniacal Labs' 1D pong game" /&gt;
+    &lt;figcaption&gt;1D pong: play by tapping a button at just the right time to deflect the "ball".&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;A few trusted friends were allowed to hold the light saber!&lt;/p&gt;
+&lt;video style="margin: 0 auto" autoplay controls loop&gt;
+    &lt;source src="https://palebluepixel.org/2017/09/17/geekspark-2017/spin-saber.mp4" /&gt;
+    &lt;source src="https://palebluepixel.org/2017/09/17/geekspark-2017/spin-saber.webm" /&gt;
+&lt;/video&gt;
+
+&lt;h2 id="mushroom-hunters"&gt;Mushroom Hunters&lt;/h2&gt;
+&lt;p&gt;A fresh, fungusy addition to geekSPARK!  Geekery need not be constrained to digital hobbies.  Anna and Krystal, devoted mushroom enthusiasts, brought a huge haul of mushrooms to the event and educated visitors about mushroom eating, hunting, and biology.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="mushroom booth" src="https://palebluepixel.org/2017/09/17/geekspark-2017/mushrooms.jpg" /&gt;&lt;/p&gt;
+&lt;h2 id="digital-motion"&gt;Digital Motion&lt;/h2&gt;
+&lt;p&gt;Digital Motion is a perennial geekSPARK exhibit featuring interactive digital displays.  Using a variety of sensors, we use the movement of viewers to influence the display.  There are many displays, ranging from interactive art to a full-blown videogame with a leaderboard (the Fish Game!).&lt;/p&gt;
+&lt;p&gt;&lt;img alt="photo of Kimotion screen" src="https://palebluepixel.org/2017/09/17/geekspark-2017/kimotion.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Learn more at &lt;a href="http://kimotion.xyz"&gt;Kimotion.xyz&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="3d-printing"&gt;3D Printing&lt;/h2&gt;
+&lt;p&gt;3D printed parts played a role in most of the exhibits this year.  The RC Speedway's camera mounts, Digital Motion's hand sensor mount, a slew of bits and bobs from All Things LED, all used 3D printed parts.  Most of all, Bill brought in some 3D printers to teach the crowd about printing, but sadly I don't have any pictures of the printers, or the giant terrifying T-Rex print he brought.&lt;/p&gt;
+&lt;div class="row"&gt;
+    &lt;figure class="col-sm-6"&gt;
+        &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/leap.jpg" alt="photo of hand sensor mount" /&gt;
+        &lt;figcaption&gt;3D-printed mount for the Leap Motion (hand-tracking sensor)&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure class="col-sm-6"&gt;
+        &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/rc-cam.jpg" alt="photo of RC car camera mount" /&gt;
+        &lt;figcaption&gt;3D-printed camera mount for the RC Speedway&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h2 id="whats-next"&gt;What's next?&lt;/h2&gt;
+&lt;p&gt;geekSPARK 2018!  The two big goals for next year are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A prime location&lt;/li&gt;
+&lt;li&gt;Excellent signage&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The current location, Red Hat Annex, has served us very well (thanks &lt;a href="https://redhat.com"&gt;Red Hat&lt;/a&gt;!), however it's far enough from the center of SPARKcon that we only see a tiny fraction of the 60,000 visitors.  Findability is very important at a large art festival, and we're exploring options for a more central location next year.&lt;/p&gt;
+&lt;p&gt;Signage this year was okay, but a bit rushed.  Even with the maps, many visitors weren't able to find our locations.  Next year's signage will be simple and clear!&lt;/p&gt;
+&lt;div class="row"&gt;
+    &lt;figure class="col-sm-6"&gt;
+        &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/flyer.png" alt="geekSPARK flyer" /&gt;
+        &lt;figcaption&gt;geekSPARK 2017 flyer&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure class="col-sm-6"&gt;
+        &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/poster.jpg" alt="geekSPARK poster" /&gt;
+        &lt;figcaption&gt;geekSPARK 2017 poster&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h2 id="special-thanks"&gt;Special thanks&lt;/h2&gt;
+&lt;p&gt;Immense appreciation goes out to all the SPARKcon and geekSPARK volunteers who made the event happen.  In no particular order (randomly sorted, in fact), here is a list of everyone involved with geekSPARK 2017, or geekSPARKs of the past.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Jared&lt;/li&gt;
+&lt;li&gt;Krystal&lt;/li&gt;
+&lt;li&gt;Adam&lt;/li&gt;
+&lt;li&gt;Brandon&lt;/li&gt;
+&lt;li&gt;Ian&lt;/li&gt;
+&lt;li&gt;Dan&lt;/li&gt;
+&lt;li&gt;Tyler&lt;/li&gt;
+&lt;li&gt;Eric&lt;/li&gt;
+&lt;li&gt;Mark&lt;/li&gt;
+&lt;li&gt;Maniacal Labs&lt;/li&gt;
+&lt;li&gt;Phil&lt;/li&gt;
+&lt;li&gt;Justis&lt;/li&gt;
+&lt;li&gt;Cas&lt;/li&gt;
+&lt;li&gt;Anna&lt;/li&gt;
+&lt;li&gt;Bill&lt;/li&gt;
+&lt;li&gt;Latisha&lt;/li&gt;
+&lt;li&gt;Ben&lt;/li&gt;
+&lt;li&gt;Truett&lt;/li&gt;
+&lt;li&gt;Homa&lt;/li&gt;
+&lt;/ul&gt;</content><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="kimotion"></category></entry><entry><title>In Orange Light</title><link href="https://palebluepixel.org/2017/08/04/in-orange-light/" rel="alternate"></link><published>2017-08-04T00:00:00-04:00</published><updated>2017-08-04T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-08-04:/2017/08/04/in-orange-light/</id><summary type="html">&lt;p&gt;A WebGL-based visualizer for LED displays.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Three years ago, surrounded by monitors in a dark, blue-hued room, a particular screen caught my eye.  My girlfriend's (now wife's) eye was caught by the same screen, and we crossed the room to investigate.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://palebluepixel.org/2017/08/04/in-orange-light/kr0-emp.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;We were visiting the &lt;em&gt;Indie Game Revolution&lt;/em&gt; exhibit at EMP in Seattle, and what we found on that screen was Scene I, Act I of &lt;a href="http://kentuckyroutezero.com/"&gt;Kentucky Route Zero&lt;/a&gt;.  It took me three years, but I finally rediscovered KR0 a few weeks ago.  Now, having (well, nearly) finished it, I'm convinced it's a masterpiece.  The game's atmosphere is so rich, so effortlessly gripping, that &lt;em&gt;actually being there&lt;/em&gt; would be less compelling.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://palebluepixel.org/2017/08/04/in-orange-light/kr0.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;And they accomplished all that with 3D models my Amiga 500 could have rendered (sans lighting).  Strategic omission of detail really has a way of setting fire to an imagination.&lt;/p&gt;
 &lt;p&gt;The atmosphere and storytelling from that game have been rolling around in my mind since then.  With Ludum Dare 39 approaching, I'd decided to try my novice hand at recreating some of its techniques.&lt;/p&gt;
-&lt;h2&gt;Ludum Dare 39&lt;/h2&gt;
+&lt;h2 id="ludum-dare-39"&gt;Ludum Dare 39&lt;/h2&gt;
 &lt;p&gt;Jared and I have participated in the Ludum Dare &lt;em&gt;Jam&lt;/em&gt; &lt;a href="http://ludumdare.com/compo/ludum-dare-35/?action=preview&amp;amp;uid=91554"&gt;three&lt;/a&gt; &lt;a href="http://ludumdare.com/compo/ludum-dare-37/?action=preview&amp;amp;uid=91554"&gt;whole&lt;/a&gt; &lt;a href="https://ldjam.com/events/ludum-dare/38/pity-about-earth"&gt;times&lt;/a&gt;, and we've been growing curious about the &lt;em&gt;Compo&lt;/em&gt; (aka, Hard Mode).  Jared decided to sit this one out, so I took the opportunity to enter my first Compo, which is an exclusively solo endeavor.  The theme was "Running out of power".  Without any further ado, here is my game, &lt;a href="http://scripta.co/in-orange-light/"&gt;In Orange Light&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://palebluepixel.org/2017/08/04/in-orange-light/in-orange-light-scenery.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://ldjam.com/events/ludum-dare/39/in-orange-light"&gt;View the Ludum Dare entry&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Day 1 of 2, the foundation&lt;/h2&gt;
+&lt;h2 id="day-1-of-2-the-foundation"&gt;Day 1 of 2, the foundation&lt;/h2&gt;
 &lt;p&gt;With Kentucky Route Zero fresh in my mind, I wanted to branch out from my usual arcade-style game and try to make something a little more moody and atmospheric.  Based on the "running out of power" theme, my idea was a survival game where you try to balance scant resources to survive winter in a frigid mountain cabin.&lt;/p&gt;
 &lt;p&gt;To get the math out of the way, I spent the first day implementing a basic simulation of warmth, food, fuel, a generator, heater, and all their interactions.  I also created some placeholder art, so I'd have something to click on and cringe at.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://palebluepixel.org/2017/08/04/in-orange-light/placeholder-art.png"&gt;&lt;/p&gt;
-&lt;h2&gt;Day 2 of 2, some polish&lt;/h2&gt;
+&lt;h2 id="day-2-of-2-some-polish"&gt;Day 2 of 2, some polish&lt;/h2&gt;
 &lt;p&gt;I spent about half of Sunday improving the visuals, and the other half fixing bugs in the simulation I'd created on Saturday.&lt;/p&gt;
-&lt;h3&gt;Making it mountainous&lt;/h3&gt;
+&lt;h3 id="making-it-mountainous"&gt;Making it mountainous&lt;/h3&gt;
 &lt;p&gt;Starting with a set of rectangles, and using a photo of the Blue Ridge Mountains as a reference, I tweaked vector paths into something resembling mountains.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://palebluepixel.org/2017/08/04/in-orange-light/making-mountains.gif"&gt;&lt;/p&gt;
-&lt;h3&gt;Sunrise, day, sunset, night, repeat&lt;/h3&gt;
+&lt;h3 id="sunrise-day-sunset-night-repeat"&gt;Sunrise, day, sunset, night, repeat&lt;/h3&gt;
 &lt;style type="text/css" rel="stylesheet"&gt;
 #iol-sky-demo {
     float: right;
@@ -91,7 +184,7 @@ load-module module-echo-cancel &lt;span class="nv"&gt;aec_method&lt;/span&gt;&lt
 &lt;p&gt;To see the full sky sunrise and sunset, give &lt;a href="http://scripta.co/in-orange-light/"&gt;In Orange Light&lt;/a&gt; a play, but don't dismiss the text.  That way, time will be paused and you won't starve of freeze.&lt;/p&gt;
 &lt;div class="clearfix"&gt;&lt;/div&gt;
 
-&lt;h3&gt;Sound effects&lt;/h3&gt;
+&lt;h3 id="sound-effects"&gt;Sound effects&lt;/h3&gt;
 &lt;p&gt;The game has a few sound effects.  The heater's electric hum, the generator's rumble, and the growing, clawing sound of hunger.  To create these, I used &lt;a href="http://beepbox.co"&gt;BeepBox&lt;/a&gt;, a chiptune music sequencer.  It's meant for music, but I was able to coax some sound effects out of it.  Here are two of the sound effects, hit &lt;code&gt;Play&lt;/code&gt; to hear them through the BeepBox synthesizer live on this page.&lt;/p&gt;
 &lt;div id="sfx"&gt;
     &lt;p&gt;
@@ -147,7 +240,7 @@ load-module module-echo-cancel &lt;span class="nv"&gt;aec_method&lt;/span&gt;&lt
     });
 &lt;/script&gt;
 
-&lt;h2&gt;Lessons learned&lt;/h2&gt;
+&lt;h2 id="lessons-learned"&gt;Lessons learned&lt;/h2&gt;
 &lt;p&gt;First, working solo is much harder than working on a team, but not only because a team can get more work done.  Maintaining the sense of urgency, productivity, and focus was nearly impossible without a co-conspirator.&lt;/p&gt;
 &lt;p&gt;Second, system-of-numbers games need careful design and planning.  In Orange Light is essentially a small spreadsheet where you click buttons in order to keep some numbers within a desired range.  It seemed very simple at first, but a slew of problems arose after I &lt;em&gt;thought&lt;/em&gt; I had finished the simulation.&lt;/p&gt;
 &lt;p&gt;Third, and unsurprisingly, immersion and atmosphere are very difficult to execute on.  As a first experiment, I'm pretty happy with how things turned out.&lt;/p&gt;
@@ -194,7 +287,7 @@ load-module module-echo-cancel &lt;span class="nv"&gt;aec_method&lt;/span&gt;&lt
 SimPixel.&lt;/p&gt;
 &lt;div id="simpixel-container"&gt;&lt;/div&gt;
 
-&lt;h2&gt;SimPixel introduces itself&lt;/h2&gt;
+&lt;h2 id="simpixel-introduces-itself"&gt;SimPixel introduces itself&lt;/h2&gt;
 &lt;p&gt;SimPixel is a WebGL visualizer for LED displays, &lt;em&gt;very&lt;/em&gt; much like the ones Adam
 and Dan build over at &lt;a href="http://maniacallabs.com/"&gt;Maniacal Labs&lt;/a&gt;.&lt;/p&gt;
 &lt;style type="text/css"&gt;
@@ -220,49 +313,45 @@ library, sends layouts and colors to SimPixel using a simple &lt;a href="https:/
 protocol.&lt;/p&gt;
 &lt;div class="clearfix"&gt;&lt;/div&gt;
 
-&lt;h2&gt;The Protocol&lt;/h2&gt;
+&lt;h2 id="the-protocol"&gt;The Protocol&lt;/h2&gt;
 &lt;p&gt;By itself, SimPixel is useless.  To turn on the lights, it connects to a
 WebSocket service.  That service is expected to send certain messages, namely a
 configuration message followed by a series of color messages.&lt;/p&gt;
-&lt;h3&gt;Configuration message&lt;/h3&gt;
+&lt;h3 id="configuration-message"&gt;Configuration message&lt;/h3&gt;
 &lt;p&gt;The configuration message conveys the spatial layout of the LEDs.&lt;/p&gt;
 &lt;p&gt;For example, a configuration message of &lt;code&gt;0x0000009A02FE000C&lt;/code&gt; is interpreted as
 follows.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;+--------+------+------+------+
+&lt;pre&gt;&lt;code&gt;+--------+------+------+------+
 | opcode |    X |    Y |    Z |
 +--------+------+------+------+
 | 0x0000 | 009A | 02FE | 000C |
 +--------+------+------+------+
 | config |  154 |  766 |   12 |
 +--------+------+------+------+
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The leading &lt;code&gt;0x0000&lt;/code&gt; opcode identifies this as a configuration message,
 followed by a series of 16-bit signed integers which indicate the 3D
 coordinates of each LED, of the form: &lt;code&gt;X&lt;sub&gt;1&lt;/sub&gt;,Y&lt;sub&gt;1&lt;/sub&gt;,Z&lt;sub&gt;1&lt;/sub&gt;,X&lt;sub&gt;2&lt;/sub&gt;,Y&lt;sub&gt;2&lt;/sub&gt;,Z&lt;sub&gt;2&lt;/sub&gt;,
     ..., X&lt;sub&gt;n&lt;/sub&gt;,Y&lt;sub&gt;n&lt;/sub&gt;,Z&lt;sub&gt;n&lt;/sub&gt;&lt;/code&gt;&lt;/p&gt;
-&lt;h3&gt;Color message&lt;/h3&gt;
+&lt;h3 id="color-message"&gt;Color message&lt;/h3&gt;
 &lt;p&gt;The color message(s) specify what color each LED should be at the current
 moment in time.&lt;/p&gt;
 &lt;p&gt;An example color message, &lt;code&gt;0x0001 40 D6 7F&lt;/code&gt;, breaks down to:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;+--------+-----+-----+-----+
+&lt;pre&gt;&lt;code&gt;+--------+-----+-----+-----+
 | opcode |   R |   G |   B |
 +--------+-----+-----+-----+
 | 0x0001 |  40 |  D6 |  7F |
 +--------+-----+-----+-----+
 | color  |  64 | 214 | 127 |
 +--------+-----+-----+-----+
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The leading &lt;code&gt;0x0001&lt;/code&gt; opcode identifies this as a color message, followed by a
 series of 8-bit unsigned integers which indicate the RGB colors of each LED,
 of the form:
 &lt;code&gt;R&lt;sub&gt;1&lt;/sub&gt;,G&lt;sub&gt;1&lt;/sub&gt;,B&lt;sub&gt;1&lt;/sub&gt;,R&lt;sub&gt;2&lt;/sub&gt;,G&lt;sub&gt;2&lt;/sub&gt;,B&lt;sub&gt;2&lt;/sub&gt;,
 ..., R&lt;sub&gt;n&lt;/sub&gt;,G&lt;sub&gt;n&lt;/sub&gt;,B&lt;sub&gt;n&lt;/sub&gt;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;For a concise reference, see &lt;a href="https://github.com/ManiacalLabs/SimPixel/blob/master/PROTOCOL.md"&gt;PROTOCOL.md&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;The Ghost in the Recording&lt;/h2&gt;
+&lt;h2 id="the-ghost-in-the-recording"&gt;The Ghost in the Recording&lt;/h2&gt;
 &lt;p&gt;The live demo at the top of this post the protocol, but it isn't connected to
 any WebSocket service.  Instead, it's using a recording apparatus that I
 cobbled together.  I pushed a configuration frame and a bunch of color frames
@@ -349,7 +438,7 @@ format.  Pretty cool.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="screenshot" src="https://palebluepixel.org/2017/03/10/meet-simpixel/thumb.jpg" /&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="web"></category><category term="led"></category><category term="maniacal-labs"></category></entry><entry><title>Kimotion at geekSPARK 2016</title><link href="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/" rel="alternate"></link><published>2017-01-12T00:00:00-05:00</published><updated>2017-01-12T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-01-12:/2017/01/12/kimotion-at-geekspark-2016/</id><summary type="html">&lt;p&gt;Kimotion-powered interactive art at SPARKcon 2016.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Just a few short &lt;del&gt;days&lt;/del&gt; months ago, &lt;a href="http://kimotion.xyz"&gt;Kimotion&lt;/a&gt; was on
 display at SPARKcon.  SPARKcon is a large art festival in Raleigh, and we
 occupy a small slice of it called geekSPARK.&lt;/p&gt;
-&lt;h2&gt;Kimotion Levels Up&lt;/h2&gt;
+&lt;h2 id="kimotion-levels-up"&gt;Kimotion Levels Up&lt;/h2&gt;
 &lt;p&gt;Last year's tech had a rudimentary and finicky &lt;a href="https://vimeo.com/136950949"&gt;hand tracking&lt;/a&gt; system.  It
 was workable, but a lot of visitors had trouble using it, especially kids.
 This year, I added Leap Motion support, which was a huge... &lt;em&gt;jump&lt;/em&gt; forward for
@@ -370,7 +459,7 @@ are essentially "unzip file, run &lt;code&gt;start.sh&lt;/code&gt;".  Browser su
 has come a long way since last year, so I was able to remove Babel and run raw
 ES6 code in Firefox and Chrome.  Beginners are no longer put off by the complex
 build system.  Plus, not having to wait while builds run is a nice bonus.&lt;/p&gt;
-&lt;h2&gt;Maniacal Labs&lt;/h2&gt;
+&lt;h2 id="maniacal-labs"&gt;Maniacal Labs&lt;/h2&gt;
 &lt;p&gt;We shared the room with Adam and Dan from &lt;a href="http://maniacallabs.com/"&gt;Maniacal Labs&lt;/a&gt;, who brought
 their &lt;a href="http://maniacallabs.com/2016/06/28/jumbo1k-32x32-led-networked-display/"&gt;awesome&lt;/a&gt; &lt;a href="http://maniacallabs.com/WyoManiacalDisplay/"&gt;LED&lt;/a&gt; &lt;a href="http://maniacallabs.com/2015/09/22/building-the-colossus-led-display/"&gt;displays&lt;/a&gt;.  Adam even wrote a brand new
 Kimotion client to run on their biggest display, which you can see a clip of in
@@ -378,9 +467,9 @@ the video at the top of this post.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Maniacal Labs @ geekSPARK 2016" src="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/maniacal.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;Our two exhibits fit so well together that we're considering uniting even
 further next year.&lt;/p&gt;
-&lt;h2&gt;Pictures!&lt;/h2&gt;
+&lt;h2 id="pictures"&gt;Pictures!&lt;/h2&gt;
 &lt;p&gt;$GALLERY&lt;/p&gt;
-&lt;h2&gt;Viva la geekSPARK!&lt;/h2&gt;
+&lt;h2 id="viva-la-geekspark"&gt;Viva la geekSPARK!&lt;/h2&gt;
 &lt;p&gt;&lt;img style="float: right" src="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/geekspark.png" alt="geekSPARK logo" /&gt;&lt;/p&gt;
 &lt;p&gt;Thanks to Truett and Noel for all their organization and support.  Thanks to
 Ian for pulling me into this project two years ago and for climbing into the
@@ -396,7 +485,7 @@ lazyloading, autoloading, and dependency injection, so I went with the laziest
 term.&lt;/p&gt;
 &lt;p&gt;Let's set the scene, and find out if it's a worthwhile developer convenience,
 or ease-of-use gone mad...&lt;/p&gt;
-&lt;h2&gt;Scene 1: Maximize Simplicity&lt;/h2&gt;
+&lt;h2 id="scene-1-maximize-simplicity"&gt;Scene 1: Maximize Simplicity&lt;/h2&gt;
 &lt;p&gt;You are the author of "Wootstrap", a Bootstrap-like library of useful
 components like navigation, buttons, and alerts.  Also like Bootstrap, your
 components are distributed as HTML snippets for users to copy, paste, and
@@ -417,7 +506,7 @@ customize.&lt;/p&gt;
 
 &lt;p&gt;One line, no big deal.  But as your users add and remove components from their
 pages, managing imports becomes a finger-aching chore.&lt;/p&gt;
-&lt;h2&gt;Scene 2: Minimize Finger-Ache&lt;/h2&gt;
+&lt;h2 id="scene-2-minimize-finger-ache"&gt;Scene 2: Minimize Finger-Ache&lt;/h2&gt;
 &lt;p&gt;Wouldn't it be cushy if the components were imported when you use them,
 automatically?  Here's a working demo:&lt;/p&gt;
 &lt;div class="row"&gt;
@@ -446,7 +535,7 @@ automatically?  Here's a working demo:&lt;/p&gt;
 
 &lt;p&gt;The demo only imports &lt;code&gt;lazy-load&lt;/code&gt;, which in turn imports the
 three &lt;code&gt;ws-&lt;/code&gt; elements.  Let's look at how it works.&lt;/p&gt;
-&lt;h2&gt;Scene 3: Behind the Scenes&lt;/h2&gt;
+&lt;h2 id="scene-3-behind-the-scenes"&gt;Scene 3: Behind the Scenes&lt;/h2&gt;
 &lt;p&gt;To lazyload, we need a list of all our component names and where to find them.
 I created a small "registry" object for the demo.  In the real-world, this
 object could be auto-generated by the component library's build system, or by
@@ -465,7 +554,7 @@ the build system of the user's app, including all available components.&lt;/p&gt
 as a selector.  It is passed into &lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll"&gt;querySelectorAll()&lt;/a&gt; to find any
 occurrences of our elements on the page.  Second is &lt;code&gt;paths&lt;/code&gt;, a mapping from
 each component's name to its HTML template file.&lt;/p&gt;
-&lt;h3&gt;The lazy-load element&lt;/h3&gt;
+&lt;h3 id="the-lazy-load-element"&gt;The lazy-load element&lt;/h3&gt;
 &lt;p&gt;Here's the Polymer definition for the &lt;code&gt;lazy-load&lt;/code&gt; element:&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-javascript"&gt;Polymer({
 
@@ -490,7 +579,7 @@ each component's name to its HTML template file.&lt;/p&gt;
 the &lt;code&gt;names&lt;/code&gt; list and imports their HTML templates (using Polymer's handy
 &lt;a href="https://www.polymer-project.org/1.0/docs/devguide/instance-methods#imports-and-urls"&gt;importHref()&lt;/a&gt; function).&lt;/p&gt;
 &lt;p&gt;Now any element in the registry object can be used without an explicit import.&lt;/p&gt;
-&lt;h2&gt;Tradeoffs&lt;/h2&gt;
+&lt;h2 id="tradeoffs"&gt;Tradeoffs&lt;/h2&gt;
 &lt;p&gt;There are some things that may outweigh the convenience.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -527,33 +616,27 @@ imports as you code, rather than at runtime.&lt;/p&gt;
 This tutorial will focus on the Leap, so to proceed with the tutorial you'll
 need to &lt;a href="https://www.leapmotion.com/setup"&gt;set up your Leap&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Once the leap service is running, you can set up Kimotion!&lt;/p&gt;
-&lt;h2&gt;Get the code&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone git@github.com:mwcz/Kimotion.git
+&lt;h2 id="get-the-code"&gt;Get the code&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;git clone git@github.com:mwcz/Kimotion.git
 cd Kimotion
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;If you don't know how to use &lt;code&gt;git&lt;/code&gt;, no problem, just download and extract the
 &lt;a href="https://github.com/mwcz/Kimotion/archive/master.zip"&gt;Kimotion zip file&lt;/a&gt;
 instead.&lt;/p&gt;
-&lt;h2&gt;Boot it up&lt;/h2&gt;
+&lt;h2 id="boot-it-up"&gt;Boot it up&lt;/h2&gt;
 &lt;p&gt;Start a simple web server:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;./start.sh
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;pre&gt;&lt;code&gt;./start.sh
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Then open &lt;a href="http://localhost:8000/#example2d"&gt;localhost:8000/#example2d&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Wave your hand around and you should see a trail of black-outlined squares,
 like this:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="example2d mod screenshot" src="https://palebluepixel.org/2016/08/28/kimotion-modding-101/example2d.jpg" /&gt;&lt;/p&gt;
-&lt;h2&gt;Create your mod!&lt;/h2&gt;
+&lt;h2 id="create-your-mod"&gt;Create your mod!&lt;/h2&gt;
 &lt;p&gt;The easiest way to start your own mod is to make a copy of the default mod.
 Come up with a name for the mod, let's say &lt;code&gt;mymod&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd src
+&lt;pre&gt;&lt;code&gt;cd src
 cp -r mods/example2d mods/mymod
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Open &lt;code&gt;index.html&lt;/code&gt;, find where it says &lt;code&gt;&amp;lt;!-- Kimotion mods--&amp;gt;&lt;/code&gt;, and right after
 it add a script tag to include your mod.&lt;/p&gt;
 &lt;p&gt;&lt;script src="mods/mymod/main.js"&gt;&lt;/script&gt;&lt;/p&gt;
@@ -564,7 +647,7 @@ to &lt;code&gt;class mymod&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;You can now open &lt;a href="http://localhost:8080/#mymod"&gt;localhost:8080/#mymod&lt;/a&gt; and see
 your mod in action!  It's going to look just like the example mod, but now it's
 time to make it your own.&lt;/p&gt;
-&lt;h2&gt;Customize your mod&lt;/h2&gt;
+&lt;h2 id="customize-your-mod"&gt;Customize your mod&lt;/h2&gt;
 &lt;p&gt;Open &lt;code&gt;mods/mymod/main.js&lt;/code&gt; and look at the general layout.  There's a
 &lt;code&gt;constructor&lt;/code&gt; function for your initial setup, and an &lt;code&gt;update&lt;/code&gt; function which
 runs once per frame (at 60 frames per second, ideally).&lt;/p&gt;
@@ -579,7 +662,7 @@ the angle of hand motion and colors the square based on that angle.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="rainbow squares mod screenshot" src="https://palebluepixel.org/2016/08/28/kimotion-modding-101/rainbow-squares.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;Check out &lt;a href="https://github.com/mwcz/Kimotion/blob/master/src/mods/rainbow-square/main.js"&gt;Rainbow Squares&lt;/a&gt; if you're interesting in using an
 effect like that.&lt;/p&gt;
-&lt;h2&gt;Modding resources&lt;/h2&gt;
+&lt;h2 id="modding-resources"&gt;Modding resources&lt;/h2&gt;
 &lt;p&gt;At this point, you're an experienced Kimotion modder.  If you have an idea but
 would like some feedback before getting started, I'm eager to assist.  Here are
 a few ways to get help:&lt;/p&gt;
@@ -599,7 +682,7 @@ traffic flowing through our system.&lt;/p&gt;
 &lt;p&gt;Being a web guy, I wanted to accomplish this on a webpage, but with such a
 large audience, the number of network requests would rocket past what could be
 efficiently rendered with HTML and CSS.&lt;/p&gt;
-&lt;h3&gt;Tiny Particles of Sand&lt;/h3&gt;
+&lt;h3 id="tiny-particles-of-sand"&gt;Tiny Particles of Sand&lt;/h3&gt;
 &lt;p&gt;While developing &lt;a href="/projects/dimo"&gt;DiMo&lt;/a&gt; and &lt;a href="http://kimotion.xyz"&gt;Kimotion&lt;/a&gt;, I became
 fond of &lt;a href="http://threejs.org"&gt;three.js&lt;/a&gt; particle systems for their performance and visual
 charm.&lt;/p&gt;
@@ -623,7 +706,7 @@ a sweat.  It can even handle &lt;em&gt;drawing&lt;/em&gt; millions of particles,
 that many particles is often CPU-bottlenecked.  Fancy &lt;a href="https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units"&gt;tricks&lt;/a&gt; can beat
 that limitation, although such tricks are still tedious in WebGL.&lt;/p&gt;
 &lt;p&gt;Alright, let's make some particles.&lt;/p&gt;
-&lt;h3&gt;It's Pixel Time&lt;/h3&gt;
+&lt;h3 id="its-pixel-time"&gt;It's Pixel Time&lt;/h3&gt;
 &lt;p&gt;When a network request is detected, the particle system moves a tiny dot in an
 arc to its destination.&lt;/p&gt;
 &lt;div class="row"&gt;
@@ -667,7 +750,7 @@ the particles to fan out near the middle.&lt;/p&gt;
 &lt;p&gt;The particles that enter from the right side of the screen represent network
 traffic from the audience.  As you can see in the video below, the origin point
 of those particles moves randomly up and down to add more visual interest.&lt;/p&gt;
-&lt;h3&gt;Together at Last&lt;/h3&gt;
+&lt;h3 id="together-at-last"&gt;Together at Last&lt;/h3&gt;
 &lt;p&gt;After months of collaborating from across the world, it was wonderful to meet
 the whole team in person.  A few days later, all our hard work came together as
 well.  All the preparation paid off and the demo worked perfectly.  Here's a
@@ -680,7 +763,7 @@ shot of my particle visualization from the official recording.&lt;/p&gt;
 &lt;p&gt;Watch the full keynote here:&lt;/p&gt;
 &lt;iframe style="display: block; margin: 0 auto;" width="100%" height="315" src="https://www.youtube.com/embed/ooA6FmTL4Dk" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;h3&gt;Glow Rope&lt;/h3&gt;
+&lt;h3 id="glow-rope"&gt;Glow Rope&lt;/h3&gt;
 &lt;p&gt;Early on, before traffic data was available, I had the particles follow the
 mouse instead.  It was pretty fun, so I spun it off into a simple demo called
 &lt;a href="/demos/glow-rope"&gt;Glow Rope&lt;/a&gt;.  Give it a try (mouse required)!&lt;/p&gt;
@@ -689,7 +772,7 @@ mouse instead.  It was pretty fun, so I spun it off into a simple demo called
     &lt;figcaption&gt;&lt;p&gt;&lt;a class="btn btn-default btn-lg" href="/demos/glow-rope"&gt;Play Glow Rope&lt;/a&gt;&lt;/p&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;h3&gt;Leaderboard&lt;/h3&gt;
+&lt;h3 id="leaderboard"&gt;Leaderboard&lt;/h3&gt;
 &lt;p&gt;In addition to the network traffic visualization, I helped build a leaderboard
 view to display the scores and achievements of the top 10 players in the
 audience.  &lt;a href="https://twitter.com/andresgalante/"&gt;Andres&lt;/a&gt; created the beautiful design and handed me a static
@@ -697,7 +780,7 @@ mockup which I converted into a dynamic template using &lt;a href="http://ractiv
 then created a WebSocket connection to the &lt;em&gt;score microservice&lt;/em&gt; to populate the
 data.  Here's a shot of the winners from the live audience.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="photo of final leaderboard" src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/leaderboard-final.jpg" /&gt;&lt;/p&gt;
-&lt;h3&gt;Next Year&lt;/h3&gt;
+&lt;h3 id="next-year"&gt;Next Year&lt;/h3&gt;
 &lt;p&gt;The amount of work and preparation that goes into a presentation like this was
 eye-opening for me.  A week out and tired to the bone, I was thinking "No way
 am I doing this next year!"  But the thrill of everyone's hard work coming
@@ -783,7 +866,7 @@ can share some of this work, so others can focus on the art...&lt;/em&gt;&lt;/p&
 involved.  Nothing cures curmudgeony coders faster than working on a project
 where mistakes often make it &lt;em&gt;better&lt;/em&gt;.  With such a steep learning curve,
 though, few would get involved.  There would need to be a shared foundation.&lt;/p&gt;
-&lt;h3&gt;Enter Kimotion&lt;/h3&gt;
+&lt;h3 id="enter-kimotion"&gt;Enter Kimotion&lt;/h3&gt;
 &lt;p&gt;&lt;a href="http://kimotion.xyz"&gt;Kimotion&lt;/a&gt; is a new framework for building interactive art
 exhibits.  It will appeal mostly to the Programmer Artist types.  Think
 "Warrior Poet", but with keyboards.&lt;/p&gt;
@@ -814,10 +897,10 @@ exhibit.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Over a thousand&lt;/em&gt; people visited our exhibit last weekend.  It's hard to put
 into words how rewarding it is to see so many children and adults enjoy the sum
 of our planning, hard work, and creativity.&lt;/p&gt;
-&lt;h3&gt;Gallery&lt;/h3&gt;
+&lt;h3 id="gallery"&gt;Gallery&lt;/h3&gt;
 &lt;p&gt;Here are some photos from SPARKcon X (2015), and setup the night before.&lt;/p&gt;
 &lt;p&gt;$GALLERY&lt;/p&gt;
-&lt;h3&gt;The future&lt;/h3&gt;
+&lt;h3 id="the-future"&gt;The future&lt;/h3&gt;
 &lt;p&gt;What's next for Kimotion?  Several SPARKcon attendees had excellent ideas.
 From installing Kimotion in schools to putting a permanent installation in
 their own homes.&lt;/p&gt;
@@ -832,7 +915,7 @@ href="https://twitter.com/mwcz"&gt;tweet&lt;/a&gt; me.&lt;/p&gt;
 &lt;p&gt;I started Kimotion with the hope that it would encourage programmers to use
 their skills to create elegance that everyone can appreciate.  If children are
 also encouraged to exercise, I won't complain!&lt;/p&gt;
-&lt;h3&gt;E Pluribus Unum&lt;/h3&gt;
+&lt;h3 id="e-pluribus-unum"&gt;E Pluribus Unum&lt;/h3&gt;
 &lt;p&gt;I can't express how grateful I am to everyone who contributed to Kimotion
 itself, created mods, and made the Digital Motion exhibit at SPARKcon a huge
 success this year.&lt;/p&gt;
@@ -865,7 +948,7 @@ success this year.&lt;/p&gt;
 &lt;dd&gt;for being the official tester&lt;/dd&gt;
 &lt;/dl&gt;
 
-&lt;h3&gt;More information&lt;/h3&gt;
+&lt;h3 id="more-information"&gt;More information&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://kimotion.xyz"&gt;Kimotion main project page&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/mwcz/Kimotion"&gt;Kimotion source code&lt;/a&gt;&lt;/li&gt;
@@ -1010,15 +1093,11 @@ terminal monitor simulator.  &lt;abbr title="Cool-Retro-Term"&gt;CRT&lt;/abbr&gt
 off your 2015 high-DPI display and beams you into a world of 1980s nostalgia.&lt;/p&gt;
 &lt;p&gt;First &lt;a href="https://github.com/Swordfish90/cool-retro-term#get-cool-retro-term"&gt;install cool-retro-term&lt;/a&gt;.  Then install &lt;a href="https://github.com/DavidGriffith/frotz"&gt;frotz&lt;/a&gt; (the
 Z-Machine engine which runs all the old Infocom text adventures).&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo yum install frotz
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;pre&gt;&lt;code&gt;sudo yum install frotz
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Locate &lt;code&gt;LURKING.DAT&lt;/code&gt; in your copy of Lurking Horror, and...&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;frotz LURKING.DAT
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;pre&gt;&lt;code&gt;frotz LURKING.DAT
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img alt="The Lurking Horror running in Cool-Retro-Term" src="https://palebluepixel.org/2015/06/20/the-lurking-horror/lurking-horror-crt.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;Crank up the AC, grab your clicky keyboard, make CRT fullscreen, turn off the
 lights, and bathe in the cool cathode rays.&lt;/p&gt;
@@ -1061,15 +1140,11 @@ JavaScript's anonymous functions do pose a unique temptation.&lt;/p&gt;
 &lt;p&gt;For those unfamiliar, an anonymous function is, unsurprisingly, a function
 declaration without a name.&lt;/p&gt;
 &lt;p&gt;A named function:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;count_sheep() {&lt;/span&gt; &lt;span class="cm"&gt;/* code */&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;pre&gt;&lt;code&gt;function count_sheep() { /* code */ }
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;An anonymous function:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="cm"&gt;/* code */&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;pre&gt;&lt;code&gt;function () { /* code */ }
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;One has a name, one doesn't.  Other than two low-level (and usually
 inconsequental) behavioral differences, they're drop-in replacements for one
 another.  The primary difference is that one has a name, so you can tell what
@@ -1081,41 +1156,38 @@ functions are used so commonly in JavaScript programs.&lt;/p&gt;
 name&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;As a practical example, here's some code from the &lt;a href="http://datatables.net/examples/api/api_in_init.html"&gt;jQuery DataTables example
 page&lt;/a&gt;, with three nested anonymous functions.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;ready&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;#example&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;dataTable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="s2"&gt;&amp;quot;initComplete&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;api&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;api&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-            &lt;span class="nx"&gt;api&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;td&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;click&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                &lt;span class="nx"&gt;api&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;search&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;innerHTML&lt;/span&gt; &lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;draw&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-            &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;pre&gt;&lt;code&gt;:::javascript
+$(document).ready(function() {
+    $('#example').dataTable( {
+        "initComplete": function () {
+            var api = this.api();
+            api.$('td').click( function () {
+                api.search( this.innerHTML ).draw();
+            } );
+        }
+    } );
+} );
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;There are much (&lt;strong&gt;much&lt;/strong&gt;!) more deeply nested examples of the Pyramid of Doom,
 but this one serves well as an example.  If it had been implemented with short,
 named functions, it would be something like the following.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;ready&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;create_datatable&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;pre&gt;&lt;code&gt;$(document).ready( create_datatable );
 
-&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;create_datatable() {&lt;/span&gt;
-    &lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;#example&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;dataTable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="s2"&gt;&amp;quot;initComplete&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;init_datatable_api&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
+function create_datatable() {
+    $('#example').dataTable( {
+        "initComplete": init_datatable_api
+    } );
+}
 
-&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;init_datatable_api() {&lt;/span&gt;
-    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;api&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;api&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-    &lt;span class="nx"&gt;api&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;td&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;click&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;filter_datatable&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
+function init_datatable_api() {
+    var api = this.api();
+    api.$('td').click( filter_datatable );
+}
 
-&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;filter_datatable() {&lt;/span&gt;
-    &lt;span class="nx"&gt;api&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;search&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;innerHTML&lt;/span&gt; &lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;draw&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+function filter_datatable() {
+    api.search( this.innerHTML ).draw();
+}
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This updated code isn't perfect, to be sure, but the first line really
 exemplifies this benefits of this approach, to me.  &lt;code&gt;$(document).ready(
 create_datatable )&lt;/code&gt; reads so clearly.&lt;/p&gt;
@@ -1166,7 +1238,7 @@ try out the simulation!&lt;/p&gt;
 
 &lt;p&gt;A reasonably recent web browser required.  WebGL is required, which means
 Firefox 4+ or Chrome 9+.&lt;/p&gt;
-&lt;h2&gt;The Premise&lt;/h2&gt;
+&lt;h2 id="the-premise"&gt;The Premise&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Players wave illuminated batons around and cool stuff happens!&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;See &lt;a href="/2014/08/25/particles-and-p-dimo-comes-to-life/"&gt;DiMo Comes to Life&lt;/a&gt; for a , not-at-all dramatized
 summary of DiMo.&lt;/p&gt;
@@ -1175,11 +1247,11 @@ during SPARKcon each year in Raleigh, NC.  This year, I created the particle
 gravity simulation visualization for DiMo.  There was also a visualization of
 Conway's Game of Life, and an original game where players eat doritos and spray
 soda at people who eat doritos.&lt;/p&gt;
-&lt;h2&gt;Particles&lt;/h2&gt;
+&lt;h2 id="particles"&gt;Particles&lt;/h2&gt;
 &lt;p&gt;The particles' main job is to swirl around and look cool.  They are pulled
 gravitationally toward the player pieces, but the particles themselves don't
 exert gravity on each other.&lt;/p&gt;
-&lt;h3&gt;Gravity&lt;/h3&gt;
+&lt;h3 id="gravity"&gt;Gravity&lt;/h3&gt;
 &lt;p&gt;The gravity calculation was written first with inlined calculations, then with
 ThreeJS vector objects, then with &lt;a href="http://glmatrix.net/"&gt;glmatrix&lt;/a&gt;, and then inlined again.  The
 inlined code performance wasn't distinguishable from the glmatrix
@@ -1188,15 +1260,13 @@ with it for a while.&lt;/p&gt;
 &lt;p&gt;ThreeJS's vector calculations, on the other hand, were awful.  Each function
 call created a new vector object.  Each acceleration calculation caused the
 creation of 12 vector objects.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 10,000 particles    *
+&lt;pre&gt;&lt;code&gt; 10,000 particles    *
     60 fps           *
     12 objects       *
      3 player pieces
 ---------------------------------
  21,600,000 new objects per second
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Needless to say, the performance was &lt;em&gt;terrible&lt;/em&gt;.  I then implemented the gravity
 equation using glmatrix's in-place vector operations.  glmatrix's vector
 functions insert their output into an existing vector instead of creating a new
@@ -1206,7 +1276,7 @@ down to zero.&lt;/p&gt;
 &lt;p&gt;glmatrix served quite well for a while, but in the end I improved performance
 even more by writing an inline gravity equation by hand.  Perhaps it was just
 function call overhead that was hurting performance.&lt;/p&gt;
-&lt;h3&gt;Coloring methods&lt;/h3&gt;
+&lt;h3 id="coloring-methods"&gt;Coloring methods&lt;/h3&gt;
 &lt;p&gt;Once the gravity function was implemented, some beautification was in order.&lt;/p&gt;
 &lt;p&gt;Originally, each particle was randomly assigned either red, green, or blue.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="early dimo image, with randomly assigned colors" src="https://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/random-colors.png" /&gt;&lt;/p&gt;
@@ -1214,7 +1284,7 @@ function call overhead that was hurting performance.&lt;/p&gt;
 &lt;em&gt;isn't&lt;/em&gt; one of those rare cases where randomness is beautiful.  It occurred to
 me that seeing big swaths of color through all the particles might look
 better.&lt;/p&gt;
-&lt;h4&gt;Cololololololors&lt;/h4&gt;
+&lt;h4 id="cololololololors"&gt;Cololololololors&lt;/h4&gt;
 &lt;p&gt;But what criteria should be used to decide what color each particle should
 receive?&lt;/p&gt;
 &lt;p&gt;The simplest approach would be to color the particles based on their distance
@@ -1251,7 +1321,7 @@ scales it down to &lt;code&gt;0..1&lt;/code&gt;.&lt;/p&gt;
 input, &lt;span role="math"&gt;n&lt;/span&gt;, increases.  Here's the result.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="image of the swaths of color" src="https://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/swath-colors.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Yes!&lt;/em&gt;  Swaths of color, cycling through the spectrum like a rainbow.&lt;/p&gt;
-&lt;h4&gt;The Grand Programmers' Utopia (GPU)&lt;/h4&gt;
+&lt;h4 id="the-grand-programmers-utopia-gpu"&gt;The Grand Programmers' Utopia (GPU)&lt;/h4&gt;
 &lt;p&gt;After bumping up against my CPU's limits while implementing gravity, I was
 certain of one thing: I wanted to rely on the CPU as little as possible.&lt;/p&gt;
 &lt;p&gt;I had a vague intuition that pixel shaders were the answer, since, hey, pixel
@@ -1265,7 +1335,7 @@ of this project, mostly because graphics programming is uniquely rewarding
 among all types of programming.  Often an unanticipated quirk of an equation
 (or even a typo!) will result in a very cool surprise.  In short, "just trying
 stuff" pays off &lt;em&gt;far&lt;/em&gt; more than in any other branch of programming.&lt;/p&gt;
-&lt;h4&gt;More than colors?&lt;/h4&gt;
+&lt;h4 id="more-than-colors"&gt;More than colors?&lt;/h4&gt;
 &lt;p&gt;The more particles I add to the visualization, the better it looks.  1,000
 particles just look like a bunch of specks, but 100,000 particles start to look
 like clouds of swirling vapor.  Since the gravity calculations are so
@@ -1284,7 +1354,7 @@ out to me.  I'd love to learn from your work.&lt;/p&gt;
 &lt;p&gt;In the end, I had to settle for 25,000 particles on my laptop.  For the art
 installation, we used a pretty beefy gaming rig, and I was able to bump it up
 to 50,000 (thanks Charan!).&lt;/p&gt;
-&lt;h3&gt;What's next?&lt;/h3&gt;
+&lt;h3 id="whats-next"&gt;What's next?&lt;/h3&gt;
 &lt;p&gt;Here's my wishlist for further improvements to the visualization.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;do gravity calculations on the GPU, which would enable either...&lt;ul&gt;
@@ -1358,7 +1428,7 @@ three LED batons that visitors could use to control the visualizations.&lt;/p&gt
 exhibit used the same set of input: the coordinates of the colored batons.  My
 exhibit is a particle gravity simulation, created with WebGL (&lt;a href="http://threejs.org/"&gt;three.js&lt;/a&gt;,
 specifically), &lt;a href="https://en.wikipedia.org/wiki/OpenGL_Shading_Language"&gt;GLSL&lt;/a&gt;, and many other tools.&lt;/p&gt;
-&lt;h2&gt;Event photos&lt;/h2&gt;
+&lt;h2 id="event-photos"&gt;Event photos&lt;/h2&gt;
 &lt;p&gt;Enjoy these photos from Digital Motion at SPARKcon 2014.&lt;/p&gt;
 &lt;p&gt;$GALLERY&lt;/p&gt;
 &lt;p&gt;I'm working on a follow-up post, with technical information about the
@@ -1367,7 +1437,7 @@ implementation.  &lt;em&gt;Update&lt;/em&gt; it's
 &lt;p&gt;This (2014) was my first year as a volunteer, but it was a tremendously
 educational and &lt;em&gt;fun&lt;/em&gt; experience, so I'll definitely be back next year.
 &lt;em&gt;Update&lt;/em&gt; &lt;a href="https://palebluepixel.org/2015/09/26/make-a-kimotion/"&gt;2015's exhibit info and pictures!&lt;/a&gt;!&lt;/p&gt;
-&lt;h2&gt;Thanks&lt;/h2&gt;
+&lt;h2 id="thanks"&gt;Thanks&lt;/h2&gt;
 &lt;p&gt;I've written mostly about my own contribution to DiMo here, because that's what
 I'm most familiar with, but in reality it was only a piece of the DiMo puzzle.
 There were two other visualizations, both of which used the lighted batons as
@@ -1431,7 +1501,7 @@ of actual documentation.&lt;/p&gt;
 docs, I skimmed the examples until I found an existing scene that had the
 effect I needed.&lt;/p&gt;
 &lt;p&gt;For this demo, drawing a cube was easy, and even populating it with dots was easy, but &lt;/p&gt;
-&lt;h2&gt;Colored particles&lt;/h2&gt;
+&lt;h2 id="colored-particles"&gt;Colored particles&lt;/h2&gt;
 &lt;p&gt;The color cube uses a particle system to render 2D color points inside a 3D
 cube.&lt;/p&gt;
 &lt;p&gt;Eventually I found a &lt;a href="http://threejs.org/examples/#webgl_particles_billboards_colors"&gt;particle system demo with colors&lt;/a&gt;, which held the key.&lt;/p&gt;
@@ -1443,7 +1513,7 @@ match each vertex in the &lt;code&gt;vertices&lt;/code&gt; array with a color in
 vertex, &lt;span style="color: red;"&gt;red&lt;/span&gt; values are mapped to the &lt;code&gt;X&lt;/code&gt; axis,
 and similarly &lt;span style="color: green"&gt;green&lt;/span&gt; to &lt;code&gt;Y&lt;/code&gt; and &lt;span
 style="color: blue"&gt;blue&lt;/span&gt; to &lt;code&gt;Z&lt;/code&gt;.&lt;/p&gt;
-&lt;h2&gt;Optimization&lt;/h2&gt;
+&lt;h2 id="optimization"&gt;Optimization&lt;/h2&gt;
 &lt;p&gt;Rendering a point for each pixel in a huge image image would be overkill, so
 I used the pixel culling already present in ColorPal to scale the number of
 points down to a more reasonable 128&lt;sup&gt;2&lt;/sup&gt;.  Increasing that number also
@@ -1511,31 +1581,27 @@ the image to 50% of the width. Expressions such as “30in + 40px” and “4 *
 drag-and-drop interface?  Me too!  Want to jam with the console cowboys in
 cyber-space?  Now you can.  Now &lt;em&gt;we&lt;/em&gt; can.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="ColorPal CLI logo" src="https://palebluepixel.org/2013/11/07/colorpal-cli/colorpal_cli_logo.png" title="ColorPal CLI logo" /&gt;&lt;/p&gt;
-&lt;h2&gt;Demo!&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ node cpal.js -f hex -s &lt;span class="m"&gt;8&lt;/span&gt; MyImage.png
+&lt;h2 id="demo"&gt;Demo!&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;$ node cpal.js -f hex -s 8 MyImage.png
 
-&lt;span class="c1"&gt;#07070b&lt;/span&gt;
-&lt;span class="c1"&gt;#bac0c4&lt;/span&gt;
-&lt;span class="c1"&gt;#d1bd66&lt;/span&gt;
-&lt;span class="c1"&gt;#7e8899&lt;/span&gt;
-&lt;span class="c1"&gt;#696964&lt;/span&gt;
-&lt;span class="c1"&gt;#c4b441&lt;/span&gt;
-&lt;span class="c1"&gt;#65683e&lt;/span&gt;
-&lt;span class="c1"&gt;#394434&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h2&gt;Get it!&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;npm install -g canvas requirejs # install dependencies
+#07070b
+#bac0c4
+#d1bd66
+#7e8899
+#696964
+#c4b441
+#65683e
+#394434
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id="get-it"&gt;Get it!&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g canvas requirejs # install dependencies
 git clone git@github.com:mwcz/colorpal-cli.git
 cd colorpal-cli
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h2&gt;Use it!&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id="use-it"&gt;Use it!&lt;/h2&gt;
 &lt;p&gt;Visit the &lt;a href="/projects/colorpal-cli" title="ColorPal CLI project page"&gt;projcet page&lt;/a&gt; for the full documentation, or simply run the
 command without any arguments to see the help text.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Generate a color palette from an image! :)
+&lt;pre&gt;&lt;code&gt;Generate a color palette from an image! :)
 USAGE: node cpal.js IMAGE
 
 Options:
@@ -1544,9 +1610,7 @@ Options:
   -d, --dynamic  Generate a palette, sized dynamically based on the color diversity of the image; you can optionally specify a number from 0.0 to 1.0, where larger numbers increase the number of colors.
 
   -f, --format   Specify the output format.  Available formats are: scss, sass, json, less, rgb, hex
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The code is &lt;a href="https://github.com/mwcz/colorpal-cli" title="ColorPal CLI code repository"&gt;available on GitHub&lt;/a&gt; and I welcome any feedback, bug reports,
 pull requests, etc.&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="mediancut"></category></entry><entry><title>ColorPal Output Update</title><link href="https://palebluepixel.org/2012/07/30/colorpal-output-update/" rel="alternate"></link><published>2012-07-30T22:30:00-04:00</published><updated>2012-07-30T22:30:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-07-30:/2012/07/30/colorpal-output-update/</id><summary type="html">&lt;p&gt;Hi pals.&lt;/p&gt;
 &lt;p&gt;This is a speedy post about a speedy update I made today to
@@ -1602,16 +1666,14 @@ with the new value.  Knockout calls this a "two-way data binding".  &lt;/p&gt;
 &lt;p&gt;I replaced the aforementioned color strings with calls to &lt;code&gt;cvm&lt;/code&gt;, which is a
 Knockout ViewModel (in this case, an object that holds all the color data).
 &lt;code&gt;cvm&lt;/code&gt; is populated with the SVG tiger's default colors.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ko.observableArray( [
-    { hex: ko.observable(&amp;quot;#000000&amp;quot;) },
-    { hex: ko.observable(&amp;quot;#323232&amp;quot;) },
+&lt;pre&gt;&lt;code&gt;ko.observableArray( [
+    { hex: ko.observable("#000000") },
+    { hex: ko.observable("#323232") },
     // .... many more ....
-    { hex: ko.observable(&amp;quot;#ff727f&amp;quot;) },
-    { hex: ko.observable(&amp;quot;#ffffff&amp;quot;) }
+    { hex: ko.observable("#ff727f") },
+    { hex: ko.observable("#ffffff") }
 ]);
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Play with the colors, then copy the URL and send your tiger to your friends.  :]&lt;/p&gt;
 &lt;p&gt;&lt;a href="/projects/canvas_indexed_color/#4c0000,#659900,#666666,#992600,#999999,#99cc32,#a51926,#a5264c,#b23259,#b26565,#b2b2b2,#cc3f4c,#cc7226,#cccccc,#e5668c,#e59999,#e5e5b2,B5E8E6,#ea8c4d,#ea8e51,#eb955c,#ec9961,#eea575,#efaa7c,#f1b288,#f2b892,#f3bf9c,#f4c6a8,#f5ccb0,#f8d8c4,#f8dcc8,#f9e2d3,#fae5d7,#fcf2eb,#ff727f,#ffffcc,#ffffff,#000000,#323232" title="Crazy tiger"&gt;Crazy tiger&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Please note, this is only a simulation of an indexed color palette.  It is not
@@ -1637,7 +1699,7 @@ palette.&lt;/p&gt;
 low-population, high-importance colors, like the one above, palettes will look
 &lt;em&gt;much&lt;/em&gt; better!&lt;/p&gt;
 &lt;p&gt;Technical discussion below.&lt;/p&gt;
-&lt;h1&gt;Why the 'median' in median-cut?&lt;/h1&gt;
+&lt;h1 id="why-the-median-in-median-cut"&gt;Why the 'median' in median-cut?&lt;/h1&gt;
 &lt;p&gt;Median Cut is an algorithm typically used to reduce the number of colors in an
 image.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="16 million colors versus 16 colors" src="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/median-cut-example.png" /&gt;&lt;/p&gt;
@@ -1681,7 +1743,7 @@ high-population colors.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p&gt;The result?  Mean Cut!  Also: awesome color palettes.&lt;/p&gt;
-&lt;h2&gt;Interesting side-note on color distributions&lt;/h2&gt;
+&lt;h2 id="interesting-side-note-on-color-distributions"&gt;Interesting side-note on color distributions&lt;/h2&gt;
 &lt;p&gt;Interestingly, photographs of nature tend to have nice, close-to-normal color
 distributions.  A "normal distribution" is a formal term for a "bell curve".&lt;/p&gt;
 &lt;p&gt;Check out the red, green, and blue distributions for a photograph of a forest.&lt;/p&gt;
@@ -1692,7 +1754,7 @@ distributions.  A "normal distribution" is a formal term for a "bell curve".&lt;
 &lt;p&gt;&lt;img alt="City   red   pixel distribution" src="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/city_r.png" /&gt;
 &lt;img alt="City   green pixel distribution" src="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/city_g.png" /&gt;
 &lt;img alt="City   blue  pixel distribution" src="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/city_b.png" /&gt;&lt;/p&gt;
-&lt;h2&gt;What's next for ColorPal?  Color spaces.&lt;/h2&gt;
+&lt;h2 id="whats-next-for-colorpal-color-spaces"&gt;What's next for ColorPal?  Color spaces.&lt;/h2&gt;
 &lt;p&gt;Mean-cut improves ColorPal dramatically for some images, but it's still not
 perfect.  Perfection probably won't be attainable, but there are still many
 ways to improve.&lt;/p&gt;
@@ -1713,7 +1775,7 @@ in 1931.&lt;/p&gt;
 and CIELAB.  XYZ will be first to the plate, since the RGB/XYZ formulas are
 the simplest.  Let me take this opportune moment to plug
 &lt;a href="http://www.easyrgb.com/index.php?X=MATH"&gt;EasyRGB.com&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;Lend a hand&lt;/h2&gt;
+&lt;h2 id="lend-a-hand"&gt;Lend a hand&lt;/h2&gt;
 &lt;p&gt;As I've mentioned before, ColorPal is in an early stage of development.  It
 needs testing in multiple browsers, and I'm very interested in hearing people's
 feedback.  Code development help is welcomed too.&lt;/p&gt;
@@ -1723,120 +1785,116 @@ feedback.  Code development help is welcomed too.&lt;/p&gt;
 &lt;a href="https://github.com/mwcz/median-cut-js"&gt;median-cut.js&lt;/a&gt;.&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="web"></category><category term="mediancut"></category></entry><entry><title>Toy javascript unit tester</title><link href="https://palebluepixel.org/2012/01/30/toy-javascript-unit-tester/" rel="alternate"></link><published>2012-01-30T21:50:00-05:00</published><updated>2012-01-30T21:50:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-01-30:/2012/01/30/toy-javascript-unit-tester/</id><summary type="html">&lt;p&gt;Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and had a minor epiphany.  In the back of my mind, there has always been a bit of uncertainty as to how unit testing frameworks work.  Deep in my brain I knew there was something I didn't understand, but I wasn't quite sure what.  I never gave it any conscious thought.&lt;/p&gt;
 &lt;p&gt;As a developer, I'd use a framework, write a bunch of &lt;code&gt;testBlahFoo&lt;/code&gt; functions, and the framework would magically run them.  &lt;/p&gt;
 &lt;p&gt;Then I realized... "Oh, it's just introspection."&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;// Create an object with three properties, all functions&lt;/span&gt;
-&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;myfuncs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;func1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;func it up&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;},&lt;/span&gt;
-    &lt;span class="nx"&gt;func2&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;func&amp;#39;s old brother&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;},&lt;/span&gt;
-    &lt;span class="nx"&gt;func3&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;bring back da func&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;pre&gt;&lt;code&gt;:::javascript
+// Create an object with three properties, all functions
+var myfuncs = {
+    func1: function() { console.log("func it up"); },
+    func2: function() { console.log("func's old brother"); },
+    func3: function() { console.log("bring back da func"); }
+};
 
-&lt;span class="c1"&gt;// Run all functions attached to myfuncs&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;func&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nx"&gt;myfuncs&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;myfuncs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="nx"&gt;func&lt;/span&gt; &lt;span class="p"&gt;]();&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
+// Run all functions attached to myfuncs
+for( func in myfuncs ) {
+    myfuncs[ func ]();
+}
 
-&lt;span class="c1"&gt;// Outputs:&lt;/span&gt;
-&lt;span class="c1"&gt;// &lt;/span&gt;
-&lt;span class="c1"&gt;// func it up&lt;/span&gt;
-&lt;span class="c1"&gt;// func&amp;#39;s old brother&lt;/span&gt;
-&lt;span class="c1"&gt;// bring back da func&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+// Outputs:
+// 
+// func it up
+// func's old brother
+// bring back da func
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;So simple.  Later, I wrote a very basic unit testing framework, purely as an educational excercise.&lt;/p&gt;
 &lt;p&gt;The guts are almost simple as the example above.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;JTestSuite&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;pre&gt;&lt;code&gt;:::javascript
+var JTestSuite = function () {
 
-    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;version&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="nx"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    var version = 0.1,
+        jt,
 
-    &lt;span class="nx"&gt;init&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;callback&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="nx"&gt;jt&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;JTests&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-        &lt;span class="nx"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;init&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;callback&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="p"&gt;},&lt;/span&gt;
+    init = function( callback ) {
+        jt = JTests();
+        jt.init( callback );
+    },
 
-    &lt;span class="nx"&gt;run&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;fn&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-            &lt;span class="nx"&gt;prop&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    run = function() {
+        var fn,
+            prop;
 
-        &lt;span class="c1"&gt;// Run all functions that begin with &amp;quot;test&amp;quot;&lt;/span&gt;
-        &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;prop&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="k"&gt;typeof&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;prop&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;function&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;prop&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;slice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;test&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                    &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;prop&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="nx"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-                &lt;span class="p"&gt;}&lt;/span&gt;
-            &lt;span class="p"&gt;}&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-    &lt;span class="p"&gt;};&lt;/span&gt;
+        // Run all functions that begin with "test"
+        for( prop in this ) {
+            if( typeof this[prop] === "function" ) {
+                if( prop.slice(0,4) === "test" ) {
+                    console.log( this[prop](jt) );
+                }
+            }
+        }
+    };
 
-    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt; &lt;span class="k"&gt;instanceof&lt;/span&gt; &lt;span class="nx"&gt;JTestSuite&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;JTestSuite&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    if( !(this instanceof JTestSuite) ) return new JTestSuite();
 
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="nx"&gt;init&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;init&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="nx"&gt;run&lt;/span&gt;  &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;run&lt;/span&gt;
-    &lt;span class="p"&gt;};&lt;/span&gt;
+    return {
+        init : init,
+        run  : run
+    };
 
-&lt;span class="p"&gt;};&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+};
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;In the &lt;code&gt;run&lt;/code&gt; function's loop, I first check that each property is a function before attemping to run it.  This avoids a &lt;code&gt;called_non_callable TypeError&lt;/code&gt;.  I then check that the name of the property begins with the string "test".  When dynamically calling functions, it's usually a good idea to call &lt;code&gt;obj.hasOwnProperty(propname)&lt;/code&gt; to ensure the property wasn't inherited from some unknown source (especially if the property you wanted to reference may have been &lt;code&gt;delete&lt;/code&gt;d, but a property with the same name is now surfacing from a parent object), but in this case I'd like to leave open the possibility for inherited Test Suites.&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;JTests&lt;/code&gt; object created in the &lt;code&gt;init&lt;/code&gt; function is a separate object that contains a bunch of assertions.  It looks something like this:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;JTests&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;pre&gt;&lt;code&gt;:::javascript
+var JTests = function () {
 
-    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;version&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="nx"&gt;result_callback&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    var version = 0.1,
+        result_callback,
 
-    &lt;span class="nx"&gt;init&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;callback&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="nx"&gt;result_callback&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;callback&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
+    init = function( callback ) {
+        result_callback = callback;
+    }
 
-    &lt;span class="nx"&gt;assertTrue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="nx"&gt;result_callback&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;                                                                                                                                                                         
-            &lt;span class="nx"&gt;name&lt;/span&gt;   &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;assertTrue&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-            &lt;span class="nx"&gt;args&lt;/span&gt;   &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="p"&gt;],&lt;/span&gt;
-            &lt;span class="nx"&gt;result&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;result&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="p"&gt;};&lt;/span&gt;
+    assertTrue = function( a ) {
+        var result = a === false;
+        result_callback( {                                                                                                                                                                         
+            name   : "assertTrue",
+            args   : [ a ],
+            result : result
+        } );
+    };
 
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="nx"&gt;assertTrue&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;assertTrue&lt;/span&gt;
-    &lt;span class="p"&gt;};&lt;/span&gt;
+    return {
+        assertTrue : assertTrue
+    };
 
-&lt;span class="p"&gt;};&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+};
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;...except with many more assertions. :)&lt;/p&gt;
 &lt;p&gt;Both &lt;code&gt;JTestSuite&lt;/code&gt; and &lt;code&gt;JTests&lt;/code&gt; use the &lt;a href="http://stackoverflow.com/a/5647397/215148"&gt;revealing module pattern&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;I have a lot of ideas for improvement, like &lt;a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself"&gt;DRY&lt;/a&gt;ing up the assertions, so the &lt;code&gt;{name,args,result}&lt;/code&gt; object doesn't have to be defined in each assertion.  But &lt;a href="http://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#JavaScript"&gt;many others&lt;/a&gt; have already done a great job, and I don't want to reinvent too many wheels.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;// Define a custom handler for the result&lt;/span&gt;
-&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;test_callback&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;result&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;result&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;pre&gt;&lt;code&gt;:::javascript
+// Define a custom handler for the result
+function test_callback( result ) {
+    console.log(result);
+}
 
-&lt;span class="c1"&gt;// Create a new JTestSuite object and initialize it with the callback&lt;/span&gt;
-&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;TestSuite&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;JTestSuite&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-&lt;span class="nx"&gt;TestSuite&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;init&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;test_callback&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+// Create a new JTestSuite object and initialize it with the callback
+var TestSuite = new JTestSuite();
+TestSuite.init( test_callback );
 
-&lt;span class="c1"&gt;// Create some tests&lt;/span&gt;
-&lt;span class="nx"&gt;TestSuite&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;testMath&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;assertEquals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="p"&gt;};&lt;/span&gt;
+// Create some tests
+TestSuite.testMath = function(jt) {
+    jt.assertEquals( 2 + 2, 4 );
+};
 
-&lt;span class="nx"&gt;TestSuite&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;testFalsy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="c1"&gt;// [], &amp;quot;&amp;quot;, and &amp;quot;0&amp;quot; all == false in javascript&lt;/span&gt;
-    &lt;span class="nx"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;assertFalsy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="nx"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;assertFalsy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="nx"&gt;jt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;assertFalsy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;0&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="p"&gt;};&lt;/span&gt;
+TestSuite.testFalsy = function(jt) {
+    // [], "", and "0" all == false in javascript
+    jt.assertFalsy( [] );
+    jt.assertFalsy( "" );
+    jt.assertFalsy( "0" );
+};
 
-&lt;span class="c1"&gt;// Run all the tests&lt;/span&gt;
-&lt;span class="nx"&gt;TestSuite&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;run&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+// Run all the tests
+TestSuite.run();
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The callback allows a user to determine how the results from the unit test should be processed or displayed.  Results could be printed to console.log, displayed on a page by adding them to the DOM, sent to a Web service with AJAX, or any arbitrary service with Web Sockets.&lt;/p&gt;
 &lt;p&gt;After writing this toy framework, and explaining it to a colleague, I was told that the Rails unit tester uses almost the exact same approach.  I'd wager a few bucks that JUnit uses the Reflection API's &lt;code&gt;Class.getMethods()&lt;/code&gt; to find and run all the methods added to a TestCase class.  Only a few bucks, though.&lt;/p&gt;</content><category term="javascript"></category><category term="testing"></category><category term="web"></category></entry><entry><title>ColorPal Alpha</title><link href="https://palebluepixel.org/2012/01/16/colorpal-alpha/" rel="alternate"></link><published>2012-01-16T22:15:50-05:00</published><updated>2012-01-16T22:15:50-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-01-16:/2012/01/16/colorpal-alpha/</id><summary type="html">&lt;p&gt;Introducing ColorPal, a fast color palette creation tool.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Introducing ColorPal!&lt;/p&gt;
 &lt;p&gt;&lt;img alt="ColorPal screenshot" src="https://palebluepixel.org/2012/01/16/colorpal-alpha/ss.png" /&gt;&lt;/p&gt;
@@ -1868,10 +1926,8 @@ image.  In the case of the N9, it's
 &lt;p&gt;&lt;img alt="meescan" src="https://palebluepixel.org/2012/01/08/the-n9-qr-codes-and-keepassx/meescan.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://fukuchi.org/works/qrencode/index.html.en"&gt;qrencode&lt;/a&gt; is an extremely
 easy to use encoder.  Pass it a string, it produces an image.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;qrencode &amp;quot;mypassword&amp;quot; -o mypass.png
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;pre&gt;&lt;code&gt;qrencode "mypassword" -o mypass.png
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;a href="http://keepassx.org"&gt;KeePassX&lt;/a&gt; is an excellent password manager.
 Unfortunately...&lt;/p&gt;
 &lt;p&gt;&lt;img alt="KeePassX not in N9" src="https://palebluepixel.org/2012/01/08/the-n9-qr-codes-and-keepassx/keepass_not_in_n9.png" /&gt;&lt;/p&gt;
@@ -2420,7 +2476,7 @@ $(function() {
 });
 &lt;/script&gt;
 
-&lt;h1&gt;canvas pixarray&lt;/h1&gt;
+&lt;h1 id="canvas-pixarray"&gt;canvas pixarray&lt;/h1&gt;
 &lt;p&gt;After loading an image file into a &amp;lt;canvas&amp;gt; element, you can retrieve its
 pixels with &lt;code&gt;getImageData()&lt;/code&gt;.  The problem (not really a problem, more an
 inconvenience) is that the array of pixels is one-dimensional.  &lt;code&gt;getImageData&lt;/code&gt; returns pixels in the following format:&lt;/p&gt;
@@ -2535,17 +2591,15 @@ if( cnvs.getContext) { // Check for canvas support
 &lt;canvas id="c"&gt;Sorry, in order to view this demo you need a Web browser that supports HTML5 canvas.&lt;/canvas&gt;
 
 &lt;p&gt;It's a pretty simple script, and works by declaring this function which handles onclick and ondrag events from the canvas.  cnvs is the canvas element, and c is the canvas's 2D rendering context object.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pixel = function(e) {
+&lt;pre&gt;&lt;code&gt;pixel = function(e) {
     // calculate the x and y coordinates of the cursor
     var imagesdata = c.getImageData( x, y, 1, 1 );
     var new_color = [ imagesdata.data[0],
                       imagesdata.data[1],
                       imagesdata.data[2] ];
-    color.style.background = &amp;quot;rgb(&amp;quot;+new_color+&amp;quot;)&amp;quot;;
+    color.style.background = "rgb("+new_color+")";
 }
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;That's just a summary; the function actually does a little more than that.  Take a look at the source for this page if you're interested.&lt;/p&gt;</content><category term="html5"></category><category term="canvas"></category><category term="color"></category><category term="colorpal"></category><category term="web"></category></entry><entry><title>Opcode patterns 70% finished</title><link href="https://palebluepixel.org/2011/10/13/opcode-patterns-70-finished/" rel="alternate"></link><published>2011-10-13T22:27:50-04:00</published><updated>2011-10-13T22:27:50-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-10-13:/2011/10/13/opcode-patterns-70-finished/</id><summary type="html">&lt;p&gt;genlut.py is really filling out.  It generates the LUT for all 68k opcodes (68000 only), and I'm about 70 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;genlut.py is really filling out.  It generates the LUT for all 68k opcodes (68000 only), and I'm about 70% done.  77 down, 34 to go.&lt;/p&gt;
 &lt;p&gt;The OPCODES dict defines the first two bytes of each opcode, both static bits and operands.  The operand strings act as keys into the PATTERNS struct, which contains all possible values for each operand.&lt;/p&gt;
 &lt;p&gt;The recursive function gen() is fed an opcode pattern which may contain operand strings as well as static bits.  Some operand patterns contain other operand patterns, so gen() keeps recursing until all operand patterns are gone.  Once a set of totally static bits has been created, those bits are added to INSTRUCTIONS, along with the name of the opcode.&lt;/p&gt;
@@ -2553,21 +2607,19 @@ if( cnvs.getContext) { // Check for canvas support
 &lt;p&gt;(This post was copied from my old &lt;a href="http://aejs.blogspot.com/"&gt;AEJS blog&lt;/a&gt;)&lt;/p&gt;</content><category term="aejs"></category><category term="html5"></category><category term="javascript"></category><category term="amiga"></category><category term="web"></category></entry><entry><title>LUT</title><link href="https://palebluepixel.org/2011/09/22/lut/" rel="alternate"></link><published>2011-09-22T22:27:50-04:00</published><updated>2011-09-22T22:27:50-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-09-22:/2011/09/22/lut/</id><summary type="html">&lt;p&gt;Decoding is easy. Decoding requires a lot of typing. (I am starting to believe this is true of ever aspect …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Decoding is easy. Decoding requires a lot of typing. (I am starting to believe this is true of ever aspect of interpreted emulation...)&lt;/p&gt;
 &lt;p&gt;For the AEJS decoder, I am creating a &lt;a href="http://en.wikipedia.org/wiki/Lookup_table"&gt;look-up table&lt;/a&gt; with every possible pattern for each instruction. It was my first idea, but I initially discarded it as "wasteful and inelegant". Later, I accepted it as "really fast".&lt;/p&gt;
 &lt;p&gt;I'm generating a large set of bit patterns that map to 68k opcodes, like so:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;0100101011111010 -&amp;gt; BGND
+&lt;pre&gt;&lt;code&gt;0100101011111010 -&amp;gt; BGND
 0100101011111100 -&amp;gt; ILLEGAL
 0100111001110000 -&amp;gt; RESET
 0100111001110001 -&amp;gt; NOP
 0100111001110010 -&amp;gt; STOP
 0100111001110011 -&amp;gt; RTE
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The current code can be found &lt;a href="https://github.com/mwcz/AEJS/blob/master/src/genlut.py"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Yes, it's written in Python and yes, AEJS is a JavaScript project.  There's a reason.  I see two approaches to generating the LUT (look-up table).&lt;/p&gt;
-&lt;h2&gt;Generate the LUT on launch (dynamic)&lt;/h2&gt;
+&lt;h2 id="generate-the-lut-on-launch-dynamic"&gt;Generate the LUT on launch (dynamic)&lt;/h2&gt;
 &lt;p&gt;This has the advantage of being easier to debug.  It also might be easier if I ever expand the emulator to other chips, like the &lt;a href="http://en.wikipedia.org/wiki/Motorola_68020"&gt;68020&lt;/a&gt; or &lt;a href="http://en.wikipedia.org/wiki/Motorola_68030"&gt;68030&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;It currently takes about 0.466 seconds on my machine to generate ~12,000 patterns.  That means it should take less than 2.5s to generate the full LUT.&lt;/p&gt;
-&lt;h2&gt;Generate the LUT pre-launch (static)&lt;/h2&gt;
+&lt;h2 id="generate-the-lut-pre-launch-static"&gt;Generate the LUT pre-launch (static)&lt;/h2&gt;
 &lt;p&gt;This is what I'm currently working toward.  genlut.py is currently generating about 12,000 opcode bit patterns out of a max of I'm-not-sure-yet-but-slightly-less-than-65,536.&lt;/p&gt;
 &lt;p&gt;With this method, I would run genlut.py one final time, pipe the output into a static JS file, and regex the contents into a JS array.  The LUT would never have to be generated again, and would exist happily forever-after.&lt;/p&gt;
 &lt;p&gt;Cons: relies upon the LUT being 100% correct, as any errors would be hard to debug, and would require another run of genlut.py to fix.&lt;/p&gt;

@@ -31,7 +31,6 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
     <link href="https://palebluepixel.org/theme/css/styles.min.css" rel="stylesheet">
 
-    <!-- JavaScript plugins (requires jQuery) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     <script>window.jQuery = $;</script>
 
@@ -69,7 +68,7 @@
             </h1>
         </header>
         <div class="entry-content">
-            <nav class="toc"></nav>
+
             <p>For an <a href="http://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction">HCI</a> class project in Fall 2009, I pulled together some of my previous demos to make this integrated tool.  It was just a prototype, and I haven't taken the time to get the code set up and working on this blog.  If anyone is interested, I can dig up the code and send it along.</p>
 <iframe width="100%" height="550" src="http://www.youtube.com/embed/p9QiGPUiXdc" frameborder="0" allowfullscreen></iframe>
 
@@ -120,5 +119,11 @@ window.addEventListener('resize', set_iframe_height);
 <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
-</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'touch';
+    anchors.options.placement = 'left';
+    anchors.options.class = 'heading-anchor';
+    anchors.add();
+</script></body>
 </html>

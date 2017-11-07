@@ -33,7 +33,6 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
     <link href="https://palebluepixel.org/theme/css/styles.min.css" rel="stylesheet">
 
-    <!-- JavaScript plugins (requires jQuery) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     <script>window.jQuery = $;</script>
 
@@ -71,7 +70,7 @@
             </h1>
         </header>
         <div class="entry-content">
-            <nav class="toc"></nav>
+
             <p>In the midst of this beastly summer we've just entered, nothing seems farther
 away than the lung-clenching air of winter.  When things are this hot, and
 pools and popsicles fail to cool, there's one foolproof way to get into the
@@ -86,15 +85,11 @@ terminal monitor simulator.  <abbr title="Cool-Retro-Term">CRT</abbr> boots you
 off your 2015 high-DPI display and beams you into a world of 1980s nostalgia.</p>
 <p>First <a href="https://github.com/Swordfish90/cool-retro-term#get-cool-retro-term">install cool-retro-term</a>.  Then install <a href="https://github.com/DavidGriffith/frotz">frotz</a> (the
 Z-Machine engine which runs all the old Infocom text adventures).</p>
-<div class="codehilite"><pre><span></span>sudo yum install frotz
-</pre></div>
-
-
+<pre><code>sudo yum install frotz
+</code></pre>
 <p>Locate <code>LURKING.DAT</code> in your copy of Lurking Horror, and...</p>
-<div class="codehilite"><pre><span></span>frotz LURKING.DAT
-</pre></div>
-
-
+<pre><code>frotz LURKING.DAT
+</code></pre>
 <p><img alt="The Lurking Horror running in Cool-Retro-Term" src="https://palebluepixel.org/2015/06/20/the-lurking-horror/lurking-horror-crt.jpg" /></p>
 <p>Crank up the AC, grab your clicky keyboard, make CRT fullscreen, turn off the
 lights, and bathe in the cool cathode rays.</p>
@@ -134,5 +129,11 @@ lights, and bathe in the cool cathode rays.</p>
 <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
-</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'touch';
+    anchors.options.placement = 'left';
+    anchors.options.class = 'heading-anchor';
+    anchors.add();
+</script></body>
 </html>

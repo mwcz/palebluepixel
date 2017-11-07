@@ -31,7 +31,6 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
     <link href="https://palebluepixel.org/theme/css/styles.min.css" rel="stylesheet">
 
-    <!-- JavaScript plugins (requires jQuery) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     <script>window.jQuery = $;</script>
 
@@ -69,7 +68,7 @@
             </h1>
         </header>
         <div class="entry-content">
-            <nav class="toc"></nav>
+
             <p>This is another demo from 2009-ish.  When I started experimenting with canvas, I felt uncomfortable with the 1-dimensionality of <a href="https://developer.mozilla.org/en/DOM/CanvasPixelArray">CanvasPixelArray</a>.  I wrote this script to convert it into a more logical format: X by Y by RGBA.  Let me rephrase that.  By "more logical", I mean "more logical, <em>to me</em>, <em>at the time</em>).  1D is fine, and I can't think of any use for this script.  But, nonetheless, here it is, including the original description.</p>
 <p><img style="display: none !important;" src="https://palebluepixel.org/2011/11/16/html5-canvas-3d-pixel-array/kazoo.png"></p>
 <script type="text/javascript">
@@ -168,7 +167,7 @@ $(function() {
 });
 </script>
 
-<h1>canvas pixarray</h1>
+<h1 id="canvas-pixarray">canvas pixarray</h1>
 <p>After loading an image file into a &lt;canvas&gt; element, you can retrieve its
 pixels with <code>getImageData()</code>.  The problem (not really a problem, more an
 inconvenience) is that the array of pixels is one-dimensional.  <code>getImageData</code> returns pixels in the following format:</p>
@@ -246,5 +245,11 @@ logical 3D array (X by Y by RGBA)</p>
 <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
-</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'touch';
+    anchors.options.placement = 'left';
+    anchors.options.class = 'heading-anchor';
+    anchors.add();
+</script></body>
 </html>

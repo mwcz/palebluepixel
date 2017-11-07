@@ -25,6 +25,12 @@ $(function () {
     {% import 'includes/panel.html' as project_thumbnail %}
 
     {{ project_thumbnail.write(
+        body_title   = 'Open Jam',
+        body_text    = 'An open-source themed game jam hosted by <a href="http://scripta.co">Scripta</a> &amp; <a href="https://opensource.com">opensource.com.</a>',
+        header_image = '/static/images/projects/icon_open-jam.png',
+        link_url     = 'http://openjam.io',
+        ) }}
+    {{ project_thumbnail.write(
         body_title   = 'Pity About Earth...',
         body_text    = 'Humanity, I am sick of you.  Yours truly, the Universe.  Made for Ludum Dare 38.',
         header_image = '/static/images/projects/icon_pae.jpg',

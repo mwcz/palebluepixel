@@ -31,7 +31,6 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
     <link href="https://palebluepixel.org/theme/css/styles.min.css" rel="stylesheet">
 
-    <!-- JavaScript plugins (requires jQuery) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     <script>window.jQuery = $;</script>
 
@@ -69,7 +68,7 @@
             </h1>
         </header>
         <div class="entry-content">
-            <nav class="toc"></nav>
+
             <style type="text/css">
     canvas {
         margin        : 0 auto;
@@ -143,17 +142,15 @@ if( cnvs.getContext) { // Check for canvas support
 <canvas id="c">Sorry, in order to view this demo you need a Web browser that supports HTML5 canvas.</canvas>
 
 <p>It's a pretty simple script, and works by declaring this function which handles onclick and ondrag events from the canvas.  cnvs is the canvas element, and c is the canvas's 2D rendering context object.</p>
-<div class="codehilite"><pre><span></span>pixel = function(e) {
+<pre><code>pixel = function(e) {
     // calculate the x and y coordinates of the cursor
     var imagesdata = c.getImageData( x, y, 1, 1 );
     var new_color = [ imagesdata.data[0],
                       imagesdata.data[1],
                       imagesdata.data[2] ];
-    color.style.background = &quot;rgb(&quot;+new_color+&quot;)&quot;;
+    color.style.background = "rgb("+new_color+")";
 }
-</pre></div>
-
-
+</code></pre>
 <p>That's just a summary; the function actually does a little more than that.  Take a look at the source for this page if you're interested.</p>
         </div>
 
@@ -190,5 +187,11 @@ if( cnvs.getContext) { // Check for canvas support
 <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
-</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'touch';
+    anchors.options.placement = 'left';
+    anchors.options.class = 'heading-anchor';
+    anchors.add();
+</script></body>
 </html>

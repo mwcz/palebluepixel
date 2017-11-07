@@ -33,7 +33,6 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
     <link href="https://palebluepixel.org/theme/css/styles.min.css" rel="stylesheet">
 
-    <!-- JavaScript plugins (requires jQuery) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     <script>window.jQuery = $;</script>
 
@@ -71,7 +70,7 @@
             </h1>
         </header>
         <div class="entry-content">
-            <nav class="toc"></nav>
+
             <p>I built a timelapse camera with a raspberry pi.</p>
 <p>Hardware:</p>
 <ul>
@@ -85,36 +84,30 @@ this post.</p>
 <p><img alt="Timelapse scene" src="https://palebluepixel.org/drafts/scene_morning_light.jpg" title="Timelapse scene" /></p>
 <p>I didn't secure the pi very well when I first framed the shot, and it wound up
 getting bumped several times.  Lesson learned: make sure </p>
-<h2>File naming</h2>
+<h2 id="file-naming">File naming</h2>
 <p>I used Epoch time for the filenames.</p>
-<div class="codehilite"><pre><span></span>1396020890.jpg
+<pre><code>1396020890.jpg
 1396021196.jpg
 1396021502.jpg
 1396021808.jpg
-</pre></div>
-
-
+</code></pre>
 <p>This was a spontaneous decision, chosen for convenience, but turned out to have
 some unexpected benefits.</p>
 <p>Eliminating night-time shots was </p>
 <p>Doing some modulo math on the epoch times made isolating the dark hours easy.
 Since Epoch time is measured in seconds, all we need to know is the number of
 seconds in a minute, hour, and day.</p>
-<div class="codehilite"><pre><span></span># number of seconds in a minute/hour/day
+<pre><code># number of seconds in a minute/hour/day
 minute = 60
 hour   = 3600
 day    = 86400
-</pre></div>
-
-
+</code></pre>
 <p>Now that we have those values, we can play around with <a href="https://en.wikipedia.org/wiki/Modulo_operation">modulo</a>
 <sup>%</sup> math to find some cool stuff.</p>
 <p>The first order of business is to eliminate any photos taken at nighttime,
 because they're all too dark to be useful.  Using <code>1396020890</code> as an example...</p>
-<div class="codehilite"><pre><span></span>    1396020890 % 86400 = 56090
-</pre></div>
-
-
+<pre><code>    1396020890 % 86400 = 56090
+</code></pre>
 <p><code>86400</code> is the number of seconds in a day, and what this operation does is
 essentially remove the day/month/year components.  What's left is the time
 since the stroke of midnight (still in seconds).</p>
@@ -125,15 +118,13 @@ since the stroke of midnight (still in seconds).</p>
 </figure>
 
 <p>Dividing </p>
-<div class="codehilite"><pre><span></span>time = 1396020890
+<pre><code>time = 1396020890
 seconds_after_midnight = time % day # gives us the number of seconds after midnight
 hours_after_midnight = (seconds_after_midnight) / hour # gives us the number of hours after midnight
-local_hour = hours_after_midnight - 4 # I&#39;m in EST, so -4 GMT
+local_hour = hours_after_midnight - 4 # I'm in EST, so -4 GMT
 if local_hour &lt; 7  or local_hour &gt; 20: skip
-</pre></div>
-
-
-<h2>Loops vs cron</h2>
+</code></pre>
+<h2 id="loops-vs-cron">Loops vs cron</h2>
 <p>The script contains an infinite loop with a 5m <code>sleep</code> command.  Thus the
 pictures weren't taken every 5 minutes, but rather every 5-and-some-change
 minutes.  This drift doesn't matter for intervals several minutes long, or
@@ -192,5 +183,11 @@ throwing the ending framerate off completely.</p>
 <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
-</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'touch';
+    anchors.options.placement = 'left';
+    anchors.options.class = 'heading-anchor';
+    anchors.add();
+</script></body>
 </html>

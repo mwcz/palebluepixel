@@ -33,7 +33,6 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
     <link href="https://palebluepixel.org/theme/css/styles.min.css" rel="stylesheet">
 
-    <!-- JavaScript plugins (requires jQuery) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     <script>window.jQuery = $;</script>
 
@@ -71,39 +70,33 @@
             </h1>
         </header>
         <div class="entry-content">
-            <nav class="toc"></nav>
+
             <p>Kimotion is a simple framework for creating interactive art exhibits in 2D or
 3D and supports both <a href="http://www.xbox.com/en-US/xbox-360/accessories/kinect">Kinect</a> and <a href="https://www.leapmotion.com/">Leap Motion</a> for viewer input.
 This tutorial will focus on the Leap, so to proceed with the tutorial you'll
 need to <a href="https://www.leapmotion.com/setup">set up your Leap</a>.</p>
 <p>Once the leap service is running, you can set up Kimotion!</p>
-<h2>Get the code</h2>
-<div class="codehilite"><pre><span></span>git clone git@github.com:mwcz/Kimotion.git
+<h2 id="get-the-code">Get the code</h2>
+<pre><code>git clone git@github.com:mwcz/Kimotion.git
 cd Kimotion
-</pre></div>
-
-
+</code></pre>
 <p>If you don't know how to use <code>git</code>, no problem, just download and extract the
 <a href="https://github.com/mwcz/Kimotion/archive/master.zip">Kimotion zip file</a>
 instead.</p>
-<h2>Boot it up</h2>
+<h2 id="boot-it-up">Boot it up</h2>
 <p>Start a simple web server:</p>
-<div class="codehilite"><pre><span></span>./start.sh
-</pre></div>
-
-
+<pre><code>./start.sh
+</code></pre>
 <p>Then open <a href="http://localhost:8000/#example2d">localhost:8000/#example2d</a>.</p>
 <p>Wave your hand around and you should see a trail of black-outlined squares,
 like this:</p>
 <p><img alt="example2d mod screenshot" src="https://palebluepixel.org/2016/08/28/kimotion-modding-101/example2d.jpg" /></p>
-<h2>Create your mod!</h2>
+<h2 id="create-your-mod">Create your mod!</h2>
 <p>The easiest way to start your own mod is to make a copy of the default mod.
 Come up with a name for the mod, let's say <code>mymod</code>:</p>
-<div class="codehilite"><pre><span></span>cd src
+<pre><code>cd src
 cp -r mods/example2d mods/mymod
-</pre></div>
-
-
+</code></pre>
 <p>Open <code>index.html</code>, find where it says <code>&lt;!-- Kimotion mods--&gt;</code>, and right after
 it add a script tag to include your mod.</p>
 <p><script src="mods/mymod/main.js"></script></p>
@@ -114,7 +107,7 @@ to <code>class mymod</code>.</p>
 <p>You can now open <a href="http://localhost:8080/#mymod">localhost:8080/#mymod</a> and see
 your mod in action!  It's going to look just like the example mod, but now it's
 time to make it your own.</p>
-<h2>Customize your mod</h2>
+<h2 id="customize-your-mod">Customize your mod</h2>
 <p>Open <code>mods/mymod/main.js</code> and look at the general layout.  There's a
 <code>constructor</code> function for your initial setup, and an <code>update</code> function which
 runs once per frame (at 60 frames per second, ideally).</p>
@@ -129,7 +122,7 @@ the angle of hand motion and colors the square based on that angle.</p>
 <p><img alt="rainbow squares mod screenshot" src="https://palebluepixel.org/2016/08/28/kimotion-modding-101/rainbow-squares.jpg" /></p>
 <p>Check out <a href="https://github.com/mwcz/Kimotion/blob/master/src/mods/rainbow-square/main.js">Rainbow Squares</a> if you're interesting in using an
 effect like that.</p>
-<h2>Modding resources</h2>
+<h2 id="modding-resources">Modding resources</h2>
 <p>At this point, you're an experienced Kimotion modder.  If you have an idea but
 would like some feedback before getting started, I'm eager to assist.  Here are
 a few ways to get help:</p>
@@ -174,5 +167,11 @@ a few ways to get help:</p>
 <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
-</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'touch';
+    anchors.options.placement = 'left';
+    anchors.options.class = 'heading-anchor';
+    anchors.add();
+</script></body>
 </html>

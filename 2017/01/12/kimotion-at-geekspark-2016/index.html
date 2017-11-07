@@ -33,7 +33,6 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
     <link href="https://palebluepixel.org/theme/css/styles.min.css" rel="stylesheet">
 
-    <!-- JavaScript plugins (requires jQuery) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     <script>window.jQuery = $;</script>
 
@@ -71,11 +70,11 @@
             </h1>
         </header>
         <div class="entry-content">
-            <nav class="toc"></nav>
+
             <p>Just a few short <del>days</del> months ago, <a href="http://kimotion.xyz">Kimotion</a> was on
 display at SPARKcon.  SPARKcon is a large art festival in Raleigh, and we
 occupy a small slice of it called geekSPARK.</p>
-<h2>Kimotion Levels Up</h2>
+<h2 id="kimotion-levels-up">Kimotion Levels Up</h2>
 <p>Last year's tech had a rudimentary and finicky <a href="https://vimeo.com/136950949">hand tracking</a> system.  It
 was workable, but a lot of visitors had trouble using it, especially kids.
 This year, I added Leap Motion support, which was a huge... <em>jump</em> forward for
@@ -96,7 +95,7 @@ are essentially "unzip file, run <code>start.sh</code>".  Browser support for <a
 has come a long way since last year, so I was able to remove Babel and run raw
 ES6 code in Firefox and Chrome.  Beginners are no longer put off by the complex
 build system.  Plus, not having to wait while builds run is a nice bonus.</p>
-<h2>Maniacal Labs</h2>
+<h2 id="maniacal-labs">Maniacal Labs</h2>
 <p>We shared the room with Adam and Dan from <a href="http://maniacallabs.com/">Maniacal Labs</a>, who brought
 their <a href="http://maniacallabs.com/2016/06/28/jumbo1k-32x32-led-networked-display/">awesome</a> <a href="http://maniacallabs.com/WyoManiacalDisplay/">LED</a> <a href="http://maniacallabs.com/2015/09/22/building-the-colossus-led-display/">displays</a>.  Adam even wrote a brand new
 Kimotion client to run on their biggest display, which you can see a clip of in
@@ -104,7 +103,7 @@ the video at the top of this post.</p>
 <p><img alt="Maniacal Labs @ geekSPARK 2016" src="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/maniacal.jpg" /></p>
 <p>Our two exhibits fit so well together that we're considering uniting even
 further next year.</p>
-<h2>Pictures!</h2>
+<h2 id="pictures">Pictures!</h2>
 <p><div class="gallery">
     <div class="gallery-image">
         <a class="044" href="/static/images/gallery/1200x/gallery/044/600_6240.jpg">
@@ -208,7 +207,7 @@ further next year.</p>
         });
     });
 </script></p>
-<h2>Viva la geekSPARK!</h2>
+<h2 id="viva-la-geekspark">Viva la geekSPARK!</h2>
 <p><img style="float: right" src="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/geekspark.png" alt="geekSPARK logo" /></p>
 <p>Thanks to Truett and Noel for all their organization and support.  Thanks to
 Ian for pulling me into this project two years ago and for climbing into the
@@ -252,5 +251,11 @@ weekend.</p>
 <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
-</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'touch';
+    anchors.options.placement = 'left';
+    anchors.options.class = 'heading-anchor';
+    anchors.add();
+</script></body>
 </html>

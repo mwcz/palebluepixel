@@ -33,7 +33,6 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
     <link href="https://palebluepixel.org/theme/css/styles.min.css" rel="stylesheet">
 
-    <!-- JavaScript plugins (requires jQuery) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     <script>window.jQuery = $;</script>
 
@@ -71,7 +70,7 @@
             </h1>
         </header>
         <div class="entry-content">
-            <nav class="toc"></nav>
+
             <p>A year ago, I had the joy of working on Digital Motion, an <a href="https://en.wikipedia.org/wiki/Interactive_art">interactive
 art</a> exhibit for Raleigh's annual art festival, <a href="https://en.wikipedia.org/wiki/Sparkcon">SPARKcon</a>.
 The month leading up to SPARKcon 2014 was a mad dash of perfecting the graphics
@@ -84,7 +83,7 @@ can share some of this work, so others can focus on the art...</em></p>
 involved.  Nothing cures curmudgeony coders faster than working on a project
 where mistakes often make it <em>better</em>.  With such a steep learning curve,
 though, few would get involved.  There would need to be a shared foundation.</p>
-<h3>Enter Kimotion</h3>
+<h3 id="enter-kimotion">Enter Kimotion</h3>
 <p><a href="http://kimotion.xyz">Kimotion</a> is a new framework for building interactive art
 exhibits.  It will appeal mostly to the Programmer Artist types.  Think
 "Warrior Poet", but with keyboards.</p>
@@ -115,7 +114,7 @@ exhibit.</p>
 <p><em>Over a thousand</em> people visited our exhibit last weekend.  It's hard to put
 into words how rewarding it is to see so many children and adults enjoy the sum
 of our planning, hard work, and creativity.</p>
-<h3>Gallery</h3>
+<h3 id="gallery">Gallery</h3>
 <p>Here are some photos from SPARKcon X (2015), and setup the night before.</p>
 <p><div class="gallery">
     <div class="gallery-image">
@@ -235,7 +234,7 @@ of our planning, hard work, and creativity.</p>
         });
     });
 </script></p>
-<h3>The future</h3>
+<h3 id="the-future">The future</h3>
 <p>What's next for Kimotion?  Several SPARKcon attendees had excellent ideas.
 From installing Kimotion in schools to putting a permanent installation in
 their own homes.</p>
@@ -250,7 +249,7 @@ href="https://twitter.com/mwcz">tweet</a> me.</p>
 <p>I started Kimotion with the hope that it would encourage programmers to use
 their skills to create elegance that everyone can appreciate.  If children are
 also encouraged to exercise, I won't complain!</p>
-<h3>E Pluribus Unum</h3>
+<h3 id="e-pluribus-unum">E Pluribus Unum</h3>
 <p>I can't express how grateful I am to everyone who contributed to Kimotion
 itself, created mods, and made the Digital Motion exhibit at SPARKcon a huge
 success this year.</p>
@@ -283,7 +282,7 @@ success this year.</p>
 <dd>for being the official tester</dd>
 </dl>
 
-<h3>More information</h3>
+<h3 id="more-information">More information</h3>
 <ul>
 <li><a href="http://kimotion.xyz">Kimotion main project page</a></li>
 <li><a href="https://github.com/mwcz/Kimotion">Kimotion source code</a></li>
@@ -380,5 +379,11 @@ window.addEventListener('resize', set_vimeo_iframe_height);
 <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
-</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'touch';
+    anchors.options.placement = 'left';
+    anchors.options.class = 'heading-anchor';
+    anchors.add();
+</script></body>
 </html>

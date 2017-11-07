@@ -33,7 +33,6 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
     <link href="https://palebluepixel.org/theme/css/styles.min.css" rel="stylesheet">
 
-    <!-- JavaScript plugins (requires jQuery) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     <script>window.jQuery = $;</script>
 
@@ -71,7 +70,7 @@
             </h1>
         </header>
         <div class="entry-content">
-            <nav class="toc"></nav>
+
             <p>"<em>Finally,</em>" I thought, "<em>an excuse to play with WebGL at work!</em>"</p>
 <p>This year, I had the good fortune of contributing to a keynote presentation at
 <a href="https://www.redhat.com/summit">Red Hat Summit</a>.  During the keynote, an audience of 5,000 played a
@@ -83,7 +82,7 @@ traffic flowing through our system.</p>
 <p>Being a web guy, I wanted to accomplish this on a webpage, but with such a
 large audience, the number of network requests would rocket past what could be
 efficiently rendered with HTML and CSS.</p>
-<h3>Tiny Particles of Sand</h3>
+<h3 id="tiny-particles-of-sand">Tiny Particles of Sand</h3>
 <p>While developing <a href="/projects/dimo">DiMo</a> and <a href="http://kimotion.xyz">Kimotion</a>, I became
 fond of <a href="http://threejs.org">three.js</a> particle systems for their performance and visual
 charm.</p>
@@ -107,7 +106,7 @@ a sweat.  It can even handle <em>drawing</em> millions of particles, although <e
 that many particles is often CPU-bottlenecked.  Fancy <a href="https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units">tricks</a> can beat
 that limitation, although such tricks are still tedious in WebGL.</p>
 <p>Alright, let's make some particles.</p>
-<h3>It's Pixel Time</h3>
+<h3 id="its-pixel-time">It's Pixel Time</h3>
 <p>When a network request is detected, the particle system moves a tiny dot in an
 arc to its destination.</p>
 <div class="row">
@@ -151,7 +150,7 @@ the particles to fan out near the middle.</p>
 <p>The particles that enter from the right side of the screen represent network
 traffic from the audience.  As you can see in the video below, the origin point
 of those particles moves randomly up and down to add more visual interest.</p>
-<h3>Together at Last</h3>
+<h3 id="together-at-last">Together at Last</h3>
 <p>After months of collaborating from across the world, it was wonderful to meet
 the whole team in person.  A few days later, all our hard work came together as
 well.  All the preparation paid off and the demo worked perfectly.  Here's a
@@ -164,7 +163,7 @@ shot of my particle visualization from the official recording.</p>
 <p>Watch the full keynote here:</p>
 <iframe style="display: block; margin: 0 auto;" width="100%" height="315" src="https://www.youtube.com/embed/ooA6FmTL4Dk" frameborder="0" allowfullscreen></iframe>
 
-<h3>Glow Rope</h3>
+<h3 id="glow-rope">Glow Rope</h3>
 <p>Early on, before traffic data was available, I had the particles follow the
 mouse instead.  It was pretty fun, so I spun it off into a simple demo called
 <a href="/demos/glow-rope">Glow Rope</a>.  Give it a try (mouse required)!</p>
@@ -173,7 +172,7 @@ mouse instead.  It was pretty fun, so I spun it off into a simple demo called
     <figcaption><p><a class="btn btn-default btn-lg" href="/demos/glow-rope">Play Glow Rope</a></p></figcaption>
 </figure>
 
-<h3>Leaderboard</h3>
+<h3 id="leaderboard">Leaderboard</h3>
 <p>In addition to the network traffic visualization, I helped build a leaderboard
 view to display the scores and achievements of the top 10 players in the
 audience.  <a href="https://twitter.com/andresgalante/">Andres</a> created the beautiful design and handed me a static
@@ -181,7 +180,7 @@ mockup which I converted into a dynamic template using <a href="http://ractivejs
 then created a WebSocket connection to the <em>score microservice</em> to populate the
 data.  Here's a shot of the winners from the live audience.</p>
 <p><img alt="photo of final leaderboard" src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/leaderboard-final.jpg" /></p>
-<h3>Next Year</h3>
+<h3 id="next-year">Next Year</h3>
 <p>The amount of work and preparation that goes into a presentation like this was
 eye-opening for me.  A week out and tired to the bone, I was thinking "No way
 am I doing this next year!"  But the thrill of everyone's hard work coming
@@ -223,5 +222,11 @@ next year.</p>
 <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
-</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'touch';
+    anchors.options.placement = 'left';
+    anchors.options.class = 'heading-anchor';
+    anchors.add();
+</script></body>
 </html>

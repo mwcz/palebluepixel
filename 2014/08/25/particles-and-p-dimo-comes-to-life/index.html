@@ -33,7 +33,6 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
     <link href="https://palebluepixel.org/theme/css/styles.min.css" rel="stylesheet">
 
-    <!-- JavaScript plugins (requires jQuery) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     <script>window.jQuery = $;</script>
 
@@ -71,7 +70,7 @@
             </h1>
         </header>
         <div class="entry-content">
-            <nav class="toc"></nav>
+
             <p>A player walks up Fayetteville St in Raleigh, North Carolina.
 <a href="http://www.sparkcon.com/">SPARKcon</a> has begun, and dozens of artists are strewn along the
 street, hard at work creating elaborate chalk art on the asphalt.  A light rain
@@ -115,7 +114,7 @@ three LED batons that visitors could use to control the visualizations.</p>
 exhibit used the same set of input: the coordinates of the colored batons.  My
 exhibit is a particle gravity simulation, created with WebGL (<a href="http://threejs.org/">three.js</a>,
 specifically), <a href="https://en.wikipedia.org/wiki/OpenGL_Shading_Language">GLSL</a>, and many other tools.</p>
-<h2>Event photos</h2>
+<h2 id="event-photos">Event photos</h2>
 <p>Enjoy these photos from Digital Motion at SPARKcon 2014.</p>
 <p><div class="gallery">
     <div class="gallery-image">
@@ -371,7 +370,7 @@ implementation.  <em>Update</em> it's
 <p>This (2014) was my first year as a volunteer, but it was a tremendously
 educational and <em>fun</em> experience, so I'll definitely be back next year.
 <em>Update</em> <a href="https://palebluepixel.org/2015/09/26/make-a-kimotion/">2015's exhibit info and pictures!</a>!</p>
-<h2>Thanks</h2>
+<h2 id="thanks">Thanks</h2>
 <p>I've written mostly about my own contribution to DiMo here, because that's what
 I'm most familiar with, but in reality it was only a piece of the DiMo puzzle.
 There were two other visualizations, both of which used the lighted batons as
@@ -438,5 +437,11 @@ repo.</p>
 <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
-</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'touch';
+    anchors.options.placement = 'left';
+    anchors.options.class = 'heading-anchor';
+    anchors.add();
+</script></body>
 </html>

@@ -33,7 +33,6 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
     <link href="https://palebluepixel.org/theme/css/styles.min.css" rel="stylesheet">
 
-    <!-- JavaScript plugins (requires jQuery) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     <script>window.jQuery = $;</script>
 
@@ -71,7 +70,7 @@
             </h1>
         </header>
         <div class="entry-content">
-            <nav class="toc"></nav>
+
             <p>Imagine a solitary blue dot.</p>
 <p><img alt="small dot" src="https://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/smalldot.png" /></p>
 <p>Unless you let your imagination run away with itself, this is going to be a
@@ -108,7 +107,7 @@ try out the simulation!</p>
 
 <p>A reasonably recent web browser required.  WebGL is required, which means
 Firefox 4+ or Chrome 9+.</p>
-<h2>The Premise</h2>
+<h2 id="the-premise">The Premise</h2>
 <p><strong>Players wave illuminated batons around and cool stuff happens!</strong></p>
 <p>See <a href="/2014/08/25/particles-and-p-dimo-comes-to-life/">DiMo Comes to Life</a> for a , not-at-all dramatized
 summary of DiMo.</p>
@@ -117,11 +116,11 @@ during SPARKcon each year in Raleigh, NC.  This year, I created the particle
 gravity simulation visualization for DiMo.  There was also a visualization of
 Conway's Game of Life, and an original game where players eat doritos and spray
 soda at people who eat doritos.</p>
-<h2>Particles</h2>
+<h2 id="particles">Particles</h2>
 <p>The particles' main job is to swirl around and look cool.  They are pulled
 gravitationally toward the player pieces, but the particles themselves don't
 exert gravity on each other.</p>
-<h3>Gravity</h3>
+<h3 id="gravity">Gravity</h3>
 <p>The gravity calculation was written first with inlined calculations, then with
 ThreeJS vector objects, then with <a href="http://glmatrix.net/">glmatrix</a>, and then inlined again.  The
 inlined code performance wasn't distinguishable from the glmatrix
@@ -130,15 +129,13 @@ with it for a while.</p>
 <p>ThreeJS's vector calculations, on the other hand, were awful.  Each function
 call created a new vector object.  Each acceleration calculation caused the
 creation of 12 vector objects.</p>
-<div class="codehilite"><pre><span></span> 10,000 particles    *
+<pre><code> 10,000 particles    *
     60 fps           *
     12 objects       *
      3 player pieces
 ---------------------------------
  21,600,000 new objects per second
-</pre></div>
-
-
+</code></pre>
 <p>Needless to say, the performance was <em>terrible</em>.  I then implemented the gravity
 equation using glmatrix's in-place vector operations.  glmatrix's vector
 functions insert their output into an existing vector instead of creating a new
@@ -148,7 +145,7 @@ down to zero.</p>
 <p>glmatrix served quite well for a while, but in the end I improved performance
 even more by writing an inline gravity equation by hand.  Perhaps it was just
 function call overhead that was hurting performance.</p>
-<h3>Coloring methods</h3>
+<h3 id="coloring-methods">Coloring methods</h3>
 <p>Once the gravity function was implemented, some beautification was in order.</p>
 <p>Originally, each particle was randomly assigned either red, green, or blue.</p>
 <p><img alt="early dimo image, with randomly assigned colors" src="https://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/random-colors.png" /></p>
@@ -156,7 +153,7 @@ function call overhead that was hurting performance.</p>
 <em>isn't</em> one of those rare cases where randomness is beautiful.  It occurred to
 me that seeing big swaths of color through all the particles might look
 better.</p>
-<h4>Cololololololors</h4>
+<h4 id="cololololololors">Cololololololors</h4>
 <p>But what criteria should be used to decide what color each particle should
 receive?</p>
 <p>The simplest approach would be to color the particles based on their distance
@@ -193,7 +190,7 @@ scales it down to <code>0..1</code>.</p>
 input, <span role="math">n</span>, increases.  Here's the result.</p>
 <p><img alt="image of the swaths of color" src="https://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/swath-colors.png" /></p>
 <p><em>Yes!</em>  Swaths of color, cycling through the spectrum like a rainbow.</p>
-<h4>The Grand Programmers' Utopia (GPU)</h4>
+<h4 id="the-grand-programmers-utopia-gpu">The Grand Programmers' Utopia (GPU)</h4>
 <p>After bumping up against my CPU's limits while implementing gravity, I was
 certain of one thing: I wanted to rely on the CPU as little as possible.</p>
 <p>I had a vague intuition that pixel shaders were the answer, since, hey, pixel
@@ -207,7 +204,7 @@ of this project, mostly because graphics programming is uniquely rewarding
 among all types of programming.  Often an unanticipated quirk of an equation
 (or even a typo!) will result in a very cool surprise.  In short, "just trying
 stuff" pays off <em>far</em> more than in any other branch of programming.</p>
-<h4>More than colors?</h4>
+<h4 id="more-than-colors">More than colors?</h4>
 <p>The more particles I add to the visualization, the better it looks.  1,000
 particles just look like a bunch of specks, but 100,000 particles start to look
 like clouds of swirling vapor.  Since the gravity calculations are so
@@ -226,7 +223,7 @@ out to me.  I'd love to learn from your work.</p>
 <p>In the end, I had to settle for 25,000 particles on my laptop.  For the art
 installation, we used a pretty beefy gaming rig, and I was able to bump it up
 to 50,000 (thanks Charan!).</p>
-<h3>What's next?</h3>
+<h3 id="whats-next">What's next?</h3>
 <p>Here's my wishlist for further improvements to the visualization.</p>
 <ul>
 <li>do gravity calculations on the GPU, which would enable either...<ul>
@@ -293,5 +290,11 @@ project.</p>
 <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
-</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'touch';
+    anchors.options.placement = 'left';
+    anchors.options.class = 'heading-anchor';
+    anchors.add();
+</script></body>
 </html>

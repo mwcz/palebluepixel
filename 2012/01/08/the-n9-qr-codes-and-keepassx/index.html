@@ -33,7 +33,6 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
     <link href="https://palebluepixel.org/theme/css/styles.min.css" rel="stylesheet">
 
-    <!-- JavaScript plugins (requires jQuery) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     <script>window.jQuery = $;</script>
 
@@ -71,7 +70,7 @@
             </h1>
         </header>
         <div class="entry-content">
-            <nav class="toc"></nav>
+
             <p><em>Update: I happened across a <a href="http://keepass.info/plugins.html#qrcodegen">KeePass
 plugin</a> (not the same as KeePassX)
 that displays passwords as QR codes, just like my hack below.</em></p>
@@ -88,10 +87,8 @@ image.  In the case of the N9, it's
 <p><img alt="meescan" src="https://palebluepixel.org/2012/01/08/the-n9-qr-codes-and-keepassx/meescan.png" /></p>
 <p><a href="http://fukuchi.org/works/qrencode/index.html.en">qrencode</a> is an extremely
 easy to use encoder.  Pass it a string, it produces an image.</p>
-<div class="codehilite"><pre><span></span>qrencode &quot;mypassword&quot; -o mypass.png
-</pre></div>
-
-
+<pre><code>qrencode "mypassword" -o mypass.png
+</code></pre>
 <p><a href="http://keepassx.org">KeePassX</a> is an excellent password manager.
 Unfortunately...</p>
 <p><img alt="KeePassX not in N9" src="https://palebluepixel.org/2012/01/08/the-n9-qr-codes-and-keepassx/keepass_not_in_n9.png" /></p>
@@ -154,5 +151,11 @@ plugins.  It could be handy to have clipboard managers generate QR codes too.</p
 <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
-</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'touch';
+    anchors.options.placement = 'left';
+    anchors.options.class = 'heading-anchor';
+    anchors.add();
+</script></body>
 </html>

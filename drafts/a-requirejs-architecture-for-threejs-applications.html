@@ -31,7 +31,6 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
     <link href="https://palebluepixel.org/theme/css/styles.min.css" rel="stylesheet">
 
-    <!-- JavaScript plugins (requires jQuery) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     <script>window.jQuery = $;</script>
 
@@ -69,23 +68,21 @@
             </h1>
         </header>
         <div class="entry-content">
-            <nav class="toc"></nav>
+
             <p>While working on <a href="/projects/dimo">DiMo</a>, I found myself at the <a href="http://threejs.org/examples/">ThreeJS
 examples</a> page quite often, searching for working examples.</p>
-<div class="codehilite"><pre><span></span><span class="nt">&lt;script</span> <span class="na">id=</span><span class="s">&quot;vertexShader&quot;</span> <span class="na">type=</span><span class="s">&quot;x-shader/x-vertex&quot;</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!-- dozens of lines of vertex shader (GLSL) code --&gt;</span>
-<span class="nt">&lt;/script&gt;</span>
+<pre><code>&lt;script id="vertexShader" type="x-shader/x-vertex"&gt;
+    &lt;!-- dozens of lines of vertex shader (GLSL) code --&gt;
+&lt;/script&gt;
 
-<span class="nt">&lt;script</span> <span class="na">id=</span><span class="s">&quot;fragmentShader&quot;</span> <span class="na">type=</span><span class="s">&quot;x-shader/x-fragment&quot;</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!-- dozens of lines of fragment shader (GLSL) code --&gt;</span>
-<span class="nt">&lt;/script&gt;</span>
+&lt;script id="fragmentShader" type="x-shader/x-fragment"&gt;
+    &lt;!-- dozens of lines of fragment shader (GLSL) code --&gt;
+&lt;/script&gt;
 
-<span class="nt">&lt;script&gt;</span>
-    <span class="c">&lt;!-- hundreds of lines of ThreeJS code --&gt;</span>
-<span class="nt">&lt;/script&gt;</span>
-</pre></div>
-
-
+&lt;script&gt;
+    &lt;!-- hundreds of lines of ThreeJS code --&gt;
+&lt;/script&gt;
+</code></pre>
 <p>I do believe that's the best way to distribute <em>demos</em>.  Sometimes sloppier
 something looks, the more people will hack on it, and I mean that in the
 kindest possible way.  Hackiness begets hackers.</p>
@@ -121,25 +118,23 @@ kindest possible way.  Hackiness begets hackers.</p>
 separations of concern are probably quite misguided!  However, even if
 misguided, it proved to be much easier to work with than a single monolithic
 script file.</p>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;!doctype html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-<span class="nt">&lt;head&gt;</span>
-<span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;content-type&quot;</span> <span class="na">content=</span><span class="s">&quot;text/html; charset=UTF-8&quot;</span><span class="nt">&gt;</span>
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="content-type" content="text/html; charset=UTF-8"&gt;
 
-    <span class="nt">&lt;title&gt;</span>Geekspark DiMo<span class="nt">&lt;/title&gt;</span>
+    &lt;title&gt;Geekspark DiMo&lt;/title&gt;
 
-<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;css/app.min.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span><span class="nt">&gt;</span>
+&lt;link href="css/app.min.css" rel="stylesheet" type="text/css"&gt;
 
-<span class="nt">&lt;/head&gt;</span>
-<span class="nt">&lt;body&gt;</span>
+&lt;/head&gt;
+&lt;body&gt;
 
-<span class="nt">&lt;script</span> <span class="na">data-main=</span><span class="s">&quot;js/require.config&quot;</span> <span class="na">src=</span><span class="s">&quot;lib/requirejs/require.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+&lt;script data-main="js/require.config" src="lib/requirejs/require.js"&gt;&lt;/script&gt;
 
-<span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</pre></div>
-
-
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 <script>
 $('pre code').each(add_prism_js);
 function add_prism_js(i, el) {
@@ -181,5 +176,11 @@ function add_prism_js(i, el) {
 <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
-</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'touch';
+    anchors.options.placement = 'left';
+    anchors.options.class = 'heading-anchor';
+    anchors.add();
+</script></body>
 </html>

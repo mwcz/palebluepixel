@@ -33,7 +33,6 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
     <link href="https://palebluepixel.org/theme/css/styles.min.css" rel="stylesheet">
 
-    <!-- JavaScript plugins (requires jQuery) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     <script>window.jQuery = $;</script>
 
@@ -71,7 +70,7 @@
             </h1>
         </header>
         <div class="entry-content">
-            <nav class="toc"></nav>
+
             <p>In my <a href="/2012/01/16/colorpal-alpha/">last post</a> on the subject, I introduced
 ColorPal, my HTML5 color palette generation tool.  It didn't perform well with
 certain types of images, so I fixed it. :)</p>
@@ -90,7 +89,7 @@ palette.</p>
 low-population, high-importance colors, like the one above, palettes will look
 <em>much</em> better!</p>
 <p>Technical discussion below.</p>
-<h1>Why the 'median' in median-cut?</h1>
+<h1 id="why-the-median-in-median-cut">Why the 'median' in median-cut?</h1>
 <p>Median Cut is an algorithm typically used to reduce the number of colors in an
 image.</p>
 <p><img alt="16 million colors versus 16 colors" src="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/median-cut-example.png" /></p>
@@ -134,7 +133,7 @@ high-population colors.</p>
 </div>
 
 <p>The result?  Mean Cut!  Also: awesome color palettes.</p>
-<h2>Interesting side-note on color distributions</h2>
+<h2 id="interesting-side-note-on-color-distributions">Interesting side-note on color distributions</h2>
 <p>Interestingly, photographs of nature tend to have nice, close-to-normal color
 distributions.  A "normal distribution" is a formal term for a "bell curve".</p>
 <p>Check out the red, green, and blue distributions for a photograph of a forest.</p>
@@ -145,7 +144,7 @@ distributions.  A "normal distribution" is a formal term for a "bell curve".</p>
 <p><img alt="City   red   pixel distribution" src="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/city_r.png" />
 <img alt="City   green pixel distribution" src="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/city_g.png" />
 <img alt="City   blue  pixel distribution" src="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/city_b.png" /></p>
-<h2>What's next for ColorPal?  Color spaces.</h2>
+<h2 id="whats-next-for-colorpal-color-spaces">What's next for ColorPal?  Color spaces.</h2>
 <p>Mean-cut improves ColorPal dramatically for some images, but it's still not
 perfect.  Perfection probably won't be attainable, but there are still many
 ways to improve.</p>
@@ -166,7 +165,7 @@ in 1931.</p>
 and CIELAB.  XYZ will be first to the plate, since the RGB/XYZ formulas are
 the simplest.  Let me take this opportune moment to plug
 <a href="http://www.easyrgb.com/index.php?X=MATH">EasyRGB.com</a>.</p>
-<h2>Lend a hand</h2>
+<h2 id="lend-a-hand">Lend a hand</h2>
 <p>As I've mentioned before, ColorPal is in an early stage of development.  It
 needs testing in multiple browsers, and I'm very interested in hearing people's
 feedback.  Code development help is welcomed too.</p>
@@ -209,5 +208,11 @@ feedback.  Code development help is welcomed too.</p>
 <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
-</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'touch';
+    anchors.options.placement = 'left';
+    anchors.options.class = 'heading-anchor';
+    anchors.add();
+</script></body>
 </html>
