@@ -69,6 +69,7 @@ PLUGINS = [
     'neighbors',
     'assets',
     'series',
+    'extract_toc',
     'summary',
     'gallery',
     'jinja2content',
@@ -243,3 +244,12 @@ JINJA_FILTERS = {
 #######################################################################
 
 PIWIK_ANALYTICS = False
+
+#######################################################################
+#                          MARKDOWN SETTINGS                          #
+#######################################################################
+
+MARKDOWN = {
+        'extensions': ['toc'],
+        'output_format': 'html5',
+        }
