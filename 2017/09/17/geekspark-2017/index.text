@@ -52,6 +52,15 @@ A few trusted friends were allowed to hold the light saber!
     <source src="{attach}spin-saber.webm" />
 </video>
 
+## Fire Tubes
+
+Ben Pritchett returned this year with Fire Tubes and a remixed soundtrack.  In essence, this exhibit is four [Ruben's tubes](https://www.youtube.com/watch?v=ynqzeIYA7Iw) put together to form a four-piece organ whose fiery plumes dance with the music being played.  Ben mixes music to isolate each instrument, so you can see, for example, the drum beat reflected in flame.
+
+<video style="margin: 0 auto" autoplay controls loop>
+    <source src="{attach}fire-table-anim.mp4" />
+    <source src="{attach}fire-table-anim.webm" />
+</video>
+
 ## Mushroom Hunters
 
 A fresh, fungusy addition to geekSPARK!  Geekery need not be constrained to digital hobbies.  Anna and Krystal, devoted mushroom enthusiasts, brought a huge haul of mushrooms to the event and educated visitors about mushroom eating, hunting, and biology.
