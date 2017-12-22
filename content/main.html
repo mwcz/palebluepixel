@@ -2,51 +2,35 @@
 
 {% block content %}
 
-<section class="pbp-homepage">
+{% import 'includes/card.html' as card %}
 
-    {% set sorted_tags = tags|sort_by_article_count %}
-
-    {% set latest_article = articles|first %}
-    {% set latest_project = [ 'Kimotion', '/projects/kimotion' ] %}
-
-
-    <div class="homepage-intro">
-        <p>
-            Hi!  I'm Michael, a senior software engineer at 
-            <a href="https://redhat.com">Red Hat</a>,
-            co-founder of <a href="http://scripta.co">Scripta Games</a>, creative coding enthusiast, and soon-to-be dad.
-            I also used to <a href="/static/projects/photos">take photos</a>.
-            You can find me on Twitter <a href="https://twitter.com/mwcz">@mwcz</a>.
-        </p>
-
-        <p>
-            This site has two main sections: a <a href="/projects">project list</a> and a <a href="/posts">technical blog</a>.  To get started, here are three choice projects!
-        </p>
-    </div>
-
-    <div class="pbp-project-list">
-        {% import 'includes/panel.html' as project_thumbnail %}
-
-        {{ project_thumbnail.write(
-            header_image = '/static/images/projects/icon_pae.jpg',
-            link_url     = '/projects/pity-about-earth',
-            demo_url     = 'http://pae.fun',
-            source_url   = 'https://github.com/ScriptaGames/pityaboutearth/',
-            ) }}
-        {{ project_thumbnail.write(
-            header_image = '/static/images/projects/icon_zorbio.jpg',
-            link_url     = '/projects/zorbio',
-            demo_url     = 'http://zor.bio/',
-            ) }}
-        {{ project_thumbnail.write(
-            header_image = '/static/images/projects/icon_kimotion.jpg',
-            link_url     = '/projects/kimotion',
-            demo_url     = 'http://kimotion.xyz/live/#sandstorm',
-            source_url   = 'https://github.com/mwcz/Kimotion',
-            ) }}
-
-    </div>
-
+<section class="latest-grid">
+    {# {% for article in (articles_page.object_list if articles_page else articles) %} {% endfor %} #}
+    {{ card.write(
+        title = articles[0].title,
+        href = articles[0].url,
+        id = 'a',
+    ) }}
+    {{ card.write(
+        title = articles[1].title,
+        href = articles[1].url,
+        id = 'b',
+    ) }}
+    {{ card.write(
+        title = articles[2].title,
+        href = articles[2].url,
+        id = 'c',
+    ) }}
+    {{ card.write(
+        title = articles[3].title,
+        href = articles[3].url,
+        id = 'd',
+    ) }}
+    {{ card.write(
+        title = articles[4].title,
+        href = articles[4].url,
+        id = 'e',
+    ) }}
 </section>
 
 {#
