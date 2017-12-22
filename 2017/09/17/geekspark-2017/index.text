@@ -40,6 +40,8 @@ I recommend reading the INDY's [review of Before the War][indybtw].
     <figcaption>Maniacal Labs' LED displays.  </figcaption>
 </figure>
 
+Another new creation was a 1D pong game.  This was a blast to play.  To play, you tap your button to at the exact moment the puck is passing over your paddle.  If you succeed, the puck is sent shooting to the other side, increasing in speed with every deflection.
+
 <figure>
     <img src="{attach}1dpong.jpg" alt="photo of Maniacal Labs' 1D pong game" />
     <figcaption>1D pong: play by tapping a button at just the right time to deflect the "ball".</figcaption>
@@ -51,6 +53,8 @@ A few trusted friends were allowed to hold the light saber!
     <source src="{attach}spin-saber.mp4" />
     <source src="{attach}spin-saber.webm" />
 </video>
+
+Check out [this awesome summary](http://maniacallabs.com/sparkcon-2017/) of all the gear they brought.
 
 ## Fire Tubes
 
