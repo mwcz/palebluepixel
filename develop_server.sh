@@ -69,7 +69,7 @@ function start_up(){
   mkdir -p $OUTPUTDIR
   # $PY -m pelican.server $port &
   # http-server --silent -c-1 --gzip -p 8000
-  browser-sync start --server "$OUTPUTDIR" --files "$OUTPUTDIR" --reload-debounce 200 --logLevel debug --port 8000 &
+  browser-sync start --server "$OUTPUTDIR" --files "$OUTPUTDIR" --reload-debounce 800 --logLevel debug --port 8000 --no-open &
   srv_pid=$!
   echo $srv_pid > $SRV_PID
   cd $BASEDIR
