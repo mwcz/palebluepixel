@@ -2,7 +2,8 @@ Title: geekSPARK 2017
 Date: 2017-09-17
 Tags: art, sparkcon, geekspark, dimo, kimotion
 Summary: The SPARKcon creativity festival: on the geeky side.
-Image: /2017/09/17/geekspark-2017/geekSPARK-icon.png
+Image: /2017/09/17/geekspark-2017/ml.jpg
+CardBgAlign: top
 Gallery: 048
 Mwc: 48
 
