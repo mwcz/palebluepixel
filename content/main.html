@@ -2,51 +2,55 @@
 
 {% block content %}
 
-{% import 'includes/card.html' as card %}
+{% import 'includes/glass-card.html' as card %}
 
-<section class="latest-grid">
-    {# {% for article in (articles_page.object_list if articles_page else articles) %} {% endfor %} #}
-    {{ card.write(
-        title = articles[0].title,
-        href = articles[0].url,
-        background = articles[0].image,
-        background_align = articles[0].cardbgalign,
-        id = 'a',
-    ) }}
-    {{ card.write(
-        title = articles[1].title,
-        href = articles[1].url,
-        background = articles[1].image,
-        background_align = articles[1].cardbgalign,
-        id = 'b',
-    ) }}
-    {{ card.write(
-        title = articles[2].title,
-        href = articles[2].url,
-        background = articles[2].image,
-        background_align = articles[2].cardbgalign,
-        id = 'c',
-    ) }}
-    {{ card.write(
-        title = articles[3].title,
-        href = articles[3].url,
-        background = articles[3].image,
-        background_align = articles[3].cardbgalign,
-        id = 'd',
-    ) }}
-    {{ card.write(
-        title = articles[4].title,
-        href = articles[4].url,
-        background = articles[4].image,
-        background_align = articles[4].cardbgalign,
-        id = 'e',
-    ) }}
-</section>
+<section class="homepage">
 
-{#
-<section class="pbp-homepage">
-{% include "articles.html" ignore missing with context %}
+    <p>
+        Hi!  I'm Michael Clayton, a senior software engineer at 
+        <a href="https://redhat.com">Red Hat</a>,
+        co-founder of <a href="http://scripta.co">Scripta Games</a>, creative coding enthusiast, and <del>soon-to-be</del> dad.
+        I also used to <a href="/static/projects/photos">take photos</a>.
+        You can find me on Twitter <a href="https://twitter.com/mwcz">@mwcz</a>.
+    </p>
+
+    <h2>Top posts</h2>
+
+    <div class="pinned-grid">
+        {% for article in (articles_page.object_list if articles_page else articles) %}
+            {% if article.pin %}
+                {{ card.write(
+                    title = article.title,
+                    href = article.url,
+                    background = article.image,
+                    background_align = article.cardbgalign,
+                ) }}
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <h2>Recent blog posts</h2>
+
+    <div class="latest-grid pbp-fullwidth">
+        {# {% for article in (articles_page.object_list if articles_page else articles) %} {% endfor %} #}
+        {% for article in (articles_page.object_list if articles_page else articles) %}
+            {% if loop.index <= 6 %}
+                {{ card.write(
+                    title = article.title,
+                    href = article.url,
+                    background = article.image,
+                    background_align = article.cardbgalign,
+                ) }}
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    {#
+    <section class="pbp-homepage">
+    {% include "articles.html" ignore missing with context %}
+    </section>
+    #}
+
 </section>
-#}
 
 {% endblock content %}

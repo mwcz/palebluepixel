@@ -63,13 +63,13 @@ function start_up(){
   local port=$1
   echo "Starting up Pelican and HTTP server"
   shift
-  $PELICAN --debug --autoreload -r $INPUTDIR -o $OUTPUTDIR -s $CONFFILE $PELICANOPTS &
+  $PELICAN --autoreload $INPUTDIR -o $OUTPUTDIR -s $CONFFILE $PELICANOPTS &
   pelican_pid=$!
   echo $pelican_pid > $PELICAN_PID
   mkdir -p $OUTPUTDIR
   # $PY -m pelican.server $port &
   # http-server --silent -c-1 --gzip -p 8000
-  browser-sync start --server "$OUTPUTDIR" --files "$OUTPUTDIR" --reload-debounce 800 --logLevel debug --port 8000 --no-open &
+  browser-sync start --server "$OUTPUTDIR" --files "$OUTPUTDIR" --reload-debounce 800 --port 8000 --no-open &
   srv_pid=$!
   echo $srv_pid > $SRV_PID
   cd $BASEDIR

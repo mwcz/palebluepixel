@@ -24,7 +24,6 @@ THEME_STATIC_PATHS    = ['static', 'templates']
 DISPLAY_CATEGORIES_ON_MENU = True
 
 TEMPLATE_PAGES = {
-        'pages/projects/index.html' : 'projects/index.html',
         'main.html'                 : 'index.html',
         '404.html'                  : '404.html'
         }
@@ -69,8 +68,9 @@ PLUGINS = [
     'neighbors',
     'assets',
     'series',
-    'extract_toc',
+    # 'extract_toc',
     'summary',
+    'pin_to_top',
     'gallery',
     'jinja2content',
     # 'googleplus_comments',
@@ -215,7 +215,7 @@ GITHUB_URL      = 'https://github.com/mwcz'
 DISQUS_SITENAME = False #'mwcz'
 TWITTER_COMMENTS = False # not working so great anymore
 DISCOURSE_COMMENTS = False
-GOOGLEPLUS_COMMENTS = True
+GOOGLEPLUS_COMMENTS = False
 SOCIAL          = (('GitHub',  'https://github.com/mwcz'),
                    ('Twitter', 'https://twitter.com/mwcz'),)
 
