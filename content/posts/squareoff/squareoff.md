@@ -1,8 +1,9 @@
 Title: Square Off
 Date: 2016-04-19
-Category: projects
-URL: /projects/squareoff
+Category: Projects
+URL: projects/squareoff
 Save_as: projects/squareoff/index.html
+Image: /projects/squareoff/square-off-logo.png
 Tags: programming, ludum-dare, ld35, javascript, phaser, webgl, gamedev, 2d, web, squareoff
 
 Square Off is a 1v1 airhockey-style game that [Jared][jared] and [I][mwcz]
@@ -27,6 +28,8 @@ Our mad 72-hour dash is documented in this [retrospective][retro] on the
 [Scripta blog][scripta].
 
 Oh, and if you're so inclined, [view source][source].
+
+<img hidden src="{attach}square-off-logo.png">
 
 [fb]: https://www.facebook.com/zorbio/
 [scripta]: http://scripta.co/

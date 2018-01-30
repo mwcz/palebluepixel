@@ -1,7 +1,7 @@
 Title: Pale Blue Pixel
 Date: 2014-06-29
-Category: projects
-URL: /projects/palebluepixel
+Category: Projects
+URL: projects/palebluepixel
 Save_as: projects/palebluepixel/index.html
 
 [Pale Blue Pixel][9] is this blog.  I write technical posts about web

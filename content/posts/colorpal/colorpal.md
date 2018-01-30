@@ -1,8 +1,8 @@
 Title: ColorPal
 Date: 2012-01-16
-Category: projects
+Category: Projects
 Tags: html5, javascript, color, colorpal
-URL: /projects/colorpal
+URL: projects/colorpal
 Save_as: projects/colorpal/index.html
 
 [ColorPal][4] is an HTML5 color palette generator.  Here's a gif demonstrating

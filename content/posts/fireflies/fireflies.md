@@ -1,8 +1,9 @@
 Title: Fireflies
 Date: 2017-02-06
-Category: projects
-URL: /projects/fireflies
+Category: Projects
+URL: projects/fireflies
 Save_as: projects/fireflies/index.html
+Image: /projects/fireflies/fireflies-logo.png
 Tags: programming, javascript, threejs, webgl, 3d, art, particles
 
 Fireflies is a WebGL demo in which a friendly flock of fireflies forms shapes
@@ -43,6 +44,8 @@ function set_vimeo_iframe_height() {
 document.addEventListener('DOMContentLoaded', set_vimeo_iframe_height);
 window.addEventListener('resize', set_vimeo_iframe_height);
 </script>
+
+<img hidden src="{attach}fireflies-logo.png">
 
 [demo]: /static/projects/fireflies
 [source]: https://github.com/mwcz/fireflies/

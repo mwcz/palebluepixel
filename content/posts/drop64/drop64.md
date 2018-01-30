@@ -1,7 +1,7 @@
 Title: Drop64
 Date: 2014-02-05
-Category: projects
-URL: /projects/drop64
+Category: Projects
+URL: projects/drop64
 Save_as: projects/drop64/index.html
 Tags: html5, javascript, css3, data uri, data url
 

@@ -1,7 +1,7 @@
 Title: Canvas Indexed Color
 Date: 2012-07-03
-Category: projects
-URL: /projects/canvas_indexed_color
+Category: Projects
+URL: projects/canvas_indexed_color
 Save_as: projects/canvas_indexed_color/index.html
 Tags: html5, javascript, color
 

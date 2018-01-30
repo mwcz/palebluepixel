@@ -1,7 +1,7 @@
 Title: AEJS
 Date: 2011-10-13
-Category: projects
-URL: /projects/aejs
+Category: Projects
+URL: projects/aejs
 Save_as: projects/aejs/index.html
 Tags: html5, javascript
 

@@ -1,8 +1,9 @@
 Title: Tracer
 Date: 2017-01-25
-Category: projects
-URL: /projects/tracer
+Category: Projects
+URL: projects/tracer
 Save_as: projects/tracer/index.html
+Image: /static/images/projects/tracer/head.jpg
 Tags: programming, javascript, threejs, webgl, 3d, web, scripta, games, gamedev, tracer
 
 Tracer is a 3D connect-the-dots game that [Jared][jared] and I created for

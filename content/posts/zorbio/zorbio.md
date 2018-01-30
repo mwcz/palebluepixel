@@ -1,9 +1,10 @@
 Title: Zorbio
 Date: 2016-11-03
 Pin: true
-URL: /projects/zorbio
+URL: projects/zorbio
 Save_as: projects/zorbio/index.html
-Category: projects
+Category: Projects
+Image: /static/images/projects/icon_zorbio.jpg
 Tags: programming, javascript, threejs, webgl, 3d, web, scripta, games, gamedev, zorbio
 
 Zorbio is a free multiplayer eat-em-up game that you can play in your browser!

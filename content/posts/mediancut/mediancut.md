@@ -1,7 +1,7 @@
 Title: median-cut.js
 Date: 2009-01-01
-Category: projects
-URL: /projects/mediancut
+Category: Projects
+URL: projects/mediancut
 Save_as: projects/mediancut/index.html
 Tags: html5, javascript, color
 

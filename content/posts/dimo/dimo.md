@@ -1,7 +1,7 @@
 Title: DiMo: Particles
 Date: 2014-08-25
-Category: projects
-URL: /projects/dimo
+Category: Projects
+URL: projects/dimo
 Save_as: projects/dimo/index.html
 Tags: programming, javascript, requirejs, amd, threejs, webgl, 3d, art, sparkcon, geekspark, physics
 Gallery: 033

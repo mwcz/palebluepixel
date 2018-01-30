@@ -1,7 +1,7 @@
 Title: Kimotion
 Date: 2015-09-26
-Category: projects
-URL: /projects/kimotion
+Category: Projects
+URL: projects/kimotion
 Save_as: projects/kimotion/index.html
 Tags: programming, javascript, threejs, webgl, 3d, 2d, art, sparkcon, geekspark, dimo, physics, web, kimotion
 

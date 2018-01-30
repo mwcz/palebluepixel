@@ -4,18 +4,13 @@
 
 {% import 'includes/glass-card.html' as card %}
 
+<section id="fireflies-container">
+    {# hold the space open for the canvas to occupy; prevents jank #}
+    <canvas id="fireflies-canvas" class="pbp-fullwidth"></canvas>
+</section>
+
 <section class="homepage">
 
-    <p>
-        Hi!  I'm Michael Clayton, a senior software engineer at 
-        <a href="https://redhat.com">Red Hat</a>,
-        co-founder of <a href="http://scripta.co">Scripta Games</a>, creative coding enthusiast, and <del>soon-to-be</del> dad.
-        Here you'll find games, art, tools, and demos, events I've helped organize, and blog posts about software and the web.
-    </p>
-
-    <p>
-        Let the geekery begin.
-    </p>
 
     {#
     <h2>Top posts</h2>
@@ -36,10 +31,13 @@
     <h2>Recent blog posts</h2>
     #}
 
+    <p>
+        Programming posts and projects by Michael Clayton, <a href="https://redhat.com">Red Hat</a> software engineer and <a href="http://scripta.co">Scripta Games</a> co-founder.
+    </p>
+
     <div class="latest-grid pbp-fullwidth">
-        {# {% for article in (articles_page.object_list if articles_page else articles) %} {% endfor %} #}
         {% for article in (articles_page.object_list if articles_page else articles) %}
-            {% if loop.index <= 6 %}
+            {% if loop.index <= 12 %}
                 {{ card.write(
                     title = article.title,
                     href = article.url,
@@ -50,12 +48,8 @@
         {% endfor %}
     </div>
 
-    {#
-    <section class="pbp-homepage">
-    {% include "articles.html" ignore missing with context %}
-    </section>
-    #}
-
 </section>
+
+<script src="/static/js/homepage-fireflies/js/bundle.min.js"></script>
 
 {% endblock content %}

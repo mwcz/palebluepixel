@@ -1,8 +1,8 @@
 Title: Bouncey
 Date: 2011-11-17
-URL: /projects/bouncey
+URL: projects/bouncey
 Save_as: projects/bouncey/index.html
-Category: projects
+Category: Projects
 Tags: html5, javascript
 
 Bouncey is a simple physics demo I wrote in early/mid 2011, with

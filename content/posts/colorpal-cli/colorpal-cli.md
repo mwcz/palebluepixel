@@ -1,8 +1,8 @@
 Title: ColorPal CLI
 Date: 2013-11-07
-Category: projects
+Category: Projects
 Tags: html5, javascript, color, colorpal, node, command-line
-URL: /projects/colorpal-cli
+URL: projects/colorpal-cli
 Save_as: projects/colorpal-cli/index.html
 Image: /2013/11/07/colorpal-cli/colorpal_cli_logo.png
 

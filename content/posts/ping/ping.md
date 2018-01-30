@@ -1,7 +1,7 @@
 Title: Ping
 Date: 2015-06-23
-Category: projects
-URL: /projects/ping
+Category: Projects
+URL: projects/ping
 Save_as: projects/ping/index.html
 Tags: programming, javascript, phaserjs, games, red hat, red hat summit, gamedev, ping
 
