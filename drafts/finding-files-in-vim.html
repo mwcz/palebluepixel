@@ -12,6 +12,8 @@
     <meta name="theme-color" content="#171717">
     <link rel="icon" type="image/png" href="/static/images/favicon.png">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 
         <!-- Open Graph tags -->
             <meta property="og:type" content="article"/>
@@ -42,19 +44,19 @@
 
 </head>
 <body>
-<div class="container">
+<div class="pbp-navbar-container">
     <nav class="pbp-navbar" role="navigation">
         <a href="https://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
-            PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+            PALE BLUE PIXEL
         </a>
-        <ul class="pbp-navitems">
-            <li class="pbp-navitem">
-                <a href="/projects" class="pbp-navlink">Projects</a>
-            </li>
-            <li class="pbp-navitem">
-                <a href="/posts" class="pbp-navlink">Blog</a>
-            </li>
-        </ul>
+        <div class="pbp-navitems">
+            <a class="pbp-navitem" href="/projects" title="Projects">Projects</a>
+            <a class="pbp-navitem" href="/posts" title="Blog">Blog</a>
+            <a class="pbp-navitem icon-github-alt" href="https://github.com/mwcz" title="Clone my git repos"></a>
+            <a class="pbp-navitem icon-twitter" href="https://twitter.com/mwcz" title="Eat a tweet"></a>
+        </div>
+        <!-- <a href="/projects" class="pbp-navlink">Projects</a> -->
+        <!-- <a href="/posts" class="pbp-navlink">Blog</a> -->
     </nav>
 </div>
 <!-- /.navbar -->
@@ -67,9 +69,9 @@
                 finding files in vim
             </h1>
         </header>
-        <div class="entry-content">
 
-            <p>Huge problem with this method: with my vim command autocomplete settings, vim will not cycle through matching names.  If I do :b style<Tab>, it will find the style.css for each theme, but will not cycle through them.<br />
+
+        <p>Huge problem with this method: with my vim command autocomplete settings, vim will not cycle through matching names.  If I do :b style<Tab>, it will find the style.css for each theme, but will not cycle through them.<br />
 Iirc the vim settings cause it to either print a list of all matching names when you hit tab, OR cycle through each match.  If I can configure it to print the list on the first tab, and cycle through on each subsequent tab, it might work.  Leaving this unpublished until then.</p>
 <p>Eclipse Ctrl+Shift+R
 Emacs http://www.emacswiki.org/emacs/FindFileInProject
@@ -89,7 +91,6 @@ vim
 <p><img alt="Screenshot of &quot;Many more files to edit&quot; message in vim" src="https://palebluepixel.org/drafts/more_files_to_edit.png" /></p>
 <h2 id="sources">Sources</h2>
 <p><a href="http://vimdoc.sourceforge.net/htmldoc/editing.html#:next">Documentation for the :next command</a></p>
-        </div>
 
         <!-- /.entry-content -->
 
@@ -105,14 +106,6 @@ vim
 
 
 
-    <script src="https://apis.google.com/js/plusone.js">
-    </script>
-    <div class="g-comments"
-        data-href="https://palebluepixel.org/drafts/finding-files-in-vim.html"
-        data-width="642"
-        data-first_party_property="BLOGGER"
-        data-view_type="FILTERED_POSTMOD">
-    </div>
 
 
     </article>
@@ -121,13 +114,13 @@ vim
 
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<!-- <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script> -->
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
 <script>
     anchors.options.visible = 'touch';
-    anchors.options.placement = 'left';
+    anchors.options.placement = 'right';
     anchors.options.class = 'heading-anchor';
     anchors.add();
 </script></body>

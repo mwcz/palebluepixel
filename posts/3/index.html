@@ -11,6 +11,8 @@
     <meta name="theme-color" content="#171717">
     <link rel="icon" type="image/png" href="/static/images/favicon.png">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 
         <!-- Open Graph tags -->
             <meta property="og:type" content="website"/>
@@ -41,227 +43,190 @@
 
 </head>
 <body>
-<div class="container">
+<div class="pbp-navbar-container">
     <nav class="pbp-navbar" role="navigation">
         <a href="https://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
-            PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+            PALE BLUE PIXEL
         </a>
-        <ul class="pbp-navitems">
-            <li class="pbp-navitem">
-                <a href="/projects" class="pbp-navlink">Projects</a>
-            </li>
-            <li class="pbp-navitem">
-                <a href="/posts" class="pbp-navlink">Blog</a>
-            </li>
-        </ul>
+        <div class="pbp-navitems">
+            <a class="pbp-navitem" href="/projects" title="Projects">Projects</a>
+            <a class="pbp-navitem" href="/posts" title="Blog">Blog</a>
+            <a class="pbp-navitem icon-github-alt" href="https://github.com/mwcz" title="Clone my git repos"></a>
+            <a class="pbp-navitem icon-twitter" href="https://twitter.com/mwcz" title="Eat a tweet"></a>
+        </div>
+        <!-- <a href="/projects" class="pbp-navlink">Projects</a> -->
+        <!-- <a href="/posts" class="pbp-navlink">Blog</a> -->
     </nav>
 </div>
 <!-- /.navbar -->
 <main role="main" class="container">
 
 <section>
-<div class="row">
+
+<div class="latest-grid">
 
 
-        <article class="col-xs-12">
-                <div class="pbp-post-thumbnail">
-                    <a href="https://palebluepixel.org/2012/07/03/introducing-canvas-indexed-color/">
-                        <img src="/2012/07/03/introducing-canvas-indexed-color/hahatiger.png" />
-                    </a>
-                </div>
-            <header>
-                <h2>
-                    <a href="https://palebluepixel.org/2012/07/03/introducing-canvas-indexed-color/">
-                        Introducing Canvas Indexed Color
-                    </a>
-                </h2>
-            </header>
-            <div class="meta">
-                PBP21
-                <time datetime="2012-07-03" pubdate="">2012-07-03</time>
-            </div>
-            <div class="summary">
-                <p>A basic implementation of indexed color palettes for HTML5 canvas.</p>
-            </div>
-        </article>
-        <article class="col-xs-12">
-                <div class="pbp-post-thumbnail">
-                    <a href="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/">
-                        <img src="/2012/02/10/colorpal-palettes-improved/median-mean-comparison.png" />
-                    </a>
-                </div>
-            <header>
-                <h2>
-                    <a href="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/">
-                        ColorPal palettes improved!
-                    </a>
-                </h2>
-            </header>
-            <div class="meta">
-                PBP19
-                <time datetime="2012-02-10" pubdate="">2012-02-10</time>
-            </div>
-            <div class="summary">
-                <p>In my <a href="/2012/01/16/colorpal-alpha/">last post</a> on the subject, I introduced
-ColorPal, my HTML5 color palette generation tool.  It didn't perform well …</p>
-            </div>
-        </article>
-        <article class="col-xs-12">
-            <header>
-                <h2>
-                    <a href="https://palebluepixel.org/2012/01/30/toy-javascript-unit-tester/">
-                        Toy javascript unit tester
-                    </a>
-                </h2>
-            </header>
-            <div class="meta">
-                PBP18
-                <time datetime="2012-01-30" pubdate="">2012-01-30</time>
-            </div>
-            <div class="summary">
-                <p>Last week I was sitting in a meeting, thinking about unit testing frameworks (not the subject of the meeting), and …</p>
-            </div>
-        </article>
-        <article class="col-xs-12">
-                <div class="pbp-post-thumbnail">
-                    <a href="https://palebluepixel.org/2012/01/16/colorpal-alpha/">
-                        <img src="/2012/01/16/colorpal-alpha/ss.png" />
-                    </a>
-                </div>
-            <header>
-                <h2>
-                    <a href="https://palebluepixel.org/2012/01/16/colorpal-alpha/">
-                        ColorPal Alpha
-                    </a>
-                </h2>
-            </header>
-            <div class="meta">
-                PBP15
-                <time datetime="2012-01-16" pubdate="">2012-01-16</time>
-            </div>
-            <div class="summary">
-                <p>Introducing ColorPal, a fast color palette creation tool.</p>
-            </div>
-        </article>
-        <article class="col-xs-12">
-                <div class="pbp-post-thumbnail">
-                    <a href="https://palebluepixel.org/2012/01/08/the-n9-qr-codes-and-keepassx/">
-                        <img src="/2012/01/08/the-n9-qr-codes-and-keepassx/keepass_not_in_n9.png" />
-                    </a>
-                </div>
-            <header>
-                <h2>
-                    <a href="https://palebluepixel.org/2012/01/08/the-n9-qr-codes-and-keepassx/">
-                        The N9, QR-Codes, and KeePassX
-                    </a>
-                </h2>
-            </header>
-            <div class="meta">
-                PBP11
-                <time datetime="2012-01-08" pubdate="">2012-01-08</time>
-            </div>
-            <div class="summary">
-                <p><em>Update: I happened across a <a href="http://keepass.info/plugins.html#qrcodegen">KeePass
-plugin</a> (not the same as KeePassX)
-that displays passwords as QR codes, just like …</em></p>
-            </div>
-        </article>
-        <article class="col-xs-12">
-            <header>
-                <h2>
-                    <a href="https://palebluepixel.org/2011/11/17/bouncey-returns-more-canvas-physics/">
-                        Bouncey returns - more canvas physics
-                    </a>
-                </h2>
-            </header>
-            <div class="meta">
-                PBP8
-                <time datetime="2011-11-17" pubdate="">2011-11-17</time>
-            </div>
-            <div class="summary">
-                <p>This is a slightly upgraded version of the physics demo I showed in my <a href="/2011/11/17/bouncey---canvas-physics/">last post</a>.</p>
-<p>It is still...</p>
-<p><quote>"a …</quote></p>
-            </div>
-        </article>
-        <article class="col-xs-12">
-            <header>
-                <h2>
-                    <a href="https://palebluepixel.org/2011/11/17/html5-tool-for-creating-color-palettes-from-an-image/">
-                        HTML5 tool for creating color palettes from an image
-                    </a>
-                </h2>
-            </header>
-            <div class="meta">
-                PBP9
-                <time datetime="2011-11-17" pubdate="">2011-11-17</time>
-            </div>
-            <div class="summary">
-                <p>For an <a href="http://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction">HCI</a> class project in Fall 2009, I pulled together some of my previous demos to make this integrated …</p>
-            </div>
-        </article>
-        <article class="col-xs-12">
-            <header>
-                <h2>
-                    <a href="https://palebluepixel.org/2011/11/17/bouncey-canvas-physics/">
-                        Bouncey - canvas physics
-                    </a>
-                </h2>
-            </header>
-            <div class="meta">
-                PBP7
-                <time datetime="2011-11-17" pubdate="">2011-11-17</time>
-            </div>
-            <div class="summary">
-                <p>This is Bouncey.  It's a simple physics demo I wrote in early/mid 2011, with some contributions and bugfixes from …</p>
-            </div>
-        </article>
-        <article class="col-xs-12">
-            <header>
-                <h2>
-                    <a href="https://palebluepixel.org/2011/11/17/how-not-to-use-css3/">
-                        How not to use CSS3
-                    </a>
-                </h2>
-            </header>
-            <div class="meta">
-                PBP6
-                <time datetime="2011-11-17" pubdate="">2011-11-17</time>
-            </div>
-            <div class="summary">
-                <p>How to ruin a good thing...</p>
-<p>Try refreshing.</p>
-<style type="text/css">
+        
+<section class="glass-card">
+    <div class="glass-card-ratio">
+        <a class="glass-card-link" href="/2014/02/25/introducing-drop64-ezpz-data-uri-generator/"></a>
+        <img class="glass-card-bg " src="/static/images/projects/drop64/recording.gif">
+        <div class="glass-card-border-outer"></div>
+        <div class="glass-card-border-inner"></div>
+        <h1 class="glass-card-title">
+            Introducing Drop64, ezpz data URI generator
+        </h1>
+        <!-- <div class="glass-card-cite"> -->
+        <!--     <img class="glass-card-author-img" src="https://pbs.twimg.com/profile_images/504363485363318785/it9hd5ae_400x400.jpeg"> -->
+        <!--     <p class="glass-card-author">Michael Clayton</p> -->
+        <!--     <p class="glass-card-date">Dec 14</p> -->
+        <!-- </div> -->
+    </div>
+</section>
 
-.css3_demo {
-    font-family: FreeSansBold;
-    text-align: center;
-    color: #efefef;
-    position: relative;
-    top: 0;
-    left …</style>
-            </div>
-        </article>
-        <article class="col-xs-12">
-            <header>
-                <h2>
-                    <a href="https://palebluepixel.org/2011/11/17/html5-canvas-point-operations/">
-                        HTML5 canvas point operations
-                    </a>
-                </h2>
-            </header>
-            <div class="meta">
-                PBP5
-                <time datetime="2011-11-17" pubdate="">2011-11-17</time>
-            </div>
-            <div class="summary">
-                <p>This is the last demo I made using <a href="https://github.com/mwcz/jsimage">JSImage</a>.  I created it some time around 2009-2010.  At the time, I …</p>
-            </div>
-        </article>
+
+
+        
+<section class="glass-card">
+    <div class="glass-card-ratio">
+        <a class="glass-card-link" href="/2013/12/22/super-easy-image-resizing-in-gimp/"></a>
+        <img class="glass-card-bg " src="/2013/12/22/super-easy-image-resizing-in-gimp/gimp_math.gif">
+        <div class="glass-card-border-outer"></div>
+        <div class="glass-card-border-inner"></div>
+        <h1 class="glass-card-title">
+            Super easy image resizing in GIMP
+        </h1>
+        <!-- <div class="glass-card-cite"> -->
+        <!--     <img class="glass-card-author-img" src="https://pbs.twimg.com/profile_images/504363485363318785/it9hd5ae_400x400.jpeg"> -->
+        <!--     <p class="glass-card-author">Michael Clayton</p> -->
+        <!--     <p class="glass-card-date">Dec 14</p> -->
+        <!-- </div> -->
+    </div>
+</section>
+
+
+
+        
+<section class="glass-card">
+    <div class="glass-card-ratio">
+        <a class="glass-card-link" href="/2013/11/07/colorpal-cli/"></a>
+        <img class="glass-card-bg " src="/2013/11/07/colorpal-cli/colorpal_cli_logo.png">
+        <div class="glass-card-border-outer"></div>
+        <div class="glass-card-border-inner"></div>
+        <h1 class="glass-card-title">
+            ColorPal CLI!
+        </h1>
+        <!-- <div class="glass-card-cite"> -->
+        <!--     <img class="glass-card-author-img" src="https://pbs.twimg.com/profile_images/504363485363318785/it9hd5ae_400x400.jpeg"> -->
+        <!--     <p class="glass-card-author">Michael Clayton</p> -->
+        <!--     <p class="glass-card-date">Dec 14</p> -->
+        <!-- </div> -->
+    </div>
+</section>
+
+
+
+        
+<section class="glass-card">
+    <div class="glass-card-ratio">
+        <a class="glass-card-link" href="/2012/07/30/colorpal-output-update/"></a>
+        <img class="glass-card-bg " src="/2012/07/30/colorpal-output-update/after.png">
+        <div class="glass-card-border-outer"></div>
+        <div class="glass-card-border-inner"></div>
+        <h1 class="glass-card-title">
+            ColorPal Output Update
+        </h1>
+        <!-- <div class="glass-card-cite"> -->
+        <!--     <img class="glass-card-author-img" src="https://pbs.twimg.com/profile_images/504363485363318785/it9hd5ae_400x400.jpeg"> -->
+        <!--     <p class="glass-card-author">Michael Clayton</p> -->
+        <!--     <p class="glass-card-date">Dec 14</p> -->
+        <!-- </div> -->
+    </div>
+</section>
+
+
+
+        
+<section class="glass-card">
+    <div class="glass-card-ratio">
+        <a class="glass-card-link" href="/2012/07/03/introducing-canvas-indexed-color/"></a>
+        <img class="glass-card-bg " src="/2012/07/03/introducing-canvas-indexed-color/hahatiger.png">
+        <div class="glass-card-border-outer"></div>
+        <div class="glass-card-border-inner"></div>
+        <h1 class="glass-card-title">
+            Introducing Canvas Indexed Color
+        </h1>
+        <!-- <div class="glass-card-cite"> -->
+        <!--     <img class="glass-card-author-img" src="https://pbs.twimg.com/profile_images/504363485363318785/it9hd5ae_400x400.jpeg"> -->
+        <!--     <p class="glass-card-author">Michael Clayton</p> -->
+        <!--     <p class="glass-card-date">Dec 14</p> -->
+        <!-- </div> -->
+    </div>
+</section>
+
+
+
+        
+<section class="glass-card">
+    <div class="glass-card-ratio">
+        <a class="glass-card-link" href="/2012/02/10/colorpal-palettes-improved/"></a>
+        <img class="glass-card-bg " src="/2012/02/10/colorpal-palettes-improved/median-mean-comparison.png">
+        <div class="glass-card-border-outer"></div>
+        <div class="glass-card-border-inner"></div>
+        <h1 class="glass-card-title">
+            ColorPal palettes improved!
+        </h1>
+        <!-- <div class="glass-card-cite"> -->
+        <!--     <img class="glass-card-author-img" src="https://pbs.twimg.com/profile_images/504363485363318785/it9hd5ae_400x400.jpeg"> -->
+        <!--     <p class="glass-card-author">Michael Clayton</p> -->
+        <!--     <p class="glass-card-date">Dec 14</p> -->
+        <!-- </div> -->
+    </div>
+</section>
+
+
+
+        
+<section class="glass-card">
+    <div class="glass-card-ratio">
+        <a class="glass-card-link" href="/2012/01/30/toy-javascript-unit-tester/"></a>
+        <h1 class="glass-card-title">
+            Toy javascript unit tester
+        </h1>
+        <!-- <div class="glass-card-cite"> -->
+        <!--     <img class="glass-card-author-img" src="https://pbs.twimg.com/profile_images/504363485363318785/it9hd5ae_400x400.jpeg"> -->
+        <!--     <p class="glass-card-author">Michael Clayton</p> -->
+        <!--     <p class="glass-card-date">Dec 14</p> -->
+        <!-- </div> -->
+    </div>
+</section>
+
+
+
+        
+<section class="glass-card">
+    <div class="glass-card-ratio">
+        <a class="glass-card-link" href="/2012/01/16/colorpal-alpha/"></a>
+        <img class="glass-card-bg " src="/2012/01/16/colorpal-alpha/ss.png">
+        <div class="glass-card-border-outer"></div>
+        <div class="glass-card-border-inner"></div>
+        <h1 class="glass-card-title">
+            ColorPal Alpha
+        </h1>
+        <!-- <div class="glass-card-cite"> -->
+        <!--     <img class="glass-card-author-img" src="https://pbs.twimg.com/profile_images/504363485363318785/it9hd5ae_400x400.jpeg"> -->
+        <!--     <p class="glass-card-author">Michael Clayton</p> -->
+        <!--     <p class="glass-card-date">Dec 14</p> -->
+        <!-- </div> -->
+    </div>
+</section>
+
+
+
     </div> <!-- /.row -->
 
 
-    <ul class="pagination">
+    <ol class="pagination">
             <li class="prev">
                 <a href="https://palebluepixel.org/posts/2">
                     &laquo;
@@ -287,25 +252,30 @@ that displays passwords as QR codes, just like …</em></p>
                     4
                 </a>
             </li>
+            <li class="">
+                <a href="https://palebluepixel.org/posts/5">
+                    5
+                </a>
+            </li>
             <li class="next">
                 <a href="https://palebluepixel.org/posts/4">
                     &raquo;
                 </a>
             </li>
-    </ul>
+    </ol>
 </section>
 
 </main>
 
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<!-- <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script> -->
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
 <script>
     anchors.options.visible = 'touch';
-    anchors.options.placement = 'left';
+    anchors.options.placement = 'right';
     anchors.options.class = 'heading-anchor';
     anchors.add();
 </script></body>

@@ -3,7 +3,8 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title>Pale Blue Pixel - Pale Blue Pixel</title>
+    <title>    Pale Blue Pixel - Pale Blue Pixel
+</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -11,11 +12,14 @@
     <meta name="theme-color" content="#171717">
     <link rel="icon" type="image/png" href="/static/images/favicon.png">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 
         <!-- Open Graph tags -->
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="Pale Blue Pixel"/>
-            <meta property="og:url" content="https://palebluepixel.org/projects/palebluepixel/"/>
+            <meta property="og:url" content="https://palebluepixel.org/projects/palebluepixel"/>
+            <meta property="og:description" content="Pale Blue Pixel is this blog. I write technical posts about web development, image processing, amateur graphics, and generally celebrating …"/>
 
 
     <!--[if gte IE 9]
@@ -40,29 +44,34 @@
 
 </head>
 <body>
-<div class="container">
+<div class="pbp-navbar-container">
     <nav class="pbp-navbar" role="navigation">
         <a href="https://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
-            PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+            PALE BLUE PIXEL
         </a>
-        <ul class="pbp-navitems">
-            <li class="pbp-navitem">
-                <a href="/projects" class="pbp-navlink">Projects</a>
-            </li>
-            <li class="pbp-navitem">
-                <a href="/posts" class="pbp-navlink">Blog</a>
-            </li>
-        </ul>
+        <div class="pbp-navitems">
+            <a class="pbp-navitem" href="/projects" title="Projects">Projects</a>
+            <a class="pbp-navitem" href="/posts" title="Blog">Blog</a>
+            <a class="pbp-navitem icon-github-alt" href="https://github.com/mwcz" title="Clone my git repos"></a>
+            <a class="pbp-navitem icon-twitter" href="https://twitter.com/mwcz" title="Eat a tweet"></a>
+        </div>
+        <!-- <a href="/projects" class="pbp-navlink">Projects</a> -->
+        <!-- <a href="/posts" class="pbp-navlink">Blog</a> -->
     </nav>
 </div>
 <!-- /.navbar -->
 <main role="main" class="container">
-    <article id="content" class="body">
+    <article>
+
+
         <header class="page-header">
-            <h1 class="entry-title">Pale Blue Pixel</h1>
+            <h1>
+                Pale Blue Pixel
+            </h1>
         </header>
-        <div class="entry-content">
-            <p><a href="/" title="palebluepixel.org">Pale Blue Pixel</a> is this blog.  I write technical posts about web
+
+
+        <p><a href="/" title="palebluepixel.org">Pale Blue Pixel</a> is this blog.  I write technical posts about web
 development, image processing, amateur graphics, and generally celebrating the
 art and craft of programming.  The name <em>Pale Blue Pixel</em> is a meek tribute to
 Carl Sagan's <a href="https://www.youtube.com/watch?v=nl5dlbCh8lY">Pale Blue Dot</a>.</p>
@@ -71,36 +80,40 @@ Carl Sagan's <a href="https://www.youtube.com/watch?v=nl5dlbCh8lY">Pale Blue Dot
 <ul>
 <li><strong><a href="http://python.org/" title="Python website">Python</a></strong> - a large and powerful snake</li>
 <li><strong><a href="http://blog.getpelican.com/" title="Pelican website">Pelican</a></strong> - an awkwardly-shaped sea bird</li>
-<li><strong><a href="http://getbootstrap.com/" title="Bootstrap website">Bootstrap 3</a></strong> - front-end library</li>
+<li><strong>CSS Grid</strong> - framework-free CSS thanks to grid and flexbox</li>
 <li><strong><a href="http://lesscss.org/" title="LESS css preprocessor website">LESS</a></strong> - CSS preprocessor</li>
-<li><strong><a href="http://prismjs.com/" title="Prism website">Prism</a></strong> - syntax highlighting for code examples, <a href="https://github.com/PrismJS/prism/blob/gh-pages/themes/prism-twilight.css" title="Prism twilight theme">twilight</a> theme</li>
 <li><strong><a href="http://pages.github.com/" title="GitHub pages website">GitHub pages</a></strong> - hosting</li>
 </ul>
-        </div>
+
+        <!-- /.entry-content -->
+
+        <footer class="pbp-article-footer">
+            <small>
+                This article was published on
+                <time datetime="2014-06-29" pubdate="">2014-06-29</time>
+                by <a href="https://twitter.com/mwcz" title="mwcz twitter" rel="author">mwcz</a>
+                and tagged with
+.
+            </small>
+        </footer>
+
+
+
+
+
     </article>
-
-
-    <script src="https://apis.google.com/js/plusone.js">
-    </script>
-    <div class="g-comments"
-        data-href="https://palebluepixel.org/projects/palebluepixel/"
-        data-width="642"
-        data-first_party_property="BLOGGER"
-        data-view_type="FILTERED_POSTMOD">
-    </div>
-
 
 </main>
 
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<!-- <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script> -->
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
 <script>
     anchors.options.visible = 'touch';
-    anchors.options.placement = 'left';
+    anchors.options.placement = 'right';
     anchors.options.class = 'heading-anchor';
     anchors.add();
 </script></body>

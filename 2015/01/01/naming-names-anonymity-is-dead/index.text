@@ -8,10 +8,10 @@ TwitterWidgetID: 552862576955379714
 Published: true
 
 <blockquote>
-
+    <p>
     There are only two hard problems in computer science: cache invalidation,
     naming things, and off-by-one errors.
-
+    </p>
     <footer>
         <cite>
             Phil Karlton, but I can't find a name for the original source...

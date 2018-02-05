@@ -12,6 +12,8 @@
     <meta name="theme-color" content="#171717">
     <link rel="icon" type="image/png" href="/static/images/favicon.png">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 
         <!-- Open Graph tags -->
             <meta property="og:type" content="article"/>
@@ -44,19 +46,19 @@
 
 </head>
 <body>
-<div class="container">
+<div class="pbp-navbar-container">
     <nav class="pbp-navbar" role="navigation">
         <a href="https://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
-            PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+            PALE BLUE PIXEL
         </a>
-        <ul class="pbp-navitems">
-            <li class="pbp-navitem">
-                <a href="/projects" class="pbp-navlink">Projects</a>
-            </li>
-            <li class="pbp-navitem">
-                <a href="/posts" class="pbp-navlink">Blog</a>
-            </li>
-        </ul>
+        <div class="pbp-navitems">
+            <a class="pbp-navitem" href="/projects" title="Projects">Projects</a>
+            <a class="pbp-navitem" href="/posts" title="Blog">Blog</a>
+            <a class="pbp-navitem icon-github-alt" href="https://github.com/mwcz" title="Clone my git repos"></a>
+            <a class="pbp-navitem icon-twitter" href="https://twitter.com/mwcz" title="Eat a tweet"></a>
+        </div>
+        <!-- <a href="/projects" class="pbp-navlink">Projects</a> -->
+        <!-- <a href="/posts" class="pbp-navlink">Blog</a> -->
     </nav>
 </div>
 <!-- /.navbar -->
@@ -69,9 +71,9 @@
                 Introducing Drop64, ezpz data URI generator
             </h1>
         </header>
-        <div class="entry-content">
 
-            <p>A few weeks ago, a <a href="http://www.heyokadesign.com/">coworker</a> of mine ran into some font issues.  Firefox
+
+        <p>A few weeks ago, a <a href="http://www.heyokadesign.com/">coworker</a> of mine ran into some font issues.  Firefox
 doesn't allow cross-origin requests for <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face">web fonts</a>, and he was using a tool
 called <a href="http://www.fontsquirrel.com/">Font Squirrel</a> to generate fonts, including <a href="https://developer.mozilla.org/en-US/docs/data_URIs">data URIs</a>.</p>
 <p>Embedding a data URI for a font (or image) inside a CSS file is a common
@@ -100,7 +102,6 @@ output box, created a github page for it, and registered <a href="http://drop64.
 stuff.  I only ripped out what was absolutely necessary to get the tool working
 as fast as possible.</p>
 <p><a href="http://drop64.com/">Try it out</a> or <a href="https://github.com/mwcz/Drop64">check out the code</a>.  Happy hacking.</p>
-        </div>
 
         <!-- /.entry-content -->
 
@@ -116,14 +117,6 @@ as fast as possible.</p>
 
 
 
-    <script src="https://apis.google.com/js/plusone.js">
-    </script>
-    <div class="g-comments"
-        data-href="https://palebluepixel.org/2014/02/25/introducing-drop64-ezpz-data-uri-generator/"
-        data-width="642"
-        data-first_party_property="BLOGGER"
-        data-view_type="FILTERED_POSTMOD">
-    </div>
 
 
     </article>
@@ -132,13 +125,13 @@ as fast as possible.</p>
 
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<!-- <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script> -->
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
 <script>
     anchors.options.visible = 'touch';
-    anchors.options.placement = 'left';
+    anchors.options.placement = 'right';
     anchors.options.class = 'heading-anchor';
     anchors.add();
 </script></body>

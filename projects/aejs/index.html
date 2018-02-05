@@ -3,7 +3,8 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title>AEJS - Pale Blue Pixel</title>
+    <title>    AEJS - Pale Blue Pixel
+</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -11,11 +12,14 @@
     <meta name="theme-color" content="#171717">
     <link rel="icon" type="image/png" href="/static/images/favicon.png">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 
         <!-- Open Graph tags -->
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="AEJS"/>
-            <meta property="og:url" content="https://palebluepixel.org/projects/aejs/"/>
+            <meta property="og:url" content="https://palebluepixel.org/projects/aejs"/>
+            <meta property="og:description" content="AEJS was an experimental Amiga 500 emulator written in JavaScript. The name stands for Amiga Emulator JavaScript and is pronounced …"/>
 
 
     <!--[if gte IE 9]
@@ -40,29 +44,34 @@
 
 </head>
 <body>
-<div class="container">
+<div class="pbp-navbar-container">
     <nav class="pbp-navbar" role="navigation">
         <a href="https://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
-            PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+            PALE BLUE PIXEL
         </a>
-        <ul class="pbp-navitems">
-            <li class="pbp-navitem">
-                <a href="/projects" class="pbp-navlink">Projects</a>
-            </li>
-            <li class="pbp-navitem">
-                <a href="/posts" class="pbp-navlink">Blog</a>
-            </li>
-        </ul>
+        <div class="pbp-navitems">
+            <a class="pbp-navitem" href="/projects" title="Projects">Projects</a>
+            <a class="pbp-navitem" href="/posts" title="Blog">Blog</a>
+            <a class="pbp-navitem icon-github-alt" href="https://github.com/mwcz" title="Clone my git repos"></a>
+            <a class="pbp-navitem icon-twitter" href="https://twitter.com/mwcz" title="Eat a tweet"></a>
+        </div>
+        <!-- <a href="/projects" class="pbp-navlink">Projects</a> -->
+        <!-- <a href="/posts" class="pbp-navlink">Blog</a> -->
     </nav>
 </div>
 <!-- /.navbar -->
 <main role="main" class="container">
-    <article id="content" class="body">
+    <article>
+
+
         <header class="page-header">
-            <h1 class="entry-title">AEJS</h1>
+            <h1>
+                AEJS
+            </h1>
         </header>
-        <div class="entry-content">
-            <p>AEJS was an experimental Amiga 500 emulator written in JavaScript.  The name
+
+
+        <p>AEJS was an experimental Amiga 500 emulator written in JavaScript.  The name
 stands for Amiga Emulator JavaScript and is pronounced "aegis".</p>
 <hr />
 <div class="row">
@@ -124,43 +133,36 @@ go anywhere, though, so I'm calling this one dead (<a href="https://github.com/m
 <p><em>Addendum</em>: I just learned today (2013-12-16) that Christian Stefansen ported
 PUAE (Portable Universal Amiga Emulator) to PNaCl.  This allows UAE to run
 inside any Chrome browser.  <a href="http://pnacl-amiga-emulator.appspot.com/" title="PNaCl port of PUAE">Check it out</a> or <a href="https://github.com/cstefansen/PUAE" title="PNaCl PUAE port's source code">fork it</a>.</p>
-        </div>
-            <h2>Related posts:</h2>
-            <ul>
-            <li>
-                <a href="https://palebluepixel.org/2011/10/13/opcode-patterns-70-finished/">Opcode patterns 70% finished</a>
-            </li>
-            <li>
-                <a href="https://palebluepixel.org/2011/09/22/lut/">LUT</a>
-            </li>
-            <li>
-                <a href="https://palebluepixel.org/2011/09/20/introducing-aejs/">Introducing AEJS</a>
-            </li>
-            </ul>
+
+        <!-- /.entry-content -->
+
+        <footer class="pbp-article-footer">
+            <small>
+                This article was published on
+                <time datetime="2011-10-13" pubdate="">2011-10-13</time>
+                by <a href="https://twitter.com/mwcz" title="mwcz twitter" rel="author">mwcz</a>
+                and tagged with
+                    <a href="https://palebluepixel.org/tag/html5" rel="category">html5</a> and                    <a href="https://palebluepixel.org/tag/javascript" rel="category">javascript</a>.
+            </small>
+        </footer>
+
+
+
+
+
     </article>
-
-
-    <script src="https://apis.google.com/js/plusone.js">
-    </script>
-    <div class="g-comments"
-        data-href="https://palebluepixel.org/projects/aejs/"
-        data-width="642"
-        data-first_party_property="BLOGGER"
-        data-view_type="FILTERED_POSTMOD">
-    </div>
-
 
 </main>
 
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<!-- <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script> -->
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
 <script>
     anchors.options.visible = 'touch';
-    anchors.options.placement = 'left';
+    anchors.options.placement = 'right';
     anchors.options.class = 'heading-anchor';
     anchors.add();
 </script></body>

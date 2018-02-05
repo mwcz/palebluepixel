@@ -3,7 +3,8 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title>Tracer - Pale Blue Pixel</title>
+    <title>    Tracer - Pale Blue Pixel
+</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -11,11 +12,16 @@
     <meta name="theme-color" content="#171717">
     <link rel="icon" type="image/png" href="/static/images/favicon.png">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 
         <!-- Open Graph tags -->
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="Tracer"/>
-            <meta property="og:url" content="https://palebluepixel.org/projects/tracer/"/>
+            <meta property="og:url" content="https://palebluepixel.org/projects/tracer"/>
+            <meta property="og:description" content="Tracer is a 3D connect-the-dots game that Jared and I created for Ludum Dare 37. Play now! We were very …"/>
+            <meta property="og:image"
+                  content="https://palebluepixel.org/static/images/projects/tracer/head.jpg"/>
 
 
     <!--[if gte IE 9]
@@ -40,29 +46,34 @@
 
 </head>
 <body>
-<div class="container">
+<div class="pbp-navbar-container">
     <nav class="pbp-navbar" role="navigation">
         <a href="https://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
-            PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+            PALE BLUE PIXEL
         </a>
-        <ul class="pbp-navitems">
-            <li class="pbp-navitem">
-                <a href="/projects" class="pbp-navlink">Projects</a>
-            </li>
-            <li class="pbp-navitem">
-                <a href="/posts" class="pbp-navlink">Blog</a>
-            </li>
-        </ul>
+        <div class="pbp-navitems">
+            <a class="pbp-navitem" href="/projects" title="Projects">Projects</a>
+            <a class="pbp-navitem" href="/posts" title="Blog">Blog</a>
+            <a class="pbp-navitem icon-github-alt" href="https://github.com/mwcz" title="Clone my git repos"></a>
+            <a class="pbp-navitem icon-twitter" href="https://twitter.com/mwcz" title="Eat a tweet"></a>
+        </div>
+        <!-- <a href="/projects" class="pbp-navlink">Projects</a> -->
+        <!-- <a href="/posts" class="pbp-navlink">Blog</a> -->
     </nav>
 </div>
 <!-- /.navbar -->
 <main role="main" class="container">
-    <article id="content" class="body">
+    <article>
+
+
         <header class="page-header">
-            <h1 class="entry-title">Tracer</h1>
+            <h1>
+                Tracer
+            </h1>
         </header>
-        <div class="entry-content">
-            <p>Tracer is a 3D connect-the-dots game that <a href="https://twitter.com/caramelcode/">Jared</a> and I created for
+
+
+        <p>Tracer is a 3D connect-the-dots game that <a href="https://twitter.com/caramelcode/">Jared</a> and I created for
 Ludum Dare 37.</p>
 <p class="text-center"><a class="btn btn-default btn-lg" href="http://scripta.co/tracer">Play now!</a></p>
 
@@ -72,31 +83,36 @@ category, we placed 5th out of 1,489 games.</p>
 <p><img alt="image of playing tracer" src="/static/images/projects/tracer/head.jpg" /></p>
 <p>A more detailed blog post is available at the <a href="http://scripta.co/articles/tracer-ld37/">Scripta Games blog</a>.</p>
 <p><a href="https://github.com/ScriptaGames/Tracer">View source</a></p>
-        </div>
+
+        <!-- /.entry-content -->
+
+        <footer class="pbp-article-footer">
+            <small>
+                This article was published on
+                <time datetime="2017-01-25" pubdate="">2017-01-25</time>
+                by <a href="https://twitter.com/mwcz" title="mwcz twitter" rel="author">mwcz</a>
+                and tagged with
+                    <a href="https://palebluepixel.org/tag/programming" rel="category">programming</a>,                    <a href="https://palebluepixel.org/tag/javascript" rel="category">javascript</a>,                    <a href="https://palebluepixel.org/tag/threejs" rel="category">threejs</a>,                    <a href="https://palebluepixel.org/tag/webgl" rel="category">webgl</a>,                    <a href="https://palebluepixel.org/tag/3d" rel="category">3d</a>,                    <a href="https://palebluepixel.org/tag/web" rel="category">web</a>,                    <a href="https://palebluepixel.org/tag/scripta" rel="category">scripta</a>,                    <a href="https://palebluepixel.org/tag/games" rel="category">games</a>,                    <a href="https://palebluepixel.org/tag/gamedev" rel="category">gamedev</a>, and                    <a href="https://palebluepixel.org/tag/tracer" rel="category">tracer</a>.
+            </small>
+        </footer>
+
+
+
+
+
     </article>
-
-
-    <script src="https://apis.google.com/js/plusone.js">
-    </script>
-    <div class="g-comments"
-        data-href="https://palebluepixel.org/projects/tracer/"
-        data-width="642"
-        data-first_party_property="BLOGGER"
-        data-view_type="FILTERED_POSTMOD">
-    </div>
-
 
 </main>
 
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<!-- <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script> -->
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
 <script>
     anchors.options.visible = 'touch';
-    anchors.options.placement = 'left';
+    anchors.options.placement = 'right';
     anchors.options.class = 'heading-anchor';
     anchors.add();
 </script></body>

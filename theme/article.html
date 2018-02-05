@@ -12,15 +12,14 @@
                 {{ article.title }}
             </h1>
         </header>
-        <div class="entry-content">
-            {# don't want to display the toc, only need it for heading id's
-            <nav class="toc">{{ article.toc }}</nav>
-            #}
 
-            {# add article content, but swap out the string {{ gallery }} for
-            the gallery html for this article #}
-            {{ article.content | replace( '$GALLERY', gallery.write( article ) ) }}
-        </div>
+        {# don't want to display the toc, only need it for heading id's
+        <nav class="toc">{{ article.toc }}</nav>
+        #}
+
+        {# add article content, but swap out the string {{ gallery }} for
+        the gallery html for this article #}
+        {{ article.content | replace( '$GALLERY', gallery.write( article ) ) }}
 
         <!-- /.entry-content -->
     {# prev/next links

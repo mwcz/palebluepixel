@@ -12,6 +12,8 @@
     <meta name="theme-color" content="#171717">
     <link rel="icon" type="image/png" href="/static/images/favicon.png">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 
         <!-- Open Graph tags -->
             <meta property="og:type" content="article"/>
@@ -44,19 +46,19 @@
 
 </head>
 <body>
-<div class="container">
+<div class="pbp-navbar-container">
     <nav class="pbp-navbar" role="navigation">
         <a href="https://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
-            PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+            PALE BLUE PIXEL
         </a>
-        <ul class="pbp-navitems">
-            <li class="pbp-navitem">
-                <a href="/projects" class="pbp-navlink">Projects</a>
-            </li>
-            <li class="pbp-navitem">
-                <a href="/posts" class="pbp-navlink">Blog</a>
-            </li>
-        </ul>
+        <div class="pbp-navitems">
+            <a class="pbp-navitem" href="/projects" title="Projects">Projects</a>
+            <a class="pbp-navitem" href="/posts" title="Blog">Blog</a>
+            <a class="pbp-navitem icon-github-alt" href="https://github.com/mwcz" title="Clone my git repos"></a>
+            <a class="pbp-navitem icon-twitter" href="https://twitter.com/mwcz" title="Eat a tweet"></a>
+        </div>
+        <!-- <a href="/projects" class="pbp-navlink">Projects</a> -->
+        <!-- <a href="/posts" class="pbp-navlink">Blog</a> -->
     </nav>
 </div>
 <!-- /.navbar -->
@@ -69,9 +71,9 @@
                 Visualizing Network Traffic with WebGL
             </h1>
         </header>
-        <div class="entry-content">
 
-            <p>"<em>Finally,</em>" I thought, "<em>an excuse to play with WebGL at work!</em>"</p>
+
+        <p>"<em>Finally,</em>" I thought, "<em>an excuse to play with WebGL at work!</em>"</p>
 <p>This year, I had the good fortune of contributing to a keynote presentation at
 <a href="https://www.redhat.com/summit">Red Hat Summit</a>.  During the keynote, an audience of 5,000 played a
 mobile web game created by our team.  The game was backed by several
@@ -86,14 +88,14 @@ efficiently rendered with HTML and CSS.</p>
 <p>While developing <a href="/projects/dimo">DiMo</a> and <a href="http://kimotion.xyz">Kimotion</a>, I became
 fond of <a href="http://threejs.org">three.js</a> particle systems for their performance and visual
 charm.</p>
-<div class="row">
-    <figure class="col-sm-6">
+<div class="beside">
+    <figure>
         <a href="/projects/dimo">
             <img src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/swath-colors.jpg" alt="DiMo picture" />
         </a>
         <figcaption>Particle gravity simulation in <a href="/projects/dimo">DiMo: Particles</a> (50,000 particles)</figcaption>
     </figure>
-    <figure class="col-sm-6">
+    <figure>
         <a href="/projects/kimotion">
             <img src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/kimotion-pic.jpg" alt="Kimotion picture" />
         </a>
@@ -109,15 +111,15 @@ that limitation, although such tricks are still tedious in WebGL.</p>
 <h3 id="its-pixel-time">It's Pixel Time</h3>
 <p>When a network request is detected, the particle system moves a tiny dot in an
 arc to its destination.</p>
-<div class="row">
-    <figure class="col-sm-6">
+<div class="beside">
+    <figure>
         <video style="margin: 0 auto" poster="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/traffic-viz-basic-thumb.jpg" autoplay controls loop>
             <source src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/traffic-viz-basic.mp4" />
             <source src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/traffic-viz-basic.webm" />
         </video>
         <figcaption>Particles arc from purple to blue</figcaption>
     </figure>
-    <figure class="col-sm-6">
+    <figure>
         <video style="margin: 0 auto" poster="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/traffic-viz-bluegreen-thumb.jpg" autoplay controls loop>
             <source src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/traffic-viz-bluegreen.mp4" />
             <source src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/traffic-viz-bluegreen.webm" />
@@ -128,12 +130,12 @@ arc to its destination.</p>
 
 <p>The arcs are defined by sine waves.  Here are the particle arcs as they appear
 on-screen, and another shot with sine wave guides showing.</p>
-<div class="row">
-    <figure class="col-sm-6">
+<div class="beside">
+    <figure>
         <img src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/pipeline-nosines.jpg" alt="pipeline with particles arcing" />
         <figcaption>Particle arcs</figcaption>
     </figure>
-    <figure class="col-sm-6">
+    <figure>
         <img src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/pipeline-sines.jpg" alt="pipeline with sine wave guides for the particle arcs" />
         <figcaption>Sine wave guides</figcaption>
     </figure>
@@ -155,13 +157,17 @@ of those particles moves randomly up and down to add more visual interest.</p>
 the whole team in person.  A few days later, all our hard work came together as
 well.  All the preparation paid off and the demo worked perfectly.  Here's a
 shot of my particle visualization from the official recording.</p>
-<video style="margin: 0 auto" poster="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/traffic-thumb.jpg" autoplay controls loop>
-    <source src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/traffic.webm" />
-    <source src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/traffic.mp4" />
-</video>
+<figure>
+    <video style="margin: 0 auto" poster="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/traffic-thumb.jpg" autoplay controls loop>
+        <source src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/traffic.webm" />
+        <source src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/traffic.mp4" />
+    </video>
+</figure>
 
 <p>Watch the full keynote here:</p>
+<figure>
 <iframe style="display: block; margin: 0 auto;" width="100%" height="315" src="https://www.youtube.com/embed/ooA6FmTL4Dk" frameborder="0" allowfullscreen></iframe>
+</figure>
 
 <h3 id="glow-rope">Glow Rope</h3>
 <p>Early on, before traffic data was available, I had the particles follow the
@@ -187,7 +193,6 @@ am I doing this next year!"  But the thrill of everyone's hard work coming
 together drove away the exhaustion.  I can't wait to see what we can cook up
 next year.</p>
 <p><img style="display: none !important;" src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/post-thumbnail.jpg"></p>
-        </div>
 
         <!-- /.entry-content -->
 
@@ -203,14 +208,6 @@ next year.</p>
 
 
 
-    <script src="https://apis.google.com/js/plusone.js">
-    </script>
-    <div class="g-comments"
-        data-href="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/"
-        data-width="642"
-        data-first_party_property="BLOGGER"
-        data-view_type="FILTERED_POSTMOD">
-    </div>
 
 
     </article>
@@ -219,13 +216,13 @@ next year.</p>
 
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<!-- <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script> -->
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
 <script>
     anchors.options.visible = 'touch';
-    anchors.options.placement = 'left';
+    anchors.options.placement = 'right';
     anchors.options.class = 'heading-anchor';
     anchors.add();
 </script></body>

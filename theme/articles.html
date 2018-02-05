@@ -1,36 +1,17 @@
-<div class="row">
+{% import 'includes/glass-card.html' as card %}
+
+<div class="latest-grid">
 
 {% block pre_articles %}{% endblock pre_articles %}
 
 {% if articles %}
     {% for article in (articles_page.object_list if articles_page else articles) %}
-        <article class="col-xs-12">
-            {% if article.image %}
-                <div class="pbp-post-thumbnail">
-                    <a href="{{ SITEURL }}/{{ article.url }}">
-                        <img src="{{ article.image }}" />
-                    </a>
-                </div>
-            {% endif %}
-            <header>
-                <h2>
-                    <a href="{{ SITEURL }}/{{ article.url }}">
-                        {{ article.title }}
-                    </a>
-                </h2>
-            </header>
-            <div class="meta">
-                PBP{{ article.mwc }}
-                <time datetime="{{ article.locale_date }}" pubdate="">{{ article.locale_date }}</time>
-            </div>
-            {% if article.summary %}
-            <div class="summary">
-                {{ article.summary }}
-                {# Uncomment if you want to show comment counts #}
-                {#{% include 'includes/comment_count.html' %}#}
-            </div>
-            {% endif %}
-        </article>
+        {{ card.write(
+            title = article.title,
+            href = article.url,
+            background = article.image,
+            background_align = article.cardbgalign,
+        ) }}
     {% endfor %}
     </div> <!-- /.row -->
 {% endif %}
@@ -38,7 +19,7 @@
 {% block post_articles %}{% endblock post_articles %}
 
 {% if articles_page and articles_paginator.num_pages > 1 %}
-    <ul class="pagination">
+    <ol class="pagination">
         {% if articles_page.has_previous() %}
             {% set num = articles_page.previous_page_number() %}
             <li class="prev">
@@ -65,5 +46,5 @@
         {% else %}
             <li class="next disabled"><a href="#">&raquo;</a></li>
         {% endif %}
-    </ul>
+    </ol>
 {% endif %}

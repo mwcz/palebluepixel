@@ -3,7 +3,8 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title>Kimotion - Pale Blue Pixel</title>
+    <title>    Kimotion - Pale Blue Pixel
+</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -11,11 +12,14 @@
     <meta name="theme-color" content="#171717">
     <link rel="icon" type="image/png" href="/static/images/favicon.png">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 
         <!-- Open Graph tags -->
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="Kimotion"/>
-            <meta property="og:url" content="https://palebluepixel.org/projects/kimotion/"/>
+            <meta property="og:url" content="https://palebluepixel.org/projects/kimotion"/>
+            <meta property="og:description" content="Kimotion is a framework for building reactive art displays. Creating an interactive art exhibit with Kimotion is easy. Draw your …"/>
 
 
     <!--[if gte IE 9]
@@ -40,29 +44,34 @@
 
 </head>
 <body>
-<div class="container">
+<div class="pbp-navbar-container">
     <nav class="pbp-navbar" role="navigation">
         <a href="https://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
-            PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+            PALE BLUE PIXEL
         </a>
-        <ul class="pbp-navitems">
-            <li class="pbp-navitem">
-                <a href="/projects" class="pbp-navlink">Projects</a>
-            </li>
-            <li class="pbp-navitem">
-                <a href="/posts" class="pbp-navlink">Blog</a>
-            </li>
-        </ul>
+        <div class="pbp-navitems">
+            <a class="pbp-navitem" href="/projects" title="Projects">Projects</a>
+            <a class="pbp-navitem" href="/posts" title="Blog">Blog</a>
+            <a class="pbp-navitem icon-github-alt" href="https://github.com/mwcz" title="Clone my git repos"></a>
+            <a class="pbp-navitem icon-twitter" href="https://twitter.com/mwcz" title="Eat a tweet"></a>
+        </div>
+        <!-- <a href="/projects" class="pbp-navlink">Projects</a> -->
+        <!-- <a href="/posts" class="pbp-navlink">Blog</a> -->
     </nav>
 </div>
 <!-- /.navbar -->
 <main role="main" class="container">
-    <article id="content" class="body">
+    <article>
+
+
         <header class="page-header">
-            <h1 class="entry-title">Kimotion</h1>
+            <h1>
+                Kimotion
+            </h1>
         </header>
-        <div class="entry-content">
-            <p><img class="col-md-7" src="/static/images/gallery/900x/gallery/039/600_5782.JPG" alt="kids playing with kimotion" style="padding-left: 0; padding-right: 30px" /></p>
+
+
+        <p><img class="col-md-7" src="/static/images/gallery/900x/gallery/039/600_5782.JPG" alt="kids playing with kimotion" style="padding-left: 0; padding-right: 30px" /></p>
 <p>Kimotion is a framework for building reactive art displays.</p>
 <p>Creating an interactive art exhibit with Kimotion is easy.  Draw your ideas in
 either <a href="http://p5js.org">2D</a> or <a href="http://threejs.org">3D</a>.  Kimotion will provide information about
@@ -73,27 +82,31 @@ action...</p>
 
 <h2 id="video-clips">Video clips</h2>
 <p>These images, when played in rapid succession, create the illusion of motion!</p>
-<iframe id="vimeo-player" src="https://player.vimeo.com/video/136951447" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-<div class="vimeo-thumbnail"> <img src="http://kimotion.xyz/images/video_thumbnails/9.jpg" data-vid-src="https://player.vimeo.com/video/136951447" /> </div>
-
-<div class="vimeo-thumbnail"> <img src="http://kimotion.xyz/images/video_thumbnails/11.jpg" data-vid-src="https://player.vimeo.com/video/137905577" /> </div>
-
-<div class="vimeo-thumbnail"> <img src="http://kimotion.xyz/images/video_thumbnails/3.jpg" data-vid-src="https://player.vimeo.com/video/126292045" /> </div>
-
-<div class="vimeo-thumbnail"> <img src="http://kimotion.xyz/images/video_thumbnails/10.jpg" data-vid-src="https://player.vimeo.com/video/137762679" /> </div>
-
-<div class="vimeo-thumbnail"> <img src="http://kimotion.xyz/images/video_thumbnails/6.jpg" data-vid-src="https://player.vimeo.com/video/136126008" /> </div>
-
-<div class="vimeo-thumbnail"> <img src="http://kimotion.xyz/images/video_thumbnails/5.jpg" data-vid-src="https://player.vimeo.com/video/133870922" /> </div>
+<figure>
+    <iframe id="vimeo-player" src="https://player.vimeo.com/video/136951447" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <div class="vimeo-thumbnails">
+    <div class="vimeo-thumbnail"> <img src="http://kimotion.xyz/images/video_thumbnails/9.jpg" data-vid-src="https://player.vimeo.com/video/136951447" /> </div>
+    <div class="vimeo-thumbnail"> <img src="http://kimotion.xyz/images/video_thumbnails/11.jpg" data-vid-src="https://player.vimeo.com/video/137905577" /> </div>
+    <div class="vimeo-thumbnail"> <img src="http://kimotion.xyz/images/video_thumbnails/3.jpg" data-vid-src="https://player.vimeo.com/video/126292045" /> </div>
+    <div class="vimeo-thumbnail"> <img src="http://kimotion.xyz/images/video_thumbnails/10.jpg" data-vid-src="https://player.vimeo.com/video/137762679" /> </div>
+    <div class="vimeo-thumbnail"> <img src="http://kimotion.xyz/images/video_thumbnails/6.jpg" data-vid-src="https://player.vimeo.com/video/136126008" /> </div>
+    <div class="vimeo-thumbnail"> <img src="http://kimotion.xyz/images/video_thumbnails/5.jpg" data-vid-src="https://player.vimeo.com/video/133870922" /> </div>
+    </div>
+</figure>
 
 <style type="text/css">
+.vimeo-thumbnails {
+    display: grid;
+    grid-gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
 .vimeo-thumbnail {
     cursor   : pointer;
     position : relative;
     z-index  : 9;
     display  : inline-block;
-    width    : 32.2%;
 }
 
 .vimeo-thumbnail::before {
@@ -145,49 +158,36 @@ window.addEventListener('resize', set_vimeo_iframe_height);
 
 <p><a href="https://github.com/mwcz/Kimotion">View source</a>, if you like code.  Also check out <a href="/projects/dimo">DiMo: Particles</a>,
 the predecessor to Kimotion.</p>
-        </div>
-            <h2>Related posts:</h2>
-            <ul>
-            <li>
-                <a href="https://palebluepixel.org/2017/09/17/geekspark-2017/">geekSPARK 2017</a>
-            </li>
-            <li>
-                <a href="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/">Kimotion at geekSPARK 2016</a>
-            </li>
-            <li>
-                <a href="https://palebluepixel.org/2016/08/28/kimotion-modding-101/">Kimotion Modding 101</a>
-            </li>
-            <li>
-                <a href="https://palebluepixel.org/2015/09/26/make-a-kimotion/">Make a Kimotion!</a>
-            </li>
-            <li>
-                <a href="https://palebluepixel.org/2014/08/25/particles-and-p-dimo-comes-to-life/">Particles and π - DiMo Comes to Life</a>
-            </li>
-            </ul>
+
+        <!-- /.entry-content -->
+
+        <footer class="pbp-article-footer">
+            <small>
+                This article was published on
+                <time datetime="2015-09-26" pubdate="">2015-09-26</time>
+                by <a href="https://twitter.com/mwcz" title="mwcz twitter" rel="author">mwcz</a>
+                and tagged with
+                    <a href="https://palebluepixel.org/tag/programming" rel="category">programming</a>,                    <a href="https://palebluepixel.org/tag/javascript" rel="category">javascript</a>,                    <a href="https://palebluepixel.org/tag/threejs" rel="category">threejs</a>,                    <a href="https://palebluepixel.org/tag/webgl" rel="category">webgl</a>,                    <a href="https://palebluepixel.org/tag/3d" rel="category">3d</a>,                    <a href="https://palebluepixel.org/tag/2d" rel="category">2d</a>,                    <a href="https://palebluepixel.org/tag/art" rel="category">art</a>,                    <a href="https://palebluepixel.org/tag/sparkcon" rel="category">sparkcon</a>,                    <a href="https://palebluepixel.org/tag/geekspark" rel="category">geekspark</a>,                    <a href="https://palebluepixel.org/tag/dimo" rel="category">dimo</a>,                    <a href="https://palebluepixel.org/tag/physics" rel="category">physics</a>,                    <a href="https://palebluepixel.org/tag/web" rel="category">web</a>, and                    <a href="https://palebluepixel.org/tag/kimotion" rel="category">kimotion</a>.
+            </small>
+        </footer>
+
+
+
+
+
     </article>
-
-
-    <script src="https://apis.google.com/js/plusone.js">
-    </script>
-    <div class="g-comments"
-        data-href="https://palebluepixel.org/projects/kimotion/"
-        data-width="642"
-        data-first_party_property="BLOGGER"
-        data-view_type="FILTERED_POSTMOD">
-    </div>
-
 
 </main>
 
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<!-- <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script> -->
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
 <script>
     anchors.options.visible = 'touch';
-    anchors.options.placement = 'left';
+    anchors.options.placement = 'right';
     anchors.options.class = 'heading-anchor';
     anchors.add();
 </script></body>

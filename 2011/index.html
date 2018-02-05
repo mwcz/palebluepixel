@@ -11,6 +11,8 @@
     <meta name="theme-color" content="#171717">
     <link rel="icon" type="image/png" href="/static/images/favicon.png">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 
         <!-- Open Graph tags -->
             <meta property="og:type" content="website"/>
@@ -41,19 +43,19 @@
 
 </head>
 <body>
-<div class="container">
+<div class="pbp-navbar-container">
     <nav class="pbp-navbar" role="navigation">
         <a href="https://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
-            PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+            PALE BLUE PIXEL
         </a>
-        <ul class="pbp-navitems">
-            <li class="pbp-navitem">
-                <a href="/projects" class="pbp-navlink">Projects</a>
-            </li>
-            <li class="pbp-navitem">
-                <a href="/posts" class="pbp-navlink">Blog</a>
-            </li>
-        </ul>
+        <div class="pbp-navitems">
+            <a class="pbp-navitem" href="/projects" title="Projects">Projects</a>
+            <a class="pbp-navitem" href="/posts" title="Blog">Blog</a>
+            <a class="pbp-navitem icon-github-alt" href="https://github.com/mwcz" title="Clone my git repos"></a>
+            <a class="pbp-navitem icon-twitter" href="https://twitter.com/mwcz" title="Eat a tweet"></a>
+        </div>
+        <!-- <a href="/projects" class="pbp-navlink">Projects</a> -->
+        <!-- <a href="/posts" class="pbp-navlink">Blog</a> -->
     </nav>
 </div>
 <!-- /.navbar -->
@@ -71,6 +73,8 @@
     <dd><a href="https://palebluepixel.org/2011/11/17/how-not-to-use-css3/">How not to use CSS3</a></dd>
     <dt>2011-11-17</dt>
     <dd><a href="https://palebluepixel.org/2011/11/17/html5-canvas-point-operations/">HTML5 canvas point operations</a></dd>
+    <dt>2011-11-17</dt>
+    <dd><a href="https://palebluepixel.org/projects/bouncey">Bouncey</a></dd>
     <dt>2011-11-16</dt>
     <dd><a href="https://palebluepixel.org/2011/11/16/html5-canvas-area-selection-averaging/">HTML5 canvas area selection averaging</a></dd>
     <dt>2011-11-16</dt>
@@ -81,6 +85,8 @@
     <dd><a href="https://palebluepixel.org/2011/11/16/html5-canvas-eyedropper/">HTML5 Canvas eyedropper</a></dd>
     <dt>2011-10-13</dt>
     <dd><a href="https://palebluepixel.org/2011/10/13/opcode-patterns-70-finished/">Opcode patterns 70% finished</a></dd>
+    <dt>2011-10-13</dt>
+    <dd><a href="https://palebluepixel.org/projects/aejs">AEJS</a></dd>
     <dt>2011-09-22</dt>
     <dd><a href="https://palebluepixel.org/2011/09/22/lut/">LUT</a></dd>
     <dt>2011-09-20</dt>
@@ -90,13 +96,13 @@
 
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<!-- <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script> -->
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
 <script>
     anchors.options.visible = 'touch';
-    anchors.options.placement = 'left';
+    anchors.options.placement = 'right';
     anchors.options.class = 'heading-anchor';
     anchors.add();
 </script></body>

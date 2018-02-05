@@ -12,6 +12,8 @@
     <meta name="theme-color" content="#171717">
     <link rel="icon" type="image/png" href="/static/images/favicon.png">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 
         <!-- Open Graph tags -->
             <meta property="og:type" content="article"/>
@@ -44,19 +46,19 @@
 
 </head>
 <body>
-<div class="container">
+<div class="pbp-navbar-container">
     <nav class="pbp-navbar" role="navigation">
         <a href="https://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
-            PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+            PALE BLUE PIXEL
         </a>
-        <ul class="pbp-navitems">
-            <li class="pbp-navitem">
-                <a href="/projects" class="pbp-navlink">Projects</a>
-            </li>
-            <li class="pbp-navitem">
-                <a href="/posts" class="pbp-navlink">Blog</a>
-            </li>
-        </ul>
+        <div class="pbp-navitems">
+            <a class="pbp-navitem" href="/projects" title="Projects">Projects</a>
+            <a class="pbp-navitem" href="/posts" title="Blog">Blog</a>
+            <a class="pbp-navitem icon-github-alt" href="https://github.com/mwcz" title="Clone my git repos"></a>
+            <a class="pbp-navitem icon-twitter" href="https://twitter.com/mwcz" title="Eat a tweet"></a>
+        </div>
+        <!-- <a href="/projects" class="pbp-navlink">Projects</a> -->
+        <!-- <a href="/posts" class="pbp-navlink">Blog</a> -->
     </nav>
 </div>
 <!-- /.navbar -->
@@ -69,9 +71,9 @@
                 The Last Conceit
             </h1>
         </header>
-        <div class="entry-content">
 
-            <p>Humans have had it rough for the past few centuries!  Emotionally, I mean.  It
+
+        <p>Humans have had it rough for the past few centuries!  Emotionally, I mean.  It
 used to be so clear that we were privileged and important, the favorite child
 of creation.  How could it not be so?  Our planet was the fulcrum around which
 every heavenly body in the universe orbited.  We were the dominant form of life
@@ -80,31 +82,12 @@ creation of a loving but tempermental and sometimes murdery god.</p>
 <p>The second chapter of <a href="https://en.wikipedia.org/wiki/The_Varieties_of_Scientific_Experience">The Varieties of Scientific Experience</a> by
 Carl Sagan documents the following recently discovered demerits:</p>
 <ul>
-<li>
-<p>We're not in a central position in the universe.  Our Earth orbits around
-   the sun.  Our solar system is not at the center of our galaxy.</p>
-</li>
-<li>
-<p>Our Sun is a typical star, with no special features to distinguish it from
-   the 1,000,000,000,000,000,000,000,000 other stars universe.</p>
-</li>
-<li>
-<p>Not only that, stars are made of the same stuff we find right here on our
-   Earth.  That's not so majestic!</p>
-</li>
-<li>
-<p>Our earth is approximately 4,500,000,000 years old, but humans developed
-   recently, 1,000,000 years ago or so.</p>
-</li>
-<li>
-<p>Humans are made of the same stuff and share a common lineage with all other
-   life on Earth.</p>
-</li>
-<li>
-<p>The way we experience time is not from a <a href="https://en.wikipedia.org/wiki/Preferred_frame">privileged frame of
-   reference</a>.  There is nothing special about our position in the
-   universe or our motion through it.</p>
-</li>
+<li>We're not in a central position in the universe.  Our Earth orbits around the sun.  Our solar system is not at the center of our galaxy.</li>
+<li>Our Sun is a typical star, with no special features to distinguish it from the 1,000,000,000,000,000,000,000,000 other stars universe.</li>
+<li>Not only that, stars are made of the same stuff we find right here on our Earth.  That's not so majestic!</li>
+<li>Our earth is approximately 4,500,000,000 years old, but humans developed recently, 1,000,000 years ago or so.</li>
+<li>Humans are made of the same stuff and share a common lineage with all other life on Earth.</li>
+<li>The way we experience time is not from a <a href="https://en.wikipedia.org/wiki/Preferred_frame">privileged frame of reference</a>.  There is nothing special about our position in the universe or our motion through it.</li>
 </ul>
 <p>Carl then suggests that one idea of human privilege is still with us.</p>
 <blockquote>
@@ -140,7 +123,6 @@ Humans have a lot of traits, some admirable and some less so, but <em>we</em> ge
 choose which to value.  In any case, we should probably stop looking to the
 universe for our sense of self-worth.</p>
 <p><img style="display: none !important;" src="https://palebluepixel.org/2015/12/13/the-last-conceit/Copernican_heliocentrism_diagram-2.png"></p>
-        </div>
 
         <!-- /.entry-content -->
 
@@ -156,14 +138,6 @@ universe for our sense of self-worth.</p>
 
 
 
-    <script src="https://apis.google.com/js/plusone.js">
-    </script>
-    <div class="g-comments"
-        data-href="https://palebluepixel.org/2015/12/13/the-last-conceit/"
-        data-width="642"
-        data-first_party_property="BLOGGER"
-        data-view_type="FILTERED_POSTMOD">
-    </div>
 
 
     </article>
@@ -172,13 +146,13 @@ universe for our sense of self-worth.</p>
 
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<!-- <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script> -->
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
 <script>
     anchors.options.visible = 'touch';
-    anchors.options.placement = 'left';
+    anchors.options.placement = 'right';
     anchors.options.class = 'heading-anchor';
     anchors.add();
 </script></body>

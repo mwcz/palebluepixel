@@ -3,7 +3,8 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title>median-cut.js - Pale Blue Pixel</title>
+    <title>    median-cut.js - Pale Blue Pixel
+</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -11,11 +12,14 @@
     <meta name="theme-color" content="#171717">
     <link rel="icon" type="image/png" href="/static/images/favicon.png">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 
         <!-- Open Graph tags -->
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="median-cut.js"/>
-            <meta property="og:url" content="https://palebluepixel.org/projects/mediancut/"/>
+            <meta property="og:url" content="https://palebluepixel.org/projects/mediancut"/>
+            <meta property="og:description" content="The unfortunately-named median-cut.js is the library that powers ColorPal's palette generation. I say it's unfortunately named because it doesn't …"/>
 
 
     <!--[if gte IE 9]
@@ -40,29 +44,34 @@
 
 </head>
 <body>
-<div class="container">
+<div class="pbp-navbar-container">
     <nav class="pbp-navbar" role="navigation">
         <a href="https://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
-            PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+            PALE BLUE PIXEL
         </a>
-        <ul class="pbp-navitems">
-            <li class="pbp-navitem">
-                <a href="/projects" class="pbp-navlink">Projects</a>
-            </li>
-            <li class="pbp-navitem">
-                <a href="/posts" class="pbp-navlink">Blog</a>
-            </li>
-        </ul>
+        <div class="pbp-navitems">
+            <a class="pbp-navitem" href="/projects" title="Projects">Projects</a>
+            <a class="pbp-navitem" href="/posts" title="Blog">Blog</a>
+            <a class="pbp-navitem icon-github-alt" href="https://github.com/mwcz" title="Clone my git repos"></a>
+            <a class="pbp-navitem icon-twitter" href="https://twitter.com/mwcz" title="Eat a tweet"></a>
+        </div>
+        <!-- <a href="/projects" class="pbp-navlink">Projects</a> -->
+        <!-- <a href="/posts" class="pbp-navlink">Blog</a> -->
     </nav>
 </div>
 <!-- /.navbar -->
 <main role="main" class="container">
-    <article id="content" class="body">
+    <article>
+
+
         <header class="page-header">
-            <h1 class="entry-title">median-cut.js</h1>
+            <h1>
+                median-cut.js
+            </h1>
         </header>
-        <div class="entry-content">
-            <p>The unfortunately-named <code>median-cut.js</code> is the library that powers
+
+
+        <p>The unfortunately-named <code>median-cut.js</code> is the library that powers
 <a href="http://colorpal.org/" title="ColorPal">ColorPal's</a> palette generation.</p>
 <p>I say it's unfortunately named because it doesn't implement a pure median-cut
 algorithm.  It's identical, except that instead of cutting boxes at their
@@ -73,46 +82,36 @@ palettes in most cases.</p>
 <p>If you're interested in median-cut vs mean-cut, see <a href="/2012/02/10/colorpal-palettes-improved/" title="Post about mean-cut">this post</a> for a
 technical discussion.</p>
 <p>The code is <a href="https://github.com/mwcz/median-cut-js" title="median-cut.js GitHub repository">available on GitHub</a>.</p>
-        </div>
-            <h2>Related posts:</h2>
-            <ul>
-            <li>
-                <a href="https://palebluepixel.org/2013/11/07/colorpal-cli/">ColorPal CLI!</a>
-            </li>
-            <li>
-                <a href="https://palebluepixel.org/2012/07/30/colorpal-output-update/">ColorPal Output Update</a>
-            </li>
-            <li>
-                <a href="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/">ColorPal palettes improved!</a>
-            </li>
-            <li>
-                <a href="https://palebluepixel.org/2012/01/16/colorpal-alpha/">ColorPal Alpha</a>
-            </li>
-            </ul>
+
+        <!-- /.entry-content -->
+
+        <footer class="pbp-article-footer">
+            <small>
+                This article was published on
+                <time datetime="2009-01-01" pubdate="">2009-01-01</time>
+                by <a href="https://twitter.com/mwcz" title="mwcz twitter" rel="author">mwcz</a>
+                and tagged with
+                    <a href="https://palebluepixel.org/tag/html5" rel="category">html5</a>,                    <a href="https://palebluepixel.org/tag/javascript" rel="category">javascript</a>, and                    <a href="https://palebluepixel.org/tag/color" rel="category">color</a>.
+            </small>
+        </footer>
+
+
+
+
+
     </article>
-
-
-    <script src="https://apis.google.com/js/plusone.js">
-    </script>
-    <div class="g-comments"
-        data-href="https://palebluepixel.org/projects/mediancut/"
-        data-width="642"
-        data-first_party_property="BLOGGER"
-        data-view_type="FILTERED_POSTMOD">
-    </div>
-
 
 </main>
 
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<!-- <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script> -->
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
 <script>
     anchors.options.visible = 'touch';
-    anchors.options.placement = 'left';
+    anchors.options.placement = 'right';
     anchors.options.class = 'heading-anchor';
     anchors.add();
 </script></body>

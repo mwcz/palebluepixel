@@ -3,7 +3,8 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title>DiMo: Particles - Pale Blue Pixel</title>
+    <title>    DiMo: Particles - Pale Blue Pixel
+</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -11,11 +12,14 @@
     <meta name="theme-color" content="#171717">
     <link rel="icon" type="image/png" href="/static/images/favicon.png">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 
         <!-- Open Graph tags -->
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="DiMo: Particles"/>
-            <meta property="og:url" content="https://palebluepixel.org/projects/dimo/"/>
+            <meta property="og:url" content="https://palebluepixel.org/projects/dimo"/>
+            <meta property="og:description" content="Dimo: Particles is an artistic particle physics simulation and interactive art exhibit I created (along with fellow Red Hat engineers …"/>
 
 
     <!--[if gte IE 9]
@@ -40,29 +44,34 @@
 
 </head>
 <body>
-<div class="container">
+<div class="pbp-navbar-container">
     <nav class="pbp-navbar" role="navigation">
         <a href="https://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
-            PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+            PALE BLUE PIXEL
         </a>
-        <ul class="pbp-navitems">
-            <li class="pbp-navitem">
-                <a href="/projects" class="pbp-navlink">Projects</a>
-            </li>
-            <li class="pbp-navitem">
-                <a href="/posts" class="pbp-navlink">Blog</a>
-            </li>
-        </ul>
+        <div class="pbp-navitems">
+            <a class="pbp-navitem" href="/projects" title="Projects">Projects</a>
+            <a class="pbp-navitem" href="/posts" title="Blog">Blog</a>
+            <a class="pbp-navitem icon-github-alt" href="https://github.com/mwcz" title="Clone my git repos"></a>
+            <a class="pbp-navitem icon-twitter" href="https://twitter.com/mwcz" title="Eat a tweet"></a>
+        </div>
+        <!-- <a href="/projects" class="pbp-navlink">Projects</a> -->
+        <!-- <a href="/posts" class="pbp-navlink">Blog</a> -->
     </nav>
 </div>
 <!-- /.navbar -->
 <main role="main" class="container">
-    <article id="content" class="body">
+    <article>
+
+
         <header class="page-header">
-            <h1 class="entry-title">DiMo: Particles</h1>
+            <h1>
+                DiMo: Particles
+            </h1>
         </header>
-        <div class="entry-content">
-            <p><img class="col-md-7" src="https://palebluepixel.org/static/images/projects/dimo/setup.jpg" alt="night-before setup image" style="padding-left: 0; padding-right: 30px" /></p>
+
+
+        <p><img class="col-md-7" src="https://palebluepixel.org/static/images/projects/dimo/setup.jpg" alt="night-before setup image" style="padding-left: 0; padding-right: 30px" /></p>
 <p>Dimo: Particles is an artistic particle physics simulation and interactive art
 exhibit I created (along with fellow Red Hat engineers Ian Hands and Ben
 Pritchett) for the <a href="https://en.wikipedia.org/wiki/sparkcon">SPARKcon</a> festival in 2014.</p>
@@ -74,7 +83,7 @@ Pritchett) for the <a href="https://en.wikipedia.org/wiki/sparkcon">SPARKcon</a>
 
 <h2 id="pictures">Pictures</h2>
 <p>These pictures are from the art exhibit at geekSPARK in 2014.</p>
-<div class="gallery">
+<p><div class="gallery">
     <div class="gallery-image">
         <a class="033" href="/static/images/gallery/1200x/gallery/033/10013368_871255312919531_5881241576350532414_o.jpg">
             <img src="/static/images/gallery/150x/gallery/033/10013368_871255312919531_5881241576350532414_o.jpg">
@@ -307,57 +316,53 @@ Pritchett) for the <a href="https://en.wikipedia.org/wiki/sparkcon">SPARKcon</a>
     </div>
 </div>
 
+<!-- photoswipe lightbox -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
 <script type="text/javascript" charset="utf-8">
     $(function () {
-        $('.gallery .gallery-image a').lightbox();
+        $('.gallery').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            gallery: {
+                enabled: true,
+            },
+        });
     });
-</script>
-
+</script></p>
 <p>After the event, I wrote this <a href="http://opensource.com/life/15/2/sparkcon-geekspark-digital-motion-exhibit">opensource.com article</a> about the experience.</p>
 <p>The source code is, of course, <a href="https://github.com/geekspark-rh/dimo-renderer">open</a>.</p>
-        </div>
-            <h2>Related posts:</h2>
-            <ul>
-            <li>
-                <a href="https://palebluepixel.org/2017/09/17/geekspark-2017/">geekSPARK 2017</a>
-            </li>
-            <li>
-                <a href="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/">Kimotion at geekSPARK 2016</a>
-            </li>
-            <li>
-                <a href="https://palebluepixel.org/2015/09/26/make-a-kimotion/">Make a Kimotion!</a>
-            </li>
-            <li>
-                <a href="https://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/">DiMo: The Deconstruction of Falling Stars</a>
-            </li>
-            <li>
-                <a href="https://palebluepixel.org/2014/08/25/particles-and-p-dimo-comes-to-life/">Particles and π - DiMo Comes to Life</a>
-            </li>
-            </ul>
+
+        <!-- /.entry-content -->
+
+        <footer class="pbp-article-footer">
+            <small>
+                This article was published on
+                <time datetime="2014-08-25" pubdate="">2014-08-25</time>
+                by <a href="https://twitter.com/mwcz" title="mwcz twitter" rel="author">mwcz</a>
+                and tagged with
+                    <a href="https://palebluepixel.org/tag/programming" rel="category">programming</a>,                    <a href="https://palebluepixel.org/tag/javascript" rel="category">javascript</a>,                    <a href="https://palebluepixel.org/tag/requirejs" rel="category">requirejs</a>,                    <a href="https://palebluepixel.org/tag/amd" rel="category">amd</a>,                    <a href="https://palebluepixel.org/tag/threejs" rel="category">threejs</a>,                    <a href="https://palebluepixel.org/tag/webgl" rel="category">webgl</a>,                    <a href="https://palebluepixel.org/tag/3d" rel="category">3d</a>,                    <a href="https://palebluepixel.org/tag/art" rel="category">art</a>,                    <a href="https://palebluepixel.org/tag/sparkcon" rel="category">sparkcon</a>,                    <a href="https://palebluepixel.org/tag/geekspark" rel="category">geekspark</a>, and                    <a href="https://palebluepixel.org/tag/physics" rel="category">physics</a>.
+            </small>
+        </footer>
+
+
+
+
+
     </article>
-
-
-    <script src="https://apis.google.com/js/plusone.js">
-    </script>
-    <div class="g-comments"
-        data-href="https://palebluepixel.org/projects/dimo/"
-        data-width="642"
-        data-first_party_property="BLOGGER"
-        data-view_type="FILTERED_POSTMOD">
-    </div>
-
 
 </main>
 
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<!-- <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script> -->
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
 <script>
     anchors.options.visible = 'touch';
-    anchors.options.placement = 'left';
+    anchors.options.placement = 'right';
     anchors.options.class = 'heading-anchor';
     anchors.add();
 </script></body>

@@ -3,7 +3,8 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title>Drop64 - Pale Blue Pixel</title>
+    <title>    Drop64 - Pale Blue Pixel
+</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -11,11 +12,14 @@
     <meta name="theme-color" content="#171717">
     <link rel="icon" type="image/png" href="/static/images/favicon.png">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 
         <!-- Open Graph tags -->
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="Drop64"/>
-            <meta property="og:url" content="https://palebluepixel.org/projects/drop64/"/>
+            <meta property="og:url" content="https://palebluepixel.org/projects/drop64"/>
+            <meta property="og:description" content="Drop64 is an easy drag-and-drop tool for generating Data URIs from any file. Check it out at drop64.com. Here's …"/>
 
 
     <!--[if gte IE 9]
@@ -40,29 +44,34 @@
 
 </head>
 <body>
-<div class="container">
+<div class="pbp-navbar-container">
     <nav class="pbp-navbar" role="navigation">
         <a href="https://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
-            PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+            PALE BLUE PIXEL
         </a>
-        <ul class="pbp-navitems">
-            <li class="pbp-navitem">
-                <a href="/projects" class="pbp-navlink">Projects</a>
-            </li>
-            <li class="pbp-navitem">
-                <a href="/posts" class="pbp-navlink">Blog</a>
-            </li>
-        </ul>
+        <div class="pbp-navitems">
+            <a class="pbp-navitem" href="/projects" title="Projects">Projects</a>
+            <a class="pbp-navitem" href="/posts" title="Blog">Blog</a>
+            <a class="pbp-navitem icon-github-alt" href="https://github.com/mwcz" title="Clone my git repos"></a>
+            <a class="pbp-navitem icon-twitter" href="https://twitter.com/mwcz" title="Eat a tweet"></a>
+        </div>
+        <!-- <a href="/projects" class="pbp-navlink">Projects</a> -->
+        <!-- <a href="/posts" class="pbp-navlink">Blog</a> -->
     </nav>
 </div>
 <!-- /.navbar -->
 <main role="main" class="container">
-    <article id="content" class="body">
+    <article>
+
+
         <header class="page-header">
-            <h1 class="entry-title">Drop64</h1>
+            <h1>
+                Drop64
+            </h1>
         </header>
-        <div class="entry-content">
-            <p>Drop64 is an easy drag-and-drop tool for generating <a href="http://css-tricks.com/data-uris/">Data URIs</a> from any
+
+
+        <p>Drop64 is an easy drag-and-drop tool for generating <a href="http://css-tricks.com/data-uris/">Data URIs</a> from any
 file.</p>
 <p>Check it out at <a href="http://drop64.com/">drop64.com</a>.</p>
 <p>Here's a demo recording of how easy it is.</p>
@@ -76,31 +85,36 @@ file.</p>
 <p>If you noticed the similarity to <a href="http://colorpal.org/">ColorPal</a>, well done!  I reused a lot of
 ColorPal's code in Drop64.  Almost all of it, in fact.</p>
 <p>For more information on Data URIs, check out <a href="https://developer.mozilla.org/en-US/docs/data_URIs">MDN</a> or the original <a href="http://tools.ietf.org/html/rfc2397">RFC</a>.</p>
-        </div>
+
+        <!-- /.entry-content -->
+
+        <footer class="pbp-article-footer">
+            <small>
+                This article was published on
+                <time datetime="2014-02-05" pubdate="">2014-02-05</time>
+                by <a href="https://twitter.com/mwcz" title="mwcz twitter" rel="author">mwcz</a>
+                and tagged with
+                    <a href="https://palebluepixel.org/tag/html5" rel="category">html5</a>,                    <a href="https://palebluepixel.org/tag/javascript" rel="category">javascript</a>,                    <a href="https://palebluepixel.org/tag/css3" rel="category">css3</a>,                    <a href="https://palebluepixel.org/tag/data uri" rel="category">data uri</a>, and                    <a href="https://palebluepixel.org/tag/data url" rel="category">data url</a>.
+            </small>
+        </footer>
+
+
+
+
+
     </article>
-
-
-    <script src="https://apis.google.com/js/plusone.js">
-    </script>
-    <div class="g-comments"
-        data-href="https://palebluepixel.org/projects/drop64/"
-        data-width="642"
-        data-first_party_property="BLOGGER"
-        data-view_type="FILTERED_POSTMOD">
-    </div>
-
 
 </main>
 
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<!-- <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script> -->
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
 <script>
     anchors.options.visible = 'touch';
-    anchors.options.placement = 'left';
+    anchors.options.placement = 'right';
     anchors.options.class = 'heading-anchor';
     anchors.add();
 </script></body>

@@ -11,6 +11,8 @@
     <meta name="theme-color" content="#171717">
     <link rel="icon" type="image/png" href="/static/images/favicon.png">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 
         <!-- Open Graph tags -->
             <meta property="og:type" content="website"/>
@@ -41,146 +43,172 @@
 
 </head>
 <body>
-<div class="container">
+<div class="pbp-navbar-container">
     <nav class="pbp-navbar" role="navigation">
         <a href="https://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
-            PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+            PALE BLUE PIXEL
         </a>
-        <ul class="pbp-navitems">
-            <li class="pbp-navitem">
-                <a href="/projects" class="pbp-navlink">Projects</a>
-            </li>
-            <li class="pbp-navitem">
-                <a href="/posts" class="pbp-navlink">Blog</a>
-            </li>
-        </ul>
+        <div class="pbp-navitems">
+            <a class="pbp-navitem" href="/projects" title="Projects">Projects</a>
+            <a class="pbp-navitem" href="/posts" title="Blog">Blog</a>
+            <a class="pbp-navitem icon-github-alt" href="https://github.com/mwcz" title="Clone my git repos"></a>
+            <a class="pbp-navitem icon-twitter" href="https://twitter.com/mwcz" title="Eat a tweet"></a>
+        </div>
+        <!-- <a href="/projects" class="pbp-navlink">Projects</a> -->
+        <!-- <a href="/posts" class="pbp-navlink">Blog</a> -->
     </nav>
 </div>
 <!-- /.navbar -->
 <main role="main" class="container">
 
 <section>
-<div class="row">
+
+<div class="latest-grid">
 
 
-        <article class="col-xs-12">
-            <header>
-                <h2>
-                    <a href="https://palebluepixel.org/2011/11/16/html5-canvas-area-selection-averaging/">
-                        HTML5 canvas area selection averaging
-                    </a>
-                </h2>
-            </header>
-            <div class="meta">
-                PBP4
-                <time datetime="2011-11-16" pubdate="">2011-11-16</time>
-            </div>
-            <div class="summary">
-                <p>This is a demo from late 2009.  It's an extension of the single-pixel <a href="/2011/11/16/html5-canvas-eyedropper/">eyedropper</a> I wrote previously.</p>
-<p>It's powered by …</p>
-            </div>
-        </article>
-        <article class="col-xs-12">
-            <header>
-                <h2>
-                    <a href="https://palebluepixel.org/2011/11/16/html5-canvas-rgb-histogram/">
-                        HTML5 canvas RGB histogram
-                    </a>
-                </h2>
-            </header>
-            <div class="meta">
-                PBP3
-                <time datetime="2011-11-16" pubdate="">2011-11-16</time>
-            </div>
-            <div class="summary">
-                <p>This is yet another demo from around 2009.  It's simple enough.  Click a
-button, draw an unbinned RGB histogram of …</p>
-            </div>
-        </article>
-        <article class="col-xs-12">
-            <header>
-                <h2>
-                    <a href="https://palebluepixel.org/2011/11/16/html5-canvas-3d-pixel-array/">
-                        HTML5 canvas 3D pixel array
-                    </a>
-                </h2>
-            </header>
-            <div class="meta">
-                PBP2
-                <time datetime="2011-11-16" pubdate="">2011-11-16</time>
-            </div>
-            <div class="summary">
-                <p>This is another demo from 2009-ish.  When I started experimenting with canvas, I felt uncomfortable with the 1-dimensionality of <a href="https://developer.mozilla.org/en/DOM/CanvasPixelArray">CanvasPixelArray …</a></p>
-            </div>
-        </article>
-        <article class="col-xs-12">
-            <header>
-                <h2>
-                    <a href="https://palebluepixel.org/2011/11/16/html5-canvas-eyedropper/">
-                        HTML5 Canvas eyedropper
-                    </a>
-                </h2>
-            </header>
-            <div class="meta">
-                PBP1
-                <time datetime="2011-11-16" pubdate="">2011-11-16</time>
-            </div>
-            <div class="summary">
-                <p>An HTML5 Canvas eyedropper.</p>
-            </div>
-        </article>
-        <article class="col-xs-12">
-            <header>
-                <h2>
-                    <a href="https://palebluepixel.org/2011/10/13/opcode-patterns-70-finished/">
-                        Opcode patterns 70% finished
-                    </a>
-                </h2>
-            </header>
-            <div class="meta">
-                PBP14
-                <time datetime="2011-10-13" pubdate="">2011-10-13</time>
-            </div>
-            <div class="summary">
-                <p>genlut.py is really filling out.  It generates the LUT for all 68k opcodes (68000 only), and I'm about 70 …</p>
-            </div>
-        </article>
-        <article class="col-xs-12">
-            <header>
-                <h2>
-                    <a href="https://palebluepixel.org/2011/09/22/lut/">
-                        LUT
-                    </a>
-                </h2>
-            </header>
-            <div class="meta">
-                PBP13
-                <time datetime="2011-09-22" pubdate="">2011-09-22</time>
-            </div>
-            <div class="summary">
-                <p>Decoding is easy. Decoding requires a lot of typing. (I am starting to believe this is true of ever aspect …</p>
-            </div>
-        </article>
-        <article class="col-xs-12">
-            <header>
-                <h2>
-                    <a href="https://palebluepixel.org/2011/09/20/introducing-aejs/">
-                        Introducing AEJS
-                    </a>
-                </h2>
-            </header>
-            <div class="meta">
-                PBP12
-                <time datetime="2011-09-20" pubdate="">2011-09-20</time>
-            </div>
-            <div class="summary">
-                <p>Introducing AEJS, an Amiga emulator written in JavaScript.  Wait, wording it like that makes it sound like it's finished.  It …</p>
-            </div>
-        </article>
+        
+<section class="glass-card">
+    <div class="glass-card-ratio">
+        <a class="glass-card-link" href="/2012/01/08/the-n9-qr-codes-and-keepassx/"></a>
+        <img class="glass-card-bg " src="/2012/01/08/the-n9-qr-codes-and-keepassx/keepass_not_in_n9.png">
+        <div class="glass-card-border-outer"></div>
+        <div class="glass-card-border-inner"></div>
+        <h1 class="glass-card-title">
+            The N9, QR-Codes, and KeePassX
+        </h1>
+        <!-- <div class="glass-card-cite"> -->
+        <!--     <img class="glass-card-author-img" src="https://pbs.twimg.com/profile_images/504363485363318785/it9hd5ae_400x400.jpeg"> -->
+        <!--     <p class="glass-card-author">Michael Clayton</p> -->
+        <!--     <p class="glass-card-date">Dec 14</p> -->
+        <!-- </div> -->
+    </div>
+</section>
+
+
+
+        
+<section class="glass-card">
+    <div class="glass-card-ratio">
+        <a class="glass-card-link" href="/2011/11/17/bouncey-returns-more-canvas-physics/"></a>
+        <h1 class="glass-card-title">
+            Bouncey returns - more canvas physics
+        </h1>
+        <!-- <div class="glass-card-cite"> -->
+        <!--     <img class="glass-card-author-img" src="https://pbs.twimg.com/profile_images/504363485363318785/it9hd5ae_400x400.jpeg"> -->
+        <!--     <p class="glass-card-author">Michael Clayton</p> -->
+        <!--     <p class="glass-card-date">Dec 14</p> -->
+        <!-- </div> -->
+    </div>
+</section>
+
+
+
+        
+<section class="glass-card">
+    <div class="glass-card-ratio">
+        <a class="glass-card-link" href="/2011/11/17/html5-tool-for-creating-color-palettes-from-an-image/"></a>
+        <h1 class="glass-card-title">
+            HTML5 tool for creating color palettes from an image
+        </h1>
+        <!-- <div class="glass-card-cite"> -->
+        <!--     <img class="glass-card-author-img" src="https://pbs.twimg.com/profile_images/504363485363318785/it9hd5ae_400x400.jpeg"> -->
+        <!--     <p class="glass-card-author">Michael Clayton</p> -->
+        <!--     <p class="glass-card-date">Dec 14</p> -->
+        <!-- </div> -->
+    </div>
+</section>
+
+
+
+        
+<section class="glass-card">
+    <div class="glass-card-ratio">
+        <a class="glass-card-link" href="/2011/11/17/bouncey-canvas-physics/"></a>
+        <h1 class="glass-card-title">
+            Bouncey - canvas physics
+        </h1>
+        <!-- <div class="glass-card-cite"> -->
+        <!--     <img class="glass-card-author-img" src="https://pbs.twimg.com/profile_images/504363485363318785/it9hd5ae_400x400.jpeg"> -->
+        <!--     <p class="glass-card-author">Michael Clayton</p> -->
+        <!--     <p class="glass-card-date">Dec 14</p> -->
+        <!-- </div> -->
+    </div>
+</section>
+
+
+
+        
+<section class="glass-card">
+    <div class="glass-card-ratio">
+        <a class="glass-card-link" href="/2011/11/17/how-not-to-use-css3/"></a>
+        <h1 class="glass-card-title">
+            How not to use CSS3
+        </h1>
+        <!-- <div class="glass-card-cite"> -->
+        <!--     <img class="glass-card-author-img" src="https://pbs.twimg.com/profile_images/504363485363318785/it9hd5ae_400x400.jpeg"> -->
+        <!--     <p class="glass-card-author">Michael Clayton</p> -->
+        <!--     <p class="glass-card-date">Dec 14</p> -->
+        <!-- </div> -->
+    </div>
+</section>
+
+
+
+        
+<section class="glass-card">
+    <div class="glass-card-ratio">
+        <a class="glass-card-link" href="/2011/11/17/html5-canvas-point-operations/"></a>
+        <h1 class="glass-card-title">
+            HTML5 canvas point operations
+        </h1>
+        <!-- <div class="glass-card-cite"> -->
+        <!--     <img class="glass-card-author-img" src="https://pbs.twimg.com/profile_images/504363485363318785/it9hd5ae_400x400.jpeg"> -->
+        <!--     <p class="glass-card-author">Michael Clayton</p> -->
+        <!--     <p class="glass-card-date">Dec 14</p> -->
+        <!-- </div> -->
+    </div>
+</section>
+
+
+
+        
+<section class="glass-card">
+    <div class="glass-card-ratio">
+        <a class="glass-card-link" href="/2011/11/16/html5-canvas-area-selection-averaging/"></a>
+        <h1 class="glass-card-title">
+            HTML5 canvas area selection averaging
+        </h1>
+        <!-- <div class="glass-card-cite"> -->
+        <!--     <img class="glass-card-author-img" src="https://pbs.twimg.com/profile_images/504363485363318785/it9hd5ae_400x400.jpeg"> -->
+        <!--     <p class="glass-card-author">Michael Clayton</p> -->
+        <!--     <p class="glass-card-date">Dec 14</p> -->
+        <!-- </div> -->
+    </div>
+</section>
+
+
+
+        
+<section class="glass-card">
+    <div class="glass-card-ratio">
+        <a class="glass-card-link" href="/2011/11/16/html5-canvas-rgb-histogram/"></a>
+        <h1 class="glass-card-title">
+            HTML5 canvas RGB histogram
+        </h1>
+        <!-- <div class="glass-card-cite"> -->
+        <!--     <img class="glass-card-author-img" src="https://pbs.twimg.com/profile_images/504363485363318785/it9hd5ae_400x400.jpeg"> -->
+        <!--     <p class="glass-card-author">Michael Clayton</p> -->
+        <!--     <p class="glass-card-date">Dec 14</p> -->
+        <!-- </div> -->
+    </div>
+</section>
+
+
+
     </div> <!-- /.row -->
 
 
-    <ul class="pagination">
+    <ol class="pagination">
             <li class="prev">
                 <a href="https://palebluepixel.org/posts/3">
                     &laquo;
@@ -206,21 +234,30 @@ button, draw an unbinned RGB histogram of …</p>
                     4
                 </a>
             </li>
-            <li class="next disabled"><a href="#">&raquo;</a></li>
-    </ul>
+            <li class="">
+                <a href="https://palebluepixel.org/posts/5">
+                    5
+                </a>
+            </li>
+            <li class="next">
+                <a href="https://palebluepixel.org/posts/5">
+                    &raquo;
+                </a>
+            </li>
+    </ol>
 </section>
 
 </main>
 
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<!-- <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script> -->
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
 <script>
     anchors.options.visible = 'touch';
-    anchors.options.placement = 'left';
+    anchors.options.placement = 'right';
     anchors.options.class = 'heading-anchor';
     anchors.add();
 </script></body>

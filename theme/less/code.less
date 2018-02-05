@@ -1,0 +1,24 @@
+code {
+    padding          : 4px 3px 2px 4px;
+    margin           : 0px 1.2px;
+}
+
+pre, .highlight, code, pre code {
+    font-family      : @pbp-font-mono;
+    background-color : darken(@pbp-bg-color, 5%);
+    color            : darken(@pbp-fg-color, 5%);
+    border           : none;
+}
+
+.highlight pre {
+    background-color : darken(@pbp-bg-color, 16%);
+    color            : darken(@pbp-fg-color, 16%);
+    border           : none;
+    border-radius    : 0;
+}
+
+pre code {
+    overflow-x: auto;
+    max-width: 100%;
+    display: block;
+}

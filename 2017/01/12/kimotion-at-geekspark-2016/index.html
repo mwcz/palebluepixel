@@ -12,6 +12,8 @@
     <meta name="theme-color" content="#171717">
     <link rel="icon" type="image/png" href="/static/images/favicon.png">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 
         <!-- Open Graph tags -->
             <meta property="og:type" content="article"/>
@@ -44,19 +46,19 @@
 
 </head>
 <body>
-<div class="container">
+<div class="pbp-navbar-container">
     <nav class="pbp-navbar" role="navigation">
         <a href="https://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
-            PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+            PALE BLUE PIXEL
         </a>
-        <ul class="pbp-navitems">
-            <li class="pbp-navitem">
-                <a href="/projects" class="pbp-navlink">Projects</a>
-            </li>
-            <li class="pbp-navitem">
-                <a href="/posts" class="pbp-navlink">Blog</a>
-            </li>
-        </ul>
+        <div class="pbp-navitems">
+            <a class="pbp-navitem" href="/projects" title="Projects">Projects</a>
+            <a class="pbp-navitem" href="/posts" title="Blog">Blog</a>
+            <a class="pbp-navitem icon-github-alt" href="https://github.com/mwcz" title="Clone my git repos"></a>
+            <a class="pbp-navitem icon-twitter" href="https://twitter.com/mwcz" title="Eat a tweet"></a>
+        </div>
+        <!-- <a href="/projects" class="pbp-navlink">Projects</a> -->
+        <!-- <a href="/posts" class="pbp-navlink">Blog</a> -->
     </nav>
 </div>
 <!-- /.navbar -->
@@ -69,9 +71,9 @@
                 Kimotion at geekSPARK 2016
             </h1>
         </header>
-        <div class="entry-content">
 
-            <p>Just a few short <del>days</del> months ago, <a href="http://kimotion.xyz">Kimotion</a> was on
+
+        <p>Just a few short <del>days</del> months ago, <a href="http://kimotion.xyz">Kimotion</a> was on
 display at SPARKcon.  SPARKcon is a large art festival in Raleigh, and we
 occupy a small slice of it called geekSPARK.</p>
 <h2 id="kimotion-levels-up">Kimotion Levels Up</h2>
@@ -79,10 +81,12 @@ occupy a small slice of it called geekSPARK.</p>
 was workable, but a lot of visitors had trouble using it, especially kids.
 This year, I added Leap Motion support, which was a huge... <em>jump</em> forward for
 hand tracking.</p>
+<figure>
 <video style="margin: 0 auto" controls autoplay loop>
 <source src="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/arm.mp4" />
 <source src="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/arm.webm" />
 </video>
+</figure>
 
 <p>Adam, of Maniacal Labs, built the fantastic adjustable Leap Motion mounting arm
 shown above.  It allowed visitors of any height to participate comfortably and
@@ -208,15 +212,18 @@ further next year.</p>
     });
 </script></p>
 <h2 id="viva-la-geekspark">Viva la geekSPARK!</h2>
-<p><img style="float: right" src="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/geekspark.png" alt="geekSPARK logo" /></p>
+<figure>
+    <img src="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/geekspark.png" alt="geekSPARK logo" />
+</figure>
+
 <p>Thanks to Truett and Noel for all their organization and support.  Thanks to
 Ian for pulling me into this project two years ago and for climbing into the
 ceiling to shut off the lights.  And thanks to all the <a href="http://kimotion.xyz/#contributors">Kimotion
 contributors</a> for building mods and adding color and fun to everyone's
 weekend.</p>
-<p><span class="clearfix"></span></p>
-<p><img style="display: none !important;" src="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/thumb.jpg"></p>
-        </div>
+<div hidden>
+    <img src="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/thumb.jpg">
+</div>
 
         <!-- /.entry-content -->
 
@@ -232,14 +239,6 @@ weekend.</p>
 
 
 
-    <script src="https://apis.google.com/js/plusone.js">
-    </script>
-    <div class="g-comments"
-        data-href="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/"
-        data-width="642"
-        data-first_party_property="BLOGGER"
-        data-view_type="FILTERED_POSTMOD">
-    </div>
 
 
     </article>
@@ -248,13 +247,13 @@ weekend.</p>
 
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<!-- <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script> -->
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
 <script>
     anchors.options.visible = 'touch';
-    anchors.options.placement = 'left';
+    anchors.options.placement = 'right';
     anchors.options.class = 'heading-anchor';
     anchors.add();
 </script></body>

@@ -12,12 +12,14 @@
     <meta name="theme-color" content="#171717">
     <link rel="icon" type="image/png" href="/static/images/favicon.png">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 
         <!-- Open Graph tags -->
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="How not to use CSS3"/>
             <meta property="og:url" content="https://palebluepixel.org/2011/11/17/how-not-to-use-css3/"/>
-            <meta property="og:description" content="How to ruin a good thing... Try refreshing. .css3_demo { font-family: FreeSansBold; text-align: center; color: #efefef; position: relative; top: 0; left …"/>
+            <meta property="og:description" content="How to ruin a good thing by abusing CSS3 text shadows... Try refreshing. CSS3! The code: // Random factors to determine …"/>
 
 
     <!--[if gte IE 9]
@@ -42,19 +44,19 @@
 
 </head>
 <body>
-<div class="container">
+<div class="pbp-navbar-container">
     <nav class="pbp-navbar" role="navigation">
         <a href="https://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
-            PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+            PALE BLUE PIXEL
         </a>
-        <ul class="pbp-navitems">
-            <li class="pbp-navitem">
-                <a href="/projects" class="pbp-navlink">Projects</a>
-            </li>
-            <li class="pbp-navitem">
-                <a href="/posts" class="pbp-navlink">Blog</a>
-            </li>
-        </ul>
+        <div class="pbp-navitems">
+            <a class="pbp-navitem" href="/projects" title="Projects">Projects</a>
+            <a class="pbp-navitem" href="/posts" title="Blog">Blog</a>
+            <a class="pbp-navitem icon-github-alt" href="https://github.com/mwcz" title="Clone my git repos"></a>
+            <a class="pbp-navitem icon-twitter" href="https://twitter.com/mwcz" title="Eat a tweet"></a>
+        </div>
+        <!-- <a href="/projects" class="pbp-navlink">Projects</a> -->
+        <!-- <a href="/posts" class="pbp-navlink">Blog</a> -->
     </nav>
 </div>
 <!-- /.navbar -->
@@ -67,25 +69,67 @@
                 How not to use CSS3
             </h1>
         </header>
-        <div class="entry-content">
 
-            <p>How to ruin a good thing...</p>
+
+        <p>How to ruin a good thing by abusing CSS3 text shadows...</p>
 <p>Try refreshing.</p>
-<style type="text/css">
+<p><span class="css3_demo">CSS3!</span> </p>
+<p>The code:</p>
+<pre><code>// Random factors to determine x/y offsets for text shadows and amount of blur
+var x_factor    = Math.floor( Math.random() * 20 ) - 10;
+var y_factor    = Math.floor( Math.random() * 20 ) - 10;
+var blur_factor = Math.floor( Math.random() * 10 ) + 1;
 
-.css3_demo {
-    font-family: FreeSansBold;
-    text-align: center;
-    color: #efefef;
-    position: relative;
-    top: 0;
-    left: 50px;
-    font-size: 9em;
-    padding: 0;
+// Pretty colors
+var the_colors = 
+                [
+                '#7f9f7f',
+                '#dca3a3',
+                '#80d4aa',
+                '#f8f893',
+                '#ffcfaf',
+                '#e89393',
+                '#9ece9e',
+                '#c0bed1',
+                '#6c6c9c',
+                '#71d3b4',
+                '#a0afa0',
+                '#efefef'
+                ];
+
+function make_it() { // MAKE IT SHINE
+    // Build a string containing a comma-delimited list of the each shadow we want to apply
+    // sprintf would be nice here.
+    var shadows = "";
+    for( var color_index in the_colors ) {
+        shadows += 
+            color_index * x_factor + "px " + 
+            color_index * y_factor + "px " + 
+            color_index * blur_factor + "px " + 
+            the_colors[ color_index ];
+
+        // Add a comma unless we're at the end of the color set
+        if( color_index != the_colors.length - 1 )
+            shadows += ',';
+    }
+    $('.css3_demo').css( 'textShadow', shadows ); // apply the new style
+    the_colors.push( the_colors.shift() ); // move first color to the end of the list
+    //console.log( shadows );
+    setTimeout( 'make_it()', 50 ); // make the function async (kinda... effectively...) with setTimeout()
 }
 
-</style>
+function move_it() { // MAKE IT MOVE
+    /* uncomment this to make it move up and down...
+    $('.css3_demo').animate( {top:'+=200'},2000, "linear" )
+           .animate( {top:'-=200'},2000, "linear", move_it );
+    */
+}
 
+$(document).ready( function() {
+    make_it();
+    move_it();
+});
+</code></pre>
 <script type="text/javascript">
 
 // Random factors to determine x/y offsets for text shadows and amount of blur
@@ -144,8 +188,20 @@ $(document).ready( function() {
 });
 </script>
 
-<p><span class="css3_demo">CSS3!</span> </p>
-        </div>
+<style type="text/css">
+
+.css3_demo {
+    font-family: FreeSansBold;
+    text-align: center;
+    color: #efefef;
+    position: relative;
+    top: 0;
+    left: 50px;
+    font-size: 9em;
+    padding: 0;
+}
+
+</style>
 
         <!-- /.entry-content -->
 
@@ -161,14 +217,6 @@ $(document).ready( function() {
 
 
 
-    <script src="https://apis.google.com/js/plusone.js">
-    </script>
-    <div class="g-comments"
-        data-href="https://palebluepixel.org/2011/11/17/how-not-to-use-css3/"
-        data-width="642"
-        data-first_party_property="BLOGGER"
-        data-view_type="FILTERED_POSTMOD">
-    </div>
 
 
     </article>
@@ -177,13 +225,13 @@ $(document).ready( function() {
 
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<!-- <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script> -->
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
 <script>
     anchors.options.visible = 'touch';
-    anchors.options.placement = 'left';
+    anchors.options.placement = 'right';
     anchors.options.class = 'heading-anchor';
     anchors.add();
 </script></body>

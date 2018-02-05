@@ -3,7 +3,8 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title>Zorbio - Pale Blue Pixel</title>
+    <title>    Zorbio - Pale Blue Pixel
+</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -11,11 +12,16 @@
     <meta name="theme-color" content="#171717">
     <link rel="icon" type="image/png" href="/static/images/favicon.png">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 
         <!-- Open Graph tags -->
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="Zorbio"/>
-            <meta property="og:url" content="https://palebluepixel.org/projects/zorbio/"/>
+            <meta property="og:url" content="https://palebluepixel.org/projects/zorbio"/>
+            <meta property="og:description" content="Zorbio is a free multiplayer eat-em-up game that you can play in your browser! Zorbio is brought to you by …"/>
+            <meta property="og:image"
+                  content="https://palebluepixel.org/static/images/projects/icon_zorbio.jpg"/>
 
 
     <!--[if gte IE 9]
@@ -40,58 +46,68 @@
 
 </head>
 <body>
-<div class="container">
+<div class="pbp-navbar-container">
     <nav class="pbp-navbar" role="navigation">
         <a href="https://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
-            PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+            PALE BLUE PIXEL
         </a>
-        <ul class="pbp-navitems">
-            <li class="pbp-navitem">
-                <a href="/projects" class="pbp-navlink">Projects</a>
-            </li>
-            <li class="pbp-navitem">
-                <a href="/posts" class="pbp-navlink">Blog</a>
-            </li>
-        </ul>
+        <div class="pbp-navitems">
+            <a class="pbp-navitem" href="/projects" title="Projects">Projects</a>
+            <a class="pbp-navitem" href="/posts" title="Blog">Blog</a>
+            <a class="pbp-navitem icon-github-alt" href="https://github.com/mwcz" title="Clone my git repos"></a>
+            <a class="pbp-navitem icon-twitter" href="https://twitter.com/mwcz" title="Eat a tweet"></a>
+        </div>
+        <!-- <a href="/projects" class="pbp-navlink">Projects</a> -->
+        <!-- <a href="/posts" class="pbp-navlink">Blog</a> -->
     </nav>
 </div>
 <!-- /.navbar -->
 <main role="main" class="container">
-    <article id="content" class="body">
+    <article>
+
+
         <header class="page-header">
-            <h1 class="entry-title">Zorbio</h1>
+            <h1>
+                Zorbio
+            </h1>
         </header>
-        <div class="entry-content">
-            <p>Zorbio is a free multiplayer eat-em-up game that you can play in your browser!</p>
+
+
+        <p>Zorbio is a free multiplayer eat-em-up game that you can play in your browser!</p>
 <p>Zorbio is brought to you by my good friend Jared Sprague and I, via our small game development company, <a href="http://scripta.co/">Scripta, Inc</a>. Follow Zorbio development on the <a href="http://scripta.co/">Scripta blog</a>, or on <a href="https://www.facebook.com/zorbio/">Facebook</a>.</p>
 <p class="text-center"><a class="btn btn-default btn-lg" href="http://zor.bio">Play now!</a></p>
 
 <p><img src="https://palebluepixel.org/static/images/projects/icon_zorbio.jpg" alt="screenshot of Zorbio" /></p>
-        </div>
+
+        <!-- /.entry-content -->
+
+        <footer class="pbp-article-footer">
+            <small>
+                This article was published on
+                <time datetime="2016-11-03" pubdate="">2016-11-03</time>
+                by <a href="https://twitter.com/mwcz" title="mwcz twitter" rel="author">mwcz</a>
+                and tagged with
+                    <a href="https://palebluepixel.org/tag/programming" rel="category">programming</a>,                    <a href="https://palebluepixel.org/tag/javascript" rel="category">javascript</a>,                    <a href="https://palebluepixel.org/tag/threejs" rel="category">threejs</a>,                    <a href="https://palebluepixel.org/tag/webgl" rel="category">webgl</a>,                    <a href="https://palebluepixel.org/tag/3d" rel="category">3d</a>,                    <a href="https://palebluepixel.org/tag/web" rel="category">web</a>,                    <a href="https://palebluepixel.org/tag/scripta" rel="category">scripta</a>,                    <a href="https://palebluepixel.org/tag/games" rel="category">games</a>,                    <a href="https://palebluepixel.org/tag/gamedev" rel="category">gamedev</a>, and                    <a href="https://palebluepixel.org/tag/zorbio" rel="category">zorbio</a>.
+            </small>
+        </footer>
+
+
+
+
+
     </article>
-
-
-    <script src="https://apis.google.com/js/plusone.js">
-    </script>
-    <div class="g-comments"
-        data-href="https://palebluepixel.org/projects/zorbio/"
-        data-width="642"
-        data-first_party_property="BLOGGER"
-        data-view_type="FILTERED_POSTMOD">
-    </div>
-
 
 </main>
 
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<!-- <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script> -->
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
 <script>
     anchors.options.visible = 'touch';
-    anchors.options.placement = 'left';
+    anchors.options.placement = 'right';
     anchors.options.class = 'heading-anchor';
     anchors.add();
 </script></body>

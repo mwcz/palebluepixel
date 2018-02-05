@@ -84,7 +84,9 @@ For further reading, here are some of the best articles I've found:
  - [Eric Elliot makes a strong and diverse case][elliot_article]
  - [ArsTechnica brings wasm to a wider audience][ars_article]
 
-<img style="display: none !important;" src="{attach}asm.png">
+<div hidden>
+<img src="{attach}asm.png">
+</div>
 
 [luke_article]: https://blog.mozilla.org/luke/2015/06/17/webassembly/
 [eich_article]: https://brendaneich.com/2015/06/from-asm-js-to-webassembly/#buried-lede

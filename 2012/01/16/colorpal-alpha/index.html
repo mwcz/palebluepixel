@@ -12,6 +12,8 @@
     <meta name="theme-color" content="#171717">
     <link rel="icon" type="image/png" href="/static/images/favicon.png">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 
         <!-- Open Graph tags -->
             <meta property="og:type" content="article"/>
@@ -44,19 +46,19 @@
 
 </head>
 <body>
-<div class="container">
+<div class="pbp-navbar-container">
     <nav class="pbp-navbar" role="navigation">
         <a href="https://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
-            PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+            PALE BLUE PIXEL
         </a>
-        <ul class="pbp-navitems">
-            <li class="pbp-navitem">
-                <a href="/projects" class="pbp-navlink">Projects</a>
-            </li>
-            <li class="pbp-navitem">
-                <a href="/posts" class="pbp-navlink">Blog</a>
-            </li>
-        </ul>
+        <div class="pbp-navitems">
+            <a class="pbp-navitem" href="/projects" title="Projects">Projects</a>
+            <a class="pbp-navitem" href="/posts" title="Blog">Blog</a>
+            <a class="pbp-navitem icon-github-alt" href="https://github.com/mwcz" title="Clone my git repos"></a>
+            <a class="pbp-navitem icon-twitter" href="https://twitter.com/mwcz" title="Eat a tweet"></a>
+        </div>
+        <!-- <a href="/projects" class="pbp-navlink">Projects</a> -->
+        <!-- <a href="/posts" class="pbp-navlink">Blog</a> -->
     </nav>
 </div>
 <!-- /.navbar -->
@@ -69,22 +71,23 @@
                 ColorPal Alpha
             </h1>
         </header>
-        <div class="entry-content">
 
-            <p>Introducing ColorPal!</p>
+
+        <p>Introducing ColorPal!</p>
 <p><img alt="ColorPal screenshot" src="https://palebluepixel.org/2012/01/16/colorpal-alpha/ss.png" /></p>
 <p>I've been toying with color palette generation for years.  My photography website has always had some form of dynamic palette, so the theme of each page matches the photo.  You can see the current iteration <a href="http://clayto.com/">here</a>:</p>
-<p><img src="https://palebluepixel.org/2012/01/16/colorpal-alpha/tarsi.png" alt="clayto.com" title="My photo, 'Tarsi', at clayto.com" /></p>
+<figure><img src="https://palebluepixel.org/2012/01/16/colorpal-alpha/tarsi.png" alt="clayto.com" title="My photo, 'Tarsi', at clayto.com" /></figure>
 
 <p>I owe the idea of photo-matching website palettes to <a href="http://noahgrey.com">Noah Grey</a>.  Each iteration of my photo site has gotten a slightly more advanced palette generation tool.  You can see murmurs of them in the <a href="/2011/11/16/html5-canvas-eyedropper/">old</a> <a href="/2011/11/16/html5-canvas-area-selection-averaging/">canvas</a> <a href="/2011/11/17/html5-tool-for-creating-color-palettes-from-an-image/">demos</a> I've posted.  Sooner or later I'll make a more thorough post about the tools I've created for each iteration of the site.  Anyway, back to ColorPal.</p>
 <p>ColorPal is an HTML5 palette generation tool.  Currently it's in a very early stage, and I've only tested it in Chrome.  I have many ideas for improvements, and I'd love to hear anyone's ideas as well.  </p>
-<p><img src="https://palebluepixel.org/2012/01/16/colorpal-alpha/colorpal_logo.png" alt="ColorPal logo" title="" style="float: right; margin: 8px" /></p>
+<figure>
+    <img src="https://palebluepixel.org/2012/01/16/colorpal-alpha/colorpal_logo.png" alt="ColorPal logo"/>
+</figure>
 
 <p>It's powered by <a href="http://en.wikipedia.org/wiki/Canvas_element">canvas</a>, <a href="https://developer.mozilla.org/en/data_URIs">data URIs</a>, <a href="http://dev.w3.org/2006/webapi/FileAPI/">File API</a>, and my homespun <a href="http://en.wikipedia.org/wiki/Median_cut">median-cut</a> implementation, which I'm calling <em>median-cut.js</em>.</p>
 <p>Bear in mind that while I've kept median-cut.js nice and clean, I did hammer out ColorPal as quickly as possible, so it's a mess.  Why?  I expect median-cut.js to be useful to other programmers, but ColorPal is just a tool for designers.  Or it will be, anyway. :)</p>
 <p>Here are github repos for <a href="https://github.com/mwcz/ColorPal">ColorPal</a> and <a href="https://github.com/mwcz/median-cut-js">median-cut.js</a>.</p>
 <p>And, as a reward for reading to the end, a <a href="/projects/colorpal/">live demo</a>!</p>
-        </div>
 
         <!-- /.entry-content -->
 
@@ -100,14 +103,6 @@
 
 
 
-    <script src="https://apis.google.com/js/plusone.js">
-    </script>
-    <div class="g-comments"
-        data-href="https://palebluepixel.org/2012/01/16/colorpal-alpha/"
-        data-width="642"
-        data-first_party_property="BLOGGER"
-        data-view_type="FILTERED_POSTMOD">
-    </div>
 
 
     </article>
@@ -116,13 +111,13 @@
 
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<!-- <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script> -->
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
 <script>
     anchors.options.visible = 'touch';
-    anchors.options.placement = 'left';
+    anchors.options.placement = 'right';
     anchors.options.class = 'heading-anchor';
     anchors.add();
 </script></body>

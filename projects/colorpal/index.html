@@ -3,7 +3,8 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title>ColorPal - Pale Blue Pixel</title>
+    <title>    ColorPal - Pale Blue Pixel
+</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -11,11 +12,14 @@
     <meta name="theme-color" content="#171717">
     <link rel="icon" type="image/png" href="/static/images/favicon.png">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 
         <!-- Open Graph tags -->
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="ColorPal"/>
-            <meta property="og:url" content="https://palebluepixel.org/projects/colorpal/"/>
+            <meta property="og:url" content="https://palebluepixel.org/projects/colorpal"/>
+            <meta property="og:description" content="ColorPal is an HTML5 color palette generator. Here's a gif demonstrating how to use ColorPal. The color quality in gifs …"/>
 
 
     <!--[if gte IE 9]
@@ -40,29 +44,34 @@
 
 </head>
 <body>
-<div class="container">
+<div class="pbp-navbar-container">
     <nav class="pbp-navbar" role="navigation">
         <a href="https://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
-            PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+            PALE BLUE PIXEL
         </a>
-        <ul class="pbp-navitems">
-            <li class="pbp-navitem">
-                <a href="/projects" class="pbp-navlink">Projects</a>
-            </li>
-            <li class="pbp-navitem">
-                <a href="/posts" class="pbp-navlink">Blog</a>
-            </li>
-        </ul>
+        <div class="pbp-navitems">
+            <a class="pbp-navitem" href="/projects" title="Projects">Projects</a>
+            <a class="pbp-navitem" href="/posts" title="Blog">Blog</a>
+            <a class="pbp-navitem icon-github-alt" href="https://github.com/mwcz" title="Clone my git repos"></a>
+            <a class="pbp-navitem icon-twitter" href="https://twitter.com/mwcz" title="Eat a tweet"></a>
+        </div>
+        <!-- <a href="/projects" class="pbp-navlink">Projects</a> -->
+        <!-- <a href="/posts" class="pbp-navlink">Blog</a> -->
     </nav>
 </div>
 <!-- /.navbar -->
 <main role="main" class="container">
-    <article id="content" class="body">
+    <article>
+
+
         <header class="page-header">
-            <h1 class="entry-title">ColorPal</h1>
+            <h1>
+                ColorPal
+            </h1>
         </header>
-        <div class="entry-content">
-            <p><a href="http://colorpal.org/" title="colorpal.org">ColorPal</a> is an HTML5 color palette generator.  Here's a gif demonstrating
+
+
+        <p><a href="http://colorpal.org/" title="colorpal.org">ColorPal</a> is an HTML5 color palette generator.  Here's a gif demonstrating
 how to use ColorPal.  The color quality in gifs is pretty terrible, but you can
 still see the basic usage.</p>
 <p>Try it out at <a href="http://colorpal.org/">colorpal.org</a>.</p>
@@ -71,61 +80,36 @@ still see the basic usage.</p>
 <p>ColorPal also has a <a href="/2013/11/07/colorpal-cli/" title="ColorPal's CLI">command-line interface</a>, powered by <a href="http://nodejs.org/" title="Node.js official site">Node.js</a>.</p>
 <p>I've written some <a href="/tag/colorpal" title="Posts about ColorPal">posts about ColorPal</a>.</p>
 <div class="clearfix"></div>
-        </div>
-            <h2>Related posts:</h2>
-            <ul>
-            <li>
-                <a href="https://palebluepixel.org/2014/03/23/rgb-webgl-color-cube/">RGB WebGL Color Cube</a>
-            </li>
-            <li>
-                <a href="https://palebluepixel.org/2013/11/07/colorpal-cli/">ColorPal CLI!</a>
-            </li>
-            <li>
-                <a href="https://palebluepixel.org/2012/07/30/colorpal-output-update/">ColorPal Output Update</a>
-            </li>
-            <li>
-                <a href="https://palebluepixel.org/2012/02/10/colorpal-palettes-improved/">ColorPal palettes improved!</a>
-            </li>
-            <li>
-                <a href="https://palebluepixel.org/2012/01/16/colorpal-alpha/">ColorPal Alpha</a>
-            </li>
-            <li>
-                <a href="https://palebluepixel.org/2011/11/17/html5-tool-for-creating-color-palettes-from-an-image/">HTML5 tool for creating color palettes from an image</a>
-            </li>
-            <li>
-                <a href="https://palebluepixel.org/2011/11/16/html5-canvas-area-selection-averaging/">HTML5 canvas area selection averaging</a>
-            </li>
-            <li>
-                <a href="https://palebluepixel.org/2011/11/16/html5-canvas-3d-pixel-array/">HTML5 canvas 3D pixel array</a>
-            </li>
-            <li>
-                <a href="https://palebluepixel.org/2011/11/16/html5-canvas-eyedropper/">HTML5 Canvas eyedropper</a>
-            </li>
-            </ul>
+
+        <!-- /.entry-content -->
+
+        <footer class="pbp-article-footer">
+            <small>
+                This article was published on
+                <time datetime="2012-01-16" pubdate="">2012-01-16</time>
+                by <a href="https://twitter.com/mwcz" title="mwcz twitter" rel="author">mwcz</a>
+                and tagged with
+                    <a href="https://palebluepixel.org/tag/html5" rel="category">html5</a>,                    <a href="https://palebluepixel.org/tag/javascript" rel="category">javascript</a>,                    <a href="https://palebluepixel.org/tag/color" rel="category">color</a>, and                    <a href="https://palebluepixel.org/tag/colorpal" rel="category">colorpal</a>.
+            </small>
+        </footer>
+
+
+
+
+
     </article>
-
-
-    <script src="https://apis.google.com/js/plusone.js">
-    </script>
-    <div class="g-comments"
-        data-href="https://palebluepixel.org/projects/colorpal/"
-        data-width="642"
-        data-first_party_property="BLOGGER"
-        data-view_type="FILTERED_POSTMOD">
-    </div>
-
 
 </main>
 
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<!-- <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script> -->
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
 <script>
     anchors.options.visible = 'touch';
-    anchors.options.placement = 'left';
+    anchors.options.placement = 'right';
     anchors.options.class = 'heading-anchor';
     anchors.add();
 </script></body>

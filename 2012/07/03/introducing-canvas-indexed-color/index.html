@@ -12,6 +12,8 @@
     <meta name="theme-color" content="#171717">
     <link rel="icon" type="image/png" href="/static/images/favicon.png">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 
         <!-- Open Graph tags -->
             <meta property="og:type" content="article"/>
@@ -44,19 +46,19 @@
 
 </head>
 <body>
-<div class="container">
+<div class="pbp-navbar-container">
     <nav class="pbp-navbar" role="navigation">
         <a href="https://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
-            PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+            PALE BLUE PIXEL
         </a>
-        <ul class="pbp-navitems">
-            <li class="pbp-navitem">
-                <a href="/projects" class="pbp-navlink">Projects</a>
-            </li>
-            <li class="pbp-navitem">
-                <a href="/posts" class="pbp-navlink">Blog</a>
-            </li>
-        </ul>
+        <div class="pbp-navitems">
+            <a class="pbp-navitem" href="/projects" title="Projects">Projects</a>
+            <a class="pbp-navitem" href="/posts" title="Blog">Blog</a>
+            <a class="pbp-navitem icon-github-alt" href="https://github.com/mwcz" title="Clone my git repos"></a>
+            <a class="pbp-navitem icon-twitter" href="https://twitter.com/mwcz" title="Eat a tweet"></a>
+        </div>
+        <!-- <a href="/projects" class="pbp-navlink">Projects</a> -->
+        <!-- <a href="/posts" class="pbp-navlink">Blog</a> -->
     </nav>
 </div>
 <!-- /.navbar -->
@@ -69,9 +71,9 @@
                 Introducing Canvas Indexed Color
             </h1>
         </header>
-        <div class="entry-content">
 
-            <p><a href="/projects/canvas_indexed_color" title="Canvas Indexed Color demo">Canvas Indexed Color demo</a></p>
+
+        <p><a href="/projects/canvas_indexed_color" title="Canvas Indexed Color demo">Canvas Indexed Color demo</a></p>
 <p><img alt="White SVG Tiger" src="https://palebluepixel.org/2012/07/03/introducing-canvas-indexed-color/hahatiger.png" /></p>
 <p>First, I converted the classic SVG tiger into a set of canvas drawing
 instructions using <a href="http://professorcloud.com/svg-to-canvas/" title="Professor Cloud's conversion
@@ -106,7 +108,6 @@ a true, usable, indexed-color API for canvas (someday, maybe!).</p>
 <p>The color picker is <a href="https://github.com/mattfarina/farbtastic" title="Farbtastic">Farbtastic</a>.  If you're interested in reading more about the history of
 indexed color, and a <strong>mind-blowing</strong> canvas demo, go
 <a href="http://www.effectgames.com/effect/article-Old_School_Color_Cycling_with_HTML5.html" title="Color cycling in HTML5 canvas">here</a>.</p>
-        </div>
 
         <!-- /.entry-content -->
 
@@ -122,14 +123,6 @@ indexed color, and a <strong>mind-blowing</strong> canvas demo, go
 
 
 
-    <script src="https://apis.google.com/js/plusone.js">
-    </script>
-    <div class="g-comments"
-        data-href="https://palebluepixel.org/2012/07/03/introducing-canvas-indexed-color/"
-        data-width="642"
-        data-first_party_property="BLOGGER"
-        data-view_type="FILTERED_POSTMOD">
-    </div>
 
 
     </article>
@@ -138,13 +131,13 @@ indexed color, and a <strong>mind-blowing</strong> canvas demo, go
 
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<!-- <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script> -->
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
 <script>
     anchors.options.visible = 'touch';
-    anchors.options.placement = 'left';
+    anchors.options.placement = 'right';
     anchors.options.class = 'heading-anchor';
     anchors.add();
 </script></body>

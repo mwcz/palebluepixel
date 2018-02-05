@@ -24,10 +24,12 @@ components like navigation, buttons, and alerts.  Also like Bootstrap, your
 components are distributed as HTML snippets for users to copy, paste, and
 customize.
 
-<video style="margin: 0 auto" poster="{attach}thumb.png" autoplay controls loop>
-    <source src="{attach}bootstrap-paste.webm" />
-    <source src="{attach}bootstrap-paste.mp4" />
-</video>
+<figure>
+    <video style="margin: 0 auto" poster="{attach}thumb.png" autoplay controls loop>
+        <source src="{attach}bootstrap-paste.webm" />
+        <source src="{attach}bootstrap-paste.mp4" />
+    </video>
+</figure>
 
 To improve ease of use, you encapsulate all that HTML into a custom element:
 

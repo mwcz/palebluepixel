@@ -11,6 +11,8 @@
     <meta name="theme-color" content="#171717">
     <link rel="icon" type="image/png" href="/static/images/favicon.png">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 
         <!-- Open Graph tags -->
             <meta property="og:type" content="website"/>
@@ -41,49 +43,106 @@
 
 </head>
 <body>
-<div class="container">
+<div class="pbp-navbar-container">
     <nav class="pbp-navbar" role="navigation">
         <a href="https://palebluepixel.org" title="Pale Blue Pixel homepage" id="pbp-logo">
-            PALE BL<span class="pbp-dot">&middot;</span>UE PIXEL
+            PALE BLUE PIXEL
         </a>
-        <ul class="pbp-navitems">
-            <li class="pbp-navitem">
-                <a href="/projects" class="pbp-navlink">Projects</a>
-            </li>
-            <li class="pbp-navitem">
-                <a href="/posts" class="pbp-navlink">Blog</a>
-            </li>
-        </ul>
+        <div class="pbp-navitems">
+            <a class="pbp-navitem" href="/projects" title="Projects">Projects</a>
+            <a class="pbp-navitem" href="/posts" title="Blog">Blog</a>
+            <a class="pbp-navitem icon-github-alt" href="https://github.com/mwcz" title="Clone my git repos"></a>
+            <a class="pbp-navitem icon-twitter" href="https://twitter.com/mwcz" title="Eat a tweet"></a>
+        </div>
+        <!-- <a href="/projects" class="pbp-navlink">Projects</a> -->
+        <!-- <a href="/posts" class="pbp-navlink">Blog</a> -->
     </nav>
 </div>
 <!-- /.navbar -->
 <main role="main" class="container">
 
 <section>
-<div class="row">
+
+<div class="latest-grid">
 
 
-        <article class="col-xs-12">
-                <div class="pbp-post-thumbnail">
-                    <a href="https://palebluepixel.org/2015/09/26/make-a-kimotion/">
-                        <img src="/static/images/gallery/400x/gallery/039/DSCF0634.JPG" />
-                    </a>
-                </div>
-            <header>
-                <h2>
-                    <a href="https://palebluepixel.org/2015/09/26/make-a-kimotion/">
-                        Make a Kimotion!
-                    </a>
-                </h2>
-            </header>
-            <div class="meta">
-                PBP39
-                <time datetime="2015-09-26" pubdate="">2015-09-26</time>
-            </div>
-            <div class="summary">
-                <p>Kimotion is a new framework for building interactive art exhibits.  It will appeal mostly to the Programmer Artist types.  Think "Warrior Poet", but with keyboards.</p>
-            </div>
-        </article>
+        
+<section class="glass-card">
+    <div class="glass-card-ratio">
+        <a class="glass-card-link" href="/projects/pity-about-earth"></a>
+        <img class="glass-card-bg " src="/projects/pity-about-earth/logo-notitle.png">
+        <div class="glass-card-border-outer"></div>
+        <div class="glass-card-border-inner"></div>
+        <h1 class="glass-card-title">
+            Pity About Earth...
+        </h1>
+        <!-- <div class="glass-card-cite"> -->
+        <!--     <img class="glass-card-author-img" src="https://pbs.twimg.com/profile_images/504363485363318785/it9hd5ae_400x400.jpeg"> -->
+        <!--     <p class="glass-card-author">Michael Clayton</p> -->
+        <!--     <p class="glass-card-date">Dec 14</p> -->
+        <!-- </div> -->
+    </div>
+</section>
+
+
+
+        
+<section class="glass-card">
+    <div class="glass-card-ratio">
+        <a class="glass-card-link" href="/projects/squareoff"></a>
+        <img class="glass-card-bg " src="/projects/squareoff/square-off-logo.png">
+        <div class="glass-card-border-outer"></div>
+        <div class="glass-card-border-inner"></div>
+        <h1 class="glass-card-title">
+            Square Off
+        </h1>
+        <!-- <div class="glass-card-cite"> -->
+        <!--     <img class="glass-card-author-img" src="https://pbs.twimg.com/profile_images/504363485363318785/it9hd5ae_400x400.jpeg"> -->
+        <!--     <p class="glass-card-author">Michael Clayton</p> -->
+        <!--     <p class="glass-card-date">Dec 14</p> -->
+        <!-- </div> -->
+    </div>
+</section>
+
+
+
+        
+<section class="glass-card">
+    <div class="glass-card-ratio">
+        <a class="glass-card-link" href="/projects/kimotion"></a>
+        <h1 class="glass-card-title">
+            Kimotion
+        </h1>
+        <!-- <div class="glass-card-cite"> -->
+        <!--     <img class="glass-card-author-img" src="https://pbs.twimg.com/profile_images/504363485363318785/it9hd5ae_400x400.jpeg"> -->
+        <!--     <p class="glass-card-author">Michael Clayton</p> -->
+        <!--     <p class="glass-card-date">Dec 14</p> -->
+        <!-- </div> -->
+    </div>
+</section>
+
+
+
+        
+<section class="glass-card">
+    <div class="glass-card-ratio">
+        <a class="glass-card-link" href="/2015/09/26/make-a-kimotion/"></a>
+        <img class="glass-card-bg " src="/static/images/gallery/400x/gallery/039/DSCF0634.JPG">
+        <div class="glass-card-border-outer"></div>
+        <div class="glass-card-border-inner"></div>
+        <h1 class="glass-card-title">
+            Make a Kimotion!
+        </h1>
+        <!-- <div class="glass-card-cite"> -->
+        <!--     <img class="glass-card-author-img" src="https://pbs.twimg.com/profile_images/504363485363318785/it9hd5ae_400x400.jpeg"> -->
+        <!--     <p class="glass-card-author">Michael Clayton</p> -->
+        <!--     <p class="glass-card-date">Dec 14</p> -->
+        <!-- </div> -->
+    </div>
+</section>
+
+
+
     </div> <!-- /.row -->
 
 
@@ -93,13 +152,13 @@
 
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script>
+<!-- <script src="https://palebluepixel.org/theme/js/bootstrap.min.js"></script> -->
 <script src="https://palebluepixel.org/theme/lib/prism/prism.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
 <script>
     anchors.options.visible = 'touch';
-    anchors.options.placement = 'left';
+    anchors.options.placement = 'right';
     anchors.options.class = 'heading-anchor';
     anchors.add();
 </script></body>

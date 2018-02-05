@@ -1,46 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Pale Blue Pixel</title><link href="https://palebluepixel.org/" rel="alternate"></link><link href="http://localhost:8000/feeds/atom.xml" rel="self"></link><id>https://palebluepixel.org/</id><updated>2017-10-12T00:00:00-04:00</updated><entry><title>Noise/Echo Cancellation in Fedora 26</title><link href="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/" rel="alternate"></link><published>2017-10-12T00:00:00-04:00</published><updated>2017-10-12T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-10-12:/2017/10/12/noiseecho-cancellation-in-fedora-26/</id><summary type="html">&lt;p&gt;How to enable PulseAudio noise and echo cancellation in Fedora 26.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Minimic is great.  I just received mine last week, and I'm loving the ability to join video calls with &lt;a href="http://gradolabs.com/"&gt;nice, comfy headphones&lt;/a&gt;.  It's much better than switching back and forth between headphones and a headset.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/minimic.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;The only problem is that, since the minimic is just &lt;em&gt;a wire&lt;/em&gt;, it doesn't have any noise or echo cancellation.  And since Fedora doesn't come with that feature enabled by default, the mic was picking up a lot of ambient noise.  &lt;a href="https://chrisbredesen.com/"&gt;Breddy&lt;/a&gt; told me that steps just like the following didn't work in Fedora a few versions ago, so I wanted to document them now that the issues seem to be fixed.  I originally found these instructions on &lt;a href="https://www.reddit.com/r/linux/comments/2yqfqp/just_found_that_pulseaudio_have_noise/"&gt;this r/linux post&lt;/a&gt; and am reposting them here with Fedora-specific flourishes.&lt;/p&gt;
-&lt;p&gt;Without further ado, here's how to turn on noise and echo cancellation in Fedora 26.&lt;/p&gt;
-&lt;h2 id="if-you-just-want-it-to-work"&gt;If you just want it to work&lt;/h2&gt;
-&lt;p&gt;If you're in a rush, here's a script that will set everything up for you.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;:::bash
-sudo dnf install -y webrtc-audio-processing
-echo '.nofail' | sudo tee -a /etc/pulse/default.pa
-echo 'load-module module-echo-cancel aec_method=webrtc' | sudo tee -a /etc/pulse/default.pa
-pulseaudio -k
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id="again-but-with-explanation"&gt;Again, but with explanation&lt;/h2&gt;
-&lt;p&gt;The first step is to install the WebRTC audio processing package.  It &lt;em&gt;may&lt;/em&gt; come by default with Fedora.  My machine had it installed already, but I'm including it here in case it was simply a dependency of some other package I've installed.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;:::bash
-sudo dnf install webrtc-audio-processing
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Then add these two lines to the end of &lt;code&gt;/etc/pulse/default.pa&lt;/code&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;:::bash
-.nofail
-load-module module-echo-cancel aec_method=webrtc
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Then restart PulseAudio.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;:::bash
-pulseaudio -k
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now, if you open Sound settings, you should see a new entry under the &lt;em&gt;Input&lt;/em&gt; tab.  Mine is called "&lt;strong&gt;Built-in Audio Analog Stereo (echo cancelled with SA9027 USB Audio Analog Stereo)&lt;/strong&gt;".  Not sure what's up with that name; my mic is connected with a 3.5mm audio jack.  Whatever, it works!&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/devices.png"&gt;&lt;/p&gt;
-&lt;p&gt;Select the device that says "echo cancelled" and your audio should go from this:&lt;/p&gt;
-&lt;figure&gt;
-    &lt;img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/before.jpg" alt="Audio spectrum analysis of microphone input without noise cancellation." /&gt;
-    &lt;figcaption&gt;Spectrum analysis without noise cancellation.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;To this:&lt;/p&gt;
-&lt;figure&gt;
-    &lt;img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/after.jpg" alt="Audio spectrum analysis of microphone input with noise cancellation." /&gt;
-    &lt;figcaption&gt;Spectrum analysis with noise cancellation.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Hope this works!  Let me know in the comments below.&lt;/p&gt;</content><category term="linux"></category><category term="fedora"></category><category term="audio"></category></entry><entry><title>geekSPARK 2017</title><link href="https://palebluepixel.org/2017/09/17/geekspark-2017/" rel="alternate"></link><published>2017-09-17T00:00:00-04:00</published><updated>2017-09-17T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-09-17:/2017/09/17/geekspark-2017/</id><summary type="html">&lt;p&gt;The SPARKcon creativity festival: on the geeky side.&lt;/p&gt;</summary><content type="html">&lt;p&gt;geekSPARK is a showcase of creative use of technology, taking place each year during the &lt;a href="https://sparkcon.com"&gt;SPARKcon&lt;/a&gt; art festival.  What lies below is a summary of the festivities at geekSPARK 2017.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pale Blue Pixel</title><link href="https://palebluepixel.org/" rel="alternate"></link><link href="http://localhost:8000/feeds/atom.xml" rel="self"></link><id>https://palebluepixel.org/</id><updated>2017-10-12T00:00:00-04:00</updated><entry><title>geekSPARK 2017</title><link href="https://palebluepixel.org/2017/09/17/geekspark-2017/" rel="alternate"></link><published>2017-09-17T00:00:00-04:00</published><updated>2017-09-17T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-09-17:/2017/09/17/geekspark-2017/</id><summary type="html">&lt;p&gt;The SPARKcon creativity festival: on the geeky side.&lt;/p&gt;</summary><content type="html">&lt;p&gt;geekSPARK is a showcase of creative use of technology, taking place each year during the &lt;a href="https://sparkcon.com"&gt;SPARKcon&lt;/a&gt; art festival.  What lies below is a summary of the festivities at geekSPARK 2017.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="geekSPARK logo" src="https://palebluepixel.org/2017/09/17/geekspark-2017/geekSPARK-icon.png" /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 &lt;h2 id="rc-speedway"&gt;RC Speedway&lt;/h2&gt;
 &lt;p&gt;The RC Speedway was an incredibly fun creation by maker extraordinaire Bill Culverhouse from &lt;a href="https://splatspace.org/"&gt;SplatSpace&lt;/a&gt;.  Bill mounted cameras on the RC cars which fed wirelessly into first-person displays.  The cars were &lt;em&gt;fast&lt;/em&gt;, and the sensation of speed from the first-person view was exhilirating.  I'm kicking myself for not taking any video.&lt;/p&gt;
 &lt;figure&gt;
@@ -53,10 +14,13 @@ pulseaudio -k
     &lt;figcaption&gt;Yes, there was a &lt;i&gt;ramp&lt;/i&gt;!&lt;/figcaption&gt;
 &lt;/figure&gt;
 
+&lt;hr /&gt;
 &lt;h2 id="virtual-reality"&gt;Virtual Reality&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://memorymachinecreative.com/"&gt;Tyler Jackson&lt;/a&gt; brought his immersive art piece, &lt;em&gt;Before the War&lt;/em&gt;.  In it, you explore a series of thoughtful, atmospheric vignettes.  This is the first time VR has made an appearance at geekSPARK and I think it's here to stay.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Tyler Jackson's &amp;quot;Before the War&amp;quot; VR exhibit" src="https://palebluepixel.org/2017/09/17/geekspark-2017/tyler-vr.jpg" /&gt;&lt;/p&gt;
-&lt;p&gt;I recommend reading the INDY's &lt;a href="https://www.indyweek.com/indyweek/tyler-jacksons-exhibit-at-lump-scouts-the-next-frontier-for-artists-virtual-reality/"&gt;review of Before the War&lt;/a&gt;.&lt;/p&gt;
+&lt;figure&gt;&lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/tyler-vr.jpg" alt="Tyler Jackson's &amp;quot;Before the War&amp;quot; VR exhibit" /&gt;&lt;/figure&gt;
+
+&lt;p&gt;I recommend reading &lt;a href="https://www.indyweek.com/indyweek/tyler-jacksons-exhibit-at-lump-scouts-the-next-frontier-for-artists-virtual-reality/"&gt;the INDY's review of Before the War&lt;/a&gt;.&lt;/p&gt;
+&lt;hr /&gt;
 &lt;h2 id="all-things-led"&gt;All Things LED&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://maniacallabs.com/"&gt;Maniacal Labs&lt;/a&gt; returned again, with a bank of dazzling LED displays.  Some were old favorites, but among their new creations were an infinity mirror, a light saber, and an LED Pole (the &lt;em&gt;LPD8806Pole&lt;/em&gt;).&lt;/p&gt;
 &lt;figure&gt;
@@ -71,12 +35,13 @@ pulseaudio -k
 &lt;/figure&gt;
 
 &lt;p&gt;A few trusted friends were allowed to hold the light saber!&lt;/p&gt;
-&lt;video style="margin: 0 auto" autoplay controls loop&gt;
+&lt;video autoplay controls loop&gt;
     &lt;source src="https://palebluepixel.org/2017/09/17/geekspark-2017/spin-saber.mp4" /&gt;
     &lt;source src="https://palebluepixel.org/2017/09/17/geekspark-2017/spin-saber.webm" /&gt;
 &lt;/video&gt;
 
 &lt;p&gt;Check out &lt;a href="http://maniacallabs.com/sparkcon-2017/"&gt;this awesome summary&lt;/a&gt; of all the gear they brought.&lt;/p&gt;
+&lt;hr /&gt;
 &lt;h2 id="fire-tubes"&gt;Fire Tubes&lt;/h2&gt;
 &lt;p&gt;Ben Pritchett returned this year with Fire Tubes and a remixed soundtrack.  In essence, this exhibit is four &lt;a href="https://www.youtube.com/watch?v=ynqzeIYA7Iw"&gt;Ruben's tubes&lt;/a&gt; put together to form a four-piece organ whose fiery plumes dance with the music being played.  Ben mixes music to isolate each instrument, so you can see, for example, the drum beat reflected in flame.&lt;/p&gt;
 &lt;video style="margin: 0 auto" autoplay controls loop&gt;
@@ -84,26 +49,31 @@ pulseaudio -k
     &lt;source src="https://palebluepixel.org/2017/09/17/geekspark-2017/fire-table-anim.webm" /&gt;
 &lt;/video&gt;
 
+&lt;hr /&gt;
 &lt;h2 id="mushroom-hunters"&gt;Mushroom Hunters&lt;/h2&gt;
 &lt;p&gt;A fresh, fungusy addition to geekSPARK!  Geekery need not be constrained to digital hobbies.  Anna and Krystal, devoted mushroom enthusiasts, brought a huge haul of mushrooms to the event and educated visitors about mushroom eating, hunting, and biology.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="mushroom booth" src="https://palebluepixel.org/2017/09/17/geekspark-2017/mushrooms.jpg" /&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/mushrooms.jpg" alt="mushroom booth" /&gt;&lt;/figure&gt;
+
+&lt;hr /&gt;
 &lt;h2 id="digital-motion"&gt;Digital Motion&lt;/h2&gt;
 &lt;p&gt;Digital Motion is a perennial geekSPARK exhibit featuring interactive digital displays.  Using a variety of sensors, we use the movement of viewers to influence the display.  There are many displays, ranging from interactive art to a full-blown videogame with a leaderboard (the Fish Game!).&lt;/p&gt;
-&lt;p&gt;&lt;img alt="photo of Kimotion screen" src="https://palebluepixel.org/2017/09/17/geekspark-2017/kimotion.jpg" /&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/kimotion.jpg" alt="photo of Kimotion screen" /&gt;&lt;/figure&gt;
+
 &lt;p&gt;Learn more at &lt;a href="http://kimotion.xyz"&gt;Kimotion.xyz&lt;/a&gt;.&lt;/p&gt;
+&lt;hr /&gt;
 &lt;h2 id="3d-printing"&gt;3D Printing&lt;/h2&gt;
 &lt;p&gt;3D printed parts played a role in most of the exhibits this year.  The RC Speedway's camera mounts, Digital Motion's hand sensor mount, a slew of bits and bobs from All Things LED, all used 3D printed parts.  Most of all, Bill brought in some 3D printers to teach the crowd about printing, but sadly I don't have any pictures of the printers, or the giant terrifying T-Rex print he brought.&lt;/p&gt;
-&lt;div class="row"&gt;
-    &lt;figure class="col-sm-6"&gt;
-        &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/leap.jpg" alt="photo of hand sensor mount" /&gt;
-        &lt;figcaption&gt;3D-printed mount for the Leap Motion (hand-tracking sensor)&lt;/figcaption&gt;
-    &lt;/figure&gt;
-    &lt;figure class="col-sm-6"&gt;
-        &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/rc-cam.jpg" alt="photo of RC car camera mount" /&gt;
-        &lt;figcaption&gt;3D-printed camera mount for the RC Speedway&lt;/figcaption&gt;
-    &lt;/figure&gt;
-&lt;/div&gt;
+&lt;figure&gt;
+    &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/leap.jpg" alt="photo of hand sensor mount" /&gt;
+    &lt;figcaption&gt;3D-printed mount for the Leap Motion (hand-tracking sensor)&lt;/figcaption&gt;
+&lt;/figure&gt;
 
+&lt;figure&gt;
+    &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/rc-cam.jpg" alt="photo of RC car camera mount" /&gt;
+    &lt;figcaption&gt;3D-printed camera mount for the RC Speedway&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;hr /&gt;
 &lt;h2 id="whats-next"&gt;What's next?&lt;/h2&gt;
 &lt;p&gt;geekSPARK 2018!  The two big goals for next year are:&lt;/p&gt;
 &lt;ol&gt;
@@ -112,17 +82,17 @@ pulseaudio -k
 &lt;/ol&gt;
 &lt;p&gt;The current location, Red Hat Annex, has served us very well (thanks &lt;a href="https://redhat.com"&gt;Red Hat&lt;/a&gt;!), however it's far enough from the center of SPARKcon that we only see a tiny fraction of the 60,000 visitors.  Findability is very important at a large art festival, and we're exploring options for a more central location next year.&lt;/p&gt;
 &lt;p&gt;Signage this year was okay, but a bit rushed.  Even with the maps, many visitors weren't able to find our locations.  Next year's signage will be simple and clear!&lt;/p&gt;
-&lt;div class="row"&gt;
-    &lt;figure class="col-sm-6"&gt;
-        &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/flyer.png" alt="geekSPARK flyer" /&gt;
-        &lt;figcaption&gt;geekSPARK 2017 flyer&lt;/figcaption&gt;
-    &lt;/figure&gt;
-    &lt;figure class="col-sm-6"&gt;
-        &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/poster.jpg" alt="geekSPARK poster" /&gt;
-        &lt;figcaption&gt;geekSPARK 2017 poster&lt;/figcaption&gt;
-    &lt;/figure&gt;
-&lt;/div&gt;
+&lt;figure&gt;
+    &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/flyer.png" alt="geekSPARK flyer" /&gt;
+    &lt;figcaption&gt;geekSPARK 2017 flyer&lt;/figcaption&gt;
+&lt;/figure&gt;
 
+&lt;figure&gt;
+    &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/poster.jpg" alt="geekSPARK poster" /&gt;
+    &lt;figcaption&gt;geekSPARK 2017 poster&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;hr /&gt;
 &lt;h2 id="special-thanks"&gt;Special thanks&lt;/h2&gt;
 &lt;p&gt;Immense appreciation goes out to all the SPARKcon and geekSPARK volunteers who made the event happen.  In no particular order (randomly sorted, in fact), here is a list of everyone involved with geekSPARK 2017, or geekSPARKs of the past.&lt;/p&gt;
 &lt;ul&gt;
@@ -151,51 +121,37 @@ pulseaudio -k
 &lt;p&gt;&lt;img src="https://palebluepixel.org/2017/08/04/in-orange-light/kr0.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;And they accomplished all that with 3D models my Amiga 500 could have rendered (sans lighting).  Strategic omission of detail really has a way of setting fire to an imagination.&lt;/p&gt;
 &lt;p&gt;The atmosphere and storytelling from that game have been rolling around in my mind since then.  With Ludum Dare 39 approaching, I'd decided to try my novice hand at recreating some of its techniques.&lt;/p&gt;
+&lt;hr /&gt;
 &lt;h2 id="ludum-dare-39"&gt;Ludum Dare 39&lt;/h2&gt;
 &lt;p&gt;Jared and I have participated in the Ludum Dare &lt;em&gt;Jam&lt;/em&gt; &lt;a href="http://ludumdare.com/compo/ludum-dare-35/?action=preview&amp;amp;uid=91554"&gt;three&lt;/a&gt; &lt;a href="http://ludumdare.com/compo/ludum-dare-37/?action=preview&amp;amp;uid=91554"&gt;whole&lt;/a&gt; &lt;a href="https://ldjam.com/events/ludum-dare/38/pity-about-earth"&gt;times&lt;/a&gt;, and we've been growing curious about the &lt;em&gt;Compo&lt;/em&gt; (aka, Hard Mode).  Jared decided to sit this one out, so I took the opportunity to enter my first Compo, which is an exclusively solo endeavor.  The theme was "Running out of power".  Without any further ado, here is my game, &lt;a href="http://scripta.co/in-orange-light/"&gt;In Orange Light&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://palebluepixel.org/2017/08/04/in-orange-light/in-orange-light-scenery.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://ldjam.com/events/ludum-dare/39/in-orange-light"&gt;View the Ludum Dare entry&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
 &lt;h2 id="day-1-of-2-the-foundation"&gt;Day 1 of 2, the foundation&lt;/h2&gt;
 &lt;p&gt;With Kentucky Route Zero fresh in my mind, I wanted to branch out from my usual arcade-style game and try to make something a little more moody and atmospheric.  Based on the "running out of power" theme, my idea was a survival game where you try to balance scant resources to survive winter in a frigid mountain cabin.&lt;/p&gt;
 &lt;p&gt;To get the math out of the way, I spent the first day implementing a basic simulation of warmth, food, fuel, a generator, heater, and all their interactions.  I also created some placeholder art, so I'd have something to click on and cringe at.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://palebluepixel.org/2017/08/04/in-orange-light/placeholder-art.png"&gt;&lt;/p&gt;
+&lt;hr /&gt;
 &lt;h2 id="day-2-of-2-some-polish"&gt;Day 2 of 2, some polish&lt;/h2&gt;
 &lt;p&gt;I spent about half of Sunday improving the visuals, and the other half fixing bugs in the simulation I'd created on Saturday.&lt;/p&gt;
 &lt;h3 id="making-it-mountainous"&gt;Making it mountainous&lt;/h3&gt;
 &lt;p&gt;Starting with a set of rectangles, and using a photo of the Blue Ridge Mountains as a reference, I tweaked vector paths into something resembling mountains.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://palebluepixel.org/2017/08/04/in-orange-light/making-mountains.gif"&gt;&lt;/p&gt;
 &lt;h3 id="sunrise-day-sunset-night-repeat"&gt;Sunrise, day, sunset, night, repeat&lt;/h3&gt;
+&lt;p&gt;The plain blue mountains lacked luster, and a day/night cycle seemed like a fitting way to bring them some life.&lt;/p&gt;
 &lt;style type="text/css" rel="stylesheet"&gt;
-#iol-sky-demo {
-    float: right;
-    padding-left: 20px;
-    pointer-events: none;
-}
-@media (max-width: 600px) {
-    #iol-sky-demo {
-        float: none;
-    }
-    #iol-sky-demo canvas {
-        margin: 0 auto;
-    }
-}
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
+#iol-sky-demo &gt; canvas {
+    margin: 0 auto;
 }
 &lt;/style&gt;
 
-&lt;p&gt;The plain blue mountains lacked luster, and a day/night cycle seemed like a fitting way to bring them some life.&lt;/p&gt;
-&lt;div id="iol-sky-demo"&gt;&lt;/div&gt;
+&lt;figure id="iol-sky-demo"&gt;&lt;/figure&gt;
 
 &lt;p&gt;I made the mountain sprites greyscale and multiplied them against two very tall, sliding sky gradients.  Here's a visual of the technique, zoomed way out so you can see the two sky images playing leap frog as they slide up the screen. (This is a live demo, not a video.)&lt;/p&gt;
 &lt;p&gt;To see the full sky sunrise and sunset, give &lt;a href="http://scripta.co/in-orange-light/"&gt;In Orange Light&lt;/a&gt; a play, but don't dismiss the text.  That way, time will be paused and you won't starve of freeze.&lt;/p&gt;
-&lt;div class="clearfix"&gt;&lt;/div&gt;
-
 &lt;h3 id="sound-effects"&gt;Sound effects&lt;/h3&gt;
 &lt;p&gt;The game has a few sound effects.  The heater's electric hum, the generator's rumble, and the growing, clawing sound of hunger.  To create these, I used &lt;a href="http://beepbox.co"&gt;BeepBox&lt;/a&gt;, a chiptune music sequencer.  It's meant for music, but I was able to coax some sound effects out of it.  Here are two of the sound effects, hit &lt;code&gt;Play&lt;/code&gt; to hear them through the BeepBox synthesizer live on this page.&lt;/p&gt;
-&lt;div id="sfx"&gt;
+&lt;div id="sfx" class="beside"&gt;
     &lt;p&gt;
         &lt;button id="generator"&gt;Play&lt;/button&gt; Generator  &lt;small&gt;&lt;a href="http://beepbox.co/#5s7k0l00e00t7m1a7g00j0i1r1w81445111f30222000d11000101c00023000h40000000v20214050o3000b8p1xkNVAWE6CCIdttddsB1xkn3qmrx-GabxL0"&gt;(view in BeepBox)&lt;/a&gt;&lt;/small&gt;
     &lt;/p&gt;
@@ -249,6 +205,7 @@ pulseaudio -k
     });
 &lt;/script&gt;
 
+&lt;hr /&gt;
 &lt;h2 id="lessons-learned"&gt;Lessons learned&lt;/h2&gt;
 &lt;p&gt;First, working solo is much harder than working on a team, but not only because a team can get more work done.  Maintaining the sense of urgency, productivity, and focus was nearly impossible without a co-conspirator.&lt;/p&gt;
 &lt;p&gt;Second, system-of-numbers games need careful design and planning.  In Orange Light is essentially a small spreadsheet where you click buttons in order to keep some numbers within a desired range.  It seemed very simple at first, but a slew of problems arose after I &lt;em&gt;thought&lt;/em&gt; I had finished the simulation.&lt;/p&gt;
@@ -292,7 +249,109 @@ pulseaudio -k
 &lt;img hidden src="https://palebluepixel.org/2017/08/04/in-orange-light/images/mountain2.png"&gt;
 &lt;img hidden src="https://palebluepixel.org/2017/08/04/in-orange-light/images/mountain3.png"&gt;
 &lt;img hidden src="https://palebluepixel.org/2017/08/04/in-orange-light/images/mountain4.png"&gt;
-&lt;img hidden src="https://palebluepixel.org/2017/08/04/in-orange-light/iol-square-logo.jpg"&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="web"></category><category term="gamedev"></category><category term="ludum-dare"></category><category term="ld39"></category><category term="in-orange-light"></category></entry><entry><title>Meet SimPixel</title><link href="https://palebluepixel.org/2017/03/10/meet-simpixel/" rel="alternate"></link><published>2017-03-10T00:00:00-05:00</published><updated>2017-03-10T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-03-10:/2017/03/10/meet-simpixel/</id><summary type="html">&lt;p&gt;A WebGL-based visualizer for LED displays.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have someone I'd like you to meet.  SimPixel, meet everyone.  Everyone,
+&lt;img hidden src="https://palebluepixel.org/2017/08/04/in-orange-light/iol-square-logo.jpg"&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="web"></category><category term="gamedev"></category><category term="ludum-dare"></category><category term="ld39"></category><category term="in-orange-light"></category></entry><entry><title>Zorbio</title><link href="https://palebluepixel.org/projects/zorbio" rel="alternate"></link><published>2016-11-03T00:00:00-04:00</published><updated>2016-11-03T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2016-11-03:/projects/zorbio</id><summary type="html">&lt;p&gt;Zorbio is a free multiplayer eat-em-up game that you can play in your browser!&lt;/p&gt;
+&lt;p&gt;Zorbio is brought to you by …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Zorbio is a free multiplayer eat-em-up game that you can play in your browser!&lt;/p&gt;
+&lt;p&gt;Zorbio is brought to you by my good friend Jared Sprague and I, via our small game development company, &lt;a href="http://scripta.co/"&gt;Scripta, Inc&lt;/a&gt;. Follow Zorbio development on the &lt;a href="http://scripta.co/"&gt;Scripta blog&lt;/a&gt;, or on &lt;a href="https://www.facebook.com/zorbio/"&gt;Facebook&lt;/a&gt;.&lt;/p&gt;
+&lt;p class="text-center"&gt;&lt;a class="btn btn-default btn-lg" href="http://zor.bio"&gt;Play now!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://palebluepixel.org/static/images/projects/icon_zorbio.jpg" alt="screenshot of Zorbio" /&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="web"></category><category term="scripta"></category><category term="games"></category><category term="gamedev"></category><category term="zorbio"></category></entry><entry><title>Noise/Echo Cancellation in Fedora 26</title><link href="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/" rel="alternate"></link><published>2017-10-12T00:00:00-04:00</published><updated>2017-10-12T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-10-12:/2017/10/12/noiseecho-cancellation-in-fedora-26/</id><summary type="html">&lt;p&gt;How to enable PulseAudio noise and echo cancellation in Fedora 26.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Minimic is great.  I just received mine last week, and I'm loving the ability to join video calls with &lt;a href="http://gradolabs.com/"&gt;nice, comfy headphones&lt;/a&gt;.  It's much better than switching back and forth between headphones and a headset.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/minimic.jpg"&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The only problem is that, since the minimic is just &lt;em&gt;a wire&lt;/em&gt;, it doesn't have any noise or echo cancellation.  And since Fedora doesn't come with that feature enabled by default, the mic was picking up a lot of ambient noise.  &lt;a href="https://chrisbredesen.com/"&gt;Breddy&lt;/a&gt; told me that steps just like the following didn't work in Fedora a few versions ago, so I wanted to document them now that the issues seem to be fixed.  I originally found these instructions on &lt;a href="https://www.reddit.com/r/linux/comments/2yqfqp/just_found_that_pulseaudio_have_noise/"&gt;this r/linux post&lt;/a&gt; and am reposting them here with Fedora-specific flourishes.&lt;/p&gt;
+&lt;p&gt;Without further ado, here's how to turn on noise and echo cancellation in Fedora 26.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id="if-you-just-want-it-to-work"&gt;If you just want it to work&lt;/h2&gt;
+&lt;p&gt;If you're in a rush, here's a script that will set everything up for you.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;:::bash
+sudo dnf install -y webrtc-audio-processing
+echo '.nofail' | sudo tee -a /etc/pulse/default.pa
+echo 'load-module module-echo-cancel aec_method=webrtc' | sudo tee -a /etc/pulse/default.pa
+pulseaudio -k
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h2 id="again-but-with-explanation"&gt;Again, but with explanation&lt;/h2&gt;
+&lt;p&gt;The first step is to install the WebRTC audio processing package.  It &lt;em&gt;may&lt;/em&gt; come by default with Fedora.  My machine had it installed already, but I'm including it here in case it was simply a dependency of some other package I've installed.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;:::bash
+sudo dnf install webrtc-audio-processing
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then add these two lines to the end of &lt;code&gt;/etc/pulse/default.pa&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;:::bash
+.nofail
+load-module module-echo-cancel aec_method=webrtc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then restart PulseAudio.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;:::bash
+pulseaudio -k
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, if you open Sound settings, you should see a new entry under the &lt;em&gt;Input&lt;/em&gt; tab.  Mine is called "&lt;strong&gt;Built-in Audio Analog Stereo (echo cancelled with SA9027 USB Audio Analog Stereo)&lt;/strong&gt;".  Not sure what's up with that name; my mic is connected with a 3.5mm audio jack.  Whatever, it works!&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/devices.png"&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Select the device that says "echo cancelled" and your audio background hiss should drop to almost nothing.  Here's a before and after spectrum analysis.&lt;/p&gt;
+&lt;div class="beside"&gt;
+    &lt;figure&gt;
+        &lt;img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/before.jpg" alt="Audio spectrum analysis of microphone input without noise cancellation." /&gt;
+        &lt;figcaption&gt;Spectrum analysis without noise cancellation.&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure&gt;
+        &lt;img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/after.jpg" alt="Audio spectrum analysis of microphone input with noise cancellation." /&gt;
+        &lt;figcaption&gt;Spectrum analysis &lt;b&gt;with&lt;/b&gt; noise cancellation.&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;</content><category term="linux"></category><category term="fedora"></category><category term="audio"></category></entry><entry><title>Pity About Earth...</title><link href="https://palebluepixel.org/projects/pity-about-earth" rel="alternate"></link><published>2017-05-07T00:00:00-04:00</published><updated>2017-05-07T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-05-07:/projects/pity-about-earth</id><summary type="html">&lt;p class="text-center"&gt;&lt;a class="btn btn-default btn-lg" href="http://pae.fun/"&gt;Play now!&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Humanity, listen up. This is the Universe. I am sick of you sticking your nose where it doesn …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p class="text-center"&gt;&lt;a class="btn btn-default btn-lg" href="http://pae.fun/"&gt;Play now!&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Humanity, listen up. This is the Universe. I am sick of you sticking your nose where it doesn’t belong. That’s why there’s a huge asteroid heading straight for your pitiful Earth, courtesy of yours truly. I see you’ve built a flimsy Barrier and a stockpile of Missiles, but it won’t help. Enjoy the end times! Bye-bye. Talk soon.&lt;/p&gt;
+&lt;p&gt;– The Universe&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="http://pae.fun/"&gt;&lt;img alt="play" src="https://palebluepixel.org/projects/pity-about-earth/logo-square.png" /&gt;&lt;/a&gt; &lt;br&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;p&gt;The weekend before Ludum Dare, I wrote a post about &lt;a href="http://scripta.co/articles/Preparing-for-Ludum-Dare-38/"&gt;preparing for Ludum Dare 38&lt;/a&gt;.  It began as follows.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Ludum Dare 38 is currently &lt;strong&gt;hurtling through space&lt;/strong&gt; on a &lt;strong&gt;direct trajectory&lt;/strong&gt; with next weekend.  &lt;strong&gt;Impact&lt;/strong&gt; is estimated at 9PM on Friday, and the result will be a &lt;strong&gt;chaotic, harebrained&lt;/strong&gt;, and fun-filled weekend. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Those words must have put us under some kind of spell, because over the weekend &lt;a href="https://twitter.com/caramelcode"&gt;Jared&lt;/a&gt; and I built a chaotic, harebrained game about protecting the Earth from asteroids on a direct trajectory with Earth.&lt;/p&gt;
+&lt;p class="text-center"&gt;&lt;a class="btn btn-default btn-lg" href="http://pae.fun/"&gt;Play now!&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id="weekend-retro"&gt;Weekend Retro&lt;/h2&gt;
+&lt;p&gt;On Friday night, we planned out a 1v1 multiplyer game where one player defends Earth at the other played as a cruel Universe intent on destroying Earth with asteroids.  It wasn't until Saturday evening that we decided to drop the multiplayer component, due to the some incompatible opinions &lt;a href="http://lance.gg/"&gt;Lance server&lt;/a&gt; imposes on the game client's build system.&lt;/p&gt;
+&lt;p&gt;After dropping multiplayer, our velocity shot up and we implemented most of the game mechanics, gameplay, and difficulty tuning on Sunday. Here's a series of clips showing the progression of the game starting Saturday morning and ending Monday night.&lt;/p&gt;
+&lt;figure&gt;
+&lt;video style="margin: 0 auto" controls loop autoplay&gt;
+&lt;source src="https://palebluepixel.org/projects/pity-about-earth/progress-smaller.webm" /&gt;                                                   
+&lt;/video&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;We finished about 20 minutes before the submission deadline.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id="ear-candy"&gt;Ear Candy&lt;/h2&gt;
+&lt;p&gt;The most exciting part of LD38 for us was working with a &lt;a href="https://ldjam.com/events/ludum-dare/38/pity-about-earth/a-retro-for-pity-about-earth"&gt;Veuskemini&lt;/a&gt;.  Audio has always been our weakest point, so working with a composer was a huge thrill.  This guy is seriously talented!  We sent him a description of the game plan on Friday night, and the next morning he had already laid down two amazing, intense, evocative tracks.  If we score well in any category, I'm confident it will be Audio.  Check out this studio!&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Veuskemini studio" src="https://palebluepixel.org/projects/pity-about-earth/veuskemini-studio.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;You can listen to the &lt;a href="https://veuskemini.bandcamp.com/album/pity-about-earth-ost"&gt;Pity About Earth OST&lt;/a&gt; directly.  You can also find more of Veuskemini's work at: &lt;a href="https://www.youtube.com/channel/UC2ebq32zwRC5O6kMJXy32Jg"&gt;YouTube&lt;/a&gt;, &lt;a href="https://www.facebook.com/VEUSKEMINI"&gt;Facebook&lt;/a&gt;, &lt;a href="https://soundcloud.com/veuskemini"&gt;Soundcloud&lt;/a&gt;, &lt;a href="https://veuskemini.bandcamp.com"&gt;Bandcamp&lt;/a&gt;, &lt;a href="https://loudr.fm/artist/veuskemini/FE6ZW"&gt;Loudr&lt;/a&gt;, &lt;a href="https://www.reverbnation.com/veuskemini"&gt;Reverbnation&lt;/a&gt;, and &lt;a href="https://www.instagram.com/veuskemini_vapor_lab"&gt;Instagram&lt;/a&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id="reception"&gt;Reception&lt;/h2&gt;
+&lt;p&gt;Some kind streamers have already played Pity About Earth for their audiences.  Here are links to the VODs, and pictures of their faces while playing.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.twitch.tv/videos/138433485?t=02h15m09s"&gt;&lt;img alt="TogisLp plays Pity About Earth" src="https://palebluepixel.org/projects/pity-about-earth/togislp.png" /&gt; &lt;strong&gt;TogisLp&lt;/strong&gt; plays Pity About Earth...&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.twitch.tv/videos/138479164?t=01h48m26s"&gt;&lt;img alt="drazil100 plays Pity About Earth" src="https://palebluepixel.org/projects/pity-about-earth/drazil100.png" /&gt; &lt;strong&gt;drazil100&lt;/strong&gt; plays Pity About Earth...&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.twitch.tv/videos/138561326?t=37m15s"&gt;&lt;img alt="JenniNexus plays Pity  About Earty" src="https://palebluepixel.org/projects/pity-about-earth/jenninexus.png" /&gt; &lt;strong&gt;JenniNexus&lt;/strong&gt; plays Pity About Earth...&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Judging is ongoing and we've gotten some good suggestions so far, mostly centering around the fact that the game is too hard.  We'll certainly tune that post-jam, but the game at its core is an arcade survival game, so the difficulty &lt;em&gt;will&lt;/em&gt; eventually kill you.&lt;/p&gt;
+&lt;p&gt;Out of the games I've rated, my favorite so far is &lt;a href="https://ldjam.com/events/ludum-dare/38/crater-creator"&gt;Crater Creator&lt;/a&gt;, an impresisve compo (hard mode) game about smashing asteroids into a planetoid to make it large enough to become habitable.  It's a pleasing counterpart to our game about deflecting asteroids to &lt;em&gt;keep&lt;/em&gt; a planet habitable.  Great fun!&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id="post-jam-improvements"&gt;Post-Jam improvements&lt;/h2&gt;
+&lt;p&gt;We fixed a few bugs post-jam, like a barrier-lockup bug that caused the barrier to become unmovable.  We've also been brainstorming ideas that we couldn't fit into the jam weekend, like improving the missile ability, making the viewport a square instead of a portrait rectangle, and granting bonus score for blocking full asteroid barrages.  We plan to implement these changes after judging has concluded.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://palebluepixel.org/projects/pity-about-earth/difficulty.png" /&gt;&lt;/p&gt;
+&lt;p&gt;As you can probably tell from the screen orientation, the game was designed with mobile in mind.  Mobile wasn't a big priority for the jam, but we plan to post the game to app stores after jam judging is complete.  Some tweaks will be necessary, like lessening the already-punishing difficulty.&lt;/p&gt;
+&lt;p&gt;Thanks to our families, the players, the streamers who've played the game, and all othe other LDJAM participants!&lt;/p&gt;
+&lt;p&gt;&lt;img hidden src="https://palebluepixel.org/projects/pity-about-earth/logo-notitle.png"&gt;&lt;/p&gt;</content><category term="programming"></category><category term="ludum-dare"></category><category term="ld38"></category><category term="javascript"></category><category term="phaser"></category><category term="webgl"></category><category term="gamedev"></category><category term="2d"></category><category term="web"></category><category term="pity-about-earth"></category></entry><entry><title>Meet SimPixel</title><link href="https://palebluepixel.org/2017/03/10/meet-simpixel/" rel="alternate"></link><published>2017-03-10T00:00:00-05:00</published><updated>2017-03-10T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-03-10:/2017/03/10/meet-simpixel/</id><summary type="html">&lt;p&gt;A WebGL-based visualizer for LED displays.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have someone I'd like you to meet.  SimPixel, meet everyone.  Everyone,
 SimPixel.&lt;/p&gt;
 &lt;div id="simpixel-container"&gt;&lt;/div&gt;
 
@@ -311,7 +370,10 @@ and Dan build over at &lt;a href="http://maniacallabs.com/"&gt;Maniacal Labs&lt;
 }
 &lt;/style&gt;
 
-&lt;p&gt;&lt;img id="mlabs" src="https://palebluepixel.org/2017/03/10/meet-simpixel/maniacal.jpg" alt="some Maniacal Labs LED projects" /&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src="https://palebluepixel.org/2017/03/10/meet-simpixel/maniacal.jpg" alt="some Maniacal Labs LED projects" /&gt;
+&lt;/figure&gt;
+
 &lt;p&gt;My working theory about why it's &lt;em&gt;so&lt;/em&gt; much like their displays is that I built
 most of SimPixel while sitting at Adam's workbench.  I don't know, there could
 be a connection.  If you too would like to take a seat at Adam's illustrious
@@ -320,8 +382,6 @@ demo&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/ManiacalLabs/BiblioPixel/wiki"&gt;BiblioPixel&lt;/a&gt;, &lt;abbr title="Maniacal Labs"&gt;ML's&lt;/abbr&gt; light animation
 library, sends layouts and colors to SimPixel using a simple &lt;a href="https://en.wikipedia.org/wiki/WebSocket"&gt;WebSocket&lt;/a&gt;
 protocol.&lt;/p&gt;
-&lt;div class="clearfix"&gt;&lt;/div&gt;
-
 &lt;h2 id="the-protocol"&gt;The Protocol&lt;/h2&gt;
 &lt;p&gt;By itself, SimPixel is useless.  To turn on the lights, it connects to a
 WebSocket service.  That service is expected to send certain messages, namely a
@@ -442,9 +502,63 @@ format.  Pretty cool.&lt;/p&gt;
 
 &lt;script defer src="/static/projects/simpixel/js/view.js"&gt;&lt;/script&gt;
 
-&lt;script defer src="/static/projects/simpixel/js/main.js"&gt;&lt;/script&gt;
+&lt;script defer src="/static/projects/simpixel/js/main.js"&gt;&lt;/script&gt;</content><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="web"></category><category term="led"></category><category term="maniacal-labs"></category></entry><entry><title>Fireflies</title><link href="https://palebluepixel.org/projects/fireflies" rel="alternate"></link><published>2017-02-06T00:00:00-05:00</published><updated>2017-02-06T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-02-06:/projects/fireflies</id><summary type="html">&lt;p&gt;Fireflies is a WebGL demo in which a friendly flock of fireflies forms shapes
+for your entertainment.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fireflies title screen" src="/static/images/projects/fireflies/title.jpg" /&gt;&lt;/p&gt;
+&lt;p class="text-center"&gt;&lt;a class="btn btn-default btn-lg" href="/static/projects/fireflies"&gt;Live demo!&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt="screenshot" src="https://palebluepixel.org/2017/03/10/meet-simpixel/thumb.jpg" /&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="web"></category><category term="led"></category><category term="maniacal-labs"></category></entry><entry><title>Kimotion at geekSPARK 2016</title><link href="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/" rel="alternate"></link><published>2017-01-12T00:00:00-05:00</published><updated>2017-01-12T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-01-12:/2017/01/12/kimotion-at-geekspark-2016/</id><summary type="html">&lt;p&gt;Kimotion-powered interactive art at SPARKcon 2016.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Just a few short &lt;del&gt;days&lt;/del&gt; months ago, &lt;a href="http://kimotion.xyz"&gt;Kimotion&lt;/a&gt; was on
+&lt;iframe id="vimeo-player" src="https://player.vimeo.com/video/202827845" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Thanks …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Fireflies is a WebGL demo in which a friendly flock of fireflies forms shapes
+for your entertainment.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fireflies title screen" src="/static/images/projects/fireflies/title.jpg" /&gt;&lt;/p&gt;
+&lt;p class="text-center"&gt;&lt;a class="btn btn-default btn-lg" href="/static/projects/fireflies"&gt;Live demo!&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe id="vimeo-player" src="https://player.vimeo.com/video/202827845" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Thanks to &lt;a href="https://twitter.com/lorenschmidt"&gt;Loren Schmidt&lt;/a&gt; for agreeing to let me use the awesome
+pixel-person avatar.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/mwcz/fireflies/"&gt;View source&lt;/a&gt;, if you're into that kind of thing.&lt;/p&gt;
+&lt;script&gt;
+var iframe = $('iframe#vimeo-player');
+
+function handle_vid_click() {
+    iframe.attr('src', $(this).find('[data-vid-src]').attr('data-vid-src') + '?autoplay=1');
+}
+
+function init_vimeo_picker() {
+    // get every img with data-vid-src
+    // get ref to iframe
+    // create onclick for each img which sets iframe's src to data-vid-src
+    var vidlinks = $('.vimeo-thumbnail');
+    vidlinks.on('click', handle_vid_click);
+}
+
+init_vimeo_picker();
+
+function set_vimeo_iframe_height() {
+    iframe.attr('height', iframe.width() / (1280/720) );
+}
+
+document.addEventListener('DOMContentLoaded', set_vimeo_iframe_height);
+window.addEventListener('resize', set_vimeo_iframe_height);
+&lt;/script&gt;
+
+&lt;p&gt;&lt;img hidden src="https://palebluepixel.org/projects/fireflies/fireflies-logo.png"&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="particles"></category></entry><entry><title>Tracer</title><link href="https://palebluepixel.org/projects/tracer" rel="alternate"></link><published>2017-01-25T00:00:00-05:00</published><updated>2017-01-25T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-01-25:/projects/tracer</id><summary type="html">&lt;p&gt;Tracer is a 3D connect-the-dots game that &lt;a href="https://twitter.com/caramelcode/"&gt;Jared&lt;/a&gt; and I created for
+Ludum Dare 37.&lt;/p&gt;
+&lt;p class="text-center"&gt;&lt;a class="btn btn-default btn-lg" href="http://scripta.co/tracer"&gt;Play now!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="menu screen of tracer" src="/static/images/projects/tracer/title.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;We were very …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Tracer is a 3D connect-the-dots game that &lt;a href="https://twitter.com/caramelcode/"&gt;Jared&lt;/a&gt; and I created for
+Ludum Dare 37.&lt;/p&gt;
+&lt;p class="text-center"&gt;&lt;a class="btn btn-default btn-lg" href="http://scripta.co/tracer"&gt;Play now!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="menu screen of tracer" src="/static/images/projects/tracer/title.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;We were very happy with the ratings Tracer received.  In the &lt;em&gt;Innovation&lt;/em&gt;
+category, we placed 5th out of 1,489 games.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image of playing tracer" src="/static/images/projects/tracer/head.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;A more detailed blog post is available at the &lt;a href="http://scripta.co/articles/tracer-ld37/"&gt;Scripta Games blog&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/ScriptaGames/Tracer"&gt;View source&lt;/a&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="web"></category><category term="scripta"></category><category term="games"></category><category term="gamedev"></category><category term="tracer"></category></entry><entry><title>Kimotion at geekSPARK 2016</title><link href="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/" rel="alternate"></link><published>2017-01-12T00:00:00-05:00</published><updated>2017-01-12T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-01-12:/2017/01/12/kimotion-at-geekspark-2016/</id><summary type="html">&lt;p&gt;Kimotion-powered interactive art at SPARKcon 2016.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Just a few short &lt;del&gt;days&lt;/del&gt; months ago, &lt;a href="http://kimotion.xyz"&gt;Kimotion&lt;/a&gt; was on
 display at SPARKcon.  SPARKcon is a large art festival in Raleigh, and we
 occupy a small slice of it called geekSPARK.&lt;/p&gt;
 &lt;h2 id="kimotion-levels-up"&gt;Kimotion Levels Up&lt;/h2&gt;
@@ -452,10 +566,12 @@ occupy a small slice of it called geekSPARK.&lt;/p&gt;
 was workable, but a lot of visitors had trouble using it, especially kids.
 This year, I added Leap Motion support, which was a huge... &lt;em&gt;jump&lt;/em&gt; forward for
 hand tracking.&lt;/p&gt;
+&lt;figure&gt;
 &lt;video style="margin: 0 auto" controls autoplay loop&gt;
 &lt;source src="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/arm.mp4" /&gt;
 &lt;source src="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/arm.webm" /&gt;
 &lt;/video&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;Adam, of Maniacal Labs, built the fantastic adjustable Leap Motion mounting arm
 shown above.  It allowed visitors of any height to participate comfortably and
@@ -479,14 +595,18 @@ further next year.&lt;/p&gt;
 &lt;h2 id="pictures"&gt;Pictures!&lt;/h2&gt;
 &lt;p&gt;$GALLERY&lt;/p&gt;
 &lt;h2 id="viva-la-geekspark"&gt;Viva la geekSPARK!&lt;/h2&gt;
-&lt;p&gt;&lt;img style="float: right" src="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/geekspark.png" alt="geekSPARK logo" /&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/geekspark.png" alt="geekSPARK logo" /&gt;
+&lt;/figure&gt;
+
 &lt;p&gt;Thanks to Truett and Noel for all their organization and support.  Thanks to
 Ian for pulling me into this project two years ago and for climbing into the
 ceiling to shut off the lights.  And thanks to all the &lt;a href="http://kimotion.xyz/#contributors"&gt;Kimotion
 contributors&lt;/a&gt; for building mods and adding color and fun to everyone's
 weekend.&lt;/p&gt;
-&lt;p&gt;&lt;span class="clearfix"&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img style="display: none !important;" src="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/thumb.jpg"&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category><category term="kimotion"></category></entry><entry><title>Lazyloading Web Components</title><link href="https://palebluepixel.org/2016/09/06/lazyloading-web-components/" rel="alternate"></link><published>2016-09-06T00:00:00-04:00</published><updated>2016-09-06T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2016-09-06:/2016/09/06/lazyloading-web-components/</id><summary type="html">&lt;p&gt;Convenience hacking: Web Components without imports.&lt;/p&gt;</summary><content type="html">&lt;p&gt;They say &lt;a href="http://threevirtues.com/"&gt;good developers are lazy&lt;/a&gt;.  A tedious process is no match for a
+&lt;div hidden&gt;
+    &lt;img src="https://palebluepixel.org/2017/01/12/kimotion-at-geekspark-2016/thumb.jpg"&gt;
+&lt;/div&gt;</content><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category><category term="kimotion"></category></entry><entry><title>Lazyloading Web Components</title><link href="https://palebluepixel.org/2016/09/06/lazyloading-web-components/" rel="alternate"></link><published>2016-09-06T00:00:00-04:00</published><updated>2016-09-06T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2016-09-06:/2016/09/06/lazyloading-web-components/</id><summary type="html">&lt;p&gt;Convenience hacking: Web Components without imports.&lt;/p&gt;</summary><content type="html">&lt;p&gt;They say &lt;a href="http://threevirtues.com/"&gt;good developers are lazy&lt;/a&gt;.  A tedious process is no match for a
 lazy developer.  Below is an experiment in laziness.  It's a proof of concept
 for using Web Components without having to manually import each one.&lt;/p&gt;
 &lt;p&gt;I'm not sure exactly what to call it.  It grazes the definitions of
@@ -499,10 +619,12 @@ or ease-of-use gone mad...&lt;/p&gt;
 components like navigation, buttons, and alerts.  Also like Bootstrap, your
 components are distributed as HTML snippets for users to copy, paste, and
 customize.&lt;/p&gt;
-&lt;video style="margin: 0 auto" poster="https://palebluepixel.org/2016/09/06/lazyloading-web-components/thumb.png" autoplay controls loop&gt;
-    &lt;source src="https://palebluepixel.org/2016/09/06/lazyloading-web-components/bootstrap-paste.webm" /&gt;
-    &lt;source src="https://palebluepixel.org/2016/09/06/lazyloading-web-components/bootstrap-paste.mp4" /&gt;
-&lt;/video&gt;
+&lt;figure&gt;
+    &lt;video style="margin: 0 auto" poster="https://palebluepixel.org/2016/09/06/lazyloading-web-components/thumb.png" autoplay controls loop&gt;
+        &lt;source src="https://palebluepixel.org/2016/09/06/lazyloading-web-components/bootstrap-paste.webm" /&gt;
+        &lt;source src="https://palebluepixel.org/2016/09/06/lazyloading-web-components/bootstrap-paste.mp4" /&gt;
+    &lt;/video&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;To improve ease of use, you encapsulate all that HTML into a custom element:&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-markup"&gt;&amp;lt;ws-panel heading=&amp;#34;I am a ws-panel&amp;#34;&amp;gt;Some words.&amp;lt;/ws-panel&amp;gt;
@@ -695,14 +817,14 @@ efficiently rendered with HTML and CSS.&lt;/p&gt;
 &lt;p&gt;While developing &lt;a href="/projects/dimo"&gt;DiMo&lt;/a&gt; and &lt;a href="http://kimotion.xyz"&gt;Kimotion&lt;/a&gt;, I became
 fond of &lt;a href="http://threejs.org"&gt;three.js&lt;/a&gt; particle systems for their performance and visual
 charm.&lt;/p&gt;
-&lt;div class="row"&gt;
-    &lt;figure class="col-sm-6"&gt;
+&lt;div class="beside"&gt;
+    &lt;figure&gt;
         &lt;a href="/projects/dimo"&gt;
             &lt;img src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/swath-colors.jpg" alt="DiMo picture" /&gt;
         &lt;/a&gt;
         &lt;figcaption&gt;Particle gravity simulation in &lt;a href="/projects/dimo"&gt;DiMo: Particles&lt;/a&gt; (50,000 particles)&lt;/figcaption&gt;
     &lt;/figure&gt;
-    &lt;figure class="col-sm-6"&gt;
+    &lt;figure&gt;
         &lt;a href="/projects/kimotion"&gt;
             &lt;img src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/kimotion-pic.jpg" alt="Kimotion picture" /&gt;
         &lt;/a&gt;
@@ -718,15 +840,15 @@ that limitation, although such tricks are still tedious in WebGL.&lt;/p&gt;
 &lt;h3 id="its-pixel-time"&gt;It's Pixel Time&lt;/h3&gt;
 &lt;p&gt;When a network request is detected, the particle system moves a tiny dot in an
 arc to its destination.&lt;/p&gt;
-&lt;div class="row"&gt;
-    &lt;figure class="col-sm-6"&gt;
+&lt;div class="beside"&gt;
+    &lt;figure&gt;
         &lt;video style="margin: 0 auto" poster="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/traffic-viz-basic-thumb.jpg" autoplay controls loop&gt;
             &lt;source src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/traffic-viz-basic.mp4" /&gt;
             &lt;source src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/traffic-viz-basic.webm" /&gt;
         &lt;/video&gt;
         &lt;figcaption&gt;Particles arc from purple to blue&lt;/figcaption&gt;
     &lt;/figure&gt;
-    &lt;figure class="col-sm-6"&gt;
+    &lt;figure&gt;
         &lt;video style="margin: 0 auto" poster="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/traffic-viz-bluegreen-thumb.jpg" autoplay controls loop&gt;
             &lt;source src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/traffic-viz-bluegreen.mp4" /&gt;
             &lt;source src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/traffic-viz-bluegreen.webm" /&gt;
@@ -737,12 +859,12 @@ arc to its destination.&lt;/p&gt;
 
 &lt;p&gt;The arcs are defined by sine waves.  Here are the particle arcs as they appear
 on-screen, and another shot with sine wave guides showing.&lt;/p&gt;
-&lt;div class="row"&gt;
-    &lt;figure class="col-sm-6"&gt;
+&lt;div class="beside"&gt;
+    &lt;figure&gt;
         &lt;img src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/pipeline-nosines.jpg" alt="pipeline with particles arcing" /&gt;
         &lt;figcaption&gt;Particle arcs&lt;/figcaption&gt;
     &lt;/figure&gt;
-    &lt;figure class="col-sm-6"&gt;
+    &lt;figure&gt;
         &lt;img src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/pipeline-sines.jpg" alt="pipeline with sine wave guides for the particle arcs" /&gt;
         &lt;figcaption&gt;Sine wave guides&lt;/figcaption&gt;
     &lt;/figure&gt;
@@ -764,13 +886,17 @@ of those particles moves randomly up and down to add more visual interest.&lt;/p
 the whole team in person.  A few days later, all our hard work came together as
 well.  All the preparation paid off and the demo worked perfectly.  Here's a
 shot of my particle visualization from the official recording.&lt;/p&gt;
-&lt;video style="margin: 0 auto" poster="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/traffic-thumb.jpg" autoplay controls loop&gt;
-    &lt;source src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/traffic.webm" /&gt;
-    &lt;source src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/traffic.mp4" /&gt;
-&lt;/video&gt;
+&lt;figure&gt;
+    &lt;video style="margin: 0 auto" poster="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/traffic-thumb.jpg" autoplay controls loop&gt;
+        &lt;source src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/traffic.webm" /&gt;
+        &lt;source src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/traffic.mp4" /&gt;
+    &lt;/video&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;Watch the full keynote here:&lt;/p&gt;
+&lt;figure&gt;
 &lt;iframe style="display: block; margin: 0 auto;" width="100%" height="315" src="https://www.youtube.com/embed/ooA6FmTL4Dk" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/figure&gt;
 
 &lt;h3 id="glow-rope"&gt;Glow Rope&lt;/h3&gt;
 &lt;p&gt;Early on, before traffic data was available, I had the particles follow the
@@ -795,7 +921,36 @@ eye-opening for me.  A week out and tired to the bone, I was thinking "No way
 am I doing this next year!"  But the thrill of everyone's hard work coming
 together drove away the exhaustion.  I can't wait to see what we can cook up
 next year.&lt;/p&gt;
-&lt;p&gt;&lt;img style="display: none !important;" src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/post-thumbnail.jpg"&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="web"></category><category term="redhat"></category><category term="redhat-summit"></category></entry><entry><title>The Last Conceit</title><link href="https://palebluepixel.org/2015/12/13/the-last-conceit/" rel="alternate"></link><published>2015-12-13T00:00:00-05:00</published><updated>2015-12-13T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-12-13:/2015/12/13/the-last-conceit/</id><summary type="html">&lt;p&gt;Humans have had it rough for the past few centuries!  Repeated humbling by scientific discoveries has left our ego in shambles.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Humans have had it rough for the past few centuries!  Emotionally, I mean.  It
+&lt;p&gt;&lt;img style="display: none !important;" src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/post-thumbnail.jpg"&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="web"></category><category term="redhat"></category><category term="redhat-summit"></category></entry><entry><title>Square Off</title><link href="https://palebluepixel.org/projects/squareoff" rel="alternate"></link><published>2016-04-19T00:00:00-04:00</published><updated>2016-04-19T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2016-04-19:/projects/squareoff</id><summary type="html">&lt;p&gt;Square Off is a 1v1 airhockey-style game that &lt;a href="https://twitter.com/caramelcode/"&gt;Jared&lt;/a&gt; and &lt;a href="https://twitter.com/mwcz/"&gt;I&lt;/a&gt;
+built in 72 hours for the &lt;a href="http://ludumdare.com/compo/2016/04/13/welcome-to-ludum-dare-35/"&gt;Ludum Dare 35 …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Square Off is a 1v1 airhockey-style game that &lt;a href="https://twitter.com/caramelcode/"&gt;Jared&lt;/a&gt; and &lt;a href="https://twitter.com/mwcz/"&gt;I&lt;/a&gt;
+built in 72 hours for the &lt;a href="http://ludumdare.com/compo/2016/04/13/welcome-to-ludum-dare-35/"&gt;Ludum Dare 35&lt;/a&gt; game jam.  And beacuse it's
+web-based, you can...&lt;/p&gt;
+&lt;p class="text-center"&gt;&lt;a class="btn btn-default btn-lg" href="http://sqoff.com"&gt;Play now!&lt;/a&gt;&lt;/p&gt;
+
+&lt;style&gt;
+.sqoff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 10px;
+}
+&lt;/style&gt;
+
+&lt;figure class="sqoff-grid"&gt;
+    &lt;img src="https://palebluepixel.org/static/images/projects/squareoff/title.png" alt="Square Off title screen" /&gt;
+    &lt;img src="https://palebluepixel.org/static/images/projects/squareoff/screenshot.png" alt="Square Off gameplay" /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;We were both very happy with how the game turned out, especially since this was
+our first game jam.  Our fellow game creators were nice enough to give us some
+&lt;a href="http://ludumdare.com/compo/ludum-dare-35/?action=preview&amp;amp;uid=91554"&gt;pretty good ratings&lt;/a&gt;, too.  Square Off placed 199th overall out of
+2,712 games.  Our best scores were in the FUN category where we placed 64th.&lt;/p&gt;
+&lt;p&gt;In other words, Square Off placed in the &lt;em&gt;97.6th percentile of fun!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Our mad 72-hour dash is documented in this &lt;a href="http://scripta.co/articles/squareoff-ld35/"&gt;retrospective&lt;/a&gt; on the
+&lt;a href="http://scripta.co/"&gt;Scripta blog&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Oh, and if you're so inclined, &lt;a href="https://github.com/ScriptaGames/SquareOff/"&gt;view source&lt;/a&gt;.&lt;/p&gt;
+&lt;div hidden&gt;
+    &lt;img hidden src="https://palebluepixel.org/projects/squareoff/square-off-logo.png"&gt;
+&lt;/div&gt;</content><category term="programming"></category><category term="ludum-dare"></category><category term="ld35"></category><category term="javascript"></category><category term="phaser"></category><category term="webgl"></category><category term="gamedev"></category><category term="2d"></category><category term="web"></category><category term="squareoff"></category></entry><entry><title>The Last Conceit</title><link href="https://palebluepixel.org/2015/12/13/the-last-conceit/" rel="alternate"></link><published>2015-12-13T00:00:00-05:00</published><updated>2015-12-13T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-12-13:/2015/12/13/the-last-conceit/</id><summary type="html">&lt;p&gt;Humans have had it rough for the past few centuries!  Repeated humbling by scientific discoveries has left our ego in shambles.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Humans have had it rough for the past few centuries!  Emotionally, I mean.  It
 used to be so clear that we were privileged and important, the favorite child
 of creation.  How could it not be so?  Our planet was the fulcrum around which
 every heavenly body in the universe orbited.  We were the dominant form of life
@@ -804,31 +959,12 @@ creation of a loving but tempermental and sometimes murdery god.&lt;/p&gt;
 &lt;p&gt;The second chapter of &lt;a href="https://en.wikipedia.org/wiki/The_Varieties_of_Scientific_Experience"&gt;The Varieties of Scientific Experience&lt;/a&gt; by
 Carl Sagan documents the following recently discovered demerits:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;We're not in a central position in the universe.  Our Earth orbits around
-   the sun.  Our solar system is not at the center of our galaxy.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Our Sun is a typical star, with no special features to distinguish it from
-   the 1,000,000,000,000,000,000,000,000 other stars universe.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Not only that, stars are made of the same stuff we find right here on our
-   Earth.  That's not so majestic!&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Our earth is approximately 4,500,000,000 years old, but humans developed
-   recently, 1,000,000 years ago or so.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Humans are made of the same stuff and share a common lineage with all other
-   life on Earth.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The way we experience time is not from a &lt;a href="https://en.wikipedia.org/wiki/Preferred_frame"&gt;privileged frame of
-   reference&lt;/a&gt;.  There is nothing special about our position in the
-   universe or our motion through it.&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;We're not in a central position in the universe.  Our Earth orbits around the sun.  Our solar system is not at the center of our galaxy.&lt;/li&gt;
+&lt;li&gt;Our Sun is a typical star, with no special features to distinguish it from the 1,000,000,000,000,000,000,000,000 other stars universe.&lt;/li&gt;
+&lt;li&gt;Not only that, stars are made of the same stuff we find right here on our Earth.  That's not so majestic!&lt;/li&gt;
+&lt;li&gt;Our earth is approximately 4,500,000,000 years old, but humans developed recently, 1,000,000 years ago or so.&lt;/li&gt;
+&lt;li&gt;Humans are made of the same stuff and share a common lineage with all other life on Earth.&lt;/li&gt;
+&lt;li&gt;The way we experience time is not from a &lt;a href="https://en.wikipedia.org/wiki/Preferred_frame"&gt;privileged frame of reference&lt;/a&gt;.  There is nothing special about our position in the universe or our motion through it.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Carl then suggests that one idea of human privilege is still with us.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -863,7 +999,95 @@ have fought to resist that insight to the bitter end.&lt;/p&gt;
 Humans have a lot of traits, some admirable and some less so, but &lt;em&gt;we&lt;/em&gt; get to
 choose which to value.  In any case, we should probably stop looking to the
 universe for our sense of self-worth.&lt;/p&gt;
-&lt;p&gt;&lt;img style="display: none !important;" src="https://palebluepixel.org/2015/12/13/the-last-conceit/Copernican_heliocentrism_diagram-2.png"&gt;&lt;/p&gt;</content><category term="philosophy"></category><category term="technology"></category><category term="ai"></category></entry><entry><title>Make a Kimotion!</title><link href="https://palebluepixel.org/2015/09/26/make-a-kimotion/" rel="alternate"></link><published>2015-09-26T00:00:00-04:00</published><updated>2015-09-26T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-09-26:/2015/09/26/make-a-kimotion/</id><summary type="html">&lt;p&gt;Kimotion is a new framework for building interactive art exhibits.  It will appeal mostly to the Programmer Artist types.  Think "Warrior Poet", but with keyboards.&lt;/p&gt;</summary><content type="html">&lt;p&gt;A year ago, I had the joy of working on Digital Motion, an &lt;a href="https://en.wikipedia.org/wiki/Interactive_art"&gt;interactive
+&lt;p&gt;&lt;img style="display: none !important;" src="https://palebluepixel.org/2015/12/13/the-last-conceit/Copernican_heliocentrism_diagram-2.png"&gt;&lt;/p&gt;</content><category term="philosophy"></category><category term="technology"></category><category term="ai"></category></entry><entry><title>Kimotion</title><link href="https://palebluepixel.org/projects/kimotion" rel="alternate"></link><published>2015-09-26T00:00:00-04:00</published><updated>2015-09-26T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-09-26:/projects/kimotion</id><summary type="html">&lt;p&gt;&lt;img class="col-md-7" src="/static/images/gallery/900x/gallery/039/600_5782.JPG" alt="kids playing with kimotion" style="padding-left: 0; padding-right: 30px" /&gt;&lt;/p&gt;
+&lt;p&gt;Kimotion is a framework for building reactive art displays.&lt;/p&gt;
+&lt;p&gt;Creating an interactive art exhibit with Kimotion is easy.  Draw your …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img class="col-md-7" src="/static/images/gallery/900x/gallery/039/600_5782.JPG" alt="kids playing with kimotion" style="padding-left: 0; padding-right: 30px" /&gt;&lt;/p&gt;
+&lt;p&gt;Kimotion is a framework for building reactive art displays.&lt;/p&gt;
+&lt;p&gt;Creating an interactive art exhibit with Kimotion is easy.  Draw your ideas in
+either &lt;a href="http://p5js.org"&gt;2D&lt;/a&gt; or &lt;a href="http://threejs.org"&gt;3D&lt;/a&gt;.  Kimotion will provide information about
+the scene, which you can use to influence your display.&lt;/p&gt;
+&lt;p&gt;Learn more at &lt;a href="http://kimotion.xyz"&gt;kimotion.xyz&lt;/a&gt;, or if you want to see it in
+action...&lt;/p&gt;
+&lt;p class="text-center"&gt;&lt;a class="btn btn-default btn-lg" href="http://kimotion.xyz/live"&gt;Launch live demo!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id="video-clips"&gt;Video clips&lt;/h2&gt;
+&lt;p&gt;These images, when played in rapid succession, create the illusion of motion!&lt;/p&gt;
+&lt;figure&gt;
+    &lt;iframe id="vimeo-player" src="https://player.vimeo.com/video/136951447" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+    &lt;div class="vimeo-thumbnails"&gt;
+    &lt;div class="vimeo-thumbnail"&gt; &lt;img src="http://kimotion.xyz/images/video_thumbnails/9.jpg" data-vid-src="https://player.vimeo.com/video/136951447" /&gt; &lt;/div&gt;
+    &lt;div class="vimeo-thumbnail"&gt; &lt;img src="http://kimotion.xyz/images/video_thumbnails/11.jpg" data-vid-src="https://player.vimeo.com/video/137905577" /&gt; &lt;/div&gt;
+    &lt;div class="vimeo-thumbnail"&gt; &lt;img src="http://kimotion.xyz/images/video_thumbnails/3.jpg" data-vid-src="https://player.vimeo.com/video/126292045" /&gt; &lt;/div&gt;
+    &lt;div class="vimeo-thumbnail"&gt; &lt;img src="http://kimotion.xyz/images/video_thumbnails/10.jpg" data-vid-src="https://player.vimeo.com/video/137762679" /&gt; &lt;/div&gt;
+    &lt;div class="vimeo-thumbnail"&gt; &lt;img src="http://kimotion.xyz/images/video_thumbnails/6.jpg" data-vid-src="https://player.vimeo.com/video/136126008" /&gt; &lt;/div&gt;
+    &lt;div class="vimeo-thumbnail"&gt; &lt;img src="http://kimotion.xyz/images/video_thumbnails/5.jpg" data-vid-src="https://player.vimeo.com/video/133870922" /&gt; &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/figure&gt;
+
+&lt;style type="text/css"&gt;
+.vimeo-thumbnails {
+    display: grid;
+    grid-gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.vimeo-thumbnail {
+    cursor   : pointer;
+    position : relative;
+    z-index  : 9;
+    display  : inline-block;
+}
+
+.vimeo-thumbnail::before {
+    color       : white;
+    content     : "\25B6";
+    opacity     : 0.8;
+    position    : absolute;
+    display     : block;
+    text-shadow : 0 0 6px black;
+    z-index     : 100;
+    font-size   : 50px;
+    left        : 50%;
+    top         : 42%;
+    transform   : translate(-50%, -50%);
+}
+
+.vimeo-thumbnail:hover::before {
+    opacity     : 1;
+    text-shadow : 0 0 6px white;
+}
+&lt;/style&gt;
+
+&lt;script&gt;
+var iframe = $('iframe#vimeo-player');
+
+function handle_vid_click() {
+    iframe.attr('src', $(this).find('[data-vid-src]').attr('data-vid-src') + '?autoplay=1');
+}
+
+function init_vimeo_picker() {
+    // get every img with data-vid-src
+    // get ref to iframe
+    // create onclick for each img which sets iframe's src to data-vid-src
+    var vidlinks = $('.vimeo-thumbnail');
+    vidlinks.on('click', handle_vid_click);
+}
+
+init_vimeo_picker();
+
+function set_vimeo_iframe_height() {
+    iframe.attr('height', iframe.width() / (1280/720) );
+}
+
+document.addEventListener('DOMContentLoaded', set_vimeo_iframe_height);
+window.addEventListener('resize', set_vimeo_iframe_height);
+&lt;/script&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/mwcz/Kimotion"&gt;View source&lt;/a&gt;, if you like code.  Also check out &lt;a href="/projects/dimo"&gt;DiMo: Particles&lt;/a&gt;,
+the predecessor to Kimotion.&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="2d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category><category term="kimotion"></category></entry><entry><title>Make a Kimotion!</title><link href="https://palebluepixel.org/2015/09/26/make-a-kimotion/" rel="alternate"></link><published>2015-09-26T00:00:00-04:00</published><updated>2015-09-26T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-09-26:/2015/09/26/make-a-kimotion/</id><summary type="html">&lt;p&gt;Kimotion is a new framework for building interactive art exhibits.  It will appeal mostly to the Programmer Artist types.  Think "Warrior Poet", but with keyboards.&lt;/p&gt;</summary><content type="html">&lt;p&gt;A year ago, I had the joy of working on Digital Motion, an &lt;a href="https://en.wikipedia.org/wiki/Interactive_art"&gt;interactive
 art&lt;/a&gt; exhibit for Raleigh's annual art festival, &lt;a href="https://en.wikipedia.org/wiki/Sparkcon"&gt;SPARKcon&lt;/a&gt;.
 The month leading up to SPARKcon 2014 was a mad dash of perfecting the graphics
 and physics equations of my &lt;a href="/projects/dimo"&gt;DiMo: Particles&lt;/a&gt; display.  After a
@@ -883,19 +1107,17 @@ exhibits.  It will appeal mostly to the Programmer Artist types.  Think
 canvas.  On the canvas, you can paint pixels, but not boring, everyday pixels.
 What you paint can be animated by the movements of the people in the room.&lt;/p&gt;
 &lt;p&gt;Videos speak louder than text, so here are some videos of a variety of mods.&lt;/p&gt;
-&lt;iframe id="vimeo-player" src="https://player.vimeo.com/video/136951447" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;div class="vimeo-thumbnail"&gt; &lt;img src="http://kimotion.xyz/images/video_thumbnails/9.jpg" data-vid-src="https://player.vimeo.com/video/136951447" /&gt; &lt;/div&gt;
-
-&lt;div class="vimeo-thumbnail"&gt; &lt;img src="http://kimotion.xyz/images/video_thumbnails/11.jpg" data-vid-src="https://player.vimeo.com/video/137905577" /&gt; &lt;/div&gt;
-
-&lt;div class="vimeo-thumbnail"&gt; &lt;img src="http://kimotion.xyz/images/video_thumbnails/3.jpg" data-vid-src="https://player.vimeo.com/video/126292045" /&gt; &lt;/div&gt;
-
-&lt;div class="vimeo-thumbnail"&gt; &lt;img src="http://kimotion.xyz/images/video_thumbnails/10.jpg" data-vid-src="https://player.vimeo.com/video/137762679" /&gt; &lt;/div&gt;
-
-&lt;div class="vimeo-thumbnail"&gt; &lt;img src="http://kimotion.xyz/images/video_thumbnails/6.jpg" data-vid-src="https://player.vimeo.com/video/136126008" /&gt; &lt;/div&gt;
-
-&lt;div class="vimeo-thumbnail"&gt; &lt;img src="http://kimotion.xyz/images/video_thumbnails/5.jpg" data-vid-src="https://player.vimeo.com/video/133870922" /&gt; &lt;/div&gt;
+&lt;figure&gt;
+    &lt;iframe id="vimeo-player" src="https://player.vimeo.com/video/136951447" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+    &lt;div class="vimeo-thumbnails"&gt;
+    &lt;div class="vimeo-thumbnail"&gt; &lt;img src="http://kimotion.xyz/images/video_thumbnails/9.jpg" data-vid-src="https://player.vimeo.com/video/136951447" /&gt; &lt;/div&gt;
+    &lt;div class="vimeo-thumbnail"&gt; &lt;img src="http://kimotion.xyz/images/video_thumbnails/11.jpg" data-vid-src="https://player.vimeo.com/video/137905577" /&gt; &lt;/div&gt;
+    &lt;div class="vimeo-thumbnail"&gt; &lt;img src="http://kimotion.xyz/images/video_thumbnails/3.jpg" data-vid-src="https://player.vimeo.com/video/126292045" /&gt; &lt;/div&gt;
+    &lt;div class="vimeo-thumbnail"&gt; &lt;img src="http://kimotion.xyz/images/video_thumbnails/10.jpg" data-vid-src="https://player.vimeo.com/video/137762679" /&gt; &lt;/div&gt;
+    &lt;div class="vimeo-thumbnail"&gt; &lt;img src="http://kimotion.xyz/images/video_thumbnails/6.jpg" data-vid-src="https://player.vimeo.com/video/136126008" /&gt; &lt;/div&gt;
+    &lt;div class="vimeo-thumbnail"&gt; &lt;img src="http://kimotion.xyz/images/video_thumbnails/5.jpg" data-vid-src="https://player.vimeo.com/video/133870922" /&gt; &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;I began building Kimotion in February of 2015, well in advance of SPARKcon X,
 which took place in September.  This was a far cry from the single month of
@@ -967,12 +1189,18 @@ success this year.&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://palebluepixel.org/2014/08/25/particles-and-p-dimo-comes-to-life/"&gt;Particles and π - DiMo Comes to Life&lt;/a&gt; - more about the exhibit at SPARKcon!&lt;/li&gt;
 &lt;/ul&gt;
 &lt;style type="text/css"&gt;
+.vimeo-thumbnails {
+    display: grid;
+    grid-gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
 .vimeo-thumbnail {
     cursor   : pointer;
     position : relative;
     z-index  : 9;
     display  : inline-block;
-    width    : 32.2%;
 }
 
 .vimeo-thumbnail::before {
@@ -1018,7 +1246,47 @@ function set_vimeo_iframe_height() {
 
 document.addEventListener('DOMContentLoaded', set_vimeo_iframe_height);
 window.addEventListener('resize', set_vimeo_iframe_height);
-&lt;/script&gt;</content><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="2d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category><category term="kimotion"></category></entry><entry><title>WebAssembly is the Keystone</title><link href="https://palebluepixel.org/2015/06/20/webassembly-is-the-keystone/" rel="alternate"></link><published>2015-06-20T22:52:24-04:00</published><updated>2015-06-20T22:52:24-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-06-20:/2015/06/20/webassembly-is-the-keystone/</id><summary type="html">&lt;p&gt;Within the last two days, WebAssembly (&lt;strong&gt;wasm&lt;/strong&gt;) has graced the eyeballs of
+&lt;/script&gt;</content><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="2d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category><category term="kimotion"></category></entry><entry><title>Ping</title><link href="https://palebluepixel.org/projects/ping" rel="alternate"></link><published>2015-06-23T00:00:00-04:00</published><updated>2015-06-23T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-06-23:/projects/ping</id><summary type="html">&lt;p&gt;&lt;a href="/static/projects/ping"&gt;
+&lt;img class="col-md-7" src="https://palebluepixel.org/static/images/projects/ping/readme-screenshot.png" alt="screenshot of Ping" style="padding-left: 0; padding-right: 30px" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Check out Ping!  I created it for my team's booth at &lt;a href="http://www.redhat.com/summit/2015/"&gt;Red Hat Summit
+2015&lt;/a&gt; (Red Hat's huge annual conference …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="/static/projects/ping"&gt;
+&lt;img class="col-md-7" src="https://palebluepixel.org/static/images/projects/ping/readme-screenshot.png" alt="screenshot of Ping" style="padding-left: 0; padding-right: 30px" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Check out Ping!  I created it for my team's booth at &lt;a href="http://www.redhat.com/summit/2015/"&gt;Red Hat Summit
+2015&lt;/a&gt; (Red Hat's huge annual conference), to promote &lt;a href="https://access.redhat.com/labs/"&gt;Access
+Labs&lt;/a&gt;.  It's a 1-4 player pong clone with special powers.&lt;/p&gt;
+&lt;p&gt;It's Web-based, so you can play it &lt;em&gt;right this minute&lt;/em&gt;.  Our booth had a
+quintet of USB gamepads, but your keyboard works just as well.  Enjoy stomping
+the AI (instead of your fellow humans).&lt;/p&gt;
+&lt;p class="text-center"&gt;&lt;a class="btn btn-default btn-lg" href="/static/projects/ping"&gt;Play now!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Even as a lifelong gamer and programmer, this is the first videogame I've made.
+I built it within the excellent &lt;a href="http://phaser.io/"&gt;Phaser&lt;/a&gt; framework.  Building it was
+incredibly fun and a hurty lesson in the difficulty of game development.
+Complexity can really soar out of control when so many subsystems are woven
+into a single program.&lt;/p&gt;
+&lt;p&gt;Fortuitously, I had recently stolen a copy ($35 is a steal!) of what turned out
+to be an excellent book: &lt;a href="http://gameprogrammingpatterns.com/"&gt;Game Programming Patterns&lt;/a&gt; by &lt;a href="https://twitter.com/munificentbob"&gt;Bob
+Nystrom&lt;/a&gt;.  Several of the patterns described in that book can be found
+inside Ping.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="photo of game booth at Red Hat Summit" src="https://palebluepixel.org/static/images/projects/ping/booth.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Roughly 400 people played the game over the course of the event.  The top score
+was 597, which earned one dedicated player a pair of sweet headphones.  It was
+enriching to see so many people enjoying the game.  Each player experienced the
+game in a unique way, which was both surprising and instructive.&lt;/p&gt;
+&lt;p&gt;In short, it's fun to make games.  It's even better when other people enjoy
+them.  I think this is the beginning of a beautiful friendship.&lt;/p&gt;
+&lt;p style="clear:both;height:0"&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id="more-information"&gt;More information&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/redhataccess/pinglabs/"&gt;View source&lt;/a&gt; - the project's GitHub repo&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://access.redhat.com/labs/"&gt;Red Hat Access Labs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://phaser.io/"&gt;Phaser&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="programming"></category><category term="javascript"></category><category term="phaserjs"></category><category term="games"></category><category term="red hat"></category><category term="red hat summit"></category><category term="gamedev"></category><category term="ping"></category></entry><entry><title>WebAssembly is the Keystone</title><link href="https://palebluepixel.org/2015/06/20/webassembly-is-the-keystone/" rel="alternate"></link><published>2015-06-20T22:52:24-04:00</published><updated>2015-06-20T22:52:24-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-06-20:/2015/06/20/webassembly-is-the-keystone/</id><summary type="html">&lt;p&gt;Within the last two days, WebAssembly (&lt;strong&gt;wasm&lt;/strong&gt;) has graced the eyeballs of
 every JavaScript developer.  If wasm is new to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Within the last two days, WebAssembly (&lt;strong&gt;wasm&lt;/strong&gt;) has graced the eyeballs of
 every JavaScript developer.  If wasm is new to you, the articles linked at the
 end of this post fully describe what wasm &lt;em&gt;is&lt;/em&gt;.&lt;/p&gt;
@@ -1087,7 +1355,9 @@ locally.
 &lt;li&gt;&lt;a href="https://medium.com/javascript-scene/what-is-webassembly-the-dawn-of-a-new-era-61256ec5a8f6"&gt;Eric Elliot makes a strong and diverse case&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arstechnica.com/information-technology/2015/06/the-web-is-getting-its-bytecode-webassembly/"&gt;ArsTechnica brings wasm to a wider audience&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img style="display: none !important;" src="https://palebluepixel.org/2015/06/20/webassembly-is-the-keystone/asm.png"&gt;&lt;/p&gt;</content><category term="wasm"></category><category term="web"></category><category term="javascript"></category></entry><entry><title>The Lurking Horror</title><link href="https://palebluepixel.org/2015/06/20/the-lurking-horror/" rel="alternate"></link><published>2015-06-20T21:13:00-04:00</published><updated>2015-06-20T21:13:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-06-20:/2015/06/20/the-lurking-horror/</id><summary type="html">&lt;p&gt;In the midst of this beastly summer we've just entered, nothing seems farther
+&lt;div hidden&gt;
+&lt;img src="https://palebluepixel.org/2015/06/20/webassembly-is-the-keystone/asm.png"&gt;
+&lt;/div&gt;</content><category term="wasm"></category><category term="web"></category><category term="javascript"></category></entry><entry><title>The Lurking Horror</title><link href="https://palebluepixel.org/2015/06/20/the-lurking-horror/" rel="alternate"></link><published>2015-06-20T21:13:00-04:00</published><updated>2015-06-20T21:13:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-06-20:/2015/06/20/the-lurking-horror/</id><summary type="html">&lt;p&gt;In the midst of this beastly summer we've just entered, nothing seems farther
 away than the lung-clenching air of winter …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In the midst of this beastly summer we've just entered, nothing seems farther
 away than the lung-clenching air of winter.  When things are this hot, and
 pools and popsicles fail to cool, there's one foolproof way to get into the
@@ -1111,10 +1381,10 @@ Z-Machine engine which runs all the old Infocom text adventures).&lt;/p&gt;
 &lt;p&gt;Crank up the AC, grab your clicky keyboard, make CRT fullscreen, turn off the
 lights, and bathe in the cool cathode rays.&lt;/p&gt;
 &lt;p&gt;&lt;img style="display: none !important;" src="https://palebluepixel.org/2015/06/20/the-lurking-horror/lurking-horror-crt-thumb.jpg"&gt;&lt;/p&gt;</content><category term="text adventure"></category><category term="terminal"></category><category term="cool-retro-term"></category><category term="gaming"></category><category term="nostalgia"></category></entry><entry><title>Naming Names - Anonymity is Dead</title><link href="https://palebluepixel.org/2015/01/01/naming-names-anonymity-is-dead/" rel="alternate"></link><published>2015-01-01T00:00:00-05:00</published><updated>2015-01-01T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-01-01:/2015/01/01/naming-names-anonymity-is-dead/</id><summary type="html">&lt;p&gt;Naming things is hard enough, and JavaScript doesn't make it any easier.  Should anonymous functions be considered harmful?&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
-
+    &lt;p&gt;
     There are only two hard problems in computer science: cache invalidation,
     naming things, and off-by-one errors.
-
+    &lt;/p&gt;
     &lt;footer&gt;
         &lt;cite&gt;
             Phil Karlton, but I can't find a name for the original source...
@@ -1394,7 +1664,23 @@ project.&lt;/p&gt;
         katex.render(this.innerHTML, this);
     }
     $('[role=math]').each(render_math);
-&lt;/script&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="requirejs"></category><category term="amd"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category></entry><entry><title>Particles and π - DiMo Comes to Life</title><link href="https://palebluepixel.org/2014/08/25/particles-and-p-dimo-comes-to-life/" rel="alternate"></link><published>2014-08-25T00:00:00-04:00</published><updated>2014-08-25T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-08-25:/2014/08/25/particles-and-p-dimo-comes-to-life/</id><summary type="html">&lt;p&gt;A player walks up Fayetteville St in Raleigh, North Carolina.  SPARKcon has begun, and dozens of artists are ...&lt;/p&gt;</summary><content type="html">&lt;p&gt;A player walks up Fayetteville St in Raleigh, North Carolina.
+&lt;/script&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="requirejs"></category><category term="amd"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category></entry><entry><title>DiMo: Particles</title><link href="https://palebluepixel.org/projects/dimo" rel="alternate"></link><published>2014-08-25T00:00:00-04:00</published><updated>2014-08-25T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-08-25:/projects/dimo</id><summary type="html">&lt;p&gt;&lt;img class="col-md-7" src="https://palebluepixel.org/static/images/projects/dimo/setup.jpg" alt="night-before setup image" style="padding-left: 0; padding-right: 30px" /&gt;&lt;/p&gt;
+&lt;p&gt;Dimo: Particles is an artistic particle physics simulation and interactive art
+exhibit I created (along with fellow Red Hat engineers …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img class="col-md-7" src="https://palebluepixel.org/static/images/projects/dimo/setup.jpg" alt="night-before setup image" style="padding-left: 0; padding-right: 30px" /&gt;&lt;/p&gt;
+&lt;p&gt;Dimo: Particles is an artistic particle physics simulation and interactive art
+exhibit I created (along with fellow Red Hat engineers Ian Hands and Ben
+Pritchett) for the &lt;a href="https://en.wikipedia.org/wiki/sparkcon"&gt;SPARKcon&lt;/a&gt; festival in 2014.&lt;/p&gt;
+&lt;p&gt;&lt;a class="btn btn-default btn-lg" href="/static/projects/dimo/"&gt;Launch live demo!&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id="pictures"&gt;Pictures&lt;/h2&gt;
+&lt;p&gt;These pictures are from the art exhibit at geekSPARK in 2014.&lt;/p&gt;
+&lt;p&gt;$GALLERY&lt;/p&gt;
+&lt;p&gt;After the event, I wrote this &lt;a href="http://opensource.com/life/15/2/sparkcon-geekspark-digital-motion-exhibit"&gt;opensource.com article&lt;/a&gt; about the experience.&lt;/p&gt;
+&lt;p&gt;The source code is, of course, &lt;a href="https://github.com/geekspark-rh/dimo-renderer"&gt;open&lt;/a&gt;.&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="requirejs"></category><category term="amd"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="physics"></category></entry><entry><title>Particles and π - DiMo Comes to Life</title><link href="https://palebluepixel.org/2014/08/25/particles-and-p-dimo-comes-to-life/" rel="alternate"></link><published>2014-08-25T00:00:00-04:00</published><updated>2014-08-25T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-08-25:/2014/08/25/particles-and-p-dimo-comes-to-life/</id><summary type="html">&lt;p&gt;A player walks up Fayetteville St in Raleigh, North Carolina.  SPARKcon has begun, and dozens of artists are ...&lt;/p&gt;</summary><content type="html">&lt;p&gt;A player walks up Fayetteville St in Raleigh, North Carolina.
 &lt;a href="http://www.sparkcon.com/"&gt;SPARKcon&lt;/a&gt; has begun, and dozens of artists are strewn along the
 street, hard at work creating elaborate chalk art on the asphalt.  A light rain
 is falling, and some artists are holding umbrellas over their work, some have
@@ -1477,7 +1763,20 @@ repo.&lt;/p&gt;
     }
     document.addEventListener('DOMContentLoaded', set_vimeo_iframe_height);
     window.addEventListener('resize', set_vimeo_iframe_height);
-&lt;/script&gt;</content><category term="programming"></category><category term="javascript"></category><category term="requirejs"></category><category term="amd"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category><category term="kimotion"></category></entry><entry><title>RGB WebGL Color Cube</title><link href="https://palebluepixel.org/2014/03/23/rgb-webgl-color-cube/" rel="alternate"></link><published>2014-03-23T00:00:00-04:00</published><updated>2014-03-23T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-03-23:/2014/03/23/rgb-webgl-color-cube/</id><summary type="html">&lt;p&gt;I spent a bit of time this weekend building an RGB color cube for
+&lt;/script&gt;</content><category term="programming"></category><category term="javascript"></category><category term="requirejs"></category><category term="amd"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category><category term="kimotion"></category></entry><entry><title>Pale Blue Pixel</title><link href="https://palebluepixel.org/projects/palebluepixel" rel="alternate"></link><published>2014-06-29T00:00:00-04:00</published><updated>2014-06-29T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-06-29:/projects/palebluepixel</id><summary type="html">&lt;p&gt;&lt;a href="/" title="palebluepixel.org"&gt;Pale Blue Pixel&lt;/a&gt; is this blog.  I write technical posts about web
+development, image processing, amateur graphics, and generally celebrating …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="/" title="palebluepixel.org"&gt;Pale Blue Pixel&lt;/a&gt; is this blog.  I write technical posts about web
+development, image processing, amateur graphics, and generally celebrating the
+art and craft of programming.  The name &lt;em&gt;Pale Blue Pixel&lt;/em&gt; is a meek tribute to
+Carl Sagan's &lt;a href="https://www.youtube.com/watch?v=nl5dlbCh8lY"&gt;Pale Blue Dot&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="palebluepixel.org screenshot" src="https://palebluepixel.org/static/images/projects/screenshot_palebluepixel.png" title="palebluepixel.org screenshot" /&gt;&lt;/p&gt;
+&lt;p&gt;It's currently powered by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://python.org/" title="Python website"&gt;Python&lt;/a&gt;&lt;/strong&gt; - a large and powerful snake&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://blog.getpelican.com/" title="Pelican website"&gt;Pelican&lt;/a&gt;&lt;/strong&gt; - an awkwardly-shaped sea bird&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CSS Grid&lt;/strong&gt; - framework-free CSS thanks to grid and flexbox&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://lesscss.org/" title="LESS css preprocessor website"&gt;LESS&lt;/a&gt;&lt;/strong&gt; - CSS preprocessor&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://pages.github.com/" title="GitHub pages website"&gt;GitHub pages&lt;/a&gt;&lt;/strong&gt; - hosting&lt;/li&gt;
+&lt;/ul&gt;</content></entry><entry><title>RGB WebGL Color Cube</title><link href="https://palebluepixel.org/2014/03/23/rgb-webgl-color-cube/" rel="alternate"></link><published>2014-03-23T00:00:00-04:00</published><updated>2014-03-23T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-03-23:/2014/03/23/rgb-webgl-color-cube/</id><summary type="html">&lt;p&gt;I spent a bit of time this weekend building an RGB color cube for
 &lt;a href="http://colorpal.org"&gt;ColorPal&lt;/a&gt;, using &lt;a href="http://threejs.org"&gt;Three.js&lt;/a&gt;.  Drag and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I spent a bit of time this weekend building an RGB color cube for
 &lt;a href="http://colorpal.org"&gt;ColorPal&lt;/a&gt;, using &lt;a href="http://threejs.org"&gt;Three.js&lt;/a&gt;.  Drag and drop any image, and you'll see a
 cube with all the pixels of your image mapped into 3D space.&lt;/p&gt;
@@ -1566,7 +1865,23 @@ output box, created a github page for it, and registered &lt;a href="http://drop
 &lt;p&gt;It's not exactly a technical marvel, and the code is still rife with ColorPal
 stuff.  I only ripped out what was absolutely necessary to get the tool working
 as fast as possible.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://drop64.com/"&gt;Try it out&lt;/a&gt; or &lt;a href="https://github.com/mwcz/Drop64"&gt;check out the code&lt;/a&gt;.  Happy hacking.&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category><category term="data uri"></category><category term="web"></category></entry><entry><title>Super easy image resizing in GIMP</title><link href="https://palebluepixel.org/2013/12/22/super-easy-image-resizing-in-gimp/" rel="alternate"></link><published>2013-12-22T00:00:00-05:00</published><updated>2013-12-22T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2013-12-22:/2013/12/22/super-easy-image-resizing-in-gimp/</id><summary type="html">&lt;p&gt;By accident, I discovered that GIMP number fields evaluate math expressions.  So convenient!&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ever been here?&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://drop64.com/"&gt;Try it out&lt;/a&gt; or &lt;a href="https://github.com/mwcz/Drop64"&gt;check out the code&lt;/a&gt;.  Happy hacking.&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category><category term="data uri"></category><category term="web"></category></entry><entry><title>Drop64</title><link href="https://palebluepixel.org/projects/drop64" rel="alternate"></link><published>2014-02-05T00:00:00-05:00</published><updated>2014-02-05T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-02-05:/projects/drop64</id><summary type="html">&lt;p&gt;Drop64 is an easy drag-and-drop tool for generating &lt;a href="http://css-tricks.com/data-uris/"&gt;Data URIs&lt;/a&gt; from any
+file.&lt;/p&gt;
+&lt;p&gt;Check it out at &lt;a href="http://drop64.com/"&gt;drop64.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here's …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Drop64 is an easy drag-and-drop tool for generating &lt;a href="http://css-tricks.com/data-uris/"&gt;Data URIs&lt;/a&gt; from any
+file.&lt;/p&gt;
+&lt;p&gt;Check it out at &lt;a href="http://drop64.com/"&gt;drop64.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here's a demo recording of how easy it is.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Drop64 recording" src="https://palebluepixel.org/static/images/projects/drop64/recording.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;Some benefits of Data URIs are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fewer HTTP requests means faster page loads&lt;/li&gt;
+&lt;li&gt;avoid cross-origin resource loading issues (fonts in Firefox, for example)&lt;/li&gt;
+&lt;li&gt;you can paste the Data URI directly into your web browser URL bar to view the file (occasionally convenient)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you noticed the similarity to &lt;a href="http://colorpal.org/"&gt;ColorPal&lt;/a&gt;, well done!  I reused a lot of
+ColorPal's code in Drop64.  Almost all of it, in fact.&lt;/p&gt;
+&lt;p&gt;For more information on Data URIs, check out &lt;a href="https://developer.mozilla.org/en-US/docs/data_URIs"&gt;MDN&lt;/a&gt; or the original &lt;a href="http://tools.ietf.org/html/rfc2397"&gt;RFC&lt;/a&gt;.&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category><category term="css3"></category><category term="data uri"></category><category term="data url"></category></entry><entry><title>Super easy image resizing in GIMP</title><link href="https://palebluepixel.org/2013/12/22/super-easy-image-resizing-in-gimp/" rel="alternate"></link><published>2013-12-22T00:00:00-05:00</published><updated>2013-12-22T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2013-12-22:/2013/12/22/super-easy-image-resizing-in-gimp/</id><summary type="html">&lt;p&gt;By accident, I discovered that GIMP number fields evaluate math expressions.  So convenient!&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ever been here?&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I want to double the size of this image&lt;/p&gt;
 &lt;p&gt;open calculator&lt;/p&gt;
@@ -1586,7 +1901,95 @@ scale dialog it is now possible to write “50%” in the Width field to scale
 the image to 50% of the width. Expressions such as “30in + 40px” and “4 *
 5.4in” work, too.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;From the &lt;a href="http://docs.gimp.org/2.8/en/gimp-introduction-whats-new.html" title="GIMP User Manual"&gt;GIMP User Manual&lt;/a&gt;.&lt;/p&gt;</content><category term="gimp"></category></entry><entry><title>ColorPal CLI!</title><link href="https://palebluepixel.org/2013/11/07/colorpal-cli/" rel="alternate"></link><published>2013-11-07T00:00:00-05:00</published><updated>2013-11-07T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2013-11-07:/2013/11/07/colorpal-cli/</id><summary type="html">&lt;p&gt;Tired of creating color palettes with ColorPal's simple, intuitive drag-and-drop interface?  Me too!  Use this handy command instead.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Tired of creating color palettes with ColorPal's simple, intuitive
+&lt;p&gt;From the &lt;a href="http://docs.gimp.org/2.8/en/gimp-introduction-whats-new.html" title="GIMP User Manual"&gt;GIMP User Manual&lt;/a&gt;.&lt;/p&gt;</content><category term="gimp"></category></entry><entry><title>ColorPal CLI</title><link href="https://palebluepixel.org/projects/colorpal-cli" rel="alternate"></link><published>2013-11-07T00:00:00-05:00</published><updated>2013-11-07T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2013-11-07:/projects/colorpal-cli</id><summary type="html">&lt;p&gt;ColorPal CLI is a command-line version of &lt;a href="/projects/colorpal" title="ColorPal project page"&gt;ColorPal&lt;/a&gt;, my HTML5 color palette
+generator.&lt;/p&gt;
+&lt;h2 id="demo"&gt;Demo!&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;$ node cpal.js -f hex -s …&lt;/code&gt;&lt;/pre&gt;</summary><content type="html">&lt;p&gt;ColorPal CLI is a command-line version of &lt;a href="/projects/colorpal" title="ColorPal project page"&gt;ColorPal&lt;/a&gt;, my HTML5 color palette
+generator.&lt;/p&gt;
+&lt;h2 id="demo"&gt;Demo!&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;$ node cpal.js -f hex -s 8 MyImage.png
+
+#07070b
+#bac0c4
+#d1bd66
+#7e8899
+#696964
+#c4b441
+#65683e
+#394434
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id="get-it"&gt;Get it!&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g canvas requirejs # install dependencies
+git clone git@github.com:mwcz/colorpal-cli.git
+cd colorpal-cli
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id="use-it"&gt;Use it!&lt;/h2&gt;
+&lt;p&gt;To display the help text, simply run the command without any arguments.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;node cpal.js
+
+Generate a color palette from an image! :)
+USAGE: node cpal.js IMAGE
+
+Options:
+  -s, --size     Generate a fixed size palette; you specify the number of colors you want.
+
+  -d, --dynamic  Generate a palette, sized dynamically based on the color diversity of the image; you can optionally specify a number from 0.0 to 1.0, where larger numbers increase the number of colors.
+
+  -f, --format   Specify the output format.  Available formats are: scss, sass, json, less, rgb, hex
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let's dive right in by generating palettes from the sample images included with the
+project.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;node cpal.js images/hugepic.png
+
+[ [ 144, 43, 178 ],
+  [ 37, 10, 146 ],
+  [ 171, 52, 6 ],
+  [ 11, 3, 85 ],
+  [ 238, 72, 120 ],
+  [ 219, 66, 32 ] ]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To visualize what just happened, ColorPal turned this:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="hugepic.png" src="https://palebluepixel.org/static/images/projects/colorpal-cli/hugepic_small.png" title="hugepic.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Into this:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="hugepic.png colors" src="https://palebluepixel.org/static/images/projects/colorpal-cli/hugepic_colors.png" title="hugepic.png colors" /&gt;&lt;/p&gt;
+&lt;p&gt;Let's try again with a different image.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;node cpal.js images/issue3.png
+
+[ [ 165, 219, 144 ], [ 58, 181, 75 ], [ 254, 250, 203 ] ]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Only three colors this time?  This image has very few colors, so ColorPal
+decided to create a smaller palette.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="issue3.png" src="https://palebluepixel.org/static/images/projects/colorpal-cli/issue3_small.png" title="issue3.png" /&gt;
+&lt;img alt="issue3.png colors" src="https://palebluepixel.org/static/images/projects/colorpal-cli/issue3_colors.png" title="issue3.png colors" /&gt;&lt;/p&gt;
+&lt;p&gt;To generate a specific number of colors, use the &lt;code&gt;-s&lt;/code&gt; option.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# generate 8 colors from the same image
+node cpal.js -s 8 images/issue3.png
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can also specify the output format.  &lt;code&gt;json&lt;/code&gt; is the default, but several others are available.&lt;/p&gt;
+&lt;h4 id="hex-output"&gt;Hex output:&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;node cpal.js images/issue3.png -f hex
+#a5db90
+#3ab54b
+#fefacb
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="less-output"&gt;LESS output:&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;node cpal.js images/issue3.png -f less
+@color0: rgb(165,219,144);
+@color1: rgb(58,181,75);
+@color2: rgb(254,250,203);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="scsssass-output"&gt;SCSS/SASS output:&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;node cpal.js images/issue3.png -f scss
+$color0: rgb(165,219,144);
+$color1: rgb(58,181,75);
+$color2: rgb(254,250,203);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;ColorPal also has a &lt;a href="http://colorpal.org/" title="colorpal.org"&gt;web interface&lt;/a&gt; which you might find more convenient,
+depending on your needs  The command-line utility is very convenient if you
+need to automate palette generation for a large number of images.&lt;/p&gt;
+&lt;p&gt;All the code is available &lt;a href="https://github.com/mwcz/colorpal-cli" title="GitHub page for ColorPal CLI"&gt;on GitHub&lt;/a&gt;.  Bug reports and pull requests are
+much appreciated. :)&lt;/p&gt;
+&lt;p&gt;I've written other &lt;a href="/tag/colorpal" title="Posts about ColorPal"&gt;posts about ColorPal&lt;/a&gt;.&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="node"></category><category term="command-line"></category></entry><entry><title>ColorPal CLI!</title><link href="https://palebluepixel.org/2013/11/07/colorpal-cli/" rel="alternate"></link><published>2013-11-07T00:00:00-05:00</published><updated>2013-11-07T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2013-11-07:/2013/11/07/colorpal-cli/</id><summary type="html">&lt;p&gt;Tired of creating color palettes with ColorPal's simple, intuitive drag-and-drop interface?  Me too!  Use this handy command instead.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Tired of creating color palettes with ColorPal's simple, intuitive
 drag-and-drop interface?  Me too!  Want to jam with the console cowboys in
 cyber-space?  Now you can.  Now &lt;em&gt;we&lt;/em&gt; can.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="ColorPal CLI logo" src="https://palebluepixel.org/2013/11/07/colorpal-cli/colorpal_cli_logo.png" title="ColorPal CLI logo" /&gt;&lt;/p&gt;
@@ -1908,16 +2311,27 @@ TestSuite.run();
 &lt;p&gt;After writing this toy framework, and explaining it to a colleague, I was told that the Rails unit tester uses almost the exact same approach.  I'd wager a few bucks that JUnit uses the Reflection API's &lt;code&gt;Class.getMethods()&lt;/code&gt; to find and run all the methods added to a TestCase class.  Only a few bucks, though.&lt;/p&gt;</content><category term="javascript"></category><category term="testing"></category><category term="web"></category></entry><entry><title>ColorPal Alpha</title><link href="https://palebluepixel.org/2012/01/16/colorpal-alpha/" rel="alternate"></link><published>2012-01-16T22:15:50-05:00</published><updated>2012-01-16T22:15:50-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-01-16:/2012/01/16/colorpal-alpha/</id><summary type="html">&lt;p&gt;Introducing ColorPal, a fast color palette creation tool.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Introducing ColorPal!&lt;/p&gt;
 &lt;p&gt;&lt;img alt="ColorPal screenshot" src="https://palebluepixel.org/2012/01/16/colorpal-alpha/ss.png" /&gt;&lt;/p&gt;
 &lt;p&gt;I've been toying with color palette generation for years.  My photography website has always had some form of dynamic palette, so the theme of each page matches the photo.  You can see the current iteration &lt;a href="http://clayto.com/"&gt;here&lt;/a&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://palebluepixel.org/2012/01/16/colorpal-alpha/tarsi.png" alt="clayto.com" title="My photo, 'Tarsi', at clayto.com" /&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;img src="https://palebluepixel.org/2012/01/16/colorpal-alpha/tarsi.png" alt="clayto.com" title="My photo, 'Tarsi', at clayto.com" /&gt;&lt;/figure&gt;
 
 &lt;p&gt;I owe the idea of photo-matching website palettes to &lt;a href="http://noahgrey.com"&gt;Noah Grey&lt;/a&gt;.  Each iteration of my photo site has gotten a slightly more advanced palette generation tool.  You can see murmurs of them in the &lt;a href="/2011/11/16/html5-canvas-eyedropper/"&gt;old&lt;/a&gt; &lt;a href="/2011/11/16/html5-canvas-area-selection-averaging/"&gt;canvas&lt;/a&gt; &lt;a href="/2011/11/17/html5-tool-for-creating-color-palettes-from-an-image/"&gt;demos&lt;/a&gt; I've posted.  Sooner or later I'll make a more thorough post about the tools I've created for each iteration of the site.  Anyway, back to ColorPal.&lt;/p&gt;
 &lt;p&gt;ColorPal is an HTML5 palette generation tool.  Currently it's in a very early stage, and I've only tested it in Chrome.  I have many ideas for improvements, and I'd love to hear anyone's ideas as well.  &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://palebluepixel.org/2012/01/16/colorpal-alpha/colorpal_logo.png" alt="ColorPal logo" title="" style="float: right; margin: 8px" /&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src="https://palebluepixel.org/2012/01/16/colorpal-alpha/colorpal_logo.png" alt="ColorPal logo"/&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;It's powered by &lt;a href="http://en.wikipedia.org/wiki/Canvas_element"&gt;canvas&lt;/a&gt;, &lt;a href="https://developer.mozilla.org/en/data_URIs"&gt;data URIs&lt;/a&gt;, &lt;a href="http://dev.w3.org/2006/webapi/FileAPI/"&gt;File API&lt;/a&gt;, and my homespun &lt;a href="http://en.wikipedia.org/wiki/Median_cut"&gt;median-cut&lt;/a&gt; implementation, which I'm calling &lt;em&gt;median-cut.js&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Bear in mind that while I've kept median-cut.js nice and clean, I did hammer out ColorPal as quickly as possible, so it's a mess.  Why?  I expect median-cut.js to be useful to other programmers, but ColorPal is just a tool for designers.  Or it will be, anyway. :)&lt;/p&gt;
 &lt;p&gt;Here are github repos for &lt;a href="https://github.com/mwcz/ColorPal"&gt;ColorPal&lt;/a&gt; and &lt;a href="https://github.com/mwcz/median-cut-js"&gt;median-cut.js&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;And, as a reward for reading to the end, a &lt;a href="/projects/colorpal/"&gt;live demo&lt;/a&gt;!&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="web"></category><category term="mediancut"></category></entry><entry><title>The N9, QR-Codes, and KeePassX</title><link href="https://palebluepixel.org/2012/01/08/the-n9-qr-codes-and-keepassx/" rel="alternate"></link><published>2012-01-08T22:27:50-05:00</published><updated>2012-01-08T22:27:50-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-01-08:/2012/01/08/the-n9-qr-codes-and-keepassx/</id><summary type="html">&lt;p&gt;&lt;em&gt;Update: I happened across a &lt;a href="http://keepass.info/plugins.html#qrcodegen"&gt;KeePass
+&lt;p&gt;And, as a reward for reading to the end, a &lt;a href="/projects/colorpal/"&gt;live demo&lt;/a&gt;!&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="web"></category><category term="mediancut"></category></entry><entry><title>ColorPal</title><link href="https://palebluepixel.org/projects/colorpal" rel="alternate"></link><published>2012-01-16T00:00:00-05:00</published><updated>2012-01-16T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-01-16:/projects/colorpal</id><summary type="html">&lt;p&gt;&lt;a href="http://colorpal.org/" title="colorpal.org"&gt;ColorPal&lt;/a&gt; is an HTML5 color palette generator.  Here's a gif demonstrating
+how to use ColorPal.  The color quality in gifs …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="http://colorpal.org/" title="colorpal.org"&gt;ColorPal&lt;/a&gt; is an HTML5 color palette generator.  Here's a gif demonstrating
+how to use ColorPal.  The color quality in gifs is pretty terrible, but you can
+still see the basic usage.&lt;/p&gt;
+&lt;p&gt;Try it out at &lt;a href="http://colorpal.org/"&gt;colorpal.org&lt;/a&gt;.&lt;/p&gt;
+&lt;p class="col-xs-12 col-md-8"&gt;&lt;img class="img-responsive" src="https://palebluepixel.org/static/images/projects/recording_colorpal.gif" title="ColorPal recording" alt="ColorPal recording" /&gt;&lt;/p&gt;
+
+&lt;p&gt;ColorPal also has a &lt;a href="/2013/11/07/colorpal-cli/" title="ColorPal's CLI"&gt;command-line interface&lt;/a&gt;, powered by &lt;a href="http://nodejs.org/" title="Node.js official site"&gt;Node.js&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I've written some &lt;a href="/tag/colorpal" title="Posts about ColorPal"&gt;posts about ColorPal&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;</content><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category></entry><entry><title>The N9, QR-Codes, and KeePassX</title><link href="https://palebluepixel.org/2012/01/08/the-n9-qr-codes-and-keepassx/" rel="alternate"></link><published>2012-01-08T22:27:50-05:00</published><updated>2012-01-08T22:27:50-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-01-08:/2012/01/08/the-n9-qr-codes-and-keepassx/</id><summary type="html">&lt;p&gt;&lt;em&gt;Update: I happened across a &lt;a href="http://keepass.info/plugins.html#qrcodegen"&gt;KeePass
 plugin&lt;/a&gt; (not the same as KeePassX)
 that displays passwords as QR codes, just like …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;Update: I happened across a &lt;a href="http://keepass.info/plugins.html#qrcodegen"&gt;KeePass
 plugin&lt;/a&gt; (not the same as KeePassX)
@@ -2094,33 +2508,69 @@ window.onload = function() {
 
 &lt;p&gt;&lt;button onclick="paused++;paused%=2;"&gt;Pause&lt;/button&gt; &lt;/p&gt;
 &lt;p&gt;An updated (but less colorful) version of bouncey is available 
-&lt;a href="https://palebluepixel.org/2011/11/17/bouncey-returns-more-canvas-physics/"&gt;here&lt;/a&gt;.&lt;/p&gt;</content><category term="html5"></category><category term="canvas"></category><category term="physics"></category><category term="javascript"></category><category term="bouncey"></category><category term="web"></category></entry><entry><title>How not to use CSS3</title><link href="https://palebluepixel.org/2011/11/17/how-not-to-use-css3/" rel="alternate"></link><published>2011-11-17T20:25:00-05:00</published><updated>2011-11-17T20:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-17:/2011/11/17/how-not-to-use-css3/</id><summary type="html">&lt;p&gt;How to ruin a good thing...&lt;/p&gt;
+&lt;a href="https://palebluepixel.org/2011/11/17/bouncey-returns-more-canvas-physics/"&gt;here&lt;/a&gt;.&lt;/p&gt;</content><category term="html5"></category><category term="canvas"></category><category term="physics"></category><category term="javascript"></category><category term="bouncey"></category><category term="web"></category></entry><entry><title>How not to use CSS3</title><link href="https://palebluepixel.org/2011/11/17/how-not-to-use-css3/" rel="alternate"></link><published>2011-11-17T20:25:00-05:00</published><updated>2011-11-17T20:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-17:/2011/11/17/how-not-to-use-css3/</id><summary type="html">&lt;p&gt;How to ruin a good thing by abusing CSS3 text shadows...&lt;/p&gt;
 &lt;p&gt;Try refreshing.&lt;/p&gt;
-&lt;style type="text/css"&gt;
-
-.css3_demo {
-    font-family: FreeSansBold;
-    text-align: center;
-    color: #efefef;
-    position: relative;
-    top: 0;
-    left …&lt;/style&gt;</summary><content type="html">&lt;p&gt;How to ruin a good thing...&lt;/p&gt;
+&lt;p&gt;&lt;span class="css3_demo"&gt;CSS3!&lt;/span&gt; &lt;/p&gt;
+&lt;p&gt;The code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// Random factors to determine …&lt;/code&gt;&lt;/pre&gt;</summary><content type="html">&lt;p&gt;How to ruin a good thing by abusing CSS3 text shadows...&lt;/p&gt;
 &lt;p&gt;Try refreshing.&lt;/p&gt;
-&lt;style type="text/css"&gt;
+&lt;p&gt;&lt;span class="css3_demo"&gt;CSS3!&lt;/span&gt; &lt;/p&gt;
+&lt;p&gt;The code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// Random factors to determine x/y offsets for text shadows and amount of blur
+var x_factor    = Math.floor( Math.random() * 20 ) - 10;
+var y_factor    = Math.floor( Math.random() * 20 ) - 10;
+var blur_factor = Math.floor( Math.random() * 10 ) + 1;
 
-.css3_demo {
-    font-family: FreeSansBold;
-    text-align: center;
-    color: #efefef;
-    position: relative;
-    top: 0;
-    left: 50px;
-    font-size: 9em;
-    padding: 0;
+// Pretty colors
+var the_colors = 
+                [
+                '#7f9f7f',
+                '#dca3a3',
+                '#80d4aa',
+                '#f8f893',
+                '#ffcfaf',
+                '#e89393',
+                '#9ece9e',
+                '#c0bed1',
+                '#6c6c9c',
+                '#71d3b4',
+                '#a0afa0',
+                '#efefef'
+                ];
+
+function make_it() { // MAKE IT SHINE
+    // Build a string containing a comma-delimited list of the each shadow we want to apply
+    // sprintf would be nice here.
+    var shadows = "";
+    for( var color_index in the_colors ) {
+        shadows += 
+            color_index * x_factor + "px " + 
+            color_index * y_factor + "px " + 
+            color_index * blur_factor + "px " + 
+            the_colors[ color_index ];
+
+        // Add a comma unless we're at the end of the color set
+        if( color_index != the_colors.length - 1 )
+            shadows += ',';
+    }
+    $('.css3_demo').css( 'textShadow', shadows ); // apply the new style
+    the_colors.push( the_colors.shift() ); // move first color to the end of the list
+    //console.log( shadows );
+    setTimeout( 'make_it()', 50 ); // make the function async (kinda... effectively...) with setTimeout()
 }
 
-&lt;/style&gt;
+function move_it() { // MAKE IT MOVE
+    /* uncomment this to make it move up and down...
+    $('.css3_demo').animate( {top:'+=200'},2000, "linear" )
+           .animate( {top:'-=200'},2000, "linear", move_it );
+    */
+}
 
+$(document).ready( function() {
+    make_it();
+    move_it();
+});
+&lt;/code&gt;&lt;/pre&gt;
 &lt;script type="text/javascript"&gt;
 
 // Random factors to determine x/y offsets for text shadows and amount of blur
@@ -2179,7 +2629,20 @@ $(document).ready( function() {
 });
 &lt;/script&gt;
 
-&lt;p&gt;&lt;span class="css3_demo"&gt;CSS3!&lt;/span&gt; &lt;/p&gt;</content><category term="html5"></category><category term="css3"></category><category term="typography"></category><category term="web"></category></entry><entry><title>HTML5 canvas point operations</title><link href="https://palebluepixel.org/2011/11/17/html5-canvas-point-operations/" rel="alternate"></link><published>2011-11-17T19:25:00-05:00</published><updated>2011-11-17T19:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-17:/2011/11/17/html5-canvas-point-operations/</id><summary type="html">&lt;p&gt;This is the last demo I made using &lt;a href="https://github.com/mwcz/jsimage"&gt;JSImage&lt;/a&gt;.  I created it some time around 2009-2010.  At the time, I …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is the last demo I made using &lt;a href="https://github.com/mwcz/jsimage"&gt;JSImage&lt;/a&gt;.  I created it some time around 2009-2010.  At the time, I had checked out an &lt;a href="http://www.amazon.com/Digital-Image-Processing-Algorithmic-Introduction/dp/1846283795"&gt;imaging book&lt;/a&gt; from my university's library at least ten times.  Most of the exercises in that book I implemented in Python using &lt;a href="http://www.pythonware.com/products/pil/"&gt;PIL&lt;/a&gt;, but point operations were simple enough to port to JavaScript quickly.&lt;/p&gt;
+&lt;style type="text/css"&gt;
+
+.css3_demo {
+    font-family: FreeSansBold;
+    text-align: center;
+    color: #efefef;
+    position: relative;
+    top: 0;
+    left: 50px;
+    font-size: 9em;
+    padding: 0;
+}
+
+&lt;/style&gt;</content><category term="html5"></category><category term="css3"></category><category term="typography"></category><category term="web"></category></entry><entry><title>HTML5 canvas point operations</title><link href="https://palebluepixel.org/2011/11/17/html5-canvas-point-operations/" rel="alternate"></link><published>2011-11-17T19:25:00-05:00</published><updated>2011-11-17T19:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-17:/2011/11/17/html5-canvas-point-operations/</id><summary type="html">&lt;p&gt;This is the last demo I made using &lt;a href="https://github.com/mwcz/jsimage"&gt;JSImage&lt;/a&gt;.  I created it some time around 2009-2010.  At the time, I …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is the last demo I made using &lt;a href="https://github.com/mwcz/jsimage"&gt;JSImage&lt;/a&gt;.  I created it some time around 2009-2010.  At the time, I had checked out an &lt;a href="http://www.amazon.com/Digital-Image-Processing-Algorithmic-Introduction/dp/1846283795"&gt;imaging book&lt;/a&gt; from my university's library at least ten times.  Most of the exercises in that book I implemented in Python using &lt;a href="http://www.pythonware.com/products/pil/"&gt;PIL&lt;/a&gt;, but point operations were simple enough to port to JavaScript quickly.&lt;/p&gt;
 &lt;p&gt;Point operations are image alterations that affect all pixels equally.  Other operations, like blurring for example, each result pixel depends on adjacent pixels.&lt;/p&gt;
 &lt;p&gt;This demonstrates changing contrast, value, saturation, hue, color inversion, and threshold point operations.  Note that there is a bug with increasing value and increasing saturation which I never got around to fixing.&lt;/p&gt;
 &lt;script type="text/javascript" src="https://palebluepixel.org/2011/11/17/html5-canvas-point-operations/jsimage.js"&gt;&lt;/script&gt;
@@ -2204,51 +2667,45 @@ $(document).ready( function() {
 
 &lt;canvas class="img-responsive" id="IJS_PointOps"&gt;your browser does not support canvas&lt;/canvas&gt;
 
-&lt;div class="row point-ops-demo"&gt;
-
+&lt;div class="point-ops-demo beside"&gt;
     &lt;div class="col-xs-6"&gt;
         Value (Brightness)
         &lt;br /&gt;
         &lt;div class="btn-group"&gt;
-            &lt;button class="btn btn-default" onmousedown="IJS_PointOps.value( IJS_PointOps.canvas, 10 )"&gt;&lt;i class="glyphicon glyphicon-arrow-up"&gt;&lt;/i&gt;&lt;/button&gt;
-            &lt;button class="btn btn-default" onmousedown="IJS_PointOps.value( IJS_PointOps.canvas, -10 )"&gt;&lt;i class="glyphicon glyphicon-arrow-down"&gt;&lt;/i&gt;&lt;/button&gt;
+            &lt;button class="btn btn-default" onmousedown="IJS_PointOps.value( IJS_PointOps.canvas, 10 )"&gt;+&lt;/button&gt;
+            &lt;button class="btn btn-default" onmousedown="IJS_PointOps.value( IJS_PointOps.canvas, -10 )"&gt;-&lt;/button&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-
     &lt;div class="col-xs-6"&gt;
         Contrast
         &lt;br /&gt;
         &lt;div class="btn-group"&gt;
-            &lt;button class="btn btn-default" onmousedown="IJS_PointOps.contrast( IJS_PointOps.canvas, 1.1)" &gt;&lt;i class="glyphicon glyphicon-arrow-up"&gt;&lt;/i&gt;&lt;/button&gt;
-            &lt;button class="btn btn-default" onmousedown="IJS_PointOps.contrast( IJS_PointOps.canvas, 0.9)" &gt;&lt;i class="glyphicon glyphicon-arrow-down"&gt;&lt;/i&gt;&lt;/button&gt;
+            &lt;button class="btn btn-default" onmousedown="IJS_PointOps.contrast( IJS_PointOps.canvas, 1.1)" &gt;+&lt;/button&gt;
+            &lt;button class="btn btn-default" onmousedown="IJS_PointOps.contrast( IJS_PointOps.canvas, 0.9)" &gt;-&lt;/button&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-
     &lt;div class="col-xs-6"&gt;
         Saturation
         &lt;br /&gt;
         &lt;div class="btn-group"&gt;
-            &lt;button class="btn btn-default" onmousedown="IJS_PointOps.saturation( IJS_PointOps.canvas, 25 )" &gt;&lt;i class="glyphicon glyphicon-arrow-up"&gt;&lt;/i&gt;&lt;/button&gt;
-            &lt;button class="btn btn-default" onmousedown="IJS_PointOps.saturation( IJS_PointOps.canvas, -25 )" &gt;&lt;i class="glyphicon glyphicon-arrow-down"&gt;&lt;/i&gt;&lt;/button&gt;
+            &lt;button class="btn btn-default" onmousedown="IJS_PointOps.saturation( IJS_PointOps.canvas, 25 )" &gt;+&lt;/button&gt;
+            &lt;button class="btn btn-default" onmousedown="IJS_PointOps.saturation( IJS_PointOps.canvas, -25 )" &gt;-&lt;/button&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-
     &lt;div class="col-xs-6"&gt;
         Hue
         &lt;br /&gt;
         &lt;div class="btn-group"&gt;
-            &lt;button class="btn btn-default" onmousedown="IJS_PointOps.hue( IJS_PointOps.canvas, 20)" &gt;&lt;i class="glyphicon glyphicon-arrow-up"&gt;&lt;/i&gt;&lt;/button&gt;
-            &lt;button class="btn btn-default" onmousedown="IJS_PointOps.hue( IJS_PointOps.canvas, -20)" &gt;&lt;i class="glyphicon glyphicon-arrow-down"&gt;&lt;/i&gt;&lt;/button&gt;
+            &lt;button class="btn btn-default" onmousedown="IJS_PointOps.hue( IJS_PointOps.canvas, 20)" &gt;+&lt;/button&gt;
+            &lt;button class="btn btn-default" onmousedown="IJS_PointOps.hue( IJS_PointOps.canvas, -20)" &gt;-&lt;/button&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-
     &lt;div class="col-xs-6"&gt;
         &lt;br /&gt;
         &lt;div class="btn-group"&gt;
             &lt;button class="btn btn-default" onmousedown="IJS_PointOps.invert()"&gt;Invert&lt;/button&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-
     &lt;div class="col-xs-6"&gt;
         &lt;br /&gt;
         &lt;div class="input-group"&gt;
@@ -2258,15 +2715,88 @@ $(document).ready( function() {
             &lt;input type="text" value="127" class="form-control threshold" maxlength="3" size="3" id="t" /&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-
     &lt;div class="col-xs-6"&gt;
         &lt;br /&gt;
         &lt;button class="btn btn-default" onclick="IJS_PointOps = new JSImage( 'IJS_PointOps', 'bee.jpg' );"&gt;Reset&lt;/button&gt;
     &lt;/div&gt;
-
 &lt;/div&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</content><category term="html5"></category><category term="canvas"></category><category term="color"></category><category term="image processing"></category><category term="jsimage"></category><category term="web"></category><category term="javascript"></category></entry><entry><title>HTML5 canvas area selection averaging</title><link href="https://palebluepixel.org/2011/11/16/html5-canvas-area-selection-averaging/" rel="alternate"></link><published>2011-11-16T18:25:00-05:00</published><updated>2011-11-16T18:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-16:/2011/11/16/html5-canvas-area-selection-averaging/</id><summary type="html">&lt;p&gt;This is a demo from late 2009.  It's an extension of the single-pixel &lt;a href="/2011/11/16/html5-canvas-eyedropper/"&gt;eyedropper&lt;/a&gt; I wrote previously.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</content><category term="html5"></category><category term="canvas"></category><category term="color"></category><category term="image processing"></category><category term="jsimage"></category><category term="web"></category><category term="javascript"></category></entry><entry><title>Bouncey</title><link href="https://palebluepixel.org/projects/bouncey" rel="alternate"></link><published>2011-11-17T00:00:00-05:00</published><updated>2011-11-17T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-17:/projects/bouncey</id><summary type="html">&lt;p&gt;Bouncey is a simple physics demo I wrote in early/mid 2011, with
+some contributions and bugfixes from my good …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Bouncey is a simple physics demo I wrote in early/mid 2011, with
+some contributions and bugfixes from my good friend Greg Gardner.&lt;/p&gt;
+&lt;p&gt;Fun, simple, and oddly relaxing.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;style type="text/css"&gt;
+#cnvs {
+    background-color: #1f1f1f;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 2px 18px rgba( 0, 0, 0, 0.7 );
+       -moz-box-shadow: 0px 2px 18px rgba( 0, 0, 0, 0.7 );
+         -o-box-shadow: 0px 2px 18px rgba( 0, 0, 0, 0.7 );
+            box-shadow: 0px 2px 18px rgba( 0, 0, 0, 0.7 );
+}
+&lt;/style&gt;
+
+&lt;script type="text/javascript" src="https://palebluepixel.org/projects/bouncey/bouncey.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+
+$(function() {
+
+    canvas_element        = document.getElementById('cnvs');
+    canvas_element.width  = W;
+    canvas_element.height = H;
+
+    canvas = canvas_element.getContext('2d');
+
+    // create some squares with random velocities in the center of the canvas
+    // objects are stored in the format 
+    //      [ X, Y, X_velocity, Y_velocity, width, height, [R,G,B] ]
+    var x, y, w, h, v_x, v_y, r, g, b, new_obj;
+
+    // calculate all the possible initial y positions
+    y_positions = [];
+    for( var i = OBJ_HEIGHT; i &lt; H - OBJ_HEIGHT; i += 2 * OBJ_HEIGHT )
+        y_positions.push( i );
+
+    // calculate all the possible initial x positions
+    x_positions = [];
+    for( var i = OBJ_WIDTH; i &lt; W - OBJ_WIDTH; i += 2 * OBJ_WIDTH )
+        x_positions.push( i );
+
+    /*
+    */
+    for( var i = 0; i &lt; 40; ++i ) {
+
+        // create values for the object
+        x   = x_positions[ i % x_positions.length ];
+        y   = y_positions[ Math.floor( i / x_positions.length ) % y_positions.length ];
+        v_x = Math.random() * OBJ_MAX_VELOCITY*2 - OBJ_MAX_VELOCITY;
+        v_y = Math.random() * OBJ_MAX_VELOCITY*2 - OBJ_MAX_VELOCITY;
+        r   = Math.floor( Math.random() * 200 + 55 ); // random value 55..255
+        g   = Math.floor( Math.random() * 200 + 55 );
+        b   = Math.floor( Math.random() * 200 + 55 );
+
+        // add the object to the scene
+        var color = 'rgb(' + r + ',' + g + ',' + b + ')';
+        var new_obj = new Circle( x, y, OBJ_R, v_x, v_y, color );
+
+        objs.push( new_obj );
+    }
+
+    setInterval( make_frame, PERIOD );
+
+});
+
+&lt;/script&gt;
+
+&lt;canvas class="img-responsive" id="cnvs" width="500" height="375"&gt; 
+    Sorry, your browser does not support HTML5 canvas.  Lame.
+&lt;/canvas&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;a href="/tag/bouncey/" title="Posts about Bouncey"&gt;Posts about Bouncey&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/mwcz/bouncey/" title="Bouncey on GitHub"&gt;Bouncey's code on GitHub&lt;/a&gt;&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category></entry><entry><title>HTML5 canvas area selection averaging</title><link href="https://palebluepixel.org/2011/11/16/html5-canvas-area-selection-averaging/" rel="alternate"></link><published>2011-11-16T18:25:00-05:00</published><updated>2011-11-16T18:25:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-11-16:/2011/11/16/html5-canvas-area-selection-averaging/</id><summary type="html">&lt;p&gt;This is a demo from late 2009.  It's an extension of the single-pixel &lt;a href="/2011/11/16/html5-canvas-eyedropper/"&gt;eyedropper&lt;/a&gt; I wrote previously.&lt;/p&gt;
 &lt;p&gt;It's powered by …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is a demo from late 2009.  It's an extension of the single-pixel &lt;a href="/2011/11/16/html5-canvas-eyedropper/"&gt;eyedropper&lt;/a&gt; I wrote previously.&lt;/p&gt;
 &lt;p&gt;It's powered by an early version of an old JS toolkit I wrote called JSImage.  The latest version is available at my &lt;a href="https://github.com/mwcz/jsimage"&gt;JSImage github repo&lt;/a&gt;.  Don't be fooled by the 2011 commits, those are just artifacts from svn-&amp;gt;git migration.  No guarantees that the histo's are actually correct. :)&lt;/p&gt;
 &lt;p&gt;I used an old version of a rectangular selection tool called marquee.  I believe it's still located &lt;a href="http://marqueetool.net/"&gt;here&lt;/a&gt; but I can't be totally sure that's the same project.&lt;/p&gt;
@@ -2613,7 +3143,69 @@ if( cnvs.getContext) { // Check for canvas support
 &lt;p&gt;The OPCODES dict defines the first two bytes of each opcode, both static bits and operands.  The operand strings act as keys into the PATTERNS struct, which contains all possible values for each operand.&lt;/p&gt;
 &lt;p&gt;The recursive function gen() is fed an opcode pattern which may contain operand strings as well as static bits.  Some operand patterns contain other operand patterns, so gen() keeps recursing until all operand patterns are gone.  Once a set of totally static bits has been created, those bits are added to INSTRUCTIONS, along with the name of the opcode.&lt;/p&gt;
 &lt;p&gt;The PATTERNS, OPCODES, and INSTRUCTIONS dicts are all named poorly, and the whole solution  isn't ultra-elegant, but it does follow the structure of the 68k PRM pretty intuitively and is easy to edit.  Once it's complete, I should never need to run it again.&lt;/p&gt;
-&lt;p&gt;(This post was copied from my old &lt;a href="http://aejs.blogspot.com/"&gt;AEJS blog&lt;/a&gt;)&lt;/p&gt;</content><category term="aejs"></category><category term="html5"></category><category term="javascript"></category><category term="amiga"></category><category term="web"></category></entry><entry><title>LUT</title><link href="https://palebluepixel.org/2011/09/22/lut/" rel="alternate"></link><published>2011-09-22T22:27:50-04:00</published><updated>2011-09-22T22:27:50-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-09-22:/2011/09/22/lut/</id><summary type="html">&lt;p&gt;Decoding is easy. Decoding requires a lot of typing. (I am starting to believe this is true of ever aspect …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Decoding is easy. Decoding requires a lot of typing. (I am starting to believe this is true of ever aspect of interpreted emulation...)&lt;/p&gt;
+&lt;p&gt;(This post was copied from my old &lt;a href="http://aejs.blogspot.com/"&gt;AEJS blog&lt;/a&gt;)&lt;/p&gt;</content><category term="aejs"></category><category term="html5"></category><category term="javascript"></category><category term="amiga"></category><category term="web"></category></entry><entry><title>AEJS</title><link href="https://palebluepixel.org/projects/aejs" rel="alternate"></link><published>2011-10-13T00:00:00-04:00</published><updated>2011-10-13T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-10-13:/projects/aejs</id><summary type="html">&lt;p&gt;AEJS was an experimental Amiga 500 emulator written in JavaScript.  The name
+stands for Amiga Emulator JavaScript and is pronounced …&lt;/p&gt;</summary><content type="html">&lt;p&gt;AEJS was an experimental Amiga 500 emulator written in JavaScript.  The name
+stands for Amiga Emulator JavaScript and is pronounced "aegis".&lt;/p&gt;
+&lt;hr /&gt;
+&lt;div class="row"&gt;
+    &lt;div class="col-xs-12 col-sm-6"&gt;
+        &lt;img style="height: 168px"
+        src="https://palebluepixel.org/static/projects/aejs/icon_aejs.png" title="AEJS logo"
+        alt="AEJS logo" /&gt;
+    &lt;/div&gt;
+    &lt;div class="col-xs-12 col-sm-6"&gt;
+        &lt;img style="height: 150px"
+        src="https://palebluepixel.org/static/projects/aejs/log.png" title="AEJS log"
+        alt="AEJS log" /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;My motivation to build AEJS came from these sources:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The HTML5 era introduced new APIs which finally made it possible: 
+   &lt;a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays" title="JavaScript typed arrays"&gt;Typed arrays&lt;/a&gt;, &lt;a href="http://www.w3.org/TR/webaudio/" title="Web Audio API"&gt;Web Audio&lt;/a&gt;, &lt;a href="http://www.w3.org/TR/FileAPI/" title="File API"&gt;File&lt;/a&gt;, &lt;a href="http://www.w3.org/TR/2dcontext/" title="Canvas 2D context"&gt;Canvas&lt;/a&gt;, &lt;a href="http://www.w3.org/TR/fullscreen/" title="Fullscreen API"&gt;Fullscreen&lt;/a&gt;,
+   &lt;a href="http://www.w3.org/TR/gamepad/" title="Gamepad API"&gt;Gamepad&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fabrice Bellard's &lt;a href="http://bellard.org/jslinux/tech.html"&gt;JavaScript PC emulator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;JavaScript performance was finally good enough to make it feasible&lt;/li&gt;
+&lt;li&gt;It bridged front-end web development with low-level machine code, both of
+   which are super awesome&lt;/li&gt;
+&lt;li&gt;I still have the Amiga 500 I played with obsessively since 3 years-old&lt;/li&gt;
+&lt;li&gt;The &lt;a href="https://en.wikipedia.org/wiki/Motorola_68000" title="Motorola 68000"&gt;68000&lt;/a&gt; is legendary and I wanted to find out why&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I stopped development for some equally good reasons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This was my first emulator, and the Amiga 500 is a fairly complex set of
+   chips, and I quickly realized it would take a very long time to complete.  I
+   decided to focus on other projects which could be finished in a more
+   reasonable timeframe (I'm looking at you, &lt;a href="http://colorpal.org/" title="ColorPal"&gt;ColorPal&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;The final nail in the coffin was realizing that while JavaScript was
+   definitely up to the task, there was pretty much no reason to write it
+   entirely in JavaScript when it could be written in C and compiled to JS with
+   &lt;a href="http://emscripten.org" title="emscripten"&gt;emscripten&lt;/a&gt;.  The result would be faster, more robust, and type-safe.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;div class="row"&gt;
+    &lt;div class="text-center col-xs-12 col-sm-6"&gt;
+        &lt;img src="https://palebluepixel.org/static/projects/aejs/splash.png" 
+        title="AEJS splash screen" alt="AEJS splash screen" /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;Astoundingly observant readers will notice that &lt;a href="https://github.com/naTmeg/ScriptedAmigaEmulator" title="ScriptedAmigaEmulator"&gt;Scripted Amiga Emulator&lt;/a&gt;
+came out at around the same time I stopped contributing to AEJS.  It's based on
+&lt;a href="https://github.com/tonioni/WinUAE" title="WinUAE"&gt;WinUAE&lt;/a&gt; and was ported (by hand, I believe) from C++ to JavaScript.  A very
+impressive project, but not at all what I was going for with AEJS.  AEJS was
+about fueling my curiosity and exploration.  SAE is extremely impressive and
+works very well, but it didn't demotivate me in any way.&lt;/p&gt;
+&lt;p&gt;I may come up with some even better reasons to resume development at some point
+in the future.  I still love my old Amiga 500 and want to see it live on in
+some fashion.  I don't like having pet projects nipping at my heels that never
+go anywhere, though, so I'm calling this one dead (&lt;a href="https://github.com/mwcz/AEJS/" title="AEJS on GitHub"&gt;for now&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Addendum&lt;/em&gt;: I just learned today (2013-12-16) that Christian Stefansen ported
+PUAE (Portable Universal Amiga Emulator) to PNaCl.  This allows UAE to run
+inside any Chrome browser.  &lt;a href="http://pnacl-amiga-emulator.appspot.com/" title="PNaCl port of PUAE"&gt;Check it out&lt;/a&gt; or &lt;a href="https://github.com/cstefansen/PUAE" title="PNaCl PUAE port's source code"&gt;fork it&lt;/a&gt;.&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category></entry><entry><title>LUT</title><link href="https://palebluepixel.org/2011/09/22/lut/" rel="alternate"></link><published>2011-09-22T22:27:50-04:00</published><updated>2011-09-22T22:27:50-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2011-09-22:/2011/09/22/lut/</id><summary type="html">&lt;p&gt;Decoding is easy. Decoding requires a lot of typing. (I am starting to believe this is true of ever aspect …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Decoding is easy. Decoding requires a lot of typing. (I am starting to believe this is true of ever aspect of interpreted emulation...)&lt;/p&gt;
 &lt;p&gt;For the AEJS decoder, I am creating a &lt;a href="http://en.wikipedia.org/wiki/Lookup_table"&gt;look-up table&lt;/a&gt; with every possible pattern for each instruction. It was my first idea, but I initially discarded it as "wasteful and inelegant". Later, I accepted it as "really fast".&lt;/p&gt;
 &lt;p&gt;I'm generating a large set of bit patterns that map to 68k opcodes, like so:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;0100101011111010 -&amp;gt; BGND
@@ -2643,4 +3235,48 @@ if( cnvs.getContext) { // Check for canvas support
 &lt;p&gt;Why JavaScript?  Fabrice Bellard didn't make any excuses for writing an x86 emulator in JavaScript, so I won't either.&lt;/p&gt;
 &lt;p&gt;I'll be using this blog to share updates on the project.  Progress, problems, etc.  Anyone with interest or knowledge of 68k arch or Amiga chipsets is welcome to get involved.&lt;/p&gt;
 &lt;p&gt;Next up: completing the code to generate an opcode lookup table.&lt;/p&gt;
-&lt;p&gt;(This post was copied from my old &lt;a href="http://aejs.blogspot.com/"&gt;AEJS blog&lt;/a&gt;)&lt;/p&gt;</content><category term="aejs"></category><category term="html5"></category><category term="javascript"></category><category term="amiga"></category><category term="web"></category></entry></feed>
+&lt;p&gt;(This post was copied from my old &lt;a href="http://aejs.blogspot.com/"&gt;AEJS blog&lt;/a&gt;)&lt;/p&gt;</content><category term="aejs"></category><category term="html5"></category><category term="javascript"></category><category term="amiga"></category><category term="web"></category></entry><entry><title>JSImage</title><link href="https://palebluepixel.org/projects/jsimage" rel="alternate"></link><published>2009-01-01T00:00:00-05:00</published><updated>2009-01-01T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2009-01-01:/projects/jsimage</id><summary type="html">&lt;p&gt;JSImage was a basic, buggy, just-for-fun image processing library that I wrote
+in 2008/2009 when I first started seriously …&lt;/p&gt;</summary><content type="html">&lt;p&gt;JSImage was a basic, buggy, just-for-fun image processing library that I wrote
+in 2008/2009 when I first started seriously studying JavaScript.&lt;/p&gt;
+&lt;p&gt;A stumbled across a &lt;a href="http://imagingbook.com/books/englisch-edition-3-vol-softcover/" title="Principles of Digital Image Processing"&gt;book&lt;/a&gt; in my university library, and started
+implementing the algorithms on the newly available HTML5 canvas element.&lt;/p&gt;
+&lt;p&gt;I've made &lt;a href="/tag/jsimage" title="Posts about JSImage"&gt;several posts&lt;/a&gt; about JSImage which contain live demos.&lt;/p&gt;
+&lt;p&gt;I think I put more work into code formatting than correct output. ;)&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category><category term="color"></category></entry><entry><title>median-cut.js</title><link href="https://palebluepixel.org/projects/mediancut" rel="alternate"></link><published>2009-01-01T00:00:00-05:00</published><updated>2009-01-01T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2009-01-01:/projects/mediancut</id><summary type="html">&lt;p&gt;The unfortunately-named &lt;code&gt;median-cut.js&lt;/code&gt; is the library that powers
+&lt;a href="http://colorpal.org/" title="ColorPal"&gt;ColorPal's&lt;/a&gt; palette generation.&lt;/p&gt;
+&lt;p&gt;I say it's unfortunately named because it doesn't …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The unfortunately-named &lt;code&gt;median-cut.js&lt;/code&gt; is the library that powers
+&lt;a href="http://colorpal.org/" title="ColorPal"&gt;ColorPal's&lt;/a&gt; palette generation.&lt;/p&gt;
+&lt;p&gt;I say it's unfortunately named because it doesn't implement a pure median-cut
+algorithm.  It's identical, except that instead of cutting boxes at their
+median, they are instead cut at the mean.  This results in more pleasing color
+palettes in most cases.&lt;/p&gt;
+&lt;p&gt;Here's a comparison:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="median-cut vs mean-cut comparison image" src="https://palebluepixel.org/projects/mediancut/median-mean-comparison.png" title="median-cut vs mean-cut comparison image" /&gt;&lt;/p&gt;
+&lt;p&gt;If you're interested in median-cut vs mean-cut, see &lt;a href="/2012/02/10/colorpal-palettes-improved/" title="Post about mean-cut"&gt;this post&lt;/a&gt; for a
+technical discussion.&lt;/p&gt;
+&lt;p&gt;The code is &lt;a href="https://github.com/mwcz/median-cut-js" title="median-cut.js GitHub repository"&gt;available on GitHub&lt;/a&gt;.&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category><category term="color"></category></entry><entry><title>clayto.com</title><link href="https://palebluepixel.org/projects/clayto.com" rel="alternate"></link><published>2003-01-01T00:00:00-05:00</published><updated>2003-01-01T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2003-01-01:/projects/clayto.com</id><summary type="html">&lt;p&gt;&lt;a href="http://clayto.com/" title="My photography site"&gt;clayto.com&lt;/a&gt; is my homemade photography website.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="mwcz.org screenshot" src="https://palebluepixel.org/static/images/projects/screenshot_clayto.png" title="clayto.com screenshot" /&gt;&lt;/p&gt;
+&lt;p&gt;I started clayto.com in 2003.  Inspired by &lt;a href="http://noahgrey.com/" title="Noah Grey's photography site"&gt;Noah Grey's&lt;/a&gt; photography
+presentation ideas …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="http://clayto.com/" title="My photography site"&gt;clayto.com&lt;/a&gt; is my homemade photography website.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="mwcz.org screenshot" src="https://palebluepixel.org/static/images/projects/screenshot_clayto.png" title="clayto.com screenshot" /&gt;&lt;/p&gt;
+&lt;p&gt;I started clayto.com in 2003.  Inspired by &lt;a href="http://noahgrey.com/" title="Noah Grey's photography site"&gt;Noah Grey's&lt;/a&gt; photography
+presentation ideas, the site's color scheme always matches the photo being
+viewed, as Noah did (or used to!).&lt;/p&gt;
+&lt;p&gt;Here are four examples of the color schemes:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="example of color theme matching images" src="https://palebluepixel.org/static/images/projects/screenshot_clayto_palettes_small.png" title="example of color theme matching images" /&gt;&lt;/p&gt;
+&lt;p&gt;The color schemes are automatically generated when a photo is posted.  A
+"suggested palette" is displayed, along with a color picker, and a tool to
+sample colors directly from the image.&lt;/p&gt;
+&lt;p&gt;The site as it exists now was written in 2007-2008, as my first Django project.
+It needs some serious TLC in the form of bringing it into the twenty-tens with
+a responsive UI, &lt;a href="http://colorpal.org/" title="ColorPal"&gt;ColorPal&lt;/a&gt; integration, visual redesign, and a Django
+upgrade.&lt;/p&gt;
+&lt;p&gt;The site is currently powered by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://python.org/" title="Python's website"&gt;Python&lt;/a&gt; - an English comedy troupe&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.djangoproject.com/" title="Django, a Python web framework"&gt;Django&lt;/a&gt; - Python web development framework&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://960.gs/" title="960gs CSS grid"&gt;960.gs&lt;/a&gt; - a vintage CSS grid, groundbreaking at the time though&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://piwik.org/" title="Piwik web analytics tool"&gt;Piwik&lt;/a&gt; - open-source web analytics&lt;/li&gt;
+&lt;li&gt;and a custom color extraction algorithm that automatically suggests colors,
+   then allows the user to tweak the colors to their liking&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The code is &lt;a href="https://github.com/mwcz/phyton" title="clayto.com's source code"&gt;available here&lt;/a&gt;&lt;/p&gt;</content></entry></feed>

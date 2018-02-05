@@ -9,11 +9,15 @@ Mwc: 48
 
 The Minimic is great.  I just received mine last week, and I'm loving the ability to join video calls with [nice, comfy headphones][grado].  It's much better than switching back and forth between headphones and a headset.
 
-<img src="{attach}minimic.jpg">
+<figure>
+    <img src="{attach}minimic.jpg">
+</figure>
 
 The only problem is that, since the minimic is just *a wire*, it doesn't have any noise or echo cancellation.  And since Fedora doesn't come with that feature enabled by default, the mic was picking up a lot of ambient noise.  [Breddy][breddy] told me that steps just like the following didn't work in Fedora a few versions ago, so I wanted to document them now that the issues seem to be fixed.  I originally found these instructions on [this r/linux post][rlinux] and am reposting them here with Fedora-specific flourishes.
 
 Without further ado, here's how to turn on noise and echo cancellation in Fedora 26.
+
+---
 
 ## If you just want it to work
 
@@ -24,6 +28,8 @@ If you're in a rush, here's a script that will set everything up for you.
     echo '.nofail' | sudo tee -a /etc/pulse/default.pa
     echo 'load-module module-echo-cancel aec_method=webrtc' | sudo tee -a /etc/pulse/default.pa
     pulseaudio -k
+
+---
 
 ## Again, but with explanation
 
@@ -45,23 +51,22 @@ Then restart PulseAudio.
 
 Now, if you open Sound settings, you should see a new entry under the *Input* tab.  Mine is called "**Built-in Audio Analog Stereo (echo cancelled with SA9027 USB Audio Analog Stereo)**".  Not sure what's up with that name; my mic is connected with a 3.5mm audio jack.  Whatever, it works!
 
-<img src="{attach}devices.png">
-
-Select the device that says "echo cancelled" and your audio should go from this:
-
 <figure>
-    <img src="{attach}before.jpg" alt="Audio spectrum analysis of microphone input without noise cancellation." />
-    <figcaption>Spectrum analysis without noise cancellation.</figcaption>
+    <img src="{attach}devices.png">
 </figure>
 
-To this:
+Select the device that says "echo cancelled" and your audio background hiss should drop to almost nothing.  Here's a before and after spectrum analysis.
 
-<figure>
-    <img src="{attach}after.jpg" alt="Audio spectrum analysis of microphone input with noise cancellation." />
-    <figcaption>Spectrum analysis with noise cancellation.</figcaption>
-</figure>
-
-Hope this works!  Let me know in the comments below.
+<div class="beside">
+    <figure>
+        <img src="{attach}before.jpg" alt="Audio spectrum analysis of microphone input without noise cancellation." />
+        <figcaption>Spectrum analysis without noise cancellation.</figcaption>
+    </figure>
+    <figure>
+        <img src="{attach}after.jpg" alt="Audio spectrum analysis of microphone input with noise cancellation." />
+        <figcaption>Spectrum analysis <b>with</b> noise cancellation.</figcaption>
+    </figure>
+</div>
 
 [fedora]: https://getfedora.org/
 [breddy]: https://chrisbredesen.com/

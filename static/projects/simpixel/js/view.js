@@ -83,7 +83,7 @@ var View = function () {
 
             this.renderer = new THREE.WebGLRenderer();
             this.renderer.setPixelRatio(window.devicePixelRatio);
-            this.renderer.setClearColor(new THREE.Color('#171717'));
+            this.renderer.setClearColor(new THREE.Color('#121212'));
             this.renderer.setSize(this.WIDTH, this.HEIGHT);
             this.parent.appendChild(this.renderer.domElement);
             //
