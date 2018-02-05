@@ -497,7 +497,11 @@ format.  Pretty cool.&lt;/p&gt;
 
 &lt;script defer src="/static/projects/simpixel/js/view.js"&gt;&lt;/script&gt;
 
-&lt;script defer src="/static/projects/simpixel/js/main.js"&gt;&lt;/script&gt;</content><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="web"></category><category term="led"></category><category term="maniacal-labs"></category></entry><entry><title>Fireflies</title><link href="https://palebluepixel.org/projects/fireflies" rel="alternate"></link><published>2017-02-06T00:00:00-05:00</published><updated>2017-02-06T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-02-06:/projects/fireflies</id><summary type="html">&lt;p&gt;Fireflies is a WebGL demo in which a friendly flock of fireflies forms shapes
+&lt;script defer src="/static/projects/simpixel/js/main.js"&gt;&lt;/script&gt;
+
+&lt;div hidden&gt;
+    &lt;img src="https://palebluepixel.org/2017/03/10/meet-simpixel/thumb.jpg"&gt;
+&lt;/div&gt;</content><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="web"></category><category term="led"></category><category term="maniacal-labs"></category></entry><entry><title>Fireflies</title><link href="https://palebluepixel.org/projects/fireflies" rel="alternate"></link><published>2017-02-06T00:00:00-05:00</published><updated>2017-02-06T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-02-06:/projects/fireflies</id><summary type="html">&lt;p&gt;Fireflies is a WebGL demo in which a friendly flock of fireflies forms shapes
 for your entertainment.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="fireflies title screen" src="/static/images/projects/fireflies/title.jpg" /&gt;&lt;/p&gt;
 &lt;p class="text-center"&gt;&lt;a class="btn btn-default btn-lg" href="/static/projects/fireflies"&gt;Live demo!&lt;/a&gt;&lt;/p&gt;
