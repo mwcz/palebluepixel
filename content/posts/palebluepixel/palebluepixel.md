@@ -15,14 +15,12 @@ It's currently powered by:
 
  - **[Python][2]** - a large and powerful snake
  - **[Pelican][3]** - an awkwardly-shaped sea bird
- - **[Bootstrap 3][4]** - front-end library
+ - **CSS Grid** - framework-free CSS thanks to grid and flexbox
  - **[LESS][5]** - CSS preprocessor
- - **[Prism][6]** - syntax highlighting for code examples, [twilight][8] theme
  - **[GitHub pages][7]** - hosting
 
 [2]: http://python.org/ "Python website"
 [3]: http://blog.getpelican.com/ "Pelican website"
-[4]: http://getbootstrap.com/ "Bootstrap website"
 [5]: http://lesscss.org/ "LESS css preprocessor website"
 [6]: http://prismjs.com/ "Prism website"
 [7]: http://pages.github.com/ "GitHub pages website"

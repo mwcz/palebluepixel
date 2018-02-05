@@ -1,6 +1,6 @@
 Title: Pity About Earth...
 Date: 2017-05-07
-Category: projects
+Category: Projects
 URL: projects/pity-about-earth
 Save_as: projects/pity-about-earth/index.html
 Image: /projects/pity-about-earth/logo-notitle.png
@@ -58,9 +58,9 @@ You can listen to the [Pity About Earth OST](https://veuskemini.bandcamp.com/alb
 
 Some kind streamers have already played Pity About Earth for their audiences.  Here are links to the VODs, and pictures of their faces while playing.
 
- - [![]({attach}togislp.png) **TogisLp** plays Pity About Earth...][togislp]
- - [![]({attach}drazil100.png) **drazil100** plays Pity About Earth...][drazil]
- - [![]({attach}jenninexus.png) **JenniNexus** plays Pity About Earth...][jenni]
+ - [![TogisLp plays Pity About Earth]({attach}togislp.png) **TogisLp** plays Pity About Earth...][togislp]
+ - [![drazil100 plays Pity About Earth]({attach}drazil100.png) **drazil100** plays Pity About Earth...][drazil]
+ - [![JenniNexus plays Pity  About Earty]({attach}jenninexus.png) **JenniNexus** plays Pity About Earth...][jenni]
 
 Judging is ongoing and we've gotten some good suggestions so far, mostly centering around the fact that the game is too hard.  We'll certainly tune that post-jam, but the game at its core is an arcade survival game, so the difficulty *will* eventually kill you.
 

@@ -4,6 +4,7 @@ Category: Projects
 URL: projects/canvas_indexed_color
 Save_as: projects/canvas_indexed_color/index.html
 Tags: html5, javascript, color
+Status: draft
 
 What have we here?  It's a limited demonstration of [indexed color][1] within the HTML5 canvas element.
 

@@ -17,24 +17,12 @@ creation of a loving but tempermental and sometimes murdery god.
 The second chapter of [The Varieties of Scientific Experience][varieties] by
 Carl Sagan documents the following recently discovered demerits:
 
- - We're not in a central position in the universe.  Our Earth orbits around
-   the sun.  Our solar system is not at the center of our galaxy.
-
- - Our Sun is a typical star, with no special features to distinguish it from
-   the 1,000,000,000,000,000,000,000,000 other stars universe.
-
- - Not only that, stars are made of the same stuff we find right here on our
-   Earth.  That's not so majestic!
-
- - Our earth is approximately 4,500,000,000 years old, but humans developed
-   recently, 1,000,000 years ago or so.
-
- - Humans are made of the same stuff and share a common lineage with all other
-   life on Earth.
-
- - The way we experience time is not from a [privileged frame of
-   reference][refframe].  There is nothing special about our position in the
-   universe or our motion through it.
+ - We're not in a central position in the universe.  Our Earth orbits around the sun.  Our solar system is not at the center of our galaxy.
+ - Our Sun is a typical star, with no special features to distinguish it from the 1,000,000,000,000,000,000,000,000 other stars universe.
+ - Not only that, stars are made of the same stuff we find right here on our Earth.  That's not so majestic!
+ - Our earth is approximately 4,500,000,000 years old, but humans developed recently, 1,000,000 years ago or so.
+ - Humans are made of the same stuff and share a common lineage with all other life on Earth.
+ - The way we experience time is not from a [privileged frame of reference][refframe].  There is nothing special about our position in the universe or our motion through it.
 
 Carl then suggests that one idea of human privilege is still with us.
 

@@ -16,8 +16,6 @@ Here are four examples of the color schemes:
 
 ![example of color theme matching images]({filename}/static/images/projects/screenshot_clayto_palettes_small.png "example of color theme matching images")
 
-Images [1][9], [2][10], [3][11], [4][12].
-
 The color schemes are automatically generated when a photo is posted.  A
 "suggested palette" is displayed, along with a color picker, and a tool to
 sample colors directly from the image.

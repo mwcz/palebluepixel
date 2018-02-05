@@ -14,7 +14,7 @@ SITENAME              = u'Pale Blue Pixel'
 TIMEZONE              = 'America/New_York'
 DEFAULT_LANG          = u'en'
 PDF_GENERATOR         = False
-DEFAULT_PAGINATION    = 10
+DEFAULT_PAGINATION    = 8
 OUTPUT_SOURCES        = True
 DISPLAY_PAGES_ON_MENU = True
 THEME                 = '../pbpt'
@@ -45,19 +45,12 @@ DATE_FORMATS = {
 ######################
 
 # CACHE_CONTENT = True
+# GZIP_CACHE = True
 # LOAD_CONTENT_CACHE = True
 
 #######################################
 #  pelican-bootstrap3 theme settings  #
 #######################################
-
-# display active github repos
-GITHUB_USER = 'mwcz'
-GITHUB_REPO_COUNT = 5
-GITHUB_SKIP_FORK = True
-
-# use a bootstrap theme from http://bootswatch.com/
-BOOTSTRAP_THEME = 'flatly'
 
 #######################################################################
 #                           PLUGIN SETTINGS                           #
@@ -86,6 +79,7 @@ ASSET_BUNDLES = [
          'static/less/styles.less',
      ],
      {
+         'depends': 'static/less/*.less',
          'filters': 'less',
          'output': 'css/styles.min.css',
      }
@@ -95,10 +89,6 @@ ASSET_BUNDLES = [
 ASSET_SOURCE_PATHS = [
     THEME,
 ]
-
-# related posts settings
-
-RELATED_POSTS_MAX = 4
 
 
 #######################################################################

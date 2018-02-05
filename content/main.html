@@ -31,21 +31,45 @@
     <h2>Recent blog posts</h2>
     #}
 
-    <p>
-        Programming posts and projects by Michael Clayton, <a href="https://redhat.com">Red Hat</a> software engineer and <a href="http://scripta.co">Scripta Games</a> co-founder.
-    </p>
+    <div id="homepage-about band">
+        <h2>Welcome</h2>
+        <p>
+            Programming posts and projects by Michael Clayton, <a href="https://redhat.com">Red Hat</a> software engineer and <a href="http://scripta.co">Scripta Games</a> co-founder.
+        </p>
+    </div>
 
-    <div class="latest-grid pbp-fullwidth">
-        {% for article in (articles_page.object_list if articles_page else articles) %}
-            {% if loop.index <= 12 %}
-                {{ card.write(
-                    title = article.title,
-                    href = article.url,
-                    background = article.image,
-                    background_align = article.cardbgalign,
-                ) }}
-            {% endif %}
-        {% endfor %}
+    <div class="band">
+        <h2>Featured projects</h2>
+
+        <div class="latest-grid">
+            {% for article in (articles_page.object_list if articles_page else articles) if article.category == 'Projects' %}
+                {% if loop.index <= 4 %}
+                    {{ card.write(
+                        title = article.title,
+                        href = article.url,
+                        background = article.image,
+                        background_align = article.cardbgalign,
+                    ) }}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="band">
+        <h2>Recent blog posts</h2>
+
+        <div class="latest-grid">
+            {% for article in (articles_page.object_list if articles_page else articles) if article.category == 'Posts' %}
+                {% if loop.index <= 4 %}
+                    {{ card.write(
+                        title = article.title,
+                        href = article.url,
+                        background = article.image,
+                        background_align = article.cardbgalign,
+                    ) }}
+                {% endif %}
+            {% endfor %}
+        </div>
     </div>
 
 </section>

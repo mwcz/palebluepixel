@@ -5,7 +5,8 @@
   "main": "csspurify.js",
   "scripts": {
     "get-fireflies": "pushd ../fireflies && git checkout pbp && npm run build && popd && cp -r ../fireflies/dist/* ./content/static/js/homepage-fireflies",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "make stopserver && sleep 0.2s && make devserver"
   },
   "repository": {
     "type": "git",

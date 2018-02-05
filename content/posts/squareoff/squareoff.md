@@ -12,10 +12,18 @@ web-based, you can...
 
 <p class="text-center"><a class="btn btn-default btn-lg" href="http://sqoff.com">Play now!</a></p>
 
-<div class="row">
-<img class="col-sm-6" src="{filename}/static/images/projects/squareoff/title.png" alt="Square Off title screen" />
-<img class="col-sm-6" src="{filename}/static/images/projects/squareoff/screenshot.png" alt="Square Off gameplay" />
-</div>
+<style>
+.sqoff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 10px;
+}
+</style>
+
+<figure class="sqoff-grid">
+    <img src="{filename}/static/images/projects/squareoff/title.png" alt="Square Off title screen" />
+    <img src="{filename}/static/images/projects/squareoff/screenshot.png" alt="Square Off gameplay" />
+</figure>
 
 We were both very happy with how the game turned out, especially since this was
 our first game jam.  Our fellow game creators were nice enough to give us some
@@ -29,7 +37,9 @@ Our mad 72-hour dash is documented in this [retrospective][retro] on the
 
 Oh, and if you're so inclined, [view source][source].
 
-<img hidden src="{attach}square-off-logo.png">
+<div hidden>
+    <img hidden src="{attach}square-off-logo.png">
+</div>
 
 [fb]: https://www.facebook.com/zorbio/
 [scripta]: http://scripta.co/
