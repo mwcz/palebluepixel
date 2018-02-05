@@ -5,6 +5,7 @@ URL: projects/pity-about-earth
 Save_as: projects/pity-about-earth/index.html
 Image: /projects/pity-about-earth/logo-notitle.png
 Tags: programming, ludum-dare, ld38, javascript, phaser, webgl, gamedev, 2d, web, pity-about-earth
+Pin: true
 
 <p class="text-center"><a class="btn btn-default btn-lg" href="http://pae.fun/">Play now!</a></p>
 

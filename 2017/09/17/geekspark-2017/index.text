@@ -14,6 +14,8 @@ geekSPARK is a showcase of creative use of technology, taking place each year du
 
 ---
 
+[TOC]
+
 ## RC Speedway
 
 The RC Speedway was an incredibly fun creation by maker extraordinaire Bill Culverhouse from [SplatSpace][splat].  Bill mounted cameras on the RC cars which fed wirelessly into first-person displays.  The cars were *fast*, and the sensation of speed from the first-person view was exhilirating.  I'm kicking myself for not taking any video.

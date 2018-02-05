@@ -2,6 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Pale Blue Pixel</title><link href="https://palebluepixel.org/" rel="alternate"></link><link href="http://localhost:8000/feeds/atom.xml" rel="self"></link><id>https://palebluepixel.org/</id><updated>2017-10-12T00:00:00-04:00</updated><entry><title>geekSPARK 2017</title><link href="https://palebluepixel.org/2017/09/17/geekspark-2017/" rel="alternate"></link><published>2017-09-17T00:00:00-04:00</published><updated>2017-09-17T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-09-17:/2017/09/17/geekspark-2017/</id><summary type="html">&lt;p&gt;The SPARKcon creativity festival: on the geeky side.&lt;/p&gt;</summary><content type="html">&lt;p&gt;geekSPARK is a showcase of creative use of technology, taking place each year during the &lt;a href="https://sparkcon.com"&gt;SPARKcon&lt;/a&gt; art festival.  What lies below is a summary of the festivities at geekSPARK 2017.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="geekSPARK logo" src="https://palebluepixel.org/2017/09/17/geekspark-2017/geekSPARK-icon.png" /&gt;&lt;/p&gt;
 &lt;hr /&gt;
+&lt;div class="toc"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#rc-speedway"&gt;RC Speedway&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#virtual-reality"&gt;Virtual Reality&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#all-things-led"&gt;All Things LED&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#fire-tubes"&gt;Fire Tubes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#mushroom-hunters"&gt;Mushroom Hunters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#digital-motion"&gt;Digital Motion&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#3d-printing"&gt;3D Printing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#whats-next"&gt;What's next?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#special-thanks"&gt;Special thanks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;h2 id="rc-speedway"&gt;RC Speedway&lt;/h2&gt;
 &lt;p&gt;The RC Speedway was an incredibly fun creation by maker extraordinaire Bill Culverhouse from &lt;a href="https://splatspace.org/"&gt;SplatSpace&lt;/a&gt;.  Bill mounted cameras on the RC cars which fed wirelessly into first-person displays.  The cars were &lt;em&gt;fast&lt;/em&gt;, and the sensation of speed from the first-person view was exhilirating.  I'm kicking myself for not taking any video.&lt;/p&gt;
 &lt;figure&gt;
@@ -249,58 +262,7 @@
 &lt;img hidden src="https://palebluepixel.org/2017/08/04/in-orange-light/images/mountain2.png"&gt;
 &lt;img hidden src="https://palebluepixel.org/2017/08/04/in-orange-light/images/mountain3.png"&gt;
 &lt;img hidden src="https://palebluepixel.org/2017/08/04/in-orange-light/images/mountain4.png"&gt;
-&lt;img hidden src="https://palebluepixel.org/2017/08/04/in-orange-light/iol-square-logo.jpg"&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="web"></category><category term="gamedev"></category><category term="ludum-dare"></category><category term="ld39"></category><category term="in-orange-light"></category></entry><entry><title>Zorbio</title><link href="https://palebluepixel.org/projects/zorbio" rel="alternate"></link><published>2016-11-03T00:00:00-04:00</published><updated>2016-11-03T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2016-11-03:/projects/zorbio</id><summary type="html">&lt;p&gt;Zorbio is a free multiplayer eat-em-up game that you can play in your browser!&lt;/p&gt;
-&lt;p&gt;Zorbio is brought to you by …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Zorbio is a free multiplayer eat-em-up game that you can play in your browser!&lt;/p&gt;
-&lt;p&gt;Zorbio is brought to you by my good friend Jared Sprague and I, via our small game development company, &lt;a href="http://scripta.co/"&gt;Scripta, Inc&lt;/a&gt;. Follow Zorbio development on the &lt;a href="http://scripta.co/"&gt;Scripta blog&lt;/a&gt;, or on &lt;a href="https://www.facebook.com/zorbio/"&gt;Facebook&lt;/a&gt;.&lt;/p&gt;
-&lt;p class="text-center"&gt;&lt;a class="btn btn-default btn-lg" href="http://zor.bio"&gt;Play now!&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://palebluepixel.org/static/images/projects/icon_zorbio.jpg" alt="screenshot of Zorbio" /&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="web"></category><category term="scripta"></category><category term="games"></category><category term="gamedev"></category><category term="zorbio"></category></entry><entry><title>Noise/Echo Cancellation in Fedora 26</title><link href="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/" rel="alternate"></link><published>2017-10-12T00:00:00-04:00</published><updated>2017-10-12T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-10-12:/2017/10/12/noiseecho-cancellation-in-fedora-26/</id><summary type="html">&lt;p&gt;How to enable PulseAudio noise and echo cancellation in Fedora 26.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Minimic is great.  I just received mine last week, and I'm loving the ability to join video calls with &lt;a href="http://gradolabs.com/"&gt;nice, comfy headphones&lt;/a&gt;.  It's much better than switching back and forth between headphones and a headset.&lt;/p&gt;
-&lt;figure&gt;
-    &lt;img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/minimic.jpg"&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;The only problem is that, since the minimic is just &lt;em&gt;a wire&lt;/em&gt;, it doesn't have any noise or echo cancellation.  And since Fedora doesn't come with that feature enabled by default, the mic was picking up a lot of ambient noise.  &lt;a href="https://chrisbredesen.com/"&gt;Breddy&lt;/a&gt; told me that steps just like the following didn't work in Fedora a few versions ago, so I wanted to document them now that the issues seem to be fixed.  I originally found these instructions on &lt;a href="https://www.reddit.com/r/linux/comments/2yqfqp/just_found_that_pulseaudio_have_noise/"&gt;this r/linux post&lt;/a&gt; and am reposting them here with Fedora-specific flourishes.&lt;/p&gt;
-&lt;p&gt;Without further ado, here's how to turn on noise and echo cancellation in Fedora 26.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h2 id="if-you-just-want-it-to-work"&gt;If you just want it to work&lt;/h2&gt;
-&lt;p&gt;If you're in a rush, here's a script that will set everything up for you.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;:::bash
-sudo dnf install -y webrtc-audio-processing
-echo '.nofail' | sudo tee -a /etc/pulse/default.pa
-echo 'load-module module-echo-cancel aec_method=webrtc' | sudo tee -a /etc/pulse/default.pa
-pulseaudio -k
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr /&gt;
-&lt;h2 id="again-but-with-explanation"&gt;Again, but with explanation&lt;/h2&gt;
-&lt;p&gt;The first step is to install the WebRTC audio processing package.  It &lt;em&gt;may&lt;/em&gt; come by default with Fedora.  My machine had it installed already, but I'm including it here in case it was simply a dependency of some other package I've installed.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;:::bash
-sudo dnf install webrtc-audio-processing
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Then add these two lines to the end of &lt;code&gt;/etc/pulse/default.pa&lt;/code&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;:::bash
-.nofail
-load-module module-echo-cancel aec_method=webrtc
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Then restart PulseAudio.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;:::bash
-pulseaudio -k
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now, if you open Sound settings, you should see a new entry under the &lt;em&gt;Input&lt;/em&gt; tab.  Mine is called "&lt;strong&gt;Built-in Audio Analog Stereo (echo cancelled with SA9027 USB Audio Analog Stereo)&lt;/strong&gt;".  Not sure what's up with that name; my mic is connected with a 3.5mm audio jack.  Whatever, it works!&lt;/p&gt;
-&lt;figure&gt;
-    &lt;img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/devices.png"&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Select the device that says "echo cancelled" and your audio background hiss should drop to almost nothing.  Here's a before and after spectrum analysis.&lt;/p&gt;
-&lt;div class="beside"&gt;
-    &lt;figure&gt;
-        &lt;img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/before.jpg" alt="Audio spectrum analysis of microphone input without noise cancellation." /&gt;
-        &lt;figcaption&gt;Spectrum analysis without noise cancellation.&lt;/figcaption&gt;
-    &lt;/figure&gt;
-    &lt;figure&gt;
-        &lt;img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/after.jpg" alt="Audio spectrum analysis of microphone input with noise cancellation." /&gt;
-        &lt;figcaption&gt;Spectrum analysis &lt;b&gt;with&lt;/b&gt; noise cancellation.&lt;/figcaption&gt;
-    &lt;/figure&gt;
-&lt;/div&gt;</content><category term="linux"></category><category term="fedora"></category><category term="audio"></category></entry><entry><title>Pity About Earth...</title><link href="https://palebluepixel.org/projects/pity-about-earth" rel="alternate"></link><published>2017-05-07T00:00:00-04:00</published><updated>2017-05-07T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-05-07:/projects/pity-about-earth</id><summary type="html">&lt;p class="text-center"&gt;&lt;a class="btn btn-default btn-lg" href="http://pae.fun/"&gt;Play now!&lt;/a&gt;&lt;/p&gt;
+&lt;img hidden src="https://palebluepixel.org/2017/08/04/in-orange-light/iol-square-logo.jpg"&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="web"></category><category term="gamedev"></category><category term="ludum-dare"></category><category term="ld39"></category><category term="in-orange-light"></category></entry><entry><title>Pity About Earth...</title><link href="https://palebluepixel.org/projects/pity-about-earth" rel="alternate"></link><published>2017-05-07T00:00:00-04:00</published><updated>2017-05-07T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-05-07:/projects/pity-about-earth</id><summary type="html">&lt;p class="text-center"&gt;&lt;a class="btn btn-default btn-lg" href="http://pae.fun/"&gt;Play now!&lt;/a&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Humanity, listen up. This is the Universe. I am sick of you sticking your nose where it doesn …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p class="text-center"&gt;&lt;a class="btn btn-default btn-lg" href="http://pae.fun/"&gt;Play now!&lt;/a&gt;&lt;/p&gt;
@@ -351,7 +313,58 @@ pulseaudio -k
 &lt;p&gt;&lt;img alt="" src="https://palebluepixel.org/projects/pity-about-earth/difficulty.png" /&gt;&lt;/p&gt;
 &lt;p&gt;As you can probably tell from the screen orientation, the game was designed with mobile in mind.  Mobile wasn't a big priority for the jam, but we plan to post the game to app stores after jam judging is complete.  Some tweaks will be necessary, like lessening the already-punishing difficulty.&lt;/p&gt;
 &lt;p&gt;Thanks to our families, the players, the streamers who've played the game, and all othe other LDJAM participants!&lt;/p&gt;
-&lt;p&gt;&lt;img hidden src="https://palebluepixel.org/projects/pity-about-earth/logo-notitle.png"&gt;&lt;/p&gt;</content><category term="programming"></category><category term="ludum-dare"></category><category term="ld38"></category><category term="javascript"></category><category term="phaser"></category><category term="webgl"></category><category term="gamedev"></category><category term="2d"></category><category term="web"></category><category term="pity-about-earth"></category></entry><entry><title>Meet SimPixel</title><link href="https://palebluepixel.org/2017/03/10/meet-simpixel/" rel="alternate"></link><published>2017-03-10T00:00:00-05:00</published><updated>2017-03-10T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-03-10:/2017/03/10/meet-simpixel/</id><summary type="html">&lt;p&gt;A WebGL-based visualizer for LED displays.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have someone I'd like you to meet.  SimPixel, meet everyone.  Everyone,
+&lt;p&gt;&lt;img hidden src="https://palebluepixel.org/projects/pity-about-earth/logo-notitle.png"&gt;&lt;/p&gt;</content><category term="programming"></category><category term="ludum-dare"></category><category term="ld38"></category><category term="javascript"></category><category term="phaser"></category><category term="webgl"></category><category term="gamedev"></category><category term="2d"></category><category term="web"></category><category term="pity-about-earth"></category></entry><entry><title>Zorbio</title><link href="https://palebluepixel.org/projects/zorbio" rel="alternate"></link><published>2016-11-03T00:00:00-04:00</published><updated>2016-11-03T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2016-11-03:/projects/zorbio</id><summary type="html">&lt;p&gt;Zorbio is a free multiplayer eat-em-up game that you can play in your browser!&lt;/p&gt;
+&lt;p&gt;Zorbio is brought to you by …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Zorbio is a free multiplayer eat-em-up game that you can play in your browser!&lt;/p&gt;
+&lt;p&gt;Zorbio is brought to you by my good friend Jared Sprague and I, via our small game development company, &lt;a href="http://scripta.co/"&gt;Scripta, Inc&lt;/a&gt;. Follow Zorbio development on the &lt;a href="http://scripta.co/"&gt;Scripta blog&lt;/a&gt;, or on &lt;a href="https://www.facebook.com/zorbio/"&gt;Facebook&lt;/a&gt;.&lt;/p&gt;
+&lt;p class="text-center"&gt;&lt;a class="btn btn-default btn-lg" href="http://zor.bio"&gt;Play now!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://palebluepixel.org/static/images/projects/icon_zorbio.jpg" alt="screenshot of Zorbio" /&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="web"></category><category term="scripta"></category><category term="games"></category><category term="gamedev"></category><category term="zorbio"></category></entry><entry><title>Noise/Echo Cancellation in Fedora 26</title><link href="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/" rel="alternate"></link><published>2017-10-12T00:00:00-04:00</published><updated>2017-10-12T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-10-12:/2017/10/12/noiseecho-cancellation-in-fedora-26/</id><summary type="html">&lt;p&gt;How to enable PulseAudio noise and echo cancellation in Fedora 26.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Minimic is great.  I just received mine last week, and I'm loving the ability to join video calls with &lt;a href="http://gradolabs.com/"&gt;nice, comfy headphones&lt;/a&gt;.  It's much better than switching back and forth between headphones and a headset.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/minimic.jpg"&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The only problem is that, since the minimic is just &lt;em&gt;a wire&lt;/em&gt;, it doesn't have any noise or echo cancellation.  And since Fedora doesn't come with that feature enabled by default, the mic was picking up a lot of ambient noise.  &lt;a href="https://chrisbredesen.com/"&gt;Breddy&lt;/a&gt; told me that steps just like the following didn't work in Fedora a few versions ago, so I wanted to document them now that the issues seem to be fixed.  I originally found these instructions on &lt;a href="https://www.reddit.com/r/linux/comments/2yqfqp/just_found_that_pulseaudio_have_noise/"&gt;this r/linux post&lt;/a&gt; and am reposting them here with Fedora-specific flourishes.&lt;/p&gt;
+&lt;p&gt;Without further ado, here's how to turn on noise and echo cancellation in Fedora 26.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id="if-you-just-want-it-to-work"&gt;If you just want it to work&lt;/h2&gt;
+&lt;p&gt;If you're in a rush, here's a script that will set everything up for you.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;:::bash
+sudo dnf install -y webrtc-audio-processing
+echo '.nofail' | sudo tee -a /etc/pulse/default.pa
+echo 'load-module module-echo-cancel aec_method=webrtc' | sudo tee -a /etc/pulse/default.pa
+pulseaudio -k
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h2 id="again-but-with-explanation"&gt;Again, but with explanation&lt;/h2&gt;
+&lt;p&gt;The first step is to install the WebRTC audio processing package.  It &lt;em&gt;may&lt;/em&gt; come by default with Fedora.  My machine had it installed already, but I'm including it here in case it was simply a dependency of some other package I've installed.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;:::bash
+sudo dnf install webrtc-audio-processing
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then add these two lines to the end of &lt;code&gt;/etc/pulse/default.pa&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;:::bash
+.nofail
+load-module module-echo-cancel aec_method=webrtc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then restart PulseAudio.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;:::bash
+pulseaudio -k
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, if you open Sound settings, you should see a new entry under the &lt;em&gt;Input&lt;/em&gt; tab.  Mine is called "&lt;strong&gt;Built-in Audio Analog Stereo (echo cancelled with SA9027 USB Audio Analog Stereo)&lt;/strong&gt;".  Not sure what's up with that name; my mic is connected with a 3.5mm audio jack.  Whatever, it works!&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/devices.png"&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Select the device that says "echo cancelled" and your audio background hiss should drop to almost nothing.  Here's a before and after spectrum analysis.&lt;/p&gt;
+&lt;div class="beside"&gt;
+    &lt;figure&gt;
+        &lt;img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/before.jpg" alt="Audio spectrum analysis of microphone input without noise cancellation." /&gt;
+        &lt;figcaption&gt;Spectrum analysis without noise cancellation.&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure&gt;
+        &lt;img src="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/after.jpg" alt="Audio spectrum analysis of microphone input with noise cancellation." /&gt;
+        &lt;figcaption&gt;Spectrum analysis &lt;b&gt;with&lt;/b&gt; noise cancellation.&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;</content><category term="linux"></category><category term="fedora"></category><category term="audio"></category></entry><entry><title>Meet SimPixel</title><link href="https://palebluepixel.org/2017/03/10/meet-simpixel/" rel="alternate"></link><published>2017-03-10T00:00:00-05:00</published><updated>2017-03-10T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2017-03-10:/2017/03/10/meet-simpixel/</id><summary type="html">&lt;p&gt;A WebGL-based visualizer for LED displays.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have someone I'd like you to meet.  SimPixel, meet everyone.  Everyone,
 SimPixel.&lt;/p&gt;
 &lt;div id="simpixel-container"&gt;&lt;/div&gt;
 
