@@ -2,6 +2,7 @@ Title: JSImage
 Date: 2009-01-01
 Category: Projects
 URL: projects/jsimage
+Image: /static/images/projects/icon_jsimage.jpg
 Save_as: projects/jsimage/index.html
 Tags: html5, javascript, color
 

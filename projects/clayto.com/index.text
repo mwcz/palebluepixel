@@ -2,6 +2,7 @@ Title: clayto.com
 Date: 2003-01-01
 Category: Projects
 URL: projects/clayto.com
+Image: /static/images/projects/icon_clayto.jpg
 Save_as: projects/clayto.com/index.html
 
 [clayto.com][1] is my homemade photography website.

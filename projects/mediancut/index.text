@@ -2,6 +2,7 @@ Title: median-cut.js
 Date: 2009-01-01
 Category: Projects
 URL: projects/mediancut
+Image: /static/images/projects/icon_mediancut.jpg
 Save_as: projects/mediancut/index.html
 Tags: html5, javascript, color
 

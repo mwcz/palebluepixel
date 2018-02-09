@@ -3,6 +3,7 @@ Date: 2014-08-25
 Category: Projects
 URL: projects/dimo
 Save_as: projects/dimo/index.html
+Image: /static/images/projects/icon_dimo.jpg
 Tags: programming, javascript, requirejs, amd, threejs, webgl, 3d, art, sparkcon, geekspark, physics
 Gallery: 033
 

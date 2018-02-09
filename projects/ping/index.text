@@ -3,6 +3,7 @@ Date: 2015-06-23
 Category: Projects
 URL: projects/ping
 Save_as: projects/ping/index.html
+Image: /static/images/projects/icon_ping.jpg
 Tags: programming, javascript, phaserjs, games, red hat, red hat summit, gamedev, ping
 
 <a href="/static/projects/ping">

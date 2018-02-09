@@ -2,6 +2,7 @@ Title: AEJS
 Date: 2011-10-13
 Category: Projects
 URL: projects/aejs
+Image: /static/images/projects/icon_aejs.jpg
 Save_as: projects/aejs/index.html
 Tags: html5, javascript
 

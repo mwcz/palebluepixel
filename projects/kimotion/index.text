@@ -3,6 +3,7 @@ Date: 2015-09-26
 Category: Projects
 URL: projects/kimotion
 Save_as: projects/kimotion/index.html
+Image: /projects/kimotion/thumb.png
 Tags: programming, javascript, threejs, webgl, 3d, 2d, art, sparkcon, geekspark, dimo, physics, web, kimotion
 
 <img class="col-md-7" src="/static/images/gallery/900x/gallery/039/600_5782.JPG" alt="kids playing with kimotion" style="padding-left: 0; padding-right: 30px" />
@@ -96,6 +97,8 @@ window.addEventListener('resize', set_vimeo_iframe_height);
 
 [View source][repo], if you like code.  Also check out [DiMo: Particles][dimo],
 the predecessor to Kimotion.
+
+<div hidden><img src="{attach}thumb.png" alt="kimotion thumbnail"></div>
 
 [dimo]: /projects/dimo
 [repo]: https://github.com/mwcz/Kimotion

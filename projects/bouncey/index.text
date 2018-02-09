@@ -2,6 +2,7 @@ Title: Bouncey
 Date: 2011-11-17
 URL: projects/bouncey
 Save_as: projects/bouncey/index.html
+Image: /static/images/projects/icon_bouncey.jpg
 Category: Projects
 Tags: html5, javascript
 

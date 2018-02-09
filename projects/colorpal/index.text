@@ -2,6 +2,7 @@ Title: ColorPal
 Date: 2012-01-16
 Category: Projects
 Tags: html5, javascript, color, colorpal
+Image: /static/images/projects/icon_colorpal.jpg
 URL: projects/colorpal
 Save_as: projects/colorpal/index.html
 
