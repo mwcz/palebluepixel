@@ -42,7 +42,7 @@
         <h2>Featured projects</h2>
 
         <div class="latest-grid">
-            {% for article in (articles_page.object_list if articles_page else articles) if article.category == 'Projects' %}
+            {% for article in (articles_page.object_list if articles_page else articles) if article.category == 'Projects' and article.pin %}
                 {% if loop.index <= 4 %}
                     {{ card.write(
                         title = article.title,
