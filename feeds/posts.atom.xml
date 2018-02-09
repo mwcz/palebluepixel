@@ -826,56 +826,7 @@ eye-opening for me.  A week out and tired to the bone, I was thinking "No way
 am I doing this next year!"  But the thrill of everyone's hard work coming
 together drove away the exhaustion.  I can't wait to see what we can cook up
 next year.&lt;/p&gt;
-&lt;p&gt;&lt;img style="display: none !important;" src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/post-thumbnail.jpg"&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="web"></category><category term="redhat"></category><category term="redhat-summit"></category></entry><entry><title>The Last Conceit</title><link href="https://palebluepixel.org/2015/12/13/the-last-conceit/" rel="alternate"></link><published>2015-12-13T00:00:00-05:00</published><updated>2015-12-13T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-12-13:/2015/12/13/the-last-conceit/</id><summary type="html">&lt;p&gt;Humans have had it rough for the past few centuries!  Repeated humbling by scientific discoveries has left our ego in shambles.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Humans have had it rough for the past few centuries!  Emotionally, I mean.  It
-used to be so clear that we were privileged and important, the favorite child
-of creation.  How could it not be so?  Our planet was the fulcrum around which
-every heavenly body in the universe orbited.  We were the dominant form of life
-on Earth, and we were fairly certain that ourselves and our world were the
-creation of a loving but tempermental and sometimes murdery god.&lt;/p&gt;
-&lt;p&gt;The second chapter of &lt;a href="https://en.wikipedia.org/wiki/The_Varieties_of_Scientific_Experience"&gt;The Varieties of Scientific Experience&lt;/a&gt; by
-Carl Sagan documents the following recently discovered demerits:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;We're not in a central position in the universe.  Our Earth orbits around the sun.  Our solar system is not at the center of our galaxy.&lt;/li&gt;
-&lt;li&gt;Our Sun is a typical star, with no special features to distinguish it from the 1,000,000,000,000,000,000,000,000 other stars universe.&lt;/li&gt;
-&lt;li&gt;Not only that, stars are made of the same stuff we find right here on our Earth.  That's not so majestic!&lt;/li&gt;
-&lt;li&gt;Our earth is approximately 4,500,000,000 years old, but humans developed recently, 1,000,000 years ago or so.&lt;/li&gt;
-&lt;li&gt;Humans are made of the same stuff and share a common lineage with all other life on Earth.&lt;/li&gt;
-&lt;li&gt;The way we experience time is not from a &lt;a href="https://en.wikipedia.org/wiki/Preferred_frame"&gt;privileged frame of reference&lt;/a&gt;.  There is nothing special about our position in the universe or our motion through it.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Carl then suggests that one idea of human privilege is still with us.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Well, if we don't have a distinctive position or velocity or acceleration, or
-a separate origin from the other plants and animals, then at least, maybe, we
-are the smartest beings in the entire universe.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Carl goes on to say that discovering extraterrestrial intelligence could
-silence this latest in a long line of human conceits.  Whatever other outcomes
-an indisputable alien encounter would have, I'm quite sure Carl is right about
-this one.  However, there is another aspirant approaching, and it's almost
-ready to snatch the &lt;em&gt;Smartest Kids in the Universe&lt;/em&gt; trophy from humanity's
-collective hands.&lt;/p&gt;
-&lt;p&gt;The next great blow to our egos will be the discovery that intelligence can
-arise from ordinary matter, that is, melted sand.  Artificial intelligence is
-complex and controversial, but I'm quite certain the intelligence of our
-computer systems will continue to increase, and the vastness of the universe
-suggests to me that we will probably create intelligence long before we
-discover it on another planet.&lt;/p&gt;
-&lt;p&gt;It's difficult to imagine how AI with greater-than-human intelligence would
-change our existence.  People will probably say, "it's just programmed to act
-that way", or "it's not human, it's not &lt;em&gt;thinking&lt;/em&gt;".  Many, maybe even most,
-people won't accept AI as truly intelligent.  In many ways, it would be even
-&lt;em&gt;more&lt;/em&gt; alien than a biological extra-terrestrial species.&lt;/p&gt;
-&lt;p&gt;Carl again:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;A grinding of heels can be heard screeching across the last five centuries as
-scientists have revealed the non-centrality of our position and as many others
-have fought to resist that insight to the bitter end.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;My take is that our undistinguished position in the universe is freeing.
-Humans have a lot of traits, some admirable and some less so, but &lt;em&gt;we&lt;/em&gt; get to
-choose which to value.  In any case, we should probably stop looking to the
-universe for our sense of self-worth.&lt;/p&gt;
-&lt;p&gt;&lt;img style="display: none !important;" src="https://palebluepixel.org/2015/12/13/the-last-conceit/Copernican_heliocentrism_diagram-2.png"&gt;&lt;/p&gt;</content><category term="philosophy"></category><category term="technology"></category><category term="ai"></category></entry><entry><title>Make a Kimotion!</title><link href="https://palebluepixel.org/2015/09/26/make-a-kimotion/" rel="alternate"></link><published>2015-09-26T00:00:00-04:00</published><updated>2015-09-26T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-09-26:/2015/09/26/make-a-kimotion/</id><summary type="html">&lt;p&gt;Kimotion is a new framework for building interactive art exhibits.  It will appeal mostly to the Programmer Artist types.  Think "Warrior Poet", but with keyboards.&lt;/p&gt;</summary><content type="html">&lt;p&gt;A year ago, I had the joy of working on Digital Motion, an &lt;a href="https://en.wikipedia.org/wiki/Interactive_art"&gt;interactive
+&lt;p&gt;&lt;img style="display: none !important;" src="https://palebluepixel.org/2016/07/13/visualizing-network-traffic-with-webgl/post-thumbnail.jpg"&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="web"></category><category term="redhat"></category><category term="redhat-summit"></category></entry><entry><title>Make a Kimotion!</title><link href="https://palebluepixel.org/2015/09/26/make-a-kimotion/" rel="alternate"></link><published>2015-09-26T00:00:00-04:00</published><updated>2015-09-26T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2015-09-26:/2015/09/26/make-a-kimotion/</id><summary type="html">&lt;p&gt;Kimotion is a new framework for building interactive art exhibits.  It will appeal mostly to the Programmer Artist types.  Think "Warrior Poet", but with keyboards.&lt;/p&gt;</summary><content type="html">&lt;p&gt;A year ago, I had the joy of working on Digital Motion, an &lt;a href="https://en.wikipedia.org/wiki/Interactive_art"&gt;interactive
 art&lt;/a&gt; exhibit for Raleigh's annual art festival, &lt;a href="https://en.wikipedia.org/wiki/Sparkcon"&gt;SPARKcon&lt;/a&gt;.
 The month leading up to SPARKcon 2014 was a mad dash of perfecting the graphics
 and physics equations of my &lt;a href="/projects/dimo"&gt;DiMo: Particles&lt;/a&gt; display.  After a
@@ -1412,7 +1363,7 @@ project.&lt;/p&gt;
         katex.render(this.innerHTML, this);
     }
     $('[role=math]').each(render_math);
-&lt;/script&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="requirejs"></category><category term="amd"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category></entry><entry><title>Particles and π - DiMo Comes to Life</title><link href="https://palebluepixel.org/2014/08/25/particles-and-p-dimo-comes-to-life/" rel="alternate"></link><published>2014-08-25T00:00:00-04:00</published><updated>2014-08-25T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-08-25:/2014/08/25/particles-and-p-dimo-comes-to-life/</id><summary type="html">&lt;p&gt;A player walks up Fayetteville St in Raleigh, North Carolina.  SPARKcon has begun, and dozens of artists are ...&lt;/p&gt;</summary><content type="html">&lt;p&gt;A player walks up Fayetteville St in Raleigh, North Carolina.
+&lt;/script&gt;&lt;/p&gt;</content><category term="programming"></category><category term="javascript"></category><category term="requirejs"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category></entry><entry><title>Particles and π - DiMo Comes to Life</title><link href="https://palebluepixel.org/2014/08/25/particles-and-p-dimo-comes-to-life/" rel="alternate"></link><published>2014-08-25T00:00:00-04:00</published><updated>2014-08-25T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-08-25:/2014/08/25/particles-and-p-dimo-comes-to-life/</id><summary type="html">&lt;p&gt;A player walks up Fayetteville St in Raleigh, North Carolina.  SPARKcon has begun, and dozens of artists are ...&lt;/p&gt;</summary><content type="html">&lt;p&gt;A player walks up Fayetteville St in Raleigh, North Carolina.
 &lt;a href="http://www.sparkcon.com/"&gt;SPARKcon&lt;/a&gt; has begun, and dozens of artists are strewn along the
 street, hard at work creating elaborate chalk art on the asphalt.  A light rain
 is falling, and some artists are holding umbrellas over their work, some have
@@ -1495,7 +1446,7 @@ repo.&lt;/p&gt;
     }
     document.addEventListener('DOMContentLoaded', set_vimeo_iframe_height);
     window.addEventListener('resize', set_vimeo_iframe_height);
-&lt;/script&gt;</content><category term="programming"></category><category term="javascript"></category><category term="requirejs"></category><category term="amd"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category><category term="kimotion"></category></entry><entry><title>RGB WebGL Color Cube</title><link href="https://palebluepixel.org/2014/03/23/rgb-webgl-color-cube/" rel="alternate"></link><published>2014-03-23T00:00:00-04:00</published><updated>2014-03-23T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-03-23:/2014/03/23/rgb-webgl-color-cube/</id><summary type="html">&lt;p&gt;I spent a bit of time this weekend building an RGB color cube for
+&lt;/script&gt;</content><category term="programming"></category><category term="javascript"></category><category term="requirejs"></category><category term="threejs"></category><category term="webgl"></category><category term="3d"></category><category term="art"></category><category term="sparkcon"></category><category term="geekspark"></category><category term="dimo"></category><category term="physics"></category><category term="web"></category><category term="kimotion"></category></entry><entry><title>RGB WebGL Color Cube</title><link href="https://palebluepixel.org/2014/03/23/rgb-webgl-color-cube/" rel="alternate"></link><published>2014-03-23T00:00:00-04:00</published><updated>2014-03-23T00:00:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2014-03-23:/2014/03/23/rgb-webgl-color-cube/</id><summary type="html">&lt;p&gt;I spent a bit of time this weekend building an RGB color cube for
 &lt;a href="http://colorpal.org"&gt;ColorPal&lt;/a&gt;, using &lt;a href="http://threejs.org"&gt;Three.js&lt;/a&gt;.  Drag and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I spent a bit of time this weekend building an RGB color cube for
 &lt;a href="http://colorpal.org"&gt;ColorPal&lt;/a&gt;, using &lt;a href="http://threejs.org"&gt;Three.js&lt;/a&gt;.  Drag and drop any image, and you'll see a
 cube with all the pixels of your image mapped into 3D space.&lt;/p&gt;

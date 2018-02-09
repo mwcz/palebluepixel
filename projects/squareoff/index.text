@@ -4,7 +4,7 @@ Category: Projects
 URL: projects/squareoff
 Save_as: projects/squareoff/index.html
 Image: /projects/squareoff/square-off-logo.png
-Tags: programming, ludum-dare, ld35, javascript, phaser, webgl, gamedev, 2d, web, squareoff
+Tags: programming, ludum-dare, ld35, javascript, phaser, webgl, gamedev, 2d, web, squareoff, games
 
 Square Off is a 1v1 airhockey-style game that [Jared][jared] and [I][mwcz]
 built in 72 hours for the [Ludum Dare 35][ld35] game jam.  And beacuse it's
