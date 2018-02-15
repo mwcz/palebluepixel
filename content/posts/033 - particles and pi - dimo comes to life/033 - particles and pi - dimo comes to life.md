@@ -1,6 +1,6 @@
 Title: Particles and π - DiMo Comes to Life
 Date: 2014-08-25
-Tags: programming, javascript, requirejs, amd, threejs, webgl, 3d, art, sparkcon, geekspark, dimo, physics, web, kimotion
+Tags: programming, javascript, requirejs, threejs, webgl, 3d, art, sparkcon, geekspark, dimo, physics, web, kimotion
 Image: /2014/08/25/particles-and-p-dimo-comes-to-life/dimo-kids.jpg
 Summary: A player walks up Fayetteville St in Raleigh, North Carolina.  SPARKcon has begun, and dozens of artists are ...
 TwitterWidgetID: 552863179194511360

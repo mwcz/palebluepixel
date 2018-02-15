@@ -1,5 +1,6 @@
 Title: The Last Conceit
 Date: 2015-12-13
+Status: draft
 Tags: philosophy, technology, ai
 Summary: Humans have had it rough for the past few centuries!  Repeated humbling by scientific discoveries has left our ego in shambles.
 Image: /2015/12/13/the-last-conceit/Copernican_heliocentrism_diagram-2.png

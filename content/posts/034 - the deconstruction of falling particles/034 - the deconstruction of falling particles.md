@@ -1,6 +1,6 @@
 Title: DiMo: The Deconstruction of Falling Stars
 Date: 2014-10-30
-Tags: programming, javascript, requirejs, amd, threejs, webgl, 3d, art, sparkcon, geekspark, dimo, physics, web
+Tags: programming, javascript, requirejs, threejs, webgl, 3d, art, sparkcon, geekspark, dimo, physics, web
 Image: /2014/10/30/dimo-the-deconstruction-of-falling-stars/swath-colors.png
 Summary: The construction of a WebGL particle physics gravity simulation *slash* interactive art installation.
 Mwc: 34

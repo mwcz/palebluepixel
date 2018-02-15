@@ -4,7 +4,7 @@ Category: Projects
 URL: projects/dimo
 Save_as: projects/dimo/index.html
 Image: /static/images/projects/icon_dimo.jpg
-Tags: programming, javascript, requirejs, amd, threejs, webgl, 3d, art, sparkcon, geekspark, physics
+Tags: programming, javascript, requirejs, threejs, webgl, 3d, art, sparkcon, geekspark, physics
 Gallery: 033
 
 <img class="col-md-7" src="{filename}/static/images/projects/dimo/setup.jpg" alt="night-before setup image" style="padding-left: 0; padding-right: 30px" />
