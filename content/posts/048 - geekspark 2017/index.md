@@ -89,9 +89,12 @@ A fresh, fungusy addition to geekSPARK!  Geekery need not be constrained to digi
 
 ## Digital Motion
 
-Digital Motion is a perennial geekSPARK exhibit featuring interactive digital displays.  Using a variety of sensors, we use the movement of viewers to influence the display.  There are many displays, ranging from interactive art to a full-blown videogame with a leaderboard (the Fish Game!).
+Digital Motion is a perennial geekSPARK exhibit featuring interactive digital displays.  This year's display is powered by [Kimotion][kimo].  Using a variety of sensors, we use visitors' movement to control the display.  There are many displays, ranging from interactive art to a full-blown videogame with a leaderboard (the Fish Game!).
 
-<figure><img src="{attach}kimotion.jpg" alt="photo of Kimotion screen" /></figure>
+<video autoplay controls loop>
+    <source src="{attach}quick-clip.mp4" />
+    <source src="{attach}quick-clip.webm" />
+</video>
 
 Learn more at [Kimotion.xyz][kimo].
 
