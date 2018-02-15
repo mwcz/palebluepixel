@@ -69,8 +69,11 @@
 
 &lt;hr /&gt;
 &lt;h2 id="digital-motion"&gt;Digital Motion&lt;/h2&gt;
-&lt;p&gt;Digital Motion is a perennial geekSPARK exhibit featuring interactive digital displays.  Using a variety of sensors, we use the movement of viewers to influence the display.  There are many displays, ranging from interactive art to a full-blown videogame with a leaderboard (the Fish Game!).&lt;/p&gt;
-&lt;figure&gt;&lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/kimotion.jpg" alt="photo of Kimotion screen" /&gt;&lt;/figure&gt;
+&lt;p&gt;Digital Motion is a perennial geekSPARK exhibit featuring interactive digital displays.  This year's display is powered by &lt;a href="http://kimotion.xyz"&gt;Kimotion&lt;/a&gt;.  Using a variety of sensors, we use visitors' movement to control the display.  There are many displays, ranging from interactive art to a full-blown videogame with a leaderboard (the Fish Game!).&lt;/p&gt;
+&lt;video autoplay controls loop&gt;
+    &lt;source src="https://palebluepixel.org/2017/09/17/geekspark-2017/quick-clip.mp4" /&gt;
+    &lt;source src="https://palebluepixel.org/2017/09/17/geekspark-2017/quick-clip.webm" /&gt;
+&lt;/video&gt;
 
 &lt;p&gt;Learn more at &lt;a href="http://kimotion.xyz"&gt;Kimotion.xyz&lt;/a&gt;.&lt;/p&gt;
 &lt;hr /&gt;
