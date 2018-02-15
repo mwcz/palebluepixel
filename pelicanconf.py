@@ -14,7 +14,7 @@ SITENAME              = u'Pale Blue Pixel'
 TIMEZONE              = 'America/New_York'
 DEFAULT_LANG          = u'en'
 PDF_GENERATOR         = False
-DEFAULT_PAGINATION    = 10
+DEFAULT_PAGINATION    = 8
 OUTPUT_SOURCES        = True
 DISPLAY_PAGES_ON_MENU = True
 THEME                 = '../pbpt'
@@ -24,7 +24,6 @@ THEME_STATIC_PATHS    = ['static', 'templates']
 DISPLAY_CATEGORIES_ON_MENU = True
 
 TEMPLATE_PAGES = {
-        'pages/projects/index.html' : 'projects/index.html',
         'main.html'                 : 'index.html',
         '404.html'                  : '404.html'
         }
@@ -46,19 +45,12 @@ DATE_FORMATS = {
 ######################
 
 # CACHE_CONTENT = True
+# GZIP_CACHE = True
 # LOAD_CONTENT_CACHE = True
 
 #######################################
 #  pelican-bootstrap3 theme settings  #
 #######################################
-
-# display active github repos
-GITHUB_USER = 'mwcz'
-GITHUB_REPO_COUNT = 5
-GITHUB_SKIP_FORK = True
-
-# use a bootstrap theme from http://bootswatch.com/
-BOOTSTRAP_THEME = 'flatly'
 
 #######################################################################
 #                           PLUGIN SETTINGS                           #
@@ -69,8 +61,9 @@ PLUGINS = [
     'neighbors',
     'assets',
     'series',
-    'extract_toc',
+    # 'extract_toc',
     'summary',
+    'pin_to_top',
     'gallery',
     'jinja2content',
     # 'googleplus_comments',
@@ -83,14 +76,10 @@ PLUGINS = [
 ASSET_BUNDLES = [
     ('pbp-css',
      [
-         'static/less/font-imports.less',
-         'static/less/bootswatch/flatly/bootstrap.less',
          'static/less/styles.less',
-         'static/css/jquery.lightbox.css',
-         'static/css/pygments-zenburn-2.css',
-         # 'static/lib/prism/prism.css',
      ],
      {
+         'depends': 'static/less/*.less',
          'filters': 'less',
          'output': 'css/styles.min.css',
      }
@@ -100,10 +89,6 @@ ASSET_BUNDLES = [
 ASSET_SOURCE_PATHS = [
     THEME,
 ]
-
-# related posts settings
-
-RELATED_POSTS_MAX = 4
 
 
 #######################################################################
@@ -220,7 +205,7 @@ GITHUB_URL      = 'https://github.com/mwcz'
 DISQUS_SITENAME = False #'mwcz'
 TWITTER_COMMENTS = False # not working so great anymore
 DISCOURSE_COMMENTS = False
-GOOGLEPLUS_COMMENTS = True
+GOOGLEPLUS_COMMENTS = False
 SOCIAL          = (('GitHub',  'https://github.com/mwcz'),
                    ('Twitter', 'https://twitter.com/mwcz'),)
 

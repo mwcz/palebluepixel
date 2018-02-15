@@ -28,14 +28,14 @@ While developing [DiMo][dimo-particles] and [Kimotion][kimotion-web], I became
 fond of [three.js][threejs] particle systems for their performance and visual
 charm.
 
-<div class="row">
-    <figure class="col-sm-6">
+<div class="beside">
+    <figure>
         <a href="/projects/dimo">
             <img src="{attach}swath-colors.jpg" alt="DiMo picture" />
         </a>
         <figcaption>Particle gravity simulation in <a href="/projects/dimo">DiMo: Particles</a> (50,000 particles)</figcaption>
     </figure>
-    <figure class="col-sm-6">
+    <figure>
         <a href="/projects/kimotion">
             <img src="{attach}kimotion-pic.jpg" alt="Kimotion picture" />
         </a>
@@ -56,15 +56,15 @@ Alright, let's make some particles.
 When a network request is detected, the particle system moves a tiny dot in an
 arc to its destination.
 
-<div class="row">
-    <figure class="col-sm-6">
+<div class="beside">
+    <figure>
         <video style="margin: 0 auto" poster="{attach}traffic-viz-basic-thumb.jpg" autoplay controls loop>
             <source src="{attach}traffic-viz-basic.mp4" />
             <source src="{attach}traffic-viz-basic.webm" />
         </video>
         <figcaption>Particles arc from purple to blue</figcaption>
     </figure>
-    <figure class="col-sm-6">
+    <figure>
         <video style="margin: 0 auto" poster="{attach}traffic-viz-bluegreen-thumb.jpg" autoplay controls loop>
             <source src="{attach}traffic-viz-bluegreen.mp4" />
             <source src="{attach}traffic-viz-bluegreen.webm" />
@@ -76,12 +76,12 @@ arc to its destination.
 The arcs are defined by sine waves.  Here are the particle arcs as they appear
 on-screen, and another shot with sine wave guides showing.
 
-<div class="row">
-    <figure class="col-sm-6">
+<div class="beside">
+    <figure>
         <img src="{attach}pipeline-nosines.jpg" alt="pipeline with particles arcing" />
         <figcaption>Particle arcs</figcaption>
     </figure>
-    <figure class="col-sm-6">
+    <figure>
         <img src="{attach}pipeline-sines.jpg" alt="pipeline with sine wave guides for the particle arcs" />
         <figcaption>Sine wave guides</figcaption>
     </figure>
@@ -109,14 +109,18 @@ the whole team in person.  A few days later, all our hard work came together as
 well.  All the preparation paid off and the demo worked perfectly.  Here's a
 shot of my particle visualization from the official recording.
 
-<video style="margin: 0 auto" poster="{attach}traffic-thumb.jpg" autoplay controls loop>
-    <source src="{attach}traffic.webm" />
-    <source src="{attach}traffic.mp4" />
-</video>
+<figure>
+    <video style="margin: 0 auto" poster="{attach}traffic-thumb.jpg" autoplay controls loop>
+        <source src="{attach}traffic.webm" />
+        <source src="{attach}traffic.mp4" />
+    </video>
+</figure>
 
 Watch the full keynote here:
 
+<figure>
 <iframe style="display: block; margin: 0 auto;" width="100%" height="315" src="https://www.youtube.com/embed/ooA6FmTL4Dk" frameborder="0" allowfullscreen></iframe>
+</figure>
 
 
 ### Glow Rope

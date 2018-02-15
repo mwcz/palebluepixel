@@ -29,51 +29,45 @@ This demonstrates changing contrast, value, saturation, hue, color inversion, an
 
 <canvas class="img-responsive" id="IJS_PointOps">your browser does not support canvas</canvas>
 
-<div class="row point-ops-demo">
-
+<div class="point-ops-demo beside">
     <div class="col-xs-6">
         Value (Brightness)
         <br />
         <div class="btn-group">
-            <button class="btn btn-default" onmousedown="IJS_PointOps.value( IJS_PointOps.canvas, 10 )"><i class="glyphicon glyphicon-arrow-up"></i></button>
-            <button class="btn btn-default" onmousedown="IJS_PointOps.value( IJS_PointOps.canvas, -10 )"><i class="glyphicon glyphicon-arrow-down"></i></button>
+            <button class="btn btn-default" onmousedown="IJS_PointOps.value( IJS_PointOps.canvas, 10 )">+</button>
+            <button class="btn btn-default" onmousedown="IJS_PointOps.value( IJS_PointOps.canvas, -10 )">-</button>
         </div>
     </div>
-
     <div class="col-xs-6">
         Contrast
         <br />
         <div class="btn-group">
-            <button class="btn btn-default" onmousedown="IJS_PointOps.contrast( IJS_PointOps.canvas, 1.1)" ><i class="glyphicon glyphicon-arrow-up"></i></button>
-            <button class="btn btn-default" onmousedown="IJS_PointOps.contrast( IJS_PointOps.canvas, 0.9)" ><i class="glyphicon glyphicon-arrow-down"></i></button>
+            <button class="btn btn-default" onmousedown="IJS_PointOps.contrast( IJS_PointOps.canvas, 1.1)" >+</button>
+            <button class="btn btn-default" onmousedown="IJS_PointOps.contrast( IJS_PointOps.canvas, 0.9)" >-</button>
         </div>
     </div>
-
     <div class="col-xs-6">
         Saturation
         <br />
         <div class="btn-group">
-            <button class="btn btn-default" onmousedown="IJS_PointOps.saturation( IJS_PointOps.canvas, 25 )" ><i class="glyphicon glyphicon-arrow-up"></i></button>
-            <button class="btn btn-default" onmousedown="IJS_PointOps.saturation( IJS_PointOps.canvas, -25 )" ><i class="glyphicon glyphicon-arrow-down"></i></button>
+            <button class="btn btn-default" onmousedown="IJS_PointOps.saturation( IJS_PointOps.canvas, 25 )" >+</button>
+            <button class="btn btn-default" onmousedown="IJS_PointOps.saturation( IJS_PointOps.canvas, -25 )" >-</button>
         </div>
     </div>
-
     <div class="col-xs-6">
         Hue
         <br />
         <div class="btn-group">
-            <button class="btn btn-default" onmousedown="IJS_PointOps.hue( IJS_PointOps.canvas, 20)" ><i class="glyphicon glyphicon-arrow-up"></i></button>
-            <button class="btn btn-default" onmousedown="IJS_PointOps.hue( IJS_PointOps.canvas, -20)" ><i class="glyphicon glyphicon-arrow-down"></i></button>
+            <button class="btn btn-default" onmousedown="IJS_PointOps.hue( IJS_PointOps.canvas, 20)" >+</button>
+            <button class="btn btn-default" onmousedown="IJS_PointOps.hue( IJS_PointOps.canvas, -20)" >-</button>
         </div>
     </div>
-
     <div class="col-xs-6">
         <br />
         <div class="btn-group">
             <button class="btn btn-default" onmousedown="IJS_PointOps.invert()">Invert</button>
         </div>
     </div>
-
     <div class="col-xs-6">
         <br />
         <div class="input-group">
@@ -83,12 +77,10 @@ This demonstrates changing contrast, value, saturation, hue, color inversion, an
             <input type="text" value="127" class="form-control threshold" maxlength="3" size="3" id="t" />
         </div>
     </div>
-
     <div class="col-xs-6">
         <br />
         <button class="btn btn-default" onclick="IJS_PointOps = new JSImage( 'IJS_PointOps', 'bee.jpg' );">Reset</button>
     </div>
-
 </div>
 
 <br />

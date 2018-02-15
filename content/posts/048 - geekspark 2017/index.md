@@ -2,13 +2,19 @@ Title: geekSPARK 2017
 Date: 2017-09-17
 Tags: art, sparkcon, geekspark, dimo, kimotion
 Summary: The SPARKcon creativity festival: on the geeky side.
-Image: /2017/09/17/geekspark-2017/geekSPARK-icon.png
+Image: /2017/09/17/geekspark-2017/ml.jpg
+CardBgAlign: top
 Gallery: 048
 Mwc: 48
+Pin: true
 
 geekSPARK is a showcase of creative use of technology, taking place each year during the [SPARKcon][sparkcon] art festival.  What lies below is a summary of the festivities at geekSPARK 2017.
 
 ![geekSPARK logo]({attach}geekSPARK-icon.png)
+
+---
+
+[TOC]
 
 ## RC Speedway
 
@@ -23,13 +29,17 @@ The RC Speedway was an incredibly fun creation by maker extraordinaire Bill Culv
     <figcaption>Yes, there was a <i>ramp</i>!</figcaption>
 </figure>
 
+---
+
 ## Virtual Reality
 
 [Tyler Jackson][tyler] brought his immersive art piece, *Before the War*.  In it, you explore a series of thoughtful, atmospheric vignettes.  This is the first time VR has made an appearance at geekSPARK and I think it's here to stay.
 
-![Tyler Jackson's "Before the War" VR exhibit]({attach}tyler-vr.jpg)
+<figure><img src="{attach}tyler-vr.jpg" alt="Tyler Jackson's &quot;Before the War&quot; VR exhibit" /></figure>
 
-I recommend reading the INDY's [review of Before the War][indybtw].
+I recommend reading [the INDY's review of Before the War][indybtw].
+
+---
 
 ## All Things LED
 
@@ -49,12 +59,14 @@ Another new creation was a 1D pong game.  This was a blast to play.  To play, yo
 
 A few trusted friends were allowed to hold the light saber!
 
-<video style="margin: 0 auto" autoplay controls loop>
+<video autoplay controls loop>
     <source src="{attach}spin-saber.mp4" />
     <source src="{attach}spin-saber.webm" />
 </video>
 
 Check out [this awesome summary](http://maniacallabs.com/sparkcon-2017/) of all the gear they brought.
+
+---
 
 ## Fire Tubes
 
@@ -65,34 +77,40 @@ Ben Pritchett returned this year with Fire Tubes and a remixed soundtrack.  In e
     <source src="{attach}fire-table-anim.webm" />
 </video>
 
+---
+
 ## Mushroom Hunters
 
 A fresh, fungusy addition to geekSPARK!  Geekery need not be constrained to digital hobbies.  Anna and Krystal, devoted mushroom enthusiasts, brought a huge haul of mushrooms to the event and educated visitors about mushroom eating, hunting, and biology.
 
-![mushroom booth]({attach}mushrooms.jpg)
+<figure><img src="{attach}mushrooms.jpg" alt="mushroom booth" /></figure>
+
+---
 
 ## Digital Motion
 
 Digital Motion is a perennial geekSPARK exhibit featuring interactive digital displays.  Using a variety of sensors, we use the movement of viewers to influence the display.  There are many displays, ranging from interactive art to a full-blown videogame with a leaderboard (the Fish Game!).
 
-![photo of Kimotion screen]({attach}kimotion.jpg)
+<figure><img src="{attach}kimotion.jpg" alt="photo of Kimotion screen" /></figure>
 
 Learn more at [Kimotion.xyz][kimo].
+
+---
 
 ## 3D Printing
 
 3D printed parts played a role in most of the exhibits this year.  The RC Speedway's camera mounts, Digital Motion's hand sensor mount, a slew of bits and bobs from All Things LED, all used 3D printed parts.  Most of all, Bill brought in some 3D printers to teach the crowd about printing, but sadly I don't have any pictures of the printers, or the giant terrifying T-Rex print he brought.
 
-<div class="row">
-    <figure class="col-sm-6">
-        <img src="{attach}leap.jpg" alt="photo of hand sensor mount" />
-        <figcaption>3D-printed mount for the Leap Motion (hand-tracking sensor)</figcaption>
-    </figure>
-    <figure class="col-sm-6">
-        <img src="{attach}rc-cam.jpg" alt="photo of RC car camera mount" />
-        <figcaption>3D-printed camera mount for the RC Speedway</figcaption>
-    </figure>
-</div>
+<figure>
+    <img src="{attach}leap.jpg" alt="photo of hand sensor mount" />
+    <figcaption>3D-printed mount for the Leap Motion (hand-tracking sensor)</figcaption>
+</figure>
+<figure>
+    <img src="{attach}rc-cam.jpg" alt="photo of RC car camera mount" />
+    <figcaption>3D-printed camera mount for the RC Speedway</figcaption>
+</figure>
+
+---
 
 ## What's next?
 
@@ -105,16 +123,18 @@ The current location, Red Hat Annex, has served us very well (thanks [Red Hat][r
 
 Signage this year was okay, but a bit rushed.  Even with the maps, many visitors weren't able to find our locations.  Next year's signage will be simple and clear!
 
-<div class="row">
-    <figure class="col-sm-6">
-        <img src="{attach}flyer.png" alt="geekSPARK flyer" />
-        <figcaption>geekSPARK 2017 flyer</figcaption>
-    </figure>
-    <figure class="col-sm-6">
-        <img src="{attach}poster.jpg" alt="geekSPARK poster" />
-        <figcaption>geekSPARK 2017 poster</figcaption>
-    </figure>
-</div>
+
+<figure>
+    <img src="{attach}flyer.png" alt="geekSPARK flyer" />
+    <figcaption>geekSPARK 2017 flyer</figcaption>
+</figure>
+<figure>
+    <img src="{attach}poster.jpg" alt="geekSPARK poster" />
+    <figcaption>geekSPARK 2017 poster</figcaption>
+</figure>
+
+
+---
 
 ## Special thanks
 
