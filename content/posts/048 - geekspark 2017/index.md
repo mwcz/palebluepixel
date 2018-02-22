@@ -143,25 +143,28 @@ Signage this year was okay, but a bit rushed.  Even with the maps, many visitors
 
 Immense appreciation goes out to all the SPARKcon and geekSPARK volunteers who made the event happen.  In no particular order (randomly sorted, in fact), here is a list of everyone involved with geekSPARK 2017, or geekSPARKs of the past.
 
-  - Jared
-  - Krystal
-  - Adam
-  - Brandon
-  - Ian
-  - Dan
-  - Tyler
-  - Eric
-  - Mark
-  - Maniacal Labs
-  - Phil
-  - Justis
-  - Cas
-  - Anna
-  - Bill
-  - Latisha
-  - Ben
-  - Truett
-  - Homa
+<ul style="display: grid; grid-template-columns: repeat(auto-fill,minmax(200px,1fr));">
+    <li>Jared</li>
+    <li>Krystal</li>
+    <li>Adam</li>
+    <li>Brandon</li>
+    <li>Ian</li>
+    <li>Dan</li>
+    <li>Tyler</li>
+    <li>Eric</li>
+    <li>Mark</li>
+    <li>Maniacal Labs</li>
+    <li>Phil</li>
+    <li>Justis</li>
+    <li>Cas</li>
+    <li>Anna</li>
+    <li>Bill</li>
+    <li>Latisha</li>
+    <li>Ben</li>
+    <li>Truett</li>
+    <li>Homa</li>
+</ul>
+
 
 [sparkcon]: https://sparkcon.com
 [tyler]: http://memorymachinecreative.com/
