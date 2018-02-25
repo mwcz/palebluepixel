@@ -17,15 +17,24 @@
 &lt;/div&gt;
 &lt;h2 id="rc-speedway"&gt;RC Speedway&lt;/h2&gt;
 &lt;p&gt;The RC Speedway was an incredibly fun creation by maker extraordinaire Bill Culverhouse from &lt;a href="https://splatspace.org/"&gt;SplatSpace&lt;/a&gt;.  Bill mounted cameras on the RC cars which fed wirelessly into first-person displays.  The cars were &lt;em&gt;fast&lt;/em&gt;, and the sensation of speed from the first-person view was exhilirating.  I'm kicking myself for not taking any video.&lt;/p&gt;
-&lt;figure&gt;
-    &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/rc-vid.jpg" alt="photo of RC controller and screen" /&gt;
-    &lt;figcaption&gt;The first-person racing screen&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure&gt;
-    &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/rc1.jpg" alt="photo of RC speeday" /&gt;
-    &lt;figcaption&gt;Yes, there was a &lt;i&gt;ramp&lt;/i&gt;!&lt;/figcaption&gt;
-&lt;/figure&gt;
+&lt;div class="beside"&gt;
+    &lt;figure&gt;
+        &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/rc-car.jpg" alt="photo of RC car" /&gt;
+        &lt;figcaption&gt;The blue car&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure&gt;
+        &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/racetrack-copy.jpg" alt="photo of RC race track" /&gt;
+        &lt;figcaption&gt;The race track&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure&gt;
+        &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/rc-vid.jpg" alt="photo of RC controller and screen" /&gt;
+        &lt;figcaption&gt;The first-person racing screen&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure&gt;
+        &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/rc1.jpg" alt="photo of RC speeday" /&gt;
+        &lt;figcaption&gt;Yes, there was a &lt;i&gt;ramp&lt;/i&gt;!&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
 
 &lt;hr /&gt;
 &lt;h2 id="virtual-reality"&gt;Virtual Reality&lt;/h2&gt;
@@ -78,16 +87,17 @@
 &lt;p&gt;Learn more at &lt;a href="http://kimotion.xyz"&gt;Kimotion.xyz&lt;/a&gt;.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2 id="3d-printing"&gt;3D Printing&lt;/h2&gt;
-&lt;p&gt;3D printed parts played a role in most of the exhibits this year.  The RC Speedway's camera mounts, Digital Motion's hand sensor mount, a slew of bits and bobs from All Things LED, all used 3D printed parts.  Most of all, Bill brought in some 3D printers to teach the crowd about printing, but sadly I don't have any pictures of the printers, or the giant terrifying T-Rex print he brought.&lt;/p&gt;
-&lt;figure&gt;
-    &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/leap.jpg" alt="photo of hand sensor mount" /&gt;
-    &lt;figcaption&gt;3D-printed mount for the Leap Motion (hand-tracking sensor)&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure&gt;
-    &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/rc-cam.jpg" alt="photo of RC car camera mount" /&gt;
-    &lt;figcaption&gt;3D-printed camera mount for the RC Speedway&lt;/figcaption&gt;
-&lt;/figure&gt;
+&lt;p&gt;3D printed parts played a role in most of the exhibits this year.  The RC Speedway's camera mounts, Digital Motion's hand sensor mount, a slew of bits and bobs from All Things LED, all used 3D printed parts.  Most of all, Bill brought in some 3D printers to teach the crowd about printing, including a gigantic printed T-Rex.&lt;/p&gt;
+&lt;div class="beside"&gt;
+    &lt;figure&gt;
+        &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/rc-cam.jpg" alt="photo of RC car camera mount" /&gt;
+        &lt;figcaption&gt;3D-printed camera mount for the RC Speedway&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure&gt;
+        &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/trex.jpeg" alt="a huge 3d-printed t-rex" /&gt;
+        &lt;figcaption&gt;A huge 3D-printed T-Rex&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
 
 &lt;hr /&gt;
 &lt;h2 id="whats-next"&gt;What's next?&lt;/h2&gt;
@@ -98,15 +108,16 @@
 &lt;/ol&gt;
 &lt;p&gt;The current location, Red Hat Annex, has served us very well (thanks &lt;a href="https://redhat.com"&gt;Red Hat&lt;/a&gt;!), however it's far enough from the center of SPARKcon that we only see a tiny fraction of the 60,000 visitors.  Findability is very important at a large art festival, and we're exploring options for a more central location next year.&lt;/p&gt;
 &lt;p&gt;Signage this year was okay, but a bit rushed.  Even with the maps, many visitors weren't able to find our locations.  Next year's signage will be simple and clear!&lt;/p&gt;
-&lt;figure&gt;
-    &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/flyer.png" alt="geekSPARK flyer" /&gt;
-    &lt;figcaption&gt;geekSPARK 2017 flyer&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure&gt;
-    &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/poster.jpg" alt="geekSPARK poster" /&gt;
-    &lt;figcaption&gt;geekSPARK 2017 poster&lt;/figcaption&gt;
-&lt;/figure&gt;
+&lt;div class="beside"&gt;
+    &lt;figure&gt;
+        &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/flyer.png" alt="geekSPARK flyer" /&gt;
+        &lt;figcaption&gt;geekSPARK 2017 flyer&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure&gt;
+        &lt;img src="https://palebluepixel.org/2017/09/17/geekspark-2017/poster.jpg" alt="geekSPARK poster" /&gt;
+        &lt;figcaption&gt;geekSPARK 2017 poster&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
 
 &lt;hr /&gt;
 &lt;h2 id="special-thanks"&gt;Special thanks&lt;/h2&gt;
