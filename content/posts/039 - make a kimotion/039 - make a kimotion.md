@@ -120,6 +120,7 @@ success this year.
 
 ### More information
 
+ - The News & Observer wrote a [nice article][nando] about SPARKcon including lots of geekSPARK coverage and footage
  - [Kimotion main project page][kimotion-web]
  - [Kimotion source code][kimotion-code]
  - [More about last year's exhibit][dimo-particles]
@@ -197,3 +198,4 @@ window.addEventListener('resize', set_vimeo_iframe_height);
 [sparkcon]: https://en.wikipedia.org/wiki/Sparkcon
 [osdc]: http://opensource.com/life/15/2/sparkcon-geekspark-digital-motion-exhibit
 [intart]: https://en.wikipedia.org/wiki/Interactive_art
+[nandno]: http://www.newsobserver.com/news/local/counties/wake-county/article35910324.html

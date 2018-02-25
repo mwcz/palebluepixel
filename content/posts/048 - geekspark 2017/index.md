@@ -20,14 +20,24 @@ geekSPARK is a showcase of creative use of technology, taking place each year du
 
 The RC Speedway was an incredibly fun creation by maker extraordinaire Bill Culverhouse from [SplatSpace][splat].  Bill mounted cameras on the RC cars which fed wirelessly into first-person displays.  The cars were *fast*, and the sensation of speed from the first-person view was exhilirating.  I'm kicking myself for not taking any video.
 
-<figure>
-    <img src="{attach}rc-vid.jpg" alt="photo of RC controller and screen" />
-    <figcaption>The first-person racing screen</figcaption>
-</figure>
-<figure>
-    <img src="{attach}rc1.jpg" alt="photo of RC speeday" />
-    <figcaption>Yes, there was a <i>ramp</i>!</figcaption>
-</figure>
+<div class="beside">
+    <figure>
+        <img src="{attach}rc-car.jpg" alt="photo of RC car" />
+        <figcaption>The blue car</figcaption>
+    </figure>
+    <figure>
+        <img src="{attach}racetrack-copy.jpg" alt="photo of RC race track" />
+        <figcaption>The race track</figcaption>
+    </figure>
+    <figure>
+        <img src="{attach}rc-vid.jpg" alt="photo of RC controller and screen" />
+        <figcaption>The first-person racing screen</figcaption>
+    </figure>
+    <figure>
+        <img src="{attach}rc1.jpg" alt="photo of RC speeday" />
+        <figcaption>Yes, there was a <i>ramp</i>!</figcaption>
+    </figure>
+</div>
 
 ---
 
@@ -102,16 +112,18 @@ Learn more at [Kimotion.xyz][kimo].
 
 ## 3D Printing
 
-3D printed parts played a role in most of the exhibits this year.  The RC Speedway's camera mounts, Digital Motion's hand sensor mount, a slew of bits and bobs from All Things LED, all used 3D printed parts.  Most of all, Bill brought in some 3D printers to teach the crowd about printing, but sadly I don't have any pictures of the printers, or the giant terrifying T-Rex print he brought.
+3D printed parts played a role in most of the exhibits this year.  The RC Speedway's camera mounts, Digital Motion's hand sensor mount, a slew of bits and bobs from All Things LED, all used 3D printed parts.  Most of all, Bill brought in some 3D printers to teach the crowd about printing, including a gigantic printed T-Rex.
 
-<figure>
-    <img src="{attach}leap.jpg" alt="photo of hand sensor mount" />
-    <figcaption>3D-printed mount for the Leap Motion (hand-tracking sensor)</figcaption>
-</figure>
-<figure>
-    <img src="{attach}rc-cam.jpg" alt="photo of RC car camera mount" />
-    <figcaption>3D-printed camera mount for the RC Speedway</figcaption>
-</figure>
+<div class="beside">
+    <figure>
+        <img src="{attach}rc-cam.jpg" alt="photo of RC car camera mount" />
+        <figcaption>3D-printed camera mount for the RC Speedway</figcaption>
+    </figure>
+    <figure>
+        <img src="{attach}trex.jpeg" alt="a huge 3d-printed t-rex" />
+        <figcaption>A huge 3D-printed T-Rex</figcaption>
+    </figure>
+</div>
 
 ---
 
@@ -127,14 +139,16 @@ The current location, Red Hat Annex, has served us very well (thanks [Red Hat][r
 Signage this year was okay, but a bit rushed.  Even with the maps, many visitors weren't able to find our locations.  Next year's signage will be simple and clear!
 
 
-<figure>
-    <img src="{attach}flyer.png" alt="geekSPARK flyer" />
-    <figcaption>geekSPARK 2017 flyer</figcaption>
-</figure>
-<figure>
-    <img src="{attach}poster.jpg" alt="geekSPARK poster" />
-    <figcaption>geekSPARK 2017 poster</figcaption>
-</figure>
+<div class="beside">
+    <figure>
+        <img src="{attach}flyer.png" alt="geekSPARK flyer" />
+        <figcaption>geekSPARK 2017 flyer</figcaption>
+    </figure>
+    <figure>
+        <img src="{attach}poster.jpg" alt="geekSPARK poster" />
+        <figcaption>geekSPARK 2017 poster</figcaption>
+    </figure>
+</div>
 
 
 ---
