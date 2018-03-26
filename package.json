@@ -6,6 +6,7 @@
   "scripts": {
     "get-fireflies": "pushd ../fireflies && git checkout pbp && npm run build && popd && cp -r ../fireflies/dist/* ./content/static/js/homepage-fireflies",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "mkvirtualenv pbp -r requirements.txt -p python3",
     "start": "make stopserver && sleep 0.2s && make devserver"
   },
   "repository": {
@@ -18,6 +19,7 @@
     "url": "https://github.com/mwcz/palebluepixel/issues"
   },
   "devDependencies": {
+    "browser-sync": "^2.23.6",
     "diveSync": "~0.3.0",
     "purify-css": "^1.1.9"
   }
