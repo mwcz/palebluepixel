@@ -74,10 +74,10 @@
 
 
         <p>Imagine a solitary blue dot.</p>
-<p><img alt="small dot" src="https://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/smalldot.png" /></p>
+<p><img alt="small dot" src="https://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/smalldot.png"></p>
 <p>Unless you let your imagination run away with itself, this is going to be a
 pretty boring dot.  Now, imagine a second, larger dot (you can pick the color).</p>
-<p><img alt="small dot and large dot" src="https://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/smalldot-largedot.png" /></p>
+<p><img alt="small dot and large dot" src="https://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/smalldot-largedot.png"></p>
 <p>Red, nice choice!  The scene is now slightly more interesting, since now you've
 got two dots to think about.  You can ponder their positions, and relative
 sizes.  No motion though; still pretty boring!</p>
@@ -85,7 +85,7 @@ sizes.  No motion though; still pretty boring!</p>
 exerts a gravitational pull on the smaller one.  The small dot begins moving
 towards the large one.  It's speed increases exponentially the closer it gets.
 Now an orbit can form.  Thanks, Newton!</p>
-<p><img alt="orbit" src="https://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/orbit.gif" title="When I recorded this gif, it lined up *completely* by chance.  So lucky.  It would have been a PITA to try to line up the dot so the orbit looped smoothly!  There is a slight jump, but it's subtle." /></p>
+<p><img alt="orbit" src="https://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/orbit.gif" title="When I recorded this gif, it lined up *completely* by chance.  So lucky.  It would have been a PITA to try to line up the dot so the orbit looped smoothly!  There is a slight jump, but it's subtle."></p>
 <p>The dot's orbit is reminiscent of a planet orbiting a star.  Neat.</p>
 <p>Wait, did you see that?  You just moved the big dot.  Look again!  Now there
 are thousands and thousands of tiny dots, each being accelerated toward the big
@@ -150,7 +150,7 @@ function call overhead that was hurting performance.</p>
 <h3 id="coloring-methods">Coloring methods</h3>
 <p>Once the gravity function was implemented, some beautification was in order.</p>
 <p>Originally, each particle was randomly assigned either red, green, or blue.</p>
-<p><img alt="early dimo image, with randomly assigned colors" src="https://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/random-colors.png" /></p>
+<p><img alt="early dimo image, with randomly assigned colors" src="https://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/random-colors.png"></p>
 <p>The gravitational swirls may look kinda cool, but the colors are hectic.  This
 <em>isn't</em> one of those rare cases where randomness is beautiful.  It occurred to
 me that seeing big swaths of color through all the particles might look
@@ -187,10 +187,10 @@ because I was too lazy to figure out the correct fraction to use.</p>
 <code>0..1</code>.  The <code>+1</code> addition shifts the output into <code>0..2</code>, and the <code>/2</code> division
 scales it down to <code>0..1</code>.</p>
 <p>When graphed, they look like this.</p>
-<p><img alt="Roughly evenly-spaced sine waves" src="https://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/sine_waves.png" /></p>
+<p><img alt="Roughly evenly-spaced sine waves" src="https://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/sine_waves.png"></p>
 <p>The cosine allows the colors to cycle repeatedly (R,G,B,R,G,B,...) as the
 input, <span role="math">n</span>, increases.  Here's the result.</p>
-<p><img alt="image of the swaths of color" src="https://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/swath-colors.png" /></p>
+<p><img alt="image of the swaths of color" src="https://palebluepixel.org/2014/10/30/dimo-the-deconstruction-of-falling-stars/swath-colors.png"></p>
 <p><em>Yes!</em>  Swaths of color, cycling through the spectrum like a rainbow.</p>
 <h4 id="the-grand-programmers-utopia-gpu">The Grand Programmers' Utopia (GPU)</h4>
 <p>After bumping up against my CPU's limits while implementing gravity, I was
