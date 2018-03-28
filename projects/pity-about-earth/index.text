@@ -74,7 +74,7 @@ Out of the games I've rated, my favorite so far is [Crater Creator][crater], an 
 
 We fixed a few bugs post-jam, like a barrier-lockup bug that caused the barrier to become unmovable.  We've also been brainstorming ideas that we couldn't fit into the jam weekend, like improving the missile ability, making the viewport a square instead of a portrait rectangle, and granting bonus score for blocking full asteroid barrages.  We plan to implement these changes after judging has concluded.
 
-![]({attach}difficulty.png)
+![many asteroids]({attach}difficulty.png)
 
 As you can probably tell from the screen orientation, the game was designed with mobile in mind.  Mobile wasn't a big priority for the jam, but we plan to post the game to app stores after jam judging is complete.  Some tweaks will be necessary, like lessening the already-punishing difficulty.
 

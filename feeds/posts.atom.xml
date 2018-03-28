@@ -1570,10 +1570,8 @@ scale dialog it is now possible to write “50%” in the Width field to scale
 the image to 50% of the width. Expressions such as “30in + 40px” and “4 *
 5.4in” work, too.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;From the &lt;a href="http://docs.gimp.org/2.8/en/gimp-introduction-whats-new.html" title="GIMP User Manual"&gt;GIMP User Manual&lt;/a&gt;.&lt;/p&gt;</content><category term="gimp"></category></entry><entry><title>ColorPal CLI!</title><link href="https://palebluepixel.org/2013/11/07/colorpal-cli/" rel="alternate"></link><published>2013-11-07T00:00:00-05:00</published><updated>2013-11-07T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2013-11-07:/2013/11/07/colorpal-cli/</id><summary type="html">&lt;p&gt;Tired of creating color palettes with ColorPal's simple, intuitive drag-and-drop interface?  Me too!  Use this handy command instead.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Tired of creating color palettes with ColorPal's simple, intuitive
-drag-and-drop interface?  Me too!  Want to jam with the console cowboys in
-cyber-space?  Now you can.  Now &lt;em&gt;we&lt;/em&gt; can.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ColorPal CLI logo" src="https://palebluepixel.org/2013/11/07/colorpal-cli/colorpal_cli_logo.png" title="ColorPal CLI logo"&gt;&lt;/p&gt;
+&lt;p&gt;From the &lt;a href="http://docs.gimp.org/2.8/en/gimp-introduction-whats-new.html" title="GIMP User Manual"&gt;GIMP User Manual&lt;/a&gt;.&lt;/p&gt;</content><category term="gimp"></category></entry><entry><title>ColorPal CLI!</title><link href="https://palebluepixel.org/2013/11/07/colorpal-cli/" rel="alternate"></link><published>2013-11-07T00:00:00-05:00</published><updated>2013-11-07T00:00:00-05:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2013-11-07:/2013/11/07/colorpal-cli/</id><summary type="html">&lt;p&gt;Tired of creating color palettes with ColorPal's simple, intuitive drag-and-drop interface?  Me too!  Use this handy command instead.&lt;/p&gt;</summary><content type="html">&lt;p&gt;ColorPal CLI is a command-line version of &lt;a href="/projects/colorpal" title="ColorPal project page"&gt;ColorPal&lt;/a&gt;, my HTML5 color palette
+generator.&lt;/p&gt;
 &lt;h2 id="demo"&gt;Demo!&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;$ node cpal.js -f hex -s 8 MyImage.png
 
@@ -1592,9 +1590,10 @@ git clone git@github.com:mwcz/colorpal-cli.git
 cd colorpal-cli
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id="use-it"&gt;Use it!&lt;/h2&gt;
-&lt;p&gt;Visit the &lt;a href="/projects/colorpal-cli" title="ColorPal CLI project page"&gt;projcet page&lt;/a&gt; for the full documentation, or simply run the
-command without any arguments to see the help text.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Generate a color palette from an image! :)
+&lt;p&gt;To display the help text, simply run the command without any arguments.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;node cpal.js
+
+Generate a color palette from an image! :)
 USAGE: node cpal.js IMAGE
 
 Options:
@@ -1604,8 +1603,59 @@ Options:
 
   -f, --format   Specify the output format.  Available formats are: scss, sass, json, less, rgb, hex
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The code is &lt;a href="https://github.com/mwcz/colorpal-cli" title="ColorPal CLI code repository"&gt;available on GitHub&lt;/a&gt; and I welcome any feedback, bug reports,
-pull requests, etc.&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="mediancut"></category></entry><entry><title>ColorPal Output Update</title><link href="https://palebluepixel.org/2012/07/30/colorpal-output-update/" rel="alternate"></link><published>2012-07-30T22:30:00-04:00</published><updated>2012-07-30T22:30:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-07-30:/2012/07/30/colorpal-output-update/</id><summary type="html">&lt;p&gt;Hi pals.&lt;/p&gt;
+&lt;p&gt;Let's dive right in by generating palettes from the sample images included with the
+project.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;node cpal.js images/hugepic.png
+
+[ [ 144, 43, 178 ],
+  [ 37, 10, 146 ],
+  [ 171, 52, 6 ],
+  [ 11, 3, 85 ],
+  [ 238, 72, 120 ],
+  [ 219, 66, 32 ] ]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To visualize what just happened, ColorPal turned this:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="hugepic.png" src="https://palebluepixel.org/static/images/projects/colorpal-cli/hugepic_small.png" title="hugepic.png"&gt;&lt;/p&gt;
+&lt;p&gt;Into this:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="hugepic.png colors" src="https://palebluepixel.org/static/images/projects/colorpal-cli/hugepic_colors.png" title="hugepic.png colors"&gt;&lt;/p&gt;
+&lt;p&gt;Let's try again with a different image.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;node cpal.js images/issue3.png
+
+[ [ 165, 219, 144 ], [ 58, 181, 75 ], [ 254, 250, 203 ] ]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Only three colors this time?  This image has very few colors, so ColorPal
+decided to create a smaller palette.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="issue3.png" src="https://palebluepixel.org/static/images/projects/colorpal-cli/issue3_small.png" title="issue3.png"&gt;
+&lt;img alt="issue3.png colors" src="https://palebluepixel.org/static/images/projects/colorpal-cli/issue3_colors.png" title="issue3.png colors"&gt;&lt;/p&gt;
+&lt;p&gt;To generate a specific number of colors, use the &lt;code&gt;-s&lt;/code&gt; option.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# generate 8 colors from the same image
+node cpal.js -s 8 images/issue3.png
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can also specify the output format.  &lt;code&gt;json&lt;/code&gt; is the default, but several others are available.&lt;/p&gt;
+&lt;h4 id="hex-output"&gt;Hex output:&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;node cpal.js images/issue3.png -f hex
+#a5db90
+#3ab54b
+#fefacb
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="less-output"&gt;LESS output:&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;node cpal.js images/issue3.png -f less
+@color0: rgb(165,219,144);
+@color1: rgb(58,181,75);
+@color2: rgb(254,250,203);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="scsssass-output"&gt;SCSS/SASS output:&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;node cpal.js images/issue3.png -f scss
+$color0: rgb(165,219,144);
+$color1: rgb(58,181,75);
+$color2: rgb(254,250,203);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;ColorPal also has a &lt;a href="http://colorpal.org/" title="colorpal.org"&gt;web interface&lt;/a&gt; which you might find more convenient,
+depending on your needs  The command-line utility is very convenient if you
+need to automate palette generation for a large number of images.&lt;/p&gt;
+&lt;p&gt;All the code is available &lt;a href="https://github.com/mwcz/colorpal-cli" title="GitHub page for ColorPal CLI"&gt;on GitHub&lt;/a&gt;.  Bug reports and pull requests are
+much appreciated. :)&lt;/p&gt;
+&lt;p&gt;I've written other &lt;a href="/tag/colorpal" title="Posts about ColorPal"&gt;posts about ColorPal&lt;/a&gt;.&lt;/p&gt;</content><category term="html5"></category><category term="javascript"></category><category term="color"></category><category term="colorpal"></category><category term="mediancut"></category></entry><entry><title>ColorPal Output Update</title><link href="https://palebluepixel.org/2012/07/30/colorpal-output-update/" rel="alternate"></link><published>2012-07-30T22:30:00-04:00</published><updated>2012-07-30T22:30:00-04:00</updated><author><name>mwcz</name></author><id>tag:palebluepixel.org,2012-07-30:/2012/07/30/colorpal-output-update/</id><summary type="html">&lt;p&gt;Hi pals.&lt;/p&gt;
 &lt;p&gt;This is a speedy post about a speedy update I made today to
 &lt;a href="/projects/colorpal/"&gt;ColorPal&lt;/a&gt;, an HTML5 tool I …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hi pals.&lt;/p&gt;
 &lt;p&gt;This is a speedy post about a speedy update I made today to

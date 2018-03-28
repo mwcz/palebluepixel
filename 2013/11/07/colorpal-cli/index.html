@@ -73,10 +73,8 @@
         </header>
 
 
-        <p>Tired of creating color palettes with ColorPal's simple, intuitive
-drag-and-drop interface?  Me too!  Want to jam with the console cowboys in
-cyber-space?  Now you can.  Now <em>we</em> can.</p>
-<p><img alt="ColorPal CLI logo" src="https://palebluepixel.org/2013/11/07/colorpal-cli/colorpal_cli_logo.png" title="ColorPal CLI logo"></p>
+        <p>ColorPal CLI is a command-line version of <a href="/projects/colorpal" title="ColorPal project page">ColorPal</a>, my HTML5 color palette
+generator.</p>
 <h2 id="demo">Demo!</h2>
 <pre><code>$ node cpal.js -f hex -s 8 MyImage.png
 
@@ -95,9 +93,10 @@ git clone git@github.com:mwcz/colorpal-cli.git
 cd colorpal-cli
 </code></pre>
 <h2 id="use-it">Use it!</h2>
-<p>Visit the <a href="/projects/colorpal-cli" title="ColorPal CLI project page">projcet page</a> for the full documentation, or simply run the
-command without any arguments to see the help text.</p>
-<pre><code>Generate a color palette from an image! :)
+<p>To display the help text, simply run the command without any arguments.</p>
+<pre><code>node cpal.js
+
+Generate a color palette from an image! :)
 USAGE: node cpal.js IMAGE
 
 Options:
@@ -107,8 +106,59 @@ Options:
 
   -f, --format   Specify the output format.  Available formats are: scss, sass, json, less, rgb, hex
 </code></pre>
-<p>The code is <a href="https://github.com/mwcz/colorpal-cli" title="ColorPal CLI code repository">available on GitHub</a> and I welcome any feedback, bug reports,
-pull requests, etc.</p>
+<p>Let's dive right in by generating palettes from the sample images included with the
+project.</p>
+<pre><code>node cpal.js images/hugepic.png
+
+[ [ 144, 43, 178 ],
+  [ 37, 10, 146 ],
+  [ 171, 52, 6 ],
+  [ 11, 3, 85 ],
+  [ 238, 72, 120 ],
+  [ 219, 66, 32 ] ]
+</code></pre>
+<p>To visualize what just happened, ColorPal turned this:</p>
+<p><img alt="hugepic.png" src="https://palebluepixel.org/static/images/projects/colorpal-cli/hugepic_small.png" title="hugepic.png"></p>
+<p>Into this:</p>
+<p><img alt="hugepic.png colors" src="https://palebluepixel.org/static/images/projects/colorpal-cli/hugepic_colors.png" title="hugepic.png colors"></p>
+<p>Let's try again with a different image.</p>
+<pre><code>node cpal.js images/issue3.png
+
+[ [ 165, 219, 144 ], [ 58, 181, 75 ], [ 254, 250, 203 ] ]
+</code></pre>
+<p>Only three colors this time?  This image has very few colors, so ColorPal
+decided to create a smaller palette.</p>
+<p><img alt="issue3.png" src="https://palebluepixel.org/static/images/projects/colorpal-cli/issue3_small.png" title="issue3.png">
+<img alt="issue3.png colors" src="https://palebluepixel.org/static/images/projects/colorpal-cli/issue3_colors.png" title="issue3.png colors"></p>
+<p>To generate a specific number of colors, use the <code>-s</code> option.</p>
+<pre><code># generate 8 colors from the same image
+node cpal.js -s 8 images/issue3.png
+</code></pre>
+<p>You can also specify the output format.  <code>json</code> is the default, but several others are available.</p>
+<h4 id="hex-output">Hex output:</h4>
+<pre><code>node cpal.js images/issue3.png -f hex
+#a5db90
+#3ab54b
+#fefacb
+</code></pre>
+<h4 id="less-output">LESS output:</h4>
+<pre><code>node cpal.js images/issue3.png -f less
+@color0: rgb(165,219,144);
+@color1: rgb(58,181,75);
+@color2: rgb(254,250,203);
+</code></pre>
+<h4 id="scsssass-output">SCSS/SASS output:</h4>
+<pre><code>node cpal.js images/issue3.png -f scss
+$color0: rgb(165,219,144);
+$color1: rgb(58,181,75);
+$color2: rgb(254,250,203);
+</code></pre>
+<p>ColorPal also has a <a href="http://colorpal.org/" title="colorpal.org">web interface</a> which you might find more convenient,
+depending on your needs  The command-line utility is very convenient if you
+need to automate palette generation for a large number of images.</p>
+<p>All the code is available <a href="https://github.com/mwcz/colorpal-cli" title="GitHub page for ColorPal CLI">on GitHub</a>.  Bug reports and pull requests are
+much appreciated. :)</p>
+<p>I've written other <a href="/tag/colorpal" title="Posts about ColorPal">posts about ColorPal</a>.</p>
 
         <!-- /.entry-content -->
 

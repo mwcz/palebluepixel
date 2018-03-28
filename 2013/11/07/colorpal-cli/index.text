@@ -5,11 +5,8 @@ Summary: Tired of creating color palettes with ColorPal's simple, intuitive drag
 Image: /2013/11/07/colorpal-cli/colorpal_cli_logo.png
 Mwc: 23
 
-Tired of creating color palettes with ColorPal's simple, intuitive
-drag-and-drop interface?  Me too!  Want to jam with the console cowboys in
-cyber-space?  Now you can.  Now *we* can.
-
-![ColorPal CLI logo]({attach}colorpal_cli_logo.png "ColorPal CLI logo")
+ColorPal CLI is a command-line version of [ColorPal][5], my HTML5 color palette
+generator.
 
 ## Demo!
 
@@ -32,8 +29,9 @@ cyber-space?  Now you can.  Now *we* can.
 
 ## Use it!
 
-Visit the [projcet page][1] for the full documentation, or simply run the
-command without any arguments to see the help text.
+To display the help text, simply run the command without any arguments.
+
+    node cpal.js
 
     Generate a color palette from an image! :)
     USAGE: node cpal.js IMAGE
@@ -45,8 +43,78 @@ command without any arguments to see the help text.
 
       -f, --format   Specify the output format.  Available formats are: scss, sass, json, less, rgb, hex
 
-The code is [available on GitHub][2] and I welcome any feedback, bug reports,
-pull requests, etc.
+Let's dive right in by generating palettes from the sample images included with the
+project.
 
-[1]: /projects/colorpal-cli "ColorPal CLI project page"
-[2]: https://github.com/mwcz/colorpal-cli "ColorPal CLI code repository"
+    node cpal.js images/hugepic.png
+
+    [ [ 144, 43, 178 ],
+      [ 37, 10, 146 ],
+      [ 171, 52, 6 ],
+      [ 11, 3, 85 ],
+      [ 238, 72, 120 ],
+      [ 219, 66, 32 ] ]
+
+To visualize what just happened, ColorPal turned this:
+
+![hugepic.png]({filename}/static/images/projects/colorpal-cli/hugepic_small.png "hugepic.png")
+
+Into this:
+
+![hugepic.png colors]({filename}/static/images/projects/colorpal-cli/hugepic_colors.png "hugepic.png colors")
+
+Let's try again with a different image.
+
+    node cpal.js images/issue3.png
+
+    [ [ 165, 219, 144 ], [ 58, 181, 75 ], [ 254, 250, 203 ] ]
+
+Only three colors this time?  This image has very few colors, so ColorPal
+decided to create a smaller palette.
+
+![issue3.png]({filename}/static/images/projects/colorpal-cli/issue3_small.png "issue3.png")
+![issue3.png colors]({filename}/static/images/projects/colorpal-cli/issue3_colors.png "issue3.png colors")
+
+To generate a specific number of colors, use the `-s` option.
+
+    # generate 8 colors from the same image
+    node cpal.js -s 8 images/issue3.png
+
+You can also specify the output format.  `json` is the default, but several others are available.
+
+#### Hex output:
+
+    node cpal.js images/issue3.png -f hex
+    #a5db90
+    #3ab54b
+    #fefacb
+
+#### LESS output:
+
+    node cpal.js images/issue3.png -f less
+    @color0: rgb(165,219,144);
+    @color1: rgb(58,181,75);
+    @color2: rgb(254,250,203);
+
+#### SCSS/SASS output:
+
+    node cpal.js images/issue3.png -f scss
+    $color0: rgb(165,219,144);
+    $color1: rgb(58,181,75);
+    $color2: rgb(254,250,203);
+
+ColorPal also has a [web interface][4] which you might find more convenient,
+depending on your needs  The command-line utility is very convenient if you
+need to automate palette generation for a large number of images.
+
+All the code is available [on GitHub][6].  Bug reports and pull requests are
+much appreciated. :)
+
+I've written other [posts about ColorPal][1].
+
+[1]: /tag/colorpal "Posts about ColorPal"
+[2]: http://nodejs.org/ "Node.js official site"
+[3]: /2013/11/07/colorpal-cli/ "ColorPal's CLI"
+[4]: http://colorpal.org/ "colorpal.org"
+[5]: /projects/colorpal "ColorPal project page"
+[6]: https://github.com/mwcz/colorpal-cli "GitHub page for ColorPal CLI"
