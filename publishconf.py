@@ -18,6 +18,7 @@ DELETE_OUTPUT_DIRECTORY = True
 
 # only use the thumbnailer plugin for production builds because it's sloooooooow
 # PLUGINS.append('thumbnailer')
+PLUGINS.append('optimize_images')
 
 # Feed (syndication) settings (enabled for production only)
 FEED_ATOM             = 'feeds/atom.xml'
