@@ -61,6 +61,7 @@ PLUGINS = [
     'neighbors',
     'assets',
     'series',
+    'optimize_images',
     # 'extract_toc',
     'summary',
     'pin_to_top',
