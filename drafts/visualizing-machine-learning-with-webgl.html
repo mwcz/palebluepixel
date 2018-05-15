@@ -73,7 +73,16 @@
         </header>
 
 
-        <p>Things to cover:</p>
+        <p>There are few things as thrilling as pulling off a complex live demo in front of a 7,000 person live audience.  Technical presenters famously avoid live demos because Murphy always sees to it that they fail.</p>
+<p>This year’s demonstration entailed deploying the same mobile game to three different cloud hosting services, asking the audience to play along, and then pulling the plug on one of the cloud services.  The killer feature of Red Hat’s offering was showing that audience members who had been routed to the now-dead cloud service would be seamlessly transitioned to one of the remaining two, without losing any application state, connections, or most importantly, data.</p>
+<p>The game itself was an image recognition game, where players were asked to take an image photo of certain objects like a person, a bear, an apple.  Machine learning is a fairly opaque subject, certainly not explainable within a brief 25-minute demo. My contribution to the demo was creating a helpful visualization of the machine learning training and inference processes. Given that the audience was not likely to be full of machine learning experts, Will and I agreed to prioritize easy understanding over pure technical accuracy.</p>
+<h3 id="gpu-movement">GPU MOVEMENT</h3>
+<p>Performance is always foremost in my mind when building demos like this. This time, I decided to experiment with  pushing as much as possible on to the GPU. each image uploaded by a player into the system ultimately causes a particle system to be created on the dashboard. once that particle system is created, the CPUs only responsibility is incrementing a timer.</p>
+<p>In the end I may have gone a little overboard and rely too much on the GPU. It became the biggest bottleneck to Performance, whereas the CPU was barely tapped at all. I began experimenting with moving motion back to the CPU ( by porting the glsl movement algorithm to JavaScript) But ultimately went with the GPU Overkill approach because performance was good enough. </p>
+<p>To accomplish this, I first send a series of paths to the GPU has a uniform array.  each path in the array is a series of 2D points.   for example, I may want a particle to move from point A to point B to point C and finally to point D.  each  stream of particles is assigned a path number, which corresponds to the index of the desired path within the paths array.  the aforementioned timer is used as a sort of progress meter telling the movement algorithm how far along the particle should be on its path. For example, if I want the particles to go from point A to point D in two seconds, the timer being at one second would cause the particle to be drawn directly in between points B and C. </p>
+<h3 id="the-pipes">THE PIPES</h3>
+<p>The pipes represent a neural network.Each pork in the pipes represents a neuron with one input into outputs. When a Player upload an image into the system, that image is depicted being pulled into the entrance pipe.  what's the images inside the pipe it is converted into a stream of particles. Does particles flow through the pipe graph, at each for choosing the route which will ultimately lead  to the correct category.  if the machine Learning System Found an apple in the image, I would send that images particles along the path that ends at Apple.</p>
+<p>Things to cover:</p>
 <ul>
 <li>the story, context of the demo (not experts, viz tells story, not for nitpickers)</li>
 <li>decomposing images into pixel cloud</li>
@@ -81,8 +90,25 @@
 <li>GPU-based movement algorithm, CPU only for timer, achieving uniform velocity</li>
 <li>the 'path tracer' tool to more easily encode paths</li>
 <li>layered pipes setup, link to andres and matt (show angled cutaway of the images, can probably make it with inkscape perspective tool: http://goinkscape.com/using-perspective-for-3d-in-inkscape/ )</li>
-<li></li>
+<li>3542x1144 LED screen</li>
+<li>improving performance by shrinking then scaling up the webgl canvas</li>
+<li>ghost in the machine (browser-sync ghost mode causing clicks to be shared across all approval pages, making it seem like they were in sync)</li>
+<li>pushManyAndres for training viz</li>
+<li><a href="https://youtu.be/hu2BmE1Wk_Q?t=6m24s">demo video</a></li>
 </ul>
+<p>https://giphy.com/gifs/oVlpIBxwuheE</p>
+<p>Thanks:
+ - Andres Galante
+ - Matthew Carleton
+ - Kyle Buchanan
+ - Burr Sutter
+ - Galder Zamarreno
+ - Stian
+ - Boleslaw
+ - Sebastian
+ - Erin Boyd
+ - Will Benton
+ - Clement</p>
 
         <!-- /.entry-content -->
 

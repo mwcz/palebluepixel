@@ -175,7 +175,7 @@
 &lt;figure id="iol-sky-demo"&gt;&lt;/figure&gt;
 
 &lt;p&gt;I made the mountain sprites greyscale and multiplied them against two very tall, sliding sky gradients.  Here's a visual of the technique, zoomed way out so you can see the two sky images playing leap frog as they slide up the screen. (This is a live demo, not a video.)&lt;/p&gt;
-&lt;p&gt;To see the full sky sunrise and sunset, give &lt;a href="http://scripta.co/in-orange-light/"&gt;In Orange Light&lt;/a&gt; a play, but don't dismiss the text.  That way, time will be paused and you won't starve of freeze.&lt;/p&gt;
+&lt;p&gt;To see the full sky sunrise and sunset, give &lt;a href="http://scripta.co/in-orange-light/"&gt;In Orange Light&lt;/a&gt; a play, but don't dismiss the text.  That way, time will be paused and you won't starve or freeze.&lt;/p&gt;
 &lt;h3 id="sound-effects"&gt;Sound effects&lt;/h3&gt;
 &lt;p&gt;The game has a few sound effects.  The heater's electric hum, the generator's rumble, and the growing, clawing sound of hunger.  To create these, I used &lt;a href="http://beepbox.co"&gt;BeepBox&lt;/a&gt;, a chiptune music sequencer.  It's meant for music, but I was able to coax some sound effects out of it.  Here are two of the sound effects, hit &lt;code&gt;Play&lt;/code&gt; to hear them through the BeepBox synthesizer live on this page.&lt;/p&gt;
 &lt;div id="sfx" class="beside"&gt;
