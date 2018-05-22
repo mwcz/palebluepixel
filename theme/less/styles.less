@@ -18,6 +18,7 @@
 @import "pagination";
 @import "band";
 @import "toc";
+@import "broken-images";
 
 blockquote {
     color: darken(@pbp-fg-color, 42%);
@@ -48,7 +49,8 @@ article, section {
         padding          : @padding-base-horizontal @padding-large-horizontal;
     }
     img {
-        margin    : 0 auto;
+        margin: 0 auto;
+        position: relative;
     }
     img, video {
         .img-responsive();
