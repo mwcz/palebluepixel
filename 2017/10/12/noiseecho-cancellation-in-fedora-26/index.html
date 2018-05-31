@@ -3,7 +3,7 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title>    Noise/Echo Cancellation in Fedora (26/27) - Pale Blue Pixel
+    <title>    Noise/Echo Cancellation in Fedora (26+) - Pale Blue Pixel
 </title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,9 +17,9 @@
 
         <!-- Open Graph tags -->
             <meta property="og:type" content="article"/>
-            <meta property="og:title" content="Noise/Echo Cancellation in Fedora (26/27)"/>
+            <meta property="og:title" content="Noise/Echo Cancellation in Fedora (26+)"/>
             <meta property="og:url" content="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/"/>
-            <meta property="og:description" content="How to enable PulseAudio noise and echo cancellation in Fedora 26 & 27."/>
+            <meta property="og:description" content="How to enable PulseAudio noise and echo cancellation in Fedora 26, 27, and 28."/>
             <meta property="og:image"
                   content="https://palebluepixel.org/2017/10/12/noiseecho-cancellation-in-fedora-26/after.jpg"/>
 
@@ -68,7 +68,7 @@
 
         <header class="page-header">
             <h1>
-                Noise/Echo Cancellation in Fedora (26/27)
+                Noise/Echo Cancellation in Fedora (26+)
             </h1>
         </header>
 
@@ -79,7 +79,7 @@
 </figure>
 
 <p>The only problem is that, since the minimic is just <em>a wire</em>, it doesn't have any noise or echo cancellation.  And since Fedora doesn't come with that feature enabled by default, the mic was picking up a lot of ambient noise.  <a href="https://chrisbredesen.com/">Breddy</a> told me that steps just like the following didn't work in Fedora a few versions ago, so I wanted to document them now that the issues seem to be fixed.  I originally found these instructions on <a href="https://www.reddit.com/r/linux/comments/2yqfqp/just_found_that_pulseaudio_have_noise/">this r/linux post</a> and am reposting them here with Fedora-specific flourishes.</p>
-<p>Without further ado, here's how to turn on noise and echo cancellation in Fedora 26.  <strong>Update</strong>: also works in Fedora 27.</p>
+<p>Without further ado, here's how to turn on noise and echo cancellation in Fedora 26.  <strong>Update</strong>: also works in Fedora 27 (and 28!).</p>
 <hr>
 <h2 id="if-you-just-want-it-to-work">If you just want it to work</h2>
 <p>If you're in a rush, here's a script that will set everything up for you.</p>
