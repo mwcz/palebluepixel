@@ -5,8 +5,8 @@
 .glass-card-full(@z-index: 1, @shrink-x: 0px, @shrink-y: 0px) {
     z-index: @z-index;
     position: absolute;
-    width: calc(100% - @shrink-x);
-    height: calc(100% - @shrink-y);
+    width: calc(100% ~"-" @shrink-x);
+    height: calc(100% ~"-" @shrink-y);
     top: 0;
     left: 0;
 }
