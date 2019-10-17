@@ -5,7 +5,7 @@ bumpr==0.2.0
 cssmin==0.2.0
 cssutils==1.0
 docutils==0.14
-ecdsa==0.13
+ecdsa==0.13.3
 feedgenerator==1.9
 ghp-import==0.4.1
 gitdb==0.6.0
